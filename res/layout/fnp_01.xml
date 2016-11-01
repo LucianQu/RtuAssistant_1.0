@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:focusableInTouchMode="true" 
+    android:orientation="vertical">
+
+
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+		android:layout_marginTop="5dp"
+	    android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp"
+		android:layout_marginBottom="15dp"
+		android:background="@drawable/border"
+	    >
+
+		<ScrollView android:id="@+id/noProtocolDataScroll"
+		    android:layout_width="match_parent"  
+		    android:layout_height="match_parent"  
+		    android:scrollbars="none"  
+		    android:fadingEdge="vertical">
+		    
+		    <TextView
+				android:id="@+id/noProtocolData"  
+				android:labelFor="@+id/noProtocolData"
+				android:layout_width="match_parent"  
+				android:layout_height="match_parent"
+				android:layout_marginLeft="3dp"
+				android:layout_marginRight="3dp"
+				android:layout_marginTop="3dp"
+				android:layout_marginBottom="3dp"
+				android:gravity="top|left"
+				android:textSize="12sp"
+				android:singleLine="false"/>
+	     </ScrollView>
+    </LinearLayout>
+</LinearLayout>
+

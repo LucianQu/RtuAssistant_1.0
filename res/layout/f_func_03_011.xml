@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+    
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	style="@style/func_out_linearlayout_style" >
+
+	<!-- start 头部标题 --> 
+	<LinearLayout style="@style/func_title_linearlayout_style">
+	    <TextView
+	    	android:id="@+id/f_03_011_Title"
+	        android:drawableLeft="@drawable/item003"
+	        android:text="@string/func_03_011"
+			style="@style/func_title_viewtext_style"/>
+	    
+	    <!-- 注释掉，以备用，若应用并显示在界面上时，要调整上面textView的宽度（如300dp） 
+	    <ImageView 
+	        android:id="@+id/commandStatus"
+	        style="@style/func_itemtitle_imageview_style"
+	        android:contentDescription="@string/txtBtn"/>
+	    -->
+	</LinearLayout>  
+	
+    
+	<!-- start 具体内布局 -->
+    <FrameLayout
+    	android:id="@+id/f_03_011_Frm"
+		style="@style/func_framelayout_style">
+    
+		 <!-- start 具体内容 -->
+		 <LinearLayout 
+	        style="@style/func_linearlayout_style">
+	        
+		     <!-- start AD校准命令 -->
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height35"
+			    >
+			    <TextView
+			        android:text="@string/func_03_011_item1"
+			        style="@style/func_item_viewtext_style_100_b"/>
+			    <Spinner android:id="@+id/f_03_011_item1" 
+				    style="@style/func_item_Spinner_style_180"/>
+			</LinearLayout>
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height35"
+			    >
+			    <TextView
+			        android:text="@string/func_03_011_item2"
+			        style="@style/func_item_viewtext_style_100_b"/>
+			    <Spinner android:id="@+id/f_03_011_item2" 
+				    style="@style/func_item_Spinner_style_180"/>
+			</LinearLayout>
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30"
+			    >
+			    <TextView
+			        android:text="@string/func_03_011_item3"
+			        style="@style/func_item_viewtext_style_100_b"/>
+			    <EditText
+					android:id="@+id/f_03_011_item3"  
+					android:labelFor="@id/f_03_011_item3" 
+				    style="@style/func_item_editdecimal_style_180"/>
+			</LinearLayout>
+		     <!-- end 电池电源 -->
+												
+						
+		    <include layout="@layout/show_btn_set" />
+		 </LinearLayout>
+	     
+		 <!-- start 底部 -->
+		 <LinearLayout 
+	        android:id="@+id/f_03_011_Load"
+	        style="@style/func_progressbar_linearlayout_style" >
+		    <ProgressBar
+		        style="@style/func_progressbar_style" />
+		 </LinearLayout>
+	</FrameLayout>
+</LinearLayout>
+

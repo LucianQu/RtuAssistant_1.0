@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:focusableInTouchMode="true" 
+    android:orientation="vertical">
+
+
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+		android:layout_marginTop="3dp"
+	    android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp"
+		android:background="@drawable/border0"
+	    >
+    
+    	<com.blg.rtu.compound.FixHeightListView
+	        android:id="@+id/chRtuDataListView"
+	 		android:layout_width="match_parent"
+		    android:layout_height="match_parent" 
+	        android:focusableInTouchMode="true"
+	        android:focusable="true"
+	        android:stackFromBottom="false" 
+	        android:divider="@android:color/transparent"
+	        android:listSelector="@android:color/transparent"
+	        android:cacheColorHint="@android:color/transparent"
+	        android:transcriptMode="alwaysScroll" 
+	        android:scrollbars="vertical" />       
+    </LinearLayout>
+</LinearLayout>
+

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:focusableInTouchMode="true" 
+    android:orientation="vertical">
+
+
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+		android:layout_marginTop="5dp"
+	    android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp"
+		android:background="@drawable/border"
+		android:orientation="vertical" 
+	    >
+
+		<LinearLayout android:layout_weight="1" 
+            android:layout_width="match_parent"
+		    android:layout_height="0dip"
+			android:orientation="horizontal">
+		
+		   <TextView
+		        android:text="@string/txtLoopQuery_type"
+		        style="@style/loopq_item_viewtext_style_100_a"/>
+		
+		   <Spinner android:id="@+id/f_01_010_item1" 
+			    style="@style/loopq_item_Spinner_style_100"/>  
+		
+		   <TextView
+		        android:text="@string/txtLoopQuery_interval"
+		        style="@style/loopq_item_viewtext_style_40_b"
+		        android:gravity="right|center_vertical"/>
+		
+		   <Spinner android:id="@+id/f_01_010_item2" 
+			    style="@style/loopq_item_Spinner_style_70"/>  
+		</LinearLayout>		
+			
+
+		<LinearLayout android:layout_weight="1" 
+            android:layout_width="match_parent"
+		    android:layout_height="0dip"
+			android:orientation="horizontal">
+		
+		   <TextView
+		        android:text="@string/txtLoopQuery_times"
+		        style="@style/loopq_item_viewtext_style_100_a"/>
+
+		   <TextView
+				android:id="@+id/f_01_010_item03"  
+				android:labelFor="@id/f_01_010_item03" 
+				android:layout_marginLeft="5dp"
+			    style="@style/loopq_item_edittext_style_92"
+			    android:inputType="none"/>		
+		
+		   <ImageView android:id="@+id/lqStart"
+	            android:layout_width="30dp"
+	            android:layout_height="30dp"
+	            android:layout_marginLeft="30dp"
+	            android:layout_gravity="center_vertical|center_horizontal"
+	            android:background="@drawable/aq_start" 
+	            android:focusable="false" 
+	            android:contentDescription="@string/image_description"/> 
+	                 
+		    <ProgressBar
+		    	android:id="@+id/loopProgress"
+		    	style="@style/func_progressbar_style"  
+		        android:layout_width="25dp"
+		        android:layout_height="25dp"
+			    android:layout_marginLeft="30dp"
+	            android:layout_gravity="center_vertical|center_horizontal"
+		    	android:visibility="gone"/>
+		    
+		   <ImageView android:id="@+id/lqStop"
+	            android:layout_width="30dp"
+	            android:layout_height="30dp"
+	            android:layout_marginLeft="15dp"
+	            android:layout_gravity="center_vertical|center_horizontal"
+	            android:background="@drawable/aq_stop" 
+	            android:focusable="false" 
+	            android:contentDescription="@string/image_description"
+	            android:visibility="gone"/> 
+		   	                 
+		</LinearLayout>		
+		
+				
+						
+	</LinearLayout>
+</LinearLayout>
+

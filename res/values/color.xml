@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="linearLayoutpressed">#FF4612FF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="gold">#b89766</color>
+    <color name="red">#FF0000</color>
+    <color name="orange">#FF5500</color>
+</resources>

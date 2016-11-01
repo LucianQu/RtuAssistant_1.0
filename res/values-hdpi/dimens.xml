@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+	<dimen name="common_line_height260">260dp</dimen>
+	<dimen name="common_line_height40">40dp</dimen>
+	<dimen name="common_line_height35">35dp</dimen>
+	<dimen name="common_line_height30">30dp</dimen>
+	<dimen name="common_line_height28">28dp</dimen>
+	<dimen name="common_line_height26">26dp</dimen>
+	<dimen name="common_line_height24">24dp</dimen>
+	<dimen name="common_edit_height24">24dp</dimen>
+	<dimen name="common_drawablePadding3">3dp</dimen>
+	<dimen name="common_drawablePadding5">5dp</dimen>
+	
+	<!-- 此处最大设置与show_btn_****.xml中的作为button中的ImageView高一样，因为一些命令，只有button一行 -->
+	<dimen name="progressBar_width">35dp</dimen>
+	<dimen name="progressBar_height">35dp</dimen>
+				
+	<dimen name="tv_width_30">30dp</dimen>
+	<dimen name="tv_width_40">40dp</dimen>
+	<dimen name="tv_width_50">50dp</dimen>
+	<dimen name="tv_width_60">60dp</dimen>
+	<dimen name="tv_width_80">60dp</dimen>
+	<dimen name="tv_width_90">70dp</dimen>
+	<dimen name="tv_width_100">90dp</dimen>
+	<dimen name="tv_width_150">120dp</dimen>
+	<dimen name="tv_width_160">140dp</dimen>
+	<dimen name="tv_width_200">170dp</dimen>
+	<dimen name="tv_width_300">270dp</dimen>
+	
+	<dimen name="ed_width_20">20dp</dimen>
+	<dimen name="ed_width_32">32dp</dimen>
+	<dimen name="ed_width_40">40dp</dimen>
+	<dimen name="ed_width_50">50dp</dimen>
+	<dimen name="ed_width_60">60dp</dimen>
+	<dimen name="ed_width_70">68dp</dimen>
+	<dimen name="ed_width_72">70dp</dimen>
+	<dimen name="ed_width_80">76dp</dimen>
+	<dimen name="ed_width_90">78dp</dimen>
+	<dimen name="ed_width_92">78dp</dimen>
+	<dimen name="ed_width_100">86dp</dimen>
+	<dimen name="ed_width_110">96dp</dimen>
+	<dimen name="ed_width_120">100dp</dimen>
+	<dimen name="ed_width_150">130dp</dimen>
+	<dimen name="ed_width_180">150dp</dimen>
+
+	
+	<dimen name="ch_width_60">60dp</dimen>
+	<dimen name="ch_width_70">70dp</dimen>
+	<dimen name="ch_width_140">140dp</dimen>
+	
+	<dimen name="layout_width_126">106dp</dimen>
+	
+	<dimen name="layoutMarginLeft_50">35dp</dimen>
+	<dimen name="layoutMarginLeft_20">10dp</dimen>
+	
+	<dimen name="img_btn_layout_width_35">35dp</dimen>
+	<dimen name="img_btn_layout_height_35">35dp</dimen>
+	
+	<dimen name="img_btn_layout_width_30">30dp</dimen>
+	<dimen name="img_btn_layout_height_30">30dp</dimen>
+		
+	<dimen name="text12">10sp</dimen>
+	<dimen name="text13">10sp</dimen>
+	<dimen name="text14">12sp</dimen>
+	<dimen name="text15">12sp</dimen>
+	<dimen name="text16">12sp</dimen>
+	<dimen name="text17">13sp</dimen>
+	<dimen name="text18">14sp</dimen>
+	<dimen name="text19">15sp</dimen>
+	<dimen name="text20">16sp</dimen>
+	
+	<dimen name="ch_radion_group_layout_marginTop_10">10dp</dimen>
+	<dimen name="ch_radion_paddingLeft_25">25dp</dimen>
+	<dimen name="ch_radion_layout_marginTop_15">0dp</dimen>
+			
+	<dimen name="commandOutIn_marginLeft">15dp</dimen>
+			
+	<dimen name="ch_edt_width_189">147dp</dimen>
+	<dimen name="ch_edt_width_55">35dp</dimen>
+	<dimen name="ch_edt_width_32">26dp</dimen>
+			
+
+	<dimen name="ch_rtuDataListViewHeight_small">120dp</dimen>
+	<dimen name="ch_rtuDataListViewHeight_big">360dp</dimen>
+		
+</resources>

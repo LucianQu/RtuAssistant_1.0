@@ -1,0 +1,476 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="func_fragment_style" >
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item> 
+        <item name="android:layout_marginTop">0.01dp</item>
+    </style>
+    
+    <style name="func_grouptitle_linearlayout_style" >
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item> 
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:background">@drawable/border</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="func_grouptitle_imageview_style" >
+	    <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">100dp</item>
+		<item name="android:layout_marginTop">0dp</item>
+	    <item name="android:layout_marginLeft">10dp</item>
+		<item name="android:layout_marginRight">10dp</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+    <style name="func_itemtitle_imageview_style" >
+	    <item name="android:layout_width">26dp</item>
+        <item name="android:layout_height">26dp</item>
+		<item name="android:layout_marginRight">30dp</item>
+	    <item name="android:src">@drawable/lb_blue</item>
+	    <item name="android:gravity">right</item>
+	    <item name="android:layout_gravity">center_vertical</item>
+    </style>
+    
+    <style name="func_grouptitle_textview_style" >
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">30dp</item>
+		<item name="android:layout_marginTop">-30dp</item>
+		<item name="android:layout_marginRight">10dp</item>
+	    <item name="android:layout_marginLeft">10dp</item>
+	    <item name="android:paddingTop">3dp</item>
+	    <item name="android:paddingLeft">10dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#FFFFFF</item>
+		<item name="android:background">@drawable/border_touming</item>
+    </style>
+  
+    
+    <style name="func_out_linearlayout_style" >
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginTop">0.01dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    
+    <style name="func_title_linearlayout_style" >
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">55dp</item>
+	    <item name="android:gravity">center_vertical</item>
+	    <item name="android:background">@drawable/border</item>
+        <item name="android:orientation">horizontal</item>
+	 </style>
+    
+    <style name="func_title_viewtext_style" >
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+	    <item name="android:paddingLeft">10dp</item>
+	    <item name="android:gravity">center_vertical</item>
+        <item name="android:drawablePadding">15dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/text14</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:drawableRight">@drawable/lb_gray</item>
+	    <item name="android:paddingRight">10dp</item>
+    </style>
+    
+    <style name="func_framelayout_style" >
+        <item name="android:layout_width">match_parent</item>
+	    <item name="android:layout_height">match_parent</item>
+	    <item name="android:orientation">vertical</item>
+	    <item name="android:layout_marginLeft">15dp</item>
+	    <item name="android:visibility">gone</item>
+    </style>
+    
+    
+    <style name="func_linearlayout_style" >
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/item_cnt_bg</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    
+    
+    <style name="func_progressbar_linearlayout_style" >
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/item_cnt_bg0</item>
+        <item name="android:gravity">center_horizontal|center_vertical</item>
+        <item name="android:visibility">gone</item>
+    </style>
+    
+    <style name="func_progressbar_style" >
+        <item name="android:layout_width">@dimen/progressBar_width</item>
+        <item name="android:layout_height">@dimen/progressBar_height</item>
+        <item name="android:indeterminateDrawable">@drawable/progressbar</item>
+    </style>
+    		
+    <style name="func_item_viewtext_style" >
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:drawablePadding">@dimen/common_drawablePadding3</item>
+        <item name="android:textSize">@dimen/text14</item>
+    </style>
+    		
+    <style name="func_item_chechbox_style" >
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:textSize">@dimen/text14</item>
+    </style>
+    
+    <style name="func_item_chechbox_style_60" parent="@style/func_item_chechbox_style">
+        <item name="android:layout_width">@dimen/ch_width_60</item>
+    </style>
+    
+    <style name="func_item_chechbox_style_70" parent="@style/func_item_chechbox_style">
+        <item name="android:layout_width">@dimen/ch_width_70</item>
+    </style>
+    
+    <style name="func_item_chechbox_style_140" parent="@style/func_item_chechbox_style">
+        <item name="android:layout_width">@dimen/ch_width_140</item>
+    </style>
+    
+    <style name="func_item_viewtext_style_100" parent="@style/func_item_viewtext_style">
+        <item name="android:layout_width">@dimen/tv_width_100</item>
+    </style>
+    
+    <style name="func_item_viewtext_style_100_a" parent="@style/func_item_viewtext_style">
+        <item name="android:drawableLeft">@drawable/label</item>
+        <item name="android:layout_width">@dimen/tv_width_100</item>
+    </style>
+    
+    <style name="func_item_viewtext_style_150_a" parent="@style/func_item_viewtext_style">
+        <item name="android:drawableLeft">@drawable/label</item>
+        <item name="android:layout_width">@dimen/tv_width_150</item>
+    </style>
+    
+    <style name="func_item_viewtext_style_200_a" parent="@style/func_item_viewtext_style">
+        <item name="android:drawableLeft">@drawable/label</item>
+        <item name="android:layout_width">@dimen/tv_width_200</item>
+    </style>
+    
+    <style name="func_item_viewtext_style_300_a" parent="@style/func_item_viewtext_style">
+        <item name="android:drawableLeft">@drawable/label</item>
+        <item name="android:layout_width">@dimen/tv_width_300</item>
+    </style>
+    
+    <style name="func_item_viewtext_style_100_b" parent="@style/func_item_viewtext_style">
+        <item name="android:layout_width">@dimen/tv_width_100</item>
+        <item name="android:drawableLeft">@drawable/dot</item>
+        <item name="android:drawablePadding">@dimen/common_drawablePadding5</item>
+        <item name="android:layout_marginRight">8dp</item>
+    </style>
+    
+    <style name="func_item_viewtext_style_150_b" parent="@style/func_item_viewtext_style">
+        <item name="android:layout_width">@dimen/tv_width_150</item>
+        <item name="android:drawableLeft">@drawable/dot</item>
+        <item name="android:drawablePadding">@dimen/common_drawablePadding5</item>
+        <item name="android:layout_marginRight">8dp</item>
+    </style>
+    
+    <style name="func_item_viewtext_style_160_b" parent="@style/func_item_viewtext_style">
+        <item name="android:layout_width">@dimen/tv_width_160</item>
+        <item name="android:drawableLeft">@drawable/dot</item>
+        <item name="android:drawablePadding">@dimen/common_drawablePadding5</item>
+        <item name="android:layout_marginRight">8dp</item>
+    </style>
+    
+    <style name="func_item_viewtext_style_200_b" parent="@style/func_item_viewtext_style">
+        <item name="android:layout_width">@dimen/tv_width_200</item>
+        <item name="android:drawableLeft">@drawable/dot</item>
+        <item name="android:drawablePadding">@dimen/common_drawablePadding5</item>
+        <item name="android:layout_marginRight">8dp</item>
+    </style>
+    
+    
+    <style name="func_item_viewtext_style_unit_100" parent="@style/func_item_viewtext_style">
+        <item name="android:layout_width">@dimen/tv_width_100</item>
+    </style>
+    
+    <style name="func_item_viewtext_style_unit_30" parent="@style/func_item_viewtext_style">
+        <item name="android:layout_width">@dimen/tv_width_30</item>
+    </style>
+    
+   
+    <style name="func_dt_viewtext_style_90" parent="@style/func_item_viewtext_style">
+        <item name="android:background">@drawable/edittext_1</item>
+        <item name="android:layout_width">@dimen/tv_width_90</item>
+        <item name="android:layout_height">@dimen/common_edit_height24</item>
+    </style>
+    
+    
+    <style name="func_dt_viewtext_style_80" parent="@style/func_item_viewtext_style">
+        <item name="android:background">@drawable/edittext_1</item>
+        <item name="android:layout_width">@dimen/tv_width_80</item>
+        <item name="android:layout_height">@dimen/common_edit_height24</item>
+    </style>
+    
+    <style name="func_dt_viewtext_style_60" parent="@style/func_item_viewtext_style">
+        <item name="android:background">@drawable/edittext_1</item>
+        <item name="android:layout_width">@dimen/tv_width_60</item>
+        <item name="android:layout_height">@dimen/common_edit_height24</item>
+    </style>
+    
+    <style name="func_dt_viewtext_style_30" parent="@style/func_item_viewtext_style">
+        <item name="android:background">@drawable/edittext_1</item>
+        <item name="android:layout_width">@dimen/tv_width_30</item>
+        <item name="android:layout_height">@dimen/common_edit_height24</item>
+        <item name="android:layout_marginLeft">3dp</item>
+    </style>
+    
+    <style name="func_item_edittext_style" parent="@android:style/Widget.EditText">
+        <item name="android:background">@drawable/edittext_1</item>
+        <item name="android:textSize">@dimen/text15</item>
+        <item name="android:textColor">#0000FF</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:singleLine">true</item>
+    </style>
+	
+    <style name="func_item_edittext_style_32" parent="@style/func_item_edittext_style">
+        <item name="android:layout_width">@dimen/ed_width_32</item>
+        <item name="android:layout_height">@dimen/common_edit_height24</item>
+        <item name="android:layout_marginRight">3dp</item>
+	</style>
+	
+    <style name="func_item_edittext_style_50" parent="@style/func_item_edittext_style">
+        <item name="android:layout_width">@dimen/ed_width_50</item>
+        <item name="android:layout_height">@dimen/common_edit_height24</item>
+        <item name="android:layout_marginRight">3dp</item>
+	</style>
+    	
+    <style name="func_item_edittext_style_80" parent="@style/func_item_edittext_style">
+        <item name="android:layout_width">@dimen/ed_width_80</item>
+        <item name="android:layout_height">@dimen/common_edit_height24</item>
+        <item name="android:layout_marginRight">3dp</item>
+	</style>
+	
+    <style name="func_item_edittext_style_100" parent="@style/func_item_edittext_style">
+        <item name="android:layout_width">@dimen/ed_width_100</item>
+        <item name="android:layout_height">@dimen/common_edit_height24</item>
+        <item name="android:layout_marginRight">3dp</item>
+	</style>
+	
+    <style name="func_item_edittext_style_120" parent="@style/func_item_edittext_style">
+        <item name="android:layout_width">@dimen/ed_width_120</item>
+        <item name="android:layout_height">@dimen/common_edit_height24</item>
+	</style>
+    	
+    <style name="func_item_edittext_style_180" parent="@style/func_item_edittext_style">
+        <item name="android:layout_width">@dimen/ed_width_180</item>
+        <item name="android:layout_height">@dimen/common_edit_height24</item>
+	</style>
+    
+    
+    <style name="func_item_editnumber_style_32" parent="@style/func_item_edittext_style_32">
+        <item name="android:inputType">number</item>
+	</style>
+
+    <style name="func_item_editnumber_style_80" parent="@style/func_item_edittext_style_80">
+        <item name="android:inputType">number</item>
+	</style>
+
+    <style name="func_item_editnumber_style_100" parent="@style/func_item_edittext_style_100">
+        <item name="android:inputType">number</item>
+	</style>
+
+    <style name="func_item_editnumber_style_120" parent="@style/func_item_edittext_style_120">
+        <item name="android:inputType">number</item>
+	</style>
+    
+    <style name="func_item_editnumber_style_180" parent="@style/func_item_edittext_style_180">
+        <item name="android:inputType">number</item>
+	</style>
+     
+    
+    <style name="func_item_editsigned_style_180" parent="@style/func_item_edittext_style_180">
+        <item name="android:inputType">numberSigned</item>
+	</style>
+    
+    <style name="func_item_editsigned_style_32" parent="@style/func_item_edittext_style_32">
+        <item name="android:inputType">numberSigned</item>
+	</style>
+
+    <style name="func_item_editsigned_style_80" parent="@style/func_item_edittext_style_80">
+        <item name="android:inputType">numberSigned</item>
+	</style>
+
+    <style name="func_item_editsigned_style_100" parent="@style/func_item_edittext_style_100">
+        <item name="android:inputType">numberSigned</item>
+	</style>
+    
+    
+    <style name="func_item_editdecimal_style_180" parent="@style/func_item_edittext_style_180">
+        <item name="android:inputType">numberDecimal</item>
+	</style>
+    	
+    <style name="func_item_editdecimal_style_32" parent="@style/func_item_edittext_style_32">
+        <item name="android:inputType">numberDecimal</item>
+	</style>
+    	
+    <style name="func_item_editdecimal_style_80" parent="@style/func_item_edittext_style_80">
+        <item name="android:inputType">numberDecimal</item>
+	</style>
+    	
+    <style name="func_item_editdecimal_style_100" parent="@style/func_item_edittext_style_100">
+        <item name="android:inputType">numberDecimal</item>
+	</style>
+    	
+    
+    <style name="func_item_editdecimalSigned_style_180" parent="@style/func_item_edittext_style_180">
+        <item name="android:inputType">none</item>
+        <item name="android:digits">1234567890.-</item>
+	</style>
+    	
+    <style name="func_item_editdecimalSigned_style_32" parent="@style/func_item_edittext_style_32">
+        <item name="android:inputType">none</item>
+        <item name="android:digits">1234567890.-</item>
+	</style>
+    
+    <style name="func_item_editdecimalSigned_style_80" parent="@style/func_item_edittext_style_80">
+        <item name="android:inputType">none</item>
+        <item name="android:digits">1234567890.-</item>
+    </style>
+    
+    <style name="func_item_editdecimalSigned_style_100" parent="@style/func_item_edittext_style_100">
+        <item name="android:inputType">none</item>
+        <item name="android:digits">1234567890.-</item>
+    </style>
+    
+    
+    <style name="func_item_Spinner_style">
+        <item name="android:layout_height">match_parent</item>
+    </style>
+    
+    <style name="func_item_Spinner_style_180" parent="@style/func_item_Spinner_style">
+        <item name="android:layout_width">@dimen/ed_width_180</item>
+	</style>
+    
+    
+    
+    <style name="edittext_style_1" parent="@android:style/Widget.EditText">
+        <item name="android:background">@drawable/edittext_1</item>
+    </style>
+
+    <style name="edittext_style_2" parent="@android:style/Widget.EditText">
+        <item name="android:background">@drawable/edittext_2</item>
+    </style>
+    
+    <style name="func_item_editHex_style" parent="@style/edittext_style_2">
+        <item name="android:digits">1234567890ABCDEFabcdef</item>
+    </style>
+    
+
+    <style name="func_item_editHex_style_120" parent="@style/func_item_edittext_style_120">
+        <item name="android:digits">1234567890ABCDEFabcdef</item>
+	</style>
+
+    <style name="func_item_editHex_style_180" parent="@style/func_item_edittext_style_180">
+        <item name="android:digits">1234567890ABCDEFabcdef</item>
+	</style>
+    
+    <style name="popwin_anim_style">
+        <item name="android:windowEnterAnimation">@anim/menushow</item>
+        <item name="android:windowExitAnimation">@anim/menuhide</item>
+    </style>
+    
+    
+    		   
+        		
+    <style name="loopq_item_viewtext_style_a" >
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:drawablePadding">@dimen/common_drawablePadding3</item>
+        <item name="android:textSize">@dimen/text14</item>
+    </style>
+    <style name="loopq_item_viewtext_style_b" >
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:textSize">@dimen/text14</item>
+    </style>
+     <style name="loopq_item_viewtext_style_c" >
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:drawablePadding">@dimen/common_drawablePadding3</item>
+        <item name="android:textSize">@dimen/text14</item>
+    </style>
+    <style name="loopq_item_viewtext_style_100_a" parent="@style/loopq_item_viewtext_style_a">
+        <item name="android:drawableLeft">@drawable/label</item>
+        <item name="android:layout_marginLeft">2dp</item>
+        <item name="android:layout_width">@dimen/tv_width_100</item>
+    </style>    
+    <style name="loopq_item_viewtext_style_100_a_" parent="@style/loopq_item_viewtext_style_a">
+        <item name="android:drawableLeft">@drawable/arrow3</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_width">@dimen/tv_width_100</item>
+    </style>    
+    <style name="loopq_item_viewtext_style_40_b" parent="@style/loopq_item_viewtext_style_b">
+        <item name="android:layout_width">@dimen/tv_width_40</item>
+    </style>    
+    <style name="loopq_item_viewtext_style_unit_100" parent="@style/loopq_item_viewtext_style_c">
+        <item name="android:layout_width">@dimen/tv_width_100</item>
+    </style>
+    
+
+    <style name="loopq_item_Spinner_style">
+        <item name="android:layout_height">match_parent</item>
+    </style>
+    <style name="loopq_item_Spinner_style_70" parent="@style/loopq_item_Spinner_style">
+        <item name="android:layout_width">@dimen/ed_width_70</item>
+	</style>   
+    <style name="loopq_item_Spinner_style_100" parent="@style/loopq_item_Spinner_style">
+        <item name="android:layout_width">@dimen/ed_width_100</item>
+	</style>    
+    <style name="loopq_item_Spinner_style_180" parent="@style/loopq_item_Spinner_style">
+        <item name="android:layout_width">@dimen/ed_width_180</item>
+	</style>    
+    
+    <style name="loopq_item_edittext_style" parent="@android:style/Widget.EditText">
+        <item name="android:background">@drawable/edittext_1</item>
+        <item name="android:textSize">@dimen/text15</item>
+        <item name="android:textColor">#0000FF</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="loopq_item_edittext_style_92" parent="@style/loopq_item_edittext_style">
+        <item name="android:layout_width">@dimen/ed_width_92</item>
+        <item name="android:layout_height">@dimen/common_edit_height24</item>
+        <item name="android:layout_marginRight">3dp</item>
+	</style>  
+    <style name="loopq_item_edittext_style_150" parent="@style/loopq_item_edittext_style">
+        <item name="android:layout_width">@dimen/ed_width_150</item>
+        <item name="android:layout_height">@dimen/common_edit_height24</item>
+        <item name="android:layout_marginRight">3dp</item>
+	</style>  
+    	
+    
+
+    <style name="welcome">
+		<item name="android:text">@string/welcome</item> 
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">40dp</item> 
+		<item name="android:layout_gravity">center|center_horizontal|center_vertical</item>
+		<item name="android:gravity">center|center_horizontal</item>
+		<item name="android:typeface">sans</item> 
+		<item name="android:shadowDx">3</item>
+		<item name="android:shadowDy">4</item>
+		<item name="android:shadowRadius">2</item> 
+		<item name="android:shadowColor">#303030</item>
+		<item name="android:textSize">@dimen/text17</item>
+    </style>
+</resources>

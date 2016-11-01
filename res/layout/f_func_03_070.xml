@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+    
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	style="@style/func_out_linearlayout_style" >
+
+	<!-- start 头部标题 --> 
+	<LinearLayout style="@style/func_title_linearlayout_style">
+	    <TextView
+	    	android:id="@+id/f_03_070_Title"
+	        android:drawableLeft="@drawable/item003"
+	        android:text="@string/func_03_070"
+			style="@style/func_title_viewtext_style"/>
+	    
+	    <!-- 注释掉，以备用，若应用并显示在界面上时，要调整上面textView的宽度（如300dp） 
+	    <ImageView 
+	        android:id="@+id/commandStatus"
+	        style="@style/func_itemtitle_imageview_style"
+	        android:contentDescription="@string/txtBtn"/>
+	    -->
+	</LinearLayout>  
+	
+    
+	<!-- start 具体内布局 -->
+    <FrameLayout
+    	android:id="@+id/f_03_070_Frm"
+		style="@style/func_framelayout_style">
+    
+		 <!-- start 具体内容 -->
+		 <LinearLayout 
+	        style="@style/func_linearlayout_style">
+	        
+		     <!-- start 井口高程 -->
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height35"
+			    >
+			    <TextView
+			        android:text="@string/func_03_070_item1"
+			        style="@style/func_item_viewtext_style_100_a"/>
+			</LinearLayout>
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height35"
+			    >
+			    <TextView
+			        android:text="@string/func_03_070_item1_1"
+			        style="@style/func_item_viewtext_style_100_b"/>
+			    <Spinner android:id="@+id/f_03_070_item1_1" 
+				    style="@style/func_item_Spinner_style_180"/>
+			</LinearLayout>
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30"
+			    >
+			    <TextView
+			        android:text="@string/func_03_070_item1_2"
+			        style="@style/func_item_viewtext_style_100_b"/>
+			    <EditText
+					android:id="@+id/f_03_070_item1_2"  
+					android:labelFor="@id/f_03_070_item1_2" 
+				    style="@style/func_item_editdecimalSigned_style_80"/>
+			    <TextView
+			        android:text="@string/func_item_unit_m"
+			        style="@style/func_item_viewtext_style_unit_100"/>
+			    </LinearLayout>
+		     <!-- end 井口高程 -->
+												
+		    <include layout="@layout/line1" />
+	        
+		     <!-- start 水井深度 -->
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height35"
+			    >
+			    <TextView
+			        android:text="@string/func_03_070_item2"
+			        style="@style/func_item_viewtext_style_100_a"/>
+			</LinearLayout>
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height35"
+			    >
+			    <TextView
+			        android:text="@string/func_03_070_item2_1"
+			        style="@style/func_item_viewtext_style_100_b"/>
+			    <Spinner android:id="@+id/f_03_070_item2_1" 
+				    style="@style/func_item_Spinner_style_180"/>
+			</LinearLayout>
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30"
+			    >
+			    <TextView
+			        android:text="@string/func_03_070_item2_2"
+			        style="@style/func_item_viewtext_style_100_b"/>
+			    <EditText
+					android:id="@+id/f_03_070_item2_2"  
+					android:labelFor="@id/f_03_070_item2_2" 
+				    style="@style/func_item_editdecimal_style_80"/>
+			    <TextView
+			        android:text="@string/func_item_unit_m"
+			        style="@style/func_item_viewtext_style_unit_100"/>
+			</LinearLayout>
+		     <!-- end 水井深度 -->
+		    <include layout="@layout/line1" />
+
+	        
+		    <!-- start 探头埋深 -->
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height35"
+			    >
+			    <TextView
+			        android:text="@string/func_03_070_item3"
+			        style="@style/func_item_viewtext_style_100_a"/>
+			</LinearLayout>
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height35"
+			    >
+			    <TextView
+			        android:text="@string/func_03_070_item3_1"
+			        style="@style/func_item_viewtext_style_100_b"/>
+			    <Spinner android:id="@+id/f_03_070_item3_1" 
+				    style="@style/func_item_Spinner_style_180"/>
+			</LinearLayout>
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30"
+			    >
+			    <TextView
+			        android:text="@string/func_03_070_item3_2"
+			        style="@style/func_item_viewtext_style_100_b"/>
+			    <EditText
+					android:id="@+id/f_03_070_item3_2"  
+					android:labelFor="@id/f_03_070_item3_2" 
+				    style="@style/func_item_editdecimal_style_80"/>
+			    <TextView
+			        android:text="@string/func_item_unit_m"
+			        style="@style/func_item_viewtext_style_unit_100"/>
+			</LinearLayout>
+		     <!-- end 探头埋深 -->
+		    <include layout="@layout/line1" />
+
+		    		    							        
+		    <include layout="@layout/show_btn_set_query" />
+		 </LinearLayout>
+	     
+		 <!-- start 底部 -->
+		 <LinearLayout 
+	        android:id="@+id/f_03_070_Load"
+	        style="@style/func_progressbar_linearlayout_style" >
+		    <ProgressBar
+		        style="@style/func_progressbar_style" />
+		 </LinearLayout>
+	</FrameLayout>
+</LinearLayout>
+

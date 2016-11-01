@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+    
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	style="@style/func_out_linearlayout_style" >
+
+	<!-- start 头部标题 --> 
+	<LinearLayout style="@style/func_title_linearlayout_style">
+	    <TextView
+	    	android:id="@+id/f_04_070_Title"
+	        android:drawableLeft="@drawable/item004"
+	        android:text="@string/func_04_070"
+			style="@style/func_title_viewtext_style"/>
+	    
+	    <!-- 注释掉，以备用，若应用并显示在界面上时，要调整上面textView的宽度（如300dp） 
+	    <ImageView 
+	        android:id="@+id/commandStatus"
+	        style="@style/func_itemtitle_imageview_style"
+	        android:contentDescription="@string/txtBtn"/>
+	    -->
+	</LinearLayout>  
+	
+    
+    <!-- start 具体内布局 -->
+    <FrameLayout
+    	android:id="@+id/f_04_070_Frm"
+		style="@style/func_framelayout_style">
+    
+		 <!-- start 具体内容 -->
+		 <LinearLayout 
+	        style="@style/func_linearlayout_style">
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height26"
+			    >
+			    <CheckBox 
+				    android:id="@+id/f_04_070_item01" 
+				    android:text="@string/func_04_070_item01"
+				    style="@style/func_item_chechbox_style_140"/> 
+			</LinearLayout>
+		    
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height26"
+			    >
+			    <CheckBox 
+				    android:id="@+id/f_04_070_item02" 
+				    android:text="@string/func_04_070_item02"
+				    style="@style/func_item_chechbox_style_140"/> 
+			</LinearLayout>
+			
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height26"
+			    >
+			    <CheckBox 
+				    android:id="@+id/f_04_070_item03" 
+				    android:text="@string/func_04_070_item03"
+				    style="@style/func_item_chechbox_style_140"/> 
+			</LinearLayout>
+		    
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height26"
+			    >
+			    <CheckBox 
+				    android:id="@+id/f_04_070_item04" 
+				    android:text="@string/func_04_070_item04"
+				    style="@style/func_item_chechbox_style_140"/> 
+			</LinearLayout>
+		    
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height26"
+			    >
+			    <CheckBox 
+				    android:id="@+id/f_04_070_item05" 
+				    android:text="@string/func_04_070_item05"
+				    style="@style/func_item_chechbox_style_140"/> 
+			</LinearLayout>
+		    
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height26"
+			    >
+			    <CheckBox 
+				    android:id="@+id/f_04_070_item06" 
+				    android:text="@string/func_04_070_item06"
+				    style="@style/func_item_chechbox_style_140"/> 
+			</LinearLayout>
+		    
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height26"
+			    >
+			    <CheckBox 
+				    android:id="@+id/f_04_070_item07" 
+				    android:text="@string/func_04_070_item07"
+				    style="@style/func_item_chechbox_style_140"/> 
+			</LinearLayout>
+		    
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height26"
+			    >
+			    <CheckBox 
+				    android:id="@+id/f_04_070_item08" 
+				    android:text="@string/func_04_070_item08"
+				    style="@style/func_item_chechbox_style_140"/> 
+			</LinearLayout>
+		    
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height26"
+			    >
+			    <CheckBox 
+				    android:id="@+id/f_04_070_item09" 
+				    android:text="@string/func_04_070_item09"
+				    style="@style/func_item_chechbox_style_140"/> 
+			</LinearLayout>
+		    
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height26"
+			    >
+			    <CheckBox 
+				    android:id="@+id/f_04_070_item10" 
+				    android:text="@string/func_04_070_item10"
+				    style="@style/func_item_chechbox_style_140"/> 
+			</LinearLayout>
+		    
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height26"
+			    >
+			    <CheckBox 
+				    android:id="@+id/f_04_070_item11" 
+				    android:text="@string/func_04_070_item11"
+				    style="@style/func_item_chechbox_style_140"/> 
+			</LinearLayout>
+		    
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height26"
+			    >
+			    <CheckBox 
+				    android:id="@+id/f_04_070_item12" 
+				    android:text="@string/func_04_070_item12"
+				    style="@style/func_item_chechbox_style_140"/> 
+			</LinearLayout>
+		    
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height26"
+			    >
+			    <CheckBox 
+				    android:id="@+id/f_04_070_item13" 
+				    android:text="@string/func_04_070_item13"
+				    style="@style/func_item_chechbox_style_140"/> 
+			</LinearLayout>
+		    
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height26"
+			    >
+			    <CheckBox 
+				    android:id="@+id/f_04_070_item14" 
+				    android:text="@string/func_04_070_item14"
+				    style="@style/func_item_chechbox_style_140"/> 
+			</LinearLayout>
+		    
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height26"
+			    >
+			    <CheckBox 
+				    android:id="@+id/f_04_070_item15" 
+				    android:text="@string/func_04_070_item15"
+				    style="@style/func_item_chechbox_style_140"/> 
+			</LinearLayout>
+			
+		    <include layout="@layout/show_btn_set_query" />
+		 </LinearLayout>
+	     
+		 <!-- start 底部 -->
+		 <LinearLayout 
+	        android:id="@+id/f_04_070_Load"
+	        style="@style/func_progressbar_linearlayout_style" >
+		    <ProgressBar
+		        style="@style/func_progressbar_style" />
+		 </LinearLayout>
+	</FrameLayout>
+</LinearLayout>
+

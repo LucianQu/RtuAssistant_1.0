@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+    
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	style="@style/func_out_linearlayout_style" >
+
+	<!-- start 头部标题 --> 
+	<LinearLayout style="@style/func_title_linearlayout_style">
+	    <TextView
+	    	android:id="@+id/f_04_020_Title"
+	        android:drawableLeft="@drawable/item004"
+	        android:text="@string/func_04_020"
+			style="@style/func_title_viewtext_style"/>
+	    
+	    <!-- 注释掉，以备用，若应用并显示在界面上时，要调整上面textView的宽度（如300dp） 
+	    <ImageView 
+	        android:id="@+id/commandStatus"
+	        style="@style/func_itemtitle_imageview_style"
+	        android:contentDescription="@string/txtBtn"/>
+	    -->
+	</LinearLayout>  
+	
+    
+	<!-- start 具体内布局 -->
+    <FrameLayout
+    	android:id="@+id/f_04_020_Frm"
+		style="@style/func_framelayout_style">
+    
+		 <!-- start 具体内容 -->
+		 <LinearLayout
+		    style="@style/func_linearlayout_style"
+	        android:orientation="vertical">
+	        
+		     <!-- 数据 -->
+			 <LinearLayout android:id="@+id/f_04_020_dataContain"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical">
+			 </LinearLayout>
+			 
+			 <!-- 功能按钮 -->
+			 <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content">
+			    <include layout="@layout/show_btn_set_query_add_remove" />
+			 </LinearLayout>
+			 
+			 <!-- 报警 -->
+			 <LinearLayout android:id="@+id/f_04_020_alarmContain"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical">
+			 </LinearLayout>
+			 			 
+		 </LinearLayout>
+		 	     
+		 <!-- start 底部 -->
+		 <LinearLayout 
+	        android:id="@+id/f_04_020_Load"
+	        style="@style/func_progressbar_linearlayout_style" >
+		    <ProgressBar
+		        style="@style/func_progressbar_style" />
+		 </LinearLayout>
+	</FrameLayout>
+</LinearLayout>
+

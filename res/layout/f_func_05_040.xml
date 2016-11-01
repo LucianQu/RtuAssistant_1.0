@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+    
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	style="@style/func_out_linearlayout_style" >
+
+	<!-- start 头部标题 --> 
+	<LinearLayout style="@style/func_title_linearlayout_style">
+	    <TextView
+	    	android:id="@+id/f_05_040_Title"
+	        android:drawableLeft="@drawable/item005"
+	        android:text="@string/func_05_040"
+			style="@style/func_title_viewtext_style"/>
+	    
+	    <!-- 注释掉，以备用，若应用并显示在界面上时，要调整上面textView的宽度（如300dp） 
+	    <ImageView 
+	        android:id="@+id/commandStatus"
+	        style="@style/func_itemtitle_imageview_style"
+	        android:contentDescription="@string/txtBtn"/>
+	    -->
+	</LinearLayout>  
+	
+    
+	<!-- start 具体内布局 -->
+    <FrameLayout
+    	android:id="@+id/f_05_040_Frm"
+		style="@style/func_framelayout_style">
+    
+		 <!-- start 具体内容 -->
+		 <LinearLayout 
+	        style="@style/func_linearlayout_style">
+	        
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height40"
+			    >
+			    <TextView
+			        android:text="@string/func_05_040_item01_1"
+			        style="@style/func_item_viewtext_style_100_b"/>
+			    
+			    <Spinner android:id="@+id/f_05_040_item01_1" 
+				    style="@style/func_item_Spinner_style_180"/>
+			</LinearLayout>
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height40">
+			    <TextView
+			        android:text="@string/func_05_040_item01_2"
+			        style="@style/func_item_viewtext_style_100_b"/>
+			    <EditText
+					android:id="@+id/f_05_040_item01_2"  
+					android:labelFor="@id/f_05_040_item01_2" 
+				    style="@style/func_item_editnumber_style_80"/>
+			</LinearLayout>
+				        
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height40"
+			    >
+			    <TextView
+			        android:text="@string/func_05_040_item02"
+			        style="@style/func_item_viewtext_style_100_b"/>
+			   <TextView
+			        android:id="@+id/f_05_040_item02_1"
+			        style="@style/func_dt_viewtext_style_90"
+			        android:textColor="#0000FF"
+			        />
+			   <TextView
+			        android:id="@+id/f_05_040_item02_2"
+			        style="@style/func_dt_viewtext_style_30"
+			        android:textColor="#0000FF"
+			        />
+			</LinearLayout>
+	        
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height40"
+			    >
+			    <TextView
+			        android:text="@string/func_05_040_item03"
+			        style="@style/func_item_viewtext_style_100_b"/>
+			   <TextView
+			        android:id="@+id/f_05_040_item03_1"
+			        style="@style/func_dt_viewtext_style_90"
+			        android:textColor="#0000FF"
+			        />
+			   <TextView
+			        android:id="@+id/f_05_040_item03_2"
+			        style="@style/func_dt_viewtext_style_30"
+			        android:textColor="#0000FF"
+			        />
+			</LinearLayout>
+			
+			<include layout="@layout/show_btn_query" />
+			
+		    <include layout="@layout/line1" />
+		    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height260" >
+				<com.blg.rtu.compound.FixHeightListView
+			        android:id="@+id/func_05_040_listView"
+			 		android:layout_width="match_parent"
+				    android:layout_height="match_parent" 
+			        android:focusableInTouchMode="true"
+			        android:focusable="true"
+			        android:stackFromBottom="false" 
+			        android:divider="@android:color/transparent"
+			        android:listSelector="@android:color/transparent"
+			        android:cacheColorHint="@android:color/transparent"
+			        android:transcriptMode="alwaysScroll" 
+			        android:scrollbars="vertical" />    			    
+			</LinearLayout>
+						
+			
+		 </LinearLayout>
+	     
+		 <!-- start 底部 -->
+		 <LinearLayout 
+	        android:id="@+id/f_05_040_Load"
+	        style="@style/func_progressbar_linearlayout_style" >
+		    <ProgressBar
+		        style="@style/func_progressbar_style" />
+		 </LinearLayout>
+	</FrameLayout>
+</LinearLayout>
+

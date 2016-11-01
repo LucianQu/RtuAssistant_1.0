@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 此处用相对布局，目的是叫最下部项目沉底 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:orientation="vertical"
+    android:background="@drawable/deskbg4">
+    
+ 	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="36dp" 
+	    android:background="@drawable/line_top_bg_c">
+		<TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:paddingLeft="20dp"
+	        android:layout_gravity="center_vertical"
+	        android:gravity="center_vertical"
+	        android:text="@string/functionChannel"
+	        android:textSize="@dimen/text18"
+	        android:textColor="#FFFFFF"
+	        android:textStyle="bold"
+	        android:drawableLeft="@drawable/func_channel"  
+	        android:drawablePadding="5.0dp" />
+ 	</LinearLayout>
+ 	
+ 	<LinearLayout 
+ 	    android:id="@+id/chLine_01"
+	    android:layout_width="match_parent"
+	    android:layout_height="130dp" >
+		<fragment android:id="@+id/chFragment_01"
+			 android:name="com.blg.rtu.frmChannel.ChFragment_01"
+			 android:layout_width="match_parent"
+			 android:layout_height="match_parent"
+			 android:layout_gravity="center_vertical"/>
+ 	</LinearLayout>
+ 	
+ 	<LinearLayout 
+	    android:id="@+id/chLine_02"
+	    android:layout_width="match_parent"
+	    android:layout_height="55dp" >
+		<fragment android:id="@+id/chFragment_02"
+			 android:name="com.blg.rtu.frmChannel.ChFragment_02"
+			 android:layout_width="match_parent"
+			 android:layout_height="match_parent"
+			 android:layout_gravity="center_vertical"/>
+ 	</LinearLayout>
+ 		
+ 	
+ 	<LinearLayout 
+	    android:id="@+id/chLine_03"
+	    android:layout_width="match_parent"
+	    android:layout_height="55dp" >
+		<fragment android:id="@+id/chFragment_03"
+			 android:name="com.blg.rtu.frmChannel.ChFragment_03"
+			 android:layout_width="match_parent"
+			 android:layout_height="match_parent"
+			 android:layout_gravity="center_vertical"/>
+ 	</LinearLayout>
+ 		
+ 		<LinearLayout 
+	    android:id="@+id/chLine_04"
+	    android:layout_width="match_parent"
+	    android:layout_height="0dp" 
+	    android:layout_weight="1" >
+		<fragment android:id="@+id/chFragment_04"
+			 android:name="com.blg.rtu.frmChannel.ChFragment_04"
+			 android:layout_width="match_parent"
+			 android:layout_height="match_parent" 
+			 android:layout_gravity="center_vertical"/>
+ 	</LinearLayout>
+
+ 	<TextView android:id="@+id/chWelcome"
+		android:textColor="#ddd4ff" 
+		style="@style/welcome"/>
+  				
+ 					
+</LinearLayout>

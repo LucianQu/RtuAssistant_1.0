@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+    android:focusable="true" 
+    android:focusableInTouchMode="true" 
+	不叫界面中editText在打开界面时自动获得焦点
+ -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:focusable="true" 
+    android:focusableInTouchMode="true" 
+    >
+    <LinearLayout android:id="@+id/rtuAssiTitle"
+        android:layout_width="match_parent"
+        android:layout_height="35.0dp"
+        android:layout_gravity="top"
+        android:gravity="center_horizontal"
+        android:background="@drawable/bar_bg"
+        android:baselineAligned="false" >
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/rtuAssiName"
+            android:drawableLeft="@drawable/img_bd_left_0"
+            android:drawableRight="@drawable/img_bd_right_0"
+            android:drawablePadding="10dp"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/text18" />
+    </LinearLayout>
+    
+		           	        
+	<android.support.v4.view.ViewPager
+        android:id="@+id/vPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+	    
+</LinearLayout>

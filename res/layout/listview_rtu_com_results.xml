@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- android:background 设置各种情况下的背景色 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+	android:background="@drawable/linearlayout_bg">
+
+   	<LinearLayout android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+        android:gravity="center_vertical"
+	    android:background="@drawable/item_bg"
+	    >
+	    <!--android:drawablePadding 设置text与drawable(图片)的间隔，与drawableLeft、drawableRight、drawableTop、drawableBottom一起使用，可设置为负数，单独使用没有效果-->
+	    <TextView
+	        android:id="@+id/rtuData_id_code_channel"
+	        android:layout_width="match_parent"
+	        android:layout_height="30dp"
+		    android:layout_marginLeft="5dp"
+			android:layout_marginRight="5dp"
+	        android:drawableLeft="@drawable/dot"
+	        android:drawablePadding="3dp"
+	        android:background="@drawable/txt_bg2"
+	        android:gravity="center_vertical"
+	        android:textSize="@dimen/text13"
+	        />
+	    <TextView
+	        android:id="@+id/rtuData_dt"
+	        android:layout_width="match_parent"
+	        android:layout_height="30dp"
+		    android:layout_marginLeft="5dp"
+			android:layout_marginRight="5dp"
+	        android:drawableLeft="@drawable/dot"
+	        android:drawablePadding="3dp"
+	        android:background="@drawable/txt_bg2"
+	        android:gravity="center_vertical"
+	        android:textSize="@dimen/text13"
+	        />
+	    <TextView
+	        android:id="@+id/rtuData_hex"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:minHeight="30dp"
+		    android:layout_marginLeft="5dp"
+			android:layout_marginRight="5dp"
+	        android:drawableLeft="@drawable/dot"
+	        android:drawablePadding="3dp"
+	        android:background="@drawable/txt_bg2"
+	        android:gravity="center_vertical"
+	        android:textSize="@dimen/text13"
+	        />
+	 </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="debug">true</string>
+    
+    <string name="txtVersion">Version</string>
+    
+    <string name="app_name">RTU助手</string>
+    <string name="rtuAssiName">RTU助手</string>
+    <string name="welcome">欢迎使用RTU助手</string>
+    
+    <string name="functionItems">功能选项</string>
+    <string name="functionLoopQuery">循环查询</string>
+    <string name="functionChannel">通道选项</string>
+    <string name="functionNoProtocol">调试数据</string>
+    
+    <string name="image_description">图片</string>
+    
+    
+    <string name="menu_level_01">系统信息</string>
+    <string name="menu_level_02">通道参数</string>
+    <string name="menu_level_03">采集参数</string>
+    <string name="menu_level_04">通信参数</string>
+    <string name="menu_level_05">运行状况信息</string>
+    <string name="menu_level_06">人工置数</string>
+    
+    <string name="wifi_ip1">10</string>
+    <string name="wifi_ip2">10</string>
+    <string name="wifi_ip3">100</string>
+    <string name="wifi_ip4">254</string>
+    <string name="wifi_port">8899</string>
+        
+    
+    <string name="result_datetime">收到应答时刻</string>
+    
+    <string name="func_01_010">终端地址</string>
+    <string name="func_01_010_item1">行政区编号</string>
+    <string name="func_01_010_item2">终端地址</string>
+    <string name="func_01_010_item3">终端地址</string>
+    <string name="func_01_020">终端时钟</string>
+    <string name="func_01_020_item1">本地时钟</string>
+    <string name="func_01_020_item2">设置时钟</string>
+    <string name="func_01_020_item3">终端时钟</string>
+    <string name="func_01_030">终端工作模式</string>
+    <string name="func_01_030_item1">工作模式</string>
+    <string name="func_01_040">终端版本号</string>
+    <string name="func_01_040_item1">硬件版本</string>
+    <string name="func_01_040_item2">软件版本</string>
+    <string name="func_01_050">复位遥测终端</string>
+    <string name="func_01_050_item1">复位类型</string>
+    <string name="func_01_060">清空遥测终端</string>
+    <string name="func_01_060_item1">清空单元</string>
+    <string name="func_01_070">供电方式与电压</string>
+    <string name="func_01_070_item1">供电方式</string>
+    <string name="func_01_070_item2">电压</string>
+    <string name="func_01_080">电池电压报警值</string>
+    <string name="func_01_080_item1">报警数值</string>
+    
+    
+    <string name="func_02_010">DTU工作模式</string>
+    <string name="func_02_010_item1">工作模式</string>
+    <string name="func_02_020">终端心跳周期</string>
+    <string name="func_02_020_item1">心跳周期</string>
+    <string name="func_02_030">终端主备通道</string>
+    <string name="func_02_030_item1">主通道</string>
+    <string name="func_02_030_item2">备用通道1</string>
+    <string name="func_02_030_item3">备用通道2</string>
+    <string name="func_02_040">GPRS接入点</string>
+    <string name="func_02_040_item1">接入点名称</string>
+    <string name="func_02_040_item2">接入点用户</string>
+    <string name="func_02_040_item3">接入点密码</string>
+    <string name="func_02_050">中心网址</string>
+    <string name="func_02_050_item1">中心一</string>
+    <string name="func_02_050_item1_1">是否有效</string>
+    <string name="func_02_050_item1_2">IP地址</string>
+    <string name="func_02_050_item1_3">端口</string>
+    <string name="func_02_050_item1_4">通信方式</string>
+    <string name="func_02_050_item2">中心二</string>
+    <string name="func_02_050_item2_1">是否有效</string>
+    <string name="func_02_050_item2_2">IP地址</string>
+    <string name="func_02_050_item2_3">端口</string>
+    <string name="func_02_050_item2_4">通信方式</string>
+    <string name="func_02_050_item3">中心三</string>
+    <string name="func_02_050_item3_1">是否有效</string>
+    <string name="func_02_050_item3_2">IP地址</string>
+    <string name="func_02_050_item3_3">端口</string>
+    <string name="func_02_050_item3_4">通信方式</string>
+    <string name="func_02_050_item4">中心四</string>
+    <string name="func_02_050_item4_1">是否有效</string>
+    <string name="func_02_050_item4_2">IP地址</string>
+    <string name="func_02_050_item4_3">端口</string>
+    <string name="func_02_050_item4_4">通信方式</string>
+    <string name="func_02_060">短信中心</string>
+    <string name="func_02_060_item1">中心一</string>
+    <string name="func_02_060_item1_1">是否有效</string>
+    <string name="func_02_060_item1_2">电话号码</string>
+    <string name="func_02_060_item2">中心二</string>
+    <string name="func_02_060_item2_1">是否有效</string>
+    <string name="func_02_060_item2_2">电话号码</string>
+    <string name="func_02_060_item3">中心三</string>
+    <string name="func_02_060_item3_1">是否有效</string>
+    <string name="func_02_060_item3_2">电话号码</string>
+    <string name="func_02_060_item4">中心四</string>
+    <string name="func_02_060_item4_1">是否有效</string>
+    <string name="func_02_060_item4_2">电话号码</string>
+    
+    <string name="func_02_070">卫星中心</string>
+    <string name="func_02_070_item1">中心一</string>
+    <string name="func_02_070_item1_1">是否有效</string>
+    <string name="func_02_070_item1_2">中心号码</string>
+    <string name="func_02_070_item2">中心二</string>
+    <string name="func_02_070_item2_1">是否有效</string>
+    <string name="func_02_070_item2_2">中心号码</string>
+    <string name="func_02_070_item3">中心三</string>
+    <string name="func_02_070_item3_1">是否有效</string>
+    <string name="func_02_070_item3_2">中心号码</string>
+    <string name="func_02_070_item4">中心四</string>
+    <string name="func_02_070_item4_1">是否有效</string>
+    <string name="func_02_070_item4_2">中心号码</string>
+    
+    <string name="func_02_080">修改终端密码</string>
+    <string name="func_02_080_item1">密码</string>
+    
+    <string name="func_02_090">终端在线状态</string>
+    <string name="func_02_090_item01">网络中心1</string>
+    <string name="func_02_090_item02">网络中心2</string>
+    <string name="func_02_090_item03">网络中心3</string>
+    <string name="func_02_090_item04">网络中心4</string>
+    <string name="func_02_090_item05">DTU信强</string>
+    <string name="func_02_090_item06">Wifi状态</string>
+    <string name="func_02_090_item07">Wifi参数</string>
+    <string name="func_02_090_item08">卫星中心1</string>
+    <string name="func_02_090_item09">卫星中心2</string>
+    <string name="func_02_090_item10">卫星中心3</string>
+    <string name="func_02_090_item11">卫星中心4</string>
+    <string name="func_02_090_item12">卫星信强</string>
+    
+    <string name="func_03_010">电源采集校准系数</string>
+    <string name="func_03_010_item1">电池电源</string>
+    <string name="func_03_010_item1_1">是否有效</string>
+    <string name="func_03_010_item1_2">校准系数</string>
+    <string name="func_03_010_item2">外部电源</string>
+    <string name="func_03_010_item2_1">是否有效</string>
+    <string name="func_03_010_item2_2">校准系数</string>
+    
+    <string name="func_03_011">AD校准命令</string>
+    <string name="func_03_011_item1">类型</string>
+    <string name="func_03_011_item2">通道</string>
+    <string name="func_03_011_item3">校准电压值</string>
+    
+    
+    <string name="func_03_020">仪表类型</string>
+    <string name="func_03_020_item1">水位仪表</string>
+    <string name="func_03_020_item1_1">是否有效</string>
+    <string name="func_03_020_item1_2">仪表种类</string>
+    <string name="func_03_020_item2">水质仪表</string>
+    <string name="func_03_020_item2_1">是否有效</string>
+    <string name="func_03_020_item2_2">仪表种类</string>
+    <string name="func_03_020_item3">水温仪表</string>
+    <string name="func_03_020_item3_1">是否有效</string>
+    <string name="func_03_020_item3_2">仪表种类</string>
+    <string name="func_03_020_item4">流量仪表1</string>
+    <string name="func_03_020_item4_1">是否有效</string>
+    <string name="func_03_020_item4_2">仪表种类</string>
+    <string name="func_03_020_item5">流量仪表2</string>
+    <string name="func_03_020_item5_1">是否有效</string>
+    <string name="func_03_020_item5_2">仪表种类</string>
+    <string name="func_03_020_item6">流量仪表3</string>
+    <string name="func_03_020_item6_1">是否有效</string>
+    <string name="func_03_020_item6_2">仪表种类</string>
+    <string name="func_03_020_item7">仪表种类设置</string>
+    
+    <string name="func_03_030">仪表量程</string>
+    <string name="func_03_030_item1">水位仪表</string>
+    <string name="func_03_030_item1_1">是否有效</string>
+    <string name="func_03_030_item1_2">仪表量程</string>
+    <string name="func_03_030_item2">水质仪表</string>
+    <string name="func_03_030_item2_1">是否有效</string>
+    <string name="func_03_030_item2_2">仪表量程</string>
+    <string name="func_03_030_item3">水温仪表</string>
+    <string name="func_03_030_item3_1">是否有效</string>
+    <string name="func_03_030_item3_2">仪表量程</string>
+    <string name="func_03_030_item4">流量仪表1</string>
+    <string name="func_03_030_item4_1">是否有效</string>
+    <string name="func_03_030_item4_2">仪表量程</string>
+    <string name="func_03_030_item5">流量仪表2</string>
+    <string name="func_03_030_item5_1">是否有效</string>
+    <string name="func_03_030_item5_2">仪表量程</string>
+    <string name="func_03_030_item6">流量仪表3</string>
+    <string name="func_03_030_item6_1">是否有效</string>
+    <string name="func_03_030_item6_2">仪表量程</string>
+    
+    <string name="func_03_040">仪表采集修正值</string>
+    <string name="func_03_040_item1">水位仪表</string>
+    <string name="func_03_040_item1_1">是否有效</string>
+    <string name="func_03_040_item1_2">仪表修正值</string>
+    
+    
+    <string name="func_03_050">仪表AD采集校准值</string>
+    <string name="func_03_050_item1">1路AD</string>
+    <string name="func_03_050_item1_1">是否有效</string>
+    <string name="func_03_050_item1_2">校准系数</string>
+    <string name="func_03_050_item2">2路AD</string>
+    <string name="func_03_050_item2_1">是否有效</string>
+    <string name="func_03_050_item2_2">校准系数</string>
+    <string name="func_03_050_item3">3路AD</string>
+    <string name="func_03_050_item3_1">是否有效</string>
+    <string name="func_03_050_item3_2">校准系数</string>
+    <string name="func_03_050_item4">4路AD</string>
+    <string name="func_03_050_item4_1">是否有效</string>
+    <string name="func_03_050_item4_2">校准系数</string>
+    
+    <string name="func_03_060">仪表上电读值延时时间</string>
+    <string name="func_03_060_item1">延时时间</string>
+    
+    <string name="func_03_070">井口高程、水井深度、探头埋深</string>
+    <string name="func_03_070_item1">井口高程</string>
+    <string name="func_03_070_item1_1">是否有效</string>
+    <string name="func_03_070_item1_2">井口高程</string>
+    <string name="func_03_070_item2">水井深度</string>
+    <string name="func_03_070_item2_1">是否有效</string>
+    <string name="func_03_070_item2_2">水井深度</string>
+    <string name="func_03_070_item3">探头埋深</string>
+    <string name="func_03_070_item3_1">是否有效</string>
+    <string name="func_03_070_item3_2">探头埋深</string>
+    
+    <string name="func_03_080">数据采集种类及时间间隔</string>
+    <string name="func_03_080_item01">雨量数据</string> 
+    <string name="func_03_080_item02">水位数据</string> 
+    <string name="func_03_080_item03">流量(水量)</string>
+    <string name="func_03_080_item04">流速数据</string> 
+    <string name="func_03_080_item05">闸位数据</string> 
+    <string name="func_03_080_item06">功率数据</string> 
+    <string name="func_03_080_item07">气压数据</string> 
+    <string name="func_03_080_item08">风速数据</string> 
+    <string name="func_03_080_item09">水温数据</string> 
+    <string name="func_03_080_item10">水质数据</string> 
+    <string name="func_03_080_item11">土壤含水率数据</string>
+    <string name="func_03_080_item12">蒸发量数据</string> 
+    <string name="func_03_080_item13">报警或状态数据</string>
+    <string name="func_03_080_item14">水压数据</string>
+    <string name="func_03_080_item15">电压数据</string>
+    
+    <string name="func_03_090">上报起始时间</string>
+    <string name="func_03_090_item1">0~23时</string>
+    
+    <string name="func_04_010">水位上报种类</string>
+    <string name="func_04_010_item1">上报种类</string>
+    <string name="func_04_020">水位基值、水位上下限</string>
+    <string name="func_04_030">水质参数种类、上限值</string>
+    <string name="func_04_040">水质参数种类、下限值</string>
+    <string name="func_item_q_01">水温</string>
+    <string name="func_item_q_02">pH 值</string>
+    <string name="func_item_q_03">溶解氧</string>
+    <string name="func_item_q_04">高锰酸盐指数</string>
+    <string name="func_item_q_05">电导率</string>
+    <string name="func_item_q_06">氧化还原电位</string>
+    <string name="func_item_q_07">浊度</string>
+    <string name="func_item_q_08">化学需氧量</string>
+    <string name="func_item_q_09">五日生化需氧量</string>
+    <string name="func_item_q_10">氨氮</string>
+    <string name="func_item_q_11">总氮</string>
+    <string name="func_item_q_12">铜</string>
+    <string name="func_item_q_13">锌</string>
+    <string name="func_item_q_14">氟化物</string>
+    <string name="func_item_q_15">硒</string>
+    <string name="func_item_q_16">砷</string>
+    <string name="func_item_q_17">汞</string>
+    <string name="func_item_q_18">镉</string>
+    <string name="func_item_q_19">六价铬</string>
+    <string name="func_item_q_20">铅</string>
+    <string name="func_item_q_21">氰化物</string>
+    <string name="func_item_q_22">挥发酚</string>
+    <string name="func_item_q_23">苯酚</string>
+    <string name="func_item_q_24">硫化物</string>
+    <string name="func_item_q_25">粪大肠菌群</string>
+    <string name="func_item_q_26">硫酸盐</string>
+    <string name="func_item_q_27">氯化物</string>
+    <string name="func_item_q_28">硝酸盐氮</string>
+    <string name="func_item_q_29">铁</string>
+    <string name="func_item_q_30">锰</string>
+    <string name="func_item_q_31">石油类</string>
+    <string name="func_item_q_32">阴离子表面活性剂</string>
+    <string name="func_item_q_33">六六六</string>
+    <string name="func_item_q_34">滴滴涕</string>
+    <string name="func_item_q_35">有机氯农药</string>
+        
+    <string name="func_04_050">流量参数上限值</string>
+    
+    <string name="func_04_060">启报阈值、固态存储时间段间隔</string>
+    <string name="func_04_060_item01">参数选择</string>
+    <string name="func_04_060_item02">参数编号</string>
+    <string name="func_04_060_item03">存储间隔</string>
+    <string name="func_04_060_item04">启报阈值</string>
+    <string name="func_04_060_param01">雨量参数</string>
+    <string name="func_04_060_param02">水位参数</string>
+    <string name="func_04_060_param03">流量(水量)参数</string>
+    <string name="func_04_060_param04">流速参数</string>
+    <string name="func_04_060_param05">闸位参数</string>
+    <string name="func_04_060_param06">功率参数</string>
+    <string name="func_04_060_param07">气压参数</string>
+    <string name="func_04_060_param08">风速参数</string>
+    <string name="func_04_060_param09">水温参数</string>
+    <string name="func_04_060_param10">水质参数</string>
+    <string name="func_04_060_param11">土壤含水率参数</string>
+    <string name="func_04_060_param12">蒸发量参数</string>
+    <string name="func_04_060_param13">水压参数</string>
+    
+    <string name="func_04_070">需查询的实时数据种类</string>
+    <string name="func_04_070_item01">雨量数据</string> 
+    <string name="func_04_070_item02">水位数据</string> 
+    <string name="func_04_070_item03">流量(水量)</string>
+    <string name="func_04_070_item04">流速数据</string> 
+    <string name="func_04_070_item05">闸位数据</string> 
+    <string name="func_04_070_item06">功率数据</string> 
+    <string name="func_04_070_item07">气压数据</string> 
+    <string name="func_04_070_item08">风速数据</string> 
+    <string name="func_04_070_item09">水温数据</string> 
+    <string name="func_04_070_item10">水质数据</string> 
+    <string name="func_04_070_item11">土壤含水率数据</string>
+    <string name="func_04_070_item12">蒸发量数据</string> 
+    <string name="func_04_070_item13">终端内存数据</string>
+    <string name="func_04_070_item14">固态存储数据</string>
+    <string name="func_04_070_item15">水压数据</string>
+   
+    <string name="func_04_080">数据自报种类及时间间隔</string>
+    <string name="func_04_080_item01">雨量数据</string> 
+    <string name="func_04_080_item02">水位数据</string> 
+    <string name="func_04_080_item03">流量(水量)</string>
+    <string name="func_04_080_item04">流速数据</string> 
+    <string name="func_04_080_item05">闸位数据</string> 
+    <string name="func_04_080_item06">功率数据</string> 
+    <string name="func_04_080_item07">气压数据</string> 
+    <string name="func_04_080_item08">风速数据</string> 
+    <string name="func_04_080_item09">水温数据</string> 
+    <string name="func_04_080_item10">水质数据</string> 
+    <string name="func_04_080_item11">土壤含水率数据</string>
+    <string name="func_04_080_item12">蒸发量数据</string> 
+    <string name="func_04_080_item13">报警或状态数据</string>
+    <string name="func_04_080_item14">水压数据</string>
+    <string name="func_04_080_item15">电压数据</string>
+    
+    <string name="func_04_090">定时上报的时刻</string>
+    <string name="func_04_090_item1">上报时刻</string> 
+    
+    <string name="func_04_100">充值水量</string>
+    <string name="func_04_100_item1">本次充值量</string> 
+    <string name="func_04_100_item2">剩余水量</string> 
+    
+    <string name="func_04_110">剩余水量报警值</string>
+    <string name="func_04_110_item1">剩余报警值</string> 
+    <string name="func_04_110_item2">剩余水量</string> 
+    
+    <string name="func_04_120">水量表底(初始)值</string>
+    <string name="func_04_120_item1">表底(初始)值</string> 
+    
+    <string name="func_05_010">终端事件记录</string>
+    <string name="func_05_010_item01">数据初始化记录</string>
+    <string name="func_05_010_item02">参数变更记录</string>
+    <string name="func_05_010_item03">状态量变更记录</string>
+    <string name="func_05_010_item04">仪表故障记录</string>
+    <string name="func_05_010_item05">密码错误记录</string>
+    <string name="func_05_010_item06">终端故障记录</string>
+    <string name="func_05_010_item07">交流失电记录</string>
+    <string name="func_05_010_item08">蓄电池电压低告警记录</string>
+    <string name="func_05_010_item09">终端箱非法打开记录</string>
+    <string name="func_05_010_item10">水泵故障记录</string>
+    <string name="func_05_010_item11">剩余水量越限告警记录</string>
+    <string name="func_05_010_item12">水位超限告警记录</string>
+    <string name="func_05_010_item13">水压超限告警记录 </string>
+    <string name="func_05_010_item14">水质参数超限告警记录</string>
+    <string name="func_05_010_item15">数据出错记录</string>
+    <string name="func_05_010_item16">发报文记录 </string>
+    <string name="func_05_010_item17">收报文记录</string>
+    <string name="func_05_010_item18">发报文出错记录</string>
+   
+    <string name="func_05_020">终端状态和报警状态</string>
+    <string name="func_05_020_item01">工作交流电停电告警</string>
+    <string name="func_05_020_item02">蓄电池电压报警</string>
+    <string name="func_05_020_item03">水位超限报警</string>
+    <string name="func_05_020_item04">流量超限报警</string>
+    <string name="func_05_020_item05">水质超限报警</string>
+    <string name="func_05_020_item06">流量仪表故障报警</string>
+    <string name="func_05_020_item07">水泵开停状态</string>
+    <string name="func_05_020_item08">水位仪表故障报警</string>
+    <string name="func_05_020_item09">水压超限报警</string>
+    <string name="func_05_020_item10">水温仪表故障报警</string>
+    <string name="func_05_020_item11">终端 IC 卡功能报警</string>
+    <string name="func_05_020_item12">定值控制报警</string>
+    <string name="func_05_020_item13">剩余水量的下限报警</string>
+    <string name="func_05_020_item14">终端箱门状态报警 </string>
+    <string name="func_05_020_item15">终端工作模式</string>
+    <string name="func_05_020_item16">IC卡功能是否有效</string>
+    <string name="func_05_020_item17">定值控制是否投入 </string>
+    <string name="func_05_020_item18">水泵工作状态</string>
+    <string name="func_05_020_item19">终端箱门状态</string>
+    <string name="func_05_020_item20">电源工作状态</string>
+    
+    
+    <string name="func_05_030">终端日志配置表</string>
+    <string name="func_05_030_item01">A类日志（硬件类）</string>
+    <string name="func_05_030_item01_01">设备复位及启动</string>
+    <string name="func_05_030_item01_02">传感器运行状态</string>
+    <string name="func_05_030_item01_03">电池供电状态</string>
+    <string name="func_05_030_item01_04">电源供电状态 </string>
+    <string name="func_05_030_item01_05">开门状态</string>
+    <string name="func_05_030_item02">B类日志（软件运行类）</string>
+    <string name="func_05_030_item02_01">数据初始化</string>
+    <string name="func_05_030_item02_02">参数变更</string>
+    <string name="func_05_030_item02_03">状态量变更</string>
+    <string name="func_05_030_item02_04">发报文记录</string>
+    <string name="func_05_030_item02_05">收报文记录</string>
+    <string name="func_05_030_item02_06">补报存储</string>
+    <string name="func_05_030_item02_07">补报发送</string>
+    <string name="func_05_030_item02_08">时间校准</string>
+    <string name="func_05_030_item02_09">手持设备接入</string>
+    <string name="func_05_030_item02_10">按键唤醒 </string>
+    <string name="func_05_030_item03">C类日志（告警及错误）</string>
+    <string name="func_05_030_item03_01">密码错误记录</string>
+    <string name="func_05_030_item03_02">电池电压低告警记录</string>
+    <string name="func_05_030_item03_03">传感器故障记录</string>
+    <string name="func_05_030_item03_04">水位超限告警记录</string>
+    <string name="func_05_030_item03_05">水质参数超限告警</string>
+    <string name="func_05_030_item03_06">连接中心失败</string>
+
+    <string name="func_05_040">终端固态存储数据</string>
+    <string name="func_05_040_item01_1">参数类型</string>
+    <string name="func_05_040_item01_2">参数编号</string>
+    <string name="func_05_040_item02">开始时间</string>
+    <string name="func_05_040_item03">截止时间</string>
+    
+    <string name="func_05_050">终端实时值</string>
+    <string name="func_05_050_item01">参数类型</string>
+    
+    <string name="func_05_060">查询日志信息</string>
+    <string name="func_05_060_item01">日志条数</string>
+    
+    <string name="func_05_070">终端流量实时值</string>
+    <string name="func_05_070_item01">瞬时流量 :</string>
+	<string name="func_05_070_item02">累计水量 :</string>
+	
+    <string name="func_06_010">人工置数</string>
+    <string name="func_06_010_item01">参数类型</string>
+    <string name="func_06_010_item03">水温</string>
+    <string name="func_06_010_item04_01">水温</string>
+    <string name="func_06_010_item04_02">Ph值</string>
+    <string name="func_06_010_item04_03">溶解氧 </string>
+    <string name="func_06_010_item04_04">电导率</string>
+    <string name="func_06_010_item04_05">浊度</string>
+        
+    
+    <string name="func_item_unit_mg">(mg/L)</string>
+    <string name="func_item_unit_us">(μs/cm)</string>
+    <string name="func_item_unit_mv">(mv)</string>
+    <string name="func_item_unit_duCn">(度)</string>
+    <string name="func_item_unit_gePerL">(个/L)</string>
+    
+    <string name="func_item_unit_h">(时)</string>
+    <string name="func_item_unit_min">(分钟)</string>
+    <string name="func_item_unit_m">(米)</string>
+    <string name="func_item_unit_m1">(m)</string>
+    <string name="func_item_unit_m1pers">(m/s)</string>
+    <string name="func_item_unit_mm">(mm)</string>
+    <string name="func_item_unit_m3">(立方米)</string>
+    <string name="func_item_unit_m3_1">(m³)</string>
+    <string name="func_item_unit_m3perh">(m³/h)</string>
+    <string name="func_item_unit_m3pers">(m³/s)</string>
+    <string name="func_item_unit_du">(°C)</string>
+    <string name="func_item_unit_v">(V)</string>
+    <string name="func_item_unit_s">(秒)</string>
+    <string name="func_item_unit_kw">(kw)</string>
+	<string name="func_item_unit_pa">(pa)</string>
+    <string name="func_item_unit_100pa">(100pa)</string>
+    <string name="func_item_unit_kPa">(kPa)</string>
+    <string name="func_item_unit_ci">(次)</string>
+    <string name="func_item_unit_tiao">(条)</string>
+    
+ 	<string name="showAlarm">警告</string>
+	<string name="showInfo">显示信息</string>
+	<string name="operatorConfirm">操作确认</string>
+	<string name="txtConfirmSendSetCommand">确定下发设置命令</string>
+	<string name="txtConfirmSendReadCommand">确定下发查询命令</string>
+	<string name="txtConfirmSend">确定发送吗?</string>
+	<string name="txtConfirmClear">确定清空吗?</string>
+	<string name="txtConfirm">确定</string>
+	<string name="txtOk">确定</string>
+    <string name="txtCancel">取消</string>
+    <string name="txtYes">是</string>
+    <string name="txtNo">否</string>
+    <string name="txtBtn">按钮</string>
+    <string name="save">保存</string>
+    <string name="noSave">不存</string>
+    
+     <string name="noProtocolSendNeedConfirm">false</string>
+    
+    
+    <string name="commandParam">命令参数</string>
+    <string name="txtAutoQuery">自动查询</string>
+    <string name="txtStop">停止</string>
+    <string name="txtPutOutIn">自动设置</string>
+	<string name="txtConfirmReplaceSetData">导出文件已经存在，确定覆盖吗？</string>
+	<string name="txtAlarmNoSetDataFile">文件不存在</string>
+	<string name="txtConfirmInSetData">确定导入吗？</string>
+	
+	
+	<string name="txtLoopQuery_type">查询类型</string>
+	<string name="txtLoopQuery_interval">间隔</string>
+	<string name="txtLoopQuery_times">发送/接收</string>
+	<string name="txtLoopQuery_onLine">在线状态</string>
+	<string name="txtLoopQuery_signal">信号强度</string>
+	<string name="txtLoopQuery_voltage">电池电压</string>
+	<string name="txtLoopQuery_alarm">告警状态</string>
+	<string name="txtLoopQuery_amount">累计流量</string>
+	<string name="txtLoopQuery_plus">正&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;积</string>
+	<string name="txtLoopQuery_minus">负&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;积</string>
+	<string name="txtLoopQuery_instance">瞬时流量</string>
+	<string name="txtLoopQuery_wlType">水&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;位</string>
+	<string name="txtLoopQuery_baseHeight">井口高程</string>
+	<string name="txtLoopQuery_buried">探头埋深</string>
+	<string name="txtLoopQuery_temperature">水&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;温</string>
+																			
+	
+				
+    <string name="pullListView_pull">下拉刷新</string>
+    <string name="pullListView_release">松开刷新</string>
+    <string name="pullListView_loading">正在刷新&#8230;&#8230;</string>
+    <string name="pullListView_lastDt">上次更新时间</string>
+    <string name="pullListView_last">最近更新:</string>
+    <string name="pullListView_item_position_key">1</string>
+
+    <string name="fileDir">/rtuAssistant/</string>
+    <string name="fileExtendsName">txt</string>
+    <string name="xmlFileExtendsName">xml</string>
+    
+    <string name="ch_sm_channel">短信通道</string>
+    <string name="ch_tcp_channel">WIFI通道</string>
+    <string name="tcpStatus">WIFI状态：</string>
+    <string name="connected">连接</string>
+    <string name="noConnected">未连接</string>
+    <string name="disconnected">断开</string>
+    <string name="rtuLogListViewHeight">256</string>
+    
+    <!-- 当人工点击按钮连接网络时，等待连接结果的超时时长，即动画时长，单位毫秒 -->
+    <string name="tcpConnectTimeout">30000</string>
+    <!-- 等待命令结果的超时时长，即动画时长，单位毫秒 -->
+    <string name="commandResultTimout">30000</string>
+    
+    <!-- 间隔一段时间(毫秒)后，再次上线，认为是在同一个RTU上，不再发自动命令 -->
+    <string name="intervalStillAtOneRtu">180000</string>
+    
+    <!-- 下发命令数据十六进制是否显示于数据窗口中 -->
+    <string name="showCommandDataHex">true</string>
+    <!-- 当查询命令时，是否显示确认窗口 -->
+    <string name="confirmWhileReadCommand">false</string>
+    <!-- 点开界面标题时是否下发查询命令 -->
+    <string name="queryWhenClickTitle">false</string>
+    <!-- 自动下发命令的功能项，点开界面标题时是否还要下发查询命令 -->
+    <string name="queryAutoQueryComWhenClickTitle">false</string>
+    <!-- 软件启动时自动查询的功能码 (用,号分隔) -->
+    <string name="autoQueryCom">50,51,52,EF,E0,E1,CF,C9,CB,CA,CC,CD,CE,C8,E2,E3,E4,E5,E6,E9,EA,E7,E8,EB,
+        57,59,5A,64,54,53,C5,55,56,5D,5E,EC,B1,B0,ED</string>
+    <!-- 可由短信通道下发命令的功能码 (用,号分隔) -->
+    <string name="canSendBySM">10,50,11,51,12,52,EF,90,91,E0,E1,F1,CF,DF,C9,D9,CB,DB,CA,DA,CC,DC,CD,DD,
+        CE,DE,96,C8,D8,E3,F3,E4,F4,E5,F5,E6,F6,E9,F9,EA,FA,E7,F7,E8,F8,EB,FB,17,57,19,59,1A,5A,1F,64,20,
+        54,A0,53,A1,C5,55,15,56,16,1B,5D,5E,EC,B1,B0,ED,82</string>
+    <!-- 点击功能项题目不需要查询的命令(当然自动查询的功能码点开题目时也不查询) -->
+    <string name="noQueryComWhenClickTitle">B1</string>
+    <!-- 收到数据是否自动打开相关内容   -->
+    <string name="openWhenReceiveData">true</string>
+    <!-- 下发命令时间间隔(毫秒)，防止连续发命令时，RTU处理不过来,经测试小于4000 RTU处理不过来，重发命令现象很多 -->
+    <string name="commandInterval">5000</string>
+    <!-- 下发命令，无结果时重发，重发的最大次数 -->
+    <string name="commandSendMaxTimes">1</string>
+    <!-- 无命令下发超时(见下noCommandIdle配置) 时，是否下发连接链中检测命令  -->
+    <string name="noCommandTimeoutThenSendLinkCommand">true</string>
+    <!-- 无命令下发最大时长(毫秒)，否则RTU把wifi断电了 -->
+    <string name="noCommandIdle">120000</string>
+    
+    <!-- 通信协议 -->
+    <string name="defaultPassword">00 00</string><!-- 默认密码 -->
+    <string name="protocolPackageMinLen">3</string><!-- 此值必须是3(针对206协议)，在Decoder.java中有限制 -->
+    <string name="protocolPackageMaxLen">255</string>
+	<string name="protocolPackageHead">104</string>
+	<string name="protocolPackageHead_1_index">0</string>
+	<string name="protocolPackageHead_2_index">2</string>
+	<string name="protocolPackageLenStartIndex">1</string>
+	<string name="protocolPackageLenEndIndex">1</string>
+	<!-- 不包含于通信协议数据长度中的数据的长度 -->
+	<string name="protocolPackageLenNoInclud">5</string>
+	<!-- 是否进行时钟同步 1为是，0为否 -->
+	<string name="protocolEnableClockSyn">1</string>
+	<!-- 时钟相差大于以下配置时时长(分钟)时，进行时钟同步 -->
+	<string name="protocolSynClockDeviate">1</string>
+	<!-- 广播命令Rtu ID -->
+	<string name="protocolBroastCommandRtuId">10101065535</string>
+	<!-- 非协议(调试)数据显示的最大长度(字符数) -->
+	<string name="noProtocolTxtMaxLen">6000</string>
+	<!-- 显示RTU结果数据最大条数 -->
+	<string name="rutResultMaxCount">500</string>
+	<!-- 固态数据显示最大条数 -->
+	<string name="B1ResultMaxCount">1000</string>
+	<!-- 日志数据显示最大条数 -->
+	<string name="EDResultMaxCount">1000</string>
+							
+			
+</resources>

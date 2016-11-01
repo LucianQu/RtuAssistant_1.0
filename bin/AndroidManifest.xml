@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.blg.rtu"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    
+    
+    
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"></uses-permission>
+	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission> 
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>  
+	<uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"></uses-permission>  
+	<uses-permission android:name="android.permission.WRITE_SETTINGS"></uses-permission>	
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"></uses-permission> 
+    
+    <!-- 读写sdcard权 -->
+ 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>  
+	<!-- 短信 -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <!-- 手机震动权限 -->
+    <uses-permission android:name="android.permission.VIBRATE"></uses-permission>
+	
+	<supports-screens android:xlargeScreens="true"
+	    android:largeScreens="true"
+	    android:normalScreens="true" 
+	    android:smallScreens="true"
+	    android:resizeable="true" 
+	    android:anyDensity="true"/>
+	
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="18" />
+    
+    <!-- android:hardwareAccelerated="false": 取消硬件加速，否则加载大图片时，不显示，实际是抛异常了： Bitmap too large to be uploaded into a texture -->
+    <application
+        android:hardwareAccelerated="false" 
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        
+        <activity
+            android:name=".SplashActivity"
+            android:label="@string/app_name" 
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait">   
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+               
+        <!-- 
+            Theme.Holo.NoActionBar 黑背景无标题
+            Theme.Holo.NoActionBar.Fullscreen 黑背景无标题无手机状态栏(日期、信号、电池栏)
+            Theme.Holo.Light.NoActionBar 白背景无标题全屏
+            Theme.Holo.Light.NoActionBar.Fullscreen 白背景无标题无手机状态栏(日期、信号、电池栏)
+        -->
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" 
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" 
+            android:screenOrientation="portrait">   
+<!--             <intent-filter> -->
+<!--                 <action android:name="android.intent.action.MAIN" /> -->
+<!--                 <category android:name="android.intent.category.DEFAULT" /> -->
+<!--             </intent-filter> -->
+        </activity>
+
+        <service 
+            android:name=".server.LocalServer" 
+            android:exported="false" 
+            android:enabled="true"></service>
+		
+         <!-- 
+        	短信广播有两种不同的类型：普通广播（Normal Broadcasts）和有序广播（Ordered Broadcasts）。
+        	普通广播是完全异步的，可以被所有的接收者接收到，并且接收者无法终止广播的传播,而有序广
+        	播是按照接收者声明的优先级别，被接收者依次接收到，注意：优先级相同，则根据包名依次传递广播。
+        	 由于短信广播是一种有序广播，该有序广播会先发送给优先级最高的那个Receiver，
+        	 而代码中SmsReceiver中的优先级为 800：<intent-filter android:priority="800">。
+        	 （优先级的大小范围为 -1000 到 1000）这个优先级比收到短信的那个软件优先级高。
+        	 所以SmsReceiver接收到了短信并不再往下传了，起到了拦截短信的作用。 
+         -->
+        <receiver android:name=".sm.SmsReceiver" android:enabled="true"> 
+          <intent-filter android:priority="100"> 
+              <action android:name="android.provider.Telephony.SMS_RECEIVED"/> 
+          </intent-filter> 
+        </receiver>
+        
+    </application>
+
+</manifest>

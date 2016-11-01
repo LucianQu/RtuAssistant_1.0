@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="utf-8"?>
+    
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	style="@style/func_out_linearlayout_style" >
+
+	<!-- start 头部标题 --> 
+	<LinearLayout style="@style/func_title_linearlayout_style">
+	    <TextView
+	    	android:id="@+id/f_04_060_Title"
+	        android:drawableLeft="@drawable/item004"
+	        android:text="@string/func_04_060"
+			style="@style/func_title_viewtext_style"/>
+	    
+	    <!-- 注释掉，以备用，若应用并显示在界面上时，要调整上面textView的宽度（如300dp） 
+	    <ImageView 
+	        android:id="@+id/commandStatus"
+	        style="@style/func_itemtitle_imageview_style"
+	        android:contentDescription="@string/txtBtn"/>
+	    -->
+	</LinearLayout>  
+	
+    
+	<!-- start 具体内布局 -->
+    <FrameLayout
+    	android:id="@+id/f_04_060_Frm"
+		style="@style/func_framelayout_style">
+    
+		 <!-- start 具体内容 -->
+		 <LinearLayout 
+	        style="@style/func_linearlayout_style">
+	        
+		    <!-- start 标题  -->
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30"
+			    >
+			    <TextView android:id="@+id/func_04_060_paramNameSelect"
+			        android:text="@string/func_04_060_param01"
+			        style="@style/func_item_viewtext_style_300_a"/>
+			</LinearLayout>
+		    <!-- end 标题 -->
+		    
+		    <!-- start 参数选择  -->
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height40">
+			    <TextView
+			        android:text="@string/func_04_060_item01"
+			        style="@style/func_item_viewtext_style_100_b"/>
+			    <Spinner android:id="@+id/f_04_060_paramSelect" 
+				    style="@style/func_item_Spinner_style_180"/>
+			</LinearLayout>
+		    <!-- end 参数选择  -->
+						
+		    <!-- start 雨量  -->
+			<LinearLayout android:id="@+id/f_04_060_param01" 
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical">
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="@dimen/common_line_height30">
+				    <TextView
+				        android:text="@string/func_04_060_item02"
+				        style="@style/func_item_viewtext_style_100_b"/>
+				    <EditText
+						android:id="@+id/f_04_060_param01_1"  
+						android:labelFor="@id/f_04_060_param01_1" 
+					    style="@style/func_item_editnumber_style_80"/>
+				</LinearLayout>
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="@dimen/common_line_height30">
+				    <TextView
+				        android:text="@string/func_04_060_item03"
+				        style="@style/func_item_viewtext_style_100_b"/>
+				    <EditText
+						android:id="@+id/f_04_060_param01_2"  
+						android:labelFor="@id/f_04_060_param01_2" 
+					    style="@style/func_item_editnumber_style_80"/>
+				    <TextView
+				        android:text="@string/func_item_unit_min"
+				        style="@style/func_item_viewtext_style_unit_100"/>
+				</LinearLayout>
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="@dimen/common_line_height30"
+				    >
+				    <TextView
+				        android:text="@string/func_04_060_item04"
+				        style="@style/func_item_viewtext_style_100_b"/>
+				    <EditText
+						android:id="@+id/f_04_060_param01_3"  
+						android:labelFor="@id/f_04_060_param01_3" 
+					    style="@style/func_item_editdecimalSigned_style_100"/>
+				    <TextView
+				        android:text="@string/func_item_unit_mm"
+				        style="@style/func_item_viewtext_style_unit_100"/>
+				</LinearLayout>
+			</LinearLayout>
+		    <!-- end 雨量  -->
+						
+		    <!-- start 水位  -->
+			<LinearLayout android:id="@+id/f_04_060_param02" 
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical"
+			    android:visibility="gone">
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="@dimen/common_line_height30">
+				    <TextView
+				        android:text="@string/func_04_060_item02"
+				        style="@style/func_item_viewtext_style_100_b"/>
+				    <EditText
+						android:id="@+id/f_04_060_param02_1"  
+						android:labelFor="@id/f_04_060_param02_1" 
+					    style="@style/func_item_editnumber_style_80"/>
+				</LinearLayout>
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="@dimen/common_line_height30">
+				    <TextView
+				        android:text="@string/func_04_060_item03"
+				        style="@style/func_item_viewtext_style_100_b"/>
+				    <EditText
+						android:id="@+id/f_04_060_param02_2"  
+						android:labelFor="@id/f_04_060_param02_2" 
+					    style="@style/func_item_editnumber_style_80"/>
+				    <TextView
+				        android:text="@string/func_item_unit_min"
+				        style="@style/func_item_viewtext_style_unit_100"/>
+				</LinearLayout>
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="@dimen/common_line_height30"
+				    >
+				    <TextView
+				        android:text="@string/func_04_060_item04"
+				        style="@style/func_item_viewtext_style_100_b"/>
+				    <EditText
+						android:id="@+id/f_04_060_param02_3"  
+						android:labelFor="@id/f_04_060_param02_3" 
+					    style="@style/func_item_editdecimalSigned_style_100"/>
+				    <TextView
+				        android:text="@string/func_item_unit_m1"
+				        style="@style/func_item_viewtext_style_unit_100"/>
+				</LinearLayout>
+			</LinearLayout>
+		    <!-- end 水位  -->
+
+						
+		    <!-- start 流量(水量) -->
+			<LinearLayout android:id="@+id/f_04_060_param03" 
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical"
+			    android:visibility="gone">
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="@dimen/common_line_height30">
+				    <TextView
+				        android:text="@string/func_04_060_item02"
+				        style="@style/func_item_viewtext_style_100_b"/>
+				    <EditText
+						android:id="@+id/f_04_060_param03_1"  
+						android:labelFor="@id/f_04_060_param03_1" 
+					    style="@style/func_item_editnumber_style_80"/>
+				</LinearLayout>
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="@dimen/common_line_height30">
+				    <TextView
+				        android:text="@string/func_04_060_item03"
+				        style="@style/func_item_viewtext_style_100_b"/>
+				    <EditText
+						android:id="@+id/f_04_060_param03_2"  
+						android:labelFor="@id/f_04_060_param03_2" 
+					    style="@style/func_item_editnumber_style_80"/>
+				    <TextView
+				        android:text="@string/func_item_unit_min"
+				        style="@style/func_item_viewtext_style_unit_100"/>
+				</LinearLayout>
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="@dimen/common_line_height30"
+				    >
+				    <TextView
+				        android:text="@string/func_04_060_item04"
+				        style="@style/func_item_viewtext_style_100_b"/>
+				    <EditText
+						android:id="@+id/f_04_060_param03_3"  
+						android:labelFor="@id/f_04_060_param03_3" 
+					    style="@style/func_item_editdecimalSigned_style_100"/>
+				    <TextView
+				        android:text="@string/func_item_unit_m3perh"
+				        style="@style/func_item_viewtext_style_unit_100"/>
+				</LinearLayout>
+			</LinearLayout>
+		    <!-- end 流量(水量)  -->
+
+						
+		    <!-- start 流速 -->
+			<LinearLayout android:id="@+id/f_04_060_param04" 
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical"
+			    android:visibility="gone">
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="@dimen/common_line_height30">
+				    <TextView
+				        android:text="@string/func_04_060_item02"
+				        style="@style/func_item_viewtext_style_100_b"/>
+				    <EditText
+						android:id="@+id/f_04_060_param04_1"  
+						android:labelFor="@id/f_04_060_param04_1" 
+					    style="@style/func_item_editnumber_style_80"/>
+				</LinearLayout>
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="@dimen/common_line_height30">
+				    <TextView
+				        android:text="@string/func_04_060_item03"
+				        style="@style/func_item_viewtext_style_100_b"/>
+				    <EditText
+						android:id="@+id/f_04_060_param04_2"  
+						android:labelFor="@id/f_04_060_param04_2" 
+					    style="@style/func_item_editnumber_style_80"/>
+				    <TextView
+				        android:text="@string/func_item_unit_min"
+				        style="@style/func_item_viewtext_style_unit_100"/>
+				</LinearLayout>
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="@dimen/common_line_height30"
+				    >
+				    <TextView
+				        android:text="@string/func_04_060_item04"
+				        style="@style/func_item_viewtext_style_100_b"/>
+				    <EditText
+						android:id="@+id/f_04_060_param04_3"  
+						android:labelFor="@id/f_04_060_param04_3" 
+					    style="@style/func_item_editdecimalSigned_style_100"/>
+				    <TextView
+				        android:text="@string/func_item_unit_m1pers"
+				        style="@style/func_item_viewtext_style_unit_100"/>
+				</LinearLayout>
+			</LinearLayout>
+		    <!-- end 流速  -->
+		    
+						
+		    <!-- start 闸位 -->
+			<LinearLayout android:id="@+id/f_04_060_param05" 
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical"
+			    android:visibility="gone">
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="@dimen/common_line_height30">
+				    <TextView
+				        android:text="@string/func_04_060_item02"
+				        style="@style/func_item_viewtext_style_100_b"/>
+				    <EditText
+						android:id="@+id/f_04_060_param05_1"  
+						android:labelFor="@id/f_04_060_param05_1" 
+					    style="@style/func_item_editnumber_style_80"/>
+				</LinearLayout>
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="@dimen/common_line_height30">
+				    <TextView
+				        android:text="@string/func_04_060_item03"
+				        style="@style/func_item_viewtext_style_100_b"/>
+				    <EditText
+						android:id="@+id/f_04_060_param05_2"  
+						android:labelFor="@id/f_04_060_param05_2" 
+					    style="@style/func_item_editnumber_style_80"/>
+				    <TextView
+				        android:text="@string/func_item_unit_min"
+				        style="@style/func_item_viewtext_style_unit_100"/>
+				</LinearLayout>
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="@dimen/common_line_height30"
+				    >
+				    <TextView
+				        android:text="@string/func_04_060_item04"
+				        style="@style/func_item_viewtext_style_100_b"/>
+				    <EditText
+						android:id="@+id/f_04_060_param05_3"  
+						android:labelFor="@id/f_04_060_param05_3" 
+					    style="@style/func_item_editdecimalSigned_style_100"/>
+				    <TextView
+				        android:text="@string/func_item_unit_m1"
+				        style="@style/func_item_viewtext_style_unit_100"/>
+				</LinearLayout>
+			</LinearLayout>
+		    <!-- end 闸位  -->		    
+		    
+						
+		    <!-- start 功率  -->
+			<LinearLayout android:id="@+id/f_04_060_param06" 
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical"
+			    android:visibility="gone">
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="@dimen/common_line_height30">
+				    <TextView
+				        android:text="@string/func_04_060_item02"
+				        style="@style/func_item_viewtext_style_100_b"/>
+				    <EditText
+						android:id="@+id/f_04_060_param06_1"  
+						android:labelFor="@id/f_04_060_param06_1" 
+					    style="@style/func_item_editnumber_style_80"/>
+				</LinearLayout>
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="@dimen/common_line_height30">
+				    <TextView
+				        android:text="@string/func_04_060_item03"
+				        style="@style/func_item_viewtext_style_100_b"/>
+				    <EditText
+						android:id="@+id/f_04_060_param06_2"  
+						android:labelFor="@id/f_04_060_param06_2" 
+					    style="@style/func_item_editnumber_style_80"/>
+				    <TextView
+				        android:text="@string/func_item_unit_min"
+				        style="@style/func_item_viewtext_style_unit_100"/>
+				</LinearLayout>
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="@dimen/common_line_height30"
+				    >
+				    <TextView
+				        android:text="@string/func_04_060_item04"
+				        style="@style/func_item_viewtext_style_100_b"/>
+				    <EditText
+						android:id="@+id/f_04_060_param06_3"  
+						android:labelFor="@id/f_04_060_param06_3" 
+					    style="@style/func_item_editdecimalSigned_style_100"/>
+				    <TextView
+				        android:text="@string/func_item_unit_kw"
+				        style="@style/func_item_viewtext_style_unit_100"/>
+				</LinearLayout>
+			</LinearLayout>
+		    <!-- end 功率   -->				    
+		    
+						
+		    <!-- start 气压  -->
+			<LinearLayout android:id="@+id/f_04_060_param07" 
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical"
+			    android:visibility="gone">
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="@dimen/common_line_height30">
+				    <TextView
+				        android:text="@string/func_04_060_item02"
+				        style="@style/func_item_viewtext_style_100_b"/>
+				    <EditText
+						android:id="@+id/f_04_060_param07_1"  
+						android:labelFor="@id/f_04_060_param07_1" 
+					    style="@style/func_item_editnumber_style_80"/>
+				</LinearLayout>
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="@dimen/common_line_height30">
+				    <TextView
+				        android:text="@string/func_04_060_item03"
+				        style="@style/func_item_viewtext_style_100_b"/>
+				    <EditText
+						android:id="@+id/f_04_060_param07_2"  
+						android:labelFor="@id/f_04_060_param07_2" 
+					    style="@style/func_item_editnumber_style_80"/>
+				    <TextView
+				        android:text="@string/func_item_unit_min"
+				        style="@style/func_item_viewtext_style_unit_100"/>
+				</LinearLayout>
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="@dimen/common_line_height30"
+				    >
+				    <TextView
+				        android:text="@string/func_04_060_item04"
+				        style="@style/func_item_viewtext_style_100_b"/>
+				    <EditText
+						android:id="@+id/f_04_060_param07_3"  
+						android:labelFor="@id/f_04_060_param07_3" 
+					    style="@style/func_item_editdecimalSigned_style_100"/>
+				    <TextView
+				        android:text="@string/func_item_unit_100pa"
+				        style="@style/func_item_viewtext_style_unit_100"/>
+				</LinearLayout>
+			</LinearLayout>
+		    <!-- end 气压  -->	
+		    
+						
+		    <!-- start 风速(风向)  -->
+			<LinearLayout android:id="@+id/f_04_060_param08" 
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical"
+			    android:visibility="gone">
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="@dimen/common_line_height30">
+				    <TextView
+				        android:text="@string/func_04_060_item02"
+				        style="@style/func_item_viewtext_style_100_b"/>
+				    <EditText
+						android:id="@+id/f_04_060_param08_1"  
+						android:labelFor="@id/f_04_060_param08_1" 
+					    style="@style/func_item_editnumber_style_80"/>
+				</LinearLayout>
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="@dimen/common_line_height30">
+				    <TextView
+				        android:text="@string/func_04_060_item03"
+				        style="@style/func_item_viewtext_style_100_b"/>
+				    <EditText
+						android:id="@+id/f_04_060_param08_2"  
+						android:labelFor="@id/f_04_060_param08_2" 
+					    style="@style/func_item_editnumber_style_80"/>
+				    <TextView
+				        android:text="@string/func_item_unit_min"
+				        style="@style/func_item_viewtext_style_unit_100"/>
+				</LinearLayout>
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="@dimen/common_line_height30"
+				    >
+				    <TextView
+				        android:text="@string/func_04_060_item04"
+				        style="@style/func_item_viewtext_style_100_b"/>
+				    <EditText
+						android:id="@+id/f_04_060_param08_3"  
+						android:labelFor="@id/f_04_060_param08_3" 
+					    style="@style/func_item_editdecimalSigned_style_100"/>
+				    <TextView
+				        android:text="@string/func_item_unit_m1pers"
+				        style="@style/func_item_viewtext_style_unit_100"/>
+				</LinearLayout>
+			</LinearLayout>
+		    <!-- end 风速(风向)  -->			    
+
+						
+		    <!-- start 水温  -->
+			<LinearLayout android:id="@+id/f_04_060_param09" 
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical"
+			    android:visibility="gone">
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="@dimen/common_line_height30">
+				    <TextView
+				        android:text="@string/func_04_060_item02"
+				        style="@style/func_item_viewtext_style_100_b"/>
+				    <EditText
+						android:id="@+id/f_04_060_param09_1"  
+						android:labelFor="@id/f_04_060_param09_1" 
+					    style="@style/func_item_editnumber_style_80"/>
+				</LinearLayout>
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="@dimen/common_line_height30">
+				    <TextView
+				        android:text="@string/func_04_060_item03"
+				        style="@style/func_item_viewtext_style_100_b"/>
+				    <EditText
+						android:id="@+id/f_04_060_param09_2"  
+						android:labelFor="@id/f_04_060_param09_2" 
+					    style="@style/func_item_editnumber_style_80"/>
+				    <TextView
+				        android:text="@string/func_item_unit_min"
+				        style="@style/func_item_viewtext_style_unit_100"/>
+				</LinearLayout>
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="@dimen/common_line_height30"
+				    >
+				    <TextView
+				        android:text="@string/func_04_060_item04"
+				        style="@style/func_item_viewtext_style_100_b"/>
+				    <EditText
+						android:id="@+id/f_04_060_param09_3"  
+						android:labelFor="@id/f_04_060_param09_3" 
+					    style="@style/func_item_editdecimalSigned_style_100"/>
+				    <TextView
+				        android:text="@string/func_item_unit_du"
+				        style="@style/func_item_viewtext_style_unit_100"/>
+				</LinearLayout>
+			</LinearLayout>
+		    <!-- end 水温  -->				    
+
+						
+		    <!-- start 水质  -->
+			<LinearLayout android:id="@+id/f_04_060_param10" 
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical"
+			    android:visibility="gone">
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="@dimen/common_line_height30">
+				    <TextView
+				        android:text="@string/func_04_060_item02"
+				        style="@style/func_item_viewtext_style_100_b"/>
+				    <EditText
+						android:id="@+id/f_04_060_param10_1"  
+						android:labelFor="@id/f_04_060_param10_1" 
+					    style="@style/func_item_editnumber_style_80"/>
+				</LinearLayout>
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="@dimen/common_line_height30">
+				    <TextView
+				        android:text="@string/func_04_060_item03"
+				        style="@style/func_item_viewtext_style_100_b"/>
+				    <EditText
+						android:id="@+id/f_04_060_param10_2"  
+						android:labelFor="@id/f_04_060_param10_2" 
+					    style="@style/func_item_editnumber_style_80"/>
+				    <TextView
+				        android:text="@string/func_item_unit_min"
+				        style="@style/func_item_viewtext_style_unit_100"/>
+				</LinearLayout>
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="@dimen/common_line_height30"
+				    >
+				    <TextView
+				        android:text="@string/func_04_060_item04"
+				        style="@style/func_item_viewtext_style_100_b"/>
+				    <EditText
+						android:id="@+id/f_04_060_param10_3"  
+						android:labelFor="@id/f_04_060_param10_3" 
+					    style="@style/func_item_editdecimalSigned_style_100"/>
+				</LinearLayout>
+			</LinearLayout>
+		    <!-- end 水质  -->			    
+
+						
+		    <!-- start 土壤含水率  -->
+			<LinearLayout android:id="@+id/f_04_060_param11" 
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical"
+			    android:visibility="gone">
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="@dimen/common_line_height30">
+				    <TextView
+				        android:text="@string/func_04_060_item02"
+				        style="@style/func_item_viewtext_style_100_b"/>
+				    <EditText
+						android:id="@+id/f_04_060_param11_1"  
+						android:labelFor="@id/f_04_060_param11_1" 
+					    style="@style/func_item_editnumber_style_80"/>
+				</LinearLayout>
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="@dimen/common_line_height30">
+				    <TextView
+				        android:text="@string/func_04_060_item03"
+				        style="@style/func_item_viewtext_style_100_b"/>
+				    <EditText
+						android:id="@+id/f_04_060_param11_2"  
+						android:labelFor="@id/f_04_060_param11_2" 
+					    style="@style/func_item_editnumber_style_80"/>
+				    <TextView
+				        android:text="@string/func_item_unit_min"
+				        style="@style/func_item_viewtext_style_unit_100"/>
+				</LinearLayout>
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="@dimen/common_line_height30"
+				    >
+				    <TextView
+				        android:text="@string/func_04_060_item04"
+				        style="@style/func_item_viewtext_style_100_b"/>
+				    <EditText
+						android:id="@+id/f_04_060_param11_3"  
+						android:labelFor="@id/f_04_060_param11_3" 
+					    style="@style/func_item_editdecimalSigned_style_100"/>
+				</LinearLayout>
+			</LinearLayout>
+		    <!-- end 土壤含水率  -->			    
+
+						
+		    <!-- start 蒸发量  -->
+			<LinearLayout android:id="@+id/f_04_060_param12" 
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical"
+			    android:visibility="gone">
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="@dimen/common_line_height30">
+				    <TextView
+				        android:text="@string/func_04_060_item02"
+				        style="@style/func_item_viewtext_style_100_b"/>
+				    <EditText
+						android:id="@+id/f_04_060_param12_1"  
+						android:labelFor="@id/f_04_060_param12_1" 
+					    style="@style/func_item_editnumber_style_80"/>
+				</LinearLayout>
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="@dimen/common_line_height30">
+				    <TextView
+				        android:text="@string/func_04_060_item03"
+				        style="@style/func_item_viewtext_style_100_b"/>
+				    <EditText
+						android:id="@+id/f_04_060_param12_2"  
+						android:labelFor="@id/f_04_060_param12_2" 
+					    style="@style/func_item_editnumber_style_80"/>
+				    <TextView
+				        android:text="@string/func_item_unit_min"
+				        style="@style/func_item_viewtext_style_unit_100"/>
+				</LinearLayout>
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="@dimen/common_line_height30"
+				    >
+				    <TextView
+				        android:text="@string/func_04_060_item04"
+				        style="@style/func_item_viewtext_style_100_b"/>
+				    <EditText
+						android:id="@+id/f_04_060_param12_3"  
+						android:labelFor="@id/f_04_060_param12_3" 
+					    style="@style/func_item_editdecimalSigned_style_100"/>
+				    <TextView
+				        android:text="@string/func_item_unit_mm"
+				        style="@style/func_item_viewtext_style_unit_100"/>
+				</LinearLayout>
+			</LinearLayout>
+		    <!-- end 蒸发量  -->	
+		    
+						
+		    <!-- start 水压  -->
+			<LinearLayout android:id="@+id/f_04_060_param13" 
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical"
+			    android:visibility="gone">
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="@dimen/common_line_height30">
+				    <TextView
+				        android:text="@string/func_04_060_item02"
+				        style="@style/func_item_viewtext_style_100_b"/>
+				    <EditText
+						android:id="@+id/f_04_060_param13_1"  
+						android:labelFor="@id/f_04_060_param13_1" 
+					    style="@style/func_item_editnumber_style_80"/>
+				</LinearLayout>
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="@dimen/common_line_height30">
+				    <TextView
+				        android:text="@string/func_04_060_item03"
+				        style="@style/func_item_viewtext_style_100_b"/>
+				    <EditText
+						android:id="@+id/f_04_060_param13_2"  
+						android:labelFor="@id/f_04_060_param13_2" 
+					    style="@style/func_item_editnumber_style_80"/>
+				    <TextView
+				        android:text="@string/func_item_unit_min"
+				        style="@style/func_item_viewtext_style_unit_100"/>
+				</LinearLayout>
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="@dimen/common_line_height30"
+				    >
+				    <TextView
+				        android:text="@string/func_04_060_item04"
+				        style="@style/func_item_viewtext_style_100_b"/>
+				    <EditText
+						android:id="@+id/f_04_060_param13_3"  
+						android:labelFor="@id/f_04_060_param13_3" 
+					    style="@style/func_item_editdecimalSigned_style_100"/>
+				    <TextView
+				        android:text="@string/func_item_unit_kPa"
+				        style="@style/func_item_viewtext_style_unit_100"/>
+				</LinearLayout>
+			</LinearLayout>
+		    <!-- end 水压  -->			    
+		    		    		    		    		    							        
+		    <include layout="@layout/show_btn_set" />
+		 </LinearLayout>
+	     
+		 <!-- start 底部 -->
+		 <LinearLayout 
+	        android:id="@+id/f_04_060_Load"
+	        style="@style/func_progressbar_linearlayout_style" >
+		    <ProgressBar
+		        style="@style/func_progressbar_style" />
+		 </LinearLayout>
+	</FrameLayout>
+</LinearLayout>
+

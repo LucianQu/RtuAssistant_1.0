@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+    
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	style="@style/func_out_linearlayout_style" >
+
+	<!-- start 头部标题 --> 
+	<LinearLayout style="@style/func_title_linearlayout_style">
+	    <TextView
+	    	android:id="@+id/f_05_030_Title"
+	        android:drawableLeft="@drawable/item005"
+	        android:text="@string/func_05_030"
+			style="@style/func_title_viewtext_style"/>
+	    
+	    <!-- 注释掉，以备用，若应用并显示在界面上时，要调整上面textView的宽度（如300dp） 
+	    <ImageView 
+	        android:id="@+id/commandStatus"
+	        style="@style/func_itemtitle_imageview_style"
+	        android:contentDescription="@string/txtBtn"/>
+	    -->
+	</LinearLayout>  
+	
+    
+	<!-- start 具体内布局 -->
+    <FrameLayout
+    	android:id="@+id/f_05_030_Frm"
+		style="@style/func_framelayout_style">
+    
+		 <!-- start 具体内容 -->
+		 <LinearLayout 
+	        style="@style/func_linearlayout_style">
+	        
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height35"
+			    >
+			    <TextView
+			        android:text="@string/func_05_030_item01"
+			        style="@style/func_item_viewtext_style_200_a"/>
+			</LinearLayout>
+		     
+		    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30">
+			    <TextView
+			        android:text="@string/func_05_030_item01_01"
+			        style="@style/func_item_viewtext_style_150_b"/>
+			    <CheckBox 
+				    android:id="@+id/f_05_030_item01_01_y" 
+				    android:text="@string/save"
+				    style="@style/func_item_chechbox_style_70"/> 
+			    <CheckBox 
+				    android:id="@+id/f_05_030_item01_01_n" 
+				    android:text="@string/noSave"
+				    style="@style/func_item_chechbox_style_70"/> 
+			</LinearLayout>
+		     
+		    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30">
+			    <TextView
+			        android:text="@string/func_05_030_item01_02"
+			        style="@style/func_item_viewtext_style_150_b"/>
+			    <CheckBox 
+				    android:id="@+id/f_05_030_item01_02_y" 
+				    android:text="@string/save"
+				    style="@style/func_item_chechbox_style_70"/> 
+			    <CheckBox 
+				    android:id="@+id/f_05_030_item01_02_n" 
+				    android:text="@string/noSave"
+				    style="@style/func_item_chechbox_style_70"/> 
+			</LinearLayout>
+		     
+		    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30">
+			    <TextView
+			        android:text="@string/func_05_030_item01_03"
+			        style="@style/func_item_viewtext_style_150_b"/>
+			    <CheckBox 
+				    android:id="@+id/f_05_030_item01_03_y" 
+				    android:text="@string/save"
+				    style="@style/func_item_chechbox_style_70"/> 
+			    <CheckBox 
+				    android:id="@+id/f_05_030_item01_03_n" 
+				    android:text="@string/noSave"
+				    style="@style/func_item_chechbox_style_70"/> 
+			</LinearLayout>
+		     
+		    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30">
+			    <TextView
+			        android:text="@string/func_05_030_item01_04"
+			        style="@style/func_item_viewtext_style_150_b"/>
+			    <CheckBox 
+				    android:id="@+id/f_05_030_item01_04_y" 
+				    android:text="@string/save"
+				    style="@style/func_item_chechbox_style_70"/> 
+			    <CheckBox 
+				    android:id="@+id/f_05_030_item01_04_n" 
+				    android:text="@string/noSave"
+				    style="@style/func_item_chechbox_style_70"/> 
+			</LinearLayout>
+		     
+		    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30">
+			    <TextView
+			        android:text="@string/func_05_030_item01_05"
+			        style="@style/func_item_viewtext_style_150_b"/>
+			    <CheckBox 
+				    android:id="@+id/f_05_030_item01_05_y" 
+				    android:text="@string/save"
+				    style="@style/func_item_chechbox_style_70"/> 
+			    <CheckBox 
+				    android:id="@+id/f_05_030_item01_05_n" 
+				    android:text="@string/noSave"
+				    style="@style/func_item_chechbox_style_70"/> 
+			</LinearLayout>
+		    		    		    		    
+		    <include layout="@layout/line1" />
+		    		    		    		    		    		    		    		     	      
+	        
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height35"
+			    >
+			    <TextView
+			        android:text="@string/func_05_030_item02"
+			        style="@style/func_item_viewtext_style_200_a"/>
+			</LinearLayout>
+		     
+		    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30">
+			    <TextView
+			        android:text="@string/func_05_030_item02_01"
+			        style="@style/func_item_viewtext_style_150_b"/>
+			    <CheckBox 
+				    android:id="@+id/f_05_030_item02_01_y" 
+				    android:text="@string/save"
+				    style="@style/func_item_chechbox_style_70"/> 
+			    <CheckBox 
+				    android:id="@+id/f_05_030_item02_01_n" 
+				    android:text="@string/noSave"
+				    style="@style/func_item_chechbox_style_70"/> 
+			</LinearLayout>
+		     
+		    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30">
+			    <TextView
+			        android:text="@string/func_05_030_item02_02"
+			        style="@style/func_item_viewtext_style_150_b"/>
+			    <CheckBox 
+				    android:id="@+id/f_05_030_item02_02_y" 
+				    android:text="@string/save"
+				    style="@style/func_item_chechbox_style_70"/> 
+			    <CheckBox 
+				    android:id="@+id/f_05_030_item02_02_n" 
+				    android:text="@string/noSave"
+				    style="@style/func_item_chechbox_style_70"/> 
+			</LinearLayout>
+		     
+		    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30">
+			    <TextView
+			        android:text="@string/func_05_030_item02_03"
+			        style="@style/func_item_viewtext_style_150_b"/>
+			    <CheckBox 
+				    android:id="@+id/f_05_030_item02_03_y" 
+				    android:text="@string/save"
+				    style="@style/func_item_chechbox_style_70"/> 
+			    <CheckBox 
+				    android:id="@+id/f_05_030_item02_03_n" 
+				    android:text="@string/noSave"
+				    style="@style/func_item_chechbox_style_70"/> 
+			</LinearLayout>
+		     
+		    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30">
+			    <TextView
+			        android:text="@string/func_05_030_item02_04"
+			        style="@style/func_item_viewtext_style_150_b"/>
+			    <CheckBox 
+				    android:id="@+id/f_05_030_item02_04_y" 
+				    android:text="@string/save"
+				    style="@style/func_item_chechbox_style_70"/> 
+			    <CheckBox 
+				    android:id="@+id/f_05_030_item02_04_n" 
+				    android:text="@string/noSave"
+				    style="@style/func_item_chechbox_style_70"/> 
+			</LinearLayout>
+		     
+		    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30">
+			    <TextView
+			        android:text="@string/func_05_030_item02_05"
+			        style="@style/func_item_viewtext_style_150_b"/>
+			    <CheckBox 
+				    android:id="@+id/f_05_030_item02_05_y" 
+				    android:text="@string/save"
+				    style="@style/func_item_chechbox_style_70"/> 
+			    <CheckBox 
+				    android:id="@+id/f_05_030_item02_05_n" 
+				    android:text="@string/noSave"
+				    style="@style/func_item_chechbox_style_70"/> 
+			</LinearLayout>
+		     
+		    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30">
+			    <TextView
+			        android:text="@string/func_05_030_item02_06"
+			        style="@style/func_item_viewtext_style_150_b"/>
+			    <CheckBox 
+				    android:id="@+id/f_05_030_item02_06_y" 
+				    android:text="@string/save"
+				    style="@style/func_item_chechbox_style_70"/> 
+			    <CheckBox 
+				    android:id="@+id/f_05_030_item02_06_n" 
+				    android:text="@string/noSave"
+				    style="@style/func_item_chechbox_style_70"/> 
+			</LinearLayout>
+		     
+		    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30">
+			    <TextView
+			        android:text="@string/func_05_030_item02_07"
+			        style="@style/func_item_viewtext_style_150_b"/>
+			    <CheckBox 
+				    android:id="@+id/f_05_030_item02_07_y" 
+				    android:text="@string/save"
+				    style="@style/func_item_chechbox_style_70"/> 
+			    <CheckBox 
+				    android:id="@+id/f_05_030_item02_07_n" 
+				    android:text="@string/noSave"
+				    style="@style/func_item_chechbox_style_70"/> 
+			</LinearLayout>
+		     
+		    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30">
+			    <TextView
+			        android:text="@string/func_05_030_item02_08"
+			        style="@style/func_item_viewtext_style_150_b"/>
+			    <CheckBox 
+				    android:id="@+id/f_05_030_item02_08_y" 
+				    android:text="@string/save"
+				    style="@style/func_item_chechbox_style_70"/> 
+			    <CheckBox 
+				    android:id="@+id/f_05_030_item02_08_n" 
+				    android:text="@string/noSave"
+				    style="@style/func_item_chechbox_style_70"/> 
+			</LinearLayout>
+		     
+		    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30">
+			    <TextView
+			        android:text="@string/func_05_030_item02_09"
+			        style="@style/func_item_viewtext_style_150_b"/>
+			    <CheckBox 
+				    android:id="@+id/f_05_030_item02_09_y" 
+				    android:text="@string/save"
+				    style="@style/func_item_chechbox_style_70"/> 
+			    <CheckBox 
+				    android:id="@+id/f_05_030_item02_09_n" 
+				    android:text="@string/noSave"
+				    style="@style/func_item_chechbox_style_70"/> 
+			</LinearLayout>
+		     
+		    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30">
+			    <TextView
+			        android:text="@string/func_05_030_item02_10"
+			        style="@style/func_item_viewtext_style_150_b"/>
+			    <CheckBox 
+				    android:id="@+id/f_05_030_item02_10_y" 
+				    android:text="@string/save"
+				    style="@style/func_item_chechbox_style_70"/> 
+			    <CheckBox 
+				    android:id="@+id/f_05_030_item02_10_n" 
+				    android:text="@string/noSave"
+				    style="@style/func_item_chechbox_style_70"/> 
+			</LinearLayout>
+		    		    		    		    		    		    		    		 	        
+		    		    		    		    
+		    <include layout="@layout/line1" />
+		    		    		    		    		    		    		    		     	      
+	        
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height35"
+			    >
+			    <TextView
+			        android:text="@string/func_05_030_item03"
+			        style="@style/func_item_viewtext_style_200_a"/>
+			</LinearLayout>
+		     
+		    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30">
+			    <TextView
+			        android:text="@string/func_05_030_item03_01"
+			        style="@style/func_item_viewtext_style_150_b"/>
+			    <CheckBox 
+				    android:id="@+id/f_05_030_item03_01_y" 
+				    android:text="@string/save"
+				    style="@style/func_item_chechbox_style_70"/> 
+			    <CheckBox 
+				    android:id="@+id/f_05_030_item03_01_n" 
+				    android:text="@string/noSave"
+				    style="@style/func_item_chechbox_style_70"/> 
+			</LinearLayout>
+		     
+		    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30">
+			    <TextView
+			        android:text="@string/func_05_030_item03_02"
+			        style="@style/func_item_viewtext_style_150_b"/>
+			    <CheckBox 
+				    android:id="@+id/f_05_030_item03_02_y" 
+				    android:text="@string/save"
+				    style="@style/func_item_chechbox_style_70"/> 
+			    <CheckBox 
+				    android:id="@+id/f_05_030_item03_02_n" 
+				    android:text="@string/noSave"
+				    style="@style/func_item_chechbox_style_70"/> 
+			</LinearLayout>
+		     
+		    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30">
+			    <TextView
+			        android:text="@string/func_05_030_item03_03"
+			        style="@style/func_item_viewtext_style_150_b"/>
+			    <CheckBox 
+				    android:id="@+id/f_05_030_item03_03_y" 
+				    android:text="@string/save"
+				    style="@style/func_item_chechbox_style_70"/> 
+			    <CheckBox 
+				    android:id="@+id/f_05_030_item03_03_n" 
+				    android:text="@string/noSave"
+				    style="@style/func_item_chechbox_style_70"/> 
+			</LinearLayout>
+		     
+		    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30">
+			    <TextView
+			        android:text="@string/func_05_030_item03_04"
+			        style="@style/func_item_viewtext_style_150_b"/>
+			    <CheckBox 
+				    android:id="@+id/f_05_030_item03_04_y" 
+				    android:text="@string/save"
+				    style="@style/func_item_chechbox_style_70"/> 
+			    <CheckBox 
+				    android:id="@+id/f_05_030_item03_04_n" 
+				    android:text="@string/noSave"
+				    style="@style/func_item_chechbox_style_70"/> 
+			</LinearLayout>
+		     
+		    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30">
+			    <TextView
+			        android:text="@string/func_05_030_item03_05"
+			        style="@style/func_item_viewtext_style_150_b"/>
+			    <CheckBox 
+				    android:id="@+id/f_05_030_item03_05_y" 
+				    android:text="@string/save"
+				    style="@style/func_item_chechbox_style_70"/> 
+			    <CheckBox 
+				    android:id="@+id/f_05_030_item03_05_n" 
+				    android:text="@string/noSave"
+				    style="@style/func_item_chechbox_style_70"/> 
+			</LinearLayout>
+		     
+		    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30">
+			    <TextView
+			        android:text="@string/func_05_030_item03_06"
+			        style="@style/func_item_viewtext_style_150_b"/>
+			    <CheckBox 
+				    android:id="@+id/f_05_030_item03_06_y" 
+				    android:text="@string/save"
+				    style="@style/func_item_chechbox_style_70"/> 
+			    <CheckBox 
+				    android:id="@+id/f_05_030_item03_06_n" 
+				    android:text="@string/noSave"
+				    style="@style/func_item_chechbox_style_70"/> 
+			</LinearLayout>
+		    <include layout="@layout/line1" />
+		    			
+		    									
+		    <include layout="@layout/show_btn_set_query" />
+		 </LinearLayout>
+	     
+		 <!-- start 底部 -->
+		 <LinearLayout 
+	        android:id="@+id/f_05_030_Load"
+	        style="@style/func_progressbar_linearlayout_style" >
+		    <ProgressBar
+		        style="@style/func_progressbar_style" />
+		 </LinearLayout>
+	</FrameLayout>
+</LinearLayout>
+
