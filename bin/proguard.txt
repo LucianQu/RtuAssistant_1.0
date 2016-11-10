@@ -186,3 +186,6 @@
 # view AndroidManifest.xml #generated:96
 -keep class com.blg.rtu.sm.SmsReceiver { <init>(...); }
 
+# view res/layout/floopq_01.xml #generated:59
+-keep class com.leaking.slideswitch.SlideSwitch { <init>(...); }
+

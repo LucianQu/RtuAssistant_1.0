@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    xmlns:slideswitch="http://schemas.android.com/apk/res/com.blg.rtu" 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center_vertical"
@@ -55,7 +56,18 @@
 			    style="@style/loopq_item_edittext_style_92"
 			    android:inputType="none"/>		
 		
-		   <ImageView android:id="@+id/lqStart"
+		   <com.leaking.slideswitch.SlideSwitch
+	        android:id="@+id/swit1"
+	        android:layout_width="10dp"
+	        android:layout_height="24dp"
+	        android:layout_marginLeft="7dp"
+	        android:layout_marginTop="6dp"
+	        slideswitch:isOpen="false"
+	        slideswitch:shape="circle"
+	        slideswitch:themeColor="#ff0099ff" >
+    		</com.leaking.slideswitch.SlideSwitch>
+		   
+		  <!--  <ImageView android:id="@+id/lqStart"
 	            android:layout_width="30dp"
 	            android:layout_height="30dp"
 	            android:layout_marginLeft="30dp"
@@ -82,7 +94,7 @@
 	            android:focusable="false" 
 	            android:contentDescription="@string/image_description"
 	            android:visibility="gone"/> 
-		   	                 
+		   	                  -->
 		</LinearLayout>		
 		
 				

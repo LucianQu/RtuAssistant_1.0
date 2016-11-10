@@ -2,6 +2,9 @@ package com.blg.rtu.frmLoopQuery;
 
 import java.util.ArrayList;
 
+import com.leaking.slideswitch.SlideSwitch;
+import com.leaking.slideswitch.SlideSwitch.SlideListener;
+
 import com.blg.rtu.MainActivity;
 import com.blg.rtu.R;
 import com.blg.rtu.protocol.RtuCommand;
@@ -21,6 +24,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
+import android.webkit.WebView.FindListener;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
@@ -30,7 +34,7 @@ import android.widget.Toast;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.TextView;
 
-public class LpFragment_01 extends Fragment {
+public class LpFragment_01 extends Fragment implements SlideListener{
 	
 	public MainActivity act ;
 	
@@ -46,6 +50,8 @@ public class LpFragment_01 extends Fragment {
 	
 	private ImageView startBtn ;
 	private ImageView stopBtn ;
+	
+	SlideSwitch slide;
 	
 	private ProgressBar loopProgress ;
 
@@ -128,13 +134,16 @@ public class LpFragment_01 extends Fragment {
 		
 		item03.setText(sended + "/" + receiveed) ;
 		
-		startBtn = (ImageView)view.findViewById(R.id.lqStart);
+	/*	startBtn = (ImageView)view.findViewById(R.id.lqStart);
 		stopBtn = (ImageView)view.findViewById(R.id.lqStop);
 		startBtn.setOnClickListener(new btnOnClickListener()) ;
 		stopBtn.setOnClickListener(new btnOnClickListener()) ;
 		
-		loopProgress = (ProgressBar)view.findViewById(R.id.loopProgress);
-	
+		loopProgress = (ProgressBar)view.findViewById(R.id.loopProgress);*/
+		slide = (SlideSwitch) view.findViewById(R.id.swit1);
+		slide.setState(false);
+		slide.setSlideListener(this);
+		
 		return view ;
 	}
 	
@@ -184,7 +193,7 @@ public class LpFragment_01 extends Fragment {
 		}
 	}
 	
-	private class btnOnClickListener implements OnClickListener{
+/*	private class btnOnClickListener implements OnClickListener{
 		@Override
 		public void onClick(View v) {
 			if(startBtn.getId() == v.getId()){
@@ -194,7 +203,7 @@ public class LpFragment_01 extends Fragment {
 				stopLoopQuery() ;
 			}
 		}
-	}
+	}*/
 	
 	private void startLoopQuery(){
 		int ch = act.frgTool.fragment_ch01.getSelectedChannel() ;
@@ -216,9 +225,9 @@ public class LpFragment_01 extends Fragment {
 	}
 	
 	private void doStartLoopQuery(String rtuId){
-		startBtn.setVisibility(View.GONE) ;
-		stopBtn.setVisibility(View.VISIBLE) ;
-		loopProgress.setVisibility(View.VISIBLE) ;
+		//startBtn.setVisibility(View.GONE) ;
+		//stopBtn.setVisibility(View.VISIBLE) ;
+		//loopProgress.setVisibility(View.VISIBLE) ;
 		sended = 0 ;
 		receiveed = 0 ;
 		
@@ -232,9 +241,9 @@ public class LpFragment_01 extends Fragment {
 	}
 	
 	private void stopLoopQuery(){
-		startBtn.setVisibility(View.VISIBLE) ;
-		stopBtn.setVisibility(View.GONE) ;
-		loopProgress.setVisibility(View.GONE) ;
+		//startBtn.setVisibility(View.VISIBLE) ;
+		//stopBtn.setVisibility(View.GONE) ;
+		//loopProgress.setVisibility(View.GONE) ;
 		
 		startLoopQuery = false ;
 		
@@ -247,6 +256,23 @@ public class LpFragment_01 extends Fragment {
 	private void queryTypeSet(int type){
 		this.act.frgTool.fragment_loopq03.queryTypeSet(type) ;
 	}
+	
+	@Override
+	public void open() {
+		// TODO Auto-generated method stub
+		//txt.setText("first switch is opend, and set the second one is 'slideable'");
+		//slide.setSlideable(true);
+		startLoopQuery();
+	}
+
+	@Override
+	public void close() {
+		// TODO Auto-generated method stub
+		//txt.setText("first switch is closed,and set the second one is 'unslideable'");
+		//slide.setSlideable(false);
+		stopLoopQuery();
+	}
+	
 	
 
 	@Override
