@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 public class SplashActivity extends Activity {
 
-	private int delayMillis = 100 ;
+	private int delayMillis = 1000 ;
 	private LinearLayout aplashLinear ;
 	@SuppressWarnings("deprecation")
 	@Override
@@ -23,7 +23,7 @@ public class SplashActivity extends Activity {
 		
 		aplashLinear = (LinearLayout)findViewById(R.id.splashLinear);
 //		aplashLinear.setBackground(getResources().getDrawable(R.drawable.splash));
-		aplashLinear.setBackgroundDrawable(getResources().getDrawable(R.drawable.splash)) ;
+		aplashLinear.setBackgroundDrawable(getResources().getDrawable(R.drawable.splash1)) ;
 		
 	    TextView versionNumberV = (TextView) findViewById(R.id.versionNumber);
 	    versionNumberV.setText(getResources().getString(R.string.txtVersion) + " " + this.getSoftVersion(this));

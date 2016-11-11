@@ -18,7 +18,7 @@
         android:shadowRadius="1" 
         android:shadowColor="#FFFFFF"
         android:textColor="#444444" 
-        android:textSize="20sp" 
+        android:textSize="12sp" 
         android:gravity="bottom">
     </TextView>
 </LinearLayout>

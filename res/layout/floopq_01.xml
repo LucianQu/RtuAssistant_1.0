@@ -58,7 +58,7 @@
 		
 		   <com.leaking.slideswitch.SlideSwitch
 	        android:id="@+id/swit1"
-	        android:layout_width="10dp"
+	        android:layout_width="60dp"
 	        android:layout_height="24dp"
 	        android:layout_marginLeft="7dp"
 	        android:layout_marginTop="6dp"
@@ -66,7 +66,26 @@
 	        slideswitch:shape="circle"
 	        slideswitch:themeColor="#ff0099ff" >
     		</com.leaking.slideswitch.SlideSwitch>
-		   
+    		
+		    <ImageView android:id="@+id/lqOnce"
+	            android:layout_width="30dp"
+	            android:layout_height="30dp"
+	            android:layout_marginLeft="15dp"
+	            android:layout_gravity="center_vertical|center_horizontal"
+	            android:background="@drawable/aq_once" 
+	            android:focusable="true" 
+	            android:contentDescription="@string/image_description"
+	           /> 
+	           
+		     <ProgressBar
+		    	android:id="@+id/loopProgress"
+		    	style="@style/func_progressbar_style"  
+		        android:layout_width="25dp"
+		        android:layout_height="25dp"
+			    android:layout_marginLeft="30dp"
+	            android:layout_gravity="center_vertical|center_horizontal"
+		    	android:visibility="gone"/>
+		    
 		  <!--  <ImageView android:id="@+id/lqStart"
 	            android:layout_width="30dp"
 	            android:layout_height="30dp"

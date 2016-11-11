@@ -15,6 +15,7 @@ import com.blg.rtu.protocol.p206.cdF0.Data_F0;
 import com.blg.rtu.util.Constant;
 import com.blg.rtu.util.Preferences;
 import com.blg.rtu.util.SpinnerVO;
+import com.blg.rtu.util.StringValueForActivity;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -48,9 +49,11 @@ public class LpFragment_01 extends Fragment implements SlideListener{
 
 	private TextView item03 ;
 	
-	private ImageView startBtn ;
-	private ImageView stopBtn ;
-	
+	private ImageView onceBtn ;
+	private boolean onceStartFlag = false;
+	private boolean loopStartFlag = false;
+	//private ImageView startBtn ;
+	//private ImageView stopBtn ;
 	SlideSwitch slide;
 	
 	private ProgressBar loopProgress ;
@@ -138,8 +141,11 @@ public class LpFragment_01 extends Fragment implements SlideListener{
 		stopBtn = (ImageView)view.findViewById(R.id.lqStop);
 		startBtn.setOnClickListener(new btnOnClickListener()) ;
 		stopBtn.setOnClickListener(new btnOnClickListener()) ;
+		*/
+		loopProgress = (ProgressBar)view.findViewById(R.id.loopProgress);
+		onceBtn = (ImageView)view.findViewById(R.id.lqOnce);
+		onceBtn.setOnClickListener(new btnOnClickListener()) ;
 		
-		loopProgress = (ProgressBar)view.findViewById(R.id.loopProgress);*/
 		slide = (SlideSwitch) view.findViewById(R.id.swit1);
 		slide.setState(false);
 		slide.setSlideListener(this);
@@ -193,17 +199,27 @@ public class LpFragment_01 extends Fragment implements SlideListener{
 		}
 	}
 	
-/*	private class btnOnClickListener implements OnClickListener{
+	private class btnOnClickListener implements OnClickListener{
 		@Override
 		public void onClick(View v) {
-			if(startBtn.getId() == v.getId()){
-				startLoopQuery() ;
-			}else
-			if(stopBtn.getId() == v.getId()){
-				stopLoopQuery() ;
+			if(onceBtn.getId() == v.getId()){
+				if(!loopStartFlag){
+					onceStartFlag = true;
+					startLoopQuery() ;
+					onceBtn.setVisibility(View.GONE) ;
+					loopProgress.setVisibility(View.VISIBLE) ;
+					act.mHandler.postDelayed(new Runnable() {
+						public void run() {
+							onceStartFlag = false;
+							stopLoopQuery();
+							loopProgress.setVisibility(View.GONE) ;
+							onceBtn.setVisibility(View.VISIBLE) ;
+						}
+					}, StringValueForActivity.commandResultTimout);
+				}
 			}
 		}
-	}*/
+	}
 	
 	private void startLoopQuery(){
 		int ch = act.frgTool.fragment_ch01.getSelectedChannel() ;
@@ -263,6 +279,7 @@ public class LpFragment_01 extends Fragment implements SlideListener{
 		//txt.setText("first switch is opend, and set the second one is 'slideable'");
 		//slide.setSlideable(true);
 		startLoopQuery();
+		loopStartFlag = true;
 	}
 
 	@Override
@@ -271,6 +288,7 @@ public class LpFragment_01 extends Fragment implements SlideListener{
 		//txt.setText("first switch is closed,and set the second one is 'unslideable'");
 		//slide.setSlideable(false);
 		stopLoopQuery();
+		loopStartFlag = false;
 	}
 	
 	
@@ -316,10 +334,22 @@ public class LpFragment_01 extends Fragment implements SlideListener{
 				//地下水
 				item01.setSelection(LpConstant.queryType_diXia); 
 				receiveed++ ;
+				if(onceStartFlag) {
+					onceStartFlag = false;
+					stopLoopQuery();
+					loopProgress.setVisibility(View.GONE) ;
+					onceBtn.setVisibility(View.VISIBLE) ;
+				}
 			}else if(type.byteValue() == (byte)0xC4){
 				//智能水表
 				item01.setSelection(LpConstant.queryType_zhiNeng); 
 				receiveed++ ;
+				if(onceStartFlag) {
+					onceStartFlag = false;
+					stopLoopQuery();
+					loopProgress.setVisibility(View.GONE) ;
+					onceBtn.setVisibility(View.VISIBLE) ;
+				}
 			}
 			item03.setText(sended + "/" + receiveed) ;
 		}
