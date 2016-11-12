@@ -215,7 +215,7 @@ public class LpFragment_01 extends Fragment implements SlideListener{
 							loopProgress.setVisibility(View.GONE) ;
 							onceBtn.setVisibility(View.VISIBLE) ;
 						}
-					}, StringValueForActivity.commandResultTimout);
+					}, 3500);
 				}
 			}
 		}

@@ -87,15 +87,15 @@
 		        <fragment android:id="@+id/f_01_020"
 			        android:name="com.blg.rtu.frmFunction.F_01_020"
 				    style="@style/func_fragment_style"/>
-		        <fragment android:id="@+id/f_01_030"
+		      <!--   <fragment android:id="@+id/f_01_030"
 			        android:name="com.blg.rtu.frmFunction.F_01_030"
-				    style="@style/func_fragment_style"/>
+				    style="@style/func_fragment_style"/> -->
 		        <fragment android:id="@+id/f_01_040"
 			        android:name="com.blg.rtu.frmFunction.F_01_040"
 				    style="@style/func_fragment_style"/>
-		        <fragment android:id="@+id/f_01_050"
+		      <!--   <fragment android:id="@+id/f_01_050"
 			        android:name="com.blg.rtu.frmFunction.F_01_050"
-				    style="@style/func_fragment_style"/>
+				    style="@style/func_fragment_style"/> -->
 		        <fragment android:id="@+id/f_01_060"
 			        android:name="com.blg.rtu.frmFunction.F_01_060"
 				    style="@style/func_fragment_style"/>
@@ -118,19 +118,19 @@
 		        <fragment android:id="@+id/f_02_010"
 			        android:name="com.blg.rtu.frmFunction.F_02_010"
 				    style="@style/func_fragment_style"/>
-		        <fragment android:id="@+id/f_02_020"
+		   <!--      <fragment android:id="@+id/f_02_020"
 			        android:name="com.blg.rtu.frmFunction.F_02_020"
 				    style="@style/func_fragment_style"/>
 		        <fragment android:id="@+id/f_02_030"
 			        android:name="com.blg.rtu.frmFunction.F_02_030"
-				    style="@style/func_fragment_style"/>
+				    style="@style/func_fragment_style"/> -->
 		        <fragment android:id="@+id/f_02_040"
 			        android:name="com.blg.rtu.frmFunction.F_02_040"
 				    style="@style/func_fragment_style"/>
 		        <fragment android:id="@+id/f_02_050"
 			        android:name="com.blg.rtu.frmFunction.F_02_050"
 				    style="@style/func_fragment_style"/>
-		        <fragment android:id="@+id/f_02_060"
+		     <!--    <fragment android:id="@+id/	"
 			        android:name="com.blg.rtu.frmFunction.F_02_060"
 				    style="@style/func_fragment_style"/>
 		        <fragment android:id="@+id/f_02_070"
@@ -141,7 +141,7 @@
 				    style="@style/func_fragment_style"/>
 		        <fragment android:id="@+id/f_02_090"
 			        android:name="com.blg.rtu.frmFunction.F_02_090"
-				    style="@style/func_fragment_style"/>
+				    style="@style/func_fragment_style"/> -->
 		        		        		        		        		        		        		        		        		        
 	       </LinearLayout>
 		   
@@ -157,7 +157,7 @@
 			        android:name="com.blg.rtu.frmFunction.F_03_010"
 				    style="@style/func_fragment_style"/>
 				 -->
-		        <fragment android:id="@+id/f_03_011"
+		       <!--  <fragment android:id="@+id/f_03_011"
 			        android:name="com.blg.rtu.frmFunction.F_03_011"
 				    style="@style/func_fragment_style"/>
 		        <fragment android:id="@+id/f_03_020"
@@ -180,7 +180,7 @@
 				    style="@style/func_fragment_style"/>
 		        <fragment android:id="@+id/f_03_080"
 			        android:name="com.blg.rtu.frmFunction.F_03_080"
-				    style="@style/func_fragment_style"/>
+				    style="@style/func_fragment_style"/> -->
 		        <fragment android:id="@+id/f_03_090"
 			        android:name="com.blg.rtu.frmFunction.F_03_090"
 				    style="@style/func_fragment_style"/>
@@ -194,7 +194,7 @@
 			    android:layout_height="match_parent"
 			    android:orientation="vertical"
 			    >
-		        <fragment android:id="@+id/f_04_010"
+		       <!--  <fragment android:id="@+id/f_04_010"
 			        android:name="com.blg.rtu.frmFunction.F_04_010"
 				    style="@style/func_fragment_style"/>
 		        <fragment android:id="@+id/f_04_020"
@@ -214,14 +214,14 @@
 				    style="@style/func_fragment_style"/>
 		        <fragment android:id="@+id/f_04_070"
 			        android:name="com.blg.rtu.frmFunction.F_04_070"
-				    style="@style/func_fragment_style"/>
+				    style="@style/func_fragment_style"/> -->
 		        <fragment android:id="@+id/f_04_080"
 			        android:name="com.blg.rtu.frmFunction.F_04_080"
 				    style="@style/func_fragment_style"/>
 		        <fragment android:id="@+id/f_04_090"
 			        android:name="com.blg.rtu.frmFunction.F_04_090"
 				    style="@style/func_fragment_style"/>
-		        <fragment android:id="@+id/f_04_100"
+		     <!--    <fragment android:id="@+id/f_04_100"
 			        android:name="com.blg.rtu.frmFunction.F_04_100"
 				    style="@style/func_fragment_style"/>
 		        <fragment android:id="@+id/f_04_110"
@@ -229,7 +229,7 @@
 				    style="@style/func_fragment_style"/>
 		        <fragment android:id="@+id/f_04_120"
 			        android:name="com.blg.rtu.frmFunction.F_04_120"
-				    style="@style/func_fragment_style"/>
+				    style="@style/func_fragment_style"/> -->
 		   </LinearLayout>
 
 		   
@@ -247,9 +247,9 @@
 		        <fragment android:id="@+id/f_05_020"
 			        android:name="com.blg.rtu.frmFunction.F_05_020"
 				    style="@style/func_fragment_style"/>
-		        <fragment android:id="@+id/f_05_030"
+		       <!--  <fragment android:id="@+id/f_05_030"
 			        android:name="com.blg.rtu.frmFunction.F_05_030"
-				    style="@style/func_fragment_style"/>
+				    style="@style/func_fragment_style"/> -->
 		        <fragment android:id="@+id/f_05_040"
 			        android:name="com.blg.rtu.frmFunction.F_05_040"
 				    style="@style/func_fragment_style"/>
@@ -259,12 +259,12 @@
 				<fragment android:id="@+id/f_05_060"
 			        android:name="com.blg.rtu.frmFunction.F_05_060"
 				    style="@style/func_fragment_style"/>
-				<fragment android:id="@+id/f_05_070"
+				<!-- <fragment android:id="@+id/f_05_070"
 			        android:name="com.blg.rtu.frmFunction.F_05_070"
-				    style="@style/func_fragment_style"/>
+				    style="@style/func_fragment_style"/> -->
 		   </LinearLayout>
 		   
-		   <include layout="@layout/f_func_title_06" />  			    
+		  <!--  <include layout="@layout/f_func_title_06" />  			    
 		   <LinearLayout  
 			    android:id="@+id/f_func_06"
 			    android:layout_width="match_parent"
@@ -274,7 +274,7 @@
 		        <fragment android:id="@+id/f_06_010"
 			        android:name="com.blg.rtu.frmFunction.F_06_010"
 				    style="@style/func_fragment_style"/>
-		   </LinearLayout>
+		   </LinearLayout> -->
 		   
 		   <TextView android:id="@+id/fcWelcome"
 				android:textColor="#6bded7" 

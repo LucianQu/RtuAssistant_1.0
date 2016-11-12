@@ -151,7 +151,7 @@ public class MainActivityHelp {
 			}
 		});
 		
-		funcTitle_06 = (LinearLayout) pageView_function.findViewById(R.id.f_06_title);
+	/*	funcTitle_06 = (LinearLayout) pageView_function.findViewById(R.id.f_06_title);
 		func_06 = (LinearLayout) pageView_function.findViewById(R.id.f_func_06);
 
 		funcTitle_06.setOnClickListener(new OnClickListener() {
@@ -159,7 +159,7 @@ public class MainActivityHelp {
 			public void onClick(View v) {
 				openCloseFunc_0X(func_06) ;
 			}
-		});
+		});*/
 	}
 	
 	private void openCloseFunc_0X(LinearLayout funcLinear){
