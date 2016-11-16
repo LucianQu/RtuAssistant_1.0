@@ -291,8 +291,6 @@ public class LpFragment_01 extends Fragment implements SlideListener{
 		loopStartFlag = false;
 	}
 	
-	
-
 	@Override
 	public void onResume() {
 		super.onResume();
