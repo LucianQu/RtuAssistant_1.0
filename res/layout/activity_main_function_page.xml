@@ -145,19 +145,19 @@
 		        		        		        		        		        		        		        		        		        
 	       </LinearLayout>
 		   
-		   <include layout="@layout/f_func_title_03" />  			    
+		   <!-- <include layout="@layout/f_func_title_03" />  			    
 			<LinearLayout  
 			    android:id="@+id/f_func_03"
 			    android:layout_width="match_parent"
 			    android:layout_height="match_parent"
 			    android:orientation="vertical"
 			    >
-		        <!-- f_03_010 被f_03_011代替
+		        f_03_010 被f_03_011代替
 		        <fragment android:id="@+id/f_03_010"
 			        android:name="com.blg.rtu.frmFunction.F_03_010"
 				    style="@style/func_fragment_style"/>
-				 -->
-		       <!--  <fragment android:id="@+id/f_03_011"
+				
+		        <fragment android:id="@+id/f_03_011"
 			        android:name="com.blg.rtu.frmFunction.F_03_011"
 				    style="@style/func_fragment_style"/>
 		        <fragment android:id="@+id/f_03_020"
@@ -180,12 +180,12 @@
 				    style="@style/func_fragment_style"/>
 		        <fragment android:id="@+id/f_03_080"
 			        android:name="com.blg.rtu.frmFunction.F_03_080"
-				    style="@style/func_fragment_style"/> -->
+				    style="@style/func_fragment_style"/>
 		        <fragment android:id="@+id/f_03_090"
 			        android:name="com.blg.rtu.frmFunction.F_03_090"
 				    style="@style/func_fragment_style"/>
 		        		        		        		        		        		        		        		        		        		        		        		        		        		        		        		        		        
-	       </LinearLayout>
+	       </LinearLayout> -->
 		   
 		   <include layout="@layout/f_func_title_04" />  			    
 		   <LinearLayout  
@@ -230,6 +230,9 @@
 		        <fragment android:id="@+id/f_04_120"
 			        android:name="com.blg.rtu.frmFunction.F_04_120"
 				    style="@style/func_fragment_style"/> -->
+				<fragment android:id="@+id/f_03_090"
+			        android:name="com.blg.rtu.frmFunction.F_03_090"
+				    style="@style/func_fragment_style"/>
 		   </LinearLayout>
 
 		   

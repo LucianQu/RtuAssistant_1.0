@@ -63,10 +63,10 @@ public class MainActivityHelp {
 			public boolean onLongClick(View v) {
 				openFunc_0X(func_01) ;
 				openFunc_0X(func_02) ;
-				openFunc_0X(func_03) ;
+				//openFunc_0X(func_03) ;
 				openFunc_0X(func_04) ;
 				openFunc_0X(func_05) ;
-				openFunc_0X(func_06) ;
+				//openFunc_0X(func_06) ;
 				return true;//return true时，点击(短按)事件将不响应
 			}
 		}) ;
@@ -82,10 +82,10 @@ public class MainActivityHelp {
 			public boolean onLongClick(View v) {
 				closeFunc_0X(func_01) ;
 				closeFunc_0X(func_02) ;
-				closeFunc_0X(func_03) ;
+				//closeFunc_0X(func_03) ;
 				closeFunc_0X(func_04) ;
 				closeFunc_0X(func_05) ;
-				closeFunc_0X(func_06) ;
+				//closeFunc_0X(func_06) ;
 				return true;//return true时，点击(短按)事件将不响应
 			}
 		}) ;
@@ -121,7 +121,7 @@ public class MainActivityHelp {
 			}
 		});
 		
-		funcTitle_03 = (LinearLayout) pageView_function.findViewById(R.id.f_03_title);
+	/*	funcTitle_03 = (LinearLayout) pageView_function.findViewById(R.id.f_03_title);
 		func_03 = (LinearLayout) pageView_function.findViewById(R.id.f_func_03);
 
 		funcTitle_03.setOnClickListener(new OnClickListener() {
@@ -129,7 +129,7 @@ public class MainActivityHelp {
 			public void onClick(View v) {
 				openCloseFunc_0X(func_03) ;
 			}
-		});
+		});*/
 		
 		funcTitle_04 = (LinearLayout) pageView_function.findViewById(R.id.f_04_title);
 		func_04 = (LinearLayout) pageView_function.findViewById(R.id.f_func_04);
@@ -160,6 +160,13 @@ public class MainActivityHelp {
 				openCloseFunc_0X(func_06) ;
 			}
 		});*/
+		
+		closeFunc_0X(func_01) ;
+		closeFunc_0X(func_02) ;
+		closeFunc_0X(func_04) ;
+		closeFunc_0X(func_05) ;
+		
+		
 	}
 	
 	private void openCloseFunc_0X(LinearLayout funcLinear){
