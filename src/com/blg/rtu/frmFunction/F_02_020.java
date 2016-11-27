@@ -203,14 +203,14 @@ public class F_02_020 extends FrmParent {
 	 */
 	@Override
 	public void outSetData(Vo2Xml vo){
-		vo.setV_02_020_item01(spinnerPosition) ;
+		//vo.setV_02_020_item01(spinnerPosition) ;
 	}
 	/**
 	 * 导入设置数据
 	 */
 	@Override
 	public void inSetData(Vo2Xml vo){
-		item01.setSelection(vo.getV_02_020_item01()); 
+		//item01.setSelection(vo.getV_02_020_item01()); 
 	}
 	
 	@Override

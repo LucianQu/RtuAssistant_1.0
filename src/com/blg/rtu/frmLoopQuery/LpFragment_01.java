@@ -154,8 +154,8 @@ public class LpFragment_01 extends Fragment implements SlideListener{
 	}
 	
 	private void putSpinnerValue1(){
-		spinnerAdapter1.add(new SpinnerVO("0", "地下水")) ;
-		spinnerAdapter1.add(new SpinnerVO("1", "智能水表")) ;
+		spinnerAdapter1.add(new SpinnerVO("0", "智能水表")) ;
+		//spinnerAdapter1.add(new SpinnerVO("1", "地下水")) ;
 	}
 	
 	private void putSpinnerValue2(){

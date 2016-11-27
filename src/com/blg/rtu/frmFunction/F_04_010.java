@@ -200,13 +200,13 @@ public class F_04_010 extends FrmParent {
 	 * 导出设置数据
 	 */
 	public void outSetData(Vo2Xml vo) {
-		vo.setV_04_010_item01(spinnerPosition) ;
+		//vo.setV_04_010_item01(spinnerPosition) ;
 	}
 	/**
 	 * 导入设置数据
 	 */
 	public void inSetData(Vo2Xml vo) {
-		item01.setSelection(vo.getV_04_010_item01()) ;
+		//item01.setSelection(vo.getV_04_010_item01()) ;
 	}
 	
 	@Override

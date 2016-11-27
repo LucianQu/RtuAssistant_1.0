@@ -11,7 +11,7 @@ public class Help {
 
 		act.frgTool.f_01_010.outSetData(vo);
 		act.frgTool.f_01_020.outSetData(vo);
-		/*act.frgTool.f_01_030.outSetData(vo)*/;
+		/*act.frgTool.f_01_030.outSetData(vo);*/
 		act.frgTool.f_01_040.outSetData(vo);
 		/*act.frgTool.f_01_050.outSetData(vo);*/
 		act.frgTool.f_01_060.outSetData(vo);

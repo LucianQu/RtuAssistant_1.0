@@ -1,10 +1,10 @@
 # view res/layout/activity_main.xml #generated:35
 -keep class android.support.v4.view.ViewPager { <init>(...); }
 
-# view AndroidManifest.xml #generated:71
+# view AndroidManifest.xml #generated:72
 -keep class com.blg.rtu.MainActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:54
+# view AndroidManifest.xml #generated:55
 -keep class com.blg.rtu.SplashActivity { <init>(...); }
 
 # view res/layout/f_func_05_040.xml #generated:99
@@ -93,10 +93,10 @@
 # view res/layout/activity_main_noprotocol_page.xml #generated:60
 -keep class com.blg.rtu.frmNoProtocol.NpFragment_03 { <init>(...); }
 
-# view AndroidManifest.xml #generated:82
+# view AndroidManifest.xml #generated:83
 -keep class com.blg.rtu.server.LocalServer { <init>(...); }
 
-# view AndroidManifest.xml #generated:96
+# view AndroidManifest.xml #generated:97
 -keep class com.blg.rtu.sm.SmsReceiver { <init>(...); }
 
 # view res/layout/floopq_01.xml #generated:59

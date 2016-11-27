@@ -492,7 +492,7 @@ public class F_03_030  extends FrmParent {
 	 * 导出设置数据
 	 */
 	public void outSetData(Vo2Xml vo) {
-		vo.setV_03_030_item01_1(spinnerPosition01_1) ;
+	/*	vo.setV_03_030_item01_1(spinnerPosition01_1) ;
 		vo.setV_03_030_item01_2(item01_2.getText().toString()) ;
 		vo.setV_03_030_item03_1(spinnerPosition03_1) ;
 		vo.setV_03_030_item03_2(item03_2.getText().toString()) ;
@@ -501,13 +501,13 @@ public class F_03_030  extends FrmParent {
 		vo.setV_03_030_item05_1(spinnerPosition05_1) ;
 		vo.setV_03_030_item05_2(item05_2.getText().toString()) ;
 		vo.setV_03_030_item06_1(spinnerPosition06_1) ;
-		vo.setV_03_030_item06_2(item06_2.getText().toString()) ;
+		vo.setV_03_030_item06_2(item06_2.getText().toString()) ;*/
 	}
 	/**
 	 * 导入设置数据
 	 */
 	public void inSetData(Vo2Xml vo) {
-		item01_1.setSelection(vo.getV_03_030_item01_1()) ;
+	/*	item01_1.setSelection(vo.getV_03_030_item01_1()) ;
 		item01_2.setText(vo.getV_03_030_item01_2()) ;
 		item03_1.setSelection(vo.getV_03_030_item03_1()) ;
 		item03_2.setText(vo.getV_03_030_item03_2()) ;
@@ -516,7 +516,7 @@ public class F_03_030  extends FrmParent {
 		item05_1.setSelection(vo.getV_03_030_item05_1()) ;
 		item05_2.setText(vo.getV_03_030_item05_2()) ;
 		item06_1.setSelection(vo.getV_03_030_item06_1()) ;
-		item06_2.setText(vo.getV_03_030_item06_2()) ;
+		item06_2.setText(vo.getV_03_030_item06_2()) ;*/
 	}
 	
 	@Override

@@ -100,7 +100,7 @@ public class ChBusi_01_Operate {
 		chf.in.setOnClickListener(new OnClickListener(){
 			@Override
 			public void onClick(View v) {
-				if(!HelpSaveSetDataToFile.isFileExist(chf.act)){
+				if(!HelpSaveSetDataToFile.isInFileExist(chf.act)){
 					new DialogAlarm().showDialog(chf.act, chf.act.getResources().getString(R.string.txtAlarmNoSetDataFile)) ;			
 				}else{
 					new DialogConfirm().showDialog(chf.act,
@@ -118,7 +118,7 @@ public class ChBusi_01_Operate {
 			}
 			private void readInFile(){
 				try{
-					File f = HelpSaveSetDataToFile.getFile(chf.act) ;
+					File f = HelpSaveSetDataToFile.getInFile(chf.act) ;
 					new Help().in(chf.act, f) ;
 					Toast.makeText(chf.act, "导入命令数据成功", Toast.LENGTH_SHORT).show() ;
 				}catch(Exception e){

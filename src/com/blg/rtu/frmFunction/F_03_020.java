@@ -684,10 +684,20 @@ public class F_03_020  extends FrmParent {
 		
 	}
 	
+	
+	
+	@Override
+	public void outSetData(Vo2Xml vo) {
+	}
+
+	@Override
+	public void inSetData(Vo2Xml vo) {
+	}
+
 	/**
 	 * 导出设置数据
 	 */
-	public void outSetData(Vo2Xml vo) {
+	/*public void outSetData(Vo2Xml vo) {
 		vo.setV_03_020_item01_1(spinnerPosition01_1) ;
 		vo.setV_03_020_item01_2(spinnerPosition01_2) ;
 		vo.setV_03_020_item02_1(spinnerPosition02_1) ;
@@ -731,11 +741,11 @@ public class F_03_020  extends FrmParent {
 		byte[] b = s.getBytes() ;
 		String hex = ByteUtil.bytes2Hex(b, false) ;
 		vo.setV_03_020_meterTypeListStr(hex) ;
-	}
+	}*/
 	/**
 	 * 导入设置数据
 	 */
-	public void inSetData(Vo2Xml vo) {
+	/*public void inSetData(Vo2Xml vo) {
 		boolean ok = false ;
 		String hex = vo.getV_03_020_meterTypeListStr() ;
 		if(hex != null && !hex.trim().equals("")){
@@ -785,7 +795,7 @@ public class F_03_020  extends FrmParent {
 			item06_2.setSelection(vo.getV_03_020_item06_2()) ;
 		}
 	}
-	
+	*/
 	@Override
 	public void onDestroy() {
 		super.onDestroy();

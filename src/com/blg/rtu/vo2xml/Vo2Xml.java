@@ -7,19 +7,21 @@ public class Vo2Xml {
 	
 	private String v_01_010_regionNum ;
 	private String v_01_010_clientId ;
-	private int v_01_030_item01 ;
-	private int v_01_050_item01 ;
+	
+	/*private int v_01_030_item01 ;
+	private int v_01_050_item01 ;*/
+	
 	private int v_01_060_item01 ;
 	
 	private String v_01_080_item01_1 ;
 	private String v_01_080_item01_2 ;
 
 	private int v_02_010_item01 ;
-	private int v_02_020_item01 ;
+	/*private int v_02_020_item01 ;*/
 	
-	private int v_02_030_item01 ;
+/*	private int v_02_030_item01 ;
 	private int v_02_030_item02 ;
-	private int v_02_030_item03 ;
+	private int v_02_030_item03 ;*/
 
 	private String v_02_040_item01 ;
 	private String v_02_040_item02 ;
@@ -54,23 +56,23 @@ public class Vo2Xml {
 	private String v_02_050_item04_3;
 	private int v_02_050_item04_4;
 
-	private int v_02_060_item01_1;
+	/*private int v_02_060_item01_1;
 	private String v_02_060_item01_2 ;
 	private int v_02_060_item02_1;
 	private String v_02_060_item02_2 ;
 	private int v_02_060_item03_1;
 	private String v_02_060_item03_2 ;
 	private int v_02_060_item04_1;
-	private String v_02_060_item04_2 ;
+	private String v_02_060_item04_2 ;*/
 
-	private int v_02_070_item01_1;
+	/*private int v_02_070_item01_1;
 	private String v_02_070_item01_2 ;
 	private int v_02_070_item02_1;
 	private String v_02_070_item02_2 ;
 	private int v_02_070_item03_1;
 	private String v_02_070_item03_2 ;
 	private int v_02_070_item04_1;
-	private String v_02_070_item04_2 ;
+	private String v_02_070_item04_2 ;*/
 
 //	private String v_02_080_item01 ;
 
@@ -79,12 +81,12 @@ public class Vo2Xml {
 //	private int v_03_010_item02_1;
 //	private String v_03_010_item02_2 ;
 
-	private int v_03_011_item01;
+	/*private int v_03_011_item01;
 	private int v_03_011_item02;
-	private String v_03_011_item03 ;
+	private String v_03_011_item03 ;*/
 	
 	
-	private int v_03_020_item01_1;
+	/*private int v_03_020_item01_1;
 	private int v_03_020_item01_2 ;
 	private int v_03_020_item02_1;
 	private int v_03_020_item02_2 ;
@@ -96,10 +98,10 @@ public class Vo2Xml {
 	private int v_03_020_item05_2 ;
 	private int v_03_020_item06_1;
 	private int v_03_020_item06_2 ;
-	private String v_03_020_meterTypeListStr ; 
+	private String v_03_020_meterTypeListStr ; */
 
 	
-	private int v_03_030_item01_1;
+/*	private int v_03_030_item01_1;
 	private String v_03_030_item01_2 ;
 	private int v_03_030_item03_1;
 	private String v_03_030_item03_2 ;
@@ -108,35 +110,35 @@ public class Vo2Xml {
 	private int v_03_030_item05_1;
 	private String v_03_030_item05_2 ;
 	private int v_03_030_item06_1;
-	private String v_03_030_item06_2 ;
+	private String v_03_030_item06_2 ;*/
 
-	private int v_03_040_item01_1;
-	private String v_03_040_item01_2 ;
+	/*private int v_03_040_item01_1;
+	private String v_03_040_item01_2 ;*/
 
-	private int v_03_050_item01_1;
+/*	private int v_03_050_item01_1;
 	private String v_03_050_item01_2 ;
 	private int v_03_050_item02_1;
 	private String v_03_050_item02_2 ;
 	private int v_03_050_item03_1;
 	private String v_03_050_item03_2 ;
 	private int v_03_050_item04_1;
-	private String v_03_050_item04_2 ;
+	private String v_03_050_item04_2 ;*/
 
 	private String v_03_060_item01 ;
 	
-	private int v_03_070_item01_1;
+	/*private int v_03_070_item01_1;
 	private String v_03_070_item01_2 ;
 	private int v_03_070_item02_1;
 	private String v_03_070_item02_2 ;
 	private int v_03_070_item03_1;
-	private String v_03_070_item03_2 ;
+	private String v_03_070_item03_2 ;*/
 
 	private String v_03_080_chechBoxs;
 	private String v_03_080_items;
 	
 	private String v_03_090_item01 ;
 
-	private int v_04_010_item01;
+	/*private int v_04_010_item01;*/
 
 	private String v_04_020_itemStr;
 	
@@ -148,7 +150,7 @@ public class Vo2Xml {
 
 	private String v_04_050_itemStr;
 	
-	private int v_04_060_select;
+	/*private int v_04_060_select;
 	private String v_04_060_param01_1 ;
 	private String v_04_060_param01_2 ;
 	private String v_04_060_param01_3 ;
@@ -187,7 +189,7 @@ public class Vo2Xml {
 	private String v_04_060_param12_3 ;
 	private String v_04_060_param13_1 ; 
 	private String v_04_060_param13_2 ; 
-	private String v_04_060_param13_3 ;
+	private String v_04_060_param13_3 ;*/
 
 	private String v_04_070_chechBoxs;
 	
@@ -204,7 +206,7 @@ public class Vo2Xml {
 
 	private String v_05_030_chechBoxs;
 
-	private int v_06_010_item01;
+/*	private int v_06_010_item01;
 	private String v_06_010_item02Str;
 	private String v_06_010_item03 ;
 	private String v_06_010_item04_01 ;
@@ -212,7 +214,7 @@ public class Vo2Xml {
 	private String v_06_010_item04_03 ;
 	private String v_06_010_item04_04 ;
 	private String v_06_010_item04_05 ;
-	private String v_06_010_item05Str;
+	private String v_06_010_item05Str;*/
 
 	
 	/**
@@ -264,7 +266,7 @@ public class Vo2Xml {
 	public void setV_01_010_clientId(String v_01_010_clientId) {
 		this.v_01_010_clientId = v_01_010_clientId;
 	}
-	public int getV_01_030_item01() {
+/*	public int getV_01_030_item01() {
 		return v_01_030_item01;
 	}
 	public void setV_01_030_item01(int v_01_030_item01) {
@@ -275,7 +277,7 @@ public class Vo2Xml {
 	}
 	public void setV_01_050_item01(int v_01_050_item01) {
 		this.v_01_050_item01 = v_01_050_item01;
-	}
+	}*/
 	public int getV_01_060_item01() {
 		return v_01_060_item01;
 	}
@@ -300,7 +302,7 @@ public class Vo2Xml {
 	public void setV_02_010_item01(int v_02_010_item01) {
 		this.v_02_010_item01 = v_02_010_item01;
 	}
-	public int getV_02_020_item01() {
+	/*public int getV_02_020_item01() {
 		return v_02_020_item01;
 	}
 	public void setV_02_020_item01(int v_02_020_item01) {
@@ -323,7 +325,7 @@ public class Vo2Xml {
 	}
 	public void setV_02_030_item03(int v_02_030_item03) {
 		this.v_02_030_item03 = v_02_030_item03;
-	}
+	}*/
 	public String getV_02_040_item01() {
 		return v_02_040_item01;
 	}
@@ -510,7 +512,7 @@ public class Vo2Xml {
 	public void setV_02_050_item04_4(int v_02_050_item04_4) {
 		this.v_02_050_item04_4 = v_02_050_item04_4;
 	}
-	public int getV_02_060_item01_1() {
+	/*public int getV_02_060_item01_1() {
 		return v_02_060_item01_1;
 	}
 	public void setV_02_060_item01_1(int v_02_060_item01_1) {
@@ -557,8 +559,8 @@ public class Vo2Xml {
 	}
 	public void setV_02_060_item04_2(String v_02_060_item04_2) {
 		this.v_02_060_item04_2 = v_02_060_item04_2;
-	}
-	public int getV_02_070_item01_1() {
+	}*/
+	/*public int getV_02_070_item01_1() {
 		return v_02_070_item01_1;
 	}
 	public void setV_02_070_item01_1(int v_02_070_item01_1) {
@@ -605,7 +607,7 @@ public class Vo2Xml {
 	}
 	public void setV_02_070_item04_2(String v_02_070_item04_2) {
 		this.v_02_070_item04_2 = v_02_070_item04_2;
-	}
+	}*/
 //	public String getV_02_080_item01() {
 //		return v_02_080_item01;
 //	}
@@ -636,7 +638,7 @@ public class Vo2Xml {
 //	public void setV_03_010_item02_2(String v_03_010_item02_2) {
 //		this.v_03_010_item02_2 = v_03_010_item02_2;
 //	}
-	public int getV_03_011_item01() {
+	/*public int getV_03_011_item01() {
 		return v_03_011_item01;
 	}
 	public void setV_03_011_item01(int v_03_011_item01) {
@@ -851,14 +853,14 @@ public class Vo2Xml {
 	}
 	public void setV_03_050_item04_2(String v_03_050_item04_2) {
 		this.v_03_050_item04_2 = v_03_050_item04_2;
-	}
+	}*/
 	public String getV_03_060_item01() {
 		return v_03_060_item01;
 	}
 	public void setV_03_060_item01(String v_03_060_item01) {
 		this.v_03_060_item01 = v_03_060_item01;
 	}
-	public int getV_03_070_item01_1() {
+	/*public int getV_03_070_item01_1() {
 		return v_03_070_item01_1;
 	}
 	public void setV_03_070_item01_1(int v_03_070_item01_1) {
@@ -893,7 +895,7 @@ public class Vo2Xml {
 	}
 	public void setV_03_070_item03_2(String v_03_070_item03_2) {
 		this.v_03_070_item03_2 = v_03_070_item03_2;
-	}
+	}*/
 	public String getV_03_080_chechBoxs() {
 		return v_03_080_chechBoxs;
 	}
@@ -912,12 +914,12 @@ public class Vo2Xml {
 	public void setV_03_090_item01(String v_03_090_item01) {
 		this.v_03_090_item01 = v_03_090_item01;
 	}
-	public int getV_04_010_item01() {
+	/*public int getV_04_010_item01() {
 		return v_04_010_item01;
 	}
 	public void setV_04_010_item01(int v_04_010_item01) {
 		this.v_04_010_item01 = v_04_010_item01;
-	}
+	}*/
 	public String getV_04_020_itemStr() {
 		return v_04_020_itemStr;
 	}
@@ -954,7 +956,7 @@ public class Vo2Xml {
 	public void setV_04_050_itemStr(String v_04_050_itemStr) {
 		this.v_04_050_itemStr = v_04_050_itemStr;
 	}
-	public int getV_04_060_select() {
+	/*public int getV_04_060_select() {
 		return v_04_060_select;
 	}
 	public void setV_04_060_select(int v_04_060_select) {
@@ -1193,7 +1195,7 @@ public class Vo2Xml {
 	}
 	public void setV_04_060_param02_3(String v_04_060_param02_3) {
 		this.v_04_060_param02_3 = v_04_060_param02_3;
-	}
+	}*/
 	public String getV_04_070_chechBoxs() {
 		return v_04_070_chechBoxs;
 	}
@@ -1224,7 +1226,7 @@ public class Vo2Xml {
 	public void setV_05_030_chechBoxs(String v_05_030_chechBoxs) {
 		this.v_05_030_chechBoxs = v_05_030_chechBoxs;
 	}
-	public int getV_06_010_item01() {
+	/*public int getV_06_010_item01() {
 		return v_06_010_item01;
 	}
 	public void setV_06_010_item01(int v_06_010_item01) {
@@ -1271,7 +1273,7 @@ public class Vo2Xml {
 	}
 	public void setV_06_010_item04_05(String v_06_010_item04_05) {
 		this.v_06_010_item04_05 = v_06_010_item04_05;
-	}
+	}*/
 	public String getV_04_100_item01() {
 		return v_04_100_item01;
 	}
@@ -1290,12 +1292,12 @@ public class Vo2Xml {
 	public void setV_04_120_itemStr(String v_04_120_itemStr) {
 		this.v_04_120_itemStr = v_04_120_itemStr;
 	}
-	public String getV_06_010_item05Str() {
+	/*public String getV_06_010_item05Str() {
 		return v_06_010_item05Str;
 	}
 	public void setV_06_010_item05Str(String v_06_010_item05Str) {
 		this.v_06_010_item05Str = v_06_010_item05Str;
-	}
+	}*/
 	
 
 }

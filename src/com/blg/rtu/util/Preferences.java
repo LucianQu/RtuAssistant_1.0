@@ -10,6 +10,7 @@ public class Preferences {
 	
 	private Preferences(Context ctx){
 		sp = ctx.getSharedPreferences(Constant.preferencesFileName, Constant.preferencesFilemode) ;
+		//SharedPreferences sp = getSharedPreferences("存储xml文件的名字",MODE_PRIVATE);  
 	}
 	
 	/**

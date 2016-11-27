@@ -6,10 +6,10 @@
     
     <string name="app_name">RTU助手</string>
     <string name="rtuAssiName">RTU助手</string>
-    <string name="welcome">欢迎使用RTU助手</string>
+    <string name="welcome">欢迎使用水表助手</string>
     
     <string name="functionItems">功能选项</string>
-    <string name="functionLoopQuery">循环查询</string>
+    <string name="functionLoopQuery">自动查询</string>
     <string name="functionChannel">通道选项</string>
     <string name="functionNoProtocol">调试数据</string>
     
@@ -422,7 +422,7 @@
     <string name="func_05_030_item03_05">水质参数超限告警</string>
     <string name="func_05_030_item03_06">连接中心失败</string>
 
-    <string name="func_05_040">终端固态存储数据</string>
+    <string name="func_05_040">终端历史数据</string>
     <string name="func_05_040_item01_1">参数类型</string>
     <string name="func_05_040_item01_2">参数编号</string>
     <string name="func_05_040_item02">开始时间</string>

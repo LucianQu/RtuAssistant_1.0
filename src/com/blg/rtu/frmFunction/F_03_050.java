@@ -402,27 +402,27 @@ public class F_03_050  extends FrmParent {
 	 * 导出设置数据
 	 */
 	public void outSetData(Vo2Xml vo) {
-		vo.setV_03_050_item01_1(spinnerPosition01_1) ;
+	/*	vo.setV_03_050_item01_1(spinnerPosition01_1) ;
 		vo.setV_03_050_item01_2(item01_2.getText().toString()) ;
 		vo.setV_03_050_item02_1(spinnerPosition02_1) ;
 		vo.setV_03_050_item02_2(item02_2.getText().toString()) ;
 		vo.setV_03_050_item03_1(spinnerPosition03_1) ;
 		vo.setV_03_050_item03_2(item03_2.getText().toString()) ;
 		vo.setV_03_050_item04_1(spinnerPosition04_1) ;
-		vo.setV_03_050_item04_2(item04_2.getText().toString()) ;
+		vo.setV_03_050_item04_2(item04_2.getText().toString()) ;*/
 	}
 	/**
 	 * 导入设置数据
 	 */
 	public void inSetData(Vo2Xml vo) {
-		item01_1.setSelection(vo.getV_03_050_item01_1()) ;
+	/*	item01_1.setSelection(vo.getV_03_050_item01_1()) ;
 		item01_2.setText(vo.getV_03_050_item01_2()) ;
 		item02_1.setSelection(vo.getV_03_050_item02_1()) ;
 		item02_2.setText(vo.getV_03_050_item02_2()) ;
 		item03_1.setSelection(vo.getV_03_050_item03_1()) ;
 		item03_2.setText(vo.getV_03_050_item03_2()) ;
 		item04_1.setSelection(vo.getV_03_050_item04_1()) ;
-		item04_2.setText(vo.getV_03_050_item04_2()) ;
+		item04_2.setText(vo.getV_03_050_item04_2()) ;*/
 	}
 	
 	@Override

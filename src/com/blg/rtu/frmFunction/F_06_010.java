@@ -396,7 +396,7 @@ public class F_06_010 extends FrmParent {
 	/**
 	 * 导出设置数据
 	 */
-	public void outSetData(Vo2Xml vo) {
+	public void outSetData(Vo2Xml vo) {/*
 		vo.setV_06_010_item01(spinnerPosition) ;
 		vo.setV_06_010_item03(item03.getText().toString()) ;
 		vo.setV_06_010_item04_01(item04_01.getText().toString()) ;
@@ -449,11 +449,11 @@ public class F_06_010 extends FrmParent {
 			}
 		}
 
-	}
+	*/}
 	/**
 	 * 导入设置数据
 	 */
-	public void inSetData(Vo2Xml vo) {
+	public void inSetData(Vo2Xml vo) {/*
 		item01.setSelection(vo.getV_06_010_item01()) ;
 		item03.setText(vo.getV_06_010_item03()) ;
 		item04_01.setText(vo.getV_06_010_item04_01()) ;
@@ -498,7 +498,7 @@ public class F_06_010 extends FrmParent {
 			}
 		}
 
-	}
+	*/}
 	
 	@Override
 	public void onDestroy() {

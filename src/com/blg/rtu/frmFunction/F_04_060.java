@@ -253,7 +253,7 @@ public class F_04_060 extends FrmParent {
 	/**
 	 * 导出设置数据
 	 */
-	public void outSetData(Vo2Xml vo) {
+	public void outSetData(Vo2Xml vo) {/*
 		vo.setV_04_060_select(spinnerPosition) ;
 		vo.setV_04_060_param01_1(param01_1.getText().toString()) ;
 		vo.setV_04_060_param01_2(param01_2.getText().toString()) ;
@@ -294,11 +294,11 @@ public class F_04_060 extends FrmParent {
 		vo.setV_04_060_param13_1(param13_1.getText().toString()) ;
 		vo.setV_04_060_param13_2(param13_2.getText().toString()) ; 
 		vo.setV_04_060_param13_3(param13_3.getText().toString()) ;
-	}
+	*/}
 	/**
 	 * 导入设置数据
 	 */
-	public void inSetData(Vo2Xml vo) {
+	public void inSetData(Vo2Xml vo) {/*
 		paramSelect.setSelection(vo.getV_04_060_select()) ;
 		param01_1.setText(vo.getV_04_060_param01_1()) ;
 		param01_2.setText(vo.getV_04_060_param01_2()) ;
@@ -339,7 +339,7 @@ public class F_04_060 extends FrmParent {
 		param13_1.setText(vo.getV_04_060_param13_1()) ;
 		param13_2.setText(vo.getV_04_060_param13_2()) ; 
 		param13_3.setText(vo.getV_04_060_param13_3()) ;
-	}
+	*/}
 	
 	@Override
 	public void onDestroy() {
