@@ -16,16 +16,16 @@ public class RtuIdProtocol {
 		String id = null ;
 		String hex = null ;
 		try{
-			byte firstByte = bs[startIndex] ;
+		/*	byte firstByte = bs[startIndex] ;
 			if(firstByte == 0){
 				//水文测站编码方式
 				id = ByteUtil.BCD2String(bs , startIndex , startIndex + 4) ;
-			}else{
+			}else{*/
 				//水资源测站编码方式
 				String preId = ByteUtil.BCD2String(bs , startIndex , startIndex + 2) ;
 				int tailId =  ByteUtilUnsigned.bytes2Short_an(bs, startIndex + 3) ;
 				id = preId +  tailId ;
-			}
+			//}
 			hex = ByteUtil.bytes2Hex(bs, true, startIndex, (endIndex - startIndex + 1)) ;
 		}catch(Exception e){
 			throw new Exception("分析RTU ID时出错!" + e.getMessage() , null) ;
@@ -42,16 +42,16 @@ public class RtuIdProtocol {
 		String id = null ;
 		String hex = null ;
 		try{
-			byte firstByte = bs[startIndex] ;
+		/*	byte firstByte = bs[startIndex] ;
 			if(firstByte == 0){
 				//水文测站编码方式
 				id = ByteUtil.BCD2String(bs , startIndex , startIndex + 4) ;
-			}else{
+			}else{*/
 				//水资源测站编码方式
 				String preId = ByteUtil.BCD2String(bs , startIndex , startIndex + 2) ;
 				int tailId =  ByteUtilUnsigned.bytes2Short_an(bs, startIndex + 3) ;
 				id = preId +  tailId ;
-			}
+			//}
 			
 			hex = ByteUtil.bytes2Hex(bs, true, startIndex, (endIndex - startIndex + 1)) ;
 			
@@ -77,7 +77,7 @@ public class RtuIdProtocol {
 
 		int n = idSite ; 
 
-		if(id.startsWith("00")){
+		/*if(id.startsWith("00")){
 			//水文测站编码
 			//if(!id.startsWith("00")){
 			//	throw new Exception("水文测站 ID不合法，不是以00开头！" , null) ;
@@ -118,23 +118,32 @@ public class RtuIdProtocol {
 					b[n++] = idb[4] ;
 				}
 			}
-		}else{
+		}else{*/
 			//水资源测站编码
 			String preId = id.substring(0 , 6) ;
 			String tailId = id.substring(6) ;
 			byte[] cityNo_b = ByteUtil.string2BCD(preId) ;
 			if(cityNo_b == null){
 				throw new Exception("RTU ID不合法，其城市编号转成BCD编码时出错！" , null) ;
-			}else if(cityNo_b.length != 3){
+			}/*else if(cityNo_b.length != 3){
 				throw new Exception("RTU ID不合法，其城市编号不为六位！" , null) ;
-			}else{
-				b[n++] = cityNo_b[0] ;
-				b[n++] = cityNo_b[1] ;
-				b[n++] = cityNo_b[2] ;
+			}*/else{
+				if(cityNo_b.length == 1) {
+					b[n++] = 0 ;
+					b[n++] = 0 ;
+					b[n++] = cityNo_b[0] ;
+				}else if(cityNo_b.length == 2) {
+					b[n++] = 0 ;
+					b[n++] = cityNo_b[0] ;
+					b[n++] = cityNo_b[1] ;
+				}else if(cityNo_b.length == 3) {
+					b[n++] = cityNo_b[0] ;
+					b[n++] = cityNo_b[1] ;
+					b[n++] = cityNo_b[2] ;
+				}
 			}
-			
 			ByteUtilUnsigned.short2Bytes_an(b, Integer.parseInt(tailId), n) ;
-		}
+		//}
 		
 		return b ;
 	}

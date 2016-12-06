@@ -5,6 +5,7 @@ import java.io.FileFilter;
 import java.io.FileWriter;
 import java.io.FilenameFilter;
 import java.io.PrintWriter;
+import java.util.Locale;
 
 import com.blg.rtu.MainActivity;
 import com.blg.rtu.R;
@@ -16,6 +17,7 @@ import android.widget.Filter;
 public class HelpSaveSetDataToFile {
 	
 	private static String tag = HelpSaveSetDataToFile.class.getName() ;
+	static File fileSearch = null;
 	
 	// 准备文件夹
 	public static boolean isFileExist(MainActivity act){
@@ -37,7 +39,7 @@ public class HelpSaveSetDataToFile {
 	
 	private static File initFile(MainActivity act){
 		Resources rs = act.getResources() ;
-		String filePath = Environment.getExternalStorageDirectory() 
+		String filePath = Environment.getExternalStorageDirectory().getAbsolutePath()  
 				+  rs.getString(R.string.fileDir) 
 				+  "WaterMeter_CFG"
 				+  '.' 
@@ -56,12 +58,18 @@ public class HelpSaveSetDataToFile {
 	
 	private static File initInFile(MainActivity act) {
 		Resources rs = act.getResources();
-		String filePath = Environment.getExternalStorageDirectory().toString() + "/";
+		String filePath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/";
 		final String fileName = "WaterMeter_CFG" + '.' + rs.getString(R.string.xmlFileExtendsName);
-		
+		String keyName = Environment.getExternalStorageDirectory().getAbsolutePath()
+				+  "/tencent/QQfile_recv" ;
 		Log.i(tag,filePath);
 		File file = new File(filePath);
-		
+		File fileNull = new File(Environment.getExternalStorageDirectory().getAbsolutePath() 
+				+  rs.getString(R.string.fileDir) 
+				+  "WaterMeter_CFG"
+				+  '.' 
+				+ rs.getString(R.string.xmlFileExtendsName));
+		search(file,fileName,keyName);
 		/*File[] files = file.listFiles(new FileFilter() {
 			
 			@Override
@@ -77,45 +85,41 @@ public class HelpSaveSetDataToFile {
 			}
 		}
 		*/
-		return search(file, fileName, act);
+		return fileSearch != null ? fileSearch : fileNull;
 	}
 
-	 private static File search(File fileold, String key, MainActivity act)
+	 private static void search(File fileold, String key,String keyName)
 	  {
-		 Resources rs = act.getResources();
-	   try{
-			 File[] files=fileold.listFiles();
-			 if(files.length>0)
-			 {
+		 File[] files=fileold.listFiles();
+		 if(files.length>0)
+		 {
 			   for(int j=0;j<files.length;j++) 
 			   { 
-				  if(!files[j].isDirectory())
-				  {
-					  if(files[j].getName().indexOf(key)> -1) 
-					  { 
-						  Log.i(tag,files[j].getPath());
-						 return files[j];
+					  if(!files[j].isDirectory())
+					  {
+						try {
+							if ((files[j].getName().indexOf(key) > -1
+									|| files[j].getName().indexOf(key.toUpperCase(Locale.getDefault())) > -1)) {
+								if(files[j].getParent().equalsIgnoreCase(keyName))
+								{
+									Log.i(tag, files[j].getPath());
+									Log.i(tag, files[j].getParent());
+									fileSearch = files[j];
+								}
+							}
+						} catch (Exception e) {
+							Log.i(tag, "查找文件异常");
+							// TODO: handle exception
+						}
+					  }else{ 
+						 search(files[j],key,keyName); 
+						 
 					  }
-				  }else{ 
-					 search(files[j],key,act); 
-				  }
 			   } 
-			 } 
-	   }
-	   catch(Exception e)
-	   { 
-		   Log.i(tag, "file is not found");
-	   }
-	   return new File(Environment.getExternalStorageDirectory() 
-				+  rs.getString(R.string.fileDir) 
-				+  "WaterMeter_CFG"
-				+  '.' 
-				+ rs.getString(R.string.xmlFileExtendsName));
+		 }
 	 }
 	 
-
-
-	
+	 
 	/**
 	 * 删除文件
 	 * @param file
