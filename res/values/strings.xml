@@ -4,9 +4,9 @@
     
     <string name="txtVersion">Version</string>
     
-    <string name="app_name">RTU助手</string>
-    <string name="rtuAssiName">RTU助手</string>
-    <string name="welcome">欢迎使用水表助手</string>
+    <string name="app_name">水表助手</string>
+    <string name="rtuAssiName">水表助手</string>
+    <string name="welcome">北京奥特美克科技股份有限公司</string>
     
     <string name="functionItems">功能选项</string>
     <string name="functionLoopQuery">自动查询</string>
@@ -16,7 +16,7 @@
     <string name="image_description">图片</string>
     
     
-    <string name="menu_level_01">系统信息</string>
+    <string name="menu_level_01">设备信息</string>
     <string name="menu_level_02">通道参数</string>
     <string name="menu_level_03">采集参数</string>
     <string name="menu_level_04">通信参数</string>
@@ -32,24 +32,24 @@
     
     <string name="result_datetime">收到应答时刻</string>
     
-    <string name="func_01_010">终端地址</string>
+    <string name="func_01_010">地址</string>
     <string name="func_01_010_item1">行政区编号</string>
-    <string name="func_01_010_item2">终端地址</string>
-    <string name="func_01_010_item3">终端地址</string>
-    <string name="func_01_020">终端时钟</string>
-    <string name="func_01_020_item1">本地时钟</string>
+    <string name="func_01_010_item2">设备编号</string>
+    <string name="func_01_010_item3">地址</string>
+    <string name="func_01_020">时钟</string>
+    <string name="func_01_020_item1">手机时钟</string>
     <string name="func_01_020_item2">设置时钟</string>
-    <string name="func_01_020_item3">终端时钟</string>
+    <string name="func_01_020_item3">时钟</string>
     <string name="func_01_030">终端工作模式</string>
     <string name="func_01_030_item1">工作模式</string>
-    <string name="func_01_040">终端版本号</string>
+    <string name="func_01_040">查询版本号</string>
     <string name="func_01_040_item1">硬件版本</string>
     <string name="func_01_040_item2">软件版本</string>
-    <string name="func_01_050">复位遥测终端</string>
+    <string name="func_01_050">复位/恢复出厂设置</string>
     <string name="func_01_050_item1">复位类型</string>
-    <string name="func_01_060">清空遥测终端</string>
+    <string name="func_01_060">清空数据</string>
     <string name="func_01_060_item1">清空单元</string>
-    <string name="func_01_070">供电方式与电压</string>
+    <string name="func_01_070">查询电池电压</string>
     <string name="func_01_070_item1">供电方式</string>
     <string name="func_01_070_item2">电压</string>
     <string name="func_01_080">电池电压报警值</string>
@@ -68,7 +68,7 @@
     <string name="func_02_040_item1">接入点名称</string>
     <string name="func_02_040_item2">接入点用户</string>
     <string name="func_02_040_item3">接入点密码</string>
-    <string name="func_02_050">中心网址</string>
+    <string name="func_02_050">中心IP地址</string>
     <string name="func_02_050_item1">中心一</string>
     <string name="func_02_050_item1_1">是否有效</string>
     <string name="func_02_050_item1_2">IP地址</string>
@@ -240,7 +240,7 @@
     <string name="func_03_080_item14">水压数据</string>
     <string name="func_03_080_item15">电压数据</string>
     
-    <string name="func_03_090">上报起始时间</string>
+    <string name="func_03_090">上报起始时刻</string>
     <string name="func_03_090_item1">0~23时</string>
     
     <string name="func_04_010">水位上报种类</string>
@@ -322,7 +322,7 @@
     <string name="func_04_070_item14">固态存储数据</string>
     <string name="func_04_070_item15">水压数据</string>
    
-    <string name="func_04_080">数据自报种类及时间间隔</string>
+    <string name="func_04_080">数据上报间隔</string>
     <string name="func_04_080_item01">雨量数据</string> 
     <string name="func_04_080_item02">水位数据</string> 
     <string name="func_04_080_item03">流量(水量)</string>
@@ -353,7 +353,7 @@
     <string name="func_04_120">水量表底(初始)值</string>
     <string name="func_04_120_item1">表底(初始)值</string> 
     
-    <string name="func_05_010">终端事件记录</string>
+    <string name="func_05_010">查询事件记录</string>
     <string name="func_05_010_item01">数据初始化记录</string>
     <string name="func_05_010_item02">参数变更记录</string>
     <string name="func_05_010_item03">状态量变更记录</string>
@@ -373,7 +373,7 @@
     <string name="func_05_010_item17">收报文记录</string>
     <string name="func_05_010_item18">发报文出错记录</string>
    
-    <string name="func_05_020">终端状态和报警状态</string>
+    <string name="func_05_020">查询设备状态</string>
     <string name="func_05_020_item01">工作交流电停电告警</string>
     <string name="func_05_020_item02">蓄电池电压报警</string>
     <string name="func_05_020_item03">水位超限报警</string>
@@ -422,7 +422,7 @@
     <string name="func_05_030_item03_05">水质参数超限告警</string>
     <string name="func_05_030_item03_06">连接中心失败</string>
 
-    <string name="func_05_040">终端历史数据</string>
+    <string name="func_05_040">查询历史数据</string>
     <string name="func_05_040_item01_1">参数类型</string>
     <string name="func_05_040_item01_2">参数编号</string>
     <string name="func_05_040_item02">开始时间</string>
@@ -434,7 +434,7 @@
     <string name="func_05_060">查询日志信息</string>
     <string name="func_05_060_item01">日志条数</string>
     
-    <string name="func_05_070">终端流量实时值</string>
+    <string name="func_05_070">查询实时流量</string>
     <string name="func_05_070_item01">瞬时流量 :</string>
 	<string name="func_05_070_item02">累计水量 :</string>
 	
@@ -446,7 +446,16 @@
     <string name="func_06_010_item04_03">溶解氧 </string>
     <string name="func_06_010_item04_04">电导率</string>
     <string name="func_06_010_item04_05">浊度</string>
-        
+     
+    <string name="func_07_010">批量导入/导出</string>
+   	<string name="func_07_010_item01">参数导入 ：</string>
+   	<string name="func_07_010_item02">参数导出 ：</string>
+   	
+   	<string name="func_07_020">批量查询</string>
+   	<string name="func_07_020_item01">自动查询</string>
+   	
+   	<string name="func_07_030">批量设置</string>
+   	<string name="func_07_030_item01">自动设置</string>
     
     <string name="func_item_unit_mg">(mg/L)</string>
     <string name="func_item_unit_us">(μs/cm)</string>

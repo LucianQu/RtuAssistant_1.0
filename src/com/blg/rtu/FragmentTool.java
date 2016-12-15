@@ -33,7 +33,7 @@ public class FragmentTool {
 	public F_01_020 f_01_020 ;
 	//public F_01_030 f_01_030 ;
 	public F_01_040 f_01_040 ;
-	//public F_01_050 f_01_050 ;
+	public F_01_050 f_01_050 ;
 	public F_01_060 f_01_060 ;
 	public F_01_070 f_01_070 ;
 	public F_01_080 f_01_080 ;
@@ -64,7 +64,7 @@ public class FragmentTool {
 	public F_04_060 f_04_060 ;
 	public F_04_070 f_04_070 ;*/
 	public F_04_080 f_04_080 ;
-	public F_04_090 f_04_090 ;
+	/*public F_04_090 f_04_090 ;*/
 /*	public F_04_100 f_04_100 ;
 	public F_04_110 f_04_110 ;
 	public F_04_120 f_04_120 ;*/
@@ -72,13 +72,11 @@ public class FragmentTool {
 	public F_05_020 f_05_020 ;
 	//public F_05_030 f_05_030 ;
 	public F_05_040 f_05_040 ;
-	public F_05_050 f_05_050 ;
+	/*public F_05_050 f_05_050 ;*/
 	public F_05_060 f_05_060 ;
-	//public F_05_070 f_05_070 ;
+	public F_05_070 f_05_070 ;
 	//public F_06_010 f_06_010 ;
-
-
-	
+	public F_07_010 f_07_010 ;
 
 	public FragmentTool(MainActivity mainAct){
 		this.mainAct = mainAct ;
@@ -104,8 +102,8 @@ public class FragmentTool {
         frms.add(f_01_030);*/
         f_01_040 = (F_01_040)fm.findFragmentById(R.id.f_01_040) ;
         frms.add(f_01_040);
-       /* f_01_050 = (F_01_050)fm.findFragmentById(R.id.f_01_050) ;
-        frms.add(f_01_050);*/
+        f_01_050 = (F_01_050)fm.findFragmentById(R.id.f_01_050) ;
+        frms.add(f_01_050);
         f_01_060 = (F_01_060)fm.findFragmentById(R.id.f_01_060) ;
         frms.add(f_01_060);
         f_01_070 = (F_01_070)fm.findFragmentById(R.id.f_01_070) ;
@@ -166,8 +164,8 @@ public class FragmentTool {
         frms.add(f_04_070);*/
         f_04_080 = (F_04_080)fm.findFragmentById(R.id.f_04_080) ;
         frms.add(f_04_080);
-        f_04_090 = (F_04_090)fm.findFragmentById(R.id.f_04_090) ;
-        frms.add(f_04_090);
+    /*    f_04_090 = (F_04_090)fm.findFragmentById(R.id.f_04_090) ;
+        frms.add(f_04_090);*/
   /*      f_04_100 = (F_04_100)fm.findFragmentById(R.id.f_04_100) ;
         frms.add(f_04_100);
         f_04_110 = (F_04_110)fm.findFragmentById(R.id.f_04_110) ;
@@ -182,30 +180,32 @@ public class FragmentTool {
         frms.add(f_05_030);*/
         f_05_040 = (F_05_040)fm.findFragmentById(R.id.f_05_040) ;
         frms.add(f_05_040);
-        f_05_050 = (F_05_050)fm.findFragmentById(R.id.f_05_050) ;
-        frms.add(f_05_050);
+      /*  f_05_050 = (F_05_050)fm.findFragmentById(R.id.f_05_050) ;
+        frms.add(f_05_050);*/
         f_05_060 = (F_05_060)fm.findFragmentById(R.id.f_05_060) ;
         frms.add(f_05_060);
-    /*    f_05_070 = (F_05_070)fm.findFragmentById(R.id.f_05_070) ;
+      f_05_070 = (F_05_070)fm.findFragmentById(R.id.f_05_070) ;
         frms.add(f_05_070);
-        f_06_010 = (F_06_010)fm.findFragmentById(R.id.f_06_010) ;
+        /*  f_06_010 = (F_06_010)fm.findFragmentById(R.id.f_06_010) ;
         frms.add(f_06_010);*/
+        f_07_010 = (F_07_010)fm.findFragmentById(R.id.f_07_010) ;
+        frms.add(f_07_010);
 	}
 	
 	
 	public void pageViewSelected(int pageIndex) {
 		switch (pageIndex) {
 		case 0://第0页
-			fragment_ch01.outThisPage() ;
+			//fragment_ch01.outThisPage() ;
 			break;
 		case 1://第1页
-			fragment_ch01.outThisPage() ;
+			//fragment_ch01.outThisPage() ;
 			break;
 		case 2://第2页
-			fragment_ch01.outThisPage() ;
+			//fragment_ch01.outThisPage() ;
 			break;
 		case 3://第3页
-			fragment_ch01.inThisPage() ;
+			//fragment_ch01.inThisPage() ;
 			break;
 		}
 	}

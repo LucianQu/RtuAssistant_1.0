@@ -8,6 +8,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
@@ -23,10 +24,13 @@ import android.view.View;
 import android.view.View.OnLongClickListener;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.blg.rtu.R;
 import com.blg.rtu.aidl.ServiceAidl;
+import com.blg.rtu.frmChannel.ChFragment_01;
+import com.blg.rtu.frmChannel.helpCh1.ChBusi_01_Operate;
 import com.blg.rtu.server.LocalServer;
 import com.blg.rtu.util.Preferences;
 import com.blg.rtu.util.ResourceUtils;
@@ -40,14 +44,17 @@ import com.blg.rtu.util.StringValueForActivity;
 public class MainActivity  extends Activity { 
 	
 //	private static final String TAG = MainActivity.class.getSimpleName() ;
-	
+	public ChBusi_01_Operate chb;
 	private ViewPager mPager;// Tab页卡 
 	private List<View> listPages; // Tab页面列表
 	
 	private View pageView_noProtocol ;// Tab第0页 
 	private View pageView_loopQuery ;// Tab第1页 
 	private View pageView_function ;// Tab第2页 
-	private View pageView_channel ;// Tab第3页
+	//private View pageView_channel ;// Tab第3页
+	
+	public Boolean tcpConnected;
+	public TextView tcpConnectStatus;
 	
 	public ScrollView func_scrollView ;
 	
@@ -154,6 +161,7 @@ public class MainActivity  extends Activity {
 		this.broadcastReceiver.registerAndReceive() ;
 		
 		this.setContentView(R.layout.activity_main);
+		tcpConnectStatus = (TextView) findViewById(R.id.tcpConnectStatus1);
 		
 		//创建界面
 		this.createView();
@@ -219,13 +227,13 @@ public class MainActivity  extends Activity {
 		pageView_noProtocol = mInflater.inflate(R.layout.activity_main_noprotocol_page, null) ;
 		pageView_loopQuery = mInflater.inflate(R.layout.activity_main_loopquery_page, null) ;
 		pageView_function = mInflater.inflate(R.layout.activity_main_function_page, null) ;
-		pageView_channel = mInflater.inflate(R.layout.activity_main_channel_page, null) ;
+		//pageView_channel = mInflater.inflate(R.layout.activity_main_channel_page, null) ;
 		
 		listPages = new ArrayList<View>();
 		listPages.add(pageView_noProtocol);
 		listPages.add(pageView_loopQuery);
 		listPages.add(pageView_function);
-		listPages.add(pageView_channel);
+		//listPages.add(pageView_channel);
 		
 		mPager.setAdapter(new ViewPagerAdapter(listPages));
 		mPager.setCurrentItem(2);
@@ -234,7 +242,7 @@ public class MainActivity  extends Activity {
 		
 		//////////////////////////////////////////////////////////////
 		//功能子页
-		func_scrollView = (ScrollView)pageView_function.findViewById(R.id.f_func_scrollView) ;
+	/*	func_scrollView = (ScrollView)pageView_function.findViewById(R.id.f_func_scrollView) ;
        
 		chLine_01 = (LinearLayout)pageView_channel.findViewById(R.id.chLine_01) ;
 		chLine_02 = (LinearLayout)pageView_channel.findViewById(R.id.chLine_02) ;
@@ -247,7 +255,7 @@ public class MainActivity  extends Activity {
 				pageView_channel_OnLongClick() ;
 				return false;
 			}
-		}) ;
+		}) ;*/
 		
 		npFragmentLinear_02 = (LinearLayout)pageView_noProtocol.findViewById(R.id.npFragmentLinear_02) ;
 		npFragmentLinear_03 = (LinearLayout)pageView_noProtocol.findViewById(R.id.npFragmentLinear_03) ;
@@ -257,7 +265,8 @@ public class MainActivity  extends Activity {
         //实例化fragment回调类对象
         this.frgCallback = new FragmentCallback(this) ;
         //实例化主界面设置帮助类对象
-        this.mainHelp = new MainActivityHelp(this, pageView_noProtocol, pageView_loopQuery, pageView_function, pageView_channel) ;
+        //this.mainHelp = new MainActivityHelp(this, pageView_noProtocol, pageView_loopQuery, pageView_function, pageView_channel) ;
+        this.mainHelp = new MainActivityHelp(this, pageView_noProtocol, pageView_loopQuery, pageView_function) ;
         //执行初始设置
         this.mainHelp.onCreateView() ;
 	}
@@ -327,6 +336,24 @@ public class MainActivity  extends Activity {
 	 */
 	public ServerProxyHandler getServerProxyHandler(){
 		return ServerProxyHandler.getInstance() ;
+	}
+	
+	/**
+	 * 设置网络连接状态
+	 * @param isConnected
+	 */
+	public void setNetConnectedStatus(boolean isConnected) {
+		this.tcpConnected = isConnected ;
+		if(this.tcpConnected){
+			//网络已经连接
+			tcpConnectStatus.setText(this.getResources().getString(R.string.tcpStatus) + this.getResources().getString(R.string.connected)) ;
+			tcpConnectStatus.setTextColor(Color.RED);
+			
+		}else{
+			//网络已经断开
+			tcpConnectStatus.setText(this.getResources().getString(R.string.tcpStatus) + this.getResources().getString(R.string.disconnected)) ;
+			tcpConnectStatus.setTextColor(Color.WHITE);
+		}
 	}
 	
 	/**

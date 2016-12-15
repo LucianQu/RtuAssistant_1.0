@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"  
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"  
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/deskbg4"
     android:focusableInTouchMode="true" >
-    
- 	<LinearLayout
+<LinearLayout
 	    android:layout_width="match_parent"
 	    android:layout_height="36dp"
 	    android:orientation="horizontal"
+	    android:layout_alignParentTop="true"
 	    android:background="@drawable/line_top_bg_a">
 	    <TextView
-		    android:layout_weight="1"
-	        android:layout_width="0dp"
+	        android:layout_width="match_parent"
 	        android:layout_height="match_parent"
 	        android:paddingLeft="20dp"
 	        android:gravity="left|center_vertical"
@@ -23,47 +22,15 @@
 	        android:textColor="#FFFFFF"
 	        android:textStyle="bold"
 	        android:drawableLeft="@drawable/func_set" 
-	        android:drawablePadding="5.0dp" />
-	    	    
-	 	<LinearLayout
-		    android:layout_weight="1"
-		    android:layout_width="0dp"
-		    android:layout_height="match_parent"
-		    android:layout_gravity="right|center_vertical"
-		    android:gravity="right|center_vertical"
-		    android:orientation="horizontal">
-		    
-		    <ImageView 
-		        android:id="@+id/openAll"
-		        android:layout_width="30dp"
-		        android:layout_height="22dp"
-		        android:src="@drawable/open"
-		        android:contentDescription="@string/txtBtn"/>
-		    
-		    <ImageView 
-		        android:id="@+id/closeAll"
-		        android:layout_width="22dp"
-		        android:layout_height="22dp"
-			    android:layout_marginLeft="30dp"
-		        android:src="@drawable/close"
-		        android:contentDescription="@string/txtBtn"/>
-		    
-		    <ImageView 
-		        android:id="@+id/labelImgReset"
-		        android:layout_width="22dp"
-		        android:layout_height="22dp"
-			    android:layout_marginLeft="30dp"
-			    android:layout_marginRight="30dp"
-		        android:src="@drawable/lb_reset"
-		        android:contentDescription="@string/txtBtn"/>
-		 </LinearLayout>
-   	    	    	    
+	        android:drawablePadding="5.0dp" />	    	    	    
  	</LinearLayout>
  	
 	<ScrollView
 	    android:id="@+id/f_func_scrollView"
 	    android:layout_width="match_parent"  
 	    android:layout_height="match_parent"  
+	    android:layout_marginTop="36dp"
+	    android:layout_marginBottom="45dp"
 	    android:scrollbars="none"  
 	    android:fadingEdge="vertical">
 	    
@@ -87,17 +54,11 @@
 		        <fragment android:id="@+id/f_01_020"
 			        android:name="com.blg.rtu.frmFunction.F_01_020"
 				    style="@style/func_fragment_style"/>
-		      <!--   <fragment android:id="@+id/f_01_030"
-			        android:name="com.blg.rtu.frmFunction.F_01_030"
-				    style="@style/func_fragment_style"/> -->
 		        <fragment android:id="@+id/f_01_040"
 			        android:name="com.blg.rtu.frmFunction.F_01_040"
-				    style="@style/func_fragment_style"/>
-		      <!--   <fragment android:id="@+id/f_01_050"
-			        android:name="com.blg.rtu.frmFunction.F_01_050"
-				    style="@style/func_fragment_style"/> -->
-		        <fragment android:id="@+id/f_01_060"
-			        android:name="com.blg.rtu.frmFunction.F_01_060"
+				    style="@style/func_fragment_style"/>   
+				 <fragment android:id="@+id/f_05_020"
+			        android:name="com.blg.rtu.frmFunction.F_05_020"
 				    style="@style/func_fragment_style"/>
 		        <fragment android:id="@+id/f_01_070"
 			        android:name="com.blg.rtu.frmFunction.F_01_070"
@@ -105,7 +66,14 @@
 		        <fragment android:id="@+id/f_01_080"
 			        android:name="com.blg.rtu.frmFunction.F_01_080"
 				    style="@style/func_fragment_style"/>
-		        		        		        		        
+		        <fragment android:id="@+id/f_01_050"
+			        android:name="com.blg.rtu.frmFunction.F_01_050"
+				    style="@style/func_fragment_style"/>   
+		        
+		        <!--   <fragment android:id="@+id/f_01_030"
+			        android:name="com.blg.rtu.frmFunction.F_01_030"
+				    style="@style/func_fragment_style"/> -->   	
+			 	        		        
 	       </LinearLayout>
 	       
 		   <include layout="@layout/f_func_title_02" />  			    
@@ -118,18 +86,26 @@
 		        <fragment android:id="@+id/f_02_010"
 			        android:name="com.blg.rtu.frmFunction.F_02_010"
 				    style="@style/func_fragment_style"/>
-		   <!--      <fragment android:id="@+id/f_02_020"
-			        android:name="com.blg.rtu.frmFunction.F_02_020"
-				    style="@style/func_fragment_style"/>
-		        <fragment android:id="@+id/f_02_030"
-			        android:name="com.blg.rtu.frmFunction.F_02_030"
-				    style="@style/func_fragment_style"/> -->
+		 
 		        <fragment android:id="@+id/f_02_040"
 			        android:name="com.blg.rtu.frmFunction.F_02_040"
 				    style="@style/func_fragment_style"/>
 		        <fragment android:id="@+id/f_02_050"
 			        android:name="com.blg.rtu.frmFunction.F_02_050"
 				    style="@style/func_fragment_style"/>
+		         <fragment android:id="@+id/f_04_080"
+			        android:name="com.blg.rtu.frmFunction.F_04_080"
+				    style="@style/func_fragment_style"/>
+		        <fragment android:id="@+id/f_03_090"
+			        android:name="com.blg.rtu.frmFunction.F_03_090"
+				    style="@style/func_fragment_style"/>
+		        
+		       <!--      <fragment android:id="@+id/f_02_020"
+			        android:name="com.blg.rtu.frmFunction.F_02_020"
+				    style="@style/func_fragment_style"/>
+		        <fragment android:id="@+id/f_02_030"
+			        android:name="com.blg.rtu.frmFunction.F_02_030"
+				    style="@style/func_fragment_style"/> -->   
 		     <!--    <fragment android:id="@+id/	"
 			        android:name="com.blg.rtu.frmFunction.F_02_060"
 				    style="@style/func_fragment_style"/>
@@ -187,14 +163,17 @@
 		        		        		        		        		        		        		        		        		        		        		        		        		        		        		        		        		        
 	       </LinearLayout> -->
 		   
-		   <include layout="@layout/f_func_title_04" />  			    
+		 <!--   <include layout="@layout/f_func_title_04" />  			    
 		   <LinearLayout  
 			    android:id="@+id/f_func_04"
 			    android:layout_width="match_parent"
 			    android:layout_height="match_parent"
 			    android:orientation="vertical"
 			    >
-		       <!--  <fragment android:id="@+id/f_04_010"
+		        <fragment android:id="@+id/f_04_090"
+			        android:name="com.blg.rtu.frmFunction.F_04_090"
+				    style="@style/func_fragment_style"/>
+			   <fragment android:id="@+id/f_04_010"
 			        android:name="com.blg.rtu.frmFunction.F_04_010"
 				    style="@style/func_fragment_style"/>
 		        <fragment android:id="@+id/f_04_020"
@@ -214,14 +193,8 @@
 				    style="@style/func_fragment_style"/>
 		        <fragment android:id="@+id/f_04_070"
 			        android:name="com.blg.rtu.frmFunction.F_04_070"
-				    style="@style/func_fragment_style"/> -->
-		        <fragment android:id="@+id/f_04_080"
-			        android:name="com.blg.rtu.frmFunction.F_04_080"
-				    style="@style/func_fragment_style"/>
-		        <fragment android:id="@+id/f_04_090"
-			        android:name="com.blg.rtu.frmFunction.F_04_090"
-				    style="@style/func_fragment_style"/>
-		     <!--    <fragment android:id="@+id/f_04_100"
+				    style="@style/func_fragment_style"/>	
+				   <fragment android:id="@+id/f_04_100"
 			        android:name="com.blg.rtu.frmFunction.F_04_100"
 				    style="@style/func_fragment_style"/>
 		        <fragment android:id="@+id/f_04_110"
@@ -229,14 +202,9 @@
 				    style="@style/func_fragment_style"/>
 		        <fragment android:id="@+id/f_04_120"
 			        android:name="com.blg.rtu.frmFunction.F_04_120"
-				    style="@style/func_fragment_style"/> -->
-				<fragment android:id="@+id/f_03_090"
-			        android:name="com.blg.rtu.frmFunction.F_03_090"
 				    style="@style/func_fragment_style"/>
 		   </LinearLayout>
-
-		   
-		   
+ -->
 		   <include layout="@layout/f_func_title_05" />  			    
 		   <LinearLayout  
 			    android:id="@+id/f_func_05"
@@ -247,24 +215,26 @@
 		        <fragment android:id="@+id/f_05_010"
 			        android:name="com.blg.rtu.frmFunction.F_05_010"
 				    style="@style/func_fragment_style"/>
-		        <fragment android:id="@+id/f_05_020"
-			        android:name="com.blg.rtu.frmFunction.F_05_020"
-				    style="@style/func_fragment_style"/>
-		       <!--  <fragment android:id="@+id/f_05_030"
-			        android:name="com.blg.rtu.frmFunction.F_05_030"
-				    style="@style/func_fragment_style"/> -->
 		        <fragment android:id="@+id/f_05_040"
 			        android:name="com.blg.rtu.frmFunction.F_05_040"
 				    style="@style/func_fragment_style"/>
-				<fragment android:id="@+id/f_05_050"
-			        android:name="com.blg.rtu.frmFunction.F_05_050"
+		        <fragment android:id="@+id/f_05_070"
+			        android:name="com.blg.rtu.frmFunction.F_05_070"
 				    style="@style/func_fragment_style"/>
 				<fragment android:id="@+id/f_05_060"
 			        android:name="com.blg.rtu.frmFunction.F_05_060"
 				    style="@style/func_fragment_style"/>
-				<!-- <fragment android:id="@+id/f_05_070"
-			        android:name="com.blg.rtu.frmFunction.F_05_070"
+				  <fragment android:id="@+id/f_01_060"
+			        android:name="com.blg.rtu.frmFunction.F_01_060"
+				    style="@style/func_fragment_style"/>
+				
+				<!--  <fragment android:id="@+id/f_05_030"
+			        android:name="com.blg.rtu.frmFunction.F_05_030"
 				    style="@style/func_fragment_style"/> -->
+				    <!-- <fragment android:id="@+id/f_05_050"
+			        android:name="com.blg.rtu.frmFunction.F_05_050"
+				    style="@style/func_fragment_style"/> -->
+				
 		   </LinearLayout>
 		   
 		  <!--  <include layout="@layout/f_func_title_06" />  			    
@@ -279,6 +249,18 @@
 				    style="@style/func_fragment_style"/>
 		   </LinearLayout> -->
 		   
+		   <include layout="@layout/f_func_title_07" />  			    
+		   <LinearLayout  
+			    android:id="@+id/f_func_07"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:orientation="vertical"
+			    >
+		        <fragment android:id="@+id/f_07_010"
+			        android:name="com.blg.rtu.frmFunction.F_07_010"
+				    style="@style/func_fragment_style"/>
+		   </LinearLayout>
+		   
 		   <TextView android:id="@+id/fcWelcome"
 				android:textColor="#6bded7" 
 				style="@style/welcome"/>
@@ -286,9 +268,116 @@
 		</LinearLayout>
 	</ScrollView>  
 	
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="45dp"
+	    android:orientation="horizontal"
+	    android:layout_alignParentBottom="true"
+	    android:baselineAligned="false"
+	    android:background="@drawable/widget_bar_bg_n">
+		 <LinearLayout
+	       android:layout_weight="1"
+	       android:layout_width="0dip"
+	       android:layout_height="match_parent"
+	        android:layout_marginTop="1dp"
+	         android:orientation="horizontal"
+		    android:gravity="center"
+	      >
+	       <ImageView 
+		        android:id="@+id/closeSubAll"
+		        android:layout_width="35dp"
+		        android:layout_height="30dp"
+		        android:src="@drawable/close"
+		        android:contentDescription="@string/txtBtn"/>
+	  	</LinearLayout>
+		
+	   <ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:contentDescription="@string/txtBtn"
+			android:src="@drawable/widget_bar_cut_off"
+			/>
+	   
+	   <LinearLayout
+		    android:layout_weight="1"
+		    android:layout_width="0dip"
+		    android:layout_height="match_parent"
+		    android:orientation="horizontal"
+		    android:gravity="center"
+		    android:layout_marginTop="3dp"
+		    >
+	  		 <ImageView 
+		        android:id="@+id/openSubAll"
+		        android:layout_width="48dp"
+		        android:layout_height="30dp"
+		        android:src="@drawable/open"
+		        android:contentDescription="@string/txtBtn"/>
+	   </LinearLayout>
+	  
+  		
+	  <ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:contentDescription="@string/txtBtn"
+			android:src="@drawable/widget_bar_cut_off"/>
+	  
+	  <LinearLayout
+	      android:layout_weight="1"
+	      android:layout_width="0dip"
+	      android:layout_height="match_parent"
+	      android:layout_marginTop="1dp"
+	      android:orientation="horizontal" 
+	      android:gravity="center"
+	      >
+	       <ImageView 
+	        android:id="@+id/labelImgReset"
+	        android:layout_width="35dp"
+	        android:layout_height="30dp"
+	        android:src="@drawable/lb_reset"
+	        android:contentDescription="@string/txtBtn"/>
+	  </LinearLayout>
+	  <ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:contentDescription="@string/txtBtn"
+			android:src="@drawable/widget_bar_cut_off"/>     
 	
-
- 	
-	
-</LinearLayout>
+	     <LinearLayout
+	        android:layout_weight="1"
+	        android:layout_width="0dip"
+	        android:layout_height="match_parent"
+	        android:layout_marginTop="1dp"
+	        android:orientation="horizontal" 
+	        android:gravity="center"
+	        >
+	        <ImageView 
+	        android:id="@+id/closeMainAll2"
+	      	android:layout_width="35dp"
+	        android:layout_height="30dp"
+	        android:src="@drawable/close1"
+	        android:contentDescription="@string/txtBtn"/>
+	    </LinearLayout>
+	  <ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:contentDescription="@string/txtBtn"
+			android:src="@drawable/widget_bar_cut_off"/>
+	  
+	   <LinearLayout
+	      android:layout_weight="1"
+	      android:layout_width="0dip"
+	      android:layout_height="match_parent" 
+	      android:layout_marginTop="3dp"
+	      android:orientation="horizontal"
+	      android:gravity="center"
+	      >
+	       <ImageView 
+	        android:id="@+id/openMainAll2"
+	        android:layout_width="48dp"
+	        android:layout_height="30dp"
+	        android:src="@drawable/open1"
+	        android:contentDescription="@string/txtBtn"/>
+	  </LinearLayout>
+	 </LinearLayout>
+</RelativeLayout>
 

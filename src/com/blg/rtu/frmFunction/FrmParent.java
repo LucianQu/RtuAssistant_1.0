@@ -66,7 +66,8 @@ public abstract class FrmParent extends Fragment {
 				}
 			}
 				
-			Integer ch = act.frgTool.fragment_ch01.getSelectedChannel() ;
+			//Integer ch = act.frgTool.fragment_ch01.getSelectedChannel() ;
+			Integer ch = Constant.channelTcp ;
 			if(ch == Constant.channelTcp){
 				if(!loading){
 					if(!cntFrmOpened){
@@ -95,7 +96,8 @@ public abstract class FrmParent extends Fragment {
 		public void onClick(View v) {
 			if(checkBeforeQuery(true)){
 				boolean needConfirm = false ;
-				Integer ch = act.frgTool.fragment_ch01.getSelectedChannel() ;
+				//Integer ch = act.frgTool.fragment_ch01.getSelectedChannel() ;
+				Integer ch = Constant.channelTcp ;
 				if(ch == Constant.channelSm){
 					needConfirm = true ;
 				}
@@ -236,7 +238,8 @@ public abstract class FrmParent extends Fragment {
 	 * @param isBroastCommand 是否为广播命令
 	 */
 	public void sendRtuCommand(RtuCommand com, boolean isBroastCommand){
-		int ch = act.frgTool.fragment_ch01.getSelectedChannel() ;
+		//int ch = act.frgTool.fragment_ch01.getSelectedChannel() ;
+		int ch = Constant.channelTcp ;
 		if(ch == Constant.channelTcp){
 			//tcp网络通信
 			if(act.mServerProxyHandler != null && act.mServerProxyHandler.isTcpConnected()){

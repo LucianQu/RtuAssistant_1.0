@@ -17,8 +17,10 @@ public class MainActivityHelp {
 	@SuppressWarnings("unused")
 	private View pageView_channel;// Tab第3页
 	
-	private ImageView openAll ;
-	private ImageView closeAll ;
+	private ImageView openMainAll ;
+	private ImageView closeMainAll ;
+	private ImageView openSubAll ;
+	private ImageView closeSubAll ;
 	private ImageView labelImgReset ;
 
 	private LinearLayout funcTitle_01;// 功能菜单标题
@@ -27,74 +29,79 @@ public class MainActivityHelp {
 	private LinearLayout funcTitle_02; 
 	private LinearLayout func_02; 
 
-	private LinearLayout funcTitle_03; 
+/*	private LinearLayout funcTitle_03; 
 	private LinearLayout func_03; 
 
 	private LinearLayout funcTitle_04; 
-	private LinearLayout func_04; 
+	private LinearLayout func_04; */
 
 	private LinearLayout funcTitle_05; 
 	private LinearLayout func_05; 
 
-	private LinearLayout funcTitle_06; 
+/*	private LinearLayout funcTitle_06; 
 	private LinearLayout func_06; 
-
-	public MainActivityHelp(MainActivity mainAct, View pageView_noProtocol, View pageView_loopQuery, View pageView_function, View pageView_channel) {
+*/
+	private LinearLayout funcTitle_07;
+	private LinearLayout func_07;
+	public MainActivityHelp(MainActivity mainAct, View pageView_noProtocol, View pageView_loopQuery, View pageView_function) {
 		this.mainAct = mainAct;
 		this.pageView_noProtocol = pageView_noProtocol;
 		this.pageView_loopQuery = pageView_loopQuery ;
 		this.pageView_function = pageView_function;
-		this.pageView_channel = pageView_channel;
+		//this.pageView_channel = pageView_channel;
 	}
 
 	public void onCreateView() {
+		openSubAll = (ImageView) pageView_function.findViewById(R.id.openSubAll) ;
+		closeSubAll = (ImageView) pageView_function.findViewById(R.id.closeSubAll) ;
+		openMainAll = (ImageView) pageView_function.findViewById(R.id.openMainAll2);
+		closeMainAll = (ImageView) pageView_function.findViewById(R.id.closeMainAll2);
 		
-		openAll = (ImageView) pageView_function.findViewById(R.id.openAll);
-		closeAll = (ImageView) pageView_function.findViewById(R.id.closeAll);
 		labelImgReset = (ImageView) pageView_function.findViewById(R.id.labelImgReset);
-		openAll.setOnClickListener(new OnClickListener() {
+		openSubAll.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				mainAct.frgTool.openAllFunctionFragment() ;
 			}
 		});
-		openAll.setOnLongClickListener(new OnLongClickListener(){
+		openMainAll.setOnClickListener(new OnClickListener(){
 			@Override
-			public boolean onLongClick(View v) {
+			public void onClick(View v) {
 				openFunc_0X(func_01) ;
 				openFunc_0X(func_02) ;
 				//openFunc_0X(func_03) ;
-				openFunc_0X(func_04) ;
+				//openFunc_0X(func_04) ;
 				openFunc_0X(func_05) ;
 				//openFunc_0X(func_06) ;
-				return true;//return true时，点击(短按)事件将不响应
-			}
+				openFunc_0X(func_07);
+				}
 		}) ;
 		
-		closeAll.setOnClickListener(new OnClickListener() {
+		closeSubAll.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				mainAct.frgTool.closeAllFunctionFragment() ;
 			}
 		});
-		closeAll.setOnLongClickListener(new OnLongClickListener(){
+		closeMainAll.setOnClickListener(new OnClickListener(){
 			@Override
-			public boolean onLongClick(View v) {
+			public void onClick(View v) {
 				closeFunc_0X(func_01) ;
 				closeFunc_0X(func_02) ;
 				//closeFunc_0X(func_03) ;
-				closeFunc_0X(func_04) ;
+				//closeFunc_0X(func_04) ;
 				closeFunc_0X(func_05) ;
 				//closeFunc_0X(func_06) ;
-				return true;//return true时，点击(短按)事件将不响应
+				closeFunc_0X(func_07);
+				
 			}
 		}) ;
 		
-		labelImgReset.setOnLongClickListener(new OnLongClickListener(){
+		labelImgReset.setOnClickListener(new OnClickListener(){
 			@Override
-			public boolean onLongClick(View v) {
+			public void onClick(View v) {
 				mainAct.frgTool.resetLabelImgFunctionFragment() ;
-				return true;//return true时，点击(短按)事件将不响应
+				//return true;//return true时，点击(短按)事件将不响应
 			}
 		}) ;
 		
@@ -131,7 +138,7 @@ public class MainActivityHelp {
 			}
 		});*/
 		
-		funcTitle_04 = (LinearLayout) pageView_function.findViewById(R.id.f_04_title);
+	/*	funcTitle_04 = (LinearLayout) pageView_function.findViewById(R.id.f_04_title);
 		func_04 = (LinearLayout) pageView_function.findViewById(R.id.f_func_04);
 
 		funcTitle_04.setOnClickListener(new OnClickListener() {
@@ -139,7 +146,7 @@ public class MainActivityHelp {
 			public void onClick(View v) {
 				openCloseFunc_0X(func_04) ;
 			}
-		});
+		});*/
 		
 		funcTitle_05 = (LinearLayout) pageView_function.findViewById(R.id.f_05_title);
 		func_05 = (LinearLayout) pageView_function.findViewById(R.id.f_func_05);
@@ -161,10 +168,20 @@ public class MainActivityHelp {
 			}
 		});*/
 		
+		funcTitle_07 = (LinearLayout) pageView_function.findViewById(R.id.f_07_title);
+		func_07 = (LinearLayout) pageView_function.findViewById(R.id.f_func_07);
+		funcTitle_07.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				openCloseFunc_0X(func_07) ;
+			}
+		});
+		
 		closeFunc_0X(func_01) ;
 		closeFunc_0X(func_02) ;
-		closeFunc_0X(func_04) ;
+		//closeFunc_0X(func_04) ;
 		closeFunc_0X(func_05) ;
+		closeFunc_0X(func_07);
 		
 		
 	}

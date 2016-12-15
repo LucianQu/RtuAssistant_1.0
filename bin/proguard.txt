@@ -1,4 +1,4 @@
-# view res/layout/activity_main.xml #generated:35
+# view res/layout/activity_main.xml #generated:82
 -keep class android.support.v4.view.ViewPager { <init>(...); }
 
 # view AndroidManifest.xml #generated:72
@@ -24,56 +24,59 @@
 # view res/layout/activity_main_channel_page.xml #generated:67
 -keep class com.blg.rtu.frmChannel.ChFragment_04 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:84
+# view res/layout/activity_main_function_page.xml #generated:51
 -keep class com.blg.rtu.frmFunction.F_01_010 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:87
+# view res/layout/activity_main_function_page.xml #generated:54
 -keep class com.blg.rtu.frmFunction.F_01_020 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:93
+# view res/layout/activity_main_function_page.xml #generated:57
 -keep class com.blg.rtu.frmFunction.F_01_040 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:99
+# view res/layout/activity_main_function_page.xml #generated:69
+-keep class com.blg.rtu.frmFunction.F_01_050 { <init>(...); }
+
+# view res/layout/activity_main_function_page.xml #generated:227
 -keep class com.blg.rtu.frmFunction.F_01_060 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:102
+# view res/layout/activity_main_function_page.xml #generated:63
 -keep class com.blg.rtu.frmFunction.F_01_070 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:105
+# view res/layout/activity_main_function_page.xml #generated:66
 -keep class com.blg.rtu.frmFunction.F_01_080 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:118
+# view res/layout/activity_main_function_page.xml #generated:86
 -keep class com.blg.rtu.frmFunction.F_02_010 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:127
+# view res/layout/activity_main_function_page.xml #generated:90
 -keep class com.blg.rtu.frmFunction.F_02_040 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:130
+# view res/layout/activity_main_function_page.xml #generated:93
 -keep class com.blg.rtu.frmFunction.F_02_050 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:233
+# view res/layout/activity_main_function_page.xml #generated:99
 -keep class com.blg.rtu.frmFunction.F_03_090 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:218
+# view res/layout/activity_main_function_page.xml #generated:96
 -keep class com.blg.rtu.frmFunction.F_04_080 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:221
--keep class com.blg.rtu.frmFunction.F_04_090 { <init>(...); }
-
-# view res/layout/activity_main_function_page.xml #generated:247
+# view res/layout/activity_main_function_page.xml #generated:215
 -keep class com.blg.rtu.frmFunction.F_05_010 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:250
+# view res/layout/activity_main_function_page.xml #generated:60
 -keep class com.blg.rtu.frmFunction.F_05_020 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:256
+# view res/layout/activity_main_function_page.xml #generated:218
 -keep class com.blg.rtu.frmFunction.F_05_040 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:259
--keep class com.blg.rtu.frmFunction.F_05_050 { <init>(...); }
-
-# view res/layout/activity_main_function_page.xml #generated:262
+# view res/layout/activity_main_function_page.xml #generated:224
 -keep class com.blg.rtu.frmFunction.F_05_060 { <init>(...); }
+
+# view res/layout/activity_main_function_page.xml #generated:221
+-keep class com.blg.rtu.frmFunction.F_05_070 { <init>(...); }
+
+# view res/layout/activity_main_function_page.xml #generated:259
+-keep class com.blg.rtu.frmFunction.F_07_010 { <init>(...); }
 
 # view res/layout/activity_main_loopquery_page.xml #generated:32
 -keep class com.blg.rtu.frmLoopQuery.LpFragment_01 { <init>(...); }

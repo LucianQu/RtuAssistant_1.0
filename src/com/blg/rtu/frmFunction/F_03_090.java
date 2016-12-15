@@ -153,7 +153,7 @@ public class F_03_090  extends FrmParent {
 	 */
 	@Override
 	public void commandHasProblem(){
-		this.title.setCompoundDrawables(ImageUtil.getTitlLeftImg_item001(this.act), null, ImageUtil.getTitlRightImg_problem(this.act), null);
+		this.title.setCompoundDrawables(ImageUtil.getTitlLeftImg_item002(this.act), null, ImageUtil.getTitlRightImg_problem(this.act), null);
 	}
 	
 	/**
@@ -161,7 +161,7 @@ public class F_03_090  extends FrmParent {
 	 */
 	@Override
 	public void commandSended(){
-		this.title.setCompoundDrawables(ImageUtil.getTitlLeftImg_item003(this.act), null, ImageUtil.getTitlRightImg_blue(this.act), null);
+		this.title.setCompoundDrawables(ImageUtil.getTitlLeftImg_item002(this.act), null, ImageUtil.getTitlRightImg_blue(this.act), null);
 	}
 	
 	/**
@@ -169,14 +169,14 @@ public class F_03_090  extends FrmParent {
 	 */
 	@Override
 	public void commandSendedCallBack(){
-		this.title.setCompoundDrawables(ImageUtil.getTitlLeftImg_item003(this.act), null, ImageUtil.getTitlRightImg_red(this.act), null); 
+		this.title.setCompoundDrawables(ImageUtil.getTitlLeftImg_item002(this.act), null, ImageUtil.getTitlRightImg_red(this.act), null); 
 	}
 	/**
 	 * 功能项右侧图标复原
 	 */
 	@Override
 	public void resetLabelImg(){
-		this.title.setCompoundDrawables(ImageUtil.getTitlLeftImg_item001(this.act), null, ImageUtil.getTitlRightImg_gray(this.act), null); 
+		this.title.setCompoundDrawables(ImageUtil.getTitlLeftImg_item002(this.act), null, ImageUtil.getTitlRightImg_gray(this.act), null); 
 	}
 	
 	/**
@@ -186,7 +186,7 @@ public class F_03_090  extends FrmParent {
 	@Override
 	public void receiveRtuData(RtuData d){
 		super.receiveRtuData(d) ;
-		this.title.setCompoundDrawables(ImageUtil.getTitlLeftImg_item003(this.act), null, ImageUtil.getTitlRightImg_green(this.act), null); 
+		this.title.setCompoundDrawables(ImageUtil.getTitlLeftImg_item002(this.act), null, ImageUtil.getTitlRightImg_green(this.act), null); 
 //		super.scrollTo(this.btnRead) ;
 		
 		Data_E8_F8 sd = (Data_E8_F8)d.subData ;

@@ -202,7 +202,7 @@ public class F_05_020  extends FrmParent {
 	 */
 	@Override
 	public void commandSended(){
-		this.title.setCompoundDrawables(ImageUtil.getTitlLeftImg_item005(this.act), null, ImageUtil.getTitlRightImg_blue(this.act), null);
+		this.title.setCompoundDrawables(ImageUtil.getTitlLeftImg_item001(this.act), null, ImageUtil.getTitlRightImg_blue(this.act), null);
 	}
 	
 	/**
@@ -210,7 +210,7 @@ public class F_05_020  extends FrmParent {
 	 */
 	@Override
 	public void commandSendedCallBack(){
-		this.title.setCompoundDrawables(ImageUtil.getTitlLeftImg_item005(this.act), null, ImageUtil.getTitlRightImg_red(this.act), null); 
+		this.title.setCompoundDrawables(ImageUtil.getTitlLeftImg_item001(this.act), null, ImageUtil.getTitlRightImg_red(this.act), null); 
 	}
 	/**
 	 * 功能项右侧图标复原
@@ -227,7 +227,7 @@ public class F_05_020  extends FrmParent {
 	@Override
 	public void receiveRtuData(RtuData d){
 		super.receiveRtuData(d) ;
-		this.title.setCompoundDrawables(ImageUtil.getTitlLeftImg_item005(this.act), null, ImageUtil.getTitlRightImg_green(this.act), null); 
+		this.title.setCompoundDrawables(ImageUtil.getTitlLeftImg_item001(this.act), null, ImageUtil.getTitlRightImg_green(this.act), null); 
 		Preferences p = Preferences.getInstance() ;
 		Data_5E sd = (Data_5E)d.subData ;
 		

@@ -133,25 +133,26 @@ public class ChBusi_01_Operate {
 	 * 处理默认动作
 	 */
 	public void defaultOperate(){
-		chf.btnTcp.setChecked(true) ;
+		/*chf.btnTcp.setChecked(true) ;
 		if(this.checkIpAndPort(false)){
 			toConnectNet() ;
-		}
+		}*/
+		toConnectNet() ;
 	}
 	
 	/**
 	 * 连接网络
 	 */
-	private void toConnectNet(){
-		chf.tcpConnect.setVisibility(View.GONE) ;
+	public void toConnectNet(){
+		/*chf.tcpConnect.setVisibility(View.GONE) ;
 		chf.progressBar.setVisibility(View.VISIBLE) ;
 		
 		String url = chf.ip1.getText().toString().trim() + "." +
 				chf.ip2.getText().toString().trim() + "." +
 				chf.ip3.getText().toString().trim() + "." +
 				chf.ip4.getText().toString().trim() ;
-		int port = Integer.valueOf(chf.port.getText().toString()) ;
-		waitServerStartedAndToConnectNet(url, port) ;
+		int port = Integer.valueOf(chf.port.getText().toString()) ;*/
+		waitServerStartedAndToConnectNet("10.10.100.254", 8899) ;
 	}
 	
 	/**
@@ -181,11 +182,12 @@ public class ChBusi_01_Operate {
 		chf.act.mServerProxyHandler.startAndConnectTcpServer(url, port) ;
 		chf.act.mHandler.postDelayed(new Runnable(){
 			public void run(){
-				if(!chf.tcpConnected){
-					closeWaitTcpConnectFlash() ;
-					if(chf.getSelectedChannel() == Constant.channelTcp){
+				//chf.tcpConnected
+				if(!chf.act.mServerProxyHandler.isTcpConnected()){
+					//closeWaitTcpConnectFlash() ;
+					//if(chf.getSelectedChannel() == Constant.channelTcp){
 						Toast.makeText(chf.act, "网络未连接，请检查！", Toast.LENGTH_SHORT).show() ;
-					}
+					//}
 				}
 			}
 		}, StringValueForActivity.tcpConnectTimeout) ;

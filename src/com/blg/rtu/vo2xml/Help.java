@@ -44,7 +44,7 @@ public class Help {
 		act.frgTool.f_04_060.outSetData(vo);
 		act.frgTool.f_04_070.outSetData(vo);*/
 		act.frgTool.f_04_080.outSetData(vo);
-		act.frgTool.f_04_090.outSetData(vo);
+		//act.frgTool.f_04_090.outSetData(vo);
 	/*	act.frgTool.f_04_100.outSetData(vo);
 		act.frgTool.f_04_110.outSetData(vo);
 		act.frgTool.f_04_120.outSetData(vo);*/
@@ -52,7 +52,7 @@ public class Help {
 		act.frgTool.f_05_020.outSetData(vo);
 		/*act.frgTool.f_05_030.outSetData(vo);*/
 		act.frgTool.f_05_040.outSetData(vo);
-		act.frgTool.f_05_050.outSetData(vo);
+		//act.frgTool.f_05_050.outSetData(vo);
 		act.frgTool.f_05_060.outSetData(vo);
 		/*act.frgTool.f_06_010.outSetData(vo);*/
 
@@ -122,7 +122,7 @@ public class Help {
 		act.frgTool.f_04_060.inSetData(vo);
 		act.frgTool.f_04_070.inSetData(vo);*/
 		act.frgTool.f_04_080.inSetData(vo);
-		act.frgTool.f_04_090.inSetData(vo);
+		//act.frgTool.f_04_090.inSetData(vo);
 	/*	act.frgTool.f_04_100.inSetData(vo);
 		act.frgTool.f_04_110.inSetData(vo);
 		act.frgTool.f_04_120.inSetData(vo);*/
@@ -130,7 +130,7 @@ public class Help {
 		act.frgTool.f_05_020.inSetData(vo);
 	/*	act.frgTool.f_05_030.inSetData(vo);*/
 		act.frgTool.f_05_040.inSetData(vo);
-		act.frgTool.f_05_050.inSetData(vo);
+		//act.frgTool.f_05_050.inSetData(vo);
 		act.frgTool.f_05_060.inSetData(vo);
 		/*act.frgTool.f_06_010.inSetData(vo);*/
 	}

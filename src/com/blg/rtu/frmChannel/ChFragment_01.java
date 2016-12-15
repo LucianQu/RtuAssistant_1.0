@@ -79,7 +79,7 @@ public class ChFragment_01 extends Fragment {
 
 		busiOperate.registerListener() ;
 		
-		this.defaultOperate() ;
+		//this.defaultOperate() ;
 		
 		return view ;
 	}
@@ -104,7 +104,7 @@ public class ChFragment_01 extends Fragment {
 		super.onActivityResult(requestCode, resultCode, data);
 	}
 	
-	private void defaultOperate(){
+	public void defaultOperate(){
 		this.busiOperate.defaultOperate() ;
 	}
 

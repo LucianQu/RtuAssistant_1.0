@@ -222,7 +222,8 @@ public class LpFragment_01 extends Fragment implements SlideListener{
 	}
 	
 	private void startLoopQuery(){
-		int ch = act.frgTool.fragment_ch01.getSelectedChannel() ;
+		//int ch = act.frgTool.fragment_ch01.getSelectedChannel() ;
+		int ch = Constant.channelTcp;
 		if(ch == Constant.channelTcp){
 			//tcp网络通信
 			if(act.mServerProxyHandler != null && act.mServerProxyHandler.isTcpConnected()){
@@ -371,7 +372,8 @@ public class LpFragment_01 extends Fragment implements SlideListener{
 					if(startLoopQuery){
 						this.frag.act.mHandler.post(new Runnable(){
 							public void run(){
-								int ch = act.frgTool.fragment_ch01.getSelectedChannel() ;
+								//int ch = act.frgTool.fragment_ch01.getSelectedChannel() ;
+								int ch =  Constant.channelTcp ;
 								if(ch == Constant.channelTcp){
 									//tcp网络通信
 									if(act.mServerProxyHandler != null && act.mServerProxyHandler.isTcpConnected()){

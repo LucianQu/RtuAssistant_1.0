@@ -54,8 +54,7 @@ public class StubActivity extends ActivityAidl.Stub{
 		mAct.mHandler.post(new Runnable(){
 			@Override
 			public void run() {
-				mAct.frgTool.fragment_ch01.setNetConnectedStatus(true) ;
-				mAct.frgTool.fragment_ch01.closeWaitTcpConnectFlash() ;
+				mAct.setNetConnectedStatus(true) ;
 			}
 		});
 	}
@@ -68,7 +67,7 @@ public class StubActivity extends ActivityAidl.Stub{
 		mAct.mHandler.post(new Runnable(){
 			@Override
 			public void run() {
-				mAct.frgTool.fragment_ch01.setNetConnectedStatus(false) ;
+				mAct.setNetConnectedStatus(false) ;
 			}
 		});
 	}
@@ -102,11 +101,11 @@ public class StubActivity extends ActivityAidl.Stub{
 					if(data.dataCode.equals(Code206.cd_EF) ){
 						//查询遥测终端硬软件版本号
 						mAct.frgTool.f_01_040.receiveRtuData(data) ;
-					}/*else
+					}else
 					if(data.dataCode.equals(Code206.cd_90) ){
 						//复位遥测终端参数和状态
 						mAct.frgTool.f_01_050.receiveRtuData(data) ;
-					}*/else
+					}else
 					if(data.dataCode.equals(Code206.cd_91) ){
 						//清空遥测终端历史数据单元
 						mAct.frgTool.f_01_060.receiveRtuData(data) ;
@@ -250,10 +249,10 @@ public class StubActivity extends ActivityAidl.Stub{
 						//查询遥测终端固态存储数据 
 						mAct.frgTool.f_05_040.receiveRtuData(data) ;
 					}else
-					if(data.dataCode.equals(Code206.cd_B0)){
+				/*	if(data.dataCode.equals(Code206.cd_B0)){
 						//查询遥测终端实时值 
 						mAct.frgTool.f_05_050.receiveRtuData(data) ;
-					}else
+					}else*/
 					if(data.dataCode.equals(Code206.cd_ED)){
 						//查询日志信息
 						mAct.frgTool.f_05_060.receiveRtuData(data) ;
@@ -262,14 +261,14 @@ public class StubActivity extends ActivityAidl.Stub{
 						//人工置数 遥测终端应答
 						mAct.frgTool.f_06_010.receiveRtuData(data) ;
 					}else*/
-					if(data.dataCode.equals(Code206.cd_C5) || data.dataCode.equals(Code206.cd_D5)){
+					/*if(data.dataCode.equals(Code206.cd_C5) || data.dataCode.equals(Code206.cd_D5)){
 						//设置或查询定时上报的时刻
 						mAct.frgTool.f_04_090.receiveRtuData(data) ;
-					}else
-					/*if(data.dataCode.equals(Code206.cd_C2)){
-						//设置或查询定时上报的时刻
+					}else*/
+					if(data.dataCode.equals(Code206.cd_C2)){
+						//查询水表实时值
 						mAct.frgTool.f_05_070.receiveRtuData(data) ;
-					}else
+					}else/*
 					if(data.dataCode.equals(Code206.cd_15) || data.dataCode.equals(Code206.cd_55)){
 						//设置本次充值量或查询最近成功充值量和现有剩余水量
 						mAct.frgTool.f_04_100.receiveRtuData(data) ;
@@ -293,7 +292,7 @@ public class StubActivity extends ActivityAidl.Stub{
 						mAct.frgTool.fragment_loopq03.receiveRtuData(data) ;
 					}
 				}
-				mAct.frgTool.fragment_ch04.setRtuData(data) ;
+				//mAct.frgTool.fragment_ch04.setRtuData(data) ;
 				mAct.getSoundAlert().playMessage() ;
 			}
 		});
@@ -325,7 +324,7 @@ public class StubActivity extends ActivityAidl.Stub{
 		mAct.mHandler.post(new Runnable(){
 			@Override
 			public void run() {
-				mAct.frgTool.fragment_ch04.setSendBackCommandData(data) ;
+				//mAct.frgTool.fragment_ch04.setSendBackCommandData(data) ;
 				
 				if(data.dataCode != null && !data.dataCode.equals("")){
 					if(data.dataCode.equals(Code206.cd_10) || data.dataCode.equals(Code206.cd_50)){
@@ -344,10 +343,10 @@ public class StubActivity extends ActivityAidl.Stub{
 						//查询遥测终端硬软件版本号
 						mAct.frgTool.f_01_040.commandSendedCallBack() ;
 					}else
-				/*	if(data.dataCode.equals(Code206.cd_90) ){
+					if(data.dataCode.equals(Code206.cd_90) ){
 						//复位遥测终端参数和状态
 						mAct.frgTool.f_01_050.commandSendedCallBack() ;
-					}else*/
+					}else
 					if(data.dataCode.equals(Code206.cd_91) ){
 						//清空遥测终端历史数据单元
 						mAct.frgTool.f_01_060.commandSendedCallBack() ;
@@ -491,10 +490,10 @@ public class StubActivity extends ActivityAidl.Stub{
 						//查询遥测终端固态存储数据 
 						mAct.frgTool.f_05_040.commandSendedCallBack() ;
 					}else
-					if(data.dataCode.equals(Code206.cd_B0)){
+				/*	if(data.dataCode.equals(Code206.cd_B0)){
 						//查询遥测终端实时值 
 						mAct.frgTool.f_05_050.commandSendedCallBack() ;
-					}else
+					}else*/
 					if(data.dataCode.equals(Code206.cd_ED)){
 						//查询日志信息
 						mAct.frgTool.f_05_060.commandSendedCallBack() ;
@@ -503,27 +502,27 @@ public class StubActivity extends ActivityAidl.Stub{
 						//人工置数 遥测终端应答
 						mAct.frgTool.f_06_010.commandSendedCallBack() ;
 					}else*/
-					if(data.dataCode.equals(Code206.cd_C5) || data.dataCode.equals(Code206.cd_D5)){
+				/*	if(data.dataCode.equals(Code206.cd_C5) || data.dataCode.equals(Code206.cd_D5)){
 						//设置或查询定时上报的时刻
 						mAct.frgTool.f_04_090.commandSendedCallBack() ;
-					}else
-					/*if(data.dataCode.equals(Code206.cd_C2)){
+					}else*/
+					if(data.dataCode.equals(Code206.cd_C2)){
 						//查询流量实时值
 						mAct.frgTool.f_05_070.commandSendedCallBack() ;
 					}else
-					if(data.dataCode.equals(Code206.cd_15) || data.dataCode.equals(Code206.cd_55)){
+				/*	if(data.dataCode.equals(Code206.cd_15) || data.dataCode.equals(Code206.cd_55)){
 						//设置遥测终端本次充值量,查询遥测终端最近成功充值量和现有剩余水量
 						mAct.frgTool.f_04_100.commandSendedCallBack() ;
 					}else
 					if(data.dataCode.equals(Code206.cd_16) || data.dataCode.equals(Code206.cd_56)){
 						//设置遥测终端剩余水量报警值,查询遥测终端的剩余水量和报警值
 						mAct.frgTool.f_04_110.commandSendedCallBack() ;
-					}else
-					if(data.dataCode.equals(Code206.cd_1B)){
+					}else*/
+				/*	if(data.dataCode.equals(Code206.cd_1B)){
 						//设置终端站流量的表底（初始）值
 						mAct.frgTool.f_04_120.commandSendedCallBack() ;
-					}else
-					*/
+					}else*/
+					
 					
 					////////////////////////////////////////////////////////
 					//循环查询
@@ -551,10 +550,10 @@ public class StubActivity extends ActivityAidl.Stub{
 						//查询遥测终端固态存储数据
 						mAct.frgTool.f_05_040.autoQuery() ;
 					}else
-					if(code.equals(Code206.cd_B0)){
+				/*	if(code.equals(Code206.cd_B0)){
 						//查询遥测终端实时值 
 						mAct.frgTool.f_05_050.autoQuery() ;
-					}else
+					}else*/
 					if(code.equals(Code206.cd_ED)){
 						//查询日志信息
 						mAct.frgTool.f_05_060.autoQuery() ;
@@ -665,10 +664,10 @@ public class StubActivity extends ActivityAidl.Stub{
 					}else*/
 					if(code.equals(Code206.cd_A1)){//设置遥测终端的数据自报种类及时间间隔
 						mAct.frgTool.f_04_080.autoSet() ;
-					}else
+					}/*else
 					if(code.equals(Code206.cd_D5)){//设置定时上报的时刻
 						mAct.frgTool.f_04_090.autoSet() ;
-					}/*else
+					}else
 					if(code.equals(Code206.cd_15)){//设置遥测终端本次充值量
 						mAct.frgTool.f_04_100.autoSet() ;
 					}else
@@ -703,7 +702,7 @@ public class StubActivity extends ActivityAidl.Stub{
 		mAct.mHandler.post(new Runnable(){
 			@Override
 			public void run() {
-				mAct.frgTool.fragment_ch04.setRtuData(data) ;
+				//mAct.frgTool.fragment_ch04.setRtuData(data) ;
 			}
 		});
 	}
@@ -726,7 +725,7 @@ public class StubActivity extends ActivityAidl.Stub{
 		mAct.mHandler.post(new Runnable(){
 			@Override
 			public void run() {
-				mAct.frgTool.fragment_ch02.setAutoQueryStatus(status) ;
+				//mAct.frgTool.fragment_ch02.setAutoQueryStatus(status) ;
 			}
 		});
 		
@@ -741,7 +740,7 @@ public class StubActivity extends ActivityAidl.Stub{
 		mAct.mHandler.post(new Runnable(){
 			@Override
 			public void run() {
-				mAct.frgTool.fragment_ch03.setAutoSetStatus(status) ;
+				//mAct.frgTool.fragment_ch03.setAutoSetStatus(status) ;
 			}
 		});
 		
