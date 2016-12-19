@@ -45,8 +45,15 @@
 			        style="@style/func_dt_viewtext_style_60"
 			        android:textColor="#0000FF"
 			        android:layout_marginLeft="5dp"/>
-			</LinearLayout>
-		     	        
+			   <ImageView 
+			        android:id="@+id/btn_set_11"
+			        android:layout_width="@dimen/img_btn_layout_width_35"
+			        android:layout_height="@dimen/img_btn_layout_height_35"
+			        android:layout_marginLeft="@dimen/layoutMarginLeft_20"
+			        android:src="@drawable/btn_ball_1"
+			        android:contentDescription="@string/txtBtn"/>
+			   </LinearLayout>
+			   
 			<LinearLayout
 			    android:layout_width="match_parent"
 			    android:layout_height="@dimen/common_line_height40"
@@ -60,6 +67,13 @@
 					android:id="@+id/func_01_020_item01"  
 					android:labelFor="@id/func_01_020_item01" 
 				    style="@style/func_item_edittext_style_180"/>
+			    <ImageView 
+		        android:id="@+id/btn_adjust_11"
+		        android:layout_width="@dimen/img_btn_layout_width_35"
+		        android:layout_height="@dimen/img_btn_layout_height_35"
+		        android:layout_marginLeft="@dimen/layoutMarginLeft_20"
+		        android:src="@drawable/btn_ball_4"
+		        android:contentDescription="@string/txtBtn"/>
 			</LinearLayout>
 				        
 			<LinearLayout
@@ -76,9 +90,16 @@
 					android:labelFor="@id/func_01_020_item03" 
 				    style="@style/func_item_edittext_style_180"
 				    android:inputType="none"/>
+			   <ImageView 
+		        android:id="@+id/btn_read_11"
+		        android:layout_width="@dimen/img_btn_layout_width_35"
+		        android:layout_height="@dimen/img_btn_layout_height_35"
+		        android:layout_marginLeft="@dimen/layoutMarginLeft_20"
+		        android:src="@drawable/btn_ball_2"
+		        android:contentDescription="@string/txtBtn"/>
 			</LinearLayout>
 							        
-		    <include layout="@layout/show_btn_set_adjust_query" />
+		    <include layout="@layout/show_btn_only_resulttime" />
 		 </LinearLayout>
 	     
 		 <!-- start 底部 -->

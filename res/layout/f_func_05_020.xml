@@ -29,7 +29,7 @@
 		 <LinearLayout 
 	        style="@style/func_linearlayout_style">
 	        
-			<LinearLayout
+			<!-- <LinearLayout
 			    android:layout_width="match_parent"
 			    android:layout_height="@dimen/common_line_height30"
 			    >
@@ -40,8 +40,24 @@
 					android:id="@+id/func_05_020_item01"  
 					android:labelFor="@id/func_05_020_item01" 
 				    style="@style/func_item_edittext_style_80"/>
+			</LinearLayout> -->
+			
+	        <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30"
+			    >
+			    <TextView
+			        android:text="@string/func_05_020_item15"
+			        style="@style/func_item_viewtext_style_150_b"/>
+			    
+			    <TextView
+					android:id="@+id/func_05_020_item15"  
+					android:labelFor="@id/func_05_020_item15" 
+				    style="@style/func_item_edittext_style_80"/>
 			</LinearLayout>
-	        
+			
+			<include layout="@layout/line1" />
+			
 			<LinearLayout
 			    android:layout_width="match_parent"
 			    android:layout_height="@dimen/common_line_height30"
@@ -55,7 +71,7 @@
 				    style="@style/func_item_edittext_style_80"/>
 			</LinearLayout>
 	        
-			<LinearLayout
+			<!-- <LinearLayout
 			    android:layout_width="match_parent"
 			    android:layout_height="@dimen/common_line_height30"
 			    >
@@ -95,7 +111,7 @@
 					android:id="@+id/func_05_020_item05"  
 					android:labelFor="@id/func_05_020_item05" 
 				    style="@style/func_item_edittext_style_80"/>
-			</LinearLayout>
+			</LinearLayout> -->
 							        
 			<LinearLayout
 			    android:layout_width="match_parent"
@@ -111,7 +127,7 @@
 				    style="@style/func_item_edittext_style_80"/>
 			</LinearLayout>
 				        
-			<LinearLayout
+			<!-- <LinearLayout
 			    android:layout_width="match_parent"
 			    android:layout_height="@dimen/common_line_height30"
 			    >
@@ -222,22 +238,24 @@
 					android:labelFor="@id/func_05_020_item14" 
 				    style="@style/func_item_edittext_style_80"/>
 			</LinearLayout>
-																			        				        
+				-->		
+			
 			<LinearLayout
 			    android:layout_width="match_parent"
 			    android:layout_height="@dimen/common_line_height30"
 			    >
 			    <TextView
-			        android:text="@string/func_05_020_item15"
+			        android:text="@string/func_05_020_item21"
 			        style="@style/func_item_viewtext_style_150_b"/>
 			    
 			    <TextView
-					android:id="@+id/func_05_020_item15"  
-					android:labelFor="@id/func_05_020_item15" 
+					android:id="@+id/func_05_020_item21"  
+					android:labelFor="@id/func_05_020_item21" 
 				    style="@style/func_item_edittext_style_80"/>
 			</LinearLayout>
-				        
-			<LinearLayout
+			
+			        
+			<!--<LinearLayout
 			    android:layout_width="match_parent"
 			    android:layout_height="@dimen/common_line_height30"
 			    >
@@ -251,7 +269,7 @@
 				    style="@style/func_item_edittext_style_80"/>
 			</LinearLayout>
 										        
-			<LinearLayout
+			 <LinearLayout
 			    android:layout_width="match_parent"
 			    android:layout_height="@dimen/common_line_height30"
 			    >
@@ -305,7 +323,9 @@
 					android:id="@+id/func_05_020_item20"  
 					android:labelFor="@id/func_05_020_item20" 
 				    style="@style/func_item_edittext_style_80"/>
-			</LinearLayout>
+			</LinearLayout> -->
+			
+		
 												
 		    <include layout="@layout/show_btn_query" />
 		 </LinearLayout>

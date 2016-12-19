@@ -56,16 +56,16 @@
 					android:labelFor="@id/func_01_010_item02" 
 				    style="@style/func_item_editnumber_style_120"/>
 			    
-			    <ImageView 
+			   <!--  <ImageView 
 			        android:id="@+id/btn_set_1"
 			        android:layout_width="@dimen/img_btn_layout_width_35"
 			        android:layout_height="@dimen/img_btn_layout_height_35"
 			        android:layout_marginLeft="6dp"
 			        android:src="@drawable/btn_ball_1"
-			        android:contentDescription="@string/txtBtn"/>
+			        android:contentDescription="@string/txtBtn"/> -->
 			    
 			</LinearLayout>
-	        
+	      <!--   
 			<LinearLayout
 			    android:layout_width="match_parent"
 			    android:layout_height="@dimen/common_line_height40"
@@ -74,7 +74,7 @@
 			        android:text="@string/func_01_010_item3"
 			        style="@style/func_item_viewtext_style_100_a"/>
 			    
-			    <!-- 新版本SDK要求填写属性lableFor,类似于填写一个ID来绑定这个控件，否则警告 -->
+			    新版本SDK要求填写属性lableFor,类似于填写一个ID来绑定这个控件，否则警告
 			    <EditText
 					android:id="@+id/func_01_010_item03"  
 					android:labelFor="@id/func_01_010_item03" 
@@ -87,9 +87,9 @@
 			        android:layout_marginLeft="6dp"
 			        android:src="@drawable/btn_ball_1"
 			        android:contentDescription="@string/txtBtn"/>
-			</LinearLayout>
+			</LinearLayout> -->
 									
-		    <include layout="@layout/show_btn_query" />
+		    <include layout="@layout/show_btn_set_query" />
 		 </LinearLayout>
 	     
 		 <!-- start 底部 -->

@@ -569,6 +569,7 @@ public class Constant {
 	public static final String func_vk_05_020_18 = "vk_05_020_18" ; 
 	public static final String func_vk_05_020_19 = "vk_05_020_19" ; 
 	public static final String func_vk_05_020_20 = "vk_05_020_20" ; 
+	public static final String func_vk_05_020_21 = "vk_05_020_21" ;
 	
 	public static final String func_vk_05_020_dt = "vk_05_020_dt" ; 
 	

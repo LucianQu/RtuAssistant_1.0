@@ -108,9 +108,6 @@ public class F_01_020  extends FrmParent {
 		cover = (LinearLayout)view.findViewById(R.id.f_01_020_Load) ;
 		
 		item01 = (TextView)view.findViewById(R.id.func_01_020_item01);
-		
-
-		
 		item02_1 = (TextView)view.findViewById(R.id.f_01_020_item02_1) ;
 		item02_2 = (TextView)view.findViewById(R.id.f_01_020_item02_2) ;
 		
@@ -140,9 +137,9 @@ public class F_01_020  extends FrmParent {
 			item03.setText(str); 
 		}
 
-		btnSet = (ImageView)view.findViewById(R.id.btn_set);
-		btnAdjust = (ImageView)view.findViewById(R.id.btn_adjust);
-		btnRead = (ImageView)view.findViewById(R.id.btn_read);
+		btnSet = (ImageView)view.findViewById(R.id.btn_set_11);
+		btnAdjust = (ImageView)view.findViewById(R.id.btn_adjust_11);
+		btnRead = (ImageView)view.findViewById(R.id.btn_read_11);
 		
 		resultDt = (TextView)view.findViewById(R.id.resultDatetime);
 		

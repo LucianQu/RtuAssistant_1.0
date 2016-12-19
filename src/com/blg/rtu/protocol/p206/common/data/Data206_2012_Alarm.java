@@ -18,6 +18,7 @@ public class Data206_2012_Alarm {
 	protected Integer bindValueControlAlarm ;//定值控制报警； (0未发生报警，1发生报警)
 	protected Integer waterRemainAlarm ;//剩余水量的下限报警； (0未发生报警，1发生报警)
 	protected Integer boxDoorAlarm ;//终端箱门状态报警；(0未发生报警，1发生报警)
+	protected Integer waterMeterAlarm;//流量仪表反向报警；(0未发生报警，1发生报警)
 
 	public String toString(){
 		String s = "\n报警状态：\n" ;
@@ -35,6 +36,7 @@ public class Data206_2012_Alarm {
 		s += "定值控制报警：" + (this.bindValueControlAlarm==null?"":(this.bindValueControlAlarm.intValue()==1?"有":"无")) + "\n" ;
 		s += "剩余水量的下限报警：" + (this.waterRemainAlarm==null?"":(this.waterRemainAlarm.intValue()==1?"有":"无")) + "\n" ;
 		s += "终端箱门状态报警：" + (this.boxDoorAlarm==null?"":(this.boxDoorAlarm.intValue()==1?"有":"无")) + "\n" ;
+		s += "流量仪表反向报警：" + (this.waterMeterAlarm==null?"":(this.waterMeterAlarm.intValue()==1?"有":"无")) + "\n" ;
 		return s ;
 	}
 
@@ -138,7 +140,13 @@ public class Data206_2012_Alarm {
 	public void setBoxDoorAlarm(Integer boxDoorAlarm) {
 		this.boxDoorAlarm = boxDoorAlarm;
 	}
+	public Integer getWaterMeterAlarm() {
+		return waterMeterAlarm;
+	}
 
+	public void setWaterMeterAlarm(Integer waterMeterAlarm) {
+		this.waterMeterAlarm = waterMeterAlarm;
+	}
 	public Integer getWaterTemperatureAlarm() {
 		return waterTemperatureAlarm;
 	}

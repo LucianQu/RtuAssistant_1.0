@@ -22,7 +22,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 public class ChFragment_01 extends Fragment {
-	
+	//public static final String TAG = ChFragment_01.class.getSimpleName() ;
 	public MainActivity act ;
 	
 	public View view ;

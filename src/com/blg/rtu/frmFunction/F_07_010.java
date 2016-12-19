@@ -2,6 +2,7 @@ package com.blg.rtu.frmFunction;
 
 
 import android.app.Activity;
+import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputFilter;
@@ -60,6 +61,8 @@ public class F_07_010  extends FrmParent {
 		super.onCreate(savedInstanceState);
 		cntFrmOpened = false ;
 		loading = false ;
+		//chf = (ChFragment_01)getFragmentManager().findFragmentByTag(ChFragment_01.TAG);
+		//FragmentManager fm = getActivity.getSupportFragmentManager();
 		chf = new ChFragment_01();
 		chf.onAttach(this.act);
 		chb = new ChBusi_01_Operate(chf) ;

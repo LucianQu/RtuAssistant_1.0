@@ -34,16 +34,16 @@ public class F_01_010  extends FrmParent {
 	
 	private final static int requestLen_1 = 6 ; 
 	private final static int requestLen_2 = 5 ; 
-	private final static int requestLen_3 = 14 ; 
+	//private final static int requestLen_3 = 14 ; 
 
 	private TextView title ;
 
 	private EditText item01 ;
 	private EditText item02 ;
-	private EditText item03 ;
+	//private EditText item03 ;
 
 	private ImageView btnSet1 ;
-	private ImageView btnSet2 ;
+	//private ImageView btnSet2 ;
 	private ImageView btnRead ;
 	
 
@@ -74,11 +74,11 @@ public class F_01_010  extends FrmParent {
 		
 		item01 = (EditText)view.findViewById(R.id.func_01_010_item01);
 		item02 = (EditText)view.findViewById(R.id.func_01_010_item02);
-		item03 = (EditText)view.findViewById(R.id.func_01_010_item03);
+		//item03 = (EditText)view.findViewById(R.id.func_01_010_item03);
 		
 		item01.setFilters(new InputFilter[]{new InputFilter.LengthFilter(requestLen_1)});
 		item02.setFilters(new InputFilter[]{new InputFilter.LengthFilter(requestLen_2)});
-		item03.setFilters(new InputFilter[]{new InputFilter.LengthFilter(requestLen_3)});
+		//item03.setFilters(new InputFilter[]{new InputFilter.LengthFilter(requestLen_3)});
 		
 		String str = Preferences.getInstance().getString(Constant.func_vk_01_010_01) ;
 		if(!str.equals(Constant.errorStr)){
@@ -90,15 +90,15 @@ public class F_01_010  extends FrmParent {
 			item02.setText(str); 
 		}
 		
-		str = Preferences.getInstance().getString(Constant.func_vk_01_010_03) ;
+	/*	str = Preferences.getInstance().getString(Constant.func_vk_01_010_03) ;
 		if(!str.equals(Constant.errorStr)){
 			item03.setText(str); 
-		}
+		}*/
 		
 		item01.addTextChangedListener(new MyTextWatcher(Constant.func_vk_01_010_01));
 		item02.addTextChangedListener(new MyTextWatcher(Constant.func_vk_01_010_02));
 		
-		item03.addTextChangedListener(new TextWatcher(){
+		/*item03.addTextChangedListener(new TextWatcher(){
 			private int strOldLen = 0 ;
 			@Override
 			public void afterTextChanged(Editable edt) {
@@ -130,10 +130,10 @@ public class F_01_010  extends FrmParent {
 			public void onTextChanged(CharSequence s, int start, int before, int count) {
 			}
 			
-		});
+		});*/
 		
-		btnSet1 = (ImageView)view.findViewById(R.id.btn_set_1);
-		btnSet2 = (ImageView)view.findViewById(R.id.btn_set_2);
+		btnSet1 = (ImageView)view.findViewById(R.id.btn_set);
+		//btnSet2 = (ImageView)view.findViewById(R.id.btn_set_2);
 		btnRead = (ImageView)view.findViewById(R.id.btn_read);
 		
 		resultDt = (TextView)view.findViewById(R.id.resultDatetime);
@@ -141,7 +141,7 @@ public class F_01_010  extends FrmParent {
 		//设置监听器
 		title.setOnClickListener(titleClickLisn) ;
 		btnSet1.setOnClickListener(btnSetLisn);
-		btnSet2.setOnClickListener(btnSetLisn_);
+		//btnSet2.setOnClickListener(btnSetLisn_);
 		btnRead.setOnClickListener(btnReadLisn);
 		
 		str = Preferences.getInstance().getString(Constant.func_vk_01_010_dt) ;
@@ -153,7 +153,7 @@ public class F_01_010  extends FrmParent {
 	}
 	
 	
-	//设置按钮点击事件
+	/*//设置按钮点击事件
 	protected Button.OnClickListener btnSetLisn_ = new Button.OnClickListener(){
 		public void onClick(View v) {
 			if(checkBeforeSet_(true)){
@@ -171,7 +171,7 @@ public class F_01_010  extends FrmParent {
 				}) ;
 			}
 		}
-	} ;
+	} ;*/
 	
 	
 	/**
@@ -223,7 +223,7 @@ public class F_01_010  extends FrmParent {
 	 * 设置命令前进行检查
 	 * @return
 	 */
-	protected boolean checkBeforeSet_(boolean showDialog){
+	/*protected boolean checkBeforeSet_(boolean showDialog){
 		String hexId = item03.getText().toString() ;
 		if(hexId == null || hexId.equals("") ){
 			if(showDialog){
@@ -240,7 +240,7 @@ public class F_01_010  extends FrmParent {
 		} 
 		
 		return true ;
-	}
+	}*/
 	
 
 	
@@ -265,13 +265,13 @@ public class F_01_010  extends FrmParent {
 	
 	/**
 	 * 设置命令
-	 */
+	 *//*
 	protected void setCommand_(){
 		String hexId = item03.getText().toString() ;
 		hexId = hexId.replaceAll(" ", "") ;
 		
 		this.sendRtuCommand(new CommandCreator().cd_10_(hexId, null), false) ;
-	}
+	}*/
 	
 	/**
 	 * 查询或设置命令发送前检查出问题后的回调
@@ -319,8 +319,8 @@ public class F_01_010  extends FrmParent {
 		if(rtuId != null && rtuId.length() > 6){
 			item01.setText(rtuId.substring(0, 6)) ;
 			item02.setText(rtuId.substring(6)) ;
-			item03.setText(sd.getRtuIdHex()) ;
-			p.putString(Constant.func_vk_01_010_03, d.getRtuId_hex()) ;
+			//item03.setText(sd.getRtuIdHex()) ;
+			//p.putString(Constant.func_vk_01_010_03, d.getRtuId_hex()) ;
 		}
 		
 		p.putString(Constant.func_vk_01_010_dt, this.resultDt.getText().toString()) ;

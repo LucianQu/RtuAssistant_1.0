@@ -48,6 +48,7 @@ public class AlarmProtocol_206 {
 		alarmData.setWaterLevelMeterAlarm(v7) ;
 		
 		v = b[n++] ;
+		int v14 = (v & 0x40) >> 6 ;
 		int v13 = (v & 0x20) >> 5 ;
 		int v12 = (v & 0x10) >> 4 ;
 		int v11 = (v & 0x8) >> 3 ;
@@ -60,6 +61,7 @@ public class AlarmProtocol_206 {
 		alarmData.setBindValueControlAlarm(v11) ;
 		alarmData.setWaterRemainAlarm(v12) ;
 		alarmData.setBoxDoorAlarm(v13) ;
+		alarmData.setWaterMeterAlarm(v14) ;
 	}
 
 }
