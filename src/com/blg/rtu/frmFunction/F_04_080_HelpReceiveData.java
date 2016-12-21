@@ -23,7 +23,7 @@ public class F_04_080_HelpReceiveData {
     	
     	Data_A1_53 sd = (Data_A1_53)d.getSubData() ;
 		
-		has = sd.getYuLiang() ;
+		/*has = sd.getYuLiang() ;
 		dv = sd.getYuLiangReportInterval() ;
 		if(has == 1){
 			p.putInt(Constant.func_vk_04_080_cb_01, 1);
@@ -52,7 +52,7 @@ public class F_04_080_HelpReceiveData {
 			p.remove(Constant.func_vk_04_080_item_02);
 			fr.cb02.setChecked(false) ;
 			fr.item02.setText("") ;
-		}
+		}*/
 		has = sd.getLiuLiang();
 		dv = sd.getLiuLiangReportInterval();
 		if(has == 1){
@@ -68,7 +68,7 @@ public class F_04_080_HelpReceiveData {
 			fr.cb03.setChecked(false) ;
 			fr.item03.setText("") ;
 		}
-		has = sd.getLiuSu();
+		/*has = sd.getLiuSu();
 		dv = sd.getLiuSuReportInterval();
 		if(has == 1){
 			p.putInt(Constant.func_vk_04_080_cb_04, 1);
@@ -232,7 +232,7 @@ public class F_04_080_HelpReceiveData {
 			p.remove(Constant.func_vk_04_080_item_14);
 			fr.cb14.setChecked(false) ;
 			fr.item14.setText("") ;
-		}
+		}*/
 		
 	}
 }

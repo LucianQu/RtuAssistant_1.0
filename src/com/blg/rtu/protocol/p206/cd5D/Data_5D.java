@@ -40,6 +40,13 @@ public class Data_5D {
 	private Integer ERC17  ; //收报文记录 2
 	private Integer ERC18 ; // 发报文出错记录 2
 	
+	private Integer ERC19 ; // 强磁攻击记录
+	private Integer ERC20 ; // GSM发送报文成功记录
+	private Integer ERC21 ; // GSM模块上电总次数记录
+	private Integer ERC22 ; // GSM模块上电成功次数记录
+	private Integer ERC23 ; // GSM模块上线次数记录
+	private Integer ERC24 ; // GSM模块上线成功次数记录
+	
 	public String toString(){
 		String s = "\n" ;
 		s += "1 数据初始化记录:" + ERC1 + "次\n" ;
@@ -60,7 +67,12 @@ public class Data_5D {
 		s += "16 发报文记录:" + ERC16 + "次\n" ;
 		s += "17 收报文记录:" + ERC17 + "次\n" ;
 		s += "18 发报文出错记录:" + ERC18 + "次\n" ;
-		
+		s += "19 强磁攻击记录:" + ERC19 + "次\n" ;
+		s += "20 GSM发送报文成功次数记录" + ERC20 + "次\n" ;
+		s += "21 GSM模块上电总次数记录" + ERC21 + "次\n" ;
+		s += "22 GSM模块上电成功次数记录" + ERC22 + "次\n" ;
+		s += "23 GSM上线次数记录" + ERC23 + "次\n" ;
+		s += "24 GSM上线成功次数" + ERC24 + "次\n" ;
 		return s ;
 	}
 	
@@ -172,7 +184,23 @@ public class Data_5D {
 	public void setERC18(Integer eRC18) {
 		ERC18 = eRC18;
 	}
-
-	
+	public Integer getERC19() {
+		return ERC19;
+	}
+	public void setERC19(Integer eRC19) {
+		ERC19 = eRC19;
+	}
+	public Integer getERC20() {
+		return ERC20;
+	}
+	public void setERC20(Integer eRC20) {
+		ERC20 = eRC20;
+	}
+	public Integer getERC21() {
+		return ERC21;
+	}
+	public void setERC21(Integer eRC21) {
+		ERC21 = eRC21;
+	}
 	
 }

@@ -30,10 +30,10 @@ public class F_04_080_HelpCheckBeforeSet {
 		}else{
 			fr.param = new Param_A1() ;
 			boolean flag = true ;
-			flag = this.doCheck(fr.cb01, fr.item01, 1, R.string.func_04_080_item01, showDialog) ;
-			if(flag){flag = this.doCheck(fr.cb02, fr.item02, 2, R.string.func_04_080_item02, showDialog) ;}
+		/*	flag = this.doCheck(fr.cb01, fr.item01, 1, R.string.func_04_080_item01, showDialog) ;*/
+			/*if(flag){flag = this.doCheck(fr.cb02, fr.item02, 2, R.string.func_04_080_item02, showDialog) ;}*/
 			if(flag){flag = this.doCheck(fr.cb03, fr.item03, 3, R.string.func_04_080_item03, showDialog) ;}
-			if(flag){flag = this.doCheck(fr.cb04, fr.item04, 4, R.string.func_04_080_item04, showDialog) ;}
+			/*if(flag){flag = this.doCheck(fr.cb04, fr.item04, 4, R.string.func_04_080_item04, showDialog) ;}
 			if(flag){flag = this.doCheck(fr.cb05, fr.item05, 5, R.string.func_04_080_item05, showDialog) ;}
 			if(flag){flag = this.doCheck(fr.cb06, fr.item06, 6, R.string.func_04_080_item06, showDialog) ;}
 			if(flag){flag = this.doCheck(fr.cb07, fr.item07, 7, R.string.func_04_080_item07, showDialog) ;}
@@ -43,16 +43,16 @@ public class F_04_080_HelpCheckBeforeSet {
 			if(flag){flag = this.doCheck(fr.cb11, fr.item11, 11, R.string.func_04_080_item11, showDialog) ;}
 			if(flag){flag = this.doCheck(fr.cb12, fr.item12, 12, R.string.func_04_080_item12, showDialog) ;}
 			if(flag){flag = this.doCheck(fr.cb13, fr.item13, 13, R.string.func_04_080_item13, showDialog) ;}
-			if(flag){flag = this.doCheck(fr.cb14, fr.item14, 14, R.string.func_04_080_item14, showDialog) ;}
+			if(flag){flag = this.doCheck(fr.cb14, fr.item14, 14, R.string.func_04_080_item14, showDialog) ;}*/
 			return flag ;
 		}
 	}
 	
 	private boolean hasCheck(){
-		if(fr.cb01.isChecked()){return true;}
-		if(fr.cb02.isChecked()){return true;}
+		/*if(fr.cb01.isChecked()){return true;}
+		if(fr.cb02.isChecked()){return true;}*/
 		if(fr.cb03.isChecked()){return true;}
-		if(fr.cb04.isChecked()){return true;}
+		/*if(fr.cb04.isChecked()){return true;}
 		if(fr.cb05.isChecked()){return true;}
 		if(fr.cb06.isChecked()){return true;}
 		if(fr.cb07.isChecked()){return true;}
@@ -62,7 +62,7 @@ public class F_04_080_HelpCheckBeforeSet {
 		if(fr.cb11.isChecked()){return true;}
 		if(fr.cb12.isChecked()){return true;}
 		if(fr.cb13.isChecked()){return true;}
-		if(fr.cb14.isChecked()){return true;}
+		if(fr.cb14.isChecked()){return true;}*/
 		return false ;
 	}
 	

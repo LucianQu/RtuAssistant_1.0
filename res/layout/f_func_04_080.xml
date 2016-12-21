@@ -28,7 +28,8 @@
 		 <!-- start 具体内容 -->
 		 <LinearLayout 
 	        style="@style/func_linearlayout_style">
-			<LinearLayout
+	        
+			<!-- <LinearLayout
 			    android:layout_width="match_parent"
 			    android:layout_height="@dimen/common_line_height26"
 			    >
@@ -43,9 +44,9 @@
 			    <TextView
 			        android:text="@string/func_item_unit_min"
 			        style="@style/func_item_viewtext_style_unit_100"/>
-			</LinearLayout>
+			</LinearLayout> -->
 		    
-			<LinearLayout
+			<!-- <LinearLayout
 			    android:layout_width="match_parent"
 			    android:layout_height="@dimen/common_line_height26"
 			    >
@@ -60,7 +61,7 @@
 			    <TextView
 			        android:text="@string/func_item_unit_min"
 			        style="@style/func_item_viewtext_style_unit_100"/>
-			</LinearLayout>
+			</LinearLayout> -->
 			
 			<LinearLayout
 			    android:layout_width="match_parent"
@@ -69,17 +70,22 @@
 			    <CheckBox 
 				    android:id="@+id/f_item_cb_03" 
 				    android:text="@string/func_04_080_item03"
+				    android:checked="true"
+				    android:visibility="gone"
 				    style="@style/func_item_chechbox_style_140"/> 
+				<TextView
+			        android:text="@string/func_04_080_item03"
+			    	style="@style/func_item_viewtext_style_100_a"/>
 			    <EditText
 					android:id="@+id/f_04_080_item03"  
 					android:labelFor="@id/f_04_080_item03" 
-				    style="@style/func_item_editdecimal_style_100"/>
+				    style="@style/func_item_editdecimal_style_80"/>
 			    <TextView
 			        android:text="@string/func_item_unit_min"
 			        style="@style/func_item_viewtext_style_unit_100"/>
 			</LinearLayout>
 		    
-			<LinearLayout
+			<!-- <LinearLayout
 			    android:layout_width="match_parent"
 			    android:layout_height="@dimen/common_line_height26"
 			    >
@@ -265,7 +271,7 @@
 			        android:text="@string/func_item_unit_min"
 			        style="@style/func_item_viewtext_style_unit_100"/>
 			</LinearLayout>
-		    
+		     -->
 		    <include layout="@layout/show_btn_set_query" />
 		    		    
 		 </LinearLayout>

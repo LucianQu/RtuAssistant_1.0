@@ -19,10 +19,10 @@ public class F_04_080_HelpCreateView {
 	}
 	
 	public void findView(View view){
-		fr.cb01 = (CheckBox)view.findViewById(R.id.f_item_cb_01); 
-		fr.cb02 = (CheckBox)view.findViewById(R.id.f_item_cb_02); 
+		/*fr.cb01 = (CheckBox)view.findViewById(R.id.f_item_cb_01); 
+		fr.cb02 = (CheckBox)view.findViewById(R.id.f_item_cb_02); */
 		fr.cb03 = (CheckBox)view.findViewById(R.id.f_item_cb_03); 
-		fr.cb04 = (CheckBox)view.findViewById(R.id.f_item_cb_04); 
+		/*fr.cb04 = (CheckBox)view.findViewById(R.id.f_item_cb_04); 
 		fr.cb05 = (CheckBox)view.findViewById(R.id.f_item_cb_05); 
 		fr.cb06 = (CheckBox)view.findViewById(R.id.f_item_cb_06); 
 		fr.cb07 = (CheckBox)view.findViewById(R.id.f_item_cb_07); 
@@ -32,13 +32,13 @@ public class F_04_080_HelpCreateView {
 		fr.cb11 = (CheckBox)view.findViewById(R.id.f_item_cb_11); 
 		fr.cb12 = (CheckBox)view.findViewById(R.id.f_item_cb_12); 
 		fr.cb13 = (CheckBox)view.findViewById(R.id.f_item_cb_13); 
-		fr.cb14 = (CheckBox)view.findViewById(R.id.f_item_cb_14); 
+		fr.cb14 = (CheckBox)view.findViewById(R.id.f_item_cb_14); */
 		
 		
-		fr.item01 = (EditText)view.findViewById(R.id.f_04_080_item01); 
-		fr.item02 = (EditText)view.findViewById(R.id.f_04_080_item02); 
+		/*fr.item01 = (EditText)view.findViewById(R.id.f_04_080_item01); 
+		fr.item02 = (EditText)view.findViewById(R.id.f_04_080_item02);*/ 
 		fr.item03 = (EditText)view.findViewById(R.id.f_04_080_item03); 
-		fr.item04 = (EditText)view.findViewById(R.id.f_04_080_item04); 
+		/*fr.item04 = (EditText)view.findViewById(R.id.f_04_080_item04); 
 		fr.item05 = (EditText)view.findViewById(R.id.f_04_080_item05); 
 		fr.item06 = (EditText)view.findViewById(R.id.f_04_080_item06); 
 		fr.item07 = (EditText)view.findViewById(R.id.f_04_080_item07); 
@@ -48,14 +48,14 @@ public class F_04_080_HelpCreateView {
 		fr.item11 = (EditText)view.findViewById(R.id.f_04_080_item11); 
 		fr.item12 = (EditText)view.findViewById(R.id.f_04_080_item12); 
 		fr.item13 = (EditText)view.findViewById(R.id.f_04_080_item13); 
-		fr.item14 = (EditText)view.findViewById(R.id.f_04_080_item14); 
+		fr.item14 = (EditText)view.findViewById(R.id.f_04_080_item14); */
 	}
 	
 	public void setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener onCheck){
-		fr.cb01.setOnCheckedChangeListener(onCheck) ;
-		fr.cb02.setOnCheckedChangeListener(onCheck) ;
+	/*	fr.cb01.setOnCheckedChangeListener(onCheck) ;
+		fr.cb02.setOnCheckedChangeListener(onCheck) ;*/
 		fr.cb03.setOnCheckedChangeListener(onCheck) ;
-		fr.cb04.setOnCheckedChangeListener(onCheck) ;
+		/*fr.cb04.setOnCheckedChangeListener(onCheck) ;
 		fr.cb05.setOnCheckedChangeListener(onCheck) ;
 		fr.cb06.setOnCheckedChangeListener(onCheck) ;
 		fr.cb07.setOnCheckedChangeListener(onCheck) ;
@@ -65,18 +65,18 @@ public class F_04_080_HelpCreateView {
 		fr.cb11.setOnCheckedChangeListener(onCheck) ;
 		fr.cb12.setOnCheckedChangeListener(onCheck) ;
 		fr.cb13.setOnCheckedChangeListener(onCheck) ;
-		fr.cb14.setOnCheckedChangeListener(onCheck) ;
+		fr.cb14.setOnCheckedChangeListener(onCheck) ;*/
 	}
 	
 	public void setFilter(){
 		InputFilter[] inFilt = new InputFilter[]{new InputFilter_NumberUnSigned(4)} ;
-		fr.item01.setFilters(inFilt);
+		/*fr.item01.setFilters(inFilt);
 		fr.item01.addTextChangedListener(new MyTextWatcher(Constant.func_vk_04_080_item_01));
 		fr.item02.setFilters(inFilt);
-		fr.item02.addTextChangedListener(new MyTextWatcher(Constant.func_vk_04_080_item_02));
+		fr.item02.addTextChangedListener(new MyTextWatcher(Constant.func_vk_04_080_item_02));*/
 		fr.item03.setFilters(inFilt);
 		fr.item03.addTextChangedListener(new MyTextWatcher(Constant.func_vk_04_080_item_03));
-		fr.item04.setFilters(inFilt);
+		/*fr.item04.setFilters(inFilt);
 		fr.item04.addTextChangedListener(new MyTextWatcher(Constant.func_vk_04_080_item_04));
 		fr.item05.setFilters(inFilt);
 		fr.item05.addTextChangedListener(new MyTextWatcher(Constant.func_vk_04_080_item_05));
@@ -97,13 +97,13 @@ public class F_04_080_HelpCreateView {
 		fr.item13.setFilters(inFilt);
 		fr.item13.addTextChangedListener(new MyTextWatcher(Constant.func_vk_04_080_item_13));
 		fr.item14.setFilters(inFilt);
-		fr.item14.addTextChangedListener(new MyTextWatcher(Constant.func_vk_04_080_item_14));
+		fr.item14.addTextChangedListener(new MyTextWatcher(Constant.func_vk_04_080_item_14));*/
 		
 		//设置只是数字软件键盘
-		fr.item01.setInputType(InputType.TYPE_CLASS_NUMBER); 
-		fr.item02.setInputType(InputType.TYPE_CLASS_NUMBER);
+		/*fr.item01.setInputType(InputType.TYPE_CLASS_NUMBER); 
+		fr.item02.setInputType(InputType.TYPE_CLASS_NUMBER);*/
 		fr.item03.setInputType(InputType.TYPE_CLASS_NUMBER);
-		fr.item04.setInputType(InputType.TYPE_CLASS_NUMBER);
+		/*fr.item04.setInputType(InputType.TYPE_CLASS_NUMBER);
 		fr.item05.setInputType(InputType.TYPE_CLASS_NUMBER); 
 		fr.item06.setInputType(InputType.TYPE_CLASS_NUMBER);
 		fr.item07.setInputType(InputType.TYPE_CLASS_NUMBER);
@@ -113,7 +113,7 @@ public class F_04_080_HelpCreateView {
 		fr.item11.setInputType(InputType.TYPE_CLASS_NUMBER); 
 		fr.item12.setInputType(InputType.TYPE_CLASS_NUMBER);
 		fr.item13.setInputType(InputType.TYPE_CLASS_NUMBER);
-		fr.item14.setInputType(InputType.TYPE_CLASS_NUMBER);
+		fr.item14.setInputType(InputType.TYPE_CLASS_NUMBER);*/
 	}
 
 }

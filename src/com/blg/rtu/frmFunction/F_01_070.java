@@ -27,7 +27,7 @@ public class F_01_070  extends FrmParent {
 	
 	private TextView title ;
 
-	private TextView item01 ;
+	//private TextView item01 ;
 	private TextView item02 ;
 
 	private ImageView btnRead ;
@@ -58,14 +58,14 @@ public class F_01_070  extends FrmParent {
 		funcFrm = (FrameLayout)view.findViewById(R.id.f_01_070_Frm) ;
 		cover = (LinearLayout)view.findViewById(R.id.f_01_070_Load) ;
 		
-		item01 = (TextView)view.findViewById(R.id.func_01_070_item01);
+		//item01 = (TextView)view.findViewById(R.id.func_01_070_item01);
 		item02 = (TextView)view.findViewById(R.id.func_01_070_item02);
 		
 		
-		String str = Preferences.getInstance().getString(Constant.func_vk_01_070_01) ;
+		String /*str = Preferences.getInstance().getString(Constant.func_vk_01_070_01) ;
 		if(!str.equals(Constant.errorStr)){
 			item01.setText(str); 
-		}
+		}*/
 		
 		str = Preferences.getInstance().getString(Constant.func_vk_01_070_02) ;
 		if(!str.equals(Constant.errorStr)){
@@ -172,7 +172,7 @@ public class F_01_070  extends FrmParent {
 		}
 		float v = sd.getVoltage() ;
 		
-		item01.setText(tname) ;
+		//item01.setText(tname) ;
 		item02.setText("" + v) ;
 		
 		Preferences.getInstance().putString(Constant.func_vk_01_070_01, tname) ;

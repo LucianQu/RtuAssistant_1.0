@@ -40,6 +40,7 @@
 			    <EditText
 					android:id="@+id/f_02_040_item01"  
 					android:labelFor="@id/f_02_040_item01" 
+					android:text="@string/func_02_040_item1_1"
 				    style="@style/func_item_edittext_style_180"/>
 			</LinearLayout>
 	        
@@ -54,6 +55,7 @@
 			    <EditText
 					android:id="@+id/f_02_040_item02"  
 					android:labelFor="@id/f_02_040_item02" 
+					android:text="@string/func_02_040_item2_1"
 				    style="@style/func_item_edittext_style_180"/>
 			</LinearLayout>
 	        
@@ -68,6 +70,7 @@
 			    <EditText
 					android:id="@+id/f_02_040_item03"  
 					android:labelFor="@id/f_02_040_item03" 
+					android:text="@string/func_02_040_item3_1"
 				    style="@style/func_item_edittext_style_180"/>
 			</LinearLayout>
 							        

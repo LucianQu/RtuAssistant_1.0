@@ -66,8 +66,11 @@
     <string name="func_02_030_item3">备用通道2</string>
     <string name="func_02_040">GPRS接入点</string>
     <string name="func_02_040_item1">接入点名称</string>
+    <string name="func_02_040_item1_1">cmnet</string>
     <string name="func_02_040_item2">接入点用户</string>
+    <string name="func_02_040_item2_1">abc</string>
     <string name="func_02_040_item3">接入点密码</string>
+    <string name="func_02_040_item3_1">123456</string>
     <string name="func_02_050">中心IP地址</string>
     <string name="func_02_050_item1">中心一</string>
     <string name="func_02_050_item1_1">是否有效</string>
@@ -325,7 +328,7 @@
     <string name="func_04_080">数据上报间隔</string>
     <string name="func_04_080_item01">雨量数据</string> 
     <string name="func_04_080_item02">水位数据</string> 
-    <string name="func_04_080_item03">流量(水量)</string>
+    <string name="func_04_080_item03">上报间隔</string>
     <string name="func_04_080_item04">流速数据</string> 
     <string name="func_04_080_item05">闸位数据</string> 
     <string name="func_04_080_item06">功率数据</string> 
@@ -372,6 +375,12 @@
     <string name="func_05_010_item16">发报文记录 </string>
     <string name="func_05_010_item17">收报文记录</string>
     <string name="func_05_010_item18">发报文出错记录</string>
+    <string name="func_05_010_item19">强磁攻击记录</string>
+    <string name="func_05_010_item20">GSM发送报文成功记录</string>
+    <string name="func_05_010_item21">GSM模块上电总次数记录</string>
+    <string name="func_05_010_item22">GSM模块上电成功次数记录</string>
+    <string name="func_05_010_item23">GSM上线次数记录</string>
+    <string name="func_05_010_item24">GSM上线成功次数</string>
    
     <string name="func_05_020">设备状态和告警信息</string>
     <string name="func_05_020_item01">工作交流电停电告警</string>
@@ -550,7 +559,7 @@
     <string name="rtuLogListViewHeight">256</string>
     
     <!-- 当人工点击按钮连接网络时，等待连接结果的超时时长，即动画时长，单位毫秒 -->
-    <string name="tcpConnectTimeout">30000</string>
+    <string name="tcpConnectTimeout">40000</string>
     <!-- 等待命令结果的超时时长，即动画时长，单位毫秒 -->
     <string name="commandResultTimout">30000</string>
     

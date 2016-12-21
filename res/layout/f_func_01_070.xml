@@ -29,7 +29,7 @@
 		 <LinearLayout 
 	        style="@style/func_linearlayout_style">
 	        
-			<LinearLayout
+		<!-- 	<LinearLayout
 			    android:layout_width="match_parent"
 			    android:layout_height="@dimen/common_line_height40"
 			    >
@@ -41,7 +41,7 @@
 					android:id="@+id/func_01_070_item01"  
 					android:labelFor="@id/func_01_070_item01" 
 				    style="@style/func_item_edittext_style_180"/>
-			</LinearLayout>
+			</LinearLayout> -->
 	        
 			<LinearLayout
 			    android:layout_width="match_parent"

@@ -14,7 +14,8 @@ public class F_04_080_HelpCheckBox {
 	
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
     	Preferences p = Preferences.getInstance() ;
-    	if(buttonView == fr.cb01){
+    	p.putInt(Constant.func_vk_04_080_cb_03, 1);
+    	/*if(buttonView == fr.cb01){
             if(!isChecked){fr.item01.setText("") ;p.remove(Constant.func_vk_04_080_cb_01);}else{p.putInt(Constant.func_vk_04_080_cb_01, 1);} 
     	}else if(buttonView == fr.cb02){
     		if(!isChecked){fr.item02.setText("") ;p.remove(Constant.func_vk_04_080_cb_02);}else{p.putInt(Constant.func_vk_04_080_cb_02, 1);} 
@@ -42,6 +43,6 @@ public class F_04_080_HelpCheckBox {
     		if(!isChecked){fr.item13.setText("") ;p.remove(Constant.func_vk_04_080_cb_13);}else{p.putInt(Constant.func_vk_04_080_cb_13, 1);} 
     	}else if(buttonView == fr.cb14){
     		if(!isChecked){fr.item14.setText("") ;p.remove(Constant.func_vk_04_080_cb_14);}else{p.putInt(Constant.func_vk_04_080_cb_14, 1);} 
-    	}
+    	}*/
     } 
 }
