@@ -28,10 +28,10 @@ public class F_05_010  extends FrmParent {
 	private TextView title ;
 
 	private TextView item01 ;
-	private TextView item02 ;
-	private TextView item03 ;
+	/*private TextView item02 ;
+	private TextView item03 ;*/
 	private TextView item04 ;
-	private TextView item05 ;
+	/*private TextView item05 ;
 	private TextView item06 ;
 	private TextView item07 ;
 	private TextView item08 ;
@@ -40,12 +40,19 @@ public class F_05_010  extends FrmParent {
 	private TextView item11 ;
 	private TextView item12 ;
 	private TextView item13 ;
-	private TextView item14 ;
+	private TextView item14 ;*/
 	private TextView item15 ;
 	private TextView item16 ;
-	private TextView item17 ;
-	private TextView item18 ;
-
+/*	private TextView item17 ;
+	private TextView item18 ;*/
+	
+	private TextView item19 ;
+	private TextView item20 ;
+	private TextView item21 ;
+	private TextView item22 ;
+	private TextView item23 ;
+	private TextView item24 ;
+	
 	private ImageView btnRead ;
 	
 
@@ -75,10 +82,10 @@ public class F_05_010  extends FrmParent {
 		cover = (LinearLayout)view.findViewById(R.id.f_05_010_Load) ;
 		
 		item01 = (TextView)view.findViewById(R.id.func_05_010_item01);
-		item02 = (TextView)view.findViewById(R.id.func_05_010_item02);
-		item03 = (TextView)view.findViewById(R.id.func_05_010_item03);
+		/*item02 = (TextView)view.findViewById(R.id.func_05_010_item02);
+		item03 = (TextView)view.findViewById(R.id.func_05_010_item03);*/
 		item04 = (TextView)view.findViewById(R.id.func_05_010_item04);
-		item05 = (TextView)view.findViewById(R.id.func_05_010_item05);
+		/*item05 = (TextView)view.findViewById(R.id.func_05_010_item05);
 		item06 = (TextView)view.findViewById(R.id.func_05_010_item06);
 		item07 = (TextView)view.findViewById(R.id.func_05_010_item07);
 		item08 = (TextView)view.findViewById(R.id.func_05_010_item08);
@@ -87,23 +94,29 @@ public class F_05_010  extends FrmParent {
 		item11 = (TextView)view.findViewById(R.id.func_05_010_item11);
 		item12 = (TextView)view.findViewById(R.id.func_05_010_item12);
 		item13 = (TextView)view.findViewById(R.id.func_05_010_item13);
-		item14 = (TextView)view.findViewById(R.id.func_05_010_item14);
+		item14 = (TextView)view.findViewById(R.id.func_05_010_item14);*/
 		item15 = (TextView)view.findViewById(R.id.func_05_010_item15);
 		item16 = (TextView)view.findViewById(R.id.func_05_010_item16);
-		item17 = (TextView)view.findViewById(R.id.func_05_010_item17);
-		item18 = (TextView)view.findViewById(R.id.func_05_010_item18);
+		/*item17 = (TextView)view.findViewById(R.id.func_05_010_item17);
+		item18 = (TextView)view.findViewById(R.id.func_05_010_item18);*/
 		
+		item19 = (TextView)view.findViewById(R.id.func_05_010_item19);
+		item20 = (TextView)view.findViewById(R.id.func_05_010_item20);
+		item21 = (TextView)view.findViewById(R.id.func_05_010_item21);
+		item22 = (TextView)view.findViewById(R.id.func_05_010_item22);
+		item23 = (TextView)view.findViewById(R.id.func_05_010_item23);
+		item24 = (TextView)view.findViewById(R.id.func_05_010_item24);
 		
 		String str = Preferences.getInstance().getString(Constant.func_vk_05_010_01) ;
 		if(!str.equals(Constant.errorStr)){ item01.setText(str); }
-		str = Preferences.getInstance().getString(Constant.func_vk_05_010_02) ;
+		/*str = Preferences.getInstance().getString(Constant.func_vk_05_010_02) ;
 		if(!str.equals(Constant.errorStr)){ item02.setText(str); }
 		str = Preferences.getInstance().getString(Constant.func_vk_05_010_03) ;
-		if(!str.equals(Constant.errorStr)){ item03.setText(str); }
+		if(!str.equals(Constant.errorStr)){ item03.setText(str); }*/
 		str = Preferences.getInstance().getString(Constant.func_vk_05_010_04) ;
 		if(!str.equals(Constant.errorStr)){ item04.setText(str); }
 		str = Preferences.getInstance().getString(Constant.func_vk_05_010_05) ;
-		if(!str.equals(Constant.errorStr)){ item05.setText(str); }
+		/*if(!str.equals(Constant.errorStr)){ item05.setText(str); }
 		str = Preferences.getInstance().getString(Constant.func_vk_05_010_06) ;
 		if(!str.equals(Constant.errorStr)){ item06.setText(str); }
 		str = Preferences.getInstance().getString(Constant.func_vk_05_010_07) ;
@@ -121,16 +134,28 @@ public class F_05_010  extends FrmParent {
 		str = Preferences.getInstance().getString(Constant.func_vk_05_010_13) ;
 		if(!str.equals(Constant.errorStr)){ item13.setText(str); }
 		str = Preferences.getInstance().getString(Constant.func_vk_05_010_14) ;
-		if(!str.equals(Constant.errorStr)){ item14.setText(str); }
+		if(!str.equals(Constant.errorStr)){ item14.setText(str); }*/
 		str = Preferences.getInstance().getString(Constant.func_vk_05_010_15) ;
 		if(!str.equals(Constant.errorStr)){ item15.setText(str); }
 		str = Preferences.getInstance().getString(Constant.func_vk_05_010_16) ;
 		if(!str.equals(Constant.errorStr)){ item16.setText(str); }
-		str = Preferences.getInstance().getString(Constant.func_vk_05_010_17) ;
+		/*str = Preferences.getInstance().getString(Constant.func_vk_05_010_17) ;
 		if(!str.equals(Constant.errorStr)){ item17.setText(str); }
 		str = Preferences.getInstance().getString(Constant.func_vk_05_010_18) ;
-		if(!str.equals(Constant.errorStr)){ item18.setText(str); }
+		if(!str.equals(Constant.errorStr)){ item18.setText(str); }*/
 		
+		str = Preferences.getInstance().getString(Constant.func_vk_05_010_19) ;
+		if(!str.equals(Constant.errorStr)){ item19.setText(str); }
+		str = Preferences.getInstance().getString(Constant.func_vk_05_010_20) ;
+		if(!str.equals(Constant.errorStr)){ item20.setText(str); }
+		str = Preferences.getInstance().getString(Constant.func_vk_05_010_21) ;
+		if(!str.equals(Constant.errorStr)){ item21.setText(str); }
+		str = Preferences.getInstance().getString(Constant.func_vk_05_010_22) ;
+		if(!str.equals(Constant.errorStr)){ item22.setText(str); }
+		str = Preferences.getInstance().getString(Constant.func_vk_05_010_23) ;
+		if(!str.equals(Constant.errorStr)){ item23.setText(str); }
+		str = Preferences.getInstance().getString(Constant.func_vk_05_010_24) ;
+		if(!str.equals(Constant.errorStr)){ item24.setText(str); }
 		
 		btnRead = (ImageView)view.findViewById(R.id.btn_read);
 		
@@ -224,10 +249,10 @@ public class F_05_010  extends FrmParent {
 		Data_5D sd = (Data_5D)d.subData ;
 		
 		p.putString(Constant.func_vk_05_010_01, "" + sd.getERC1()) ;
-		p.putString(Constant.func_vk_05_010_02, "" + sd.getERC2()) ;
-		p.putString(Constant.func_vk_05_010_03, "" + sd.getERC3()) ;
+		/*p.putString(Constant.func_vk_05_010_02, "" + sd.getERC2()) ;
+		p.putString(Constant.func_vk_05_010_03, "" + sd.getERC3()) ;*/
 		p.putString(Constant.func_vk_05_010_04, "" + sd.getERC4()) ;
-		p.putString(Constant.func_vk_05_010_05, "" + sd.getERC5()) ;
+		/*p.putString(Constant.func_vk_05_010_05, "" + sd.getERC5()) ;
 		p.putString(Constant.func_vk_05_010_06, "" + sd.getERC6()) ;
 		p.putString(Constant.func_vk_05_010_07, "" + sd.getERC7()) ;
 		p.putString(Constant.func_vk_05_010_08, "" + sd.getERC8()) ;
@@ -236,17 +261,24 @@ public class F_05_010  extends FrmParent {
 		p.putString(Constant.func_vk_05_010_11, "" + sd.getERC11()) ;
 		p.putString(Constant.func_vk_05_010_12, "" + sd.getERC12()) ;
 		p.putString(Constant.func_vk_05_010_13, "" + sd.getERC13()) ;
-		p.putString(Constant.func_vk_05_010_14, "" + sd.getERC14()) ;
+		p.putString(Constant.func_vk_05_010_14, "" + sd.getERC14()) ;*/
 		p.putString(Constant.func_vk_05_010_15, "" + sd.getERC15()) ;
 		p.putString(Constant.func_vk_05_010_16, "" + sd.getERC16()) ;
-		p.putString(Constant.func_vk_05_010_17, "" + sd.getERC17()) ;
-		p.putString(Constant.func_vk_05_010_18, "" + sd.getERC18()) ;
+		/*p.putString(Constant.func_vk_05_010_17, "" + sd.getERC17()) ;
+		p.putString(Constant.func_vk_05_010_18, "" + sd.getERC18()) ;*/
+		
+		p.putString(Constant.func_vk_05_010_19, "" + sd.getERC19()) ;
+		p.putString(Constant.func_vk_05_010_20, "" + sd.getERC20()) ;
+		p.putString(Constant.func_vk_05_010_21, "" + sd.getERC21()) ;
+		p.putString(Constant.func_vk_05_010_22, "" + sd.getERC22()) ;
+		p.putString(Constant.func_vk_05_010_23, "" + sd.getERC23()) ;
+		p.putString(Constant.func_vk_05_010_24, "" + sd.getERC24()) ;
 		
 		this.item01.setText("" + sd.getERC1()) ;
-		this.item02.setText("" + sd.getERC2()) ;
-		this.item03.setText("" + sd.getERC3()) ;
+		/*this.item02.setText("" + sd.getERC2()) ;
+		this.item03.setText("" + sd.getERC3()) ;*/
 		this.item04.setText("" + sd.getERC4()) ;
-		this.item05.setText("" + sd.getERC5()) ;
+/*		this.item05.setText("" + sd.getERC5()) ;
 		this.item06.setText("" + sd.getERC6()) ;
 		this.item07.setText("" + sd.getERC7()) ;
 		this.item08.setText("" + sd.getERC8()) ;
@@ -255,11 +287,18 @@ public class F_05_010  extends FrmParent {
 		this.item11.setText("" + sd.getERC11()) ;
 		this.item12.setText("" + sd.getERC12()) ;
 		this.item13.setText("" + sd.getERC13()) ;
-		this.item14.setText("" + sd.getERC14()) ;
+		this.item14.setText("" + sd.getERC14()) ;*/
 		this.item15.setText("" + sd.getERC15()) ;
 		this.item16.setText("" + sd.getERC16()) ;
-		this.item17.setText("" + sd.getERC17()) ;
-		this.item18.setText("" + sd.getERC18()) ;
+		/*this.item17.setText("" + sd.getERC17()) ;
+		this.item18.setText("" + sd.getERC18()) ;*/
+		
+		this.item19.setText("" + sd.getERC19()) ;
+		this.item20.setText("" + sd.getERC20()) ;
+		this.item21.setText("" + sd.getERC21()) ;
+		this.item22.setText("" + sd.getERC22()) ;
+		this.item23.setText("" + sd.getERC23()) ;
+		this.item24.setText("" + sd.getERC24()) ;
 		
 		Preferences.getInstance().putString(Constant.func_vk_05_010_dt, this.resultDt.getText().toString()) ;
 	}

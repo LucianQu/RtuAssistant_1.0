@@ -33,6 +33,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputFilter;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -258,10 +259,10 @@ public class F_05_040 extends FrmParent {
 	}
 	
 	private void putSpinnerValue(){
-		spinnerAdapter.add(new SpinnerVO("0", "雨量参数")) ;
-		spinnerAdapter.add(new SpinnerVO("1", "水位参数")) ;
+		/*spinnerAdapter.add(new SpinnerVO("0", "雨量参数")) ;
+		spinnerAdapter.add(new SpinnerVO("1", "水位参数")) ;*/
 		spinnerAdapter.add(new SpinnerVO("2", "流量（水量）参数")) ;
-		spinnerAdapter.add(new SpinnerVO("3", "流速参数")) ;
+	/*	spinnerAdapter.add(new SpinnerVO("3", "流速参数")) ;
 		spinnerAdapter.add(new SpinnerVO("4", "闸位参数")) ;
 		spinnerAdapter.add(new SpinnerVO("5", "功率参数")) ;
 		spinnerAdapter.add(new SpinnerVO("6", "气压参数")) ;
@@ -269,7 +270,7 @@ public class F_05_040 extends FrmParent {
 		spinnerAdapter.add(new SpinnerVO("8", "水温参数")) ;
 		//spinnerAdapter.add(new SpinnerVO("9" , "水质参数")) ;
 		spinnerAdapter.add(new SpinnerVO("10", "土壤含水率参数")) ;
-		spinnerAdapter.add(new SpinnerVO("11", "水压参数")) ;
+		spinnerAdapter.add(new SpinnerVO("11", "水压参数")) ;*/
 	}
 	
 	public class SpinnerSelectedListener implements OnItemSelectedListener {
@@ -397,6 +398,11 @@ public class F_05_040 extends FrmParent {
 		dataList.add(itemStartDt) ;
 		HelpSaveSolidDataToFile.saveData(f, itemStartDt.dataStr) ;
 		
+		String dateStart = sd.getStartDt();
+		Log.i("----开始时间", dateStart);
+		byte[] dateBuff=dateStart.getBytes();
+		
+		
 		F_05_040_ListViewItem itemEndDt = new F_05_040_ListViewItem(null, "截止时间：" + sd.getEndDt()) ;
 		dataList.add(itemEndDt) ;
 		HelpSaveSolidDataToFile.saveData(f, itemEndDt.dataStr) ;
@@ -412,7 +418,7 @@ public class F_05_040 extends FrmParent {
 				vStr = (data.valueDbl!=null?data.valueDbl.toString():(data.valueLng!=null?data.valueLng.toString():(data.valueFFF!=null?data.valueFFF:""))) ;
 				vStr += data.fengXiang!= null?data.fengXiang.toString():"" ;
 				vStr += data.valueUnit!= null?data.valueUnit:"" ;
-				F_05_040_ListViewItem item = new F_05_040_ListViewItem(count++ , sd.getDataName() + ":" + vStr) ;
+				F_05_040_ListViewItem item = new F_05_040_ListViewItem(count++ , dateDisplay(count - 1,dateBuff) + "  " + sd.getDataName() + ":" + vStr) ;
 				dataList.add(item) ;
 				HelpSaveSolidDataToFile.saveData(f, item.dataStr) ;
 			}
@@ -424,6 +430,130 @@ public class F_05_040 extends FrmParent {
 
 		Preferences.getInstance().putString(Constant.func_vk_05_040_dt, this.resultDt.getText().toString()) ;
 		
+	}
+	
+	public  String dateDisplay(Integer index, byte[] b) {
+		int year,month,day,hour,minute = 10;
+		int n = 0 ;
+		int dateBuffer[] = new int [4];
+		int num = 0 ;
+		year =  charToByte(b[n++]) * 1000 + charToByte(b[n++]) * 100 + 
+				charToByte(b[n++]) * 10 + charToByte(b[n++]);
+		n++;
+		month = charToByte(b[n++]) * 10 + charToByte(b[n++]);
+		n++;
+		day = charToByte(b[n++]) * 10 + charToByte(b[n++]);
+		n++;
+		hour = charToByte(b[n++]) * 10 + charToByte(b[n++]);
+		
+		dateBuffer[num++] = year;
+		dateBuffer[num++] = month;
+		dateBuffer[num++] = day;
+		dateBuffer[num++] = hour;
+		
+		if(index <= 12 && index > 6) {
+			num = 1;
+			dateBuffer = Increase_Hour(dateBuffer , num);
+		}else if(index > 12 && index <= 18) {
+			num = 2;
+			dateBuffer = Increase_Hour(dateBuffer , num);
+		}
+		
+		
+		minute = index <= 6 ? minute * (index - 1) : (index <= 12 ? minute * (index - 7) : minute * (index - 13));
+		
+		return dateBuffer[0] + "-" + (dateBuffer[1] < 10 ? "0" + dateBuffer[1] : dateBuffer[1])+ "-" 
+				+ (dateBuffer[2] < 10 ? "0" + dateBuffer[2] : dateBuffer[2]) + "  " + 
+				(dateBuffer[3] < 10 ? "0" + dateBuffer[3] : dateBuffer[3]) + " " + ":" + " "+ 
+				(minute < 10 ? "0" + minute : minute) + "  ";
+	}
+	
+	private static int charToByte(byte b) {
+		if(b >= 48 && b <= 57) {
+			b = (byte) (b - 48);		
+		}else if(b >= 65 && b <= 90) {
+			b = (byte) (b - 55);
+		}else if(b >= 97 && b <= 122) {
+			b = (byte) (b - 87);
+		}
+		return b;
+	}
+	
+	private static int[] Increase_Hour(int[] b , int hourAddNum) {
+		int Year,Month,DayOfMonth,Hours,n = 0;
+		Year = b[n++];
+		Month = b[n++];
+		DayOfMonth = b[n++];
+		Hours = b[n++];
+		for(int i = 0; i < hourAddNum; i++) {
+
+	        Hours++;
+	        if(Hours > 23)
+	        {
+	            Hours = 0;
+	            DayOfMonth++;
+	            switch (Month)
+	            {
+	                case 1:
+	                case 3:
+	                case 5:
+	                case 7:
+	                case 8:
+	                case 10:
+	                case 12:
+	                    if(DayOfMonth > 31)
+	                    {
+	                        DayOfMonth = 1;
+	                        Month++;
+	                        if(Month > 12)
+	                        {
+	                            Month = 1;
+	                            Year++;
+	                        }
+	                    }
+	                    break;
+	                case 4:
+	                case 6:
+	                case 9:
+	                case 11:
+	                    if (DayOfMonth > 30)
+	                    {
+	                        DayOfMonth = 1;
+	                        Month++;
+	                    }
+	                    break;
+	                case 2:
+	                    if((((Year%4)==0)&&((Year%100)!=0))||(Year%400==0))
+	                    {
+	                        if(DayOfMonth > 29)
+	                        {
+	                            DayOfMonth = 1;
+	                            Month++;
+	                        }
+	                    }
+	                    else
+	                    {
+	                        if(DayOfMonth > 28)
+	                        {
+	                            DayOfMonth=1;
+	                            Month++;
+	                        }
+	                    }
+	                    break;
+	                default:
+	                    break;
+	            }
+	        }
+	    
+		}
+		
+		n = 0;
+		b[n++] = Year;
+		b[n++] = Month;
+		b[n++] = DayOfMonth;
+		b[n++] = Hours;
+		
+		return b;
 	}
 	
 	/**

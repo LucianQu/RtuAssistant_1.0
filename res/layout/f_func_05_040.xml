@@ -32,22 +32,25 @@
 			<LinearLayout
 			    android:layout_width="match_parent"
 			    android:layout_height="@dimen/common_line_height40"
+			    android:visibility="gone"
 			    >
 			    <TextView
 			        android:text="@string/func_05_040_item01_1"
 			        style="@style/func_item_viewtext_style_100_b"/>
-			    
 			    <Spinner android:id="@+id/f_05_040_item01_1" 
 				    style="@style/func_item_Spinner_style_180"/>
 			</LinearLayout>
 			<LinearLayout
 			    android:layout_width="match_parent"
-			    android:layout_height="@dimen/common_line_height40">
+			    android:layout_height="@dimen/common_line_height40"
+			    android:visibility="gone"
+			    >
 			    <TextView
 			        android:text="@string/func_05_040_item01_2"
 			        style="@style/func_item_viewtext_style_100_b"/>
 			    <EditText
 					android:id="@+id/f_05_040_item01_2"  
+					android:text="@string/func_05_040_item01_2_1"
 					android:labelFor="@id/f_05_040_item01_2" 
 				    style="@style/func_item_editnumber_style_80"/>
 			</LinearLayout>

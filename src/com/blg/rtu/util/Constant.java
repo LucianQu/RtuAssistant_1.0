@@ -545,6 +545,12 @@ public class Constant {
 	public static final String func_vk_05_010_16 = "vk_05_010_16" ; 
 	public static final String func_vk_05_010_17 = "vk_05_010_17" ; 
 	public static final String func_vk_05_010_18 = "vk_05_010_18" ; 
+	public static final String func_vk_05_010_19 = "vk_05_010_19" ; 
+	public static final String func_vk_05_010_20 = "vk_05_010_20" ; 
+	public static final String func_vk_05_010_21 = "vk_05_010_21" ; 
+	public static final String func_vk_05_010_22 = "vk_05_010_22" ; 
+	public static final String func_vk_05_010_23 = "vk_05_010_23" ; 
+	public static final String func_vk_05_010_24 = "vk_05_010_24" ; 
 
 	public static final String func_vk_05_010_dt = "vk_05_010_dt" ; 
 

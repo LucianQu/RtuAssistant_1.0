@@ -35,7 +35,7 @@
 			    >
 			    <TextView
 			        android:text="@string/func_05_010_item01"
-			        style="@style/func_item_viewtext_style_160_b"/>
+			        style="@style/func_item_viewtext_style_200_b"/>
 			    <TextView
 					android:id="@+id/func_05_010_item01"  
 					android:labelFor="@id/func_05_010_item01" 
@@ -45,7 +45,7 @@
 			        style="@style/func_item_viewtext_style_unit_30"/>
 			</LinearLayout>
 	        
-			<LinearLayout
+			<!-- <LinearLayout
 			    android:layout_width="match_parent"
 			    android:layout_height="@dimen/common_line_height30"
 			    >
@@ -76,7 +76,7 @@
 			    <TextView
 			        android:text="@string/func_item_unit_ci"
 			        style="@style/func_item_viewtext_style_unit_30"/>
-			</LinearLayout>
+			</LinearLayout> -->
 	        
 			<LinearLayout
 			    android:layout_width="match_parent"
@@ -84,7 +84,7 @@
 			    >
 			    <TextView
 			        android:text="@string/func_05_010_item04"
-			        style="@style/func_item_viewtext_style_160_b"/>
+			        style="@style/func_item_viewtext_style_200_b"/>
 			    
 			    <TextView
 					android:id="@+id/func_05_010_item04"  
@@ -95,7 +95,7 @@
 			        style="@style/func_item_viewtext_style_unit_30"/>
 			</LinearLayout>
 				        
-			<LinearLayout
+			<!-- <LinearLayout
 			    android:layout_width="match_parent"
 			    android:layout_height="@dimen/common_line_height30"
 			    >
@@ -264,14 +264,14 @@
 			        android:text="@string/func_item_unit_ci"
 			        style="@style/func_item_viewtext_style_unit_30"/>
 			</LinearLayout>
-																			        				        
+											 -->								        				        
 			<LinearLayout
 			    android:layout_width="match_parent"
 			    android:layout_height="@dimen/common_line_height30"
 			    >
 			    <TextView
 			        android:text="@string/func_05_010_item15"
-			        style="@style/func_item_viewtext_style_160_b"/>
+			        style="@style/func_item_viewtext_style_200_b"/>
 			    
 			    <TextView
 					android:id="@+id/func_05_010_item15"  
@@ -288,7 +288,7 @@
 			    >
 			    <TextView
 			        android:text="@string/func_05_010_item16"
-			        style="@style/func_item_viewtext_style_160_b"/>
+			        style="@style/func_item_viewtext_style_200_b"/>
 			    
 			    <TextView
 					android:id="@+id/func_05_010_item16"  
@@ -299,7 +299,7 @@
 			        style="@style/func_item_viewtext_style_unit_30"/>
 			</LinearLayout>
 										        
-			<LinearLayout
+			<!-- <LinearLayout
 			    android:layout_width="match_parent"
 			    android:layout_height="@dimen/common_line_height30"
 			    >
@@ -332,9 +332,107 @@
 			        android:text="@string/func_item_unit_ci"
 			        style="@style/func_item_viewtext_style_unit_30"/>
 			</LinearLayout>
-						
-		    <include layout="@layout/show_btn_query" />
-		 </LinearLayout>
+						-->
+		    
+		
+	     <LinearLayout
+	         android:layout_width="match_parent"
+	         android:layout_height="@dimen/common_line_height30" 
+	         >
+	         <TextView
+	             android:text="@string/func_05_010_item19"
+	             style="@style/func_item_viewtext_style_200_b"/>
+	         <TextView
+	             android:id="@+id/func_05_010_item19"
+	             android:labelFor="@id/func_05_010_item19"
+	             style="@style/func_item_edittext_style_80"/>
+	         <TextView 
+	             android:text="@string/func_item_unit_ci"
+	             style="@style/func_item_viewtext_style_unit_30"/>
+	     </LinearLayout>
+	     
+	     <LinearLayout
+	         android:layout_width="match_parent"
+	         android:layout_height="@dimen/common_line_height30" 
+	         >
+	         <TextView
+	             android:text="@string/func_05_010_item20"
+	             style="@style/func_item_viewtext_style_200_b"/>
+	         <TextView 
+	             android:id="@+id/func_05_010_item20"
+	             android:labelFor="@id/func_05_010_item20"
+	             style="@style/func_item_edittext_style_80"/>
+	         <TextView 
+	             android:text="@string/func_item_unit_ci"
+	             style="@style/func_item_viewtext_style_unit_30"/>
+	     </LinearLayout>
+	     
+	      <LinearLayout
+	         android:layout_width="match_parent"
+	         android:layout_height="@dimen/common_line_height30" 
+	         >
+	         <TextView
+	             android:text="@string/func_05_010_item21"
+	             style="@style/func_item_viewtext_style_200_b"/>
+	         <TextView 
+	             android:id="@+id/func_05_010_item21"
+	             android:labelFor="@id/func_05_010_item21"
+	             style="@style/func_item_edittext_style_80"/>
+	         <TextView 
+	             android:text="@string/func_item_unit_ci"
+	             style="@style/func_item_viewtext_style_unit_30"/>
+	     </LinearLayout>
+	     
+	     <LinearLayout
+	         android:layout_width="match_parent"
+	         android:layout_height="@dimen/common_line_height30" 
+	         >
+	         <TextView
+	             android:text="@string/func_05_010_item22"
+	             style="@style/func_item_viewtext_style_200_b"/>
+	         <TextView 
+	             android:id="@+id/func_05_010_item22"
+	             android:labelFor="@id/func_05_010_item22"
+	             style="@style/func_item_edittext_style_80"/>
+	         <TextView 
+	             android:text="@string/func_item_unit_ci"
+	             style="@style/func_item_viewtext_style_unit_30"/>
+	     </LinearLayout>
+	     
+	      <LinearLayout
+	         android:layout_width="match_parent"
+	         android:layout_height="@dimen/common_line_height30" 
+	         >
+	         <TextView
+	             android:text="@string/func_05_010_item23"
+	             style="@style/func_item_viewtext_style_200_b"/>
+	         <TextView 
+	             android:id="@+id/func_05_010_item23"
+	             android:labelFor="@id/func_05_010_item23"
+	             style="@style/func_item_edittext_style_80"/>
+	         <TextView 
+	             android:text="@string/func_item_unit_ci"
+	             style="@style/func_item_viewtext_style_unit_30"/>
+	     </LinearLayout>
+	     
+	      <LinearLayout
+	         android:layout_width="match_parent"
+	         android:layout_height="@dimen/common_line_height30" 
+	         >
+	         <TextView
+	             android:text="@string/func_05_010_item24"
+	             style="@style/func_item_viewtext_style_200_b"/>
+	         <TextView 
+	             android:id="@+id/func_05_010_item24"
+	             android:labelFor="@id/func_05_010_item24"
+	             style="@style/func_item_edittext_style_80"/>
+	         <TextView 
+	             android:text="@string/func_item_unit_ci"
+	             style="@style/func_item_viewtext_style_unit_30"/>
+	     </LinearLayout>
+	      
+	     <include layout="@layout/show_btn_query" />
+	     </LinearLayout>
 	     
 		 <!-- start 底部 -->
 		 <LinearLayout 

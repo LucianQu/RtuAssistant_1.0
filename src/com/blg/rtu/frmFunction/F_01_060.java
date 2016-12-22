@@ -98,14 +98,14 @@ public class F_01_060  extends FrmParent {
 	
 	private void putSpinnerValue(){
 		spinnerAdapter.add(new SpinnerVO("" + Param_91.clearType_0, "全部数据")) ;
-		spinnerAdapter.add(new SpinnerVO("" + Param_91.clearType_1, "雨量数据")) ;
-		spinnerAdapter.add(new SpinnerVO("" + Param_91.clearType_2, "水位数据")) ;
+		/*spinnerAdapter.add(new SpinnerVO("" + Param_91.clearType_1, "雨量数据")) ;
+		spinnerAdapter.add(new SpinnerVO("" + Param_91.clearType_2, "水位数据")) ;*/
 		spinnerAdapter.add(new SpinnerVO("" + Param_91.clearType_3, "流量数据")) ;
-		spinnerAdapter.add(new SpinnerVO("" + Param_91.clearType_4, "水温数据")) ; 
-		spinnerAdapter.add(new SpinnerVO("" + Param_91.clearType_5, "水质数据")) ;
+		/*spinnerAdapter.add(new SpinnerVO("" + Param_91.clearType_4, "水温数据")) ; 
+		spinnerAdapter.add(new SpinnerVO("" + Param_91.clearType_5, "水质数据")) ;*/
 		spinnerAdapter.add(new SpinnerVO("" + Param_91.clearType_6, "日志数据")) ; 
 		spinnerAdapter.add(new SpinnerVO("" + Param_91.clearType_7, "事件数据")) ;
-		spinnerAdapter.add(new SpinnerVO("" + Param_91.clearType_8, "四个中心补报数据")) ;
+		/*spinnerAdapter.add(new SpinnerVO("" + Param_91.clearType_8, "四个中心补报数据")) ;*/
 	}
 	
 	public class SpinnerSelectedListener implements OnItemSelectedListener {

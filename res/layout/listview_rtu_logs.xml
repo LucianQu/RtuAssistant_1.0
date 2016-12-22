@@ -16,7 +16,7 @@
 	    <!--android:drawablePadding 设置text与drawable(图片)的间隔，与drawableLeft、drawableRight、drawableTop、drawableBottom一起使用，可设置为负数，单独使用没有效果-->
 	    <TextView
 	        android:id="@+id/rtuLog_index"
-	        android:layout_width="40dp"
+	        android:layout_width="20dp"
 	        android:layout_height="30dp"
 		    android:layout_marginLeft="2dp"
 	        android:background="@drawable/txt_bg2"

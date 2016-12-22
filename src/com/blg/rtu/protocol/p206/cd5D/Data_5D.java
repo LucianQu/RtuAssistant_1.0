@@ -202,5 +202,23 @@ public class Data_5D {
 	public void setERC21(Integer eRC21) {
 		ERC21 = eRC21;
 	}
+	public Integer getERC22() {
+		return ERC22;
+	}
+	public void setERC22(Integer eRC22) {
+		ERC22 = eRC22;
+	}
+	public Integer getERC23() {
+		return ERC23;
+	}
+	public void setERC23(Integer eRC23) {
+		ERC23 = eRC23;
+	}
+	public Integer getERC24() {
+		return ERC24;
+	}
+	public void setERC24(Integer eRC24) {
+		ERC24 = eRC24;
+	}
 	
 }

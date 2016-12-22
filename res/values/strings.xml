@@ -435,6 +435,7 @@
     <string name="func_05_040">查询历史数据</string>
     <string name="func_05_040_item01_1">参数类型</string>
     <string name="func_05_040_item01_2">参数编号</string>
+    <string name="func_05_040_item01_2_1">1</string>
     <string name="func_05_040_item02">开始时间</string>
     <string name="func_05_040_item03">截止时间</string>
     
@@ -445,8 +446,8 @@
     <string name="func_05_060_item01">日志条数</string>
     
     <string name="func_05_070">查询实时流量</string>
-    <string name="func_05_070_item01">瞬时流量 :</string>
-	<string name="func_05_070_item02">累计水量 :</string>
+    <string name="func_05_070_item01">瞬时流量</string>
+	<string name="func_05_070_item02">累计水量</string>
 	
     <string name="func_06_010">人工置数</string>
     <string name="func_06_010_item01">参数类型</string>

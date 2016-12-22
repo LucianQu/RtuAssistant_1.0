@@ -242,9 +242,9 @@ public class MainActivity  extends Activity {
 		
 		//////////////////////////////////////////////////////////////
 		//功能子页
-	/*	func_scrollView = (ScrollView)pageView_function.findViewById(R.id.f_func_scrollView) ;
+	func_scrollView = (ScrollView)pageView_function.findViewById(R.id.f_func_scrollView) ;
        
-		chLine_01 = (LinearLayout)pageView_channel.findViewById(R.id.chLine_01) ;
+	/*		chLine_01 = (LinearLayout)pageView_channel.findViewById(R.id.chLine_01) ;
 		chLine_02 = (LinearLayout)pageView_channel.findViewById(R.id.chLine_02) ;
 		chLine_03 = (LinearLayout)pageView_channel.findViewById(R.id.chLine_03) ;
 		chLine_04 = (LinearLayout)pageView_channel.findViewById(R.id.chLine_04) ;

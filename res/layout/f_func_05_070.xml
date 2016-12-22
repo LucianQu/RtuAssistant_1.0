@@ -41,7 +41,7 @@
 			    <TextView
 					android:id="@+id/func_05_070_item01"  
 					android:labelFor="@id/func_05_070_item01" 
-				    style="@style/func_item_viewtext_style_100"/>
+				    style="@style/func_item_edittext_style_120"/>
 			    <TextView
 				        android:text="@string/func_item_unit_m3perh"
 				        style="@style/func_item_viewtext_style_unit_100"/>
@@ -59,10 +59,10 @@
 			    <TextView
 					android:id="@+id/func_05_070_item02"  
 					android:labelFor="@id/func_05_070_item02" 
-				    style="@style/func_item_viewtext_style_100"/>
+				    style="@style/func_item_edittext_style_120"/>
 			    <TextView
-				        android:text="@string/func_item_unit_m3_1"
-				        style="@style/func_item_viewtext_style_unit_100"/>
+				    android:text="@string/func_item_unit_m3_1"
+				    style="@style/func_item_viewtext_style_unit_100"/>
 			</LinearLayout>
 						
 			 <include layout="@layout/show_btn_query" /> 

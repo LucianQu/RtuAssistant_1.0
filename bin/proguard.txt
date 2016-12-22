@@ -7,7 +7,7 @@
 # view AndroidManifest.xml #generated:55
 -keep class com.blg.rtu.SplashActivity { <init>(...); }
 
-# view res/layout/f_func_05_040.xml #generated:99
+# view res/layout/f_func_05_040.xml #generated:102
 # view res/layout/f_func_05_060.xml #generated:56
 # view res/layout/fch_04.xml #generated:19
 -keep class com.blg.rtu.compound.FixHeightListView { <init>(...); }
