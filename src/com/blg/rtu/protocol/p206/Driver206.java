@@ -68,6 +68,7 @@ import com.blg.rtu.protocol.p206.cdCE_DE.Write_DE;
 import com.blg.rtu.protocol.p206.cdCF_DF.Answer_CF_DF;
 import com.blg.rtu.protocol.p206.cdCF_DF.Read_CF;
 import com.blg.rtu.protocol.p206.cdCF_DF.Write_DF;
+import com.blg.rtu.protocol.p206.cdD3.Read_D3;
 import com.blg.rtu.protocol.p206.cdD8.Answer_D8;
 import com.blg.rtu.protocol.p206.cdD8.Write_D8;
 import com.blg.rtu.protocol.p206.cdE0.Answer_E0;
@@ -540,7 +541,11 @@ public class Driver206 extends DriverRtu {
 				//应答 - 设置DTU工作模式
 				this.upData = new Answer_CF_DF().parse(rtuId, b, ca, this.dataCode);
 				action.append(Action.commandResultAction) ;
-			}else			
+			}else
+			if(this.dataCode.equalsIgnoreCase(Code206.cd_D3)){
+				this.upData = new Answer_EF().parse(rtuId, b, ca, this.dataCode);
+				action.append(Action.commandResultAction) ;
+			}else		
 			if(this.dataCode.equalsIgnoreCase(Code206.cd_EF)){
 				this.upData = new Answer_EF().parse(rtuId, b, ca, this.dataCode);
 				action.append(Action.commandResultAction) ;
@@ -1295,6 +1300,11 @@ public class Driver206 extends DriverRtu {
 			if(this.commandCode.equalsIgnoreCase(Code206.cd_C2)){
 				//查询流量实时值
 				this.downData = new Read_C2().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
+				activ = Action.remoteCommandAction ;
+			}else 
+			if(this.commandCode.equalsIgnoreCase(Code206.cd_D3)){
+				//查询流量实时值
+				this.downData = new Read_D3().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
 				activ = Action.remoteCommandAction ;
 			}else 
 			if(this.commandCode.equalsIgnoreCase(Code206.cd_D5)){

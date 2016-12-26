@@ -54,7 +54,7 @@
 			    <TextView
 					android:id="@+id/func_01_070_item02"  
 					android:labelFor="@id/func_01_070_item02" 
-				    style="@style/func_item_edittext_style_180"/>
+				    style="@style/func_item_edittext_style_50"/>
 			</LinearLayout>
 				        
 		    <include layout="@layout/show_btn_query" />

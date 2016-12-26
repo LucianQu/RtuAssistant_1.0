@@ -122,7 +122,10 @@ public class Answer_B1 extends ProtocolSupport{
 		}
 
 	}
-	
+	//686A68B21100004200B1210022121602221216920000000092000000009200000000920000000092000000009200000000
+	//9200000000920000000092000000009200000000920000000092000000009200000000920000000092000000009200000000
+	//92000000009200000000F416
+	//this.doParseData(dataList, b, index, d, 5, false, null, "m3") ;
 	protected void doParseData(DataList_B1 dataList, byte[] b, int index, RtuData d, int lenPer, boolean hasFuShu, Double cuShu, String unit) throws Exception {
 		int total = (b.length - (len + 9))/lenPer ;//前 9 个字节为日期和参数编号
 		long bcd = 0 ;

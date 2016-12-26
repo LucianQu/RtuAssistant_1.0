@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/func_out_linearlayout_style" >
+    
+    <LinearLayout style="@style/func_title_linearlayout_style">
+        <TextView
+            android:id="@+id/f_01_090_Title"
+            android:drawableLeft="@drawable/item001"
+            android:text="@string/func_01_090"
+            style="@style/func_title_viewtext_style"/>"
+    </LinearLayout>   
+    <!-- 具体内布局 -->
+    <FrameLayout 
+        android:id="@+id/f_01_090_Frm"
+        style="@style/func_framelayout_style"
+        >
+        <LinearLayout
+            style="@style/func_linearlayout_style">
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="@dimen/common_line_height40" 
+	            >
+	            <TextView
+	                android:text="@string/func_01_090_item1"
+	                style="@style/func_item_viewtext_style_100_a"/>
+	            <TextView
+	                android:id="@+id/func_01_090_item1"
+	                android:labelFor="@id/func_01_090_item1"
+	                style="@style/func_item_edittext_style_180"/>
+	        </LinearLayout>
+	        <include layout="@layout/show_btn_query"/>
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:id="@+id/f_01_090_Load"
+            style="@style/func_progressbar_linearlayout_style"
+            >
+	        <ProgressBar 
+	            style="@style/func_progressbar_style"/>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

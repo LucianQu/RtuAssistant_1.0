@@ -69,7 +69,9 @@
 		        <fragment android:id="@+id/f_01_050"
 			        android:name="com.blg.rtu.frmFunction.F_01_050"
 				    style="@style/func_fragment_style"/>   
-		        
+		        <fragment android:id="@+id/f_01_090"
+			        android:name="com.blg.rtu.frmFunction.F_01_090"
+				    style="@style/func_fragment_style"/>   
 		        <!--   <fragment android:id="@+id/f_01_030"
 			        android:name="com.blg.rtu.frmFunction.F_01_030"
 				    style="@style/func_fragment_style"/> -->   	

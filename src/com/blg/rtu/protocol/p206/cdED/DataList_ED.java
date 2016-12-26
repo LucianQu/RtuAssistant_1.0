@@ -5,6 +5,8 @@ import java.util.List;
 
 public class DataList_ED {
 	
+	
+	
 	private List<Data_ED> datas  ;
 	
 	public DataList_ED(){
@@ -18,5 +20,7 @@ public class DataList_ED {
 	public void setDatas(List<Data_ED> datas) {
 		this.datas = datas;
 	}
+	
+	
 	
 }

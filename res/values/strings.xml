@@ -54,7 +54,8 @@
     <string name="func_01_070_item2">电压</string>
     <string name="func_01_080">电池电压报警值</string>
     <string name="func_01_080_item1">报警数值</string>
-    
+    <string name="func_01_090">查询出厂编号</string>
+    <string name="func_01_090_item1">出厂编号</string>
     
     <string name="func_02_010">DTU工作模式</string>
     <string name="func_02_010_item1">工作模式</string>

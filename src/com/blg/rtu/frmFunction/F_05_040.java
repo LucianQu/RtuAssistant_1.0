@@ -423,7 +423,6 @@ public class F_05_040 extends FrmParent {
 				HelpSaveSolidDataToFile.saveData(f, item.dataStr) ;
 			}
 		}
-        
 		dataListViewAdapter.notifyDataSetInvalidated(); 	
     	//使listview停在最后一条数据
 		dataListView.setSelection(dataList.size()-1) ;
@@ -445,22 +444,27 @@ public class F_05_040 extends FrmParent {
 		day = charToByte(b[n++]) * 10 + charToByte(b[n++]);
 		n++;
 		hour = charToByte(b[n++]) * 10 + charToByte(b[n++]);
-		
+		num = 0;
 		dateBuffer[num++] = year;
 		dateBuffer[num++] = month;
 		dateBuffer[num++] = day;
 		dateBuffer[num++] = hour;
 		
-		if(index <= 12 && index > 6) {
+	/*	if(index <= 12 && index > 6) {
 			num = 1;
 			dateBuffer = Increase_Hour(dateBuffer , num);
 		}else if(index > 12 && index <= 18) {
 			num = 2;
 			dateBuffer = Increase_Hour(dateBuffer , num);
+		}*/
+		num = index / 2 ;
+		if(num > 0 && num <=8) {
+			dateBuffer = Increase_Hour(dateBuffer , num);
 		}
 		
 		
-		minute = index <= 6 ? minute * (index - 1) : (index <= 12 ? minute * (index - 7) : minute * (index - 13));
+		//minute = index <= 6 ? minute * (index - 1) : (index <= 12 ? minute * (index - 7) : minute * (index - 13));
+		minute = index%2 == 1 ? 30 : 0;
 		
 		return dateBuffer[0] + "-" + (dateBuffer[1] < 10 ? "0" + dateBuffer[1] : dateBuffer[1])+ "-" 
 				+ (dateBuffer[2] < 10 ? "0" + dateBuffer[2] : dateBuffer[2]) + "  " + 
@@ -470,11 +474,11 @@ public class F_05_040 extends FrmParent {
 	
 	private static int charToByte(byte b) {
 		if(b >= 48 && b <= 57) {
-			b = (byte) (b - 48);		
+			b = (byte)(b - 48);		
 		}else if(b >= 65 && b <= 90) {
-			b = (byte) (b - 55);
+			b = (byte)(b - 55);
 		}else if(b >= 97 && b <= 122) {
-			b = (byte) (b - 87);
+			b = (byte)(b - 87);
 		}
 		return b;
 	}
@@ -486,7 +490,6 @@ public class F_05_040 extends FrmParent {
 		DayOfMonth = b[n++];
 		Hours = b[n++];
 		for(int i = 0; i < hourAddNum; i++) {
-
 	        Hours++;
 	        if(Hours > 23)
 	        {
@@ -546,13 +549,11 @@ public class F_05_040 extends FrmParent {
 	        }
 	    
 		}
-		
 		n = 0;
 		b[n++] = Year;
 		b[n++] = Month;
 		b[n++] = DayOfMonth;
 		b[n++] = Hours;
-		
 		return b;
 	}
 	

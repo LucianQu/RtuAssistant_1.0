@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- android:background 设置各种情况下的背景色 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+	android:background="@drawable/linearlayout_bg">
+
+   	<LinearLayout android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+
+	    android:background="@drawable/item_bg"
+	    >
+	    <!--android:drawablePadding 设置text与drawable(图片)的间隔，与drawableLeft、drawableRight、drawableTop、drawableBottom一起使用，可设置为负数，单独使用没有效果-->
+	   
+	      <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical"
+	        android:orientation="horizontal"
+	        >
+	        <TextView
+	        android:id="@+id/rtuLog_index1"
+	        android:layout_width="20dp"
+	        android:layout_height="30dp"
+		    android:layout_marginLeft="2dp"
+	        android:background="@drawable/txt_bg2"
+	        android:gravity="center_vertical"
+	        android:textSize="@dimen/text12"
+	        />
+	        <TextView
+		        android:id="@+id/rtuLogDate"
+		        android:layout_width="165dp"
+		        android:layout_height="30dp"
+		        android:background="@drawable/txt_bg2"
+		        android:gravity="center_vertical"
+		        android:textSize="@dimen/text13"
+	        />
+	   		<TextView
+		        android:id="@+id/rtuLogType"
+		        android:layout_width="wrap_content"
+		        android:layout_height="30dp"
+		        android:background="@drawable/txt_bg2"
+		        android:gravity="center_vertical"
+		        android:textSize="@dimen/text13"
+	        />
+	    </LinearLayout>
+	    
+	    <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical"
+	        android:orientation="horizontal"
+	        >
+	        <TextView
+	        android:id="@+id/rtuLog_index2"
+	        android:layout_width="20dp"
+	        android:layout_height="30dp"
+	        android:text=""
+		    android:layout_marginLeft="2dp"
+	        android:background="@drawable/txt_bg2"
+	        android:gravity="center_vertical"
+	        android:textSize="@dimen/text12"
+	        />
+	    <TextView
+	        android:id="@+id/rtuLogContent"
+	        android:layout_width="165dp"
+	        android:layout_height="30dp"
+	        android:background="@drawable/txt_bg2"
+	        android:gravity="center_vertical"
+	        android:textSize="@dimen/text13"
+	        />
+	      <TextView
+	        android:id="@+id/rtuLogComments"
+	        android:layout_width="wrap_content"
+	        android:layout_height="30dp"
+	        android:background="@drawable/txt_bg2"
+	        android:gravity="center_vertical"
+	        android:textSize="@dimen/text13"
+	        />
+	    </LinearLayout>
+	    
+	 </LinearLayout>
+</LinearLayout>

@@ -39,12 +39,14 @@ public class F_05_060_ListViewAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup viewGroup) {
     	ListHolder holder;
         if (convertView == null) {
-            convertView = LayoutInflater.from(act).inflate(R.layout.listview_rtu_logs, null);
+            convertView = LayoutInflater.from(act).inflate(R.layout.listview_rtu_logs_double, null);
 
             holder = new ListHolder();
-            holder.indexView = (TextView)convertView.findViewById(R.id.rtuLog_index);
-            holder.hexView = (TextView)convertView.findViewById(R.id.rtuLogHex);
-            
+            holder.indexView = (TextView)convertView.findViewById(R.id.rtuLog_index1) ;
+            holder.dateView = (TextView)convertView.findViewById(R.id.rtuLogDate) ;
+            holder.typeView = (TextView)convertView.findViewById(R.id.rtuLogType) ;
+            holder.contentView = (TextView)convertView.findViewById(R.id.rtuLogContent) ;
+            holder.commentsView = (TextView)convertView.findViewById(R.id.rtuLogComments) ;
             convertView.setTag(holder);
         }else{
             holder=(ListHolder) convertView.getTag();
@@ -52,13 +54,16 @@ public class F_05_060_ListViewAdapter extends BaseAdapter {
         
         F_05_060_ListViewItem vo = this.fragment.logList.get(position) ;
         holder.indexView.setText("" + vo.index);
-        holder.hexView.setText(vo.logHex);
+        holder.dateView.setText(vo.logDate);
+        holder.typeView.setText(vo.logType);
+        holder.contentView.setText(vo.logContent);
+        holder.commentsView.setText(vo.logComments);
         if(vo.loseLog != null && vo.loseLog.booleanValue()){
             holder.indexView.setTextColor(Color.RED);
-            holder.hexView.setTextColor(Color.RED);
+            holder.typeView.setTextColor(Color.RED);
         }else{
             holder.indexView.setTextColor(Color.BLACK);
-            holder.hexView.setTextColor(Color.BLACK);
+            holder.typeView.setTextColor(Color.BLACK);
         }
 		//以供事件监听用
         //holder.itemView.setTag(R.string.pullListView_item_position_key, position) ;
@@ -79,7 +84,11 @@ public class F_05_060_ListViewAdapter extends BaseAdapter {
 
 	class ListHolder {
 		TextView indexView ;
-		TextView hexView ;
+		TextView typeView ;
+		TextView nullView ;
+		TextView dateView ;
+		TextView contentView ;
+		TextView commentsView;
 	}	
 }
 

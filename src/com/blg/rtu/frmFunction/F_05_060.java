@@ -270,7 +270,7 @@ public class F_05_060  extends FrmParent {
 						lose = true ;
 					}
 				}
-				F_05_060_ListViewItem item = new F_05_060_ListViewItem(index, data.getLogHex(), lose) ;
+				F_05_060_ListViewItem item = new F_05_060_ListViewItem(index, "日期：" + data.getDateTime(), data.getTypeNum(), lose,data.getContentType(),(data.getCommentsType() == null ? " " : data.getCommentsType())); 
 				logList.add(item) ;
 				
 				lastData = item ;

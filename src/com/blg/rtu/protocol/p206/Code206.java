@@ -112,6 +112,10 @@ public class Code206 {
 	public static final String cd_E2 = "E2" ; //查询电源采集校准系数
 	public static final String cd_F2 = "F2" ; //设置电源采集校准系数
 	public static final String cd_D8 = "D8" ; //设置AD校准命令(代替了F2命令)
+	public static final String cd_D2 = "D2" ; //查询定时报协议格式
+	public static final String cd_D6 = "D6" ; //设置定时报协议格式
+	public static final String cd_D4 = "D4" ; //查询ICCID协议格式
+	public static final String cd_D3 = "D3" ; //查询水表出厂编号
 	public static final String cd_E3 = "E3" ; //查询仪表类型
 	public static final String cd_F3 = "F3" ; //设置仪表类型
 	public static final String cd_E4 = "E4" ; //查询仪表量程

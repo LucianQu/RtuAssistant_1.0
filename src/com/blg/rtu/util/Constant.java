@@ -61,6 +61,8 @@ public class Constant {
 	public static final String func_vk_01_080_01_1 = "vk_01_080_01_1" ; 
 	public static final String func_vk_01_080_01_2 = "vk_01_080_01_2" ; 
 	public static final String func_vk_01_080_dt = "vk_01_080_dt" ; 
+	public static final String func_vk_01_090_01 = "vk_01_090_01" ;
+	public static final String func_vk_01_090_dt = "vk_01_090_dt" ;
 	
 	public static final String func_vk_02_010_01 = "vk_02_010_01" ; 
 	public static final String func_vk_02_010_dt = "vk_02_010_dt" ; 
