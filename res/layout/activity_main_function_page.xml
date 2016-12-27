@@ -95,6 +95,11 @@
 		        <fragment android:id="@+id/f_02_050"
 			        android:name="com.blg.rtu.frmFunction.F_02_050"
 				    style="@style/func_fragment_style"/>
+		        
+	           <fragment android:id="@+id/f_02_100"
+		        android:name="com.blg.rtu.frmFunction.F_02_100"
+			    style="@style/func_fragment_style"/>
+		        
 		         <fragment android:id="@+id/f_04_080"
 			        android:name="com.blg.rtu.frmFunction.F_04_080"
 				    style="@style/func_fragment_style"/>

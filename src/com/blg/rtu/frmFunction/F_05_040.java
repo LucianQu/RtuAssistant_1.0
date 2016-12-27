@@ -457,14 +457,14 @@ public class F_05_040 extends FrmParent {
 			num = 2;
 			dateBuffer = Increase_Hour(dateBuffer , num);
 		}*/
-		num = index / 2 ;
+		num = (index - 1) / 2 ;
 		if(num > 0 && num <=8) {
 			dateBuffer = Increase_Hour(dateBuffer , num);
 		}
 		
 		
 		//minute = index <= 6 ? minute * (index - 1) : (index <= 12 ? minute * (index - 7) : minute * (index - 13));
-		minute = index%2 == 1 ? 30 : 0;
+		minute = index%2 == 1 ? 0 : 30;
 		
 		return dateBuffer[0] + "-" + (dateBuffer[1] < 10 ? "0" + dateBuffer[1] : dateBuffer[1])+ "-" 
 				+ (dateBuffer[2] < 10 ? "0" + dateBuffer[2] : dateBuffer[2]) + "  " + 

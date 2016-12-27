@@ -121,7 +121,7 @@ public class F_01_090 extends FrmParent {
 	}
 
 	@Override
-	protected void commandSendedCallBack() {
+	public void commandSendedCallBack() {
 		this.title.setCompoundDrawables(ImageUtil.getTitlLeftImg_item001(this.act), null, ImageUtil.getTitlRightImg_red(this.act), null);
 	}
 
@@ -135,15 +135,15 @@ public class F_01_090 extends FrmParent {
 	@Override
 	public void receiveRtuData(RtuData d) {
 		super.receiveRtuData(d);
-		long waterMeterSerial;
+		String waterMeterSerial;
 		this.title.setCompoundDrawables(ImageUtil.getTitlLeftImg_item001(this.act), null, ImageUtil.getTitlRightImg_green(this.act), null);
 		Object subD = d.subData;
 		if(subD != null) {
 			if(subD instanceof Data_D3) {
 				Data_D3 sd = (Data_D3)subD ;
 				waterMeterSerial = sd.getWaterMeterSerial();
-				if(waterMeterSerial >= 0 && waterMeterSerial <100000000000000L) {
-					item01.setText(waterMeterSerial + "");
+				if(waterMeterSerial != null) {
+					item01.setText(waterMeterSerial);
 				}else{
 					item01.setText("");
 				}

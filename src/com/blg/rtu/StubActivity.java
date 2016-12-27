@@ -265,6 +265,14 @@ public class StubActivity extends ActivityAidl.Stub{
 						//设置或查询定时上报的时刻
 						mAct.frgTool.f_04_090.receiveRtuData(data) ;
 					}else*/
+					if(data.dataCode.equals(Code206.cd_D3)){
+						//查询水表出厂编号
+						mAct.frgTool.f_01_090.receiveRtuData(data) ;
+					}else
+					if(data.dataCode.equals(Code206.cd_D4)){
+						//查询SIM卡ICCID
+						mAct.frgTool.f_02_100.receiveRtuData(data) ;
+					}else
 					if(data.dataCode.equals(Code206.cd_C2)){
 						//查询水表实时值
 						mAct.frgTool.f_05_070.receiveRtuData(data) ;
@@ -509,6 +517,14 @@ public class StubActivity extends ActivityAidl.Stub{
 					if(data.dataCode.equals(Code206.cd_C2)){
 						//查询流量实时值
 						mAct.frgTool.f_05_070.commandSendedCallBack() ;
+					}else
+					if(data.dataCode.equals(Code206.cd_D3)){
+						//查询出厂编号
+						mAct.frgTool.f_01_090.commandSendedCallBack() ;
+					}else
+					if(data.dataCode.equals(Code206.cd_D4)){
+						//查询出厂编号
+						mAct.frgTool.f_02_100.commandSendedCallBack() ;
 					}else
 				/*	if(data.dataCode.equals(Code206.cd_15) || data.dataCode.equals(Code206.cd_55)){
 						//设置遥测终端本次充值量,查询遥测终端最近成功充值量和现有剩余水量

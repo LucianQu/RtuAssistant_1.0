@@ -156,6 +156,9 @@ public class Constant {
 	public static final String func_vk_02_090_12 = "vk_02_090_12" ; 
 	public static final String func_vk_02_090_dt = "vk_02_090_dt" ; 
 	
+	public static final String func_vk_02_100_01 = "vk_02_100_01" ;
+	public static final String func_vk_02_100_dt = "vk_02_100_dt" ;
+	
 	public static final String func_vk_03_010_01_1 = "vk_03_010_01_1" ; 
 	public static final String func_vk_03_010_01_2 = "vk_03_010_01_2" ; 
 	public static final String func_vk_03_010_02_1 = "vk_03_010_02_1" ; 

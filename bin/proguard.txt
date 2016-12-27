@@ -36,7 +36,7 @@
 # view res/layout/activity_main_function_page.xml #generated:69
 -keep class com.blg.rtu.frmFunction.F_01_050 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:229
+# view res/layout/activity_main_function_page.xml #generated:234
 -keep class com.blg.rtu.frmFunction.F_01_060 { <init>(...); }
 
 # view res/layout/activity_main_function_page.xml #generated:63
@@ -57,28 +57,31 @@
 # view res/layout/activity_main_function_page.xml #generated:95
 -keep class com.blg.rtu.frmFunction.F_02_050 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:101
+# view res/layout/activity_main_function_page.xml #generated:99
+-keep class com.blg.rtu.frmFunction.F_02_100 { <init>(...); }
+
+# view res/layout/activity_main_function_page.xml #generated:106
 -keep class com.blg.rtu.frmFunction.F_03_090 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:98
+# view res/layout/activity_main_function_page.xml #generated:103
 -keep class com.blg.rtu.frmFunction.F_04_080 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:217
+# view res/layout/activity_main_function_page.xml #generated:222
 -keep class com.blg.rtu.frmFunction.F_05_010 { <init>(...); }
 
 # view res/layout/activity_main_function_page.xml #generated:60
 -keep class com.blg.rtu.frmFunction.F_05_020 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:220
+# view res/layout/activity_main_function_page.xml #generated:225
 -keep class com.blg.rtu.frmFunction.F_05_040 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:226
+# view res/layout/activity_main_function_page.xml #generated:231
 -keep class com.blg.rtu.frmFunction.F_05_060 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:223
+# view res/layout/activity_main_function_page.xml #generated:228
 -keep class com.blg.rtu.frmFunction.F_05_070 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:261
+# view res/layout/activity_main_function_page.xml #generated:266
 -keep class com.blg.rtu.frmFunction.F_07_010 { <init>(...); }
 
 # view res/layout/activity_main_loopquery_page.xml #generated:32

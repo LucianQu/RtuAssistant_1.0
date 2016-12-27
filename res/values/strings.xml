@@ -137,6 +137,8 @@
     <string name="func_02_090_item10">卫星中心3</string>
     <string name="func_02_090_item11">卫星中心4</string>
     <string name="func_02_090_item12">卫星信强</string>
+    <string name="func_02_100">查询SIM卡ICCID</string>
+    <string name="func_02_100_item1">SIM卡ICCID</string>
     
     <string name="func_03_010">电源采集校准系数</string>
     <string name="func_03_010_item1">电池电源</string>

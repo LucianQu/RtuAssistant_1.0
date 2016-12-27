@@ -275,7 +275,10 @@
         <item name="android:layout_width">@dimen/ed_width_180</item>
         <item name="android:layout_height">@dimen/common_edit_height24</item>
 	</style>
-    
+	 <style name="func_item_edittext_style_200" parent="@style/func_item_edittext_style">
+        <item name="android:layout_width">@dimen/ed_width_200</item>
+        <item name="android:layout_height">@dimen/common_edit_height24</item>
+	</style>
     
     <style name="func_item_editnumber_style_32" parent="@style/func_item_edittext_style_32">
         <item name="android:inputType">number</item>

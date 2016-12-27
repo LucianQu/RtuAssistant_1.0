@@ -725,5 +725,11 @@ public class CommandCreator {
 		com.setCommandCode(Code206.cd_D3) ;
 		return com ;
 	}
+	public RtuCommand cd_D4(String rtuId){
+		RtuCommand com = new RtuCommand() ;
+		com.setRtuId(rtuId);
+		com.setCommandCode(Code206.cd_D4) ;
+		return com ;
+	}
 
 }

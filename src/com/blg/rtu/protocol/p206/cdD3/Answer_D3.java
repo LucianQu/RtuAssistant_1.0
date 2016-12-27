@@ -32,8 +32,11 @@ public class Answer_D3 extends ProtocolSupport {
 		Data_D3 data = new Data_D3() ;
 		d.setSubData(data);
 		
-		long value = ByteUtil.BCD2Long(b, index, index + 7);
-		data.setWaterMeterSerial(value);
+		String value = ByteUtil.BCD2String(b, index, index + 1);
+		String value1 = ByteUtil.BCD2String(b, index + 2, index + 3);
+		String value2 = ByteUtil.BCD2String(b, index + 4, index + 5);
+		String value3 = ByteUtil.BCD2String(b, index + 6, index + 6);
+		data.setWaterMeterSerial(value + "  " + value1 + "  " + value2  + "  " + value3);
 	}
 
 }

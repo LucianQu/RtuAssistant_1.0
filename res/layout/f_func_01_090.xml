@@ -7,7 +7,7 @@
             android:id="@+id/f_01_090_Title"
             android:drawableLeft="@drawable/item001"
             android:text="@string/func_01_090"
-            style="@style/func_title_viewtext_style"/>"
+            style="@style/func_title_viewtext_style"/>
     </LinearLayout>   
     <!-- 具体内布局 -->
     <FrameLayout 
