@@ -134,6 +134,10 @@ public class StubActivity extends ActivityAidl.Stub{
 						//设置或查询GPRS接入点
 						mAct.frgTool.f_02_040.receiveRtuData(data) ;
 					}else
+					if(data.dataCode.equals(Code206.cd_D2) || data.dataCode.equals(Code206.cd_D6)){
+						//设置或查询中心网址
+						mAct.frgTool.f_02_110.receiveRtuData(data) ;
+					}else
 					if(data.dataCode.equals(Code206.cd_CC) || data.dataCode.equals(Code206.cd_DC)){
 						//设置或查询中心网址
 						mAct.frgTool.f_02_050.receiveRtuData(data) ;
@@ -145,10 +149,6 @@ public class StubActivity extends ActivityAidl.Stub{
 					if(data.dataCode.equals(Code206.cd_CE) || data.dataCode.equals(Code206.cd_DE)){
 						//设置或查询卫星中心号码
 						mAct.frgTool.f_02_070.receiveRtuData(data) ;
-					}else
-					if(data.dataCode.equals(Code206.cd_96)){
-						//修改遥测终端密码 
-						mAct.frgTool.f_02_080.receiveRtuData(data) ;
 					}else
 					if(data.dataCode.equals(Code206.cd_C8)){
 						//查询RTU在线状态
@@ -273,6 +273,10 @@ public class StubActivity extends ActivityAidl.Stub{
 						//查询SIM卡ICCID
 						mAct.frgTool.f_02_100.receiveRtuData(data) ;
 					}else
+					if(data.dataCode.equals(Code206.cd_96)){
+						//修改遥测终端密码 
+						mAct.frgTool.f_02_080.receiveRtuData(data) ;
+					}else
 					if(data.dataCode.equals(Code206.cd_C2)){
 						//查询水表实时值
 						mAct.frgTool.f_05_070.receiveRtuData(data) ;
@@ -383,6 +387,14 @@ public class StubActivity extends ActivityAidl.Stub{
 						//设置或查询GPRS接入点
 						mAct.frgTool.f_02_040.commandSendedCallBack() ;
 					}else
+					if(data.dataCode.equals(Code206.cd_96)){
+						//修改遥测终端密码 
+						mAct.frgTool.f_02_080.commandSendedCallBack() ;
+					}else
+					if(data.dataCode.equals(Code206.cd_D2) || data.dataCode.equals(Code206.cd_D6)){
+						//设置或者查询协议配置
+						mAct.frgTool.f_02_110.commandSendedCallBack() ;
+					}else
 					if(data.dataCode.equals(Code206.cd_CC) || data.dataCode.equals(Code206.cd_DC)){
 						//设置或查询中心网址
 						mAct.frgTool.f_02_050.commandSendedCallBack() ;
@@ -394,10 +406,6 @@ public class StubActivity extends ActivityAidl.Stub{
 					if(data.dataCode.equals(Code206.cd_CE) || data.dataCode.equals(Code206.cd_DE)){
 						//设置或查询卫星中心号码
 						mAct.frgTool.f_02_070.commandSendedCallBack() ;
-					}else
-					if(data.dataCode.equals(Code206.cd_96)){
-						//修改遥测终端密码 
-						mAct.frgTool.f_02_080.commandSendedCallBack() ;
 					}else
 					if(data.dataCode.equals(Code206.cd_C8)){
 						//查询RTU在线状态

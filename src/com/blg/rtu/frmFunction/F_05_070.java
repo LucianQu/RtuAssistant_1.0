@@ -205,7 +205,7 @@ public class F_05_070  extends FrmParent {
 		if(subD != null){
 			if(subD instanceof Data_C2){
 				Data_C2 sd = (Data_C2)subD ;
-				waterInstant = sd.getWaterInstant();
+				waterInstant = sd.getWaterInstant().longValue();
 				if(waterInstant < 0) {
 					waterInstant = - waterInstant;
 					if ((waterInstant / 1000) > 0) {
@@ -221,7 +221,7 @@ public class F_05_070  extends FrmParent {
 					}
 				}
 				
-				item02.setText(sd.getWaterConsumption() + "") ;
+				item02.setText(sd.getWaterConsumption().longValue() + "") ;
 			}/*else if(subD instanceof Data_16){
 				Data_16 sd = (Data_16)subD ;
 				item01.setText(sd.getWaterRemainAlarm() + "") ;

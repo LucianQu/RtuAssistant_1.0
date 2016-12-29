@@ -68,6 +68,9 @@ import com.blg.rtu.protocol.p206.cdCE_DE.Write_DE;
 import com.blg.rtu.protocol.p206.cdCF_DF.Answer_CF_DF;
 import com.blg.rtu.protocol.p206.cdCF_DF.Read_CF;
 import com.blg.rtu.protocol.p206.cdCF_DF.Write_DF;
+import com.blg.rtu.protocol.p206.cdD2_D6.Answer_D2_D6;
+import com.blg.rtu.protocol.p206.cdD2_D6.Read_D2;
+import com.blg.rtu.protocol.p206.cdD2_D6.Write_D6;
 import com.blg.rtu.protocol.p206.cdD3.Answer_D3;
 import com.blg.rtu.protocol.p206.cdD3.Read_D3;
 import com.blg.rtu.protocol.p206.cdD4.Answer_D4;
@@ -586,12 +589,22 @@ public class Driver206 extends DriverRtu {
 				//应答 - 设置GPRS接入点
 				this.upData = new Answer_CA_DA().parse(rtuId, b, ca, this.dataCode);
 				action.append(Action.commandResultAction) ;
-			}else			
+			}else
+			if(this.dataCode.equalsIgnoreCase(Code206.cd_D2)){
+				//应答 - 查询中心网址
+				this.upData = new Answer_D2_D6().parse(rtuId, b, ca, this.dataCode);
+				action.append(Action.commandResultAction) ;
+			}else
 			if(this.dataCode.equalsIgnoreCase(Code206.cd_CC)){
 				//应答 - 查询中心网址
 				this.upData = new Answer_CC_DC().parse(rtuId, b, ca, this.dataCode);
 				action.append(Action.commandResultAction) ;
-			}else			
+			}else	
+			if(this.dataCode.equalsIgnoreCase(Code206.cd_D6)){
+				//应答 - 设置中心网址
+				this.upData = new Answer_D2_D6().parse(rtuId, b, ca, this.dataCode);
+				action.append(Action.commandResultAction) ;
+			}else	
 			if(this.dataCode.equalsIgnoreCase(Code206.cd_DC)){
 				//应答 - 设置中心网址
 				this.upData = new Answer_CC_DC().parse(rtuId, b, ca, this.dataCode);
@@ -1139,9 +1152,19 @@ public class Driver206 extends DriverRtu {
 				this.downData = new Write_DA().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
 				activ = Action.remoteCommandAction ;
 			}else 
+			if(this.commandCode.equalsIgnoreCase(Code206.cd_D2)){
+				//查询中心网址
+				this.downData = new Read_D2().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
+				activ = Action.remoteCommandAction ;
+			}else 
 			if(this.commandCode.equalsIgnoreCase(Code206.cd_CC)){
 				//查询中心网址
 				this.downData = new Read_CC().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
+				activ = Action.remoteCommandAction ;
+			}else 
+			if(this.commandCode.equalsIgnoreCase(Code206.cd_D6)){
+				//查询中心网址
+				this.downData = new Write_D6().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
 				activ = Action.remoteCommandAction ;
 			}else 
 			if(this.commandCode.equalsIgnoreCase(Code206.cd_DC)){

@@ -45,10 +45,12 @@ public class FragmentTool {
 	public F_02_050 f_02_050 ;
 	
 /*	public F_02_060 f_02_060 ;
-	public F_02_070 f_02_070 ;
-	public F_02_080 f_02_080 ;
-	public F_02_090 f_02_090 ;*/
+	public F_02_070 f_02_070 ;*/
+	
+	//public F_02_090 f_02_090 ;
 	public F_02_100 f_02_100 ;
+	public F_02_110 f_02_110 ;
+	public F_02_080 f_02_080 ;
 //	public F_03_010 f_03_010 ;
 	/*public F_03_011 f_03_011 ;
 	public F_03_020 f_03_020 ;
@@ -130,12 +132,15 @@ public class FragmentTool {
         frms.add(f_02_060);
         f_02_070 = (F_02_070)fm.findFragmentById(R.id.f_02_070) ;
         frms.add(f_02_070);
-        f_02_080 = (F_02_080)fm.findFragmentById(R.id.f_02_080) ;
-        frms.add(f_02_080);
+     
         f_02_090 = (F_02_090)fm.findFragmentById(R.id.f_02_090) ;
         frms.add(f_02_090);*/
         f_02_100 = (F_02_100)fm.findFragmentById(R.id.f_02_100) ;
         frms.add(f_02_100);
+        f_02_110 = (F_02_110)fm.findFragmentById(R.id.f_02_110) ;
+        frms.add(f_02_110);
+        f_02_080 = (F_02_080)fm.findFragmentById(R.id.f_02_080) ;
+        frms.add(f_02_080);
 //        f_03_010 = (F_03_010)fm.findFragmentById(R.id.f_03_010) ;
 //        frms.add(f_03_010);
       /*  f_03_011 = (F_03_011)fm.findFragmentById(R.id.f_03_011) ;
