@@ -25,7 +25,7 @@ public class HelpSaveSetDataToFile {
 		return file.exists() ;
 	}
 	public static boolean isInFileExist(MainActivity act){
-		File file = initInFile(act) ;
+		File file = initInOutFile(act) ;
 		return file.exists() ;
 	}
 	
@@ -34,12 +34,12 @@ public class HelpSaveSetDataToFile {
 	}
 	
 	public static File getInFile(MainActivity act){
-		return initInFile(act) ;
+		return initInOutFile(act) ;
 	}
 	
 	private static File initFile(MainActivity act){
 		Resources rs = act.getResources() ;
-		String filePath = Environment.getExternalStorageDirectory().getAbsolutePath()  
+		String filePath = Environment.getExternalStorageDirectory()  
 				+  rs.getString(R.string.fileDir) 
 				+  "WaterMeter_CFG"
 				+  '.' 
@@ -55,7 +55,24 @@ public class HelpSaveSetDataToFile {
 		}
 		return file ;
 	}
-	
+	private static File initInOutFile(MainActivity act){
+		Resources rs = act.getResources() ;
+		String filePath = Environment.getExternalStorageDirectory()  
+				+  "/tencent/QQfile_recv/" 
+				+  "WaterMeter_CFG"
+				+  '.' 
+				+ rs.getString(R.string.xmlFileExtendsName) ;
+		// /storage/sdcard1/rtuAssistant/WaterMeter_CFG.xml //storage Default location: Internal storage
+		// /storage/emulated/0/rtuAssistant/WaterMeter_CFG.xml //storage Default location: SD 卡
+		// /rtuAssistant/
+		Log.i(tag, filePath);
+		File file = new File(filePath);
+		File dir = file.getParentFile() ;
+		if (!dir.exists()) {
+			dir.mkdirs();
+		}
+		return file ;
+	}
 	private static File initInFile(MainActivity act) {
 		Resources rs = act.getResources();
 		String filePath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/";

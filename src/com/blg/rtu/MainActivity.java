@@ -21,7 +21,6 @@ import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnLongClickListener;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -29,7 +28,6 @@ import android.widget.Toast;
 
 import com.blg.rtu.R;
 import com.blg.rtu.aidl.ServiceAidl;
-import com.blg.rtu.frmChannel.ChFragment_01;
 import com.blg.rtu.frmChannel.helpCh1.ChBusi_01_Operate;
 import com.blg.rtu.server.LocalServer;
 import com.blg.rtu.util.Preferences;

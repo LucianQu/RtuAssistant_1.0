@@ -74,7 +74,7 @@ public class Vo2Xml {
 	private int v_02_070_item04_1;
 	private String v_02_070_item04_2 ;*/
 
-//	private String v_02_080_item01 ;
+    private String v_02_080_item01 ;
 	private int v_02_110_item01;
 	private int v_02_110_item02;
 	private int v_02_110_item03;
@@ -351,43 +351,38 @@ public class Vo2Xml {
 	public int getV_02_050_item01_1() {
 		return v_02_050_item01_1;
 	}
-	public int getV_02_110_item01() {
-		return v_02_110_item01;
-		
-	}
-	public int getV_02_110_item02() {
-		return v_02_110_item01;
-		
-	}
-	public int getV_02_110_item03() {
-		return v_02_110_item01;
-		
-	}
-	public int getV_02_110_item04() {
-		return v_02_110_item01;
-		
-	}
-	public int getV_02_110_item05() {
-		return v_02_110_item01;
-		
-	}
 	public void setV_02_050_item01_1(int v_02_050_item01_1) {
 		this.v_02_050_item01_1 = v_02_050_item01_1;
+	}
+	public int getV_02_110_item01() {
+		return v_02_110_item01;
+	}
+	public void setV_02_110_item01(int v_02_110_item01) {
+		this.v_02_110_item01 = v_02_110_item01;
+	}
+	public int getV_02_110_item02() {
+		return v_02_110_item02;
 	}
 	public void setV_02_110_item02(int v_02_110_item02) {
 		this.v_02_110_item02 = v_02_110_item02;
 	}
+	public int getV_02_110_item03() {
+		return v_02_110_item03;
+	}
 	public void setV_02_110_item03(int v_02_110_item03) {
 		this.v_02_110_item03 = v_02_110_item03;
+	}
+	public int getV_02_110_item04() {
+		return v_02_110_item04;
 	}
 	public void setV_02_110_item04(int v_02_110_item04) {
 		this.v_02_110_item04 = v_02_110_item04;
 	}
+	public int getV_02_110_item05() {
+		return v_02_110_item05;
+	}
 	public void setV_02_110_item05(int v_02_110_item05) {
 		this.v_02_110_item05 = v_02_110_item05;
-	}
-	public void setV_02_110_item01(int v_02_110_item01) {
-		this.v_02_110_item01 = v_02_110_item01;
 	}
 	public String getV_02_050_item01_2_1() {
 		return v_02_050_item01_2_1;
@@ -647,12 +642,12 @@ public class Vo2Xml {
 	public void setV_02_070_item04_2(String v_02_070_item04_2) {
 		this.v_02_070_item04_2 = v_02_070_item04_2;
 	}*/
-//	public String getV_02_080_item01() {
-//		return v_02_080_item01;
-//	}
-//	public void setV_02_080_item01(String v_02_080_item01) {
-//		this.v_02_080_item01 = v_02_080_item01;
-//	}
+	public String getV_02_080_item01() {
+		return v_02_080_item01;
+	}
+	public void setV_02_080_item01(String v_02_080_item01) {
+		this.v_02_080_item01 = v_02_080_item01;
+	}
 //	public int getV_03_010_item01_1() {
 //		return v_03_010_item01_1;
 //	}

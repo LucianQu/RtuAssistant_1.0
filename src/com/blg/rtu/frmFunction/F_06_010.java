@@ -4,24 +4,6 @@ package com.blg.rtu.frmFunction;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import com.blg.rtu.MainActivity;
-import com.blg.rtu.R;
-import com.blg.rtu.protocol.RtuData;
-import com.blg.rtu.protocol.p206.CommandCreator;
-import com.blg.rtu.protocol.p206.cd82_.Param_82_WaterAmountList;
-import com.blg.rtu.protocol.p206.cd82_.Param_82_WaterLevelList;
-import com.blg.rtu.protocol.p206.cd82_.Param_82_WaterQuality;
-import com.blg.rtu.protocol.p206.cd82_.Param_82_WaterTemperature;
-import com.blg.rtu.util.ByteUtil;
-import com.blg.rtu.util.Constant;
-import com.blg.rtu.util.DialogAlarm;
-import com.blg.rtu.util.ImageUtil;
-import com.blg.rtu.util.InputFilter_DecimalUnSigned;
-import com.blg.rtu.util.InputFilter_NumberUnSigned;
-import com.blg.rtu.util.Preferences;
-import com.blg.rtu.util.SpinnerVO;
-import com.blg.rtu.vo2xml.Vo2Xml;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -30,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -38,7 +21,23 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.AdapterView.OnItemSelectedListener;
+
+import com.blg.rtu.MainActivity;
+import com.blg.rtu.R;
+import com.blg.rtu.protocol.RtuData;
+import com.blg.rtu.protocol.p206.CommandCreator;
+import com.blg.rtu.protocol.p206.cd82_.Param_82_WaterAmountList;
+import com.blg.rtu.protocol.p206.cd82_.Param_82_WaterLevelList;
+import com.blg.rtu.protocol.p206.cd82_.Param_82_WaterQuality;
+import com.blg.rtu.protocol.p206.cd82_.Param_82_WaterTemperature;
+import com.blg.rtu.util.Constant;
+import com.blg.rtu.util.DialogAlarm;
+import com.blg.rtu.util.ImageUtil;
+import com.blg.rtu.util.InputFilter_DecimalUnSigned;
+import com.blg.rtu.util.InputFilter_NumberUnSigned;
+import com.blg.rtu.util.Preferences;
+import com.blg.rtu.util.SpinnerVO;
+import com.blg.rtu.vo2xml.Vo2Xml;
 
 public class F_06_010 extends FrmParent {
 	

@@ -5,7 +5,6 @@ import android.util.Log;
 import com.blg.rtu.protocol.RtuData;
 import com.blg.rtu.protocol.p206.common.ControlProtocol;
 import com.blg.rtu.protocol.p206.common.ProtocolSupport;
-import com.blg.rtu.util.ByteUtilUnsigned;
 
 public class Answer_D2_D6 extends ProtocolSupport{
 

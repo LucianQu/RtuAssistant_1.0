@@ -32,10 +32,22 @@
 			        android:text="@string/func_07_010_item01"
 			    	style="@style/func_item_viewtext_style_100_a"/>
 			    <!-- 新版本SDK要求填写属性lableFor,类似于填写一个ID来绑定这个控件，否则警告 -->
-			    <TextView
-					android:id="@+id/func_07_010_item01"  
-					android:labelFor="@id/func_07_010_item01" 
-				    style="@style/func_item_viewtext_style_100"/>
+			     <ImageView 
+			        android:id="@+id/btn_in"
+			    	android:layout_width="@dimen/img_btn_layout_width_30"
+			        android:layout_height="@dimen/img_btn_layout_height_30"
+			        android:layout_marginLeft="2dp"
+			        android:paddingTop="3dp"
+			        android:src="@drawable/as_in"
+			        android:contentDescription="@string/txtBtn"/>
+			       <ProgressBar
+				    	android:id="@+id/paramInProgress"
+				    	style="@style/func_progressbar_style"  
+				        android:layout_width="25dp"
+				        android:layout_height="25dp"
+					    android:layout_marginLeft="30dp"
+			            android:layout_gravity="center_vertical|center_horizontal"
+				    	android:visibility="gone"/>
 			</LinearLayout>
 			
 			<LinearLayout
@@ -46,20 +58,32 @@
 			        android:text="@string/func_07_010_item02"
 			    	style="@style/func_item_viewtext_style_100_a"/>
 			    <!-- 新版本SDK要求填写属性lableFor,类似于填写一个ID来绑定这个控件，否则警告 -->
-			    <TextView
-					android:id="@+id/func_07_020_item02"  
-					android:labelFor="@id/func_07_020_item02" 
-				    style="@style/func_item_viewtext_style_100"/>
+			    <ImageView 
+			        android:id="@+id/btn_out"
+			     	android:layout_width="@dimen/img_btn_layout_width_30"
+			        android:layout_height="@dimen/img_btn_layout_height_30"
+			        android:layout_marginLeft="2dp"
+			        android:paddingTop="3dp"
+			        android:src="@drawable/as_out"
+			        android:contentDescription="@string/txtBtn"/>
+			        <ProgressBar
+				    	android:id="@+id/outProgress"
+				    	style="@style/func_progressbar_style"  
+				        android:layout_width="25dp"
+				        android:layout_height="25dp"
+					    android:layout_marginLeft="30dp"
+			            android:layout_gravity="center_vertical|center_horizontal"
+				    	android:visibility="gone"/>
 			</LinearLayout>
 			
 		 </LinearLayout>
 	     
 		 <!-- start 底部 -->
-		 <LinearLayout 
+		<!--  <LinearLayout 
 	        android:id="@+id/f_05_070_Load"
 	        style="@style/func_progressbar_linearlayout_style" >
 		    <ProgressBar
 		        style="@style/func_progressbar_style" />
-		 </LinearLayout>
+		 </LinearLayout> -->
 	</FrameLayout>
 </LinearLayout>

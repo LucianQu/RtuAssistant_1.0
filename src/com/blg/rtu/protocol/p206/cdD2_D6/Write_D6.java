@@ -4,7 +4,6 @@ import java.util.HashMap;
 
 import com.blg.rtu.protocol.p206.common.*;
 import com.blg.rtu.protocol.p206.util.*;
-import com.blg.rtu.util.ByteUtilUnsigned;
 
 public class Write_D6 extends ProtocolSupport{
 	private static final int len = Constant.Bits_Head 

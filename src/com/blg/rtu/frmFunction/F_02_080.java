@@ -240,13 +240,13 @@ public class F_02_080  extends FrmParent {
 	 * 导出设置数据
 	 */
 	public void outSetData(Vo2Xml vo) {
-//		vo.setV_02_080_item01(item01.getText().toString()) ;
+		vo.setV_02_080_item01(item01.getText().toString()) ;
 	}
 	/**
 	 * 导入设置数据
 	 */
 	public void inSetData(Vo2Xml vo) {
-//		item01.setText(vo.getV_02_080_item01());
+		item01.setText(vo.getV_02_080_item01());
 	}
 	
 	@Override

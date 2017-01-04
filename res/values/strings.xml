@@ -467,9 +467,9 @@
     <string name="func_06_010_item04_04">电导率</string>
     <string name="func_06_010_item04_05">浊度</string>
      
-    <string name="func_07_010">批量导入/导出</string>
-   	<string name="func_07_010_item01">参数导入 ：</string>
-   	<string name="func_07_010_item02">参数导出 ：</string>
+    <string name="func_07_010">参数导入/导出</string>
+   	<string name="func_07_010_item01">参数导入: </string>
+   	<string name="func_07_010_item02">参数导出: </string>
    	
    	<string name="func_07_020">批量查询</string>
    	<string name="func_07_020_item01">自动查询</string>
@@ -530,7 +530,15 @@
 	<string name="txtAlarmNoSetDataFile">文件不存在</string>
 	<string name="txtConfirmInSetData">确定导入吗？</string>
 	
-	
+	<!--&#160;
+	空格：&#160;
+	窄空格：&#8201;
+	&nbsp;是html中的空格的转义
+	&#160;是XSL中的。
+	XSL并不认识&nbsp;他会原样输出。
+	PS:
+	XSL是可扩展样式表语言的外语缩写，是一种用于以可读格式呈现 XML（标准通用标记语言的子集）数据的语言。
+	XSL = XML 样式表  -->
 	<string name="txtLoopQuery_type">查询类型</string>
 	<string name="txtLoopQuery_interval">间隔</string>
 	<string name="txtLoopQuery_times">发送/接收</string>
@@ -569,9 +577,9 @@
     <string name="rtuLogListViewHeight">256</string>
     
     <!-- 当人工点击按钮连接网络时，等待连接结果的超时时长，即动画时长，单位毫秒 -->
-    <string name="tcpConnectTimeout">40000</string>
+    <string name="tcpConnectTimeout">30000</string>
     <!-- 等待命令结果的超时时长，即动画时长，单位毫秒 -->
-    <string name="commandResultTimout">30000</string>
+    <string name="commandResultTimout">20000</string>
     
     <!-- 间隔一段时间(毫秒)后，再次上线，认为是在同一个RTU上，不再发自动命令 -->
     <string name="intervalStillAtOneRtu">180000</string>

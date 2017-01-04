@@ -191,10 +191,10 @@ public class F_04_080 extends FrmParent {
 	 */
 	public void outSetData(Vo2Xml vo) {
 		StringBuffer sb1 = new StringBuffer() ;
-		if(cb01.isChecked()){sb1.append("1;") ;}else{sb1.append("0;") ;}
-		if(cb02.isChecked()){sb1.append("1;") ;}else{sb1.append("0;") ;}
+		/*if(cb01.isChecked()){sb1.append("1;") ;}else{sb1.append("0;") ;}
+		if(cb02.isChecked()){sb1.append("1;") ;}else{sb1.append("0;") ;}*/
 		if(cb03.isChecked()){sb1.append("1;") ;}else{sb1.append("0;") ;}
-		if(cb04.isChecked()){sb1.append("1;") ;}else{sb1.append("0;") ;}
+		/*if(cb04.isChecked()){sb1.append("1;") ;}else{sb1.append("0;") ;}
 		if(cb05.isChecked()){sb1.append("1;") ;}else{sb1.append("0;") ;}
 		if(cb06.isChecked()){sb1.append("1;") ;}else{sb1.append("0;") ;}
 		if(cb07.isChecked()){sb1.append("1;") ;}else{sb1.append("0;") ;}
@@ -204,12 +204,12 @@ public class F_04_080 extends FrmParent {
 		if(cb11.isChecked()){sb1.append("1;") ;}else{sb1.append("0;") ;}
 		if(cb12.isChecked()){sb1.append("1;") ;}else{sb1.append("0;") ;}
 		if(cb13.isChecked()){sb1.append("1;") ;}else{sb1.append("0;") ;}
-		if(cb14.isChecked()){sb1.append("1") ;}else{sb1.append("0") ;}
+		if(cb14.isChecked()){sb1.append("1") ;}else{sb1.append("0") ;}*/
 		StringBuffer sb2 = new StringBuffer() ;
-		sb2.append(item01.getText().toString() + ";") ;
-		sb2.append(item02.getText().toString() + ";") ;
+		/*sb2.append(item01.getText().toString() + ";") ;
+		sb2.append(item02.getText().toString() + ";") ;*/
 		sb2.append(item03.getText().toString() + ";") ;
-		sb2.append(item04.getText().toString() + ";") ;
+		/*sb2.append(item04.getText().toString() + ";") ;
 		sb2.append(item05.getText().toString() + ";") ;
 		sb2.append(item06.getText().toString() + ";") ;
 		sb2.append(item07.getText().toString() + ";") ;
@@ -219,7 +219,7 @@ public class F_04_080 extends FrmParent {
 		sb2.append(item11.getText().toString() + ";") ;
 		sb2.append(item12.getText().toString() + ";") ;
 		sb2.append(item13.getText().toString() + ";") ;
-		sb2.append(item14.getText().toString()) ;
+		sb2.append(item14.getText().toString()) ;*/
 
 		String s1 = sb1.toString() ;
 		String s2 = sb2.toString() ;
@@ -251,10 +251,10 @@ public class F_04_080 extends FrmParent {
 						for(int i = 0 ; i < ss.length ; i++){
 							if(ss[i] != null && !ss[i].equals("")){
 								if(ss[i].equals("1")){
-									if(i == 0){cb01.setChecked(true);} 
-									if(i == 1){cb02.setChecked(true);}
-									if(i == 2){cb03.setChecked(true);}
-									if(i == 3){cb04.setChecked(true);}
+									/*if(i == 0){cb01.setChecked(true);} 
+									if(i == 1){cb02.setChecked(true);}*/
+									if(i == 0){cb03.setChecked(true);}
+									/*if(i == 3){cb04.setChecked(true);}
 									if(i == 4){cb05.setChecked(true);}
 									if(i == 5){cb06.setChecked(true);}
 									if(i == 6){cb07.setChecked(true);}
@@ -264,12 +264,12 @@ public class F_04_080 extends FrmParent {
 									if(i == 10){cb11.setChecked(true);}
 									if(i == 11){cb12.setChecked(true);}
 									if(i == 12){cb13.setChecked(true);}
-									if(i == 13){cb14.setChecked(true);}
+									if(i == 13){cb14.setChecked(true);}*/
 								}else{
-									if(i == 0){cb01.setChecked(false);} 
-									if(i == 1){cb02.setChecked(false);}
+									/*if(i == 0){cb01.setChecked(false);} 
+									if(i == 1){cb02.setChecked(false);}*/
 									if(i == 2){cb03.setChecked(false);}
-									if(i == 3){cb04.setChecked(false);}
+								/*	if(i == 3){cb04.setChecked(false);}
 									if(i == 4){cb05.setChecked(false);}
 									if(i == 5){cb06.setChecked(false);}
 									if(i == 6){cb07.setChecked(false);}
@@ -279,7 +279,7 @@ public class F_04_080 extends FrmParent {
 									if(i == 10){cb11.setChecked(false);}
 									if(i == 11){cb12.setChecked(false);}
 									if(i == 12){cb13.setChecked(false);}
-									if(i == 13){cb14.setChecked(false);}
+									if(i == 13){cb14.setChecked(false);}*/
 								}
 							}
 						}
@@ -291,10 +291,10 @@ public class F_04_080 extends FrmParent {
 					if(ss != null && ss.length > 0){
 						for(int i = 0 ; i < ss.length ; i++){
 							if(ss[i] != null){
-								if(i == 0){item01.setText(ss[i]);} 
-								if(i == 1){item02.setText(ss[i]);} 
+								/*if(i == 0){item01.setText(ss[i]);} 
+								if(i == 1){item02.setText(ss[i]);} */
 								if(i == 2){item03.setText(ss[i]);} 
-								if(i == 3){item04.setText(ss[i]);} 
+								/*if(i == 3){item04.setText(ss[i]);} 
 								if(i == 4){item05.setText(ss[i]);} 
 								if(i == 5){item06.setText(ss[i]);} 
 								if(i == 6){item07.setText(ss[i]);} 
@@ -304,7 +304,7 @@ public class F_04_080 extends FrmParent {
 								if(i == 10){item11.setText(ss[i]);} 
 								if(i == 11){item12.setText(ss[i]);} 
 								if(i == 12){item13.setText(ss[i]);} 
-								if(i == 13){item14.setText(ss[i]);} 
+								if(i == 13){item14.setText(ss[i]);} */
 							}
 						}
 					}

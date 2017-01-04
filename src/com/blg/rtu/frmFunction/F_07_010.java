@@ -1,53 +1,47 @@
 package com.blg.rtu.frmFunction;
 
 
+import java.io.File;
+
 import android.app.Activity;
-import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.InputFilter;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.blg.rtu.MainActivity;
 import com.blg.rtu.R;
 import com.blg.rtu.frmChannel.ChFragment_01;
+import com.blg.rtu.frmChannel.ChFragment_03;
 import com.blg.rtu.frmChannel.helpCh1.ChBusi_01_Operate;
+import com.blg.rtu.help.HelpSaveSetDataToFile;
 import com.blg.rtu.protocol.RtuData;
 import com.blg.rtu.protocol.p206.Code206;
 import com.blg.rtu.protocol.p206.CommandCreator;
-import com.blg.rtu.protocol.p206.cd16_56.Data_16;
-import com.blg.rtu.protocol.p206.cd16_56.Data_56;
-import com.blg.rtu.protocol.p206.cd16_56.Param_16;
-import com.blg.rtu.protocol.p206.cdC2.Data_C2;
-import com.blg.rtu.util.Constant;
 import com.blg.rtu.util.DialogAlarm;
+import com.blg.rtu.util.DialogConfirm;
 import com.blg.rtu.util.ImageUtil;
-import com.blg.rtu.util.Preferences;
+import com.blg.rtu.vo2xml.Help;
 import com.blg.rtu.vo2xml.Vo2Xml;
 
 public class F_07_010  extends FrmParent {
-	
-	//private final static int requestLen_6 = 6 ; //输入长度
 	public ChBusi_01_Operate chb;
 	public ChFragment_01 chf;
 	private TextView title ;
-
-	private TextView item01  ;
-	private TextView item02 ;
 	
+	private ProgressBar inProgress ;
+	private ProgressBar outProgress ;
 	
-
-	//private ImageView btnSet ;
-	private ImageView btnRead ;
-	
+	private ImageView btn_in ;
+	private ImageView btn_out ;
 
 	@Override
 	public void onAttach(Activity activity) {
@@ -61,8 +55,6 @@ public class F_07_010  extends FrmParent {
 		super.onCreate(savedInstanceState);
 		cntFrmOpened = false ;
 		loading = false ;
-		//chf = (ChFragment_01)getFragmentManager().findFragmentByTag(ChFragment_01.TAG);
-		//FragmentManager fm = getActivity.getSupportFragmentManager();
 		chf = new ChFragment_01();
 		chf.onAttach(this.act);
 		chb = new ChBusi_01_Operate(chf) ;
@@ -73,46 +65,124 @@ public class F_07_010  extends FrmParent {
 			LayoutInflater inflater, 
 			ViewGroup container,
 			Bundle savedInstanceState) {
-		View view = inflater.inflate(R.layout.f_func_05_070, container, false);
+		View view = inflater.inflate(R.layout.f_func_07_010, container, false);
 
-		title = (TextView)view.findViewById(R.id.f_05_070_Title) ;
-		funcFrm = (FrameLayout)view.findViewById(R.id.f_05_070_Frm) ;
-		cover = (LinearLayout)view.findViewById(R.id.f_05_070_Load) ;
+		title = (TextView)view.findViewById(R.id.f_07_010_Title) ;
+		funcFrm = (FrameLayout)view.findViewById(R.id.f_07_010_Frm) ;
+		inProgress = (ProgressBar)view.findViewById(R.id.paramInProgress);
+		outProgress = (ProgressBar)view.findViewById(R.id.outProgress);
 		
-		item01 = (TextView)view.findViewById(R.id.func_05_070_item01);
-		item02 = (TextView)view.findViewById(R.id.func_05_070_item02);
-		
-		
-		String str = Preferences.getInstance().getString(Constant.func_vk_05_070_01) ;
-		if(!str.equals(Constant.errorStr)){
-			item01.setText(str); 
-		}
-		
-		str = Preferences.getInstance().getString(Constant.func_vk_05_070_02) ;
-		if(!str.equals(Constant.errorStr)){
-			item02.setText(str); 
-		}
-		
-		//item01.addTextChangedListener(new MyTextWatcher(Constant.func_vk_04_110_01));
-		
-		//btnSet = (ImageView)view.findViewById(R.id.btn_set);
-		btnRead = (ImageView)view.findViewById(R.id.btn_read);
-		
-		resultDt = (TextView)view.findViewById(R.id.resultDatetime);
-		
+		btn_in = (ImageView)view.findViewById(R.id.btn_in);
+		btn_out= (ImageView)view.findViewById(R.id.btn_out);
 		//设置监听器
 		title.setOnClickListener(titleClickLisn) ;
-		//btnSet.setOnClickListener(btnSetLisn);
-		btnRead.setOnClickListener(btnReadLisn);
-		
-		str = Preferences.getInstance().getString(Constant.func_vk_05_070_dt) ;
-		if(!str.equals(Constant.errorStr)){
-			this.resultDt.setText(str) ;
-		}
+	
+		btn_in.setOnClickListener(btnInLisn);
+		btn_out.setOnClickListener(btnOutLisn);
 		chb.toConnectNet();
 		return view ;
 	}
 
+	//设置按钮点击事件
+	protected Button.OnClickListener btnInLisn = new Button.OnClickListener(){
+		@Override
+		public void onClick(View v) {
+			btn_in.setVisibility(View.GONE);
+			inProgress.setVisibility(View.VISIBLE);
+			if(!HelpSaveSetDataToFile.isInFileExist(chf.act)){
+				new DialogAlarm().showDialog(chf.act, chf.act.getResources().getString(R.string.txtAlarmNoSetDataFile) + 
+						"\n" + "请确认导入路径是否有文件：" + "\n" + "路径：" + HelpSaveSetDataToFile.getInFile(chf.act).getPath()) ;	
+				btn_in.setVisibility(View.VISIBLE) ;
+				inProgress.setVisibility(View.GONE) ;
+			}else{
+				new DialogConfirm().showDialog(chf.act,
+						chf.act.getResources().getString(R.string.txtConfirmInSetData) + "\n" +
+				"导入路径：" + HelpSaveSetDataToFile.getInFile(chf.act).getPath(),
+					new DialogConfirm.CallBackInterface(){
+						@Override
+						public void dialogCallBack(Object o) {
+							if((Boolean)o){
+								readInFile();
+							}else{
+								btn_in.setVisibility(View.VISIBLE) ;
+								inProgress.setVisibility(View.GONE) ;
+							}
+						}
+				}) ;
+			}
+		}
+		private void readInFile(){
+			try{
+				File f = HelpSaveSetDataToFile.getInFile(chf.act) ;
+				new Help().in(chf.act, f) ;
+				btn_in.setVisibility(View.VISIBLE) ;
+				inProgress.setVisibility(View.GONE) ;
+				Toast.makeText(chf.act, "导入命令数据成功", Toast.LENGTH_SHORT).show() ;
+			}catch(Exception e){
+				btn_in.setVisibility(View.VISIBLE) ;
+				inProgress.setVisibility(View.GONE) ;
+				Toast.makeText(chf.act, "导入命令数据失败", Toast.LENGTH_SHORT).show() ;
+				Log.e(ChFragment_03.class.getName(), "导入命令数据失败", e) ;
+			}
+		}
+	} ;
+	
+	//设置按钮点击事件
+		protected Button.OnClickListener btnOutLisn = new Button.OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+				btn_out.setVisibility(View.GONE) ;
+				outProgress.setVisibility(View.VISIBLE) ;
+				if(HelpSaveSetDataToFile.isInFileExist(chf.act)){
+					new DialogConfirm().showDialog(chf.act,
+							chf.act.getResources().getString(R.string.txtConfirmReplaceSetData) + "\n" + 
+							"导出路径：" + HelpSaveSetDataToFile.getInFile(chf.act).getPath(),
+						new DialogConfirm.CallBackInterface(){
+							@Override
+							public void dialogCallBack(Object o) {
+								if((Boolean)o){
+									saveOutFile();
+								}else{
+									btn_out.setVisibility(View.VISIBLE) ;
+									outProgress.setVisibility(View.GONE) ;
+								}
+							}
+					}) ;			
+				}else{
+					new DialogConfirm().showDialog(chf.act,"是否导出配置" + "\n" +
+							"导出路径：" + HelpSaveSetDataToFile.getInFile(chf.act).getPath(),
+						new DialogConfirm.CallBackInterface(){
+							@Override
+							public void dialogCallBack(Object o) {
+								if((Boolean)o){
+									saveOutFile();
+								}else{
+									btn_out.setVisibility(View.VISIBLE) ;
+									outProgress.setVisibility(View.GONE) ;
+								}
+							}
+					}) ;			
+				
+				}
+			}
+			private void saveOutFile(){
+				try{
+					String xml = new Help().out(chf.act) ;
+					File f = HelpSaveSetDataToFile.getInFile(chf.act) ;
+					HelpSaveSetDataToFile.saveData(f, xml) ;
+					btn_out.setVisibility(View.VISIBLE) ;
+					outProgress.setVisibility(View.GONE) ;
+					Toast.makeText(chf.act, "导出命令数据成功", Toast.LENGTH_SHORT).show() ;
+					//Toast.makeText(chf.act, "路径:" + f.getPath(), Toast.LENGTH_LONG).show() ;
+				}catch(Exception e){
+					btn_out.setVisibility(View.VISIBLE) ;
+					outProgress.setVisibility(View.GONE) ;
+					Toast.makeText(chf.act, "导出命令数据失败", Toast.LENGTH_SHORT).show() ;
+					Log.e(ChFragment_03.class.getName(), "导出命令数据失败", e) ;
+				}
+			}
+		} ;
 	
 	/**
 	 * 查询命令前进行检查
@@ -129,19 +199,6 @@ public class F_07_010  extends FrmParent {
 	 */
 	@Override
 	protected boolean checkBeforeSet(boolean showDialog){
-	/*	String value = item01.getText().toString() ;//整数部分
-
-		if(value == null || value.equals("")){
-			if(showDialog)new DialogAlarm().showDialog(act, "剩余水量报警值必须填写！") ;
-			return false ;
-		} 
-		
-		int v = Integer.valueOf(value) ;
-		if(v < 0 || v > 99999999){
-			if(showDialog)new DialogAlarm().showDialog(act, "剩余水量报警值必须是0~999999的数字！") ;
-			return false ;
-		}*/
-
 		return true ;
 	}
 	
@@ -158,15 +215,6 @@ public class F_07_010  extends FrmParent {
 	 */
 	@Override
 	protected void setCommand(){
-	/*	String value = item01.getText().toString() ;//整数部分
-
-		Param_16 p = new Param_16() ;
-		if(value == null || value.equals("")){
-			p.setWaterRemainAlarm_0to999999(0) ;
-		}else{
-			p.setWaterRemainAlarm_0to999999(Integer.valueOf(value)) ;
-		}
-		this.sendRtuCommand(new CommandCreator().cd_16(p, null), false) ;*/
 	}
 	
 	/**
@@ -174,7 +222,6 @@ public class F_07_010  extends FrmParent {
 	 */
 	@Override
 	public void commandHasProblem(){
-		this.title.setCompoundDrawables(ImageUtil.getTitlLeftImg_item005(this.act), null, ImageUtil.getTitlRightImg_problem(this.act), null);
 	}
 	
 	/**
@@ -182,7 +229,6 @@ public class F_07_010  extends FrmParent {
 	 */
 	@Override
 	public void commandSended(){
-		this.title.setCompoundDrawables(ImageUtil.getTitlLeftImg_item005(this.act), null, ImageUtil.getTitlRightImg_blue(this.act), null);
 	}
 	
 	/**
@@ -190,7 +236,6 @@ public class F_07_010  extends FrmParent {
 	 */
 	@Override
 	public void commandSendedCallBack(){
-		this.title.setCompoundDrawables(ImageUtil.getTitlLeftImg_item005(this.act), null, ImageUtil.getTitlRightImg_red(this.act), null); 
 	}
 	/**
 	 * 功能项右侧图标复原
@@ -206,51 +251,17 @@ public class F_07_010  extends FrmParent {
 	 */
 	@Override
 	public void receiveRtuData(RtuData d){
-		long waterInstant;
-		super.receiveRtuData(d) ;
-		this.title.setCompoundDrawables(ImageUtil.getTitlLeftImg_item005(this.act), null, ImageUtil.getTitlRightImg_green(this.act), null); 
-//		super.scrollTo(this.btnRead) ;
-		Object subD = d.subData ;
-		if(subD != null){
-			if(subD instanceof Data_C2){
-				Data_C2 sd = (Data_C2)subD ;
-				waterInstant = sd.getWaterInstant();
-				if(waterInstant < 0) {
-					waterInstant = - waterInstant;
-					if ((waterInstant / 1000) > 0) {
-						item01.setText(("-" + waterInstant / 1000) + "." + (waterInstant + 1000) % 1000) ;
-					}else if((waterInstant / 1000) == 0){
-						item01.setText("-0." + (waterInstant + 1000) % 1000) ;
-					}
-				}else{
-					if ((waterInstant / 1000) > 0) {
-						item01.setText((waterInstant / 1000) + "." + (waterInstant + 1000) % 1000) ;
-					}else if((waterInstant / 1000) == 0){
-						item01.setText("0." + (waterInstant + 1000) % 1000) ;
-					}
-				}
-				
-				item02.setText(sd.getWaterConsumption() + "") ;
-			}/*else if(subD instanceof Data_16){
-				Data_16 sd = (Data_16)subD ;
-				item01.setText(sd.getWaterRemainAlarm() + "") ;
-				item02.setText("") ;
-			}*/
-		}
-		Preferences.getInstance().putString(Constant.func_vk_05_070_dt, this.resultDt.getText().toString()) ;
 	}
 	
 	/**
 	 * 导出设置数据
 	 */
 	public void outSetData(Vo2Xml vo) {
-		//vo.setV_05_070_item01(item01.getText().toString()) ;
 	}
 	/**
 	 * 导入设置数据
 	 */
 	public void inSetData(Vo2Xml vo) {
-		//item01.setText(vo.getV_04_110_item01()) ;
 	}
 	
 	@Override
