@@ -28,7 +28,7 @@ public class ChBusi_01_Init {
 	}
 	
 	public void initView(Context ctx){
-		chf.btnGr = (RadioGroup) chf.view.findViewById(R.id.chSelectRadio);
+	/*	chf.btnGr = (RadioGroup) chf.view.findViewById(R.id.chSelectRadio);
 		chf.btnSm = (RadioButton)chf.view.findViewById(R.id.chSm) ;
 		chf.btnTcp = (RadioButton)chf.view.findViewById(R.id.chTcp) ;
 
@@ -86,9 +86,9 @@ public class ChBusi_01_Init {
 			chf.port.setText(ctx.getResources().getString(R.string.wifi_port)) ; 
 		}
 		
-		chf.progressBar = (ProgressBar) chf.view.findViewById(R.id.tcpProgress);
-		chf.tcpConnect = (ImageView) chf.view.findViewById(R.id.tcpConnect);
-
+		chf.progressBar = (ProgressBar) chf.view.findViewById(R.id.tcpProgress);*/
+		/*chf.tcpConnect = (ImageView) chf.view.findViewById(R.id.tcpConnect);*/
+		chf.paramProgress = (ProgressBar)chf.view.findViewById(R.id.paramProgress);
 		chf.tcpConnectStatus = (TextView)chf.view.findViewById(R.id.tcpConnectStatus) ;
 		chf.tcpConnectStatus.setText(chf.act.getResources().getString(R.string.tcpStatus) + chf.act.getResources().getString(R.string.noConnected)) ;	
 		

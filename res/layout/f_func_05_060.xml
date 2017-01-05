@@ -41,6 +41,7 @@
 			    <EditText
 					android:id="@+id/func_05_060_item01"  
 					android:labelFor="@id/func_05_060_item01" 
+					android:text="1"
 				    style="@style/func_item_editnumber_style_80"/>
 			    <TextView
 			        android:text="@string/func_item_unit_tiao"

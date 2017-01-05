@@ -41,6 +41,9 @@ public class ChFragment_01 extends Fragment {
 	public ProgressBar progressBar ;
 	public ImageView tcpConnect ;
 	
+	public ProgressBar paramProgress ;
+	
+	
 	public TextView tcpConnectStatus ;//tcp网络连接状态显示
 	
 	public Boolean tcpConnected ;//tcp网络已经连接上
@@ -79,7 +82,7 @@ public class ChFragment_01 extends Fragment {
 
 		busiOperate.registerListener() ;
 		
-		//this.defaultOperate() ;
+		this.defaultOperate() ;
 		
 		return view ;
 	}

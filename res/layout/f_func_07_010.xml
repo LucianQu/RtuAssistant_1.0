@@ -45,7 +45,7 @@
 				    	style="@style/func_progressbar_style"  
 				        android:layout_width="25dp"
 				        android:layout_height="25dp"
-					    android:layout_marginLeft="30dp"
+					    android:layout_marginLeft="2dp"
 			            android:layout_gravity="center_vertical|center_horizontal"
 				    	android:visibility="gone"/>
 			</LinearLayout>
@@ -71,7 +71,7 @@
 				    	style="@style/func_progressbar_style"  
 				        android:layout_width="25dp"
 				        android:layout_height="25dp"
-					    android:layout_marginLeft="30dp"
+					    android:layout_marginLeft="2dp"
 			            android:layout_gravity="center_vertical|center_horizontal"
 				    	android:visibility="gone"/>
 			</LinearLayout>

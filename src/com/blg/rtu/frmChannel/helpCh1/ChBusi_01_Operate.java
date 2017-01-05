@@ -33,7 +33,7 @@ public class ChBusi_01_Operate {
 	
 	
 	public void registerListener(){
-		chf.btnSm.setOnClickListener(new View.OnClickListener() {
+		/*chf.btnSm.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				chf.btnTcp.setChecked(false) ;
@@ -41,9 +41,9 @@ public class ChBusi_01_Operate {
 				
 				chf.phoneNumber.requestFocus();
 			}
-		});
+		});*/
 		//
-		chf.btnTcp.setOnClickListener(new View.OnClickListener() {
+		/*chf.btnTcp.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				chf.btnTcp.setChecked(true) ;
@@ -51,9 +51,9 @@ public class ChBusi_01_Operate {
 				
 				chf.ip1.requestFocus() ;
 			}
-		});
+		});*/
 		//请求连接按钮点击事件
-		chf.tcpConnect.setOnClickListener(new Button.OnClickListener() {
+		/*chf.tcpConnect.setOnClickListener(new Button.OnClickListener() {
 			public void onClick(View v) {
 				//act.getSoundAlert().playDing() ;
 				chf.btnTcp.setChecked(true) ;
@@ -63,10 +63,102 @@ public class ChBusi_01_Operate {
 					toConnectNet() ;
 				}
 			}
+		}) ;*/
+		
+		
+		
+		//设置按钮点击事件
+		chf.in.setOnClickListener(new OnClickListener(){
+			@Override
+			public void onClick(View v) {
+				chf.paramProgress.setVisibility(View.VISIBLE);
+				if(!HelpSaveSetDataToFile.isInFileExist(chf.act)){
+					new DialogAlarm().showDialog(chf.act, chf.act.getResources().getString(R.string.txtAlarmNoSetDataFile) + 
+							"\n" + "请确认导入路径是否有文件：" + "\n" + "路径：" + HelpSaveSetDataToFile.getInFile(chf.act).getPath()) ;	
+					chf.paramProgress.setVisibility(View.GONE) ;
+				}else{
+					new DialogConfirm().showDialog(chf.act,
+							chf.act.getResources().getString(R.string.txtConfirmInSetData) + "\n" +
+					"导入路径：" + HelpSaveSetDataToFile.getInFile(chf.act).getPath(),
+						new DialogConfirm.CallBackInterface(){
+							@Override
+							public void dialogCallBack(Object o) {
+								if((Boolean)o){
+									readInFile();
+								}else{
+									chf.paramProgress.setVisibility(View.GONE) ;
+								}
+							}
+					}) ;
+				}
+			}
+			private void readInFile(){
+				try{
+					File f = HelpSaveSetDataToFile.getInFile(chf.act) ;
+					new Help().in(chf.act, f) ;
+					chf.paramProgress.setVisibility(View.GONE) ;
+					Toast.makeText(chf.act, "导入命令数据成功", Toast.LENGTH_SHORT).show() ;
+				}catch(Exception e){
+					chf.paramProgress.setVisibility(View.GONE) ;
+					Toast.makeText(chf.act, "导入命令数据失败", Toast.LENGTH_SHORT).show() ;
+					Log.e(ChFragment_03.class.getName(), "导入命令数据失败", e) ;
+				}
+			}
 		}) ;
 		
-		
+		//设置按钮点击事件
 		chf.out.setOnClickListener(new OnClickListener(){
+				@Override
+				public void onClick(View v) {
+					chf.paramProgress.setVisibility(View.VISIBLE) ;
+					if(HelpSaveSetDataToFile.isInFileExist(chf.act)){
+						new DialogConfirm().showDialog(chf.act,
+								chf.act.getResources().getString(R.string.txtConfirmReplaceSetData) + "\n" + 
+								"导出路径：" + HelpSaveSetDataToFile.getInFile(chf.act).getPath(),
+							new DialogConfirm.CallBackInterface(){
+								@Override
+								public void dialogCallBack(Object o) {
+									if((Boolean)o){
+										saveOutFile();
+									}else{
+										chf.paramProgress.setVisibility(View.GONE) ;
+									}
+								}
+						}) ;			
+					}else{
+						new DialogConfirm().showDialog(chf.act,"是否导出配置" + "\n" +
+								"导出路径：" + HelpSaveSetDataToFile.getInFile(chf.act).getPath(),
+							new DialogConfirm.CallBackInterface(){
+								@Override
+								public void dialogCallBack(Object o) {
+									if((Boolean)o){
+										saveOutFile();
+									}else{
+										chf.paramProgress.setVisibility(View.GONE) ;
+									}
+								}
+						}) ;			
+					
+					}
+				}
+				private void saveOutFile(){
+					try{
+						String xml = new Help().out(chf.act) ;
+						File f = HelpSaveSetDataToFile.getInFile(chf.act) ;
+						HelpSaveSetDataToFile.saveData(f, xml) ;
+						chf.paramProgress.setVisibility(View.GONE) ;
+						Toast.makeText(chf.act, "导出命令数据成功", Toast.LENGTH_SHORT).show() ;
+						//Toast.makeText(chf.act, "路径:" + f.getPath(), Toast.LENGTH_LONG).show() ;
+					}catch(Exception e){
+						chf.paramProgress.setVisibility(View.GONE) ;
+						Toast.makeText(chf.act, "导出命令数据失败", Toast.LENGTH_SHORT).show() ;
+						Log.e(ChFragment_03.class.getName(), "导出命令数据失败", e) ;
+					}
+				}
+			}) ;
+		
+		
+		/*chf.out.setOnClickListener(new OnClickListener(){
 			@Override
 			public void onClick(View v) {
 				if(HelpSaveSetDataToFile.isFileExist(chf.act)){
@@ -126,7 +218,7 @@ public class ChBusi_01_Operate {
 					Log.e(ChFragment_03.class.getName(), "导入命令数据失败", e) ;
 				}
 			}
-		}) ;
+		}) ;*/
 		
 	}
 	/**
@@ -205,7 +297,7 @@ public class ChBusi_01_Operate {
 	 * @param showDialog
 	 * @return
 	 */
-	private boolean checkIpAndPort(boolean showDialog){
+	/*private boolean checkIpAndPort(boolean showDialog){
 		boolean ok = true ;
 
 		String strIp1 = chf.ip1.getText().toString().trim() ;
@@ -267,5 +359,5 @@ public class ChBusi_01_Operate {
 			}
 		}
 		return ok ;
-	}
+	}*/
 }

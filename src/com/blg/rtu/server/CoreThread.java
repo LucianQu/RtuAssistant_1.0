@@ -443,123 +443,74 @@ public class CoreThread {
 		private void doAutoQuery(int count){
 			switch(count){
 			case 0 : {
+				//查询时钟
 				new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_51(CoreThread.rtuId), false, true) ;
 				break;}
 			case 1 :{
-				new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_52(CoreThread.rtuId), false, true) ;
-				break;}
-			case 2 :{
+				//查询版本号
 				new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_EF(CoreThread.rtuId), false, true) ;
 				break;}
+			case 2 :{
+				//查询终端状态和报警状态
+				new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_5E(CoreThread.rtuId), false, true) ;
+				break;}
 			case 3 :{
+				//查询电池电压
 				new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_E0(CoreThread.rtuId), false, true) ;
 				break;}
 			case 4 :{
+				//查询电池电压报警值
 				new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_E1(CoreThread.rtuId), false, true) ;
 				break;}
-			case 5 :{
+			case 6 :{
+				//查询DTU工作模式
 				new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_CF(CoreThread.rtuId), false, true) ;
 				break;}
-			case 6 :{
-				new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_C9(CoreThread.rtuId), false, true) ;
+			case 5 :{
+				//查询出厂编号
+				new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_D3(CoreThread.rtuId), false, true) ;
 				break;}
 			case 7 :{
-				new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_CB(CoreThread.rtuId), false, true) ;
-				break;}
-			case 8 :{
+				//查询GPRS接入点
 				new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_CA(CoreThread.rtuId), false, true) ;
 				break;}
-			case 9 :{
+			case 8 :{
+				//查询中心IP地址
 				new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_CC(CoreThread.rtuId), false, true) ;
 				break;}
+			case 9 :{
+				//查询ICCID
+				new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_D4(CoreThread.rtuId), false, true) ;
+				break;}
 			case 10 :{
-				new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_CD(CoreThread.rtuId), false, true) ;
+				//查询上报协议配置
+				new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_D2(CoreThread.rtuId), false, true) ;
 				break;}
 			case 11 :{
-				new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_CE(CoreThread.rtuId), false, true) ;
-				break;}
-			case 12 :{
-				new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_C8(CoreThread.rtuId), false, true) ;
-				break;}
-			case 13 :{
-				new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_E2(CoreThread.rtuId), false, true) ;
-				break;}
-			case 14 :{
-				new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_E3(CoreThread.rtuId), false, true) ;
-				break;}
-			case 15 :{
-				new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_E4(CoreThread.rtuId), false, true) ;
-				break;}
-			case 16 :{
-				new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_E5(CoreThread.rtuId), false, true) ;
-				break;}
-			case 17 :{
-				new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_E6(CoreThread.rtuId), false, true) ;
-				break;}
-			case 18 :{
-				new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_E9(CoreThread.rtuId), false, true) ;
-				break;}
-			case 19 :{
-				new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_EA(CoreThread.rtuId), false, true) ;
-				break;}
-			case 20 :{
-				new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_E7(CoreThread.rtuId), false, true) ;
-				break;}
-			case 21 :{
-				new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_E8(CoreThread.rtuId), false, true) ;
-				break;}
-			case 22 :{
-				new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_EB(CoreThread.rtuId), false, true) ;
-				break;}
-			case 23 :{
-				new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_57(CoreThread.rtuId), false, true) ;
-				break;}
-			case 24 :{
-				new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_59(CoreThread.rtuId), false, true) ;
-				break;}
-			case 25 :{
-				new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_5A(CoreThread.rtuId), false, true) ;
-				break;}
-			case 26 :{
-				new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_64(CoreThread.rtuId), false, true) ;
-				break;}
-			case 27 :{
-				new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_54(CoreThread.rtuId), false, true) ;
-				break;}
-			case 28 :{
+				//数据上报间隔
 				new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_53(CoreThread.rtuId), false, true) ;
 				break;}
-			case 29 :{
-				new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_C5(CoreThread.rtuId), false, true) ;
+			case 12 :{
+				//上报起始时刻
+				new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_E8(CoreThread.rtuId), false, true) ;
 				break;}
-			case 30 :{
-				new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_55(CoreThread.rtuId), false, true) ;
-				break;}
-			case 31 :{
-				new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_56(CoreThread.rtuId), false, true) ;
-				break;}
-			case 32 :{
+			case 13 :{
+				//查询事件记录
 				new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_5D(CoreThread.rtuId), false, true) ;
 				break;}
-			case 33 :{
-				new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_5E(CoreThread.rtuId), false, true) ;
+			case 15 :{
+				//查询瞬时和累计
+				new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_C2(CoreThread.rtuId), false, true) ;
 				break;}
-			case 34 :{
-				new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_EC(CoreThread.rtuId), false, true) ;
-				break;}
-			case 35 :{
+			case 14 :{
+				//查询历史数据
 				ActivityProxyHandler obj = ActivityProxyHandler.getInstance();
 				if(obj != null){
 					obj.autoQueryCommand(Code206.cd_B1) ;
 				}
 				break;}
-			case 36 :{
-				ActivityProxyHandler obj = ActivityProxyHandler.getInstance();
-				if(obj != null){
-					obj.autoQueryCommand(Code206.cd_B0) ;
-				}
-				break;}
-			case 37 :{
+			case 16 :{
+				//查询日志记录
 				ActivityProxyHandler obj = ActivityProxyHandler.getInstance();
 				if(obj != null){
 					obj.autoQueryCommand(Code206.cd_ED) ;
@@ -769,106 +720,34 @@ public class CoreThread {
 					obj.autoSetCommand(Code206.cd_11) ;//设置遥测终端、中继站时钟
 					break;}
 				case 2 :{
-					obj.autoSetCommand(Code206.cd_12) ;//设置遥测终端工作模式
+					obj.autoSetCommand(Code206.cd_F1) ;//设置电池池电压报警值
 					break;}
 				case 3 :{
 					obj.autoSetCommand(Code206.cd_90) ;//复位遥测终端参数和状态 
 					break;}
 				case 4 :{
-					obj.autoSetCommand(Code206.cd_91) ;//清空遥测终端历史数据单元
-					break;}
-				case 5 :{
-					obj.autoSetCommand(Code206.cd_F1) ;//设置电池池电压报警值
-					break;}
-				case 6 :{
 					obj.autoSetCommand(Code206.cd_DF) ;//设置DTU工作模式
 					break;}
-				case 7 :{
-					obj.autoSetCommand(Code206.cd_D9) ;//设置终端心跳周期
-					break;}
-				case 8 :{
-					obj.autoSetCommand(Code206.cd_DB) ;//设置终端主备通道
-					break;}
-				case 9 :{
+				case 5 :{
 					obj.autoSetCommand(Code206.cd_DA) ;//设置GPRS接入点
 					break;}
-				case 10 :{
+				case 6 :{
 					obj.autoSetCommand(Code206.cd_DC) ;//设置中心网址
 					break;}
-				case 11 :{
-					obj.autoSetCommand(Code206.cd_DD) ;//设置短信中心号码
+				case 7 :{
+					obj.autoSetCommand(Code206.cd_D6) ;//设置定时报协议格式
 					break;}
-				case 12 :{
-					obj.autoSetCommand(Code206.cd_DE) ;//设置卫星中心号码
+				case 8 :{
+					obj.autoSetCommand(Code206.cd_96) ;//设置206密码
 					break;}
-				case 13 :{
-					obj.autoSetCommand(Code206.cd_D8) ;//设置AD校准命令(代替了F2命令)
-					break;}
-				case 14 :{
-					obj.autoSetCommand(Code206.cd_F3) ;//设置仪表类型
-					break;}
-				case 15 :{
-					obj.autoSetCommand(Code206.cd_F4) ;//设置仪表量程
-					break;}
-				case 16 :{
-					obj.autoSetCommand(Code206.cd_F5) ;//设置仪表采集修正值
-					break;}
-				case 17 :{
-					obj.autoSetCommand(Code206.cd_F6) ;//设置仪表AD采集校准值
-					break;}
-				case 18 :{
-					obj.autoSetCommand(Code206.cd_F9) ;//设置仪表上电读值延时时间
-					break;}
-				case 19 :{
-					obj.autoSetCommand(Code206.cd_FA) ;//设置井口高程，水井深度，探头埋深
-					break;}
-				case 20 :{
-					obj.autoSetCommand(Code206.cd_F7) ;//设置数据采集种类及时间间隔
-					break;}
-				case 21 :{
-					obj.autoSetCommand(Code206.cd_F8) ;//设置上报起始时间
-					break;}
-				case 22 :{
-					obj.autoSetCommand(Code206.cd_FB) ;//设置水位上报种类
-					break;}
-				case 23 :{
-					obj.autoSetCommand(Code206.cd_17) ;//设置遥测终端的水位基值、水位上下限
-					break;}
-				case 24 :{
-					obj.autoSetCommand(Code206.cd_19) ;//设置遥测终端水质参数种类、上限值
-					break;}
-				case 25 :{
-					obj.autoSetCommand(Code206.cd_1A) ;//设置遥测终端水质参数种类、下限值
-					break;}
-				case 26 :{
-					obj.autoSetCommand(Code206.cd_1F) ;//设置遥测终端流量参数上限值
-					break;}
-				case 27 :{
-					obj.autoSetCommand(Code206.cd_20) ;//设置遥测终端检测参数启报阈值及固态存储时间段间隔
-					break;}
-				case 28 :{
-					obj.autoSetCommand(Code206.cd_A0) ;//设置遥测站需查询的实时数据种类 
-					break;}
-				case 29 :{
+				case 9 :{
 					obj.autoSetCommand(Code206.cd_A1) ;//设置遥测终端的数据自报种类及时间间隔
 					break;}
-				case 30 :{
-					obj.autoSetCommand(Code206.cd_D5) ;//设置定时上报的时刻
+				case 10 :{
+					obj.autoSetCommand(Code206.cd_F8) ;//设置上报起始时间
 					break;}
-				case 31 :{
-					obj.autoSetCommand(Code206.cd_15) ;//设置本次充值量
-					break;}
-				case 32 :{
-					obj.autoSetCommand(Code206.cd_16) ;//设置遥测终端剩余水量报警值
-					break;}
-				case 33 :{
-					obj.autoSetCommand(Code206.cd_1B) ;//设置终端站流量的表底（初始）值
-					break;}
-				case 34 :{
-					obj.autoSetCommand(Code206.cd_FC) ;//设置日志配置表
-					break;}
-				case 35 :{
-					obj.autoSetCommand(Code206.cd_82) ;//人工置数 遥测终端  
+				case 11 :{
+					obj.autoSetCommand(Code206.cd_91) ;//清空遥测终端历史数据单元
 					break;}
 				default : {//,,,,,
 					this.autoSetComplete() ;

@@ -468,14 +468,14 @@
     <string name="func_06_010_item04_05">浊度</string>
      
     <string name="func_07_010">参数导入/导出</string>
-   	<string name="func_07_010_item01">参数导入: </string>
-   	<string name="func_07_010_item02">参数导出: </string>
+   	<string name="func_07_010_item01">参数导入:</string>
+   	<string name="func_07_010_item02">参数导出:</string>
    	
    	<string name="func_07_020">批量查询</string>
-   	<string name="func_07_020_item01">自动查询</string>
+   	<string name="func_07_020_item01">自动查询:</string>
    	
    	<string name="func_07_030">批量设置</string>
-   	<string name="func_07_030_item01">自动设置</string>
+   	<string name="func_07_030_item01">自动设置:</string>
     
     <string name="func_item_unit_mg">(mg/L)</string>
     <string name="func_item_unit_us">(μs/cm)</string>

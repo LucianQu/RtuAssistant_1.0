@@ -8,17 +8,20 @@
 -keep class com.blg.rtu.SplashActivity { <init>(...); }
 
 # view res/layout/f_func_05_040.xml #generated:102
-# view res/layout/f_func_05_060.xml #generated:56
+# view res/layout/f_func_05_060.xml #generated:57
 # view res/layout/fch_04.xml #generated:19
 -keep class com.blg.rtu.compound.FixHeightListView { <init>(...); }
 
 # view res/layout/activity_main_channel_page.xml #generated:32
+# view res/layout/activity_main_function_page.xml #generated:270
 -keep class com.blg.rtu.frmChannel.ChFragment_01 { <init>(...); }
 
 # view res/layout/activity_main_channel_page.xml #generated:43
+# view res/layout/activity_main_function_page.xml #generated:273
 -keep class com.blg.rtu.frmChannel.ChFragment_02 { <init>(...); }
 
 # view res/layout/activity_main_channel_page.xml #generated:55
+# view res/layout/activity_main_function_page.xml #generated:276
 -keep class com.blg.rtu.frmChannel.ChFragment_03 { <init>(...); }
 
 # view res/layout/activity_main_channel_page.xml #generated:67
@@ -86,9 +89,6 @@
 
 # view res/layout/activity_main_function_page.xml #generated:232
 -keep class com.blg.rtu.frmFunction.F_05_070 { <init>(...); }
-
-# view res/layout/activity_main_function_page.xml #generated:270
--keep class com.blg.rtu.frmFunction.F_07_010 { <init>(...); }
 
 # view res/layout/activity_main_loopquery_page.xml #generated:32
 -keep class com.blg.rtu.frmLoopQuery.LpFragment_01 { <init>(...); }

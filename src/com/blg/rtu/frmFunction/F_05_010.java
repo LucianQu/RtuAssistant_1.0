@@ -211,7 +211,7 @@ public class F_05_010  extends FrmParent {
 	 */
 	@Override
 	public void commandHasProblem(){
-		this.title.setCompoundDrawables(ImageUtil.getTitlLeftImg_item001(this.act), null, ImageUtil.getTitlRightImg_problem(this.act), null);
+		this.title.setCompoundDrawables(ImageUtil.getTitlLeftImg_item005(this.act), null, ImageUtil.getTitlRightImg_problem(this.act), null);
 	}
 	
 	/**
@@ -234,7 +234,7 @@ public class F_05_010  extends FrmParent {
 	 */
 	@Override
 	public void resetLabelImg(){
-		this.title.setCompoundDrawables(ImageUtil.getTitlLeftImg_item001(this.act), null, ImageUtil.getTitlRightImg_gray(this.act), null); 
+		this.title.setCompoundDrawables(ImageUtil.getTitlLeftImg_item005(this.act), null, ImageUtil.getTitlRightImg_gray(this.act), null); 
 	}
 	
 	/**

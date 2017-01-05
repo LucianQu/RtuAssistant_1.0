@@ -541,7 +541,7 @@ public class F_02_050  extends FrmParent {
 	 */
 	@Override
 	public void resetLabelImg(){
-		this.title.setCompoundDrawables(ImageUtil.getTitlLeftImg_item001(this.act), null, ImageUtil.getTitlRightImg_gray(this.act), null); 
+		this.title.setCompoundDrawables(ImageUtil.getTitlLeftImg_item002(this.act), null, ImageUtil.getTitlRightImg_gray(this.act), null); 
 	}
 	
 	/**

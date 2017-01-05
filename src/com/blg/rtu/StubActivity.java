@@ -571,7 +571,7 @@ public class StubActivity extends ActivityAidl.Stub{
 				@Override
 				public void run() {
 					if(code.equals(Code206.cd_B1)){
-						//查询遥测终端固态存储数据
+						//查询水表历史数据
 						mAct.frgTool.f_05_040.autoQuery() ;
 					}else
 				/*	if(code.equals(Code206.cd_B0)){
@@ -605,12 +605,12 @@ public class StubActivity extends ActivityAidl.Stub{
 					if(code.equals(Code206.cd_11)){//设置遥测终端、中继站时钟
 						mAct.frgTool.f_01_020.autoSet() ;
 					}else
-					/*if(code.equals(Code206.cd_12)){//设置遥测终端工作模式
+				/*	if(code.equals(Code206.cd_12)){//设置遥测终端工作模式
 						mAct.frgTool.f_01_030.autoSet() ;
-					}else
+					}else*/
 					if(code.equals(Code206.cd_90)){//复位遥测终端参数和状态 
 						mAct.frgTool.f_01_050.autoSet() ;
-					}else*/
+					}else
 					if(code.equals(Code206.cd_91)){//清空遥测终端历史数据单元 
 						mAct.frgTool.f_01_060.autoSet() ;
 					}else
@@ -665,6 +665,12 @@ public class StubActivity extends ActivityAidl.Stub{
 					if(code.equals(Code206.cd_F8)){//设置上报起始时间
 						mAct.frgTool.f_03_090.autoSet() ;
 					}else
+					if(code.equals(Code206.cd_D6)){//设置上报协议配置
+						mAct.frgTool.f_02_110.autoSet() ;
+					}else
+					if(code.equals(Code206.cd_96)){//设置上报协议配置
+						mAct.frgTool.f_02_080.autoSet() ;
+					}else
 					/*if(code.equals(Code206.cd_FB)){//设置水位上报种类
 						mAct.frgTool.f_04_010.autoSet() ;
 					}else
@@ -709,7 +715,7 @@ public class StubActivity extends ActivityAidl.Stub{
 					}*/
 					else{
 						//未实现的
-						Log.e(tag, "未实现的自动查询命令" + code) ;
+						Log.e(tag, "未实现的自动设置命令" + code) ;
 					}
 				}
 			});

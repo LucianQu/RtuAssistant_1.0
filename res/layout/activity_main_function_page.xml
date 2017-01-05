@@ -268,7 +268,13 @@
 			    android:orientation="vertical"
 			    >
 		        <fragment android:id="@+id/f_07_010"
-			        android:name="com.blg.rtu.frmFunction.F_07_010"
+			        android:name="com.blg.rtu.frmChannel.ChFragment_01"
+				    style="@style/func_fragment_style"/>
+		        <fragment android:id="@+id/f_07_020"
+			        android:name="com.blg.rtu.frmChannel.ChFragment_02"
+				    style="@style/func_fragment_style"/>
+		        <fragment android:id="@+id/f_07_030"
+			        android:name="com.blg.rtu.frmChannel.ChFragment_03"
 				    style="@style/func_fragment_style"/>
 		   </LinearLayout>
 		   
