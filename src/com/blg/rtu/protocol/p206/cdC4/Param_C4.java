@@ -2,8 +2,6 @@ package com.blg.rtu.protocol.p206.cdC4;
 
 import java.io.Serializable;
 
-import com.blg.rtu.protocol.p206.cdA0_54.Param_A0;
-
 public class Param_C4 implements Serializable{
 	
 	private static final long serialVersionUID = 201611041456001L;

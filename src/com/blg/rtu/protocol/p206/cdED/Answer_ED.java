@@ -147,7 +147,7 @@ public class Answer_ED extends ProtocolSupport{
 						dd.setCommentsType("修改源：未知！");
 					}
 				}else if((b[n + 7] & 0xFF) == 0x02) {
-					dd.setContentType("类型：出厂启用");
+					dd.setContentType("内容：出厂启用");
 					
 					if((b[n + 8] & 0xFF) == 0x01) {
 						dd.setCommentsType("修改源：串口");

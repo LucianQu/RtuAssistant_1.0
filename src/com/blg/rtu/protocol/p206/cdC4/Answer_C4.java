@@ -3,8 +3,6 @@ package com.blg.rtu.protocol.p206.cdC4;
 import android.util.Log;
 import com.blg.rtu.util.ByteUtil;
 import com.blg.rtu.protocol.RtuData;
-import com.blg.rtu.protocol.p206.cd16_56.Data_16;
-import com.blg.rtu.protocol.p206.cdC2.Data_C2;
 import com.blg.rtu.protocol.p206.common.ProtocolSupport;
 import com.blg.rtu.protocol.p206.common.ControlProtocol;
 

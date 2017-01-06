@@ -1,12 +1,9 @@
 package com.blg.rtu.protocol.p206.cdC4;
 
 import java.util.HashMap;
-import java.util.TreeMap;
-
-import com.blg.rtu.util.ByteUtil;
-import com.blg.rtu.protocol.p206.cd20.Param_20;
 import com.blg.rtu.protocol.p206.common.ProtocolSupport;
 import com.blg.rtu.protocol.p206.util.Constant;
+import com.blg.rtu.util.ByteUtil;
 
 public class Write_C4  extends ProtocolSupport{
 	public static final int len = Constant.Bits_Head 
