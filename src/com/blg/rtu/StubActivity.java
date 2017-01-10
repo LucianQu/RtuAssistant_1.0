@@ -89,6 +89,7 @@ public class StubActivity extends ActivityAidl.Stub{
 					if(data.dataCode.equals(Code206.cd_10) || data.dataCode.equals(Code206.cd_50)){
 						//设置或查询终端地址
 						mAct.frgTool.f_01_010.receiveRtuData(data) ;
+						mAct.frgTool.fragment_loopq02.receiveRtuData(Code206.cd_50,data) ;
 					}else
 					if(data.dataCode.equals(Code206.cd_11) || data.dataCode.equals(Code206.cd_51)){
 						//设置或查询遥测终端、中继站时钟返回
@@ -101,6 +102,7 @@ public class StubActivity extends ActivityAidl.Stub{
 					if(data.dataCode.equals(Code206.cd_EF) ){
 						//查询遥测终端硬软件版本号
 						mAct.frgTool.f_01_040.receiveRtuData(data) ;
+						mAct.frgTool.fragment_loopq02.receiveRtuData(Code206.cd_EF,data) ;
 					}else
 					if(data.dataCode.equals(Code206.cd_90) ){
 						//复位遥测终端参数和状态
@@ -113,6 +115,7 @@ public class StubActivity extends ActivityAidl.Stub{
 					if(data.dataCode.equals(Code206.cd_E0)){
 						//查询供电方式及电压
 						mAct.frgTool.f_01_070.receiveRtuData(data) ;
+						mAct.frgTool.fragment_loopq03.receiveRtuData(Code206.cd_E0,data) ;
 					}else
 					if(data.dataCode.equals(Code206.cd_E1) || data.dataCode.equals(Code206.cd_F1)){
 						//设置或查询电池池电压报警值
@@ -141,6 +144,7 @@ public class StubActivity extends ActivityAidl.Stub{
 					if(data.dataCode.equals(Code206.cd_CC) || data.dataCode.equals(Code206.cd_DC)){
 						//设置或查询中心网址
 						mAct.frgTool.f_02_050.receiveRtuData(data) ;
+						mAct.frgTool.fragment_loopq04.receiveRtuData(Code206.cd_CC,data) ;
 					}/*else
 					if(data.dataCode.equals(Code206.cd_CD) || data.dataCode.equals(Code206.cd_DD)){
 						//设置或查询短信中心号码
@@ -231,14 +235,17 @@ public class StubActivity extends ActivityAidl.Stub{
 						//53:查询遥测终端的数据自报种类及时间间隔
 						//A1:设置遥测终端的数据自报种类及时间间隔
 						mAct.frgTool.f_04_080.receiveRtuData(data) ;
+						mAct.frgTool.fragment_loopq03.receiveRtuData(Code206.cd_53,data) ;
 					}else
 					if(data.dataCode.equals(Code206.cd_5D)){
 						//查询遥测终端的事件记录 
 						mAct.frgTool.f_05_010.receiveRtuData(data) ;
+						mAct.frgTool.fragment_loopq04.receiveRtuData(Code206.cd_5D,data) ;
 					}else
 					if(data.dataCode.equals(Code206.cd_5E)){
 						//查询遥测终端状态和报警状态
 						mAct.frgTool.f_05_020.receiveRtuData(data) ;
+						mAct.frgTool.fragment_loopq04.receiveRtuData(Code206.cd_5E,data) ;
 					}else
 			/*		if(data.dataCode.equals(Code206.cd_EC) || data.dataCode.equals(Code206.cd_FC)){
 						//EC:查询日志配置表
@@ -268,10 +275,12 @@ public class StubActivity extends ActivityAidl.Stub{
 					if(data.dataCode.equals(Code206.cd_D3)){
 						//查询水表出厂编号
 						mAct.frgTool.f_01_090.receiveRtuData(data) ;
+						mAct.frgTool.fragment_loopq02.receiveRtuData(Code206.cd_D3,data) ;
 					}else
 					if(data.dataCode.equals(Code206.cd_D4)){
 						//查询SIM卡ICCID
 						mAct.frgTool.f_02_100.receiveRtuData(data) ;
+						mAct.frgTool.fragment_loopq04.receiveRtuData(Code206.cd_D4,data) ;
 					}else
 					if(data.dataCode.equals(Code206.cd_96)){
 						//修改遥测终端密码 
@@ -280,7 +289,8 @@ public class StubActivity extends ActivityAidl.Stub{
 					if(data.dataCode.equals(Code206.cd_C2)){
 						//查询水表实时值
 						mAct.frgTool.f_05_070.receiveRtuData(data) ;
-					}else/*
+						mAct.frgTool.fragment_loopq03.receiveRtuData(Code206.cd_C2,data) ;
+					}/*else
 					if(data.dataCode.equals(Code206.cd_15) || data.dataCode.equals(Code206.cd_55)){
 						//设置本次充值量或查询最近成功充值量和现有剩余水量
 						mAct.frgTool.f_04_100.receiveRtuData(data) ;
@@ -296,13 +306,13 @@ public class StubActivity extends ActivityAidl.Stub{
 					
 					////////////////////////////////////////////////////////
 					//循环查询
-					else*/
+					else
 					if(data.dataCode.equals(Code206.cd_F0)){
 						//循环查询关键参数
 						mAct.frgTool.fragment_loopq01.receiveRtuData(data) ;
 						mAct.frgTool.fragment_loopq02.receiveRtuData(data) ;
 						mAct.frgTool.fragment_loopq03.receiveRtuData(data) ;
-					}
+					}*/
 				}
 				//mAct.frgTool.fragment_ch04.setRtuData(data) ;
 				mAct.getSoundAlert().playMessage() ;

@@ -223,14 +223,14 @@
 			    android:layout_height="match_parent"
 			    android:orientation="vertical"
 			    >
+		        <fragment android:id="@+id/f_05_070"
+			        android:name="com.blg.rtu.frmFunction.F_05_070"
+				    style="@style/func_fragment_style"/>
 		        <fragment android:id="@+id/f_05_010"
 			        android:name="com.blg.rtu.frmFunction.F_05_010"
 				    style="@style/func_fragment_style"/>
 		        <fragment android:id="@+id/f_05_040"
 			        android:name="com.blg.rtu.frmFunction.F_05_040"
-				    style="@style/func_fragment_style"/>
-		        <fragment android:id="@+id/f_05_070"
-			        android:name="com.blg.rtu.frmFunction.F_05_070"
 				    style="@style/func_fragment_style"/>
 				<fragment android:id="@+id/f_05_060"
 			        android:name="com.blg.rtu.frmFunction.F_05_060"

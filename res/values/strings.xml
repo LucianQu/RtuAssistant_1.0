@@ -9,7 +9,7 @@
     <string name="welcome">北京奥特美克科技股份有限公司</string>
     
     <string name="functionItems">功能选项</string>
-    <string name="functionLoopQuery">自动查询</string>
+    <string name="functionLoopQuery">设备信息</string>
     <string name="functionChannel">通道选项</string>
     <string name="functionNoProtocol">调试数据</string>
     
@@ -539,17 +539,32 @@
 	PS:
 	XSL是可扩展样式表语言的外语缩写，是一种用于以可读格式呈现 XML（标准通用标记语言的子集）数据的语言。
 	XSL = XML 样式表  -->
+	<string name="txtLoopQuery_deviceSerNum">出厂编号</string>
+	<string name="txtLoopQuery_deviceAddr">设备地址</string>
+	<string name="txtLoopQuery_hardVer">硬件版本</string>
+	<string name="txtLoopQuery_softVer">软件版本</string>
+	<string name="txtLoopQuery_voltage">电池电压</string>
+	<string name="txtLoopQuery_reportInterval">上报间隔</string>
+	
+	<string name="txtLoopQuery_amount">累计流量</string>
+	<string name="txtLoopQuery_instance">瞬时流量</string>
+	
+	<string name="txtLoopQuery_ipAddr">IP&#160;&#160;&#160;&#160;地址</string>
+	<string name="txtLoopQuery_alarmStatus">报警状态</string>
+	<string name="txtLoopQuery_eventLog">事件记录</string>
+	<string name="txtLoopQuery_simICCID">SIM卡ID</string>
+	
 	<string name="txtLoopQuery_type">查询类型</string>
 	<string name="txtLoopQuery_interval">间隔</string>
 	<string name="txtLoopQuery_times">发送/接收</string>
 	<string name="txtLoopQuery_onLine">在线状态</string>
 	<string name="txtLoopQuery_signal">信号强度</string>
-	<string name="txtLoopQuery_voltage">电池电压</string>
+	
 	<string name="txtLoopQuery_alarm">告警状态</string>
-	<string name="txtLoopQuery_amount">累计流量</string>
+	
 	<string name="txtLoopQuery_plus">正&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;积</string>
 	<string name="txtLoopQuery_minus">负&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;积</string>
-	<string name="txtLoopQuery_instance">瞬时流量</string>
+	
 	<string name="txtLoopQuery_wlType">水&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;位</string>
 	<string name="txtLoopQuery_baseHeight">井口高程</string>
 	<string name="txtLoopQuery_buried">探头埋深</string>

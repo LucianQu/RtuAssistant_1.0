@@ -1,12 +1,23 @@
 package com.blg.rtu.frmLoopQuery;
 
 
+import java.util.ArrayList;
+
 import com.blg.rtu.MainActivity;
 import com.blg.rtu.R;
 import com.blg.rtu.protocol.RtuData;
+import com.blg.rtu.protocol.p206.Code206;
+import com.blg.rtu.protocol.p206.cd10_50.Data_10_50;
+import com.blg.rtu.protocol.p206.cdA1_53.Data_A1_53;
+import com.blg.rtu.protocol.p206.cdC2.Data_C2;
+import com.blg.rtu.protocol.p206.cdCC_DC.Data_CC_DC;
+import com.blg.rtu.protocol.p206.cdD3.Data_D3;
+import com.blg.rtu.protocol.p206.cdE0.Data_E0;
+import com.blg.rtu.protocol.p206.cdEF.Data_EF;
 import com.blg.rtu.protocol.p206.cdF0.Data_F0;
 import com.blg.rtu.util.Constant;
 import com.blg.rtu.util.Preferences;
+import com.blg.rtu.util.SpinnerVO;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -15,7 +26,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 public class LpFragment_03 extends Fragment {
@@ -24,20 +37,23 @@ public class LpFragment_03 extends Fragment {
 	
 	public View view ;
 
-	private LinearLayout linearLayout0 ;
-	private LinearLayout linearLayout1 ;
+/*	private LinearLayout linearLayout0 ;
+	private LinearLayout linearLayout1 ;*/
 
-	private TextView itemName01 ;
+	//private TextView itemName01 ;
 	private TextView item01 ;
 	private TextView item02 ;
 	private TextView item03 ;
+	private TextView item04 ;
+/*	private TextView item03 ;
 	private TextView item04 ;
 	
 	private TextView item06 ;
 	private TextView item07 ;
 	private TextView item08 ;
-	private TextView item09 ;
-
+	private TextView item09 ;*/
+	/*private Spinner item03;
+	private ArrayAdapter<SpinnerVO> spinnerAdapter03;*/
  	@Override
 	public void onAttach(Activity activity) {
 		super.onAttach(activity);
@@ -56,25 +72,32 @@ public class LpFragment_03 extends Fragment {
 			Bundle savedInstanceState) {
 		view = inflater.inflate(R.layout.floopq_03, container, false);
 
-		linearLayout0 = (LinearLayout)view.findViewById(R.id.lqDiXia); 
-		linearLayout1 = (LinearLayout)view.findViewById(R.id.lqZhiNeng); 
+	/*	linearLayout0 = (LinearLayout)view.findViewById(R.id.lqDiXia); 
+		linearLayout1 = (LinearLayout)view.findViewById(R.id.lqZhiNeng);*/ 
 		
-		int v = Preferences.getInstance().getInt(Constant.loop_vk_01_010_01) ;
+		/*int v = Preferences.getInstance().getInt(Constant.loop_vk_01_010_01) ;
 		if(v != Constant.errorInt){
 			this.queryTypeSet(v) ;
-		}
+		}*/
 		
-		itemName01 = (TextView)view.findViewById(R.id.f_03_010_itemName);
+		//itemName01 = (TextView)view.findViewById(R.id.f_03_010_itemName);
 		item01 = (TextView)view.findViewById(R.id.f_03_010_item);
 		item02 = (TextView)view.findViewById(R.id.f_03_020_item);
 		item03 = (TextView)view.findViewById(R.id.f_03_030_item);
 		item04 = (TextView)view.findViewById(R.id.f_03_040_item);
+		/*item03 = (Spinner)view.findViewById(R.id.f_03_030_item);
+		spinnerAdapter03 = new ArrayAdapter<SpinnerVO>(this.act, R.layout.spinner_style, new ArrayList<SpinnerVO>());
+		spinnerAdapter03.setDropDownViewResource(R.layout.spinner_item);
+		item03.setAdapter(spinnerAdapter03);*/
 		
-		item06 = (TextView)view.findViewById(R.id.f_03_060_item);
+		//item03 = (TextView)view.findViewById(R.id.f_03_030_item);
+		//item04 = (TextView)view.findViewById(R.id.f_03_040_item);
+		
+	/*	item06 = (TextView)view.findViewById(R.id.f_03_060_item);
 		item07 = (TextView)view.findViewById(R.id.f_03_070_item);
 		item08 = (TextView)view.findViewById(R.id.f_03_080_item);
-		item09 = (TextView)view.findViewById(R.id.f_03_090_item);
-
+		item09 = (TextView)view.findViewById(R.id.f_03_090_item);*/
+		
 		return view ;
 	}
 	
@@ -82,7 +105,7 @@ public class LpFragment_03 extends Fragment {
 	 * 设置查询类型
 	 * @param type
 	 */
-	public void queryTypeSet(int type){
+/*	public void queryTypeSet(int type){
 		if(type == LpConstant.queryType_diXia){
 			linearLayout0.setVisibility(View.VISIBLE) ;
 			linearLayout1.setVisibility(View.GONE) ;
@@ -90,7 +113,7 @@ public class LpFragment_03 extends Fragment {
 			linearLayout0.setVisibility(View.GONE) ;
 			linearLayout1.setVisibility(View.VISIBLE) ;
 		}
-	}
+	}*/
 	
 	@Override
 	public void onDestroy() {
@@ -117,7 +140,37 @@ public class LpFragment_03 extends Fragment {
 	 * 收到数据
 	 * @param d
 	 */
-	public void receiveRtuData(RtuData d){
+	public void receiveRtuData(String afn, RtuData d){
+		if(afn.equals(Code206.cd_C2)) {
+			Data_C2 sd = (Data_C2)d.subData ;
+			
+			long waterInstant = sd.getWaterInstant().longValue();
+			if(waterInstant < 0) {
+				waterInstant = - waterInstant;
+				if ((waterInstant / 1000) > 0) {
+					item04.setText(("-" + waterInstant / 1000) + "." + (waterInstant + 1000) % 1000) ;
+				}else if((waterInstant / 1000) == 0){
+					item04.setText("-0." + (waterInstant + 1000) % 1000) ;
+				}
+			}else{
+				if ((waterInstant / 1000) > 0) {
+					item04.setText((waterInstant / 1000) + "." + (waterInstant + 1000) % 1000) ;
+				}else if((waterInstant / 1000) == 0){
+					item04.setText("0." + (waterInstant + 1000) % 1000) ;
+				}
+			}
+			
+			item03.setText(sd.getWaterConsumption().longValue() + "") ;
+		}else if(afn.equals(Code206.cd_E0)) {
+			Data_E0 sd = (Data_E0)d.subData ;
+			float v = sd.getVoltage() ;
+			item01.setText("" + v) ;
+		}else if(afn.equals(Code206.cd_53)) {
+			Data_A1_53 sd = (Data_A1_53)d.subData ;
+			Short dv = sd.getLiuLiangReportInterval();
+			item02.setText("" + dv) ;
+		}
+		/*
 		itemName01.setText(R.string.txtLoopQuery_wlType) ;
 		item01.setText("") ;
 		item02.setText("") ;
@@ -163,7 +216,7 @@ public class LpFragment_03 extends Fragment {
 			}
 		}
 	
-	}	
+	*/}	
 	
 
 }

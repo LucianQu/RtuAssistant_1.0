@@ -1,24 +1,28 @@
 package com.blg.rtu.frmLoopQuery;
 
 
-import java.util.ArrayList;
-
-import com.blg.rtu.MainActivity;
-import com.blg.rtu.R;
-import com.blg.rtu.protocol.RtuData;
-import com.blg.rtu.protocol.p206.cdF0.Data_F0;
-import com.blg.rtu.util.SpinnerVO;
-
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.blg.rtu.MainActivity;
+import com.blg.rtu.R;
+import com.blg.rtu.frmChannel.helpCh1.ChBusi_01_Init;
+import com.blg.rtu.protocol.RtuData;
+import com.blg.rtu.protocol.p206.Code206;
+import com.blg.rtu.protocol.p206.cd10_50.Data_10_50;
+import com.blg.rtu.protocol.p206.cdD3.Data_D3;
+import com.blg.rtu.protocol.p206.cdEF.Data_EF;
+import com.blg.rtu.server.CoreThread;
 
 public class LpFragment_02 extends Fragment {
 	
@@ -29,8 +33,16 @@ public class LpFragment_02 extends Fragment {
 	private TextView item01 ;
 	private TextView item02 ;
 	private TextView item03 ;
-	private Spinner item04;
-	private ArrayAdapter<SpinnerVO> spinnerAdapter04;
+	private TextView item04 ;
+	
+	private ImageView queryBtn;
+	public boolean queryBtnFlag = false;
+	private ProgressBar loopProgress ;
+	
+	//private TextView item05 ;
+	
+/*	private Spinner item04;
+	private ArrayAdapter<SpinnerVO> spinnerAdapter04;*/
 	
 	
 	
@@ -55,13 +67,44 @@ public class LpFragment_02 extends Fragment {
 		item01 = (TextView)view.findViewById(R.id.f_02_010_item);
 		item02 = (TextView)view.findViewById(R.id.f_02_020_item);
 		item03 = (TextView)view.findViewById(R.id.f_02_030_item);
+		item04 = (TextView)view.findViewById(R.id.f_02_040_item);
+		loopProgress = (ProgressBar)view.findViewById(R.id.queryLoopProgress);
+		queryBtn = (ImageView)view.findViewById(R.id.query_Btn);
 		
-		item04 = (Spinner)view.findViewById(R.id.f_02_040_item);
+		queryBtn.setOnClickListener(new queryOnClickListener()) ;
+		//item05 = (TextView)view.findViewById(R.id.f_02_050_item);
+		/*item04 = (Spinner)view.findViewById(R.id.f_02_040_item);
 		spinnerAdapter04 = new ArrayAdapter<SpinnerVO>(this.act, R.layout.spinner_style, new ArrayList<SpinnerVO>());
 		spinnerAdapter04.setDropDownViewResource(R.layout.spinner_item);
-		item04.setAdapter(spinnerAdapter04);
+		item04.setAdapter(spinnerAdapter04);*/
 		
 		return view ;
+	}
+	
+	private class queryOnClickListener implements OnClickListener{
+
+		@Override
+		public void onClick(View v) {
+			if(queryBtn.getId() == v.getId()) {
+				
+				String info = act.mServerProxyHandler.operateAutoQuery(true, false, false, false) ;
+				if(info != null){
+					Toast.makeText(act, info, Toast.LENGTH_SHORT).show() ;
+				}
+				if(info.equals("自动查询启动")) {
+					queryBtn.setVisibility(View.GONE);
+					loopProgress.setVisibility(View.VISIBLE) ;
+					act.mHandler.postDelayed(new Runnable() {
+						public void run() {
+							loopProgress.setVisibility(View.GONE) ;
+							queryBtn.setVisibility(View.VISIBLE) ;
+						}
+					}, 85000);
+				}
+				
+			}
+		}
+		
 	}
 	
 	@Override
@@ -87,8 +130,25 @@ public class LpFragment_02 extends Fragment {
 	 * 收到数据
 	 * @param d
 	 */
-	public void receiveRtuData(RtuData d){
-		Data_F0 sd = (Data_F0)d.subData ;
+	public void receiveRtuData(String afn, RtuData d){
+		if(afn.equals(Code206.cd_D3)) {
+			Data_D3 sd = (Data_D3)d.subData ;
+			String waterMeterSerial = sd.getWaterMeterSerial() ;
+			item01.setText(waterMeterSerial) ;
+		}else if(afn.equals(Code206.cd_50)) {
+			Data_10_50 sd = (Data_10_50)d.subData ;
+			String rtuId = sd.getRtuId() ;
+			item02.setText(rtuId) ;
+		}else if(afn.equals(Code206.cd_EF)) {
+			Data_EF sd = (Data_EF)d.subData ;
+			String str1 = sd.getHard1() + "." + sd.getHard2() + "." + sd.getHard3() ;
+			String str2 = sd.getSoft1() + "." + sd.getSoft2() + "." + sd.getSoft3() ;
+			
+			item03.setText(str1) ;
+			item04.setText(str2) ;
+		}
+		
+	/*	Data_F0 sd = (Data_F0)d.subData ;
 		Byte link = sd.getLink() ;
 		if(link != null){
 			if(link.byteValue() == (byte)0x01){
@@ -104,9 +164,9 @@ public class LpFragment_02 extends Fragment {
 		
 		item02.setText("" + sd.getSignal().byteValue()) ;
 		
-		item03.setText("" + sd.getVoltage()) ;
+		item03.setText("" + sd.getVoltage()) ;*/
 		
-		spinnerAdapter04.clear() ;
+	/*	spinnerAdapter04.clear() ;
 		
 		int n = 0 ;
 		Integer a = sd.getPower220StopAlarm() ;
@@ -118,8 +178,9 @@ public class LpFragment_02 extends Fragment {
 		if(a != null && a.intValue() == 1){
 			spinnerAdapter04.add(new SpinnerVO("" + n, "蓄电池电压报警")) ;
 			n++ ;
-		}
-		a = sd.getWaterLevelAlarm() ;
+		}*/
+		
+		/*a = sd.getWaterLevelAlarm() ;
 		if(a != null && a.intValue() == 1){
 			spinnerAdapter04.add(new SpinnerVO("" + n, "水位上下限报警")) ;
 			n++ ;
@@ -184,7 +245,7 @@ public class LpFragment_02 extends Fragment {
 		if(a != null && a.intValue() == 1){
 			spinnerAdapter04.add(new SpinnerVO("" + n, "强磁攻击报警")) ;
 			n++ ;
-		}
+		}*/
 	}
 
 }

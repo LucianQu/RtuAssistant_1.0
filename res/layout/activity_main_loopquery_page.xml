@@ -25,7 +25,7 @@
 	        android:drawablePadding="5.0dp" />
  	</LinearLayout>
  	
- 	<LinearLayout 
+<!--  	<LinearLayout 
  	    android:id="@+id/lqLine_01"
 	    android:layout_width="match_parent"
 	    android:layout_height="100dp" >
@@ -34,7 +34,7 @@
 			 android:layout_width="match_parent"
 			 android:layout_height="match_parent"
 			 android:layout_gravity="center_vertical"/>
- 	</LinearLayout>
+ 	</LinearLayout> -->
  	
  	<LinearLayout 
  	    android:id="@+id/lqLine_02"
@@ -60,6 +60,18 @@
 			 android:layout_gravity="center_vertical"/>
  	</LinearLayout> 	
 
+  	<LinearLayout 
+  	    android:id="@+id/lqLine_04"
+	    android:layout_width="match_parent"
+	    android:layout_height="0dp" 
+	    android:layout_weight="1">
+		<fragment android:id="@+id/lqFragment_04"
+			 android:name="com.blg.rtu.frmLoopQuery.LpFragment_04"
+			 android:layout_width="match_parent"
+			 android:layout_height="match_parent" 
+			 android:layout_gravity="center_vertical"/>
+ 	</LinearLayout> 
+  	
  	<TextView android:id="@+id/chWelcome"
 		android:textColor="#b4e4f8" 
 		style="@style/welcome"/>

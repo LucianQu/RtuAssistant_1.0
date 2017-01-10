@@ -271,7 +271,7 @@ public class LpFragment_01 extends Fragment implements SlideListener{
 	}
 	
 	private void queryTypeSet(int type){
-		this.act.frgTool.fragment_loopq03.queryTypeSet(type) ;
+	/*	this.act.frgTool.fragment_loopq03.queryTypeSet(type) ;*/
 	}
 	
 	@Override

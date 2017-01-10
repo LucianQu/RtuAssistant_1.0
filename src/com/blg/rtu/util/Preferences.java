@@ -9,8 +9,11 @@ public class Preferences {
 	private static SharedPreferences sp ;
 	
 	private Preferences(Context ctx){
+		//Constructor to create a Preference.
+		//SharedPreferences sp = getSharedPreferences("存储xml文件的名字",MODE_PRIVATE); 
+		
 		sp = ctx.getSharedPreferences(Constant.preferencesFileName, Constant.preferencesFilemode) ;
-		//SharedPreferences sp = getSharedPreferences("存储xml文件的名字",MODE_PRIVATE);  
+		 
 	}
 	
 	/**

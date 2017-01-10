@@ -4,38 +4,25 @@
     android:layout_height="match_parent"
     android:layout_gravity="center_vertical"
     android:focusableInTouchMode="true" 
-    android:orientation="vertical">
+    android:orientation="horizontal">
 
 
 	<LinearLayout 
-	    android:layout_width="match_parent"
+	    android:layout_width="wrap_content"
 	    android:layout_height="match_parent"
 		android:layout_marginTop="3dp"
 	    android:layout_marginLeft="10dp"
-		android:layout_marginRight="10dp"
+		android:layout_marginRight="0.01dp"
 		android:background="@drawable/border"
 		android:orientation="vertical" 
 	    >
+				
 		<LinearLayout android:layout_weight="1" 
             android:layout_width="match_parent"
 		    android:layout_height="0dip"
 			android:orientation="horizontal">
 		   <TextView
-		        android:text="@string/txtLoopQuery_onLine"
-		        style="@style/loopq_item_viewtext_style_100_a_"/>
-		   <TextView
-				android:id="@+id/f_02_010_item"  
-				android:labelFor="@id/f_02_010_item" 
-				android:layout_marginLeft="5dp"
-			    style="@style/loopq_item_edittext_style_150"
-			    android:inputType="none"/>		
-		</LinearLayout>			
-		<LinearLayout android:layout_weight="1" 
-            android:layout_width="match_parent"
-		    android:layout_height="0dip"
-			android:orientation="horizontal">
-		   <TextView
-		        android:text="@string/txtLoopQuery_signal"
+		        android:text="@string/txtLoopQuery_deviceAddr"
 		        style="@style/loopq_item_viewtext_style_100_a_"/>
 		   <TextView
 				android:id="@+id/f_02_020_item"  
@@ -43,25 +30,54 @@
 				android:layout_marginLeft="5dp"
 			    style="@style/loopq_item_edittext_style_150"
 			    android:inputType="none"/>		
-		</LinearLayout>			
+		</LinearLayout>		
+		
 		<LinearLayout android:layout_weight="1" 
             android:layout_width="match_parent"
 		    android:layout_height="0dip"
 			android:orientation="horizontal">
 		   <TextView
-		        android:text="@string/txtLoopQuery_voltage"
+		        android:text="@string/txtLoopQuery_hardVer"
 		        style="@style/loopq_item_viewtext_style_100_a_"/>
 		   <TextView
 				android:id="@+id/f_02_030_item"  
 				android:labelFor="@id/f_02_030_item" 
 				android:layout_marginLeft="5dp"
 			    style="@style/loopq_item_edittext_style_150"
-			    android:inputType="none"/>	
+			    android:inputType="none"/>		
+		</LinearLayout>		
+			
+			<LinearLayout android:layout_weight="1" 
+            android:layout_width="match_parent"
+		    android:layout_height="0dip"
+			android:orientation="horizontal">
 		   <TextView
-			    android:text="@string/func_item_unit_v"
-			    style="@style/loopq_item_viewtext_style_unit_100"/>			    	
-		</LinearLayout>			
+		        android:text="@string/txtLoopQuery_softVer"
+		        style="@style/loopq_item_viewtext_style_100_a_"/>
+		   <TextView
+				android:id="@+id/f_02_040_item"  
+				android:labelFor="@id/f_02_040_item" 
+				android:layout_marginLeft="5dp"
+			    style="@style/loopq_item_edittext_style_150"
+			    android:inputType="none"/>		
+		</LinearLayout>	
+		
 		<LinearLayout android:layout_weight="1" 
+            android:layout_width="match_parent"
+		    android:layout_height="0dip"
+			android:orientation="horizontal">
+		   <TextView
+		        android:text="@string/txtLoopQuery_deviceSerNum"
+		        style="@style/loopq_item_viewtext_style_100_a_"/>
+		   <TextView
+				android:id="@+id/f_02_010_item"  
+				android:labelFor="@id/f_02_010_item" 
+				android:layout_marginLeft="5dp"
+			    style="@style/loopq_item_edittext_style_150"
+			    android:inputType="none"/>		
+		</LinearLayout>	
+			
+		<!-- <LinearLayout android:layout_weight="1" 
             android:layout_width="match_parent"
 		    android:layout_height="0dip"
 			android:orientation="horizontal">
@@ -71,8 +87,35 @@
 		   <Spinner android:id="@+id/f_02_040_item" 
 		        android:layout_marginLeft="2dp"
 			    style="@style/loopq_item_Spinner_style_180"/>  	
-		</LinearLayout>			
+		</LinearLayout>			 -->
 							    						
 	</LinearLayout>
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+		android:layout_marginTop="3dp"
+		android:layout_marginRight="10dp"
+		android:background="@drawable/border"
+		android:orientation="horizontal" 
+		android:gravity="center|center_horizontal|center_vertical" >   
+	    
+		<ImageView 
+	    	android:id="@+id/query_Btn"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:background="@drawable/btn_ball_2" 
+            android:focusable="true" 
+            android:contentDescription="@string/image_description"
+           /> 
+	           
+	     <ProgressBar
+	    	android:id="@+id/queryLoopProgress"
+	    	style="@style/func_progressbar_style"  
+	        android:layout_width="80dp"
+	        android:layout_height="80dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+	    	android:visibility="gone"/>
+		</LinearLayout>
 </LinearLayout>
 

@@ -442,6 +442,12 @@
     <style name="loopq_item_Spinner_style_180" parent="@style/loopq_item_Spinner_style">
         <item name="android:layout_width">@dimen/ed_width_180</item>
 	</style>    
+	<style name="loopq_item_Spinner_style_200" parent="@style/loopq_item_Spinner_style">
+        <item name="android:layout_width">@dimen/ed_width_200</item>
+	</style>
+	<style name="loopq_item_Spinner_style_250" parent="@style/loopq_item_Spinner_style">
+        <item name="android:layout_width">@dimen/ed_width_250</item>
+	</style>
     
     <style name="loopq_item_edittext_style" parent="@android:style/Widget.EditText">
         <item name="android:background">@drawable/edittext_1</item>

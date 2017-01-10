@@ -6,7 +6,7 @@
     android:focusableInTouchMode="true" 
     android:orientation="vertical">
 
-	
+	<!-- 
 	<LinearLayout 
 	    android:id="@+id/lqDiXia"
 	    android:layout_width="match_parent"
@@ -87,7 +87,7 @@
 			    android:text="@string/func_item_unit_du"
 			    style="@style/loopq_item_viewtext_style_unit_100"/>			    	
 		</LinearLayout>			
-	</LinearLayout>
+	</LinearLayout> -->
     
 	<LinearLayout 
 	    android:id="@+id/lqZhiNeng"
@@ -98,8 +98,44 @@
 		android:layout_marginRight="10dp"
 		android:background="@drawable/border"
 		android:orientation="vertical" 
-		android:visibility="gone"
+
 	    >
+	    
+	    <LinearLayout android:layout_weight="1" 
+            android:layout_width="match_parent"
+		    android:layout_height="0dip"
+			android:orientation="horizontal">
+		   <TextView
+		        android:text="@string/txtLoopQuery_voltage"
+		        style="@style/loopq_item_viewtext_style_100_a_"/>
+		   <TextView
+				android:id="@+id/f_03_010_item"  
+				android:labelFor="@id/f_03_010_item" 
+				android:layout_marginLeft="5dp"
+			    style="@style/loopq_item_edittext_style_150"
+			    android:inputType="none"/>	
+		   <TextView
+			    android:text="@string/func_item_unit_v"
+			    style="@style/loopq_item_viewtext_style_unit_100"/>			    	
+		</LinearLayout>	
+		
+	    <LinearLayout android:layout_weight="1" 
+            android:layout_width="match_parent"
+		    android:layout_height="0dip"
+			android:orientation="horizontal">
+		   <TextView
+		        android:text="@string/txtLoopQuery_reportInterval"
+		        style="@style/loopq_item_viewtext_style_100_a_"/>
+		   <TextView
+				android:id="@+id/f_03_020_item"  
+				android:labelFor="@id/f_03_020_item" 
+				android:layout_marginLeft="5dp"
+			    style="@style/loopq_item_edittext_style_150"
+			    android:inputType="none"/>	
+		   <TextView
+			    android:text="@string/func_item_unit_min"
+			    style="@style/func_item_viewtext_style_unit_100"/>		    	
+		</LinearLayout>	
 	    <LinearLayout android:layout_weight="1" 
             android:layout_width="match_parent"
 		    android:layout_height="0dip"
@@ -108,43 +144,16 @@
 		        android:text="@string/txtLoopQuery_amount"
 		        style="@style/loopq_item_viewtext_style_100_a_"/>
 		   <TextView
-				android:id="@+id/f_03_060_item"  
-				android:labelFor="@id/f_03_060_item" 
+				android:id="@+id/f_03_030_item"  
+				android:labelFor="@id/f_03_030_item" 
 				android:layout_marginLeft="5dp"
 			    style="@style/loopq_item_edittext_style_150"
 			    android:inputType="none"/>		
 		   <TextView
 			    android:text="@string/func_item_unit_m3_1"
 			    style="@style/loopq_item_viewtext_style_unit_100"/>			    	
-		</LinearLayout>			
-		<LinearLayout android:layout_weight="1" 
-            android:layout_width="match_parent"
-		    android:layout_height="0dip"
-			android:orientation="horizontal">
-		   <TextView
-		        android:text="@string/txtLoopQuery_plus"
-		        style="@style/loopq_item_viewtext_style_100_a_"/>
-		   <TextView
-				android:id="@+id/f_03_070_item"  
-				android:labelFor="@id/f_03_070_item" 
-				android:layout_marginLeft="5dp"
-			    style="@style/loopq_item_edittext_style_150"
-			    android:inputType="none"/>		
-		</LinearLayout>			
-		<LinearLayout android:layout_weight="1" 
-            android:layout_width="match_parent"
-		    android:layout_height="0dip"
-			android:orientation="horizontal">
-		   <TextView
-		        android:text="@string/txtLoopQuery_minus"
-		        style="@style/loopq_item_viewtext_style_100_a_"/>
-		   <TextView
-				android:id="@+id/f_03_080_item"  
-				android:labelFor="@id/f_03_080_item" 
-				android:layout_marginLeft="5dp"
-			    style="@style/loopq_item_edittext_style_150"
-			    android:inputType="none"/>	
-		</LinearLayout>			
+		</LinearLayout>	
+				
 		<LinearLayout android:layout_weight="1" 
             android:layout_width="match_parent"
 		    android:layout_height="0dip"
@@ -153,8 +162,8 @@
 		        android:text="@string/txtLoopQuery_instance"
 		        style="@style/loopq_item_viewtext_style_100_a_"/>
 		   <TextView
-				android:id="@+id/f_03_090_item"  
-				android:labelFor="@id/f_03_090_item" 
+				android:id="@+id/f_03_040_item"  
+				android:labelFor="@id/f_03_040_item" 
 				android:layout_marginLeft="5dp"
 			    style="@style/loopq_item_edittext_style_150"
 			    android:inputType="none"/>	
@@ -162,6 +171,7 @@
 			    android:text="@string/func_item_unit_m3perh"
 			    style="@style/loopq_item_viewtext_style_unit_100"/>			    	
 		</LinearLayout>	
+							    		
 	</LinearLayout>
 </LinearLayout>
 
