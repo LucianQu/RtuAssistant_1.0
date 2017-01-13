@@ -1,9 +1,12 @@
 package com.blg.rtu;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 public class MainActivityHelp {
 
@@ -15,7 +18,7 @@ public class MainActivityHelp {
 	private View pageView_function;// Tab第2页
 	@SuppressWarnings("unused")
 	private View pageView_channel;// Tab第3页
-	
+	private TextView tvUrl;
 	private ImageView openMainAll ;
 	private ImageView closeMainAll ;
 	private ImageView openSubAll ;
@@ -55,8 +58,16 @@ public class MainActivityHelp {
 		closeSubAll = (ImageView) pageView_function.findViewById(R.id.closeSubAll) ;
 		openMainAll = (ImageView) pageView_function.findViewById(R.id.openMainAll2);
 		closeMainAll = (ImageView) pageView_function.findViewById(R.id.closeMainAll2);
-		
+		tvUrl =  (TextView) pageView_function.findViewById(R.id.fcWelcome) ;
 		labelImgReset = (ImageView) pageView_function.findViewById(R.id.labelImgReset);
+		tvUrl.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Uri uri = Uri.parse("http://www.automic.com.cn/Hardware/Sensor/2016/0731/68.html"); 
+		    	Intent intent = new Intent(Intent.ACTION_VIEW, uri); 
+		    	MainActivity.instance.startActivity(intent);
+			}
+		});
 		openSubAll.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {

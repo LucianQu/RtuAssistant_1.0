@@ -9,6 +9,7 @@
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
     
     
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
     
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"></uses-permission>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
@@ -62,7 +63,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-               
+           <activity
+            android:name="LoginActivity"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>   
         <!-- 
             Theme.Holo.NoActionBar 黑背景无标题
             Theme.Holo.NoActionBar.Fullscreen 黑背景无标题无手机状态栏(日期、信号、电池栏)

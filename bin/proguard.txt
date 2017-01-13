@@ -1,10 +1,13 @@
 # view res/layout/activity_main.xml #generated:82
 -keep class android.support.v4.view.ViewPager { <init>(...); }
 
-# view AndroidManifest.xml #generated:72
+# view AndroidManifest.xml #generated:66
+-keep class com.blg.rtu.LoginActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:76
 -keep class com.blg.rtu.MainActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:55
+# view AndroidManifest.xml #generated:56
 -keep class com.blg.rtu.SplashActivity { <init>(...); }
 
 # view res/layout/f_func_05_040.xml #generated:102
@@ -26,6 +29,10 @@
 
 # view res/layout/activity_main_channel_page.xml #generated:67
 -keep class com.blg.rtu.frmChannel.ChFragment_04 { <init>(...); }
+
+# view res/layout/activity_main_channel_page.xml #generated:79
+# view res/layout/activity_main_function_page.xml #generated:279
+-keep class com.blg.rtu.frmChannel.ChFragment_05 { <init>(...); }
 
 # view res/layout/activity_main_function_page.xml #generated:51
 -keep class com.blg.rtu.frmFunction.F_01_010 { <init>(...); }
@@ -108,10 +115,10 @@
 # view res/layout/activity_main_noprotocol_page.xml #generated:60
 -keep class com.blg.rtu.frmNoProtocol.NpFragment_03 { <init>(...); }
 
-# view AndroidManifest.xml #generated:83
+# view AndroidManifest.xml #generated:87
 -keep class com.blg.rtu.server.LocalServer { <init>(...); }
 
-# view AndroidManifest.xml #generated:97
+# view AndroidManifest.xml #generated:101
 -keep class com.blg.rtu.sm.SmsReceiver { <init>(...); }
 
 # view res/layout/floopq_01.xml #generated:59

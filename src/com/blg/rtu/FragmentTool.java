@@ -28,6 +28,7 @@ public class FragmentTool {
 	public ChFragment_02 fragment_ch02 ;
 	public ChFragment_03 fragment_ch03 ;
 	public ChFragment_04 fragment_ch04 ;
+	public ChFragment_05 fragment_ch05 ;
 
 	private static List<FrmParent> frms = new ArrayList<FrmParent>() ;;
 
@@ -102,7 +103,7 @@ public class FragmentTool {
         fragment_ch02 = (ChFragment_02)fm.findFragmentById(R.id.chFragment_02) ;
         fragment_ch03 = (ChFragment_03)fm.findFragmentById(R.id.chFragment_03) ;
         fragment_ch04 = (ChFragment_04)fm.findFragmentById(R.id.chFragment_04) ;
-        
+        fragment_ch05 = (ChFragment_05)fm.findFragmentById(R.id.chFragment_05) ;
         f_01_010 = (F_01_010)fm.findFragmentById(R.id.f_01_010) ;
         frms.add(f_01_010);
         f_01_020 = (F_01_020)fm.findFragmentById(R.id.f_01_020) ;

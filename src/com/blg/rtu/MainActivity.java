@@ -9,6 +9,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.graphics.Color;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
@@ -40,7 +43,7 @@ import com.blg.rtu.util.StringValueForActivity;
 
 @SuppressLint("HandlerLeak")
 public class MainActivity  extends Activity { 
-	
+	public static MainActivity instance = null ;
 //	private static final String TAG = MainActivity.class.getSimpleName() ;
 	public ChBusi_01_Operate chb;
 	private ViewPager mPager;// Tab页卡 
@@ -84,6 +87,9 @@ public class MainActivity  extends Activity {
 	//server的代理持有者，server代理的桩在server端
 	public ServerProxyHandler mServerProxyHandler ;
 
+	//private boolean wifiOpenStatus = false ;
+	private WifiManager wifiManager ;
+	
 	private ServiceConnection mConnection = new ServiceConnection() {
 		public void onServiceConnected(ComponentName className, IBinder service) {
 			ServiceAidl serverProxy = ServiceAidl.Stub.asInterface(service);
@@ -151,7 +157,7 @@ public class MainActivity  extends Activity {
 		
 		//初始化string.xml文件中配置的数值型数据
 		StringValueForActivity.initOnlyOnce(this) ;
-		
+		instance = this ;
 		//初始化小数据存储
 		Preferences.initInstance(this) ;
 		 
@@ -173,10 +179,32 @@ public class MainActivity  extends Activity {
         
         this.mActivityStub = StubActivity.createSingle(this)  ;
 
+        //wifiOpenStatus = isWiFiActive();
+        wifiManager = (WifiManager) this.getSystemService(Context.WIFI_SERVICE);
+        if(!wifiManager.isWifiEnabled()) {
+        	wifiManager.setWifiEnabled(true);
+        }
  		//绑定后台服务，后台服务在接受第一个绑定时会启动自己
         this.bindService(new Intent(MainActivity.this, LocalServer.class), mConnection, Context.BIND_AUTO_CREATE);
-
+        
 	}
+    
+ /*   public boolean isWiFiActive() {    
+        ConnectivityManager connectivity = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);    
+        if (connectivity != null) {    
+            NetworkInfo[] infos = connectivity.getAllNetworkInfo();    
+            if (infos != null) {    
+            	for(NetworkInfo ni : infos){
+            		if(ni.getTypeName().equals("WIFI") && ni.isConnected()){
+            			return true;
+            		}
+            	}
+            }    
+        }    
+        return false;    
+    } */
+    
+    
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 		if (keyCode == KeyEvent.KEYCODE_BACK) {
