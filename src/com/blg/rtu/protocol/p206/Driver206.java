@@ -28,6 +28,12 @@ import com.blg.rtu.protocol.p206.cd20.*;
 import com.blg.rtu.protocol.p206.cd30_31.*;
 import com.blg.rtu.protocol.p206.cd32_33.*;
 import com.blg.rtu.protocol.p206.cd34.*;
+import com.blg.rtu.protocol.p206.cd42_72.Answer_42_72;
+import com.blg.rtu.protocol.p206.cd42_72.Read_72;
+import com.blg.rtu.protocol.p206.cd42_72.Write_42;
+import com.blg.rtu.protocol.p206.cd44_74.Answer_44_74;
+import com.blg.rtu.protocol.p206.cd44_74.Read_74;
+import com.blg.rtu.protocol.p206.cd44_74.Write_44;
 import com.blg.rtu.protocol.p206.cdB1.*;
 import com.blg.rtu.protocol.p206.cdB2.*;
 import com.blg.rtu.protocol.p206.cd5D.*;
@@ -221,13 +227,26 @@ public class Driver206 extends DriverRtu {
 				action.append(Action.changeRtuIdAction) ;
 				action.append(Action.commandResultAction) ;
 			}else
+			if(this.dataCode.equalsIgnoreCase(Code206.cd_44)){
+				//应答 - 设置遥测终端、中继站地址
+				this.upData = new Answer_44_74().parse(rtuId, b, ca, dataCode) ;
+				action.append(Action.changeRtuIdAction) ;
+				action.append(Action.commandResultAction) ;
+			}else
 			if(this.dataCode.equalsIgnoreCase(Code206.cd_50)){
 				//应答 - 查询遥测终端、中继站地址
 				this.upData = new Answer_10_50().parse(rtuId, b, ca, dataCode) ;
 				action.append(Action.commandReadRtuIdResultAction) ;
 				action.append(Action.commandResultAction) ;
 				
-			}else			
+			}else	
+			if(this.dataCode.equalsIgnoreCase(Code206.cd_74)){
+				//应答 - 查询遥测终端、中继站地址
+				this.upData = new Answer_44_74().parse(rtuId, b, ca, dataCode) ;
+				action.append(Action.commandReadRtuIdResultAction) ;
+				action.append(Action.commandResultAction) ;
+				
+			}else
 			if(this.dataCode.equalsIgnoreCase(Code206.cd_11)){
 				//应答 - 设置遥测终端、中继站时钟
 				this.upData = new Answer_11_51().parse(rtuId, b, ca, this.dataCode);
@@ -765,6 +784,11 @@ public class Driver206 extends DriverRtu {
 				this.upData = new Answer_C5_D5().parse(rtuId, b, ca, this.dataCode);
 				action.append(Action.commandResultAction) ;
 			}else	
+			if(this.dataCode.equalsIgnoreCase(Code206.cd_72)){
+				//应答 - 查询ModBus地址
+				this.upData = new Answer_42_72().parse(rtuId, b, ca, this.dataCode);
+				action.append(Action.commandResultAction) ;
+			}else
 			if(this.dataCode.equalsIgnoreCase(Code206.cd_C2)){
 				//应答 - 查询定时上报的时刻
 				this.upData = new Answer_C2().parse(rtuId, b, ca, this.dataCode);
@@ -774,7 +798,12 @@ public class Driver206 extends DriverRtu {
 				//应答 - 设置定时上报的时刻
 				this.upData = new Answer_C5_D5().parse(rtuId, b, ca, this.dataCode);
 				action.append(Action.commandResultAction) ;
-			}else			
+			}else	
+			if(this.dataCode.equalsIgnoreCase(Code206.cd_42)){
+				//应答 - 设置定时上报的时刻
+				this.upData = new Answer_42_72().parse(rtuId, b, ca, this.dataCode);
+				action.append(Action.commandResultAction) ;
+			}else	
 			if(this.dataCode.equalsIgnoreCase(Code206.cd_F0)){
 				//应答 - 查询关键参数
 				this.upData = new Answer_F0().parse(rtuId, b, ca, this.dataCode);
@@ -855,9 +884,19 @@ public class Driver206 extends DriverRtu {
 				this.downData = new Write_10().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
 				activ = Action.remoteCommandAction ;
 			}else 
+			if(this.commandCode.equalsIgnoreCase(Code206.cd_44)){
+				//设置遥测终端、中继站地址
+				this.downData = new Write_44().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
+				activ = Action.remoteCommandAction ;
+			}else 
 			if(this.commandCode.equalsIgnoreCase(Code206.cd_50)){
 				//查询遥测终端、中继站地址
 				this.downData = new Read_50().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
+				activ = Action.remoteCommandAction ;
+			}else 
+			if(this.commandCode.equalsIgnoreCase(Code206.cd_74)){
+				//查询遥测终端、中继站地址
+				this.downData = new Read_74().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
 				activ = Action.remoteCommandAction ;
 			}else 
 			if(this.commandCode.equalsIgnoreCase(Code206.cd_11)){
@@ -1327,6 +1366,11 @@ public class Driver206 extends DriverRtu {
 				this.downData = new Read_C5().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
 				activ = Action.remoteCommandAction ;
 			}else 
+			if(this.commandCode.equalsIgnoreCase(Code206.cd_72)){
+				//查询定时上报的时刻
+				this.downData = new Read_72().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
+				activ = Action.remoteCommandAction ;
+			}else 
 			if(this.commandCode.equalsIgnoreCase(Code206.cd_C2)){
 				//查询流量实时值
 				this.downData = new Read_C2().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
@@ -1345,6 +1389,11 @@ public class Driver206 extends DriverRtu {
 			if(this.commandCode.equalsIgnoreCase(Code206.cd_D5)){
 				//设置定时上报的时刻
 				this.downData = new Write_D5().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
+				activ = Action.remoteCommandAction ;
+			}else 
+			if(this.commandCode.equalsIgnoreCase(Code206.cd_42)){
+				//设置定时上报的时刻
+				this.downData = new Write_42().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
 				activ = Action.remoteCommandAction ;
 			}else 
 			if(this.commandCode.equalsIgnoreCase(Code206.cd_F0)){

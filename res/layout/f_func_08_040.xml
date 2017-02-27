@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+    
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	style="@style/func_out_linearlayout_style" >
+
+	<!-- start 头部标题 --> 
+	<LinearLayout style="@style/func_title_linearlayout_style">
+	    <TextView
+	    	android:id="@+id/f_08_040_Title"
+	        android:drawableLeft="@drawable/item006"
+	        android:text="@string/func_08_040"
+			style="@style/func_title_viewtext_style"/>
+	    
+	    <!-- 注释掉，以备用，若应用并显示在界面上时，要调整上面textView的宽度（如300dp） 
+	    <ImageView 
+	        android:id="@+id/commandStatus"
+	        style="@style/func_itemtitle_imageview_style"
+	        android:contentDescription="@string/txtBtn"/>
+	    -->
+	</LinearLayout>  
+	
+    
+	<!-- start 具体内布局 -->
+    <FrameLayout
+    	android:id="@+id/f_08_040_Frm"
+		style="@style/func_framelayout_style">
+    
+		 <!-- start 具体内容 -->
+		 <LinearLayout 
+	        style="@style/func_linearlayout_style">
+	        
+		<!--      start 中心
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height35"
+			    >
+			    <TextView
+			        android:text="@string/func_08_040_item1"
+			        style="@style/func_item_viewtext_style_100_a"/>
+			</LinearLayout> -->
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height35"
+			    >
+			    <TextView
+			        android:text="@string/func_08_040_item1_1"
+			        style="@style/func_item_viewtext_style_100_b"/>
+			    <Spinner android:id="@+id/f_08_040_item1_1" 
+				    style="@style/func_item_Spinner_style_180"/>
+			</LinearLayout>
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30"
+			    >
+			    <TextView
+			        android:text="@string/func_08_040_item1_2"
+			        style="@style/func_item_viewtext_style_100_b"/>
+			    <EditText
+					android:id="@+id/f_08_040_item1_2"  
+					android:labelFor="@id/f_08_040_item1_2" 
+				    style="@style/func_item_editnumber_style_180"/>
+			</LinearLayout>
+		     <!-- end 中心 -->
+												
+		    <include layout="@layout/line1" />
+	        
+		 <!--     start 中心
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height35"
+			    >
+			    <TextView
+			        android:text="@string/func_08_040_item2"
+			        style="@style/func_item_viewtext_style_100_a"/>
+			</LinearLayout> -->
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height35"
+			    >
+			    <TextView
+			        android:text="@string/func_08_040_item2_1"
+			        style="@style/func_item_viewtext_style_100_b"/>
+			    <Spinner android:id="@+id/f_08_040_item2_1" 
+				    style="@style/func_item_Spinner_style_180"/>
+			</LinearLayout>
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30"
+			    >
+			    <TextView
+			        android:text="@string/func_08_040_item2_2"
+			        style="@style/func_item_viewtext_style_100_b"/>
+			    <EditText
+					android:id="@+id/f_08_040_item2_2"  
+					android:labelFor="@id/f_08_040_item2_2" 
+				    style="@style/func_item_editnumber_style_180"/>
+			</LinearLayout>
+		     <!-- end 中心 -->
+												
+		    <include layout="@layout/line1" />
+	        
+		     <!-- start 中心 -->
+			<!-- <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height35"
+			    >
+			    <TextView
+			        android:text="@string/func_08_040_item3"
+			        style="@style/func_item_viewtext_style_100_a"/>
+			</LinearLayout> -->
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height35"
+			    >
+			    <TextView
+			        android:text="@string/func_08_040_item3_1"
+			        style="@style/func_item_viewtext_style_100_b"/>
+			    <Spinner android:id="@+id/f_08_040_item3_1" 
+				    style="@style/func_item_Spinner_style_180"/>
+			</LinearLayout>
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30"
+			    >
+			    <TextView
+			        android:text="@string/func_08_040_item3_2"
+			        style="@style/func_item_viewtext_style_100_b"/>
+			    <EditText
+					android:id="@+id/f_08_040_item3_2"  
+					android:labelFor="@id/f_08_040_item3_2" 
+				    style="@style/func_item_editnumber_style_180"/>
+			</LinearLayout>
+		     <!-- end 中心 -->
+												
+		    <include layout="@layout/line1" />
+	        
+		<!--      start 中心
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height35"
+			    >
+			    <TextView
+			        android:text="@string/func_08_040_item4"
+			        style="@style/func_item_viewtext_style_100_a"/>
+			</LinearLayout> -->
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height35"
+			    >
+			    <TextView
+			        android:text="@string/func_08_040_item4_1"
+			        style="@style/func_item_viewtext_style_100_b"/>
+			    <Spinner android:id="@+id/f_08_040_item4_1" 
+				    style="@style/func_item_Spinner_style_180"/>
+			</LinearLayout>
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30"
+			    >
+			    <TextView
+			        android:text="@string/func_08_040_item4_2"
+			        style="@style/func_item_viewtext_style_100_b"/>
+			    <EditText
+					android:id="@+id/f_08_040_item4_2"  
+					android:labelFor="@id/f_08_040_item4_2" 
+				    style="@style/func_item_editnumber_style_180"/>
+			</LinearLayout>
+		     <!-- end 中心 -->
+						
+		    <include layout="@layout/line1" />
+			
+		<!-- 	<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height35"
+			    >
+			    <TextView
+			        android:text="@string/func_08_040_item5"
+			        style="@style/func_item_viewtext_style_100_a"/>
+			</LinearLayout> -->
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height35"
+			    >
+			    <TextView
+			        android:text="@string/func_08_040_item5_1"
+			        style="@style/func_item_viewtext_style_100_b"/>
+			    <Spinner android:id="@+id/f_08_040_item5_1" 
+				    style="@style/func_item_Spinner_style_180"/>
+			</LinearLayout>
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30"
+			    >
+			    <TextView
+			        android:text="@string/func_08_040_item5_2"
+			        style="@style/func_item_viewtext_style_100_b"/>
+			    <EditText
+					android:id="@+id/f_08_040_item5_2"  
+					android:labelFor="@id/f_08_040_item5_2" 
+				    style="@style/func_item_editnumber_style_180"/>
+			</LinearLayout>
+		     <!-- end 中心 -->
+												
+		    <include layout="@layout/line1" />
+	        
+		     <!-- start 中心 -->
+		<!-- 	<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height35"
+			    >
+			    <TextView
+			        android:text="@string/func_08_040_item6"
+			        style="@style/func_item_viewtext_style_100_a"/>
+			</LinearLayout> -->
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height35"
+			    >
+			    <TextView
+			        android:text="@string/func_08_040_item6_1"
+			        style="@style/func_item_viewtext_style_100_b"/>
+			    <Spinner android:id="@+id/f_08_040_item6_1" 
+				    style="@style/func_item_Spinner_style_180"/>
+			</LinearLayout>
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30"
+			    >
+			    <TextView
+			        android:text="@string/func_08_040_item6_2"
+			        style="@style/func_item_viewtext_style_100_b"/>
+			    <EditText
+					android:id="@+id/f_08_040_item6_2"  
+					android:labelFor="@id/f_08_040_item6_2" 
+				    style="@style/func_item_editnumber_style_180"/>
+			</LinearLayout>
+		     <!-- end 中心 -->
+												
+		    <include layout="@layout/line1" />
+	         
+		   <!-- start 中心 -->
+			 <!-- <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height35"
+			    >
+			    <TextView
+			        android:text="@string/func_08_040_item7"
+			        style="@style/func_item_viewtext_style_100_a"/>
+			</LinearLayout> -->
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height35"
+			    >
+			    <TextView
+			        android:text="@string/func_08_040_item7_1"
+			        style="@style/func_item_viewtext_style_100_b"/>
+			    <Spinner android:id="@+id/f_08_040_item7_1" 
+				    style="@style/func_item_Spinner_style_180"/>
+			</LinearLayout>
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30"
+			    >
+			    <TextView
+			        android:text="@string/func_08_040_item7_2"
+			        style="@style/func_item_viewtext_style_100_b"/>
+			    <EditText
+					android:id="@+id/f_08_040_item7_2"  
+					android:labelFor="@id/f_08_040_item7_2" 
+				    style="@style/func_item_editnumber_style_180"/>
+			</LinearLayout>
+		     <!-- end 中心 -->
+												
+		    <include layout="@layout/line1" />
+	        
+		 <!--     start 中心
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height35"
+			    >
+			    <TextView
+			        android:text="@string/func_08_040_item8"
+			        style="@style/func_item_viewtext_style_100_a"/>
+			</LinearLayout> -->
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height35"
+			    >
+			    <TextView
+			        android:text="@string/func_08_040_item8_1"
+			        style="@style/func_item_viewtext_style_100_b"/>
+			    <Spinner android:id="@+id/f_08_040_item8_1" 
+				    style="@style/func_item_Spinner_style_180"/>
+			</LinearLayout>
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30"
+			    >
+			    <TextView
+			        android:text="@string/func_08_040_item8_2"
+			        style="@style/func_item_viewtext_style_100_b"/>
+			    <EditText
+					android:id="@+id/f_08_040_item8_2"  
+					android:labelFor="@id/f_08_040_item8_2" 
+				    style="@style/func_item_editnumber_style_180"/>
+			</LinearLayout>
+		     <!-- end 中心 -->
+						
+		    <include layout="@layout/line1" />
+		    
+							        
+		    <include layout="@layout/show_btn_set_query" />
+		 </LinearLayout>
+	     
+		 <!-- start 底部 -->
+		 <LinearLayout 
+	        android:id="@+id/f_08_040_Load"
+	        style="@style/func_progressbar_linearlayout_style" >
+		    <ProgressBar
+		        style="@style/func_progressbar_style" />
+		 </LinearLayout>
+	</FrameLayout>
+</LinearLayout>
+

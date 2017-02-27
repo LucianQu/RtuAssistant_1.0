@@ -63,6 +63,10 @@
     <string name="func_01_080_item1">报警数值</string>
     <string name="func_01_090">查询出厂编号</string>
     <string name="func_01_090_item1">出厂编号</string>
+    <string name="func_01_100">终端地址</string>
+    <string name="func_01_100_item1">行政区编号</string>
+    <string name="func_01_100_item2">设备编号</string>
+    <string name="func_01_100_item3">终端列表</string>
     
     <string name="func_02_010">DTU工作模式</string>
     <string name="func_02_010_item1">工作模式</string>
@@ -483,6 +487,35 @@
    	
    	<string name="func_07_030">批量设置</string>
    	<string name="func_07_030_item01">自动设置:</string>
+    
+   	<string name="func_08_030">ModBus地址</string>
+    <string name="func_08_030_item1">地址</string>
+   	
+    <string name="func_08_040">中继器关联ModBus地址</string>
+    <string name="func_08_040_item1">水表1</string>
+    <string name="func_08_040_item1_1">水表1是否使能</string>
+    <string name="func_08_040_item1_2">地址</string>
+    <string name="func_08_040_item2">水表2</string>
+    <string name="func_08_040_item2_1">水表2是否使能</string>
+    <string name="func_08_040_item2_2">地址</string>
+    <string name="func_08_040_item3">水表3</string>
+    <string name="func_08_040_item3_1">水表3是否使能</string>
+    <string name="func_08_040_item3_2">地址</string>
+    <string name="func_08_040_item4">水表4</string>
+    <string name="func_08_040_item4_1">水表4是否使能</string>
+    <string name="func_08_040_item4_2">地址</string>
+    <string name="func_08_040_item5">水表5</string>
+    <string name="func_08_040_item5_1">水表5是否使能</string>
+    <string name="func_08_040_item5_2">地址</string>
+    <string name="func_08_040_item6">水表6</string>
+    <string name="func_08_040_item6_1">水表6是否使能</string>
+    <string name="func_08_040_item6_2">地址</string>
+    <string name="func_08_040_item7">水表7</string>
+    <string name="func_08_040_item7_1">水表7是否使能</string>
+    <string name="func_08_040_item7_2">地址</string>
+    <string name="func_08_040_item8">水表8</string>
+    <string name="func_08_040_item8_1">水表8是否使能</string>
+    <string name="func_08_040_item8_2">地址</string>
     
     <string name="func_item_unit_mg">(mg/L)</string>
     <string name="func_item_unit_us">(μs/cm)</string>

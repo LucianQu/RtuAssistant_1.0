@@ -48,8 +48,11 @@
 			    android:layout_height="match_parent"
 			    android:orientation="vertical"
 			    >
-		        <fragment android:id="@+id/f_01_010"
+		       <!--  <fragment android:id="@+id/f_01_010"
 			        android:name="com.blg.rtu.frmFunction.F_01_010"
+				    style="@style/func_fragment_style"/> -->
+				<fragment android:id="@+id/f_01_100"
+			        android:name="com.blg.rtu.frmFunction.F_01_100"
 				    style="@style/func_fragment_style"/>
 		        <fragment android:id="@+id/f_01_020"
 			        android:name="com.blg.rtu.frmFunction.F_01_020"
@@ -130,6 +133,58 @@
 			        android:name="com.blg.rtu.frmFunction.F_02_090"
 				    style="@style/func_fragment_style"/> -->
 		        		        		        		        		        		        		        		        		        
+	       </LinearLayout>
+		   
+		   
+		    <include layout="@layout/f_func_title_08" />  			    
+			<LinearLayout  
+			    android:id="@+id/f_func_08"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:orientation="vertical"
+			    >
+				<fragment android:id="@+id/f_08_010"
+			        android:name="com.blg.rtu.frmFunction.F_01_100"
+				    style="@style/func_fragment_style"/>
+		        <fragment android:id="@+id/f_08_020"
+			        android:name="com.blg.rtu.frmFunction.F_01_020"
+				    style="@style/func_fragment_style"/>
+		        <fragment android:id="@+id/f_08_030"
+			        android:name="com.blg.rtu.frmFunction.F_08_030"
+				    style="@style/func_fragment_style"/>   
+				<fragment android:id="@+id/f_08_040"
+			        android:name="com.blg.rtu.frmFunction.F_05_020"
+				    style="@style/func_fragment_style"/>
+		        <fragment android:id="@+id/f_08_050"
+			        android:name="com.blg.rtu.frmFunction.F_01_070"
+				    style="@style/func_fragment_style"/>
+		        <fragment android:id="@+id/f_08_060"
+			        android:name="com.blg.rtu.frmFunction.F_01_080"
+				    style="@style/func_fragment_style"/>
+		        <fragment android:id="@+id/f_08_070"
+			        android:name="com.blg.rtu.frmFunction.F_01_050"
+				    style="@style/func_fragment_style"/>   
+		        <fragment android:id="@+id/f_08_080"
+			        android:name="com.blg.rtu.frmFunction.F_01_090"
+				    style="@style/func_fragment_style"/>   
+				<fragment android:id="@+id/f_08_090"
+			        android:name="com.blg.rtu.frmFunction.F_01_040"
+				    style="@style/func_fragment_style"/>   
+				<fragment android:id="@+id/f_08_100"
+			        android:name="com.blg.rtu.frmFunction.F_05_020"
+				    style="@style/func_fragment_style"/>
+		        <fragment android:id="@+id/f_08_110"
+			        android:name="com.blg.rtu.frmFunction.F_01_070"
+				    style="@style/func_fragment_style"/>
+		        <fragment android:id="@+id/f_08_120"
+			        android:name="com.blg.rtu.frmFunction.F_01_080"
+				    style="@style/func_fragment_style"/>
+		        <fragment android:id="@+id/f_08_130"
+			        android:name="com.blg.rtu.frmFunction.F_01_050"
+				    style="@style/func_fragment_style"/>   
+		        <fragment android:id="@+id/f_08_140"
+			        android:name="com.blg.rtu.frmFunction.F_01_090"
+				    style="@style/func_fragment_style"/>  
 	       </LinearLayout>
 		   
 		   <!-- <include layout="@layout/f_func_title_03" />  			    

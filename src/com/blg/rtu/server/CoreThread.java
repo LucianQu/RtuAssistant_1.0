@@ -245,7 +245,7 @@ public class CoreThread {
 					CoreThread.server.mHandler.postDelayed(new Runnable(){
 						@Override
 						public void run() {
-							new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_50(), true, true) ;
+							new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_74(), true, true) ;
 						}
 					}, 500) ;//可能一段时间一直查询不到RTU ID，所以这里用postDelayed，等待0.5秒
 				}catch(Exception e){

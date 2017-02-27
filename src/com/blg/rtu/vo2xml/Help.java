@@ -57,7 +57,7 @@ public class Help {
 		//act.frgTool.f_05_050.outSetData(vo);
 		//act.frgTool.f_05_060.outSetData(vo);	//查询水表日志信息
 		/*act.frgTool.f_06_010.outSetData(vo);*/
-
+		act.frgTool.f_08_030.outSetData(vo);
 		String xml = vo.toXml();
 
 		return xml;
@@ -136,5 +136,8 @@ public class Help {
 		//act.frgTool.f_05_050.inSetData(vo);
 		//act.frgTool.f_05_060.inSetData(vo);
 		/*act.frgTool.f_06_010.inSetData(vo);*/
+		
+		act.frgTool.f_08_030.inSetData(vo);
+		
 	}
 }

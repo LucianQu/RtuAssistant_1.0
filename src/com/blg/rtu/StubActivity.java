@@ -91,6 +91,11 @@ public class StubActivity extends ActivityAidl.Stub{
 						mAct.frgTool.f_01_010.receiveRtuData(data) ;
 						mAct.frgTool.fragment_loopq02.receiveRtuData(Code206.cd_50,data) ;
 					}else
+					if(data.dataCode.equals(Code206.cd_44) || data.dataCode.equals(Code206.cd_74)){
+						//设置或查询终端地址
+						mAct.frgTool.f_01_100.receiveRtuData(data) ;
+						//mAct.frgTool.fragment_loopq02.receiveRtuData(Code206.cd_50,data) ;
+					}else
 					if(data.dataCode.equals(Code206.cd_11) || data.dataCode.equals(Code206.cd_51)){
 						//设置或查询遥测终端、中继站时钟返回
 						mAct.frgTool.f_01_020.receiveRtuData(data) ;
@@ -124,7 +129,8 @@ public class StubActivity extends ActivityAidl.Stub{
 					if(data.dataCode.equals(Code206.cd_CF) || data.dataCode.equals(Code206.cd_DF)){
 						//设置或查询DTU工作模式
 						mAct.frgTool.f_02_010.receiveRtuData(data) ;
-					}/*else
+					}
+					/*else
 					if(data.dataCode.equals(Code206.cd_C9) || data.dataCode.equals(Code206.cd_D9)){
 						//设置或查询终端心跳周期
 						mAct.frgTool.f_02_020.receiveRtuData(data) ;
@@ -272,6 +278,10 @@ public class StubActivity extends ActivityAidl.Stub{
 						//设置或查询定时上报的时刻
 						mAct.frgTool.f_04_090.receiveRtuData(data) ;
 					}else*/
+					if(data.dataCode.equals(Code206.cd_42) || data.dataCode.equals(Code206.cd_72)){
+						//设置或查询ModBus地址
+						mAct.frgTool.f_08_030.receiveRtuData(data) ;
+					}else
 					if(data.dataCode.equals(Code206.cd_D3)){
 						//查询水表出厂编号
 						mAct.frgTool.f_01_090.receiveRtuData(data) ;
@@ -352,6 +362,10 @@ public class StubActivity extends ActivityAidl.Stub{
 					if(data.dataCode.equals(Code206.cd_10) || data.dataCode.equals(Code206.cd_50)){
 						//设置或查询终端地址
 						mAct.frgTool.f_01_010.commandSendedCallBack() ;
+					}else
+					if(data.dataCode.equals(Code206.cd_44) || data.dataCode.equals(Code206.cd_74)){
+						//设置或查询终端地址
+						mAct.frgTool.f_01_100.commandSendedCallBack() ;
 					}else
 					if(data.dataCode.equals(Code206.cd_11) || data.dataCode.equals(Code206.cd_51)){
 						//设置或查询遥测终端、中继站时钟返回
@@ -532,6 +546,10 @@ public class StubActivity extends ActivityAidl.Stub{
 						//设置或查询定时上报的时刻
 						mAct.frgTool.f_04_090.commandSendedCallBack() ;
 					}else*/
+					if(data.dataCode.equals(Code206.cd_42) || data.dataCode.equals(Code206.cd_72)){
+						//设置或查询定时上报的时刻
+						mAct.frgTool.f_08_030.commandSendedCallBack() ;
+					}else
 					if(data.dataCode.equals(Code206.cd_C2)){
 						//查询流量实时值
 						mAct.frgTool.f_05_070.commandSendedCallBack() ;

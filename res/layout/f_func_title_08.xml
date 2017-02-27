@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+    
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/f_08_title"
+	style="@style/func_grouptitle_linearlayout_style" 
+    >
+    <ImageView 
+        android:src="@drawable/f_0888"
+		style="@style/func_grouptitle_imageview_style" 
+		android:contentDescription="@string/image_description"
+        />
+   <!--  <TextView
+        android:text="@string/menu_level_04"
+		style="@style/func_grouptitle_textview_style" 
+        /> -->
+</LinearLayout>
+
+	

@@ -8,7 +8,8 @@
 
 
 	<LinearLayout 
-	    android:layout_width="wrap_content"
+	    android:layout_width="0dip"
+	    android:layout_weight="2"
 	    android:layout_height="match_parent"
 		android:layout_marginTop="3dp"
 	    android:layout_marginLeft="10dp"
@@ -17,7 +18,8 @@
 		android:orientation="vertical" 
 	    >
 				
-		<LinearLayout android:layout_weight="1" 
+		<LinearLayout 
+		    android:layout_weight="1" 
             android:layout_width="match_parent"
 		    android:layout_height="0dip"
 			android:orientation="horizontal">
@@ -91,7 +93,8 @@
 							    						
 	</LinearLayout>
 	<LinearLayout 
-	    android:layout_width="match_parent"
+	    android:layout_width="0dip"
+	    android:layout_weight="1"
 	    android:layout_height="match_parent"
 		android:layout_marginTop="3dp"
 		android:layout_marginRight="10dp"

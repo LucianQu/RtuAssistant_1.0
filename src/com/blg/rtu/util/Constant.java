@@ -64,6 +64,11 @@ public class Constant {
 	public static final String func_vk_01_090_01 = "vk_01_090_01" ;
 	public static final String func_vk_01_090_dt = "vk_01_090_dt" ;
 	
+	public static final String func_vk_01_100_01 = "vk_01_010_01" ; 
+	public static final String func_vk_01_100_02 = "vk_01_010_02" ; 
+	public static final String func_vk_01_100_03 = "vk_01_010_03" ; 
+	public static final String func_vk_01_100_dt = "vk_01_010_dt" ; 
+	
 	public static final String func_vk_02_010_01 = "vk_02_010_01" ; 
 	public static final String func_vk_02_010_dt = "vk_02_010_dt" ; 
 	public static final String func_vk_02_020_01 = "vk_02_020_01" ; 
@@ -647,6 +652,34 @@ public class Constant {
 	public static final String func_vk_06_010_05_ = "vk_06_010_05_" ; 
 	public static final String func_vk_06_010_dt = "vk_06_010_dt" ; 
 	
+	public static final String func_vk_08_030_01 = "vk_08_030_01" ; 
+	public static final String func_vk_08_030_dt = "vk_08_030_dt" ; 
+	
+	public static final String func_vk_08_040_01_1 = "vk_08_040_01_1" ; 
+	public static final String func_vk_08_040_01_2 = "vk_08_040_01_2" ; 
+	
+	public static final String func_vk_08_040_02_1 = "vk_08_040_02_1" ; 
+	public static final String func_vk_08_040_02_2 = "vk_08_040_02_2" ; 
+	
+	public static final String func_vk_08_040_03_1 = "vk_08_040_03_1" ; 
+	public static final String func_vk_08_040_03_2 = "vk_08_040_03_2" ; 
+	
+	public static final String func_vk_08_040_04_1 = "vk_08_040_04_1" ; 
+	public static final String func_vk_08_040_04_2 = "vk_08_040_04_2" ; 
+	
+	public static final String func_vk_08_040_05_1 = "vk_08_040_05_1" ; 
+	public static final String func_vk_08_040_05_2 = "vk_08_040_05_2" ; 
+	
+	public static final String func_vk_08_040_06_1 = "vk_08_040_06_1" ; 
+	public static final String func_vk_08_040_06_2 = "vk_08_040_06_2" ; 
+	
+	public static final String func_vk_08_040_07_1 = "vk_08_040_07_1" ; 
+	public static final String func_vk_08_040_07_2 = "vk_08_040_07_2" ; 
+	
+	public static final String func_vk_08_040_08_1 = "vk_08_040_08_1" ; 
+	public static final String func_vk_08_040_08_2 = "vk_08_040_08_2" ; 
+	
+	public static final String func_vk_08_040_dt = "vk_08_040_dt" ; 
 	
 	public static final String loop_vk_01_010_01 = "loop_vk_01_010_01" ; 
 	public static final String loop_vk_01_010_02 = "loop_vk_01_010_02" ; 

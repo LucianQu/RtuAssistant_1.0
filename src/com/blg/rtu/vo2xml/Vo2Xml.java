@@ -201,7 +201,7 @@ public class Vo2Xml {
 	private String v_04_080_items;
 
 	private String v_04_090_item01 ;
-
+	
 	private String v_04_100_item01 ;
 	
 	private String v_04_110_item01 ;
@@ -219,7 +219,8 @@ public class Vo2Xml {
 	private String v_06_010_item04_04 ;
 	private String v_06_010_item04_05 ;
 	private String v_06_010_item05Str;*/
-
+	
+	private String v_08_030_item01 ;
 	
 	/**
 	 * 对象转成xml
@@ -1254,6 +1255,14 @@ public class Vo2Xml {
 	public void setV_04_090_item01(String v_04_090_item01) {
 		this.v_04_090_item01 = v_04_090_item01;
 	}
+	
+	public String getV_08_030_item01() {
+		return v_08_030_item01;
+	}
+	public void setV_08_030_item01(String v_08_030_item01) {
+		this.v_08_030_item01 = v_08_030_item01;
+	}
+	
 	public String getV_05_030_chechBoxs() {
 		return v_05_030_chechBoxs;
 	}

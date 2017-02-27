@@ -14,6 +14,7 @@ public class Constant {
 
 	
 	public static final byte DIR_toRtu = 0 ;//下行报文，发向测控终端RTU的数据
+	public static final byte DIR_phonetoRelay = 0 ;//下行报文，发向测控终端RTU的数据
 	public static final byte DIR_fromRtu = 1 ;//上行报文，从测控终端RTU发来的数据
 	public static final byte DIR_phoneToRtu = 1 ;//上行报文，从测控终端RTU发来的数据
 	

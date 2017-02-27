@@ -41,11 +41,14 @@ public class FragmentTool {
 	public F_01_070 f_01_070 ;
 	public F_01_080 f_01_080 ;
 	public F_01_090 f_01_090 ;
+	public F_01_100 f_01_100 ;
+	
 	public F_02_010 f_02_010 ;
 	//public F_02_020 f_02_020 ;
 	//public F_02_030 f_02_030 ;
 	public F_02_040 f_02_040 ;
 	public F_02_050 f_02_050 ;
+	
 	
 /*	public F_02_060 f_02_060 ;
 	public F_02_070 f_02_070 ;*/
@@ -86,7 +89,7 @@ public class FragmentTool {
 	
 	//public F_06_010 f_06_010 ;
 	public F_07_010 f_07_010 ;
-
+	public F_08_030 f_08_030 ;
 
 	public FragmentTool(MainActivity mainAct){
 		this.mainAct = mainAct ;
@@ -104,8 +107,8 @@ public class FragmentTool {
         fragment_ch03 = (ChFragment_03)fm.findFragmentById(R.id.chFragment_03) ;
         fragment_ch04 = (ChFragment_04)fm.findFragmentById(R.id.chFragment_04) ;
         fragment_ch05 = (ChFragment_05)fm.findFragmentById(R.id.chFragment_05) ;
-        f_01_010 = (F_01_010)fm.findFragmentById(R.id.f_01_010) ;
-        frms.add(f_01_010);
+       /* f_01_010 = (F_01_010)fm.findFragmentById(R.id.f_01_010) ;
+        frms.add(f_01_010);*/
         f_01_020 = (F_01_020)fm.findFragmentById(R.id.f_01_020) ;
         frms.add(f_01_020);
        /* f_01_030 = (F_01_030)fm.findFragmentById(R.id.f_01_030) ;
@@ -122,6 +125,9 @@ public class FragmentTool {
         frms.add(f_01_080);
         f_01_090 = (F_01_090)fm.findFragmentById(R.id.f_01_090) ;
         frms.add(f_01_090);
+        f_01_100 = (F_01_100)fm.findFragmentById(R.id.f_01_100) ;
+        frms.add(f_01_100);
+        
         f_02_010 = (F_02_010)fm.findFragmentById(R.id.f_02_010) ;
         frms.add(f_02_010);
      /*   f_02_020 = (F_02_020)fm.findFragmentById(R.id.f_02_020) ;
@@ -208,6 +214,10 @@ public class FragmentTool {
         frms.add(f_06_010);*/
        /* f_07_010 = (F_07_010)fm.findFragmentById(R.id.f_07_010) ;
         frms.add(f_07_010);*/
+        
+        f_08_030 = (F_08_030)fm.findFragmentById(R.id.f_08_030) ;
+        frms.add(f_08_030);
+        
 	}
 	
 	

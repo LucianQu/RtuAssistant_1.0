@@ -53,7 +53,7 @@ public class ControlProtocol {
 	 */
 	public byte[] createToRTUControl(byte[] b, byte DIV, byte FCB, byte DIVS, byte controlFunCode) throws Exception{
 		int n = Constant.Site_Control ;
-		b[n++] = (byte)(Constant.DIR_phoneToRtu << 7 | DIV << 6 | FCB << 4 | controlFunCode) ;
+		b[n++] = (byte)(Constant.DIR_phonetoRelay << 7 | DIV << 6 | FCB << 4 | controlFunCode) ;
 		if(DIV == 1){
 			b[n++] = DIVS ;
 			this.hasDIVS = true ;

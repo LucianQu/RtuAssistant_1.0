@@ -12,6 +12,9 @@ public class Code206 {
 	public static final String cd_10 = "10" ; //设置遥测终端、中继站地址
 	public static final String cd_50 = "50" ; //查询遥测终端、中继站地址
 	
+	public static final String cd_44 = "44" ; //设置遥测终端、中继站地址
+	public static final String cd_74 = "74" ; //查询遥测终端、中继站地址
+	
 	public static final String cd_11 = "11" ; //设置遥测终端、中继站时钟
 	public static final String cd_51 = "51" ; //查询遥测终端、中继站时钟
 	
@@ -106,6 +109,8 @@ public class Code206 {
 	public static final String cd_DC = "DC" ; //设置中心网址
 	public static final String cd_CD = "CD" ; //查询短信中心号码
 	public static final String cd_DD = "DD" ; //设置短信中心号码
+	public static final String cd_43 = "43" ; //设置中继器关联ModBus地址
+	public static final String cd_73 = "73" ; //查询中继器关联ModBus地址
 	public static final String cd_CE = "CE" ; //查询卫星中心号码
 	public static final String cd_DE = "DE" ; //设置卫星中心号码
 	public static final String cd_C8 = "C8" ; //查询RTU在线状态
@@ -140,6 +145,9 @@ public class Code206 {
 	public static final String cd_D5 = "D5" ; //设置定时上报的时刻
 	public static final String cd_C5 = "C5" ; //查询定时上报的时刻
 
+	public static final String cd_42 = "42" ; //设置ModBus地址
+	public static final String cd_72 = "72" ; //查询ModBus地址
+	
 	public static final String cd_F0 = "F0" ; //查询关键参数
 	public static final String cd_C2 = "C2" ; //查询遥测终端流量实时值
 
@@ -149,6 +157,12 @@ public class Code206 {
 		(code.equals(cd_10) ? "设置遥测终端、中继站地址" : 
 		(code.equals(cd_50) ? "查询遥测终端、中继站地址" : 
 		
+		(code.equals(cd_42) ? "设置ModBus地址" : 
+		(code.equals(cd_72) ? "查询ModBus地址" : 
+			
+		(code.equals(cd_44) ? "设置遥测终端、中继站地址" : 
+		(code.equals(cd_74) ? "查询遥测终端、中继站地址" : 
+			
 		(code.equals(cd_11) ? "设置遥测终端、中继站时钟" : 
 		(code.equals(cd_51) ? "查询遥测终端、中继站时钟" : 
 		
@@ -242,7 +256,11 @@ public class Code206 {
 		(code.equals(cd_CC) ? "查询中心网址" : 
 		(code.equals(cd_DC) ? "设置中心网址" : 
 		(code.equals(cd_CD) ? "查询短信中心号码" : 
-		(code.equals(cd_DD) ? "设置短信中心号码" : 
+		(code.equals(cd_DD) ? "设置短信中心号码" :
+			
+		(code.equals(cd_43) ? "设置中继器关联ModBus地址" : 
+		(code.equals(cd_73) ? "查询中继器关联ModBus地址" :	
+			
 		(code.equals(cd_CE) ? "查询卫星中心号码" : 
 		(code.equals(cd_DE) ? "设置卫星中心号码" : 
 		(code.equals(cd_C8) ? "查询RTU在线状态" : 
@@ -278,7 +296,8 @@ public class Code206 {
 		(code.equals(cd_D4) ? "查询SIM卡ICCID" : 	
 		(code.equals(cd_D2) ? "查询上报协议配置" : 	
 		(code.equals(cd_D6) ? "查询设置上报协议配置" : 
-		"")))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))) ;
+		"")))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+		))))))))))))))))))))))))))))))))))))))))))))))))) ;
 		return name ;
 	}
 }

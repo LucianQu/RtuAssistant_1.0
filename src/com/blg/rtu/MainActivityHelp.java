@@ -45,6 +45,10 @@ public class MainActivityHelp {
 */
 	private LinearLayout funcTitle_07;
 	private LinearLayout func_07;
+	
+	private LinearLayout funcTitle_08;
+	private LinearLayout func_08;
+	
 	public MainActivityHelp(MainActivity mainAct, View pageView_noProtocol, View pageView_loopQuery, View pageView_function) {
 		this.mainAct = mainAct;
 		this.pageView_noProtocol = pageView_noProtocol;
@@ -84,6 +88,7 @@ public class MainActivityHelp {
 				openFunc_0X(func_05) ;
 				//openFunc_0X(func_06) ;
 				openFunc_0X(func_07);
+				openFunc_0X(func_08);
 				}
 		}) ;
 		
@@ -103,6 +108,7 @@ public class MainActivityHelp {
 				closeFunc_0X(func_05) ;
 				//closeFunc_0X(func_06) ;
 				closeFunc_0X(func_07);
+				closeFunc_0X(func_08);
 				
 			}
 		}) ;
@@ -187,12 +193,22 @@ public class MainActivityHelp {
 			}
 		});
 		
+		funcTitle_08 = (LinearLayout) pageView_function.findViewById(R.id.f_08_title);
+		func_08 = (LinearLayout) pageView_function.findViewById(R.id.f_func_08);
+
+		funcTitle_08.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				openCloseFunc_0X(func_08) ;
+			}
+		});
+		
 		closeFunc_0X(func_01) ;
 		closeFunc_0X(func_02) ;
 		//closeFunc_0X(func_04) ;
 		closeFunc_0X(func_05) ;
 		closeFunc_0X(func_07);
-		
+		closeFunc_0X(func_08);
 		
 	}
 	
