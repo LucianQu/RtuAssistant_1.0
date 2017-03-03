@@ -1,18 +1,16 @@
 package com.blg.rtu.help;
 
 import java.io.File;
-import java.io.FileFilter;
 import java.io.FileWriter;
-import java.io.FilenameFilter;
 import java.io.PrintWriter;
 import java.util.Locale;
 
-import com.blg.rtu.MainActivity;
-import com.blg.rtu.R;
 import android.content.res.Resources;
 import android.os.Environment;
 import android.util.Log;
-import android.widget.Filter;
+
+import com.blg.rtu.MainActivity;
+import com.blg.rtu.R;
 
 public class HelpSaveSetDataToFile {
 	

@@ -8,28 +8,22 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
-//import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import com.automic.watersource.utils.Utils;
 import com.blg.rtu.LoginActivity;
 import com.blg.rtu.MainActivity;
 import com.blg.rtu.R;
+//import android.util.Log;
 //import com.blg.rtu.help.HelpSaveSetDataToFile;
 //import com.blg.rtu.util.DialogConfirm;
 //import com.blg.rtu.util.DialogAlarm;
 //import com.blg.rtu.vo2xml.Help;
-import com.blg.rtu.SplashActivity;
 
 public class ChFragment_05 extends Fragment {
-	private MainActivity act ;
+	//private MainActivity act ;
 	private LinearLayout ll_exit;
 		
 	private View view ;
@@ -37,7 +31,7 @@ public class ChFragment_05 extends Fragment {
 	@Override
 	public void onAttach(Activity activity) {
 		super.onAttach(activity);
-		this.act = (MainActivity)activity ;
+		//this.act = (MainActivity)activity ;
 	}
 
 	@Override

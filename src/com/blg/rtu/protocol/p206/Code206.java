@@ -141,6 +141,10 @@ public class Code206 {
 	public static final String cd_FB = "FB" ; //设置水位上报种类
 	public static final String cd_EC = "EC" ; //查询日志配置表
 	public static final String cd_FC = "FC" ; //设置日志配置表
+	
+	public static final String cd_75 = "75" ; //查询LCD显示内容及刷屏间隔
+	public static final String cd_45 = "45" ; //设置LCD显示内容及刷屏间隔
+	
 	public static final String cd_ED = "ED" ; //查询日志信息
 	public static final String cd_D5 = "D5" ; //设置定时上报的时刻
 	public static final String cd_C5 = "C5" ; //查询定时上报的时刻
@@ -150,7 +154,16 @@ public class Code206 {
 	
 	public static final String cd_F0 = "F0" ; //查询关键参数
 	public static final String cd_C2 = "C2" ; //查询遥测终端流量实时值
-
+	
+	public static final String cd_76 = "76" ; //查询正积流量
+	public static final String cd_46 = "46" ; //设置正积流量
+	
+	public static final String cd_77 = "77" ; //查询负积流量
+	public static final String cd_47 = "47" ; //设置负积流量
+	
+	public static final String cd_40 = "40" ; //设置净积流量
+	
+	
 	public String getCodeName(String code) {
 		String name = (code.equals(cd_02) ? "链路检测" : 
 		
@@ -286,9 +299,11 @@ public class Code206 {
 		(code.equals(cd_EB) ? "查询水位上报种类" : 
 		(code.equals(cd_FB) ? "设置水位上报种类" : 
 		(code.equals(cd_EC) ? "查询日志配置表" : 
-		(code.equals(cd_FC) ? "设置日志配置表" : 
+		(code.equals(cd_FC) ? "设置日志配置表" :
+		(code.equals(cd_75) ? "查询LCD显示内容及刷屏间隔" : 
+		(code.equals(cd_45) ? "设置LCD显示内容及刷屏间隔" :	
 		(code.equals(cd_ED) ? "查询日志信息" : 
-		(code.equals(cd_D5) ? "设置定时上报的时刻" : 
+		(code.equals(cd_D5) ? "设置定时上报的时刻" :
 		(code.equals(cd_C5) ? "查询定时上报的时刻" : 
 		(code.equals(cd_F0) ? "查询关键参数" : 
 		(code.equals(cd_C2) ? "终端流量实时值" : 
@@ -296,8 +311,13 @@ public class Code206 {
 		(code.equals(cd_D4) ? "查询SIM卡ICCID" : 	
 		(code.equals(cd_D2) ? "查询上报协议配置" : 	
 		(code.equals(cd_D6) ? "查询设置上报协议配置" : 
+		(code.equals(cd_46) ? "设置正积流量" : 
+		(code.equals(cd_76) ? "查询正积流量" : 	
+		(code.equals(cd_47) ? "设置负积流量" : 	
+		(code.equals(cd_77) ? "查询负积流量" : 	
+		(code.equals(cd_40) ? "设置净积流量" : 
 		"")))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
-		))))))))))))))))))))))))))))))))))))))))))))))))) ;
+		)))))))))))))))))))))))))))))))))))))))))))))))))))))))) ;
 		return name ;
 	}
 }

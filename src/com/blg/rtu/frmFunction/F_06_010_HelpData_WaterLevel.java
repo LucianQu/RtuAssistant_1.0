@@ -1,12 +1,5 @@
 package com.blg.rtu.frmFunction;
 
-import com.blg.rtu.R;
-import com.blg.rtu.MainActivity;
-import com.blg.rtu.util.Constant;
-import com.blg.rtu.util.InputFilter_DecimalSigned;
-import com.blg.rtu.util.Preferences;
-import com.blg.rtu.util.ResourceUtils;
-
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
@@ -15,6 +8,13 @@ import android.view.Gravity;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.blg.rtu.MainActivity;
+import com.blg.rtu.R;
+import com.blg.rtu.util.Constant;
+import com.blg.rtu.util.InputFilter_DecimalSigned;
+import com.blg.rtu.util.Preferences;
+import com.blg.rtu.util.ResourceUtils;
 
 public class F_06_010_HelpData_WaterLevel {
 	

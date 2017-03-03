@@ -247,32 +247,32 @@ containing a value of this type.
         public static final int widget_bar_cut_off=0x7f020074;
     }
     public static final class id {
-        public static final int aqPause=0x7f0602d3;
-        public static final int aqResume=0x7f0602d4;
-        public static final int aqStart=0x7f0602d2;
-        public static final int aqStatus=0x7f0602d6;
-        public static final int aqStop=0x7f0602d5;
-        public static final int asIn=0x7f0602d0;
-        public static final int asOut=0x7f0602cf;
-        public static final int asPause=0x7f0602d8;
-        public static final int asResume=0x7f0602d9;
-        public static final int asStart=0x7f0602d7;
-        public static final int asStatus=0x7f0602db;
-        public static final int asStop=0x7f0602da;
-        public static final int btn_add=0x7f06030c;
-        public static final int btn_add_1=0x7f06030e;
-        public static final int btn_add_2=0x7f060310;
-        public static final int btn_adjust=0x7f060312;
+        public static final int aqPause=0x7f0602eb;
+        public static final int aqResume=0x7f0602ec;
+        public static final int aqStart=0x7f0602ea;
+        public static final int aqStatus=0x7f0602ee;
+        public static final int aqStop=0x7f0602ed;
+        public static final int asIn=0x7f0602e8;
+        public static final int asOut=0x7f0602e7;
+        public static final int asPause=0x7f0602f0;
+        public static final int asResume=0x7f0602f1;
+        public static final int asStart=0x7f0602ef;
+        public static final int asStatus=0x7f0602f3;
+        public static final int asStop=0x7f0602f2;
+        public static final int btn_add=0x7f060324;
+        public static final int btn_add_1=0x7f060326;
+        public static final int btn_add_2=0x7f060328;
+        public static final int btn_adjust=0x7f06032a;
         public static final int btn_adjust_11=0x7f060066;
         public static final int btn_in=0x7f0602ab;
         public static final int btn_login=0x7f060009;
         public static final int btn_out=0x7f0602ad;
-        public static final int btn_read=0x7f06030a;
+        public static final int btn_read=0x7f060322;
         public static final int btn_read_11=0x7f060068;
-        public static final int btn_remove=0x7f06030d;
-        public static final int btn_remove_1=0x7f06030f;
-        public static final int btn_remove_2=0x7f060311;
-        public static final int btn_set=0x7f06030b;
+        public static final int btn_remove=0x7f060325;
+        public static final int btn_remove_1=0x7f060327;
+        public static final int btn_remove_2=0x7f060329;
+        public static final int btn_set=0x7f060323;
         public static final int btn_set_11=0x7f060064;
         public static final int cb_save=0x7f060008;
         public static final int chFragment_01=0x7f060010;
@@ -285,20 +285,20 @@ containing a value of this type.
         public static final int chLine_03=0x7f060013;
         public static final int chLine_04=0x7f060015;
         public static final int chLine_05=0x7f060017;
-        public static final int chRtuDataListView=0x7f0602dc;
+        public static final int chRtuDataListView=0x7f0602f4;
         public static final int chWelcome=0x7f060052;
         public static final int circle=0x7f060001;
         public static final int closeMainAll2=0x7f06004a;
         public static final int closeSubAll=0x7f060047;
         public static final int et_pwd=0x7f060007;
         public static final int et_user=0x7f060005;
-        public static final int exitSystem=0x7f0602dd;
+        public static final int exitSystem=0x7f0602f5;
         public static final int f_01_010_Frm=0x7f06005c;
         public static final int f_01_010_Load=0x7f06005f;
         public static final int f_01_010_Title=0x7f06005b;
-        public static final int f_01_010_item03=0x7f0602e0;
-        public static final int f_01_010_item1=0x7f0602de;
-        public static final int f_01_010_item2=0x7f0602df;
+        public static final int f_01_010_item03=0x7f0602f8;
+        public static final int f_01_010_item1=0x7f0602f6;
+        public static final int f_01_010_item2=0x7f0602f7;
         public static final int f_01_020=0x7f06001c;
         public static final int f_01_020_Frm=0x7f060061;
         public static final int f_01_020_Load=0x7f060069;
@@ -340,22 +340,22 @@ containing a value of this type.
         public static final int f_01_100_Load=0x7f06008d;
         public static final int f_01_100_Title=0x7f060088;
         public static final int f_01_100_item3=0x7f06008a;
-        public static final int f_01_title=0x7f0602c6;
+        public static final int f_01_title=0x7f0602de;
         public static final int f_02_010=0x7f060024;
         public static final int f_02_010_Frm=0x7f06008f;
         public static final int f_02_010_Load=0x7f060091;
         public static final int f_02_010_Title=0x7f06008e;
-        public static final int f_02_010_item=0x7f0602e7;
+        public static final int f_02_010_item=0x7f0602ff;
         public static final int f_02_010_item1=0x7f060090;
         public static final int f_02_020_Frm=0x7f060093;
         public static final int f_02_020_Load=0x7f060095;
         public static final int f_02_020_Title=0x7f060092;
-        public static final int f_02_020_item=0x7f0602e4;
+        public static final int f_02_020_item=0x7f0602fc;
         public static final int f_02_020_item1=0x7f060094;
         public static final int f_02_030_Frm=0x7f060097;
         public static final int f_02_030_Load=0x7f06009b;
         public static final int f_02_030_Title=0x7f060096;
-        public static final int f_02_030_item=0x7f0602e5;
+        public static final int f_02_030_item=0x7f0602fd;
         public static final int f_02_030_item1=0x7f060098;
         public static final int f_02_030_item2=0x7f060099;
         public static final int f_02_030_item3=0x7f06009a;
@@ -363,7 +363,7 @@ containing a value of this type.
         public static final int f_02_040_Frm=0x7f06009d;
         public static final int f_02_040_Load=0x7f0600a1;
         public static final int f_02_040_Title=0x7f06009c;
-        public static final int f_02_040_item=0x7f0602e6;
+        public static final int f_02_040_item=0x7f0602fe;
         public static final int f_02_040_item01=0x7f06009e;
         public static final int f_02_040_item02=0x7f06009f;
         public static final int f_02_040_item03=0x7f0600a0;
@@ -441,11 +441,11 @@ containing a value of this type.
         public static final int f_02_110_item3=0x7f0600f2;
         public static final int f_02_110_item4=0x7f0600f3;
         public static final int f_02_110_item5=0x7f0600f4;
-        public static final int f_02_title=0x7f0602c7;
+        public static final int f_02_title=0x7f0602df;
         public static final int f_03_010_Frm=0x7f0600f7;
         public static final int f_03_010_Load=0x7f0600fc;
         public static final int f_03_010_Title=0x7f0600f6;
-        public static final int f_03_010_item=0x7f0602eb;
+        public static final int f_03_010_item=0x7f060303;
         public static final int f_03_010_item1_1=0x7f0600f8;
         public static final int f_03_010_item1_2=0x7f0600f9;
         public static final int f_03_010_item2_1=0x7f0600fa;
@@ -459,7 +459,7 @@ containing a value of this type.
         public static final int f_03_020_Frm=0x7f060104;
         public static final int f_03_020_Load=0x7f060112;
         public static final int f_03_020_Title=0x7f060103;
-        public static final int f_03_020_item=0x7f0602ec;
+        public static final int f_03_020_item=0x7f060304;
         public static final int f_03_020_item1_1=0x7f060105;
         public static final int f_03_020_item1_2=0x7f060106;
         public static final int f_03_020_item2_1=0x7f060107;
@@ -476,7 +476,7 @@ containing a value of this type.
         public static final int f_03_030_Load=0x7f06011f;
         public static final int f_03_030_Title=0x7f060113;
         public static final int f_03_030_dataContain=0x7f060111;
-        public static final int f_03_030_item=0x7f0602ed;
+        public static final int f_03_030_item=0x7f060305;
         public static final int f_03_030_item1_1=0x7f060115;
         public static final int f_03_030_item1_2=0x7f060116;
         public static final int f_03_030_item3_1=0x7f060117;
@@ -490,7 +490,7 @@ containing a value of this type.
         public static final int f_03_040_Frm=0x7f060121;
         public static final int f_03_040_Load=0x7f060124;
         public static final int f_03_040_Title=0x7f060120;
-        public static final int f_03_040_item=0x7f0602ee;
+        public static final int f_03_040_item=0x7f060306;
         public static final int f_03_040_item1_1=0x7f060122;
         public static final int f_03_040_item1_2=0x7f060123;
         public static final int f_03_050_Frm=0x7f060126;
@@ -538,26 +538,26 @@ containing a value of this type.
         public static final int f_03_090_Frm=0x7f06015f;
         public static final int f_03_090_Load=0x7f060161;
         public static final int f_03_090_Title=0x7f06015e;
-        public static final int f_03_title=0x7f0602c8;
+        public static final int f_03_title=0x7f0602e0;
         public static final int f_04_010_Frm=0x7f060163;
         public static final int f_04_010_Load=0x7f060165;
         public static final int f_04_010_Title=0x7f060162;
-        public static final int f_04_010_item=0x7f0602ef;
+        public static final int f_04_010_item=0x7f060307;
         public static final int f_04_010_item1=0x7f060164;
         public static final int f_04_020_Frm=0x7f060167;
         public static final int f_04_020_Load=0x7f06016a;
         public static final int f_04_020_Title=0x7f060166;
         public static final int f_04_020_alarmContain=0x7f060169;
         public static final int f_04_020_dataContain=0x7f060168;
-        public static final int f_04_020_item=0x7f0602f0;
+        public static final int f_04_020_item=0x7f060308;
         public static final int f_04_030_Frm=0x7f06016c;
         public static final int f_04_030_Load=0x7f0601b3;
         public static final int f_04_030_Title=0x7f06016b;
-        public static final int f_04_030_item=0x7f0602f1;
+        public static final int f_04_030_item=0x7f060309;
         public static final int f_04_040_Frm=0x7f0601b5;
         public static final int f_04_040_Load=0x7f0601d9;
         public static final int f_04_040_Title=0x7f0601b4;
-        public static final int f_04_040_item=0x7f0602f2;
+        public static final int f_04_040_item=0x7f06030a;
         public static final int f_04_050_Frm=0x7f0601db;
         public static final int f_04_050_Load=0x7f0601de;
         public static final int f_04_050_Title=0x7f0601da;
@@ -655,7 +655,7 @@ containing a value of this type.
         public static final int f_04_120_Load=0x7f06023f;
         public static final int f_04_120_Title=0x7f06023c;
         public static final int f_04_120_dataContain=0x7f06023e;
-        public static final int f_04_title=0x7f0602c9;
+        public static final int f_04_title=0x7f0602e1;
         public static final int f_05_010=0x7f06003d;
         public static final int f_05_010_Frm=0x7f060241;
         public static final int f_05_010_Load=0x7f06024c;
@@ -733,7 +733,7 @@ containing a value of this type.
         public static final int f_05_070_Frm=0x7f060297;
         public static final int f_05_070_Load=0x7f06029a;
         public static final int f_05_070_Title=0x7f060296;
-        public static final int f_05_title=0x7f0602ca;
+        public static final int f_05_title=0x7f0602e2;
         public static final int f_06_010_Frm=0x7f06029c;
         public static final int f_06_010_Load=0x7f0602a8;
         public static final int f_06_010_Title=0x7f06029b;
@@ -742,14 +742,14 @@ containing a value of this type.
         public static final int f_06_010_dataContainWaterQuality=0x7f0602a1;
         public static final int f_06_010_dataContainWaterTemperature=0x7f06029f;
         public static final int f_06_010_item01=0x7f06029d;
-        public static final int f_06_title=0x7f0602cb;
+        public static final int f_06_title=0x7f0602e3;
         public static final int f_07_010=0x7f060042;
         public static final int f_07_010_Frm=0x7f0602aa;
         public static final int f_07_010_Title=0x7f0602a9;
         public static final int f_07_020=0x7f060043;
         public static final int f_07_030=0x7f060044;
         public static final int f_07_040=0x7f060045;
-        public static final int f_07_title=0x7f0602cc;
+        public static final int f_07_title=0x7f0602e4;
         public static final int f_08_010=0x7f06002d;
         public static final int f_08_020=0x7f06002e;
         public static final int f_08_030=0x7f06002f;
@@ -777,7 +777,27 @@ containing a value of this type.
         public static final int f_08_040_item8_1=0x7f0602c3;
         public static final int f_08_040_item8_2=0x7f0602c4;
         public static final int f_08_050=0x7f060031;
+        public static final int f_08_050_Frm=0x7f0602c7;
+        public static final int f_08_050_Load=0x7f0602d7;
+        public static final int f_08_050_Title=0x7f0602c6;
+        public static final int f_08_050_item01_01_n=0x7f0602c9;
+        public static final int f_08_050_item01_01_y=0x7f0602c8;
+        public static final int f_08_050_item01_02_n=0x7f0602cb;
+        public static final int f_08_050_item01_02_y=0x7f0602ca;
+        public static final int f_08_050_item01_03_n=0x7f0602cd;
+        public static final int f_08_050_item01_03_y=0x7f0602cc;
+        public static final int f_08_050_item01_04_n=0x7f0602cf;
+        public static final int f_08_050_item01_04_y=0x7f0602ce;
+        public static final int f_08_050_item01_05_n=0x7f0602d1;
+        public static final int f_08_050_item01_05_y=0x7f0602d0;
+        public static final int f_08_050_item01_06_n=0x7f0602d3;
+        public static final int f_08_050_item01_06_y=0x7f0602d2;
+        public static final int f_08_050_item01_07_n=0x7f0602d5;
+        public static final int f_08_050_item01_07_y=0x7f0602d4;
         public static final int f_08_060=0x7f060032;
+        public static final int f_08_060_Frm=0x7f0602d9;
+        public static final int f_08_060_Load=0x7f0602dd;
+        public static final int f_08_060_Title=0x7f0602d8;
         public static final int f_08_070=0x7f060033;
         public static final int f_08_080=0x7f060034;
         public static final int f_08_090=0x7f060035;
@@ -786,7 +806,7 @@ containing a value of this type.
         public static final int f_08_120=0x7f060038;
         public static final int f_08_130=0x7f060039;
         public static final int f_08_140=0x7f06003a;
-        public static final int f_08_title=0x7f0602cd;
+        public static final int f_08_title=0x7f0602e5;
         public static final int f_func_01=0x7f06001a;
         public static final int f_func_02=0x7f060023;
         public static final int f_func_05=0x7f06003b;
@@ -939,6 +959,10 @@ containing a value of this type.
         public static final int func_06_010_item04_04=0x7f0602a5;
         public static final int func_06_010_item04_05=0x7f0602a6;
         public static final int func_08_030_item01=0x7f0602b1;
+        public static final int func_08_050_item02_01=0x7f0602d6;
+        public static final int func_08_060_item01=0x7f0602da;
+        public static final int func_08_060_item02=0x7f0602db;
+        public static final int func_08_060_item03=0x7f0602dc;
         public static final int func_item_q_01=0x7f06016d;
         public static final int func_item_q_02=0x7f06016f;
         public static final int func_item_q_03=0x7f060171;
@@ -974,61 +998,61 @@ containing a value of this type.
         public static final int func_item_q_33=0x7f0601ad;
         public static final int func_item_q_34=0x7f0601af;
         public static final int func_item_q_35=0x7f0601b1;
-        public static final int head_arrowImageView=0x7f0602fa;
-        public static final int head_contentLayout=0x7f0602f9;
-        public static final int head_lastUpdatedTextView=0x7f0602fd;
-        public static final int head_progressBar=0x7f0602fb;
-        public static final int head_tipsTextView=0x7f0602fc;
+        public static final int head_arrowImageView=0x7f060312;
+        public static final int head_contentLayout=0x7f060311;
+        public static final int head_lastUpdatedTextView=0x7f060315;
+        public static final int head_progressBar=0x7f060313;
+        public static final int head_tipsTextView=0x7f060314;
         public static final int image_item=0x7f060002;
         public static final int iv_appicon=0x7f060004;
         public static final int iv_appicon1=0x7f060006;
         public static final int labelImgReset=0x7f060049;
         public static final int login_info=0x7f060003;
-        public static final int loopProgress=0x7f0602e3;
+        public static final int loopProgress=0x7f0602fb;
         public static final int lqFragment_02=0x7f06004d;
         public static final int lqFragment_03=0x7f06004f;
         public static final int lqFragment_04=0x7f060051;
         public static final int lqLine_02=0x7f06004c;
         public static final int lqLine_03=0x7f06004e;
         public static final int lqLine_04=0x7f060050;
-        public static final int lqOnce=0x7f0602e2;
-        public static final int lqZhiNeng=0x7f0602ea;
-        public static final int noProtocolData=0x7f0602f4;
-        public static final int noProtocolDataScroll=0x7f0602f3;
-        public static final int npClear=0x7f0602f8;
+        public static final int lqOnce=0x7f0602fa;
+        public static final int lqZhiNeng=0x7f060302;
+        public static final int noProtocolData=0x7f06030c;
+        public static final int noProtocolDataScroll=0x7f06030b;
+        public static final int npClear=0x7f060310;
         public static final int npFragmentLinear_02=0x7f060054;
         public static final int npFragmentLinear_03=0x7f060056;
         public static final int npFragment_01=0x7f060053;
         public static final int npFragment_02=0x7f060055;
         public static final int npFragment_03=0x7f060057;
-        public static final int npInput=0x7f0602f6;
-        public static final int npInputFlag=0x7f0602f5;
-        public static final int npSend=0x7f0602f7;
+        public static final int npInput=0x7f06030e;
+        public static final int npInputFlag=0x7f06030d;
+        public static final int npSend=0x7f06030f;
         public static final int npWelcome=0x7f060058;
         public static final int openMainAll2=0x7f06004b;
         public static final int openSubAll=0x7f060048;
         public static final int outProgress=0x7f0602ae;
         public static final int paramInProgress=0x7f0602ac;
-        public static final int paramProgress=0x7f0602d1;
-        public static final int queryLoopProgress=0x7f0602e9;
-        public static final int query_Btn=0x7f0602e8;
+        public static final int paramProgress=0x7f0602e9;
+        public static final int queryLoopProgress=0x7f060301;
+        public static final int query_Btn=0x7f060300;
         public static final int rect=0x7f060000;
-        public static final int resultDatetime=0x7f060309;
+        public static final int resultDatetime=0x7f060321;
         public static final int rtuAssiTitle=0x7f06000c;
-        public static final int rtuData_dt=0x7f0602ff;
-        public static final int rtuData_hex=0x7f060300;
-        public static final int rtuData_id_code_channel=0x7f0602fe;
-        public static final int rtuLogComments=0x7f060308;
-        public static final int rtuLogContent=0x7f060307;
-        public static final int rtuLogDate=0x7f060304;
-        public static final int rtuLogHex=0x7f060302;
-        public static final int rtuLogType=0x7f060305;
-        public static final int rtuLog_index=0x7f060301;
-        public static final int rtuLog_index1=0x7f060303;
-        public static final int rtuLog_index2=0x7f060306;
+        public static final int rtuData_dt=0x7f060317;
+        public static final int rtuData_hex=0x7f060318;
+        public static final int rtuData_id_code_channel=0x7f060316;
+        public static final int rtuLogComments=0x7f060320;
+        public static final int rtuLogContent=0x7f06031f;
+        public static final int rtuLogDate=0x7f06031c;
+        public static final int rtuLogHex=0x7f06031a;
+        public static final int rtuLogType=0x7f06031d;
+        public static final int rtuLog_index=0x7f060319;
+        public static final int rtuLog_index1=0x7f06031b;
+        public static final int rtuLog_index2=0x7f06031e;
         public static final int splashLinear=0x7f060059;
-        public static final int swit1=0x7f0602e1;
-        public static final int tcpConnectStatus=0x7f0602ce;
+        public static final int swit1=0x7f0602f9;
+        public static final int tcpConnectStatus=0x7f0602e6;
         public static final int tcpConnectStatus1=0x7f06000d;
         public static final int tv_connect=0x7f06000b;
         public static final int tv_copyright=0x7f06000a;
@@ -1097,44 +1121,46 @@ containing a value of this type.
         public static final int f_func_07_010=0x7f03003a;
         public static final int f_func_08_030=0x7f03003b;
         public static final int f_func_08_040=0x7f03003c;
-        public static final int f_func_title_01=0x7f03003d;
-        public static final int f_func_title_02=0x7f03003e;
-        public static final int f_func_title_03=0x7f03003f;
-        public static final int f_func_title_04=0x7f030040;
-        public static final int f_func_title_05=0x7f030041;
-        public static final int f_func_title_06=0x7f030042;
-        public static final int f_func_title_07=0x7f030043;
-        public static final int f_func_title_08=0x7f030044;
-        public static final int fch_01=0x7f030045;
-        public static final int fch_02=0x7f030046;
-        public static final int fch_03=0x7f030047;
-        public static final int fch_04=0x7f030048;
-        public static final int fch_05=0x7f030049;
-        public static final int floopq_01=0x7f03004a;
-        public static final int floopq_02=0x7f03004b;
-        public static final int floopq_03=0x7f03004c;
-        public static final int floopq_04=0x7f03004d;
-        public static final int fnp_01=0x7f03004e;
-        public static final int fnp_02=0x7f03004f;
-        public static final int fnp_03=0x7f030050;
-        public static final int line1=0x7f030051;
-        public static final int line2=0x7f030052;
-        public static final int line3=0x7f030053;
-        public static final int listview_refresh=0x7f030054;
-        public static final int listview_rtu_com_results=0x7f030055;
-        public static final int listview_rtu_logs=0x7f030056;
-        public static final int listview_rtu_logs_double=0x7f030057;
-        public static final int show_btn_only_resulttime=0x7f030058;
-        public static final int show_btn_query=0x7f030059;
-        public static final int show_btn_set=0x7f03005a;
-        public static final int show_btn_set_add_remove=0x7f03005b;
-        public static final int show_btn_set_add_remove_add_remove=0x7f03005c;
-        public static final int show_btn_set_adjust_query=0x7f03005d;
-        public static final int show_btn_set_query=0x7f03005e;
-        public static final int show_btn_set_query_add_remove=0x7f03005f;
-        public static final int show_only_btn_add_remove=0x7f030060;
-        public static final int spinner_item=0x7f030061;
-        public static final int spinner_style=0x7f030062;
+        public static final int f_func_08_050=0x7f03003d;
+        public static final int f_func_08_060=0x7f03003e;
+        public static final int f_func_title_01=0x7f03003f;
+        public static final int f_func_title_02=0x7f030040;
+        public static final int f_func_title_03=0x7f030041;
+        public static final int f_func_title_04=0x7f030042;
+        public static final int f_func_title_05=0x7f030043;
+        public static final int f_func_title_06=0x7f030044;
+        public static final int f_func_title_07=0x7f030045;
+        public static final int f_func_title_08=0x7f030046;
+        public static final int fch_01=0x7f030047;
+        public static final int fch_02=0x7f030048;
+        public static final int fch_03=0x7f030049;
+        public static final int fch_04=0x7f03004a;
+        public static final int fch_05=0x7f03004b;
+        public static final int floopq_01=0x7f03004c;
+        public static final int floopq_02=0x7f03004d;
+        public static final int floopq_03=0x7f03004e;
+        public static final int floopq_04=0x7f03004f;
+        public static final int fnp_01=0x7f030050;
+        public static final int fnp_02=0x7f030051;
+        public static final int fnp_03=0x7f030052;
+        public static final int line1=0x7f030053;
+        public static final int line2=0x7f030054;
+        public static final int line3=0x7f030055;
+        public static final int listview_refresh=0x7f030056;
+        public static final int listview_rtu_com_results=0x7f030057;
+        public static final int listview_rtu_logs=0x7f030058;
+        public static final int listview_rtu_logs_double=0x7f030059;
+        public static final int show_btn_only_resulttime=0x7f03005a;
+        public static final int show_btn_query=0x7f03005b;
+        public static final int show_btn_set=0x7f03005c;
+        public static final int show_btn_set_add_remove=0x7f03005d;
+        public static final int show_btn_set_add_remove_add_remove=0x7f03005e;
+        public static final int show_btn_set_adjust_query=0x7f03005f;
+        public static final int show_btn_set_query=0x7f030060;
+        public static final int show_btn_set_query_add_remove=0x7f030061;
+        public static final int show_only_btn_add_remove=0x7f030062;
+        public static final int spinner_item=0x7f030063;
+        public static final int spinner_style=0x7f030064;
     }
     public static final class menu {
         public static final int main=0x7f0b0000;
@@ -1148,44 +1174,44 @@ containing a value of this type.
     public static final class string {
         /**  固态数据显示最大条数 
          */
-        public static final int B1ResultMaxCount=0x7f070247;
+        public static final int B1ResultMaxCount=0x7f07025c;
         /**  日志数据显示最大条数 
          */
-        public static final int EDResultMaxCount=0x7f070248;
+        public static final int EDResultMaxCount=0x7f07025d;
         public static final int account_no=0x7f070002;
         public static final int account_psw=0x7f070003;
         public static final int app_name=0x7f070000;
         /**  软件启动时自动查询的功能码 (用,号分隔) 
          */
-        public static final int autoQueryCom=0x7f070231;
+        public static final int autoQueryCom=0x7f070246;
         /**  可由短信通道下发命令的功能码 (用,号分隔) 
          */
-        public static final int canSendBySM=0x7f070232;
-        public static final int ch_sm_channel=0x7f070223;
-        public static final int ch_tcp_channel=0x7f070224;
+        public static final int canSendBySM=0x7f070247;
+        public static final int ch_sm_channel=0x7f070238;
+        public static final int ch_tcp_channel=0x7f070239;
         /**  下发命令时间间隔(毫秒)，防止连续发命令时，RTU处理不过来,经测试小于4000 RTU处理不过来，重发命令现象很多 
          */
-        public static final int commandInterval=0x7f070235;
-        public static final int commandParam=0x7f0701fa;
+        public static final int commandInterval=0x7f07024a;
+        public static final int commandParam=0x7f07020f;
         /**  等待命令结果的超时时长，即动画时长，单位毫秒 
          */
-        public static final int commandResultTimout=0x7f07022b;
+        public static final int commandResultTimout=0x7f070240;
         /**  下发命令，无结果时重发，重发的最大次数 
          */
-        public static final int commandSendMaxTimes=0x7f070236;
+        public static final int commandSendMaxTimes=0x7f07024b;
         /**  当查询命令时，是否显示确认窗口 
          */
-        public static final int confirmWhileReadCommand=0x7f07022e;
+        public static final int confirmWhileReadCommand=0x7f070243;
         public static final int connect=0x7f070007;
-        public static final int connected=0x7f070226;
+        public static final int connected=0x7f07023b;
         public static final int copyright=0x7f070006;
         public static final int debug=0x7f070001;
         /**  通信协议 
          */
-        public static final int defaultPassword=0x7f070239;
-        public static final int disconnected=0x7f070228;
-        public static final int fileDir=0x7f070220;
-        public static final int fileExtendsName=0x7f070221;
+        public static final int defaultPassword=0x7f07024e;
+        public static final int disconnected=0x7f07023d;
+        public static final int fileDir=0x7f070235;
+        public static final int fileExtendsName=0x7f070236;
         public static final int func_01_010=0x7f07001c;
         public static final int func_01_010_item1=0x7f07001d;
         public static final int func_01_010_item2=0x7f07001e;
@@ -1589,6 +1615,25 @@ containing a value of this type.
         public static final int func_08_040_item8=0x7f0701cf;
         public static final int func_08_040_item8_1=0x7f0701d0;
         public static final int func_08_040_item8_2=0x7f0701d1;
+        public static final int func_08_050=0x7f0701d2;
+        public static final int func_08_050_item01=0x7f0701d3;
+        public static final int func_08_050_item01_01=0x7f0701d4;
+        public static final int func_08_050_item01_02=0x7f0701d5;
+        public static final int func_08_050_item01_03=0x7f0701d6;
+        public static final int func_08_050_item01_04=0x7f0701d7;
+        public static final int func_08_050_item01_05=0x7f0701d8;
+        public static final int func_08_050_item01_06=0x7f0701d9;
+        public static final int func_08_050_item01_07=0x7f0701da;
+        public static final int func_08_050_item02=0x7f0701db;
+        public static final int func_08_050_item02_01=0x7f0701dc;
+        public static final int func_08_060=0x7f0701dd;
+        public static final int func_08_060_item1=0x7f0701de;
+        public static final int func_08_060_item2=0x7f0701df;
+        public static final int func_08_060_item3=0x7f0701e0;
+        public static final int func_08_070=0x7f0701e1;
+        public static final int func_08_070_item1=0x7f0701e2;
+        public static final int func_08_080=0x7f0701e3;
+        public static final int func_08_080_item1=0x7f0701e4;
         public static final int func_item_q_01=0x7f0700f3;
         public static final int func_item_q_02=0x7f0700f4;
         public static final int func_item_q_03=0x7f0700f5;
@@ -1624,30 +1669,30 @@ containing a value of this type.
         public static final int func_item_q_33=0x7f070113;
         public static final int func_item_q_34=0x7f070114;
         public static final int func_item_q_35=0x7f070115;
-        public static final int func_item_unit_100pa=0x7f0701e6;
-        public static final int func_item_unit_ci=0x7f0701e8;
-        public static final int func_item_unit_du=0x7f0701e1;
-        public static final int func_item_unit_duCn=0x7f0701d5;
-        public static final int func_item_unit_gePerL=0x7f0701d6;
-        public static final int func_item_unit_h=0x7f0701d7;
-        public static final int func_item_unit_kPa=0x7f0701e7;
-        public static final int func_item_unit_kw=0x7f0701e4;
-        public static final int func_item_unit_m=0x7f0701d9;
-        public static final int func_item_unit_m1=0x7f0701da;
-        public static final int func_item_unit_m1pers=0x7f0701db;
-        public static final int func_item_unit_m3=0x7f0701dd;
-        public static final int func_item_unit_m3_1=0x7f0701de;
-        public static final int func_item_unit_m3perh=0x7f0701df;
-        public static final int func_item_unit_m3pers=0x7f0701e0;
-        public static final int func_item_unit_mg=0x7f0701d2;
-        public static final int func_item_unit_min=0x7f0701d8;
-        public static final int func_item_unit_mm=0x7f0701dc;
-        public static final int func_item_unit_mv=0x7f0701d4;
-        public static final int func_item_unit_pa=0x7f0701e5;
-        public static final int func_item_unit_s=0x7f0701e3;
-        public static final int func_item_unit_tiao=0x7f0701e9;
-        public static final int func_item_unit_us=0x7f0701d3;
-        public static final int func_item_unit_v=0x7f0701e2;
+        public static final int func_item_unit_100pa=0x7f0701f9;
+        public static final int func_item_unit_ci=0x7f0701fb;
+        public static final int func_item_unit_du=0x7f0701f4;
+        public static final int func_item_unit_duCn=0x7f0701e8;
+        public static final int func_item_unit_gePerL=0x7f0701e9;
+        public static final int func_item_unit_h=0x7f0701ea;
+        public static final int func_item_unit_kPa=0x7f0701fa;
+        public static final int func_item_unit_kw=0x7f0701f7;
+        public static final int func_item_unit_m=0x7f0701ec;
+        public static final int func_item_unit_m1=0x7f0701ed;
+        public static final int func_item_unit_m1pers=0x7f0701ee;
+        public static final int func_item_unit_m3=0x7f0701f0;
+        public static final int func_item_unit_m3_1=0x7f0701f1;
+        public static final int func_item_unit_m3perh=0x7f0701f2;
+        public static final int func_item_unit_m3pers=0x7f0701f3;
+        public static final int func_item_unit_mg=0x7f0701e5;
+        public static final int func_item_unit_min=0x7f0701eb;
+        public static final int func_item_unit_mm=0x7f0701ef;
+        public static final int func_item_unit_mv=0x7f0701e7;
+        public static final int func_item_unit_pa=0x7f0701f8;
+        public static final int func_item_unit_s=0x7f0701f6;
+        public static final int func_item_unit_tiao=0x7f0701fc;
+        public static final int func_item_unit_us=0x7f0701e6;
+        public static final int func_item_unit_v=0x7f0701f5;
         public static final int functionChannel=0x7f07000d;
         public static final int functionItems=0x7f07000b;
         public static final int functionLoopQuery=0x7f07000c;
@@ -1655,7 +1700,7 @@ containing a value of this type.
         public static final int image_description=0x7f07000f;
         /**  间隔一段时间(毫秒)后，再次上线，认为是在同一个RTU上，不再发自动命令 
          */
-        public static final int intervalStillAtOneRtu=0x7f07022c;
+        public static final int intervalStillAtOneRtu=0x7f070241;
         public static final int login=0x7f070005;
         public static final int menu_level_01=0x7f070010;
         public static final int menu_level_02=0x7f070011;
@@ -1665,93 +1710,95 @@ containing a value of this type.
         public static final int menu_level_06=0x7f070015;
         /**  无命令下发最大时长(毫秒)，否则RTU把wifi断电了 
          */
-        public static final int noCommandIdle=0x7f070238;
+        public static final int noCommandIdle=0x7f07024d;
         /**  无命令下发超时(见下noCommandIdle配置) 时，是否下发连接链中检测命令  
          */
-        public static final int noCommandTimeoutThenSendLinkCommand=0x7f070237;
-        public static final int noConnected=0x7f070227;
-        public static final int noProtocolSendNeedConfirm=0x7f0701f9;
+        public static final int noCommandTimeoutThenSendLinkCommand=0x7f07024c;
+        public static final int noConnected=0x7f07023c;
+        public static final int noProtocolSendNeedConfirm=0x7f07020e;
         /**  非协议(调试)数据显示的最大长度(字符数) 
          */
-        public static final int noProtocolTxtMaxLen=0x7f070245;
+        public static final int noProtocolTxtMaxLen=0x7f07025a;
         /**  点击功能项题目不需要查询的命令(当然自动查询的功能码点开题目时也不查询) 
          */
-        public static final int noQueryComWhenClickTitle=0x7f070233;
-        public static final int noSave=0x7f0701f8;
+        public static final int noQueryComWhenClickTitle=0x7f070248;
+        public static final int noSave=0x7f07020b;
+        public static final int noShow=0x7f07020d;
         /**  收到数据是否自动打开相关内容   
          */
-        public static final int openWhenReceiveData=0x7f070234;
-        public static final int operatorConfirm=0x7f0701ec;
+        public static final int openWhenReceiveData=0x7f070249;
+        public static final int operatorConfirm=0x7f0701ff;
         /**  广播命令Rtu ID 
          */
-        public static final int protocolBroastCommandRtuId=0x7f070244;
+        public static final int protocolBroastCommandRtuId=0x7f070259;
         /**  是否进行时钟同步 1为是，0为否 
          */
-        public static final int protocolEnableClockSyn=0x7f070242;
-        public static final int protocolPackageHead=0x7f07023c;
-        public static final int protocolPackageHead_1_index=0x7f07023d;
-        public static final int protocolPackageHead_2_index=0x7f07023e;
-        public static final int protocolPackageLenEndIndex=0x7f070240;
+        public static final int protocolEnableClockSyn=0x7f070257;
+        public static final int protocolPackageHead=0x7f070251;
+        public static final int protocolPackageHead_1_index=0x7f070252;
+        public static final int protocolPackageHead_2_index=0x7f070253;
+        public static final int protocolPackageLenEndIndex=0x7f070255;
         /**  不包含于通信协议数据长度中的数据的长度 
          */
-        public static final int protocolPackageLenNoInclud=0x7f070241;
-        public static final int protocolPackageLenStartIndex=0x7f07023f;
+        public static final int protocolPackageLenNoInclud=0x7f070256;
+        public static final int protocolPackageLenStartIndex=0x7f070254;
         /**  此值必须是3(针对206协议)，在Decoder.java中有限制 
          */
-        public static final int protocolPackageMaxLen=0x7f07023b;
+        public static final int protocolPackageMaxLen=0x7f070250;
         /**  默认密码 
          */
-        public static final int protocolPackageMinLen=0x7f07023a;
+        public static final int protocolPackageMinLen=0x7f07024f;
         /**  时钟相差大于以下配置时时长(分钟)时，进行时钟同步 
          */
-        public static final int protocolSynClockDeviate=0x7f070243;
-        public static final int pullListView_item_position_key=0x7f07021f;
-        public static final int pullListView_last=0x7f07021e;
-        public static final int pullListView_lastDt=0x7f07021d;
-        public static final int pullListView_loading=0x7f07021c;
-        public static final int pullListView_pull=0x7f07021a;
-        public static final int pullListView_release=0x7f07021b;
+        public static final int protocolSynClockDeviate=0x7f070258;
+        public static final int pullListView_item_position_key=0x7f070234;
+        public static final int pullListView_last=0x7f070233;
+        public static final int pullListView_lastDt=0x7f070232;
+        public static final int pullListView_loading=0x7f070231;
+        public static final int pullListView_pull=0x7f07022f;
+        public static final int pullListView_release=0x7f070230;
         /**  自动下发命令的功能项，点开界面标题时是否还要下发查询命令 
          */
-        public static final int queryAutoQueryComWhenClickTitle=0x7f070230;
+        public static final int queryAutoQueryComWhenClickTitle=0x7f070245;
         /**  点开界面标题时是否下发查询命令 
          */
-        public static final int queryWhenClickTitle=0x7f07022f;
+        public static final int queryWhenClickTitle=0x7f070244;
         public static final int result_datetime=0x7f07001b;
         public static final int rtuAssiName=0x7f070009;
-        public static final int rtuLogListViewHeight=0x7f070229;
+        public static final int rtuLogListViewHeight=0x7f07023e;
         /**  显示RTU结果数据最大条数 
          */
-        public static final int rutResultMaxCount=0x7f070246;
-        public static final int save=0x7f0701f7;
+        public static final int rutResultMaxCount=0x7f07025b;
+        public static final int save=0x7f07020a;
         public static final int save_psw=0x7f070004;
-        public static final int showAlarm=0x7f0701ea;
+        public static final int show=0x7f07020c;
+        public static final int showAlarm=0x7f0701fd;
         /**  下发命令数据十六进制是否显示于数据窗口中 
          */
-        public static final int showCommandDataHex=0x7f07022d;
-        public static final int showInfo=0x7f0701eb;
+        public static final int showCommandDataHex=0x7f070242;
+        public static final int showInfo=0x7f0701fe;
         /**  当人工点击按钮连接网络时，等待连接结果的超时时长，即动画时长，单位毫秒 
          */
-        public static final int tcpConnectTimeout=0x7f07022a;
-        public static final int tcpStatus=0x7f070225;
-        public static final int txtAlarmNoSetDataFile=0x7f0701ff;
-        public static final int txtAutoQuery=0x7f0701fb;
-        public static final int txtBtn=0x7f0701f6;
-        public static final int txtCancel=0x7f0701f3;
-        public static final int txtConfirm=0x7f0701f1;
-        public static final int txtConfirmClear=0x7f0701f0;
-        public static final int txtConfirmInSetData=0x7f070200;
-        public static final int txtConfirmReplaceSetData=0x7f0701fe;
-        public static final int txtConfirmSend=0x7f0701ef;
-        public static final int txtConfirmSendReadCommand=0x7f0701ee;
-        public static final int txtConfirmSendSetCommand=0x7f0701ed;
-        public static final int txtExit=0x7f070201;
-        public static final int txtLoopQuery_alarm=0x7f070213;
-        public static final int txtLoopQuery_alarmStatus=0x7f07020b;
-        public static final int txtLoopQuery_amount=0x7f070208;
-        public static final int txtLoopQuery_baseHeight=0x7f070217;
-        public static final int txtLoopQuery_buried=0x7f070218;
-        public static final int txtLoopQuery_deviceAddr=0x7f070203;
+        public static final int tcpConnectTimeout=0x7f07023f;
+        public static final int tcpStatus=0x7f07023a;
+        public static final int txtAlarmNoSetDataFile=0x7f070214;
+        public static final int txtAutoQuery=0x7f070210;
+        public static final int txtBtn=0x7f070209;
+        public static final int txtCancel=0x7f070206;
+        public static final int txtConfirm=0x7f070204;
+        public static final int txtConfirmClear=0x7f070203;
+        public static final int txtConfirmInSetData=0x7f070215;
+        public static final int txtConfirmReplaceSetData=0x7f070213;
+        public static final int txtConfirmSend=0x7f070202;
+        public static final int txtConfirmSendReadCommand=0x7f070201;
+        public static final int txtConfirmSendSetCommand=0x7f070200;
+        public static final int txtExit=0x7f070216;
+        public static final int txtLoopQuery_alarm=0x7f070228;
+        public static final int txtLoopQuery_alarmStatus=0x7f070220;
+        public static final int txtLoopQuery_amount=0x7f07021d;
+        public static final int txtLoopQuery_baseHeight=0x7f07022c;
+        public static final int txtLoopQuery_buried=0x7f07022d;
+        public static final int txtLoopQuery_deviceAddr=0x7f070218;
         /** &#160;
 	空格：&#160;
 	窄空格：&#8201;
@@ -1762,37 +1809,37 @@ containing a value of this type.
 	XSL是可扩展样式表语言的外语缩写，是一种用于以可读格式呈现 XML（标准通用标记语言的子集）数据的语言。
 	XSL = XML 样式表  
          */
-        public static final int txtLoopQuery_deviceSerNum=0x7f070202;
-        public static final int txtLoopQuery_eventLog=0x7f07020c;
-        public static final int txtLoopQuery_hardVer=0x7f070204;
-        public static final int txtLoopQuery_instance=0x7f070209;
-        public static final int txtLoopQuery_interval=0x7f07020f;
-        public static final int txtLoopQuery_ipAddr=0x7f07020a;
-        public static final int txtLoopQuery_minus=0x7f070215;
-        public static final int txtLoopQuery_onLine=0x7f070211;
-        public static final int txtLoopQuery_plus=0x7f070214;
-        public static final int txtLoopQuery_reportInterval=0x7f070207;
-        public static final int txtLoopQuery_signal=0x7f070212;
-        public static final int txtLoopQuery_simICCID=0x7f07020d;
-        public static final int txtLoopQuery_softVer=0x7f070205;
-        public static final int txtLoopQuery_temperature=0x7f070219;
-        public static final int txtLoopQuery_times=0x7f070210;
-        public static final int txtLoopQuery_type=0x7f07020e;
-        public static final int txtLoopQuery_voltage=0x7f070206;
-        public static final int txtLoopQuery_wlType=0x7f070216;
-        public static final int txtNo=0x7f0701f5;
-        public static final int txtOk=0x7f0701f2;
-        public static final int txtPutOutIn=0x7f0701fd;
-        public static final int txtStop=0x7f0701fc;
+        public static final int txtLoopQuery_deviceSerNum=0x7f070217;
+        public static final int txtLoopQuery_eventLog=0x7f070221;
+        public static final int txtLoopQuery_hardVer=0x7f070219;
+        public static final int txtLoopQuery_instance=0x7f07021e;
+        public static final int txtLoopQuery_interval=0x7f070224;
+        public static final int txtLoopQuery_ipAddr=0x7f07021f;
+        public static final int txtLoopQuery_minus=0x7f07022a;
+        public static final int txtLoopQuery_onLine=0x7f070226;
+        public static final int txtLoopQuery_plus=0x7f070229;
+        public static final int txtLoopQuery_reportInterval=0x7f07021c;
+        public static final int txtLoopQuery_signal=0x7f070227;
+        public static final int txtLoopQuery_simICCID=0x7f070222;
+        public static final int txtLoopQuery_softVer=0x7f07021a;
+        public static final int txtLoopQuery_temperature=0x7f07022e;
+        public static final int txtLoopQuery_times=0x7f070225;
+        public static final int txtLoopQuery_type=0x7f070223;
+        public static final int txtLoopQuery_voltage=0x7f07021b;
+        public static final int txtLoopQuery_wlType=0x7f07022b;
+        public static final int txtNo=0x7f070208;
+        public static final int txtOk=0x7f070205;
+        public static final int txtPutOutIn=0x7f070212;
+        public static final int txtStop=0x7f070211;
         public static final int txtVersion=0x7f070008;
-        public static final int txtYes=0x7f0701f4;
+        public static final int txtYes=0x7f070207;
         public static final int welcome=0x7f07000a;
         public static final int wifi_ip1=0x7f070016;
         public static final int wifi_ip2=0x7f070017;
         public static final int wifi_ip3=0x7f070018;
         public static final int wifi_ip4=0x7f070019;
         public static final int wifi_port=0x7f07001a;
-        public static final int xmlFileExtendsName=0x7f070222;
+        public static final int xmlFileExtendsName=0x7f070237;
     }
     public static final class style {
         /** 

@@ -488,6 +488,8 @@
    	<string name="func_07_030">批量设置</string>
    	<string name="func_07_030_item01">自动设置:</string>
     
+   	
+   	
    	<string name="func_08_030">ModBus地址</string>
     <string name="func_08_030_item1">地址</string>
    	
@@ -516,6 +518,30 @@
     <string name="func_08_040_item8">水表8</string>
     <string name="func_08_040_item8_1">水表8是否使能</string>
     <string name="func_08_040_item8_2">地址</string>
+    
+    <string name="func_08_050">设置LCD显示内容及刷屏间隔</string>
+    <string name="func_08_050_item01">显示内容设置</string>
+    <string name="func_08_050_item01_01">净积显示</string>
+    <string name="func_08_050_item01_02">正积显示</string>
+    <string name="func_08_050_item01_03">负积显示</string>
+    <string name="func_08_050_item01_04">瞬时流量显示 </string>
+    <string name="func_08_050_item01_05">日期显示</string>
+    <string name="func_08_050_item01_06">时间显示 </string>
+    <string name="func_08_050_item01_07">电压显示</string>
+    <string name="func_08_050_item02">刷屏间隔设置</string>
+    <string name="func_08_050_item02_01">时间间隔</string>
+    
+    <string name="func_08_060">查询/设置正积流量</string>
+    <string name="func_08_060_item1">密码</string> 
+    <string name="func_08_060_item2">Lora通道</string> 
+    <string name="func_08_060_item3">正积流量</string> 
+   	
+    <string name="func_08_070">查询/设置负积流量</string>
+    <string name="func_08_070_item1">负积流量</string> 
+    
+    <string name="func_08_080">设置净积流量</string>
+    <string name="func_08_080_item1">净积流量</string> 
+    
     
     <string name="func_item_unit_mg">(mg/L)</string>
     <string name="func_item_unit_us">(μs/cm)</string>
@@ -558,7 +584,8 @@
     <string name="txtBtn">按钮</string>
     <string name="save">保存</string>
     <string name="noSave">不存</string>
-    
+    <string name="show">显示</string>
+    <string name="noShow">不显</string>
      <string name="noProtocolSendNeedConfirm">false</string>
     
     

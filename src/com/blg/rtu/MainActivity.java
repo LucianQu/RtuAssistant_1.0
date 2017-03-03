@@ -1,6 +1,7 @@
 package com.blg.rtu;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -9,8 +10,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.graphics.Color;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.os.Handler;
@@ -29,14 +28,13 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.blg.rtu.R;
 import com.blg.rtu.aidl.ServiceAidl;
 import com.blg.rtu.frmChannel.helpCh1.ChBusi_01_Operate;
 import com.blg.rtu.server.LocalServer;
+import com.blg.rtu.util.Constant;
 import com.blg.rtu.util.Preferences;
 import com.blg.rtu.util.ResourceUtils;
 import com.blg.rtu.util.SoundAlert;
-import com.blg.rtu.util.Constant;
 import com.blg.rtu.util.StringValueForActivity;
 
 

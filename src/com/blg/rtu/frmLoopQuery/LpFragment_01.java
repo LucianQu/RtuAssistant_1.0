@@ -2,8 +2,22 @@ package com.blg.rtu.frmLoopQuery;
 
 import java.util.ArrayList;
 
-import com.leaking.slideswitch.SlideSwitch;
-import com.leaking.slideswitch.SlideSwitch.SlideListener;
+import android.app.Activity;
+import android.app.Fragment;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.blg.rtu.MainActivity;
 import com.blg.rtu.R;
@@ -15,25 +29,8 @@ import com.blg.rtu.protocol.p206.cdF0.Data_F0;
 import com.blg.rtu.util.Constant;
 import com.blg.rtu.util.Preferences;
 import com.blg.rtu.util.SpinnerVO;
-import com.blg.rtu.util.StringValueForActivity;
-
-import android.app.Activity;
-import android.app.Fragment;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.View.OnClickListener;
-import android.webkit.WebView.FindListener;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.ProgressBar;
-import android.widget.Spinner;
-import android.widget.Toast;
-import android.widget.AdapterView.OnItemSelectedListener;
-import android.widget.TextView;
+import com.leaking.slideswitch.SlideSwitch;
+import com.leaking.slideswitch.SlideSwitch.SlideListener;
 
 public class LpFragment_01 extends Fragment implements SlideListener{
 	

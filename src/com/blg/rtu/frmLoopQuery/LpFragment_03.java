@@ -1,24 +1,6 @@
 package com.blg.rtu.frmLoopQuery;
 
 
-import java.util.ArrayList;
-
-import com.blg.rtu.MainActivity;
-import com.blg.rtu.R;
-import com.blg.rtu.protocol.RtuData;
-import com.blg.rtu.protocol.p206.Code206;
-import com.blg.rtu.protocol.p206.cd10_50.Data_10_50;
-import com.blg.rtu.protocol.p206.cdA1_53.Data_A1_53;
-import com.blg.rtu.protocol.p206.cdC2.Data_C2;
-import com.blg.rtu.protocol.p206.cdCC_DC.Data_CC_DC;
-import com.blg.rtu.protocol.p206.cdD3.Data_D3;
-import com.blg.rtu.protocol.p206.cdE0.Data_E0;
-import com.blg.rtu.protocol.p206.cdEF.Data_EF;
-import com.blg.rtu.protocol.p206.cdF0.Data_F0;
-import com.blg.rtu.util.Constant;
-import com.blg.rtu.util.Preferences;
-import com.blg.rtu.util.SpinnerVO;
-
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.Intent;
@@ -26,10 +8,15 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.LinearLayout;
-import android.widget.Spinner;
 import android.widget.TextView;
+
+import com.blg.rtu.MainActivity;
+import com.blg.rtu.R;
+import com.blg.rtu.protocol.RtuData;
+import com.blg.rtu.protocol.p206.Code206;
+import com.blg.rtu.protocol.p206.cdA1_53.Data_A1_53;
+import com.blg.rtu.protocol.p206.cdC2.Data_C2;
+import com.blg.rtu.protocol.p206.cdE0.Data_E0;
 
 public class LpFragment_03 extends Fragment {
 	

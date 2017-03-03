@@ -50,12 +50,10 @@
 # view res/layout/activity_main_function_page.xml #generated:293
 -keep class com.blg.rtu.frmFunction.F_01_060 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:158
 # view res/layout/activity_main_function_page.xml #generated:176
 # view res/layout/activity_main_function_page.xml #generated:66
 -keep class com.blg.rtu.frmFunction.F_01_070 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:161
 # view res/layout/activity_main_function_page.xml #generated:179
 # view res/layout/activity_main_function_page.xml #generated:69
 -keep class com.blg.rtu.frmFunction.F_01_080 { <init>(...); }
@@ -96,7 +94,6 @@
 # view res/layout/activity_main_function_page.xml #generated:284
 -keep class com.blg.rtu.frmFunction.F_05_010 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:155
 # view res/layout/activity_main_function_page.xml #generated:173
 # view res/layout/activity_main_function_page.xml #generated:63
 -keep class com.blg.rtu.frmFunction.F_05_020 { <init>(...); }
@@ -112,6 +109,15 @@
 
 # view res/layout/activity_main_function_page.xml #generated:152
 -keep class com.blg.rtu.frmFunction.F_08_030 { <init>(...); }
+
+# view res/layout/activity_main_function_page.xml #generated:155
+-keep class com.blg.rtu.frmFunction.F_08_040 { <init>(...); }
+
+# view res/layout/activity_main_function_page.xml #generated:158
+-keep class com.blg.rtu.frmFunction.F_08_050 { <init>(...); }
+
+# view res/layout/activity_main_function_page.xml #generated:161
+-keep class com.blg.rtu.frmFunction.F_08_060 { <init>(...); }
 
 # view res/layout/activity_main_loopquery_page.xml #generated:44
 -keep class com.blg.rtu.frmLoopQuery.LpFragment_02 { <init>(...); }

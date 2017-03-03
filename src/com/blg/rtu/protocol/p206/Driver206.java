@@ -31,9 +31,18 @@ import com.blg.rtu.protocol.p206.cd34.*;
 import com.blg.rtu.protocol.p206.cd42_72.Answer_42_72;
 import com.blg.rtu.protocol.p206.cd42_72.Read_72;
 import com.blg.rtu.protocol.p206.cd42_72.Write_42;
+import com.blg.rtu.protocol.p206.cd43_73.Answer_43_73;
+import com.blg.rtu.protocol.p206.cd43_73.Read_73;
+import com.blg.rtu.protocol.p206.cd43_73.Write_43;
 import com.blg.rtu.protocol.p206.cd44_74.Answer_44_74;
 import com.blg.rtu.protocol.p206.cd44_74.Read_74;
 import com.blg.rtu.protocol.p206.cd44_74.Write_44;
+import com.blg.rtu.protocol.p206.cd45_75.Answer_45_75;
+import com.blg.rtu.protocol.p206.cd45_75.Read_75;
+import com.blg.rtu.protocol.p206.cd45_75.Write_45;
+import com.blg.rtu.protocol.p206.cd46_76.Answer_46_76;
+import com.blg.rtu.protocol.p206.cd46_76.Read_76;
+import com.blg.rtu.protocol.p206.cd46_76.Write_46;
 import com.blg.rtu.protocol.p206.cdB1.*;
 import com.blg.rtu.protocol.p206.cdB2.*;
 import com.blg.rtu.protocol.p206.cd5D.*;
@@ -633,12 +642,42 @@ public class Driver206 extends DriverRtu {
 				//应答 - 查询短信中心号码
 				this.upData = new Answer_CD_DD().parse(rtuId, b, ca, this.dataCode);
 				action.append(Action.commandResultAction) ;
-			}else			
+			}else	
+			if(this.dataCode.equalsIgnoreCase(Code206.cd_73)){
+				//应答 - 查询ModBus关联地址
+				this.upData = new Answer_43_73().parse(rtuId, b, ca, this.dataCode);
+				action.append(Action.commandResultAction) ;
+			}else	
+			if(this.dataCode.equalsIgnoreCase(Code206.cd_75)){
+				//应答 - 查询LCD显示内容及时间间隔
+				this.upData = new Answer_45_75().parse(rtuId, b, ca, this.dataCode);
+				action.append(Action.commandResultAction) ;
+			}else
+			if(this.dataCode.equalsIgnoreCase(Code206.cd_76)){
+				//应答 - 查询正积流量
+				this.upData = new Answer_46_76().parse(rtuId, b, ca, this.dataCode);
+				action.append(Action.commandResultAction) ;
+			}else
 			if(this.dataCode.equalsIgnoreCase(Code206.cd_DD)){
 				//应答 - 设置短信中心号码
 				this.upData = new Answer_CD_DD().parse(rtuId, b, ca, this.dataCode);
 				action.append(Action.commandResultAction) ;
-			}else			
+			}else	
+			if(this.dataCode.equalsIgnoreCase(Code206.cd_43)){
+				//应答 - 设置ModBus关联地址
+				this.upData = new Answer_43_73().parse(rtuId, b, ca, this.dataCode);
+				action.append(Action.commandResultAction) ;
+			}else
+			if(this.dataCode.equalsIgnoreCase(Code206.cd_45)){
+				//应答 - 设置LCD显示内容及刷屏间隔
+				this.upData = new Answer_45_75().parse(rtuId, b, ca, this.dataCode);
+				action.append(Action.commandResultAction) ;
+			}else
+			if(this.dataCode.equalsIgnoreCase(Code206.cd_46)){
+				//应答 - 设置正积流量
+				this.upData = new Answer_46_76().parse(rtuId, b, ca, this.dataCode);
+				action.append(Action.commandResultAction) ;
+			}else
 			if(this.dataCode.equalsIgnoreCase(Code206.cd_CE)){
 				//应答 - 查询卫星中心号码
 				this.upData = new Answer_CE_DE().parse(rtuId, b, ca, this.dataCode);
@@ -1216,9 +1255,39 @@ public class Driver206 extends DriverRtu {
 				this.downData = new Read_CD().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
 				activ = Action.remoteCommandAction ;
 			}else 
+			if(this.commandCode.equalsIgnoreCase(Code206.cd_73)){
+				//查询ModBus关联地址
+				this.downData = new Read_73().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
+				activ = Action.remoteCommandAction ;
+			}else 
+			if(this.commandCode.equalsIgnoreCase(Code206.cd_75)){
+				//查询LCD显示内容及刷屏间隔
+				this.downData = new Read_75().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
+				activ = Action.remoteCommandAction ;
+			}else
+			if(this.commandCode.equalsIgnoreCase(Code206.cd_76)){
+				//查询正积流量
+				this.downData = new Read_76().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
+				activ = Action.remoteCommandAction ;
+			}else 
 			if(this.commandCode.equalsIgnoreCase(Code206.cd_DD)){
 				//设置短信中心号码
 				this.downData = new Write_DD().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
+				activ = Action.remoteCommandAction ;
+			}else 
+			if(this.commandCode.equalsIgnoreCase(Code206.cd_43)){
+				//设置中继器关联ModBus地址
+				this.downData = new Write_43().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
+				activ = Action.remoteCommandAction ;
+			}else 
+			if(this.commandCode.equalsIgnoreCase(Code206.cd_45)){
+				//设置LCD显示内容及刷屏间隔
+				this.downData = new Write_45().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
+				activ = Action.remoteCommandAction ;
+			}else 
+			if(this.commandCode.equalsIgnoreCase(Code206.cd_46)){
+				//设置正积流量
+				this.downData = new Write_46().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
 				activ = Action.remoteCommandAction ;
 			}else 
 			if(this.commandCode.equalsIgnoreCase(Code206.cd_CE)){

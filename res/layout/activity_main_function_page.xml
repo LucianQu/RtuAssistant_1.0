@@ -153,13 +153,13 @@
 			        android:name="com.blg.rtu.frmFunction.F_08_030"
 				    style="@style/func_fragment_style"/>   
 				<fragment android:id="@+id/f_08_040"
-			        android:name="com.blg.rtu.frmFunction.F_05_020"
+			        android:name="com.blg.rtu.frmFunction.F_08_040"
 				    style="@style/func_fragment_style"/>
 		        <fragment android:id="@+id/f_08_050"
-			        android:name="com.blg.rtu.frmFunction.F_01_070"
+			        android:name="com.blg.rtu.frmFunction.F_08_050"
 				    style="@style/func_fragment_style"/>
 		        <fragment android:id="@+id/f_08_060"
-			        android:name="com.blg.rtu.frmFunction.F_01_080"
+			        android:name="com.blg.rtu.frmFunction.F_08_060"
 				    style="@style/func_fragment_style"/>
 		        <fragment android:id="@+id/f_08_070"
 			        android:name="com.blg.rtu.frmFunction.F_01_050"

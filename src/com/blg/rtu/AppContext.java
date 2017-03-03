@@ -1,7 +1,5 @@
 package com.blg.rtu;
 
-import com.automic.watersource.utils.CrashHandler;
-
 import android.app.Application;
 
 public class AppContext extends Application {
@@ -16,7 +14,7 @@ public class AppContext extends Application {
 		super.onCreate();
 
 		mInstance = this;
-		CrashHandler catchHandler = CrashHandler.getInstance();
+		//CrashHandler catchHandler = CrashHandler.getInstance();
 //		catchHandler.init(getApplicationContext());
 
 	}

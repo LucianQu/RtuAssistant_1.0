@@ -1,10 +1,7 @@
 package com.blg.rtu.frmFunction;
 
-import java.io.File;
-
 import android.app.Fragment;
 import android.os.RemoteException;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
@@ -15,8 +12,6 @@ import android.widget.Toast;
 import com.blg.rtu.MainActivity;
 import com.blg.rtu.R;
 import com.blg.rtu.ServerProxyHandler;
-import com.blg.rtu.frmChannel.ChFragment_03;
-import com.blg.rtu.help.HelpSaveSetDataToFile;
 import com.blg.rtu.protocol.RtuCommand;
 import com.blg.rtu.protocol.RtuData;
 import com.blg.rtu.sm.SmsSender;
@@ -24,7 +19,6 @@ import com.blg.rtu.util.Constant;
 import com.blg.rtu.util.DateTime;
 import com.blg.rtu.util.DialogConfirm;
 import com.blg.rtu.util.StringValueForActivity;
-import com.blg.rtu.vo2xml.Help;
 import com.blg.rtu.vo2xml.Vo2Xml;
 
 public abstract class FrmParent extends Fragment {

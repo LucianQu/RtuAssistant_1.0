@@ -151,7 +151,20 @@ public class StubActivity extends ActivityAidl.Stub{
 						//设置或查询中心网址
 						mAct.frgTool.f_02_050.receiveRtuData(data) ;
 						mAct.frgTool.fragment_loopq04.receiveRtuData(Code206.cd_CC,data) ;
-					}/*else
+					}else
+					if(data.dataCode.equals(Code206.cd_73) || data.dataCode.equals(Code206.cd_43)){
+						//设置或查询中心网址
+						mAct.frgTool.f_08_040.receiveRtuData(data) ;
+					}else
+					if(data.dataCode.equals(Code206.cd_75) || data.dataCode.equals(Code206.cd_45)){
+						//设置或查询LCD显示内容及刷屏间隔
+						mAct.frgTool.f_08_050.receiveRtuData(data) ;
+					}else
+					if(data.dataCode.equals(Code206.cd_76) || data.dataCode.equals(Code206.cd_46)){
+						//设置或查询正积流量
+						mAct.frgTool.f_08_060.receiveRtuData(data) ;
+					}
+					/*else
 					if(data.dataCode.equals(Code206.cd_CD) || data.dataCode.equals(Code206.cd_DD)){
 						//设置或查询短信中心号码
 						mAct.frgTool.f_02_060.receiveRtuData(data) ;
@@ -422,6 +435,18 @@ public class StubActivity extends ActivityAidl.Stub{
 					if(data.dataCode.equals(Code206.cd_CC) || data.dataCode.equals(Code206.cd_DC)){
 						//设置或查询中心网址
 						mAct.frgTool.f_02_050.commandSendedCallBack() ;
+					}else
+					if(data.dataCode.equals(Code206.cd_43) || data.dataCode.equals(Code206.cd_73)){
+						//设置或查询中心网址
+						mAct.frgTool.f_08_040.commandSendedCallBack() ;
+					}else
+					if(data.dataCode.equals(Code206.cd_45) || data.dataCode.equals(Code206.cd_75)){
+						//设置或查询LCD显示内容及刷屏间隔
+						mAct.frgTool.f_08_050.commandSendedCallBack() ;
+					}else
+					if(data.dataCode.equals(Code206.cd_46) || data.dataCode.equals(Code206.cd_76)){
+						//设置或查询正积流量
+						mAct.frgTool.f_08_060.commandSendedCallBack() ;
 					}else
 					/*if(data.dataCode.equals(Code206.cd_CD) || data.dataCode.equals(Code206.cd_DD)){
 						//设置或查询短信中心号码

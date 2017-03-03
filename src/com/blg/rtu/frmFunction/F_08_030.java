@@ -21,8 +21,6 @@ import com.blg.rtu.protocol.p206.Code206;
 import com.blg.rtu.protocol.p206.CommandCreator;
 import com.blg.rtu.protocol.p206.cd42_72.Data_42_72;
 import com.blg.rtu.protocol.p206.cd42_72.Param_42;
-import com.blg.rtu.protocol.p206.cdC5_D5.Data_C5_D5;
-import com.blg.rtu.protocol.p206.cdC5_D5.Param_D5;
 import com.blg.rtu.util.Constant;
 import com.blg.rtu.util.DialogAlarm;
 import com.blg.rtu.util.ImageUtil;

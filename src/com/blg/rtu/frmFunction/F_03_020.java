@@ -522,14 +522,14 @@ public class F_03_020  extends FrmParent {
 		}
 	};	
 	
-	private void clear(){
+	/*private void clear(){
 		F_03_020_Help help = new F_03_020_Help(act, this) ;
 		help.clear(dataContain, dataNodes) ;
 		this.dataNodes.clear() ;
 		newId = firstId ;
 		
 		Preferences.getInstance().putInt(Constant.func_vk_03_020_typeCount, 0);
-	}
+	}*/
 	
 	/**
 	 * 查询命令前进行检查

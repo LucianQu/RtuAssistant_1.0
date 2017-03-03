@@ -678,8 +678,22 @@ public class Constant {
 	
 	public static final String func_vk_08_040_08_1 = "vk_08_040_08_1" ; 
 	public static final String func_vk_08_040_08_2 = "vk_08_040_08_2" ; 
-	
 	public static final String func_vk_08_040_dt = "vk_08_040_dt" ; 
+	
+	public static final String func_vk_08_050_01_01 = "vk_08_050_01_01" ; 
+	public static final String func_vk_08_050_01_02 = "vk_08_050_01_02" ; 
+	public static final String func_vk_08_050_01_03 = "vk_08_050_01_03" ; 
+	public static final String func_vk_08_050_01_04 = "vk_08_050_01_04" ; 
+	public static final String func_vk_08_050_01_05 = "vk_08_050_01_05" ; 
+	public static final String func_vk_08_050_01_06 = "vk_08_050_01_06" ; 
+	public static final String func_vk_08_050_01_07 = "vk_08_050_01_07" ; 
+	public static final String func_vk_08_050_08_2 = "vk_08_050_08_2" ; 
+	public static final String func_vk_08_050_dt = "vk_08_050_dt" ; 
+	
+	public static final String func_vk_08_060_01 = "vk_08_060_01" ; 
+	public static final String func_vk_08_060_02 = "vk_08_060_02" ;
+	public static final String func_vk_08_060_03 = "vk_08_060_03" ; 
+	public static final String func_vk_08_060_dt = "vk_08_060_dt" ; 
 	
 	public static final String loop_vk_01_010_01 = "loop_vk_01_010_01" ; 
 	public static final String loop_vk_01_010_02 = "loop_vk_01_010_02" ; 
