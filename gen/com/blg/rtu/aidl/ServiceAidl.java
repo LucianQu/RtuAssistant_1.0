@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: D:\\AutomicWatermeterApp\\RtuAssistant_1.0\\src\\com\\blg\\rtu\\aidl\\ServiceAidl.aidl
+ * Original file: F:\\AutomicWatermeterApp\\RtuAssistant_1.0\\src\\com\\blg\\rtu\\aidl\\ServiceAidl.aidl
  */
 package com.blg.rtu.aidl;
 public interface ServiceAidl extends android.os.IInterface

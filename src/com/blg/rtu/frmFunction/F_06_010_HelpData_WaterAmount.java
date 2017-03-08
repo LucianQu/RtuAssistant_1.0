@@ -147,6 +147,7 @@ public class F_06_010_HelpData_WaterAmount {
 		return tv ;
 	}
 	
+	@SuppressWarnings("deprecation")
 	private EditText createItemEditView(String value){
 		EditText et = new EditText(act) ;
 		et.setText(value) ;

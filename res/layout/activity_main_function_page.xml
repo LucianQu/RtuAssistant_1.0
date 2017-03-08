@@ -162,10 +162,10 @@
 			        android:name="com.blg.rtu.frmFunction.F_08_060"
 				    style="@style/func_fragment_style"/>
 		        <fragment android:id="@+id/f_08_070"
-			        android:name="com.blg.rtu.frmFunction.F_01_050"
+			        android:name="com.blg.rtu.frmFunction.F_08_070"
 				    style="@style/func_fragment_style"/>   
 		        <fragment android:id="@+id/f_08_080"
-			        android:name="com.blg.rtu.frmFunction.F_01_090"
+			        android:name="com.blg.rtu.frmFunction.F_08_080"
 				    style="@style/func_fragment_style"/>   
 				<fragment android:id="@+id/f_08_090"
 			        android:name="com.blg.rtu.frmFunction.F_01_040"
@@ -174,7 +174,7 @@
 			        android:name="com.blg.rtu.frmFunction.F_05_020"
 				    style="@style/func_fragment_style"/>
 		        <fragment android:id="@+id/f_08_110"
-			        android:name="com.blg.rtu.frmFunction.F_01_070"
+			        android:name="com.blg.rtu.frmFunction.F_08_110"
 				    style="@style/func_fragment_style"/>
 		        <fragment android:id="@+id/f_08_120"
 			        android:name="com.blg.rtu.frmFunction.F_01_080"

@@ -52,7 +52,7 @@ public class Write_46 extends ProtocolSupport{
 		
 		b[n++] =(byte) param.getLoraChannel();
 		
-		Long v = param.getWaterPure();
+		Long v = param.getWaterPlus();
 		
 		if(v == null){
 			throw new Exception("出错，正积流量为空，其必须提供！") ;
@@ -90,7 +90,7 @@ public class Write_46 extends ProtocolSupport{
 			b[n++] = bbd[1] ;
 			b[n++] = bbd[2] ;
 			b[n++] = bbd[3] ;
-			b[n++] = bbd[4] ;
+			b[n++] = (byte)(bbd[4] & 0xF) ;
  		}
 		
 		this.createDownDataTail(b, password) ;

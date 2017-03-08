@@ -55,7 +55,7 @@ public class FragmentTool {
 	
 	//public F_02_090 f_02_090 ;
 	public F_02_100 f_02_100 ;
-	public F_02_110 f_02_110 ;
+	
 	public F_02_080 f_02_080 ;
 //	public F_03_010 f_03_010 ;
 	/*public F_03_011 f_03_011 ;
@@ -84,17 +84,20 @@ public class FragmentTool {
 	//public F_05_030 f_05_030 ;
 	public F_05_040 f_05_040 ;
 	/*public F_05_050 f_05_050 ;*/
-	public F_05_060 f_05_060 ;
-	public F_05_070 f_05_070 ;
+	public F_05_060 f_05_060 ;	//查询日志信息
+	public F_05_070 f_05_070 ;	//查询遥测终端流量实时值
 	
 	//public F_06_010 f_06_010 ;
-	public F_07_010 f_07_010 ;
+	public F_07_010 f_07_010 ;	//查询遥测终端流量实时值
 	
-	public F_08_030 f_08_030 ;
-	public F_08_040 f_08_040 ;
-	public F_08_050 f_08_050 ;
-	public F_08_060 f_08_060 ;
-	
+	public F_02_110 f_02_110 ;	//查询/设置RTU地址命令
+	public F_08_030 f_08_030 ;	//查询/设置ModBus地址命令
+	public F_08_040 f_08_040 ;	//查询/设置中继器关联ModBus地址
+	public F_08_050 f_08_050 ;	//查询/设置LCD显示内容及刷屏间隔
+	public F_08_060 f_08_060 ;	//查询/设置正积流量
+	public F_08_070 f_08_070 ;	//查询/设置负积流量
+	public F_08_080 f_08_080 ;	//设置净积流量
+	public F_08_110 f_08_110 ;	//查询/设置RF频点命令
 	
 	public FragmentTool(MainActivity mainAct){
 		this.mainAct = mainAct ;
@@ -228,6 +231,12 @@ public class FragmentTool {
         frms.add(f_08_050);
         f_08_060 = (F_08_060)fm.findFragmentById(R.id.f_08_060) ;
         frms.add(f_08_060);
+        f_08_070 = (F_08_070)fm.findFragmentById(R.id.f_08_070) ;
+        frms.add(f_08_070);
+        f_08_080 = (F_08_080)fm.findFragmentById(R.id.f_08_080) ;
+        frms.add(f_08_080);
+        f_08_110 = (F_08_110)fm.findFragmentById(R.id.f_08_110) ;
+        frms.add(f_08_110);
         
 	}
 	

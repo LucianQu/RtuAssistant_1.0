@@ -42,7 +42,6 @@
 # view res/layout/activity_main_function_page.xml #generated:60
 -keep class com.blg.rtu.frmFunction.F_01_040 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:164
 # view res/layout/activity_main_function_page.xml #generated:182
 # view res/layout/activity_main_function_page.xml #generated:72
 -keep class com.blg.rtu.frmFunction.F_01_050 { <init>(...); }
@@ -50,7 +49,6 @@
 # view res/layout/activity_main_function_page.xml #generated:293
 -keep class com.blg.rtu.frmFunction.F_01_060 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:176
 # view res/layout/activity_main_function_page.xml #generated:66
 -keep class com.blg.rtu.frmFunction.F_01_070 { <init>(...); }
 
@@ -58,7 +56,6 @@
 # view res/layout/activity_main_function_page.xml #generated:69
 -keep class com.blg.rtu.frmFunction.F_01_080 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:167
 # view res/layout/activity_main_function_page.xml #generated:185
 # view res/layout/activity_main_function_page.xml #generated:75
 -keep class com.blg.rtu.frmFunction.F_01_090 { <init>(...); }
@@ -119,6 +116,15 @@
 # view res/layout/activity_main_function_page.xml #generated:161
 -keep class com.blg.rtu.frmFunction.F_08_060 { <init>(...); }
 
+# view res/layout/activity_main_function_page.xml #generated:164
+-keep class com.blg.rtu.frmFunction.F_08_070 { <init>(...); }
+
+# view res/layout/activity_main_function_page.xml #generated:167
+-keep class com.blg.rtu.frmFunction.F_08_080 { <init>(...); }
+
+# view res/layout/activity_main_function_page.xml #generated:176
+-keep class com.blg.rtu.frmFunction.F_08_110 { <init>(...); }
+
 # view res/layout/activity_main_loopquery_page.xml #generated:44
 -keep class com.blg.rtu.frmLoopQuery.LpFragment_02 { <init>(...); }
 
@@ -142,7 +148,4 @@
 
 # view AndroidManifest.xml #generated:101
 -keep class com.blg.rtu.sm.SmsReceiver { <init>(...); }
-
-# view res/layout/floopq_01.xml #generated:59
--keep class com.leaking.slideswitch.SlideSwitch { <init>(...); }
 

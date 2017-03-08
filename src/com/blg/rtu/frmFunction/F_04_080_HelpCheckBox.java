@@ -6,6 +6,7 @@ import com.blg.rtu.util.Constant;
 import com.blg.rtu.util.Preferences;
 
 public class F_04_080_HelpCheckBox {
+	@SuppressWarnings("unused")
 	private F_04_080 fr ;
 	
 	public F_04_080_HelpCheckBox(F_04_080 fr){

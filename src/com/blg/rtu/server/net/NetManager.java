@@ -120,9 +120,7 @@ public class NetManager {
 	 * @param remoteServerUrl
 	 * @param remoteServerPort
 	 */
-	public boolean createOrRecreatTcpConnect(
-			String remoteServerUrl, 
-			Integer remoteServerPort){
+	public boolean createOrRecreatTcpConnect(String remoteServerUrl,Integer remoteServerPort){
 		if(remoteServerUrl == null || remoteServerPort == null){
 			return false ;
 		}

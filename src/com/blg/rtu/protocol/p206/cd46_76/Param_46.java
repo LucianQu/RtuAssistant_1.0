@@ -11,13 +11,13 @@ public class Param_46 implements Serializable{
 	
 	private String password ;
 	private int loraChannel ;
-	private Long waterPure ;//瞬时流量(-999999.999～+999999.999，单位为 m3/s)
+	private Long waterPlus ;//瞬时流量(-999999.999～+999999.999，单位为 m3/s)
 	
 	public String toString(){
 		String s = "\n设置正积流量\n" ;
 		s += "密码" + "=" + (this.password==null?"":this.password) ;
 		s += "Lora通道" + "=" + this.loraChannel ;
-		s += "累计水量" + "=" + (this.waterPure==null?"":this.waterPure.intValue()) + "(立方米)\n" ;
+		s += "正积流量" + "=" + (this.waterPlus==null?"":this.waterPlus.intValue()) + "(立方米)\n" ;
 		return s ;
 	}
 	
@@ -37,11 +37,11 @@ public class Param_46 implements Serializable{
 		this.loraChannel = loraChannel ;
 	}
 	
-	public Long getWaterPure() {
-		return waterPure;
+	public Long getWaterPlus() {
+		return waterPlus;
 	}
 
-	public void setWaterPure(Long waterPure) {
-		this.waterPure = waterPure;
+	public void setWaterPlus(Long waterPlus) {
+		this.waterPlus = waterPlus;
 	}
 }

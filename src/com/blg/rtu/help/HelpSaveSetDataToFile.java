@@ -3,7 +3,6 @@ package com.blg.rtu.help;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
-import java.util.Locale;
 
 import android.content.res.Resources;
 import android.os.Environment;
@@ -71,7 +70,7 @@ public class HelpSaveSetDataToFile {
 		}
 		return file ;
 	}
-	private static File initInFile(MainActivity act) {
+/*	private static File initInFile(MainActivity act) {
 		Resources rs = act.getResources();
 		String filePath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/";
 		final String fileName = "WaterMeter_CFG" + '.' + rs.getString(R.string.xmlFileExtendsName);
@@ -85,7 +84,7 @@ public class HelpSaveSetDataToFile {
 				+  '.' 
 				+ rs.getString(R.string.xmlFileExtendsName));
 		search(file,fileName,keyName);
-		/*File[] files = file.listFiles(new FileFilter() {
+		File[] files = file.listFiles(new FileFilter() {
 			
 			@Override
 			public boolean accept(File arg0) {
@@ -99,11 +98,11 @@ public class HelpSaveSetDataToFile {
 				return fileConfig;
 			}
 		}
-		*/
+		
 		return fileSearch != null ? fileSearch : fileNull;
-	}
+	}*/
 
-	 private static void search(File fileold, String key,String keyName)
+/*	 private static void search(File fileold, String key,String keyName)
 	  {
 		 File[] files=fileold.listFiles();
 		 if(files.length>0)
@@ -133,7 +132,7 @@ public class HelpSaveSetDataToFile {
 			   } 
 		 }
 	 }
-	 
+	 */
 	 
 	/**
 	 * 删除文件

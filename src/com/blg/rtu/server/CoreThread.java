@@ -1,7 +1,6 @@
 package com.blg.rtu.server;
 
 
-import com.blg.rtu.frmLoopQuery.LpFragment_02;
 import com.blg.rtu.protocol.p206.Code206;
 import com.blg.rtu.protocol.p206.CommandCreator;
 import com.blg.rtu.util.StringValueForServer;

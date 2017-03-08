@@ -155,6 +155,7 @@ public class F_04_050_HelpData {
 		return tv ;
 	}
 	
+	@SuppressWarnings("deprecation")
 	private EditText createItemEditView(String value){
 		EditText et = new EditText(act) ;
 		et.setText(value) ;

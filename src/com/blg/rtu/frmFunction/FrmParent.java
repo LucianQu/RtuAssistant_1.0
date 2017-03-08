@@ -47,6 +47,7 @@ public abstract class FrmParent extends Fragment {
 					closeFuncFrm() ;
 				}
 				return ;
+				
 			}
 			boolean query = false ;
 			if(queryCommandCode != null){
@@ -97,7 +98,7 @@ public abstract class FrmParent extends Fragment {
 	protected Button.OnClickListener btnReadLisn = new Button.OnClickListener(){
 		public void onClick(View v) {
 			if(checkBeforeQuery(true)){
-				boolean needConfirm = false ;
+				boolean needConfirm = false ;//查询前需不需要确认/confirm
 				//Integer ch = act.frgTool.fragment_ch01.getSelectedChannel() ;
 				Integer ch = Constant.channelTcp ;
 				if(ch == Constant.channelSm){

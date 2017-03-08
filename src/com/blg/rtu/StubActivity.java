@@ -113,6 +113,10 @@ public class StubActivity extends ActivityAidl.Stub{
 						//复位遥测终端参数和状态
 						mAct.frgTool.f_01_050.receiveRtuData(data) ;
 					}else
+					if(data.dataCode.equals(Code206.cd_40) ){
+						//设置净积
+						mAct.frgTool.f_08_080.receiveRtuData(data) ;
+					}else
 					if(data.dataCode.equals(Code206.cd_91) ){
 						//清空遥测终端历史数据单元
 						mAct.frgTool.f_01_060.receiveRtuData(data) ;
@@ -163,6 +167,14 @@ public class StubActivity extends ActivityAidl.Stub{
 					if(data.dataCode.equals(Code206.cd_76) || data.dataCode.equals(Code206.cd_46)){
 						//设置或查询正积流量
 						mAct.frgTool.f_08_060.receiveRtuData(data) ;
+					}else
+					if(data.dataCode.equals(Code206.cd_77) || data.dataCode.equals(Code206.cd_47)){
+						//设置或查询负积流量
+						mAct.frgTool.f_08_070.receiveRtuData(data) ;
+					}else
+					if(data.dataCode.equals(Code206.cd_7A) || data.dataCode.equals(Code206.cd_4A)){
+						//设置或查询RF频点
+						mAct.frgTool.f_08_110.receiveRtuData(data) ;
 					}
 					/*else
 					if(data.dataCode.equals(Code206.cd_CD) || data.dataCode.equals(Code206.cd_DD)){
@@ -396,6 +408,10 @@ public class StubActivity extends ActivityAidl.Stub{
 						//复位遥测终端参数和状态
 						mAct.frgTool.f_01_050.commandSendedCallBack() ;
 					}else
+					if(data.dataCode.equals(Code206.cd_40) ){
+						//设置净积
+						mAct.frgTool.f_08_080.commandSendedCallBack() ;
+					}else
 					if(data.dataCode.equals(Code206.cd_91) ){
 						//清空遥测终端历史数据单元
 						mAct.frgTool.f_01_060.commandSendedCallBack() ;
@@ -447,6 +463,14 @@ public class StubActivity extends ActivityAidl.Stub{
 					if(data.dataCode.equals(Code206.cd_46) || data.dataCode.equals(Code206.cd_76)){
 						//设置或查询正积流量
 						mAct.frgTool.f_08_060.commandSendedCallBack() ;
+					}else
+					if(data.dataCode.equals(Code206.cd_47) || data.dataCode.equals(Code206.cd_77)){
+						//设置或查询负积流量
+						mAct.frgTool.f_08_070.commandSendedCallBack() ;
+					}else
+					if(data.dataCode.equals(Code206.cd_4A) || data.dataCode.equals(Code206.cd_7A)){
+						//设置或查询RF频点
+						mAct.frgTool.f_08_110.commandSendedCallBack() ;
 					}else
 					/*if(data.dataCode.equals(Code206.cd_CD) || data.dataCode.equals(Code206.cd_DD)){
 						//设置或查询短信中心号码

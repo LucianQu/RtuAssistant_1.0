@@ -277,6 +277,7 @@ public class F_03_020_Help {
 		return et ;
 	}
 	
+	@SuppressWarnings("deprecation")
 	private EditText createItemNameEditView(String value){
 		EditText et = new EditText(act) ;
 		

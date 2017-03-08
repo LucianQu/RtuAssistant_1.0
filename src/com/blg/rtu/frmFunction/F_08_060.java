@@ -19,9 +19,9 @@ import com.blg.rtu.R;
 import com.blg.rtu.protocol.RtuData;
 import com.blg.rtu.protocol.p206.Code206;
 import com.blg.rtu.protocol.p206.CommandCreator;
-import com.blg.rtu.protocol.p206.cd46_76.Data_46_76;
+import com.blg.rtu.protocol.p206.cd46_76.Data_46;
+import com.blg.rtu.protocol.p206.cd46_76.Data_76;
 import com.blg.rtu.protocol.p206.cd46_76.Param_46;
-import com.blg.rtu.protocol.p206.cdC2.Data_C2;
 import com.blg.rtu.util.Constant;
 import com.blg.rtu.util.DialogAlarm;
 import com.blg.rtu.util.ImageUtil;
@@ -143,7 +143,6 @@ public class F_08_060  extends FrmParent {
 		}
 		/////////////////////////////////////
 		value = item02.getText().toString() ;//整数部分
-		
 		if(value == null || value.equals("")){
 			if(showDialog)new DialogAlarm().showDialog(act, "Lora通道必须填写！") ;
 			return false ;
@@ -201,7 +200,7 @@ public class F_08_060  extends FrmParent {
 		if(value == null || value.equals("")){
 			p.setLoraChannel(0) ;
 		}else{
-			p.setWaterPure(Long.valueOf(value)) ;
+			p.setWaterPlus(Long.valueOf(value)) ;
 		}
 		
 		this.sendRtuCommand(new CommandCreator().cd_46(p, null), false) ;
@@ -244,38 +243,54 @@ public class F_08_060  extends FrmParent {
 	 */
 	@Override
 	public void receiveRtuData(RtuData d){
-		long waterPure;
+		long waterPlus;
 		super.receiveRtuData(d) ;
 		this.title.setCompoundDrawables(ImageUtil.getTitlLeftImg_item006(this.act), null, ImageUtil.getTitlRightImg_green(this.act), null); 
 //		super.scrollTo(this.btnRead) ;
 		Object subD = d.subData ;
 		if(subD != null){
-			if(subD instanceof Data_46_76){
-				Data_46_76 sd = (Data_46_76)subD ;
-				waterPure = sd.getWaterPure().longValue();
-				if(waterPure < 0) {
-					waterPure = - waterPure;
-					if ((waterPure / 1000) > 0) {
-						item03.setText(("-" + waterPure / 1000) + "." + (waterPure + 1000) % 1000) ;
-					}else if((waterPure / 1000) == 0){
-						item03.setText("-0." + (waterPure + 1000) % 1000) ;
+			if(subD instanceof Data_76){
+				Data_76 sd = (Data_76)subD ;
+				waterPlus = sd.getWaterPlus().longValue();
+				if(waterPlus < 0) {
+					waterPlus = - waterPlus;
+					if ((waterPlus / 1000) > 0) {
+						item03.setText(("-" + waterPlus / 1000) + "." + (waterPlus + 1000) % 1000) ;
+					}else if((waterPlus / 1000) == 0){
+						item03.setText("-0." + (waterPlus + 1000) % 1000) ;
 					}
 				}else{
-					if ((waterPure / 1000) > 0) {
-						item03.setText((waterPure / 1000) + "." + (waterPure + 1000) % 1000) ;
-					}else if((waterPure / 1000) == 0){
-						item03.setText("0." + (waterPure + 1000) % 1000) ;
+					if ((waterPlus / 1000) > 0) {
+						item03.setText((waterPlus / 1000) + "." + (waterPlus + 1000) % 1000) ;
+					}else if((waterPlus / 1000) == 0){
+						item03.setText("0." + (waterPlus + 1000) % 1000) ;
 					}
 				}
 				
 				
+				item01.setText("") ;
+				item02.setText(sd.getLoraChannel()+"") ;
+			}else if(subD instanceof Data_46){
+				Data_46 sd = (Data_46)subD ;
+				
+				waterPlus = sd.getWaterPlus().longValue();
+				if(waterPlus < 0) {
+					waterPlus = - waterPlus;
+					if ((waterPlus / 1000) > 0) {
+						item03.setText(("-" + waterPlus / 1000) + "." + (waterPlus + 1000) % 1000) ;
+					}else if((waterPlus / 1000) == 0){
+						item03.setText("-0." + (waterPlus + 1000) % 1000) ;
+					}
+				}else{
+					if ((waterPlus / 1000) > 0) {
+						item03.setText((waterPlus / 1000) + "." + (waterPlus + 1000) % 1000) ;
+					}else if((waterPlus / 1000) == 0){
+						item03.setText("0." + (waterPlus + 1000) % 1000) ;
+					}
+				}
 				item01.setText(sd.getPassword()) ;
 				item02.setText(sd.getLoraChannel()+"") ;
-			}/*else if(subD instanceof Data_16){
-				Data_16 sd = (Data_16)subD ;
-				item01.setText(sd.getWaterRemainAlarm() + "") ;
-				item02.setText("") ;
-			}*/
+			}
 		}
 		Preferences.getInstance().putString(Constant.func_vk_08_060_dt, this.resultDt.getText().toString()) ;
 	}

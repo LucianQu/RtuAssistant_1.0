@@ -336,6 +336,10 @@
         <item name="android:inputType">numberDecimal</item>
 	</style>
     	
+     <style name="func_item_editdecimalSigned_style_120" parent="@style/func_item_edittext_style_120">
+        <item name="android:inputType">none</item>
+        <item name="android:digits">1234567890.-</item>
+	</style>
     
     <style name="func_item_editdecimalSigned_style_180" parent="@style/func_item_edittext_style_180">
         <item name="android:inputType">none</item>

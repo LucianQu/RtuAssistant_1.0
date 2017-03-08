@@ -29,10 +29,11 @@ import com.blg.rtu.protocol.p206.cdF0.Data_F0;
 import com.blg.rtu.util.Constant;
 import com.blg.rtu.util.Preferences;
 import com.blg.rtu.util.SpinnerVO;
-import com.leaking.slideswitch.SlideSwitch;
-import com.leaking.slideswitch.SlideSwitch.SlideListener;
+//import com.leaking.slideswitch.SlideSwitch;
+//import com.leaking.slideswitch.SlideSwitch.SlideListener;
 
-public class LpFragment_01 extends Fragment implements SlideListener{
+public class LpFragment_01 extends Fragment {
+	//implements SlideListener
 	
 	public MainActivity act ;
 	
@@ -51,7 +52,7 @@ public class LpFragment_01 extends Fragment implements SlideListener{
 	private boolean loopStartFlag = false;
 	//private ImageView startBtn ;
 	//private ImageView stopBtn ;
-	SlideSwitch slide;
+	//SlideSwitch slide;
 	
 	private ProgressBar loopProgress ;
 
@@ -143,9 +144,9 @@ public class LpFragment_01 extends Fragment implements SlideListener{
 		onceBtn = (ImageView)view.findViewById(R.id.lqOnce);
 		onceBtn.setOnClickListener(new btnOnClickListener()) ;
 		
-		slide = (SlideSwitch) view.findViewById(R.id.swit1);
-		slide.setState(false);
-		slide.setSlideListener(this);
+		//slide = (SlideSwitch) view.findViewById(R.id.swit1);
+		//slide.setState(false);
+		//slide.setSlideListener(this);
 		
 		return view ;
 	}
@@ -271,23 +272,23 @@ public class LpFragment_01 extends Fragment implements SlideListener{
 	/*	this.act.frgTool.fragment_loopq03.queryTypeSet(type) ;*/
 	}
 	
-	@Override
+/*	@Override
 	public void open() {
 		// TODO Auto-generated method stub
 		//txt.setText("first switch is opend, and set the second one is 'slideable'");
 		//slide.setSlideable(true);
 		startLoopQuery();
 		loopStartFlag = true;
-	}
-
+	}*/
+/*
 	@Override
 	public void close() {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub 
 		//txt.setText("first switch is closed,and set the second one is 'unslideable'");
 		//slide.setSlideable(false);
 		stopLoopQuery();
 		loopStartFlag = false;
-	}
+	}*/
 	
 	@Override
 	public void onResume() {

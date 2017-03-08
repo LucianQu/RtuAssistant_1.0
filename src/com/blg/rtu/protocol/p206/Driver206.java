@@ -4,30 +4,70 @@ import java.util.HashMap;
 
 import android.util.Log;
 
-import com.blg.rtu.protocol.*;
-import com.blg.rtu.protocol.p206.common.*;
-import com.blg.rtu.protocol.p206.cd02.*;
-import com.blg.rtu.protocol.p206.cd10_50.* ;
-import com.blg.rtu.protocol.p206.cd11_51.* ;
-import com.blg.rtu.protocol.p206.cd12_52.*;
-import com.blg.rtu.protocol.p206.cd15_55.*;
-import com.blg.rtu.protocol.p206.cd16_56.*;
-import com.blg.rtu.protocol.p206.cd17_57.*;
-import com.blg.rtu.protocol.p206.cd18_58.*;
-import com.blg.rtu.protocol.p206.cd19_59.*;
-import com.blg.rtu.protocol.p206.cd1A_5A.*;
-import com.blg.rtu.protocol.p206.cd1B.*;
-import com.blg.rtu.protocol.p206.cd1C_60.*;
-import com.blg.rtu.protocol.p206.cd1D_62.*;
-import com.blg.rtu.protocol.p206.cd1E_63.*;
-import com.blg.rtu.protocol.p206.cd1F_64.*;
-import com.blg.rtu.protocol.p206.cdA0_54.*;
-import com.blg.rtu.protocol.p206.cdA1_53.*;
-import com.blg.rtu.protocol.p206.cdB0.*;
-import com.blg.rtu.protocol.p206.cd20.*;
-import com.blg.rtu.protocol.p206.cd30_31.*;
-import com.blg.rtu.protocol.p206.cd32_33.*;
-import com.blg.rtu.protocol.p206.cd34.*;
+import com.blg.rtu.protocol.Action;
+import com.blg.rtu.protocol.DriverRtu;
+import com.blg.rtu.protocol.RtuCommand;
+import com.blg.rtu.protocol.p206.cd02.Confirm_02;
+import com.blg.rtu.protocol.p206.cd02.Data_02;
+import com.blg.rtu.protocol.p206.cd02.LinkTest_02;
+import com.blg.rtu.protocol.p206.cd02.Write_02;
+import com.blg.rtu.protocol.p206.cd10_50.Answer_10_50;
+import com.blg.rtu.protocol.p206.cd10_50.Read_50;
+import com.blg.rtu.protocol.p206.cd10_50.Write_10;
+import com.blg.rtu.protocol.p206.cd11_51.Answer_11_51;
+import com.blg.rtu.protocol.p206.cd11_51.Read_51;
+import com.blg.rtu.protocol.p206.cd11_51.Write_11;
+import com.blg.rtu.protocol.p206.cd12_52.Answer_12_52;
+import com.blg.rtu.protocol.p206.cd12_52.Read_52;
+import com.blg.rtu.protocol.p206.cd12_52.Write_12;
+import com.blg.rtu.protocol.p206.cd15_55.Answer_15;
+import com.blg.rtu.protocol.p206.cd15_55.Answer_55;
+import com.blg.rtu.protocol.p206.cd15_55.Read_55;
+import com.blg.rtu.protocol.p206.cd15_55.Write_15;
+import com.blg.rtu.protocol.p206.cd16_56.Answer_16;
+import com.blg.rtu.protocol.p206.cd16_56.Answer_56;
+import com.blg.rtu.protocol.p206.cd16_56.Read_56;
+import com.blg.rtu.protocol.p206.cd16_56.Write_16;
+import com.blg.rtu.protocol.p206.cd17_57.Answer_17;
+import com.blg.rtu.protocol.p206.cd17_57.Answer_57;
+import com.blg.rtu.protocol.p206.cd17_57.Read_57;
+import com.blg.rtu.protocol.p206.cd17_57.Write_17;
+import com.blg.rtu.protocol.p206.cd18_58.Answer_58;
+import com.blg.rtu.protocol.p206.cd19_59.Answer_19_59;
+import com.blg.rtu.protocol.p206.cd19_59.Read_59;
+import com.blg.rtu.protocol.p206.cd19_59.Write_19;
+import com.blg.rtu.protocol.p206.cd1A_5A.Answer_1A_5A;
+import com.blg.rtu.protocol.p206.cd1A_5A.Read_5A;
+import com.blg.rtu.protocol.p206.cd1A_5A.Write_1A;
+import com.blg.rtu.protocol.p206.cd1B.Answer_1B;
+import com.blg.rtu.protocol.p206.cd1B.Write_1B;
+import com.blg.rtu.protocol.p206.cd1C_60.Answer_1C_60;
+import com.blg.rtu.protocol.p206.cd1C_60.Read_60;
+import com.blg.rtu.protocol.p206.cd1C_60.Write_1C;
+import com.blg.rtu.protocol.p206.cd1D_62.Answer_1D_62;
+import com.blg.rtu.protocol.p206.cd1D_62.Read_62;
+import com.blg.rtu.protocol.p206.cd1D_62.Write_1D;
+import com.blg.rtu.protocol.p206.cd1E_63.Answer_1E;
+import com.blg.rtu.protocol.p206.cd1E_63.Answer_63;
+import com.blg.rtu.protocol.p206.cd1E_63.Read_63;
+import com.blg.rtu.protocol.p206.cd1E_63.Write_1E;
+import com.blg.rtu.protocol.p206.cd1F_64.Answer_1F;
+import com.blg.rtu.protocol.p206.cd1F_64.Answer_64;
+import com.blg.rtu.protocol.p206.cd1F_64.Read_64;
+import com.blg.rtu.protocol.p206.cd1F_64.Write_1F;
+import com.blg.rtu.protocol.p206.cd20.Answer_20;
+import com.blg.rtu.protocol.p206.cd20.Write_20;
+import com.blg.rtu.protocol.p206.cd30_31.Answer_30;
+import com.blg.rtu.protocol.p206.cd30_31.Answer_31;
+import com.blg.rtu.protocol.p206.cd30_31.Write_30;
+import com.blg.rtu.protocol.p206.cd30_31.Write_31;
+import com.blg.rtu.protocol.p206.cd32_33.Answer_32;
+import com.blg.rtu.protocol.p206.cd32_33.Answer_33;
+import com.blg.rtu.protocol.p206.cd32_33.Write_32;
+import com.blg.rtu.protocol.p206.cd32_33.Write_33;
+import com.blg.rtu.protocol.p206.cd34.Answer_34;
+import com.blg.rtu.protocol.p206.cd40.Answer_40;
+import com.blg.rtu.protocol.p206.cd40.Write_40;
 import com.blg.rtu.protocol.p206.cd42_72.Answer_42_72;
 import com.blg.rtu.protocol.p206.cd42_72.Read_72;
 import com.blg.rtu.protocol.p206.cd42_72.Write_42;
@@ -40,21 +80,52 @@ import com.blg.rtu.protocol.p206.cd44_74.Write_44;
 import com.blg.rtu.protocol.p206.cd45_75.Answer_45_75;
 import com.blg.rtu.protocol.p206.cd45_75.Read_75;
 import com.blg.rtu.protocol.p206.cd45_75.Write_45;
-import com.blg.rtu.protocol.p206.cd46_76.Answer_46_76;
+import com.blg.rtu.protocol.p206.cd46_76.Answer_46;
+import com.blg.rtu.protocol.p206.cd46_76.Answer_76;
 import com.blg.rtu.protocol.p206.cd46_76.Read_76;
 import com.blg.rtu.protocol.p206.cd46_76.Write_46;
-import com.blg.rtu.protocol.p206.cdB1.*;
-import com.blg.rtu.protocol.p206.cdB2.*;
-import com.blg.rtu.protocol.p206.cd5D.*;
-import com.blg.rtu.protocol.p206.cd5E.*;
-import com.blg.rtu.protocol.p206.cd92_93.*;
-import com.blg.rtu.protocol.p206.cd94_95.*;
-import com.blg.rtu.protocol.p206.cd96.Answer_96;
-import com.blg.rtu.protocol.p206.cd96.Write_96;
+import com.blg.rtu.protocol.p206.cd47_77.Answer_47;
+import com.blg.rtu.protocol.p206.cd47_77.Answer_77;
+import com.blg.rtu.protocol.p206.cd47_77.Read_77;
+import com.blg.rtu.protocol.p206.cd47_77.Write_47;
+import com.blg.rtu.protocol.p206.cd4A_7A.Answer_4A_7A;
+import com.blg.rtu.protocol.p206.cd4A_7A.Read_7A;
+import com.blg.rtu.protocol.p206.cd4A_7A.Write_4A;
+import com.blg.rtu.protocol.p206.cd5D.Answer_5D;
+import com.blg.rtu.protocol.p206.cd5D.Read_5D;
+import com.blg.rtu.protocol.p206.cd5E.Answer_5E;
+import com.blg.rtu.protocol.p206.cd5E.Read_5E;
+import com.blg.rtu.protocol.p206.cd81.Report_81;
+import com.blg.rtu.protocol.p206.cd82_.Answer_82;
+import com.blg.rtu.protocol.p206.cd82_.Write_82;
 import com.blg.rtu.protocol.p206.cd90.Answer_90;
 import com.blg.rtu.protocol.p206.cd90.Write_90;
-import com.blg.rtu.protocol.p206.cd91.*;
-import com.blg.rtu.protocol.p206.cdC0.*;
+import com.blg.rtu.protocol.p206.cd91.Answer_91;
+import com.blg.rtu.protocol.p206.cd91.Write_91;
+import com.blg.rtu.protocol.p206.cd92_93.Answer_92;
+import com.blg.rtu.protocol.p206.cd92_93.Answer_93;
+import com.blg.rtu.protocol.p206.cd92_93.Write_92;
+import com.blg.rtu.protocol.p206.cd92_93.Write_93;
+import com.blg.rtu.protocol.p206.cd94_95.Answer_94;
+import com.blg.rtu.protocol.p206.cd94_95.Answer_95;
+import com.blg.rtu.protocol.p206.cd94_95.Write_94;
+import com.blg.rtu.protocol.p206.cd94_95.Write_95;
+import com.blg.rtu.protocol.p206.cd96.Answer_96;
+import com.blg.rtu.protocol.p206.cd96.Write_96;
+import com.blg.rtu.protocol.p206.cdA0_54.Answer_A0_54;
+import com.blg.rtu.protocol.p206.cdA0_54.Read_54;
+import com.blg.rtu.protocol.p206.cdA0_54.Write_A0;
+import com.blg.rtu.protocol.p206.cdA1_53.Answer_A1_53;
+import com.blg.rtu.protocol.p206.cdA1_53.Read_53;
+import com.blg.rtu.protocol.p206.cdA1_53.Write_A1;
+import com.blg.rtu.protocol.p206.cdB0.Answer_B0;
+import com.blg.rtu.protocol.p206.cdB0.Read_B0;
+import com.blg.rtu.protocol.p206.cdB1.Answer_B1;
+import com.blg.rtu.protocol.p206.cdB1.Read_B1;
+import com.blg.rtu.protocol.p206.cdB2.Answer_B2;
+import com.blg.rtu.protocol.p206.cdB2.Read_B2;
+import com.blg.rtu.protocol.p206.cdC0.Confirm_C0;
+import com.blg.rtu.protocol.p206.cdC0.Report_C0;
 import com.blg.rtu.protocol.p206.cdC2.Answer_C2;
 import com.blg.rtu.protocol.p206.cdC2.Read_C2;
 import com.blg.rtu.protocol.p206.cdC5_D5.Answer_C5_D5;
@@ -136,12 +207,11 @@ import com.blg.rtu.protocol.p206.cdEF.Answer_EF;
 import com.blg.rtu.protocol.p206.cdEF.Read_EF;
 import com.blg.rtu.protocol.p206.cdF0.Answer_F0;
 import com.blg.rtu.protocol.p206.cdF0.Read_F0;
-import com.blg.rtu.protocol.p206.cd81.*;
-import com.blg.rtu.protocol.p206.cd82_.Answer_82;
-import com.blg.rtu.protocol.p206.cd82_.Write_82;
-
 import com.blg.rtu.protocol.p206.common.CodeProtocol;
 import com.blg.rtu.protocol.p206.common.ControlProtocol;
+import com.blg.rtu.protocol.p206.common.HeadProtocol;
+import com.blg.rtu.protocol.p206.common.RtuIdProtocol;
+import com.blg.rtu.protocol.p206.common.TailProtocol;
 import com.blg.rtu.protocol.p206.util.Constant;
 import com.blg.rtu.util.ByteUtil;
 import com.blg.rtu.util.StringValueForServer;
@@ -471,7 +541,12 @@ public class Driver206 extends DriverRtu {
 				//应答 - 复位遥测终端参数和状态 
 				this.upData = new Answer_90().parse(rtuId, b, ca, this.dataCode);
 				action.append(Action.commandResultAction) ;
-			}else			
+			}else	
+			if(this.dataCode.equalsIgnoreCase(Code206.cd_40)){
+				//应答 - 设置净积
+				this.upData = new Answer_40().parse(rtuId, b, ca, this.dataCode);
+				action.append(Action.commandResultAction) ;
+			}else
 			if(this.dataCode.equalsIgnoreCase(Code206.cd_91)){
 				//应答 - 清空遥测终端历史数据单元  
 				this.upData = new Answer_91().parse(rtuId, b, ca, this.dataCode);
@@ -655,7 +730,17 @@ public class Driver206 extends DriverRtu {
 			}else
 			if(this.dataCode.equalsIgnoreCase(Code206.cd_76)){
 				//应答 - 查询正积流量
-				this.upData = new Answer_46_76().parse(rtuId, b, ca, this.dataCode);
+				this.upData = new Answer_76().parse(rtuId, b, ca, this.dataCode);
+				action.append(Action.commandResultAction) ;
+			}else
+			if(this.dataCode.equalsIgnoreCase(Code206.cd_77)){
+				//应答 - 查询负积流量
+				this.upData = new Answer_77().parse(rtuId, b, ca, this.dataCode);
+				action.append(Action.commandResultAction) ;
+			}else
+			if(this.dataCode.equalsIgnoreCase(Code206.cd_7A)){
+				//应答 - 查询RF频点
+				this.upData = new Answer_4A_7A().parse(rtuId, b, ca, this.dataCode);
 				action.append(Action.commandResultAction) ;
 			}else
 			if(this.dataCode.equalsIgnoreCase(Code206.cd_DD)){
@@ -675,7 +760,17 @@ public class Driver206 extends DriverRtu {
 			}else
 			if(this.dataCode.equalsIgnoreCase(Code206.cd_46)){
 				//应答 - 设置正积流量
-				this.upData = new Answer_46_76().parse(rtuId, b, ca, this.dataCode);
+				this.upData = new Answer_46().parse(rtuId, b, ca, this.dataCode);
+				action.append(Action.commandResultAction) ;
+			}else
+			if(this.dataCode.equalsIgnoreCase(Code206.cd_47)){
+				//应答 - 设置负积流量
+				this.upData = new Answer_47().parse(rtuId, b, ca, this.dataCode);
+				action.append(Action.commandResultAction) ;
+			}else
+			if(this.dataCode.equalsIgnoreCase(Code206.cd_4A)){
+				//应答 - 设置RF频点
+				this.upData = new Answer_4A_7A().parse(rtuId, b, ca, this.dataCode);
 				action.append(Action.commandResultAction) ;
 			}else
 			if(this.dataCode.equalsIgnoreCase(Code206.cd_CE)){
@@ -1140,6 +1235,11 @@ public class Driver206 extends DriverRtu {
 				this.downData = new Write_90().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
 				activ = Action.remoteCommandAction ;
 			}else 
+			if(this.commandCode.equalsIgnoreCase(Code206.cd_40)){
+				//设置净积
+				this.downData = new Write_40().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
+				activ = Action.remoteCommandAction ;
+			}else 
 			if(this.commandCode.equalsIgnoreCase(Code206.cd_91)){
 				//清空遥测终端历史数据单元
 				this.downData = new Write_91().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
@@ -1270,6 +1370,16 @@ public class Driver206 extends DriverRtu {
 				this.downData = new Read_76().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
 				activ = Action.remoteCommandAction ;
 			}else 
+			if(this.commandCode.equalsIgnoreCase(Code206.cd_77)){
+				//查询负积流量
+				this.downData = new Read_77().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
+				activ = Action.remoteCommandAction ;
+			}else 
+			if(this.commandCode.equalsIgnoreCase(Code206.cd_7A)){
+				//查询RF频点
+				this.downData = new Read_7A().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
+				activ = Action.remoteCommandAction ;
+			}else 
 			if(this.commandCode.equalsIgnoreCase(Code206.cd_DD)){
 				//设置短信中心号码
 				this.downData = new Write_DD().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
@@ -1288,6 +1398,16 @@ public class Driver206 extends DriverRtu {
 			if(this.commandCode.equalsIgnoreCase(Code206.cd_46)){
 				//设置正积流量
 				this.downData = new Write_46().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
+				activ = Action.remoteCommandAction ;
+			}else 
+			if(this.commandCode.equalsIgnoreCase(Code206.cd_47)){
+				//设置负积流量
+				this.downData = new Write_47().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
+				activ = Action.remoteCommandAction ;
+			}else 
+			if(this.commandCode.equalsIgnoreCase(Code206.cd_4A)){
+				//设置RF频点
+				this.downData = new Write_4A().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
 				activ = Action.remoteCommandAction ;
 			}else 
 			if(this.commandCode.equalsIgnoreCase(Code206.cd_CE)){

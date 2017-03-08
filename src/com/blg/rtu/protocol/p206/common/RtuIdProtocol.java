@@ -14,7 +14,7 @@ public class RtuIdProtocol {
 	 */
 	public String[] parseRtuId_1(byte[] bs , int startIndex, int endIndex)throws Exception{
 		String id = null ;
-		String hex = null ;
+		//String hex = null ;
 		try{
 		/*	byte firstByte = bs[startIndex] ;
 			if(firstByte == 0){

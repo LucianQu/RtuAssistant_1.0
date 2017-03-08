@@ -613,7 +613,7 @@ public class F_06_010 extends FrmParent {
 		}
 	}
 	
-	private void createWaterLevelDataNode(String s){
+/*	private void createWaterLevelDataNode(String s){
 		F_06_010_HelpData_WaterLevel help = new F_06_010_HelpData_WaterLevel(this.act) ;
 		Double d = null ;
 		try{
@@ -628,9 +628,9 @@ public class F_06_010 extends FrmParent {
 			newIndex_waterLevel++ ;
 		}catch(Exception e){
 		}
-	}
+	}*/
 		
-	private void removeAllWaterLevelDataNode(){
+	/*private void removeAllWaterLevelDataNode(){
 		F_06_010_HelpData_WaterLevel help = new F_06_010_HelpData_WaterLevel(this.act) ;
 		newIndex_waterLevel-- ;
 		while(newIndex_waterLevel >= firstIndex_waterLevel){
@@ -642,7 +642,7 @@ public class F_06_010 extends FrmParent {
 		}
 		newIndex_waterLevel = firstIndex_waterLevel ;
 		waterLevelWataNodes.clear() ;
-	}
+	}*/
 
 	
 	private void initWaterAmountDataNode(){
@@ -670,7 +670,7 @@ public class F_06_010 extends FrmParent {
 		}
 	}
 	
-	private void createWaterAmountDataNode(String s){
+/*	private void createWaterAmountDataNode(String s){
 		F_06_010_HelpData_WaterAmount help = new F_06_010_HelpData_WaterAmount(this.act) ;
 		Double d = null ;
 		try{
@@ -685,9 +685,9 @@ public class F_06_010 extends FrmParent {
 			newIndex_waterAmount++ ;
 		}catch(Exception e){
 		}
-	}
+	}*/
 		
-	private void removeAllWaterAmountDataNode(){
+/*	private void removeAllWaterAmountDataNode(){
 		F_06_010_HelpData_WaterAmount help = new F_06_010_HelpData_WaterAmount(this.act) ;
 		newIndex_waterAmount-- ;
 		while(newIndex_waterAmount >= firstIndex_waterAmount){
@@ -699,6 +699,6 @@ public class F_06_010 extends FrmParent {
 		}
 		newIndex_waterAmount = firstIndex_waterAmount ;
 		waterAmountWataNodes.clear() ;
-	}
+	}*/
 	
 }

@@ -29,7 +29,8 @@ public class ActivityProxyHandler {
 	 */
 	public static ActivityProxyHandler createSingle(ActivityAidl activityProxy, LocalServer server){
 		/*
-		 * 这样不行，当MainActivity重新绑定Server时，因为Server未被系统杀死，与它关联的对象都还活着，当Activity重新绑定Server时，这些对象要重构的，尤其要传进来一些新创建的对象，要把老对象替换
+		 * 这样不行，当MainActivity重新绑定Server时，因为Server未被系统杀死，与它关联的对象都还活着，当Activity重新绑定Server时，
+		 * 这些对象要重构的，尤其要传进来一些新创建的对象，要把老对象替换
 		if(instance == null){
 			instance = new ActivityProxyHandler();
 			.....

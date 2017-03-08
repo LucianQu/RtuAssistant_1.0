@@ -62,7 +62,7 @@ public class F_08_030  extends FrmParent {
 
 		title = (TextView)view.findViewById(R.id.f_08_030_Title) ;
 		funcFrm = (FrameLayout)view.findViewById(R.id.f_08_030_Frm) ;
-		cover = (LinearLayout)view.findViewById(R.id.f_04_030_Load) ;
+		cover = (LinearLayout)view.findViewById(R.id.f_08_030_Load) ;
 		
 		item01 = (EditText)view.findViewById(R.id.func_08_030_item01);
 		item01.setFilters(new InputFilter[]{new InputFilter.LengthFilter(requestLen_3)});

@@ -152,6 +152,9 @@ public class Code206 {
 	public static final String cd_42 = "42" ; //设置ModBus地址
 	public static final String cd_72 = "72" ; //查询ModBus地址
 	
+	public static final String cd_4A = "4A" ; //设置RF频点
+	public static final String cd_7A = "7A" ; //查询RF频点
+	
 	public static final String cd_F0 = "F0" ; //查询关键参数
 	public static final String cd_C2 = "C2" ; //查询遥测终端流量实时值
 	
@@ -316,8 +319,10 @@ public class Code206 {
 		(code.equals(cd_47) ? "设置负积流量" : 	
 		(code.equals(cd_77) ? "查询负积流量" : 	
 		(code.equals(cd_40) ? "设置净积流量" : 
+		(code.equals(cd_7A) ? "查询RF频点" : 	
+		(code.equals(cd_4A) ? "设置RF频点" : 
 		"")))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
-		)))))))))))))))))))))))))))))))))))))))))))))))))))))))) ;
+		)))))))))))))))))))))))))))))))))))))))))))))))))))))))))) ;
 		return name ;
 	}
 }
