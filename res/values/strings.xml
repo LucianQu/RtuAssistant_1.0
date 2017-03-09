@@ -488,7 +488,9 @@
    	<string name="func_07_030">批量设置</string>
    	<string name="func_07_030_item01">自动设置:</string>
     
-   	
+   	 <string name="func_08_020">设置ModBus配置密码</string>
+    <string name="func_08_020_item1">旧密码</string> 
+    <string name="func_08_020_item2">新密码</string> 
    	
    	<string name="func_08_030">ModBus地址</string>
     <string name="func_08_030_item1">地址</string>
