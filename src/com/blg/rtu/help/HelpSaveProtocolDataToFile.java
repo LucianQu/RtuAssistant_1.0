@@ -4,9 +4,9 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 
-import com.blg.rtu.MainActivity;
-import com.blg.rtu.R;
 import com.blg.rtu.frmChannel.helpCh4.ListRtuData;
+import com.blg.rtu1.MainActivity;
+import com.blg.rtu1.R;
 
 import android.content.res.Resources;
 import android.os.Environment;

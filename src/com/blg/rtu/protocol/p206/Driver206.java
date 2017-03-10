@@ -68,6 +68,8 @@ import com.blg.rtu.protocol.p206.cd32_33.Write_33;
 import com.blg.rtu.protocol.p206.cd34.Answer_34;
 import com.blg.rtu.protocol.p206.cd40.Answer_40;
 import com.blg.rtu.protocol.p206.cd40.Write_40;
+import com.blg.rtu.protocol.p206.cd41.Answer_41;
+import com.blg.rtu.protocol.p206.cd41.Write_41;
 import com.blg.rtu.protocol.p206.cd42_72.Answer_42_72;
 import com.blg.rtu.protocol.p206.cd42_72.Read_72;
 import com.blg.rtu.protocol.p206.cd42_72.Write_42;
@@ -576,7 +578,12 @@ public class Driver206 extends DriverRtu {
 				//应答 - 修改遥测终端密码   
 				this.upData = new Answer_96().parse(rtuId, b, ca, this.dataCode);
 				action.append(Action.commandResultAction) ;
-			}else			
+			}else	
+			if(this.dataCode.equalsIgnoreCase(Code206.cd_41)){
+				//应答 - 修改ModBus配置密码
+				this.upData = new Answer_41().parse(rtuId, b, ca, this.dataCode);
+				action.append(Action.commandResultAction) ;
+			}else	
 			if(this.dataCode.equalsIgnoreCase(Code206.cd_C0)){
 				//遥测终端自报实时数据
 				Report_C0 report = new Report_C0() ;
@@ -1268,6 +1275,11 @@ public class Driver206 extends DriverRtu {
 			if(this.commandCode.equalsIgnoreCase(Code206.cd_96)){
 				//修改遥测终端密码   
 				this.downData = new Write_96().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
+				activ = Action.remoteCommandAction ;
+			}else 
+			if(this.commandCode.equalsIgnoreCase(Code206.cd_41)){
+				//修改ModBus配置密码 
+				this.downData = new Write_41().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
 				activ = Action.remoteCommandAction ;
 			}else 
 			if(this.commandCode.equalsIgnoreCase(Code206.cd_E0)){

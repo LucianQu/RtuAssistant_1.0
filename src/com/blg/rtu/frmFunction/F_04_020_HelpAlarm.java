@@ -8,11 +8,11 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.blg.rtu.MainActivity;
-import com.blg.rtu.R;
 import com.blg.rtu.util.Constant;
 import com.blg.rtu.util.Preferences;
 import com.blg.rtu.util.ResourceUtils;
+import com.blg.rtu1.MainActivity;
+import com.blg.rtu1.R;
 
 public class F_04_020_HelpAlarm {
 	

@@ -13,8 +13,6 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-import com.blg.rtu.MainActivity;
-import com.blg.rtu.R;
 import com.blg.rtu.protocol.RtuData;
 import com.blg.rtu.protocol.p206.Code206;
 import com.blg.rtu.protocol.p206.cd5D.Data_5D;
@@ -22,6 +20,8 @@ import com.blg.rtu.protocol.p206.cd5E.Data_5E;
 import com.blg.rtu.protocol.p206.cdCC_DC.Data_CC_DC;
 import com.blg.rtu.protocol.p206.cdD4.Data_D4;
 import com.blg.rtu.util.SpinnerVO;
+import com.blg.rtu1.MainActivity;
+import com.blg.rtu1.R;
 
 public class LpFragment_04 extends Fragment {
 	

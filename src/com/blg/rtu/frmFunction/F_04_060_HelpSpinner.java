@@ -2,10 +2,10 @@ package com.blg.rtu.frmFunction;
 
 import java.util.ArrayList;
 
-import com.blg.rtu.R;
 import com.blg.rtu.util.Constant;
 import com.blg.rtu.util.Preferences;
 import com.blg.rtu.util.SpinnerVO;
+import com.blg.rtu1.R;
 
 import android.view.View;
 import android.widget.AdapterView;

@@ -19,8 +19,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.blg.rtu.MainActivity;
-import com.blg.rtu.R;
 import com.blg.rtu.protocol.RtuCommand;
 import com.blg.rtu.protocol.RtuData;
 import com.blg.rtu.protocol.p206.Code206;
@@ -31,6 +29,8 @@ import com.blg.rtu.util.Preferences;
 import com.blg.rtu.util.SpinnerVO;
 //import com.leaking.slideswitch.SlideSwitch;
 //import com.leaking.slideswitch.SlideSwitch.SlideListener;
+import com.blg.rtu1.MainActivity;
+import com.blg.rtu1.R;
 
 public class LpFragment_01 extends Fragment {
 	//implements SlideListener

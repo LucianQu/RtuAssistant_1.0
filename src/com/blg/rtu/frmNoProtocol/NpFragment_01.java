@@ -13,11 +13,11 @@ import android.view.ViewGroup;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import com.blg.rtu.MainActivity;
-import com.blg.rtu.R;
 import com.blg.rtu.help.HelpSaveNoProtocolDataToFile;
 import com.blg.rtu.util.DateTime;
 import com.blg.rtu.util.StringValueForActivity;
+import com.blg.rtu1.MainActivity;
+import com.blg.rtu1.R;
 
 public class NpFragment_01 extends Fragment {
 	

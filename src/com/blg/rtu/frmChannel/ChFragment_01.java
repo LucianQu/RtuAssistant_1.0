@@ -1,11 +1,11 @@
 package com.blg.rtu.frmChannel;
 
-import com.blg.rtu.MainActivity;
-import com.blg.rtu.R;
 import com.blg.rtu.frmChannel.helpCh1.ChBusi_01_Action;
 import com.blg.rtu.frmChannel.helpCh1.ChBusi_01_Init;
 import com.blg.rtu.frmChannel.helpCh1.ChBusi_01_Operate;
 import com.blg.rtu.util.Constant;
+import com.blg.rtu1.MainActivity;
+import com.blg.rtu1.R;
 
 import android.app.Activity;
 import android.app.Fragment;

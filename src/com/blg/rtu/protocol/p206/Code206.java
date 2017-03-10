@@ -165,7 +165,7 @@ public class Code206 {
 	public static final String cd_47 = "47" ; //设置负积流量
 	
 	public static final String cd_40 = "40" ; //设置净积流量
-	
+	public static final String cd_41 = "41" ; //设置ModBus配置密码
 	
 	public String getCodeName(String code) {
 		String name = (code.equals(cd_02) ? "链路检测" : 
@@ -319,10 +319,11 @@ public class Code206 {
 		(code.equals(cd_47) ? "设置负积流量" : 	
 		(code.equals(cd_77) ? "查询负积流量" : 	
 		(code.equals(cd_40) ? "设置净积流量" : 
+		(code.equals(cd_41) ? "设置ModBus配置密码" : 
 		(code.equals(cd_7A) ? "查询RF频点" : 	
 		(code.equals(cd_4A) ? "设置RF频点" : 
 		"")))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
-		)))))))))))))))))))))))))))))))))))))))))))))))))))))))))) ;
+		))))))))))))))))))))))))))))))))))))))))))))))))))))))))))) ;
 		return name ;
 	}
 }

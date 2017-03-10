@@ -10,13 +10,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.blg.rtu.MainActivity;
-import com.blg.rtu.R;
 import com.blg.rtu.protocol.RtuData;
 import com.blg.rtu.protocol.p206.Code206;
 import com.blg.rtu.protocol.p206.cdA1_53.Data_A1_53;
 import com.blg.rtu.protocol.p206.cdC2.Data_C2;
 import com.blg.rtu.protocol.p206.cdE0.Data_E0;
+import com.blg.rtu1.MainActivity;
+import com.blg.rtu1.R;
 
 public class LpFragment_03 extends Fragment {
 	

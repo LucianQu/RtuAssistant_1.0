@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 
-import com.blg.rtu.R;
+import com.blg.rtu1.R;
 
 public class DialogConfirm {
 	

@@ -20,8 +20,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
-import com.blg.rtu.MainActivity;
-import com.blg.rtu.R;
 import com.blg.rtu.protocol.RtuData;
 import com.blg.rtu.protocol.p206.Code206;
 import com.blg.rtu.protocol.p206.CommandCreator;
@@ -33,6 +31,8 @@ import com.blg.rtu.util.DialogConfirm;
 import com.blg.rtu.util.ImageUtil;
 import com.blg.rtu.util.Preferences;
 import com.blg.rtu.vo2xml.Vo2Xml;
+import com.blg.rtu1.MainActivity;
+import com.blg.rtu1.R;
 
 public class F_01_020  extends FrmParent {
 	
@@ -137,9 +137,9 @@ public class F_01_020  extends FrmParent {
 			item03.setText(str); 
 		}
 
-		btnSet = (ImageView)view.findViewById(R.id.btn_set_11);
-		btnAdjust = (ImageView)view.findViewById(R.id.btn_adjust_11);
-		btnRead = (ImageView)view.findViewById(R.id.btn_read_11);
+		btnSet = (ImageView)view.findViewById(R.id.btn_set);
+		btnAdjust = (ImageView)view.findViewById(R.id.btn_adjust);
+		btnRead = (ImageView)view.findViewById(R.id.btn_read);
 		
 		resultDt = (TextView)view.findViewById(R.id.resultDatetime);
 		

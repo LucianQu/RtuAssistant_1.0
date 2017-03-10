@@ -8,8 +8,8 @@ import android.content.res.Resources;
 import android.os.Environment;
 import android.util.Log;
 
-import com.blg.rtu.MainActivity;
-import com.blg.rtu.R;
+import com.blg.rtu1.MainActivity;
+import com.blg.rtu1.R;
 
 public class HelpSaveSolidDataToFile {
 	

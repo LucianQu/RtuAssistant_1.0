@@ -1,11 +1,11 @@
 package com.blg.rtu.frmFunction;
 
-import com.blg.rtu.R;
 import com.blg.rtu.util.Constant;
 import com.blg.rtu.util.InputFilter_DecimalSigned;
 import com.blg.rtu.util.InputFilter_DecimalUnSigned;
 import com.blg.rtu.util.InputFilter_NumberUnSigned;
 import com.blg.rtu.util.Preferences;
+import com.blg.rtu1.R;
 
 import android.text.InputFilter;
 import android.view.View;

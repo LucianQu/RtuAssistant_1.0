@@ -3,10 +3,10 @@ package com.blg.rtu.frmFunction;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
-import com.blg.rtu.MainActivity;
-import com.blg.rtu.R;
 import com.blg.rtu.protocol.p206.cd1A_5A.Param_1A;
 import com.blg.rtu.util.DialogAlarm;
+import com.blg.rtu1.MainActivity;
+import com.blg.rtu1.R;
 
 public class F_04_040_HelpCheckBeforeSet {
 	

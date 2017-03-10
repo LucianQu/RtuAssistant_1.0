@@ -6,7 +6,6 @@ import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
-import com.blg.rtu.R;
 import com.blg.rtu.frmChannel.ChFragment_01;
 import com.blg.rtu.frmChannel.ChFragment_03;
 import com.blg.rtu.help.HelpSaveSetDataToFile;
@@ -14,6 +13,7 @@ import com.blg.rtu.util.DialogAlarm;
 import com.blg.rtu.util.DialogConfirm;
 import com.blg.rtu.util.StringValueForActivity;
 import com.blg.rtu.vo2xml.Help;
+import com.blg.rtu1.R;
 /**
  * frmChannel01响应外部操作类
  * @author Administrator

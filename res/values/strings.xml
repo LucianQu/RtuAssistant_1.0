@@ -11,12 +11,12 @@
        
     <string name="txtVersion">Version</string>
     
-    <string name="app_name">水表助手</string>
-    <string name="rtuAssiName">水表助手</string>
+    <string name="app_name">RTU助手</string>
+    <string name="rtuAssiName">RTU助手</string>
     <string name="welcome">北京奥特美克科技股份有限公司</string>
     
     <string name="functionItems">功能选项</string>
-    <string name="functionLoopQuery">设备信息</string>
+    <string name="functionLoopQuery">一键查询</string>
     <string name="functionChannel">通道选项</string>
     <string name="functionNoProtocol">调试数据</string>
     
@@ -24,10 +24,10 @@
     
     
     <string name="menu_level_01">设备信息</string>
-    <string name="menu_level_02">通道参数</string>
-    <string name="menu_level_03">采集参数</string>
-    <string name="menu_level_04">通信参数</string>
-    <string name="menu_level_05">运行状况信息</string>
+    <string name="menu_level_02">中心通信设置</string>
+    <string name="menu_level_03">本地通信设置</string>
+    <string name="menu_level_04">运行状况</string>
+    <string name="menu_level_05">批量处理</string>
     <string name="menu_level_06">人工置数</string>
     
     <string name="wifi_ip1">10</string>
@@ -662,10 +662,10 @@
     
     <string name="ch_sm_channel">短信通道</string>
     <string name="ch_tcp_channel">WIFI通道</string>
-    <string name="tcpStatus">WIFI状态：</string>
-    <string name="connected">连接</string>
+    <string name="tcpStatus">连接状态：</string>
+    <string name="connected">已连接</string>
     <string name="noConnected">未连接</string>
-    <string name="disconnected">断开</string>
+    <string name="disconnected">已断开</string>
     <string name="rtuLogListViewHeight">256</string>
     
     <!-- 当人工点击按钮连接网络时，等待连接结果的超时时长，即动画时长，单位毫秒 -->

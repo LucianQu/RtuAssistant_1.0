@@ -9,10 +9,10 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.util.Log;
 
-import com.blg.rtu.server.CoreControl;
-import com.blg.rtu.server.LocalServer;
 import com.blg.rtu.util.Constant;
 import com.blg.rtu.util.StringValueForServer;
+import com.blg.rtu1.server.CoreControl;
+import com.blg.rtu1.server.LocalServer;
 
 public class NetManager {
 	

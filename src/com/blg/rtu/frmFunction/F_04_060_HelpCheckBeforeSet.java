@@ -1,10 +1,10 @@
 package com.blg.rtu.frmFunction;
 
 
-import com.blg.rtu.MainActivity;
-import com.blg.rtu.R;
 import com.blg.rtu.protocol.p206.cd20.Param_20;
 import com.blg.rtu.util.DialogAlarm;
+import com.blg.rtu1.MainActivity;
+import com.blg.rtu1.R;
 
 public class F_04_060_HelpCheckBeforeSet {
 	

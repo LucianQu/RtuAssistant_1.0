@@ -3,6 +3,7 @@
   
     <!-- 背景色 -->
     <solid android:color="#FFFFFF" />
+     <!-- <solid android:color="#BFBFBF" /> -->
     
     <!-- 边框 
     <stroke android:width="0.01dp"  

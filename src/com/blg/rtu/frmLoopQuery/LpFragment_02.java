@@ -14,13 +14,13 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.blg.rtu.MainActivity;
-import com.blg.rtu.R;
 import com.blg.rtu.protocol.RtuData;
 import com.blg.rtu.protocol.p206.Code206;
 import com.blg.rtu.protocol.p206.cd10_50.Data_10_50;
 import com.blg.rtu.protocol.p206.cdD3.Data_D3;
 import com.blg.rtu.protocol.p206.cdEF.Data_EF;
+import com.blg.rtu1.MainActivity;
+import com.blg.rtu1.R;
 
 public class LpFragment_02 extends Fragment {
 	

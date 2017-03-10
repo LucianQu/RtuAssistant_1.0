@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center_vertical"
+    android:baselineAligned="false"
     android:focusableInTouchMode="true" 
     android:orientation="horizontal">
 
@@ -19,9 +20,8 @@
 	    >
 				
 		<LinearLayout 
-		    android:layout_weight="1" 
-            android:layout_width="match_parent"
-		    android:layout_height="0dip"
+     		android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
 			android:orientation="horizontal">
 		   <TextView
 		        android:text="@string/txtLoopQuery_deviceAddr"
@@ -34,9 +34,10 @@
 			    android:inputType="none"/>		
 		</LinearLayout>		
 		
-		<LinearLayout android:layout_weight="1" 
+		<LinearLayout 
             android:layout_width="match_parent"
-		    android:layout_height="0dip"
+		    android:layout_height="wrap_content"
+		     android:layout_marginTop="10dp"
 			android:orientation="horizontal">
 		   <TextView
 		        android:text="@string/txtLoopQuery_hardVer"
@@ -49,9 +50,10 @@
 			    android:inputType="none"/>		
 		</LinearLayout>		
 			
-			<LinearLayout android:layout_weight="1" 
+		<LinearLayout 
             android:layout_width="match_parent"
-		    android:layout_height="0dip"
+		    android:layout_height="wrap_content"
+		    android:layout_marginTop="10dp"
 			android:orientation="horizontal">
 		   <TextView
 		        android:text="@string/txtLoopQuery_softVer"
@@ -64,9 +66,10 @@
 			    android:inputType="none"/>		
 		</LinearLayout>	
 		
-		<LinearLayout android:layout_weight="1" 
+		<LinearLayout 
             android:layout_width="match_parent"
-		    android:layout_height="0dip"
+		    android:layout_height="wrap_content"
+		    android:layout_marginTop="10dp"
 			android:orientation="horizontal">
 		   <TextView
 		        android:text="@string/txtLoopQuery_deviceSerNum"

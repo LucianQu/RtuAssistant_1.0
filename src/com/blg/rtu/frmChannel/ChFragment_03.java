@@ -17,12 +17,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.blg.rtu.MainActivity;
-import com.blg.rtu.R;
-//import com.blg.rtu.help.HelpSaveSetDataToFile;
-//import com.blg.rtu.util.DialogConfirm;
-//import com.blg.rtu.util.DialogAlarm;
-//import com.blg.rtu.vo2xml.Help;
+import com.blg.rtu1.MainActivity;
+import com.blg.rtu1.R;
 
 public class ChFragment_03 extends Fragment {
 	

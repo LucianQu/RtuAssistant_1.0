@@ -7,9 +7,9 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 
-import com.blg.rtu.R;
 import com.blg.rtu.util.Constant;
 import com.blg.rtu.util.InputFilter_NumberUnSigned;
+import com.blg.rtu1.R;
 
 public class F_03_080_HelpCreateView {
 	private F_03_080 fr ;

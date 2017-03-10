@@ -38,20 +38,20 @@
 			        style="@style/func_item_viewtext_style_100_a"/>
 			   <TextView
 			        android:id="@+id/f_01_020_item02_1"
-			        style="@style/func_dt_viewtext_style_90"
+			        style="@style/func_dt_viewtext_style_100"
 			        android:textColor="#0000FF"/>
 			   <TextView
 			        android:id="@+id/f_01_020_item02_2"
 			        style="@style/func_dt_viewtext_style_60"
 			        android:textColor="#0000FF"
 			        android:layout_marginLeft="5dp"/>
-			   <ImageView 
+			   <!-- <ImageView 
 			        android:id="@+id/btn_set_11"
 			        android:layout_width="@dimen/img_btn_layout_width_35"
 			        android:layout_height="@dimen/img_btn_layout_height_35"
 			        android:layout_marginLeft="@dimen/layoutMarginLeft_20"
 			        android:src="@drawable/btn_ball_1"
-			        android:contentDescription="@string/txtBtn"/>
+			        android:contentDescription="@string/txtBtn"/> -->
 			   </LinearLayout>
 			   
 			<LinearLayout
@@ -67,13 +67,13 @@
 					android:id="@+id/func_01_020_item01"  
 					android:labelFor="@id/func_01_020_item01" 
 				    style="@style/func_item_edittext_style_180"/>
-			    <ImageView 
-		        android:id="@+id/btn_adjust_11"
-		        android:layout_width="@dimen/img_btn_layout_width_35"
-		        android:layout_height="@dimen/img_btn_layout_height_35"
-		        android:layout_marginLeft="@dimen/layoutMarginLeft_20"
-		        android:src="@drawable/btn_ball_4"
-		        android:contentDescription="@string/txtBtn"/>
+		<!-- 	    <ImageView 
+			        android:id="@+id/btn_adjust_11"
+			        android:layout_width="@dimen/img_btn_layout_width_35"
+			        android:layout_height="@dimen/img_btn_layout_height_35"
+			        android:layout_marginLeft="@dimen/layoutMarginLeft_20"
+			        android:src="@drawable/btn_ball_4"
+			        android:contentDescription="@string/txtBtn"/> -->
 			</LinearLayout>
 				        
 			<LinearLayout
@@ -90,16 +90,16 @@
 					android:labelFor="@id/func_01_020_item03" 
 				    style="@style/func_item_edittext_style_180"
 				    android:inputType="none"/>
-			   <ImageView 
+			  <!--  <ImageView 
 		        android:id="@+id/btn_read_11"
 		        android:layout_width="@dimen/img_btn_layout_width_35"
 		        android:layout_height="@dimen/img_btn_layout_height_35"
 		        android:layout_marginLeft="@dimen/layoutMarginLeft_20"
 		        android:src="@drawable/btn_ball_2"
-		        android:contentDescription="@string/txtBtn"/>
+		        android:contentDescription="@string/txtBtn"/> -->
 			</LinearLayout>
 							        
-		    <include layout="@layout/show_btn_only_resulttime" />
+		    <include layout="@layout/show_btn_set_adjust_query" />
 		 </LinearLayout>
 	     
 		 <!-- start 底部 -->

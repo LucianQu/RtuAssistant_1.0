@@ -1,7 +1,5 @@
 package com.blg.rtu.frmFunction;
 
-import com.blg.rtu.MainActivity;
-import com.blg.rtu.R;
 import com.blg.rtu.protocol.RtuData;
 import com.blg.rtu.protocol.p206.CommandCreator;
 import com.blg.rtu.protocol.p206.cd20.Data_20;
@@ -11,6 +9,8 @@ import com.blg.rtu.util.ImageUtil;
 import com.blg.rtu.util.Preferences;
 import com.blg.rtu.util.SpinnerVO;
 import com.blg.rtu.vo2xml.Vo2Xml;
+import com.blg.rtu1.MainActivity;
+import com.blg.rtu1.R;
 
 import android.app.Activity;
 import android.content.Intent;

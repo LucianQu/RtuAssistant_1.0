@@ -4,15 +4,39 @@
     android:id="@+id/f_01_title"
 	style="@style/func_grouptitle_linearlayout_style" 
     >
-    <ImageView 
-        android:src="@drawable/f_0111"
-		style="@style/func_grouptitle_imageview_style" 
-		android:contentDescription="@string/image_description"
-        />
-  <!--   <TextView
-        android:text="@string/menu_level_01"
-		style="@style/func_grouptitle_textview_style" 
-        /> -->
+      <LinearLayout
+	    
+	      android:layout_width="wrap_content"
+	      android:layout_height="match_parent" 
+	      android:orientation="horizontal"
+	      android:gravity="center"
+	      >
+	     <!--  <ImageView 
+	        android:src="@drawable/f_01111"
+			style="@style/func_grouptitle_imageview_style" 
+			android:contentDescription="@string/image_description"
+	        /> -->
+	        <ImageView 
+	        android:src="@drawable/f_011111"
+			style="@style/func_grouptitle_imageview_style1" 
+			android:contentDescription="@string/image_description"
+	        />
+	  </LinearLayout>
+  
+      <LinearLayout
+	      
+	      android:layout_width="wrap_content"
+	      android:layout_height="match_parent" 
+	      android:orientation="horizontal"
+	      android:gravity="center"
+	      >
+	       <TextView
+	        android:text="@string/menu_level_01"
+	             
+			style="@style/func_grouptitle_textview_style1" 
+	        />
+	  </LinearLayout>
+   
 </LinearLayout>
 
 	

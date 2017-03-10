@@ -15,10 +15,10 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.blg.rtu.MainActivity;
-import com.blg.rtu.R;
 import com.blg.rtu.util.DialogConfirm;
 import com.blg.rtu.util.StringValueForActivity;
+import com.blg.rtu1.MainActivity;
+import com.blg.rtu1.R;
 
 public class NpFragment_02 extends Fragment {
 	/**

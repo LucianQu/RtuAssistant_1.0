@@ -20,8 +20,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.AdapterView.OnItemSelectedListener;
 
-import com.blg.rtu.MainActivity;
-import com.blg.rtu.R;
 import com.blg.rtu.protocol.RtuData;
 import com.blg.rtu.protocol.p206.Code206;
 import com.blg.rtu.protocol.p206.CommandCreator;
@@ -34,6 +32,8 @@ import com.blg.rtu.util.NumUtil;
 import com.blg.rtu.util.Preferences;
 import com.blg.rtu.util.SpinnerVO;
 import com.blg.rtu.vo2xml.Vo2Xml;
+import com.blg.rtu1.MainActivity;
+import com.blg.rtu1.R;
 
 public class F_03_040  extends FrmParent {
 	

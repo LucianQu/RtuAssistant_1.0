@@ -16,8 +16,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.blg.rtu.MainActivity;
-import com.blg.rtu.R;
 import com.blg.rtu.protocol.RtuData;
 import com.blg.rtu.protocol.p206.CommandCreator;
 import com.blg.rtu.protocol.p206.cd96.Data_96;
@@ -28,6 +26,8 @@ import com.blg.rtu.util.ImageUtil;
 import com.blg.rtu.util.Preferences;
 import com.blg.rtu.util.StringValueForServer;
 import com.blg.rtu.vo2xml.Vo2Xml;
+import com.blg.rtu1.MainActivity;
+import com.blg.rtu1.R;
 
 public class F_02_080  extends FrmParent {
 	private final static int requestLen  = 5 ; 

@@ -17,8 +17,6 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemLongClickListener;
 
-import com.blg.rtu.MainActivity;
-import com.blg.rtu.R;
 import com.blg.rtu.frmChannel.helpCh4.ListRtuData;
 import com.blg.rtu.frmChannel.helpCh4.RtuDataListViewAdapter;
 import com.blg.rtu.compound.FixHeightListView;
@@ -28,6 +26,8 @@ import com.blg.rtu.util.Constant;
 import com.blg.rtu.util.DateTime;
 import com.blg.rtu.util.ResourceUtils;
 import com.blg.rtu.util.StringValueForActivity;
+import com.blg.rtu1.MainActivity;
+import com.blg.rtu1.R;
 
 public class ChFragment_04 extends Fragment {
 	/**

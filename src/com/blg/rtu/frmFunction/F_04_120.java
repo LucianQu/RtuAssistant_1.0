@@ -4,8 +4,6 @@ package com.blg.rtu.frmFunction;
 import java.util.HashMap;
 import java.util.TreeMap;
 
-import com.blg.rtu.MainActivity;
-import com.blg.rtu.R;
 import com.blg.rtu.protocol.RtuData;
 import com.blg.rtu.protocol.p206.CommandCreator;
 import com.blg.rtu.protocol.p206.cd1B.DataMap_1B;
@@ -18,6 +16,8 @@ import com.blg.rtu.util.DialogAlarm;
 import com.blg.rtu.util.ImageUtil;
 import com.blg.rtu.util.Preferences;
 import com.blg.rtu.vo2xml.Vo2Xml;
+import com.blg.rtu1.MainActivity;
+import com.blg.rtu1.R;
 
 import android.app.Activity;
 import android.content.Intent;

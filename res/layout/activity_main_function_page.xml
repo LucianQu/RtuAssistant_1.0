@@ -3,14 +3,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/deskbg4"
+    android:background="#f0eff5"
     android:focusableInTouchMode="true" >
+    <!-- android:background="@drawable/deskbg4" -->
 <LinearLayout
 	    android:layout_width="match_parent"
 	    android:layout_height="36dp"
 	    android:orientation="horizontal"
 	    android:layout_alignParentTop="true"
-	    android:background="@drawable/line_top_bg_a">
+	    android:background="#f0eff5">
 	    <TextView
 	        android:layout_width="match_parent"
 	        android:layout_height="match_parent"
@@ -19,8 +20,8 @@
 	        android:layout_gravity="left|center_vertical"
 	        android:text="@string/functionItems"
 	        android:textSize="@dimen/text18"
-	        android:textColor="#FFFFFF"
-	        android:textStyle="bold"
+	        android:textColor="#000000"
+	        android:typeface="monospace"
 	        android:drawableLeft="@drawable/func_set" 
 	        android:drawablePadding="5.0dp" />	    	    	    
  	</LinearLayout>
@@ -29,8 +30,8 @@
 	    android:id="@+id/f_func_scrollView"
 	    android:layout_width="match_parent"  
 	    android:layout_height="match_parent"  
-	    android:layout_marginTop="36dp"
-	    android:layout_marginBottom="45dp"
+	    android:layout_marginTop="37dp"
+	    android:layout_marginBottom="50dp"
 	    android:scrollbars="none"  
 	    android:fadingEdge="vertical">
 	    
@@ -143,11 +144,8 @@
 			    android:layout_height="match_parent"
 			    android:orientation="vertical"
 			    >
-				<fragment android:id="@+id/f_08_010"
-			        android:name="com.blg.rtu.frmFunction.F_01_100"
-				    style="@style/func_fragment_style"/>
 		        <fragment android:id="@+id/f_08_020"
-			        android:name="com.blg.rtu.frmFunction.F_01_020"
+			        android:name="com.blg.rtu.frmFunction.F_08_020"
 				    style="@style/func_fragment_style"/>
 		        <fragment android:id="@+id/f_08_030"
 			        android:name="com.blg.rtu.frmFunction.F_08_030"
@@ -337,7 +335,8 @@
 		   </LinearLayout>
 		   
 		   <TextView android:id="@+id/fcWelcome"
-				android:textColor="#6bded7" 
+		       android:layout_marginTop="10dp"
+				android:textColor="#9c9ca0" 
 				style="@style/welcome"/>
 		    			    
 		</LinearLayout>
@@ -345,7 +344,7 @@
 	
 	<LinearLayout
 	    android:layout_width="match_parent"
-	    android:layout_height="45dp"
+	    android:layout_height="50dp"
 	    android:orientation="horizontal"
 	    android:layout_alignParentBottom="true"
 	    android:baselineAligned="false"
@@ -359,21 +358,24 @@
 		    android:gravity="center"
 	      >
 	       <ImageView 
-		        android:id="@+id/closeSubAll"
-		        android:layout_width="35dp"
-		        android:layout_height="30dp"
-		        android:src="@drawable/close"
+		        android:id="@+id/subItem"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:paddingTop="5dp"
+	        	android:paddingBottom="5dp"
+		        android:background="#FFFFFF"
 		        android:contentDescription="@string/txtBtn"/>
+	       <!-- android:src="@drawable/close9" -->
 	  	</LinearLayout>
 		
-	   <ImageView
+	<!--    <ImageView
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:contentDescription="@string/txtBtn"
 			android:src="@drawable/widget_bar_cut_off"
-			/>
+			/> -->
 	   
-	   <LinearLayout
+	  <!--  <LinearLayout
 		    android:layout_weight="1"
 		    android:layout_width="0dip"
 		    android:layout_height="match_parent"
@@ -394,7 +396,7 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:contentDescription="@string/txtBtn"
-			android:src="@drawable/widget_bar_cut_off"/>
+			android:src="@drawable/widget_bar_cut_off"/> -->
 	  
 	  <LinearLayout
 	      android:layout_weight="1"
@@ -406,18 +408,20 @@
 	      >
 	       <ImageView 
 	        android:id="@+id/labelImgReset"
-	        android:layout_width="35dp"
+	        android:layout_width="30dp"
 	        android:layout_height="30dp"
-	        android:src="@drawable/lb_reset"
+	        android:background="@layout/lb_reset_btn_press"
 	        android:contentDescription="@string/txtBtn"/>
+	      <!--  android:src="@drawable/lb_reset1" -->
 	  </LinearLayout>
-	  <ImageView
+	  
+<!-- 	  <ImageView
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:contentDescription="@string/txtBtn"
-			android:src="@drawable/widget_bar_cut_off"/>     
+			android:src="@drawable/widget_bar_cut_off"/>   -->   
 	
-	     <LinearLayout
+	    <!--  <LinearLayout
 	        android:layout_weight="1"
 	        android:layout_width="0dip"
 	        android:layout_height="match_parent"
@@ -436,22 +440,26 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:contentDescription="@string/txtBtn"
-			android:src="@drawable/widget_bar_cut_off"/>
+			android:src="@drawable/widget_bar_cut_off"/> -->
 	  
 	   <LinearLayout
 	      android:layout_weight="1"
 	      android:layout_width="0dip"
 	      android:layout_height="match_parent" 
 	      android:layout_marginTop="3dp"
+	      
 	      android:orientation="horizontal"
 	      android:gravity="center"
 	      >
 	       <ImageView 
-	        android:id="@+id/openMainAll2"
-	        android:layout_width="48dp"
-	        android:layout_height="30dp"
-	        android:src="@drawable/open1"
+	        android:id="@+id/mainItem"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:paddingTop="5dp"
+	        android:paddingBottom="5dp"
+	        android:background="#FFFFFF"
 	        android:contentDescription="@string/txtBtn"/>
+	       <!--  android:src="@drawable/close10" -->
 	  </LinearLayout>
 	 </LinearLayout>
 </RelativeLayout>

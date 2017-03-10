@@ -21,8 +21,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.blg.rtu.MainActivity;
-import com.blg.rtu.R;
 import com.blg.rtu.compound.FixHeightListView;
 import com.blg.rtu.protocol.RtuData;
 import com.blg.rtu.protocol.p206.Code206;
@@ -37,6 +35,8 @@ import com.blg.rtu.util.InputFilter_NumberUnSigned;
 import com.blg.rtu.util.Preferences;
 import com.blg.rtu.util.StringValueForActivity;
 import com.blg.rtu.vo2xml.Vo2Xml;
+import com.blg.rtu1.MainActivity;
+import com.blg.rtu1.R;
 
 public class F_05_060  extends FrmParent {
 	

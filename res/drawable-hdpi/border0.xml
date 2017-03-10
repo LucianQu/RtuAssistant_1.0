@@ -5,8 +5,9 @@
     <solid android:color="#FFFFFF" />
     
     <!-- 边框 --> 
-    <stroke android:width="0.01dp"  
-        android:color="#55A0FF" />
+    <!-- <stroke android:width="0.01dp"  
+        android:color="#55A0FF" 
+        /> -->
     
     <!-- 内容与边框距离 -->
     <padding android:left="2dp"  

@@ -1,6 +1,6 @@
 package com.blg.rtu.util;
 
-import com.blg.rtu.R;
+import com.blg.rtu1.R;
 
 import android.content.Context;
 import android.content.res.Resources;

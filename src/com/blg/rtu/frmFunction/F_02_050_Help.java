@@ -1,8 +1,8 @@
 package com.blg.rtu.frmFunction;
 
 
-import com.blg.rtu.MainActivity;
 import com.blg.rtu.util.DialogAlarm;
+import com.blg.rtu1.MainActivity;
 
 public class F_02_050_Help {
 	

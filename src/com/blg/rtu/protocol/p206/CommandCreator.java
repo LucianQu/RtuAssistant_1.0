@@ -14,6 +14,7 @@ import com.blg.rtu.protocol.p206.cd1B.ParamMap_1B;
 import com.blg.rtu.protocol.p206.cd1F_64.ParamMap_1F;
 import com.blg.rtu.protocol.p206.cd20.Param_20;
 import com.blg.rtu.protocol.p206.cd40.Param_40;
+import com.blg.rtu.protocol.p206.cd41.Param_41;
 import com.blg.rtu.protocol.p206.cd42_72.Param_42;
 import com.blg.rtu.protocol.p206.cd43_73.Param_43;
 import com.blg.rtu.protocol.p206.cd44_74.Param_44;
@@ -414,6 +415,14 @@ public class CommandCreator {
 		com.setCommandCode(Code206.cd_96) ;
 		com.setRtuId(rtuId);
 		com.getParams().put(Param_96.KEY, p);
+		return com ;
+	}
+	
+	public RtuCommand cd_41(Param_41 p, String rtuId){
+		RtuCommand com = new RtuCommand() ;
+		com.setCommandCode(Code206.cd_41) ;
+		com.setRtuId(rtuId);
+		com.getParams().put(Param_41.KEY, p);
 		return com ;
 	}
 	

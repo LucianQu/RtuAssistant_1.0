@@ -8,7 +8,7 @@ import android.content.pm.PackageManager;
 
 
 import com.automic.watersource.model.UserInfo;
-import com.blg.rtu.AppContext;
+import com.blg.rtu1.AppContext;
 
 
 public class AppUtils {

@@ -9,17 +9,17 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.blg.rtu.MainActivity;
-import com.blg.rtu.R;
-import com.blg.rtu.ServerProxyHandler;
 import com.blg.rtu.protocol.RtuCommand;
 import com.blg.rtu.protocol.RtuData;
-import com.blg.rtu.sm.SmsSender;
 import com.blg.rtu.util.Constant;
 import com.blg.rtu.util.DateTime;
 import com.blg.rtu.util.DialogConfirm;
 import com.blg.rtu.util.StringValueForActivity;
 import com.blg.rtu.vo2xml.Vo2Xml;
+import com.blg.rtu1.MainActivity;
+import com.blg.rtu1.R;
+import com.blg.rtu1.ServerProxyHandler;
+import com.blg.rtu1.sm.SmsSender;
 
 public abstract class FrmParent extends Fragment {
 	

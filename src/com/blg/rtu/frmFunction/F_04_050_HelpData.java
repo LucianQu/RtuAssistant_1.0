@@ -1,11 +1,11 @@
 package com.blg.rtu.frmFunction;
 
-import com.blg.rtu.R;
-import com.blg.rtu.MainActivity;
 import com.blg.rtu.util.Constant;
 import com.blg.rtu.util.InputFilter_DecimalSigned;
 import com.blg.rtu.util.Preferences;
 import com.blg.rtu.util.ResourceUtils;
+import com.blg.rtu1.MainActivity;
+import com.blg.rtu1.R;
 
 import android.content.res.Resources;
 import android.graphics.Color;

@@ -22,6 +22,7 @@
 	<dimen name="tv_width_60">60dp</dimen>
 	<dimen name="tv_width_80">60dp</dimen>
 	<dimen name="tv_width_90">70dp</dimen>
+	<dimen name="tv_width_95">80dp</dimen>
 	<dimen name="tv_width_100">90dp</dimen>
 	<dimen name="tv_width_150">120dp</dimen>
 	<dimen name="tv_width_160">140dp</dimen>
@@ -71,6 +72,8 @@
 	<dimen name="text18">14sp</dimen>
 	<dimen name="text19">15sp</dimen>
 	<dimen name="text20">16sp</dimen>
+	<dimen name="text22">17sp</dimen>
+	<dimen name="text24">18sp</dimen>
 	
 	<dimen name="ch_radion_group_layout_marginTop_10">10dp</dimen>
 	<dimen name="ch_radion_paddingLeft_25">25dp</dimen>

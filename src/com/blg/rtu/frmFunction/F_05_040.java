@@ -6,8 +6,6 @@ import java.util.Calendar;
 import java.util.Iterator;
 import java.util.List;
 
-import com.blg.rtu.MainActivity;
-import com.blg.rtu.R;
 import com.blg.rtu.compound.FixHeightListView;
 import com.blg.rtu.help.HelpSaveSolidDataToFile;
 import com.blg.rtu.protocol.RtuData;
@@ -25,6 +23,8 @@ import com.blg.rtu.util.Preferences;
 import com.blg.rtu.util.SpinnerVO;
 import com.blg.rtu.util.StringValueForActivity;
 import com.blg.rtu.vo2xml.Vo2Xml;
+import com.blg.rtu1.MainActivity;
+import com.blg.rtu1.R;
 
 import android.app.Activity;
 import android.app.DatePickerDialog;

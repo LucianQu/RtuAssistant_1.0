@@ -17,8 +17,6 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.blg.rtu.MainActivity;
-import com.blg.rtu.R;
 import com.blg.rtu.frmChannel.ChFragment_01;
 import com.blg.rtu.frmChannel.ChFragment_03;
 import com.blg.rtu.frmChannel.helpCh1.ChBusi_01_Operate;
@@ -31,6 +29,8 @@ import com.blg.rtu.util.DialogConfirm;
 import com.blg.rtu.util.ImageUtil;
 import com.blg.rtu.vo2xml.Help;
 import com.blg.rtu.vo2xml.Vo2Xml;
+import com.blg.rtu1.MainActivity;
+import com.blg.rtu1.R;
 
 public class F_07_010  extends FrmParent {
 	public ChBusi_01_Operate chb;

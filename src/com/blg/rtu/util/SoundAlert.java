@@ -2,7 +2,7 @@ package com.blg.rtu.util;
 
 import java.util.HashMap;
 
-import com.blg.rtu.R;
+import com.blg.rtu1.R;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

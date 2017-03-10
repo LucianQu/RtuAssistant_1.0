@@ -7,8 +7,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.blg.rtu.MainActivity;
-import com.blg.rtu.R;
+import com.blg.rtu1.MainActivity;
+import com.blg.rtu1.R;
 
 public class F_05_060_ListViewAdapter extends BaseAdapter {
 	

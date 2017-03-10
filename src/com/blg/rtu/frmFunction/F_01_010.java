@@ -14,8 +14,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.blg.rtu.MainActivity;
-import com.blg.rtu.R;
 import com.blg.rtu.protocol.RtuData;
 import com.blg.rtu.protocol.p206.Code206;
 import com.blg.rtu.protocol.p206.CommandCreator;
@@ -25,6 +23,8 @@ import com.blg.rtu.util.DialogAlarm;
 import com.blg.rtu.util.ImageUtil;
 import com.blg.rtu.util.Preferences;
 import com.blg.rtu.vo2xml.Vo2Xml;
+import com.blg.rtu1.MainActivity;
+import com.blg.rtu1.R;
 
 public class F_01_010  extends FrmParent {
 	
@@ -63,7 +63,7 @@ public class F_01_010  extends FrmParent {
 			ViewGroup container,
 			Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.f_func_01_010, container, false);
-
+		
 		title = (TextView)view.findViewById(R.id.f_01_010_Title) ;
 		funcFrm = (FrameLayout)view.findViewById(R.id.f_01_010_Frm) ;
 		cover = (LinearLayout)view.findViewById(R.id.f_01_010_Load) ;
