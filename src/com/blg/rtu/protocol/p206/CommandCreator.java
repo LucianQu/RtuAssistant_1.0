@@ -21,6 +21,8 @@ import com.blg.rtu.protocol.p206.cd44_74.Param_44;
 import com.blg.rtu.protocol.p206.cd45_75.Param_45;
 import com.blg.rtu.protocol.p206.cd46_76.Param_46;
 import com.blg.rtu.protocol.p206.cd47_77.Param_47;
+import com.blg.rtu.protocol.p206.cd48_78.Param_48;
+import com.blg.rtu.protocol.p206.cd49_79.Param_49;
 import com.blg.rtu.protocol.p206.cd4A_7A.Param_4A;
 import com.blg.rtu.protocol.p206.cd82_.Param_82_WaterAmountList;
 import com.blg.rtu.protocol.p206.cd82_.Param_82_WaterLevelList;
@@ -175,6 +177,14 @@ public class CommandCreator {
 		return com ;
 	}
 	
+	public RtuCommand cd_49(Param_49 p, String rtuId){
+		RtuCommand com = new RtuCommand() ;
+		com.setCommandCode(Code206.cd_49) ;
+		com.setRtuId(rtuId);
+		com.getParams().put(Param_49.KEY, p);
+		return com ;
+	}
+	
 	public RtuCommand cd_47(Param_47 p, String rtuId){
 		RtuCommand com = new RtuCommand() ;
 		com.setCommandCode(Code206.cd_47) ;
@@ -272,6 +282,13 @@ public class CommandCreator {
 		return com ;
 	}
 	
+	public RtuCommand cd_78(String rtuId){
+		RtuCommand com = new RtuCommand() ;
+		com.setRtuId(rtuId);
+		com.setCommandCode(Code206.cd_78) ;
+		return com ;
+	}
+	
 	public RtuCommand cd_DF(int mode, String rtuId){
 		RtuCommand com = new RtuCommand() ;
 		com.setCommandCode(Code206.cd_DF) ;
@@ -279,6 +296,16 @@ public class CommandCreator {
 		Param_DF p = new Param_DF() ;
 		p.setModel_0to2(mode) ;
 		com.getParams().put(Param_DF.KEY, p);
+		return com ;
+	}
+	
+	public RtuCommand cd_48(int mode, String rtuId){
+		RtuCommand com = new RtuCommand() ;
+		com.setCommandCode(Code206.cd_48) ;
+		com.setRtuId(rtuId);
+		Param_48 p = new Param_48() ;
+		p.setDiameter(mode) ;
+		com.getParams().put(Param_48.KEY, p);
 		return com ;
 	}
 	
@@ -854,6 +881,13 @@ public class CommandCreator {
 		RtuCommand com = new RtuCommand() ;
 		com.setRtuId(rtuId);
 		com.setCommandCode(Code206.cd_76) ;
+		return com ;
+	}
+	
+	public RtuCommand cd_79(String rtuId){
+		RtuCommand com = new RtuCommand() ;
+		com.setRtuId(rtuId);
+		com.setCommandCode(Code206.cd_79) ;
 		return com ;
 	}
 	

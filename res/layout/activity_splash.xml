@@ -17,7 +17,7 @@
         android:shadowDy="2"
         android:shadowRadius="1" 
         android:shadowColor="#FFFFFF"
-        android:textColor="#444444" 
+        android:textColor="#929292" 
         android:textSize="12sp" 
         android:gravity="bottom">
     </TextView>

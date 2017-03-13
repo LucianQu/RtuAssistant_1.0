@@ -9,7 +9,7 @@
     <string name="copyright">版权所有：北京奥特美克科技股份有限公司</string>
     <string name="connect">联系方式：010&#8211;82893548</string>
        
-    <string name="txtVersion">Version</string>
+    <string name="txtVersion">Version&#8211;1.0</string>
     
     <string name="app_name">RTU助手</string>
     <string name="rtuAssiName">RTU助手</string>
@@ -148,8 +148,8 @@
     <string name="func_02_090_item10">卫星中心3</string>
     <string name="func_02_090_item11">卫星中心4</string>
     <string name="func_02_090_item12">卫星信强</string>
-    <string name="func_02_100">查询SIM卡ICCID</string>
-    <string name="func_02_100_item1">SIM卡ICCID</string>
+    <string name="func_02_100">查询SIM卡ID</string>
+    <string name="func_02_100_item1">SIM卡ID</string>
     <string name="func_02_110">上报协议配置</string>
     <string name="func_02_110_item1">功能码D0是否开启</string>
     <string name="func_02_110_item2">定时报协议选择</string>
@@ -547,6 +547,24 @@
     <string name="func_08_080_item1">密码</string> 
     <string name="func_08_080_item2">Lora通道</string> 
     <string name="func_08_080_item3">净积流量</string> 
+    
+    <string name="func_08_090">查询/设置表口径</string>
+    <string name="func_08_090_item1">表口径</string>
+    
+    <string name="func_08_100">查询/设置整体脉冲系数命令</string>
+    
+    <string name="func_08_100_item1">正向第一分区</string> 
+    <string name="func_08_100_item2">正向第二分区</string> 
+    <string name="func_08_100_item3">正向第三分区</string> 
+    <string name="func_08_100_item4">正向第四分区</string> 
+    <string name="func_08_100_item5">正向第五分区</string> 
+    <string name="func_08_100_item6">反向第一分区</string> 
+    <string name="func_08_100_item7">反向第二分区</string> 
+    <string name="func_08_100_item8">反向第三分区</string> 
+    <string name="func_08_100_item9">反向第四分区</string> 
+    <string name="func_08_100_item10">反向第五分区</string> 
+     <string name="func_08_100_item11">正向分区系数</string> 
+    <string name="func_08_100_item12">反向分区系数</string> 
     
     <string name="func_08_110">查询/设置RF频点</string>
     <string name="func_08_110_item1">RF频点</string>

@@ -709,6 +709,21 @@ public class Constant {
 	public static final String func_vk_08_080_03 = "vk_08_080_03" ; 
 	public static final String func_vk_08_080_dt = "vk_08_080_dt" ; 
 	
+	public static final String func_vk_08_090_01 = "vk_08_090_01" ; 
+	public static final String func_vk_08_090_dt = "vk_08_090_dt" ; 
+	
+	public static final String func_vk_08_100_01 = "vk_08_100_01" ; 
+	public static final String func_vk_08_100_02 = "vk_08_100_02" ;
+	public static final String func_vk_08_100_03 = "vk_08_100_03" ; 
+	public static final String func_vk_08_100_04 = "vk_08_100_04" ; 
+	public static final String func_vk_08_100_05 = "vk_08_100_05" ;
+	public static final String func_vk_08_100_06 = "vk_08_100_06" ;
+	public static final String func_vk_08_100_07 = "vk_08_100_07" ; 
+	public static final String func_vk_08_100_08 = "vk_08_100_08" ; 
+	public static final String func_vk_08_100_09 = "vk_08_100_09" ;
+	public static final String func_vk_08_100_10 = "vk_08_100_10" ;
+	public static final String func_vk_08_100_dt = "vk_08_100_dt" ; 
+	
 	public static final String func_vk_08_110_01 = "vk_08_110_01" ; 
 	public static final String func_vk_08_110_dt = "vk_08_110_dt" ; 
 	

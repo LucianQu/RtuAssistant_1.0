@@ -164,6 +164,12 @@ public class Code206 {
 	public static final String cd_77 = "77" ; //查询负积流量
 	public static final String cd_47 = "47" ; //设置负积流量
 	
+	public static final String cd_78 = "78" ; //查询表口径
+	public static final String cd_48 = "48" ; //设置表口径
+	
+	public static final String cd_79 = "79" ; //查询整体脉冲系数
+	public static final String cd_49 = "49" ; //设置整体脉冲系数
+	
 	public static final String cd_40 = "40" ; //设置净积流量
 	public static final String cd_41 = "41" ; //设置ModBus配置密码
 	
@@ -322,8 +328,12 @@ public class Code206 {
 		(code.equals(cd_41) ? "设置ModBus配置密码" : 
 		(code.equals(cd_7A) ? "查询RF频点" : 	
 		(code.equals(cd_4A) ? "设置RF频点" : 
+		(code.equals(cd_78) ? "查询表口径" : 	
+		(code.equals(cd_48) ? "设置表口径" : 
+		(code.equals(cd_79) ? "查询整体脉冲系数" : 	
+		(code.equals(cd_49) ? "设置整体脉冲系数" : 
 		"")))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
-		))))))))))))))))))))))))))))))))))))))))))))))))))))))))))) ;
+		))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))) ;
 		return name ;
 	}
 }

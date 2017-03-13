@@ -90,6 +90,12 @@ import com.blg.rtu.protocol.p206.cd47_77.Answer_47;
 import com.blg.rtu.protocol.p206.cd47_77.Answer_77;
 import com.blg.rtu.protocol.p206.cd47_77.Read_77;
 import com.blg.rtu.protocol.p206.cd47_77.Write_47;
+import com.blg.rtu.protocol.p206.cd48_78.Answer_48_78;
+import com.blg.rtu.protocol.p206.cd48_78.Read_78;
+import com.blg.rtu.protocol.p206.cd48_78.Write_48;
+import com.blg.rtu.protocol.p206.cd49_79.Answer_49_79;
+import com.blg.rtu.protocol.p206.cd49_79.Read_79;
+import com.blg.rtu.protocol.p206.cd49_79.Write_49;
 import com.blg.rtu.protocol.p206.cd4A_7A.Answer_4A_7A;
 import com.blg.rtu.protocol.p206.cd4A_7A.Read_7A;
 import com.blg.rtu.protocol.p206.cd4A_7A.Write_4A;
@@ -745,6 +751,16 @@ public class Driver206 extends DriverRtu {
 				this.upData = new Answer_77().parse(rtuId, b, ca, this.dataCode);
 				action.append(Action.commandResultAction) ;
 			}else
+			if(this.dataCode.equalsIgnoreCase(Code206.cd_78)){
+				//应答 - 查询表口径
+				this.upData = new Answer_48_78().parse(rtuId, b, ca, this.dataCode);
+				action.append(Action.commandResultAction) ;
+			}else
+			if(this.dataCode.equalsIgnoreCase(Code206.cd_79)){
+				//应答 - 查询整体脉冲系数
+				this.upData = new Answer_49_79().parse(rtuId, b, ca, this.dataCode);
+				action.append(Action.commandResultAction) ;
+			}else
 			if(this.dataCode.equalsIgnoreCase(Code206.cd_7A)){
 				//应答 - 查询RF频点
 				this.upData = new Answer_4A_7A().parse(rtuId, b, ca, this.dataCode);
@@ -773,6 +789,16 @@ public class Driver206 extends DriverRtu {
 			if(this.dataCode.equalsIgnoreCase(Code206.cd_47)){
 				//应答 - 设置负积流量
 				this.upData = new Answer_47().parse(rtuId, b, ca, this.dataCode);
+				action.append(Action.commandResultAction) ;
+			}else
+			if(this.dataCode.equalsIgnoreCase(Code206.cd_48)){
+				//应答 - 设置表口径
+				this.upData = new Answer_48_78().parse(rtuId, b, ca, this.dataCode);
+				action.append(Action.commandResultAction) ;
+			}else
+			if(this.dataCode.equalsIgnoreCase(Code206.cd_49)){
+				//应答 - 设置整体脉冲系数
+				this.upData = new Answer_49_79().parse(rtuId, b, ca, this.dataCode);
 				action.append(Action.commandResultAction) ;
 			}else
 			if(this.dataCode.equalsIgnoreCase(Code206.cd_4A)){
@@ -1387,6 +1413,16 @@ public class Driver206 extends DriverRtu {
 				this.downData = new Read_77().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
 				activ = Action.remoteCommandAction ;
 			}else 
+			if(this.commandCode.equalsIgnoreCase(Code206.cd_78)){
+				//查询表口径
+				this.downData = new Read_78().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
+				activ = Action.remoteCommandAction ;
+			}else 
+			if(this.commandCode.equalsIgnoreCase(Code206.cd_79)){
+				//查询整体脉冲系数
+				this.downData = new Read_79().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
+				activ = Action.remoteCommandAction ;
+			}else 
 			if(this.commandCode.equalsIgnoreCase(Code206.cd_7A)){
 				//查询RF频点
 				this.downData = new Read_7A().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
@@ -1415,6 +1451,16 @@ public class Driver206 extends DriverRtu {
 			if(this.commandCode.equalsIgnoreCase(Code206.cd_47)){
 				//设置负积流量
 				this.downData = new Write_47().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
+				activ = Action.remoteCommandAction ;
+			}else 
+			if(this.commandCode.equalsIgnoreCase(Code206.cd_48)){
+				//设置表口径
+				this.downData = new Write_48().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
+				activ = Action.remoteCommandAction ;
+			}else 
+			if(this.commandCode.equalsIgnoreCase(Code206.cd_49)){
+				//设置整体脉冲系数
+				this.downData = new Write_49().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
 				activ = Action.remoteCommandAction ;
 			}else 
 			if(this.commandCode.equalsIgnoreCase(Code206.cd_4A)){

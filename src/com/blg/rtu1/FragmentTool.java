@@ -98,6 +98,8 @@ public class FragmentTool {
 	public F_08_060 f_08_060 ;	//查询/设置正积流量
 	public F_08_070 f_08_070 ;	//查询/设置负积流量
 	public F_08_080 f_08_080 ;	//设置净积流量
+	public F_08_090 f_08_090 ;	//查询/设置表口径
+	public F_08_100 f_08_100 ;	//查询/设置整体脉冲系数
 	public F_08_110 f_08_110 ;	//查询/设置RF频点命令
 	
 	public FragmentTool(MainActivity mainAct){
@@ -237,6 +239,10 @@ public class FragmentTool {
         frms.add(f_08_070);
         f_08_080 = (F_08_080)fm.findFragmentById(R.id.f_08_080) ;
         frms.add(f_08_080);
+        f_08_090 = (F_08_090)fm.findFragmentById(R.id.f_08_090) ;
+        frms.add(f_08_090);
+        f_08_100 = (F_08_100)fm.findFragmentById(R.id.f_08_100) ;
+        frms.add(f_08_100);
         f_08_110 = (F_08_110)fm.findFragmentById(R.id.f_08_110) ;
         frms.add(f_08_110);
         

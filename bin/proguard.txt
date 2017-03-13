@@ -28,7 +28,6 @@
 # view res/layout/activity_main_function_page.xml #generated:58
 -keep class com.blg.rtu.frmFunction.F_01_020 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:168
 # view res/layout/activity_main_function_page.xml #generated:61
 -keep class com.blg.rtu.frmFunction.F_01_040 { <init>(...); }
 
@@ -113,6 +112,9 @@
 
 # view res/layout/activity_main_function_page.xml #generated:165
 -keep class com.blg.rtu.frmFunction.F_08_080 { <init>(...); }
+
+# view res/layout/activity_main_function_page.xml #generated:168
+-keep class com.blg.rtu.frmFunction.F_08_090 { <init>(...); }
 
 # view res/layout/activity_main_function_page.xml #generated:174
 -keep class com.blg.rtu.frmFunction.F_08_110 { <init>(...); }

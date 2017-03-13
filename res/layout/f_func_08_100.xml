@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+    
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	style="@style/func_out_linearlayout_style" >
+
+	<!-- start 头部标题 --> 
+	<LinearLayout style="@style/func_title_linearlayout_style">
+	    <TextView
+	    	android:id="@+id/f_08_100_Title"
+	        android:drawableLeft="@drawable/item006"
+	        android:text="@string/func_08_100"
+			style="@style/func_title_viewtext_style"/>
+	    
+	    <!-- 注释掉，以备用，若应用并显示在界面上时，要调整上面textView的宽度（如300dp） 
+	    <ImageView 
+	        android:id="@+id/commandStatus"
+	        style="@style/func_itemtitle_imageview_style"
+	        android:contentDescription="@string/txtBtn"/>
+	    -->
+	</LinearLayout>  
+	
+    
+	<!-- start 具体内布局 -->
+    <FrameLayout
+    	android:id="@+id/f_08_100_Frm"
+		style="@style/func_framelayout_style">
+    
+		 <!-- start 具体内容 -->
+		 <LinearLayout 
+	        style="@style/func_linearlayout_style">
+	        
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height35"
+			    >
+			    <TextView
+			        android:text="@string/func_08_100_item11"
+			        style="@style/func_item_viewtext_style_200_a"/>
+			</LinearLayout>
+			
+		    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30"
+			    >
+			    <TextView
+			        android:text="@string/func_08_100_item1"
+			        style="@style/func_item_viewtext_style_100_b"/>
+			    <EditText
+					android:id="@+id/func_08_100_item1"  
+					android:labelFor="@id/func_08_100_item1" 
+				    style="@style/func_item_editnumber_style_120"/>
+			</LinearLayout>
+			
+		    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30"
+			    >
+			    <TextView
+			        android:text="@string/func_08_100_item2"
+			        style="@style/func_item_viewtext_style_100_b"/>
+			    <EditText
+					android:id="@+id/func_08_100_item2"  
+					android:labelFor="@id/func_08_100_item2" 
+				    style="@style/func_item_editnumber_style_120"/>
+			</LinearLayout>
+			
+		    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30"
+			    >
+			    <TextView
+			        android:text="@string/func_08_100_item3"
+			        style="@style/func_item_viewtext_style_100_b"/>
+			    <EditText
+					android:id="@+id/func_08_100_item3"  
+					android:labelFor="@id/func_08_100_item3" 
+				    style="@style/func_item_editnumber_style_120"/>
+			</LinearLayout>
+		    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30"
+			    >
+			    <TextView
+			        android:text="@string/func_08_100_item4"
+			        style="@style/func_item_viewtext_style_100_b"/>
+			    <EditText
+					android:id="@+id/func_08_100_item4"  
+					android:labelFor="@id/func_08_100_item4" 
+				    style="@style/func_item_editnumber_style_120"/>
+			</LinearLayout>
+		    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30"
+			    >
+			    <TextView
+			        android:text="@string/func_08_100_item5"
+			        style="@style/func_item_viewtext_style_100_b"/>
+			    <EditText
+					android:id="@+id/func_08_100_item5"  
+					android:labelFor="@id/func_08_100_item5" 
+				    style="@style/func_item_editnumber_style_120"/>
+			</LinearLayout>
+		      
+		    <include layout="@layout/line1" />
+		    		    		    		    		    		    		    		     	      
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height35"
+			    >
+			    <TextView
+			        android:text="@string/func_08_100_item12"
+			        style="@style/func_item_viewtext_style_200_a"/>
+			</LinearLayout>
+		     
+		 	    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30"
+			    >
+			    <TextView
+			        android:text="@string/func_08_100_item6"
+			        style="@style/func_item_viewtext_style_100_b"/>
+			    <EditText
+					android:id="@+id/func_08_100_item6"  
+					android:labelFor="@id/func_08_100_item6" 
+				    style="@style/func_item_editnumber_style_120"/>
+			</LinearLayout>
+			
+		    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30"
+			    >
+			    <TextView
+			        android:text="@string/func_08_100_item7"
+			        style="@style/func_item_viewtext_style_100_b"/>
+			    <EditText
+					android:id="@+id/func_08_100_item7"  
+					android:labelFor="@id/func_08_100_item7" 
+				    style="@style/func_item_editnumber_style_120"/>
+			</LinearLayout>
+			
+		    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30"
+			    >
+			    <TextView
+			        android:text="@string/func_08_100_item8"
+			        style="@style/func_item_viewtext_style_100_b"/>
+			    <EditText
+					android:id="@+id/func_08_100_item8"  
+					android:labelFor="@id/func_08_100_item8" 
+				    style="@style/func_item_editnumber_style_120"/>
+			</LinearLayout>
+		    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30"
+			    >
+			    <TextView
+			        android:text="@string/func_08_100_item9"
+			        style="@style/func_item_viewtext_style_100_b"/>
+			    <EditText
+					android:id="@+id/func_08_100_item9"  
+					android:labelFor="@id/func_08_100_item9" 
+				    style="@style/func_item_editnumber_style_120"/>
+			</LinearLayout>
+		    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height30"
+			    >
+			    <TextView
+			        android:text="@string/func_08_100_item10"
+			        style="@style/func_item_viewtext_style_100_b"/>
+			    <EditText
+					android:id="@+id/func_08_100_item10"  
+					android:labelFor="@id/func_08_100_item10" 
+				    style="@style/func_item_editnumber_style_120"/>
+			</LinearLayout>
+		     
+		    <include layout="@layout/line1" />
+		    			
+		    <include layout="@layout/show_btn_set_query" />
+		 </LinearLayout>
+	     
+		 <!-- start 底部 -->
+		 <LinearLayout 
+	        android:id="@+id/f_08_100_Load"
+	        style="@style/func_progressbar_linearlayout_style" >
+		    <ProgressBar
+		        style="@style/func_progressbar_style" />
+		 </LinearLayout>
+	</FrameLayout>
+</LinearLayout>
+

@@ -172,6 +172,14 @@ public class StubActivity extends ActivityAidl.Stub{
 						//设置或查询负积流量
 						mAct.frgTool.f_08_070.receiveRtuData(data) ;
 					}else
+					if(data.dataCode.equals(Code206.cd_78) || data.dataCode.equals(Code206.cd_48)){
+						//设置或查询表口径
+						mAct.frgTool.f_08_090.receiveRtuData(data) ;
+					}else
+					if(data.dataCode.equals(Code206.cd_79) || data.dataCode.equals(Code206.cd_49)){
+						//设置或查询整体脉冲系数
+						mAct.frgTool.f_08_100.receiveRtuData(data) ;
+					}else
 					if(data.dataCode.equals(Code206.cd_7A) || data.dataCode.equals(Code206.cd_4A)){
 						//设置或查询RF频点
 						mAct.frgTool.f_08_110.receiveRtuData(data) ;
@@ -475,6 +483,14 @@ public class StubActivity extends ActivityAidl.Stub{
 					if(data.dataCode.equals(Code206.cd_47) || data.dataCode.equals(Code206.cd_77)){
 						//设置或查询负积流量
 						mAct.frgTool.f_08_070.commandSendedCallBack() ;
+					}else
+					if(data.dataCode.equals(Code206.cd_48) || data.dataCode.equals(Code206.cd_78)){
+						//设置或查询表口径
+						mAct.frgTool.f_08_090.commandSendedCallBack() ;
+					}else
+					if(data.dataCode.equals(Code206.cd_49) || data.dataCode.equals(Code206.cd_79)){
+						//设置或查询整体脉冲系数
+						mAct.frgTool.f_08_100.commandSendedCallBack() ;
 					}else
 					if(data.dataCode.equals(Code206.cd_4A) || data.dataCode.equals(Code206.cd_7A)){
 						//设置或查询RF频点

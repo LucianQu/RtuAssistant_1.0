@@ -501,7 +501,7 @@
         <item name="android:layout_marginRight">3dp</item>
 	</style>  
     <style name="loopq_item_edittext_style_150" parent="@style/loopq_item_edittext_style">
-        <item name="android:layout_width">@dimen/ed_width_120</item>
+        <item name="android:layout_width">@dimen/ed_width_150</item>
         <item name="android:layout_height">@dimen/common_edit_height24</item>
         <item name="android:layout_marginRight">3dp</item>
 	</style>  
