@@ -46,7 +46,7 @@ public class RtuCommand implements Serializable {
 	}
 
 	public String getRtuId() {
-		return rtuId;
+		return this.rtuId;
 	}
 	public void setRtuId(String rtuId) {
 		this.rtuId = rtuId;

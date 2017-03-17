@@ -172,6 +172,10 @@ public class StubActivity extends ActivityAidl.Stub{
 						//设置或查询负积流量
 						mAct.frgTool.f_08_070.receiveRtuData(data) ;
 					}else
+					if(data.dataCode.equals(Code206.cd_7B) || data.dataCode.equals(Code206.cd_4B)) {
+						//一键查询设置和命令结果检测
+						mAct.frgTool.f_08_120.receiveRtuData(data) ;
+					}else
 					if(data.dataCode.equals(Code206.cd_78) || data.dataCode.equals(Code206.cd_48)){
 						//设置或查询表口径
 						mAct.frgTool.f_08_090.receiveRtuData(data) ;
@@ -183,6 +187,10 @@ public class StubActivity extends ActivityAidl.Stub{
 					if(data.dataCode.equals(Code206.cd_7A) || data.dataCode.equals(Code206.cd_4A)){
 						//设置或查询RF频点
 						mAct.frgTool.f_08_110.receiveRtuData(data) ;
+					}else
+					if(data.dataCode.equals(Code206.cd_7C) || data.dataCode.equals(Code206.cd_4C)){
+						//设置或查询LORA时间窗口配置
+						mAct.frgTool.f_08_130.receiveRtuData(data) ;
 					}
 					/*else
 					if(data.dataCode.equals(Code206.cd_CD) || data.dataCode.equals(Code206.cd_DD)){
@@ -333,6 +341,14 @@ public class StubActivity extends ActivityAidl.Stub{
 						//修改ModBus配置密码
 						mAct.frgTool.f_08_020.receiveRtuData(data) ;
 					}else
+					if(data.dataCode.equals(Code206.cd_4D)){
+						//设置LORA电源控制
+						mAct.frgTool.f_08_140.receiveRtuData(data) ;
+					}else
+					if(data.dataCode.equals(Code206.cd_4E)){
+						//设置出厂启用
+						mAct.frgTool.f_08_150.receiveRtuData(data) ;
+					}else
 					if(data.dataCode.equals(Code206.cd_C2)){
 						//查询水表实时值
 						mAct.frgTool.f_05_070.receiveRtuData(data) ;
@@ -460,6 +476,14 @@ public class StubActivity extends ActivityAidl.Stub{
 						//修改ModBus配置密码
 						mAct.frgTool.f_08_020.commandSendedCallBack() ;
 					}else
+					if(data.dataCode.equals(Code206.cd_4D)){
+						//设置LORA电源控制
+						mAct.frgTool.f_08_140.commandSendedCallBack() ;
+					}else
+					if(data.dataCode.equals(Code206.cd_4E)){
+						//设置出厂启用
+						mAct.frgTool.f_08_150.commandSendedCallBack() ;
+					}else
 					if(data.dataCode.equals(Code206.cd_D2) || data.dataCode.equals(Code206.cd_D6)){
 						//设置或者查询协议配置
 						mAct.frgTool.f_02_110.commandSendedCallBack() ;
@@ -484,6 +508,10 @@ public class StubActivity extends ActivityAidl.Stub{
 						//设置或查询负积流量
 						mAct.frgTool.f_08_070.commandSendedCallBack() ;
 					}else
+					if(data.dataCode.equals(Code206.cd_4B) || data.dataCode.equals(Code206.cd_7B)) {
+						//一键查询设置和结果查询
+						mAct.frgTool.f_08_120.commandSendedCallBack() ;
+					}else
 					if(data.dataCode.equals(Code206.cd_48) || data.dataCode.equals(Code206.cd_78)){
 						//设置或查询表口径
 						mAct.frgTool.f_08_090.commandSendedCallBack() ;
@@ -495,6 +523,10 @@ public class StubActivity extends ActivityAidl.Stub{
 					if(data.dataCode.equals(Code206.cd_4A) || data.dataCode.equals(Code206.cd_7A)){
 						//设置或查询RF频点
 						mAct.frgTool.f_08_110.commandSendedCallBack() ;
+					}else
+					if(data.dataCode.equals(Code206.cd_4C) || data.dataCode.equals(Code206.cd_7C)){
+						//设置或查询LORA时间窗口
+						mAct.frgTool.f_08_130.commandSendedCallBack() ;
 					}else
 					/*if(data.dataCode.equals(Code206.cd_CD) || data.dataCode.equals(Code206.cd_DD)){
 						//设置或查询短信中心号码

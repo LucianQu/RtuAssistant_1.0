@@ -32,6 +32,7 @@ import com.blg.rtu.util.SpinnerVO;
 import com.blg.rtu.vo2xml.Vo2Xml;
 import com.blg.rtu1.MainActivity;
 import com.blg.rtu1.R;
+import com.blg.rtu1.server.CoreThread;
 
 public class F_08_040  extends FrmParent {
 	
@@ -274,8 +275,8 @@ public class F_08_040  extends FrmParent {
 		return view ;
 	}
 	private void putSpinnerValue_1(ArrayAdapter<SpinnerVO> spinnerAdapter){
-		spinnerAdapter.add(new SpinnerVO("0", "不使能")) ;
-		spinnerAdapter.add(new SpinnerVO("1", "使能")) ;
+		spinnerAdapter.add(new SpinnerVO("0", "禁用")) ;
+		spinnerAdapter.add(new SpinnerVO("1", "启用")) ;
 	}
 	OnItemSelectedListener spinLs_1 = new OnItemSelectedListener() {
 		public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -332,6 +333,7 @@ public class F_08_040  extends FrmParent {
 	 */
 	@Override
 	protected void queryCommand(){
+		CoreThread.getInstance().newRtuId(F_01_100.getInstance().getRtuSelectedItem().replaceAll(" ", ""));
 		this.sendRtuCommand(new CommandCreator().cd_73(null), false) ;
 	}
 	
@@ -359,7 +361,7 @@ public class F_08_040  extends FrmParent {
 		p.setModBusAddr6(Integer.valueOf(item06_2.getText().toString().trim()));
 		p.setModBusAddr7(Integer.valueOf(item07_2.getText().toString().trim()));
 		p.setModBusAddr8(Integer.valueOf(item08_2.getText().toString().trim()));
-		
+		CoreThread.getInstance().newRtuId(F_01_100.getInstance().getRtuSelectedItem().replaceAll(" ", ""));
 		this.sendRtuCommand(new CommandCreator().cd_43(p, null), false) ;
 	}
 	

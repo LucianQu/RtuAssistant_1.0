@@ -3,7 +3,7 @@ package com.blg.rtu.protocol.p206.cd44_74;
 import java.util.List;
 
 
-public class DataList_44_74 {
+public class DataList_74 {
 	
 	private List<String> list ;
 

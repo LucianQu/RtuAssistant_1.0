@@ -76,6 +76,10 @@ public class CoreThread {
 		return instance ;
 	}
 	
+	public Boolean getNetStatus() {
+		return CoreThread.netConnected ;
+	}
+	
 	/**
 	 * 网络已经连接上，需要发送查询RTU地址的广播命令
 	 */

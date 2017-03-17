@@ -1,7 +1,7 @@
 package com.blg.rtu.frmFunction;
 
 import com.blg.rtu.protocol.RtuData;
-import com.blg.rtu.protocol.p206.cdEC_FC.Data_EC_FC;
+import com.blg.rtu.protocol.p206.cd45_75.Data_45_75;
 import com.blg.rtu.util.Constant;
 import com.blg.rtu.util.Preferences;
 
@@ -20,7 +20,7 @@ public class F_08_050_HelpReceiveData {
     	Preferences p = Preferences.getInstance() ;
     	int v = 0 ;
     	
-    	Data_EC_FC sd = (Data_EC_FC)d.getSubData() ;
+    	Data_45_75 sd = (Data_45_75)d.getSubData() ;
 		
 		v = sd.getA01() ;
 		if(v == 1){

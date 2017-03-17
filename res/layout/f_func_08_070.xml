@@ -69,7 +69,7 @@
 			    <EditText
 					android:id="@+id/func_08_070_item03"  
 					android:labelFor="@id/func_08_070_item03" 
-				    style="@style/func_item_editnumber_style_120"/>
+				    style="@style/func_item_editdecimalSigned_style_120"/>
 			    <TextView
 				        android:text="@string/func_item_unit_m3_1"
 				        style="@style/func_item_viewtext_style_unit_100"/>

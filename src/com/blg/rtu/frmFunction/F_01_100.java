@@ -2,6 +2,7 @@ package com.blg.rtu.frmFunction;
 
 
 import java.util.ArrayList;
+import java.util.List;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -17,11 +18,13 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.blg.rtu.protocol.RtuData;
 import com.blg.rtu.protocol.p206.Code206;
 import com.blg.rtu.protocol.p206.CommandCreator;
-import com.blg.rtu.protocol.p206.cd44_74.DataList_44_74;
+import com.blg.rtu.protocol.p206.cd44_74.DataList_74;
+import com.blg.rtu.protocol.p206.cd44_74.Data_44;
 import com.blg.rtu.util.Constant;
 import com.blg.rtu.util.DialogAlarm;
 import com.blg.rtu.util.ImageUtil;
@@ -30,9 +33,10 @@ import com.blg.rtu.util.SpinnerVO;
 import com.blg.rtu.vo2xml.Vo2Xml;
 import com.blg.rtu1.MainActivity;
 import com.blg.rtu1.R;
+import com.blg.rtu1.server.CoreThread;
 
 public class F_01_100  extends FrmParent {
-	
+	public static F_01_100 instance = null ;
 	private final static int requestLen_1 = 6 ; 
 	private final static int requestLen_2 = 5 ; 
 	//private final static int requestLen_3 = 14 ; 
@@ -48,6 +52,7 @@ public class F_01_100  extends FrmParent {
 	private Spinner item03;
 	private ArrayAdapter<SpinnerVO> spinnerAdapter;
 	//private int spinnerPosition ;
+	public List<String> listRtuId = new ArrayList<String>();
 	
 
 	@Override
@@ -60,8 +65,13 @@ public class F_01_100  extends FrmParent {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		instance = this;
 		cntFrmOpened = false ;
 		loading = false ;
+	}
+	
+	public static F_01_100 getInstance(){
+		return instance ;
 	}
 
 	@Override
@@ -114,7 +124,7 @@ public class F_01_100  extends FrmParent {
 		if(!str.equals(Constant.errorStr)){
 			this.resultDt.setText(str) ;
 		}
-
+		
 		return view ;
 	}
 	
@@ -186,6 +196,17 @@ public class F_01_100  extends FrmParent {
 		this.sendRtuCommand(new CommandCreator().cd_44(position,regionNum, clientId, null), false) ;
 	}
 	
+	public String getRtuSelectedItem() {
+		if(!CoreThread.getInstance().getNetStatus()) {
+			//Toast.makeText(this.act, "网络未连接，请检查！", Toast.LENGTH_SHORT).show() ;
+			return "";
+		}
+		int position1 = item03.getSelectedItemPosition() ;
+		if(position1 > 8 || position1 < 0 ) {
+			position1 = 0 ;
+		}
+		return listRtuId.get(position1) ;
+	}
 	
 	/**
 	 * 查询或设置命令发送前检查出问题后的回调
@@ -228,17 +249,36 @@ public class F_01_100  extends FrmParent {
 		
 		Preferences p = Preferences.getInstance() ;
 		
-		DataList_44_74 sd = (DataList_44_74)d.subData ;
-		spinnerAdapter.clear() ;
 		
-		for(int i = 0; i < 9; i++) {
-			if(i == 0) {
-				spinnerAdapter.add(new SpinnerVO("" + i, "中继器  地址："+ sd.getRtuId().get(i))) ;
-			}else{
-				spinnerAdapter.add(new SpinnerVO("" + i, i + "号水表地址："+ sd.getRtuId().get(i))) ;
+		Object subD = d.subData ;
+		if(subD != null){
+			if(subD instanceof Data_44){
+				Data_44 sd = (Data_44)subD ;
+				String rtuId = sd.getRtuId() ;
+				listRtuId.set(item03.getSelectedItemPosition(), rtuId) ;
+				item01.setText(rtuId.substring(0, 6).trim()) ;
+				item02.setText(rtuId.substring(6).trim()) ;
+			}else if(subD instanceof DataList_74){
+				DataList_74 sd = (DataList_74)d.subData ;
+				spinnerAdapter.clear() ;
+				listRtuId.clear();
+				
+				for(int i = 0; i < 9; i++) {
+					if(i == 0) {
+						spinnerAdapter.add(new SpinnerVO("" + i, " 中继器 ："+ sd.getRtuId().get(i))) ;
+						listRtuId.add(sd.getRtuId().get(i)) ;
+					}else{
+						spinnerAdapter.add(new SpinnerVO("" + i, i + "号水表："+ sd.getRtuId().get(i))) ;
+						listRtuId.add(sd.getRtuId().get(i)) ;
+					}
+					
+				}
 			}
-			
 		}
+		
+		
+		
+	
 		
 		p.putString(Constant.func_vk_01_010_dt, this.resultDt.getText().toString()) ;
 	}

@@ -13,7 +13,7 @@
     >
     <LinearLayout android:id="@+id/rtuAssiTitle"
         android:layout_width="match_parent"
-        android:layout_height="45.0dp"
+        android:layout_height="35.0dp"
         android:layout_gravity="top"
        	android:orientation="horizontal"
         android:background="#1c81e6"
@@ -24,7 +24,9 @@
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:orientation="horizontal"
-            ></LinearLayout>
+            >
+            
+        </LinearLayout>
           
        <!--    <ImageView
 			android:layout_width="wrap_content"
@@ -53,7 +55,7 @@
 	            android:typeface="monospace"
 	            
 	            android:textColor="#FFFFFF"
-	            android:textSize="25sp" />
+	            android:textSize="20sp" />
           </LinearLayout>
          
           <!--   <ImageView
@@ -81,13 +83,100 @@
 		         android:typeface="monospace"
 		        android:textSize="@dimen/text12"/>    
             </LinearLayout>
-        
-       
-      
         	<!-- android:drawableLeft="@drawable/label" -->
     </LinearLayout>
+   
+    <LinearLayout 
+        android:id="@+id/rtuAnnitation"
+        android:layout_width="match_parent"
+        android:layout_height="35.0dp"
+        android:layout_gravity="top"
+       	android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:baselineAligned="false" >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+	      	android:orientation="horizontal" 
+	      	android:background="#FFFFFF"
+	      	android:gravity="center"
+        	>
+          <TextView
+           android:id="@+id/switchQuery"
+           android:layout_width="wrap_content"
+           android:clickable="true"
+           android:layout_height="match_parent"
+           android:text="@string/functionNoProtocol"
+           android:gravity="center_horizontal|center_vertical"
+           android:typeface="monospace"
+           android:textColor="#b2b2b2"
+           android:textSize="15sp" />
+        </LinearLayout>
+          
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+	     	android:orientation="horizontal" 
+	     	android:background="#FFFFFF"
+	        android:gravity="center"
+            >
+            <TextView
+                android:id="@+id/switchOnce"
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+	            android:clickable="true"
+	            android:text="@string/functionLoopQuery"
+	            android:gravity="center_horizontal|center_vertical"
+	            android:typeface="monospace"
+	            android:textColor="#b2b2b2"
+	            android:textSize="15sp" />
+          </LinearLayout>
+          <LinearLayout
+	            android:layout_width="0dp"
+	            android:layout_weight="1"
+	            android:layout_height="match_parent"
+		      	android:orientation="horizontal" 
+		      	android:background="#FFFFFF"
+		      	android:gravity="center"
+           		>
+            <TextView
+               android:id="@+id/switchFun"
+	           android:layout_width="wrap_content"
+	           android:clickable="true"
+	           android:layout_height="match_parent"
+	           android:text="@string/functionItems"
+	           android:gravity="center_horizontal|center_vertical"
+	           android:typeface="monospace"
+	           android:textColor="#b2b2b2"
+	           android:textSize="15sp" /> 
+            </LinearLayout>
+    </LinearLayout>
+     <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="3dp"
+		      	android:orientation="horizontal" 
+		      	android:background="#b2b2b2"
+		      	android:gravity="center"
+           		>
+             <ImageView
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:id="@+id/scrollbar"
+		        android:scaleType="matrix"
+		        android:contentDescription="@string/txtBtn"
+		        android:src="@drawable/scrollbar"/>
+            </LinearLayout>
     
-		           	        
+    <!--  <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:id="@+id/scrollbar"
+        android:scaleType="matrix"
+        android:contentDescription="@string/txtBtn"
+        android:src="@drawable/scrollbar"/> -->
+  
 	<android.support.v4.view.ViewPager
         android:id="@+id/vPager"
         android:layout_width="match_parent"

@@ -25,6 +25,7 @@ import com.blg.rtu.util.StringValueForActivity;
 import com.blg.rtu.vo2xml.Vo2Xml;
 import com.blg.rtu1.MainActivity;
 import com.blg.rtu1.R;
+import com.blg.rtu1.server.CoreThread;
 
 import android.app.Activity;
 import android.app.DatePickerDialog;
@@ -334,7 +335,7 @@ public class F_05_040 extends FrmParent {
 		
 		param.setStartDt(item02_1.getText().toString() + " " + item02_2.getText().toString()) ;
 		param.setEndDt(item03_1.getText().toString() + " " + item03_2.getText().toString()) ;
-		
+		CoreThread.getInstance().newRtuId(F_01_100.getInstance().getRtuSelectedItem().replaceAll(" ", ""));
 		this.sendRtuCommand(new CommandCreator().cd_B1(param, null), false) ;
 	}
 	

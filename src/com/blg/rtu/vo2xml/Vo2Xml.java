@@ -219,8 +219,24 @@ public class Vo2Xml {
 	private String v_06_010_item04_04 ;
 	private String v_06_010_item04_05 ;
 	private String v_06_010_item05Str;*/
+	private String v_08_020_item01 ;
+	private String v_08_020_item02 ;
 	
 	private String v_08_030_item01 ;
+	
+	private String v_08_060_item01 ;
+	private String v_08_060_item02 ;
+	private String v_08_060_item03 ;
+	
+	private String v_08_070_item01 ;
+	private String v_08_070_item02 ;
+	private String v_08_070_item03 ;
+	
+	private String v_08_080_item01 ;
+	private String v_08_080_item02 ;
+	private String v_08_080_item03 ;
+	private int v_08_090_item01 ;
+	
 	private String v_08_110_item01 ;
 	
 	/**
@@ -1343,6 +1359,90 @@ public class Vo2Xml {
 	}
 	public void setV_04_120_itemStr(String v_04_120_itemStr) {
 		this.v_04_120_itemStr = v_04_120_itemStr;
+	}
+	
+	public String getV_08_020_item01() {
+		return v_08_020_item01 ;
+	}
+	public void setV_08_020_item01(String v_08_020_item01) {
+		this.v_08_020_item01 = v_08_020_item01 ;
+	}
+	
+	public String getV_08_020_item02() {
+		return v_08_020_item02 ;
+	}
+	public void setV_08_020_item02(String v_08_020_item02) {
+		this.v_08_020_item02 = v_08_020_item02 ;
+	}
+	
+	public String getV_08_060_item01() {
+		return v_08_060_item01 ;
+	}
+	public void setV_08_060_item01(String v_08_060_item01) {
+		this.v_08_060_item01 = v_08_060_item01 ;
+	}
+	
+	public String getV_08_060_item02() {
+		return v_08_060_item02 ;
+	}
+	public void setV_08_060_item02(String v_08_060_item02) {
+		this.v_08_060_item02 = v_08_060_item02 ;
+	}
+	
+	public String getV_08_060_item03() {
+		return v_08_060_item03 ;
+	}
+	public void setV_08_060_item03(String v_08_060_item03) {
+		this.v_08_060_item03 = v_08_060_item03 ;
+	}
+	
+	public String getV_08_070_item01() {
+		return v_08_070_item01 ;
+	}
+	public void setV_08_070_item01(String v_08_070_item01) {
+		this.v_08_070_item01 = v_08_070_item01 ;
+	}
+	
+	public String getV_08_070_item02() {
+		return v_08_070_item02 ;
+	}
+	public void setV_08_070_item02(String v_08_070_item02) {
+		this.v_08_070_item02 = v_08_070_item02 ;
+	}
+	
+	public String getV_08_070_item03() {
+		return v_08_070_item03 ;
+	}
+	public void setV_08_070_item03(String v_08_070_item03) {
+		this.v_08_070_item03 = v_08_070_item03 ;
+	}
+	
+	public String getV_08_080_item01() {
+		return v_08_080_item01 ;
+	}
+	public void setV_08_080_item01(String v_08_080_item01) {
+		this.v_08_080_item01 = v_08_080_item01 ;
+	}
+	
+	public String getV_08_080_item02() {
+		return v_08_080_item02 ;
+	}
+	public void setV_08_080_item02(String v_08_080_item02) {
+		this.v_08_080_item02 = v_08_080_item02 ;
+	}
+	
+	public String getV_08_080_item03() {
+		return v_08_080_item03 ;
+	}
+	public void setV_08_080_item03(String v_08_080_item03) {
+		this.v_08_080_item03 = v_08_080_item03 ;
+	}
+	
+	public int getV_08_090_item01() {
+		return v_08_090_item01 ;
+	}
+	public void setV_08_090_item01(int v_08_090_item01) {
+		this.v_08_090_item01 = v_08_090_item01 ;
 	}
 	/*public String getV_06_010_item05Str() {
 		return v_06_010_item05Str;

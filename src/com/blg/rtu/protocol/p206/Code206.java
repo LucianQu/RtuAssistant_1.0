@@ -155,6 +155,9 @@ public class Code206 {
 	public static final String cd_4A = "4A" ; //设置RF频点
 	public static final String cd_7A = "7A" ; //查询RF频点
 	
+	public static final String cd_4C = "4C" ; //设置LORA时间窗口
+	public static final String cd_7C = "7C" ; //查询LORA时间窗口
+	
 	public static final String cd_F0 = "F0" ; //查询关键参数
 	public static final String cd_C2 = "C2" ; //查询遥测终端流量实时值
 	
@@ -169,6 +172,12 @@ public class Code206 {
 	
 	public static final String cd_79 = "79" ; //查询整体脉冲系数
 	public static final String cd_49 = "49" ; //设置整体脉冲系数
+	
+	public static final String cd_7B = "7B" ; //查询一键触发测试结果
+	public static final String cd_4B = "4B" ; //设置一键触发测试
+	
+	public static final String cd_4D = "4D" ; //设置LORA电源控制命令
+	public static final String cd_4E = "4E" ; //设置出厂启用
 	
 	public static final String cd_40 = "40" ; //设置净积流量
 	public static final String cd_41 = "41" ; //设置ModBus配置密码
@@ -332,8 +341,14 @@ public class Code206 {
 		(code.equals(cd_48) ? "设置表口径" : 
 		(code.equals(cd_79) ? "查询整体脉冲系数" : 	
 		(code.equals(cd_49) ? "设置整体脉冲系数" : 
-		"")))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
-		))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))) ;
+		(code.equals(cd_7B) ? "查询一键测试结果" : 	
+		(code.equals(cd_4B) ? "设置一键测试" : 
+		(code.equals(cd_7C) ? "查询LORA时间窗口" : 	
+		(code.equals(cd_4C) ? "设置LORA时间窗口" :
+		(code.equals(cd_4D) ? "LORA电源控制命令" : 
+		(code.equals(cd_4E) ? "设置出厂启用" : 
+		"")))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+		))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))) ;
 		return name ;
 	}
 }

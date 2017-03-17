@@ -26,6 +26,7 @@ import com.blg.rtu.util.Preferences;
 import com.blg.rtu.vo2xml.Vo2Xml;
 import com.blg.rtu1.MainActivity;
 import com.blg.rtu1.R;
+import com.blg.rtu1.server.CoreThread;
 
 public class F_08_080  extends FrmParent {
 	
@@ -160,7 +161,6 @@ public class F_08_080  extends FrmParent {
 			if(showDialog)new DialogAlarm().showDialog(act, "负积流量必须填写！") ;
 			return false ;
 		} 
-		
 		amount = Double.valueOf(value) ;
 		if(amount > 999999.999 || amount < -999999.999){
 			if(showDialog)new DialogAlarm().showDialog(act, " 设置净积超过合法取值范围(-999999.999～999999.999)！") ;
@@ -204,7 +204,7 @@ public class F_08_080  extends FrmParent {
 		}else{
 			p.setWaterPure(amount) ;
 		}
-		
+		CoreThread.getInstance().newRtuId(F_01_100.getInstance().getRtuSelectedItem().replaceAll(" ", ""));
 		this.sendRtuCommand(new CommandCreator().cd_40(p, null), false) ;
 	}
 	
@@ -262,15 +262,13 @@ public class F_08_080  extends FrmParent {
 					amount = - amount;
 					if ((amount / 1000) > 0) {
 						item03.setText(("-" + amount / 1000) + "." + (amount + 1000) % 1000) ;
-					}else if((amount / 1000) == 0){
-						item03.setText("-0." + (amount + 1000) % 1000) ;
 					}
-				}else{
+				}else if(amount > 0){
 					if ((amount / 1000) > 0) {
 						item03.setText((amount / 1000) + "." + (amount + 1000) % 1000) ;
-					}else if((amount / 1000) == 0){
-						item03.setText("0." + (amount + 1000) % 1000) ;
 					}
+				}else if(amount == 0) {
+					item03.setText("0.0") ;
 				}
 				item01.setText(sd.getPassword()) ;
 				item02.setText(sd.getLoraChannel()+"") ;
@@ -283,13 +281,17 @@ public class F_08_080  extends FrmParent {
 	 * 导出设置数据
 	 */
 	public void outSetData(Vo2Xml vo) {
-		//vo.setV_05_070_item01(item01.getText().toString()) ;
+		vo.setV_08_080_item01(item01.getText().toString()) ;
+		vo.setV_08_080_item02(item02.getText().toString()) ;
+		vo.setV_08_080_item03(item03.getText().toString()) ;
 	}
 	/**
 	 * 导入设置数据
 	 */
 	public void inSetData(Vo2Xml vo) {
-		//item01.setText(vo.getV_04_110_item01()) ;
+		item01.setText(vo.getV_08_080_item01()) ;
+		item02.setText(vo.getV_08_080_item02()) ;
+		item03.setText(vo.getV_08_080_item03()) ;
 	}
 	
 	@Override

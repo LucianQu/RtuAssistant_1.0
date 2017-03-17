@@ -76,7 +76,8 @@ import com.blg.rtu.protocol.p206.cd42_72.Write_42;
 import com.blg.rtu.protocol.p206.cd43_73.Answer_43_73;
 import com.blg.rtu.protocol.p206.cd43_73.Read_73;
 import com.blg.rtu.protocol.p206.cd43_73.Write_43;
-import com.blg.rtu.protocol.p206.cd44_74.Answer_44_74;
+import com.blg.rtu.protocol.p206.cd44_74.Answer_44;
+import com.blg.rtu.protocol.p206.cd44_74.Answer_74;
 import com.blg.rtu.protocol.p206.cd44_74.Read_74;
 import com.blg.rtu.protocol.p206.cd44_74.Write_44;
 import com.blg.rtu.protocol.p206.cd45_75.Answer_45_75;
@@ -99,6 +100,17 @@ import com.blg.rtu.protocol.p206.cd49_79.Write_49;
 import com.blg.rtu.protocol.p206.cd4A_7A.Answer_4A_7A;
 import com.blg.rtu.protocol.p206.cd4A_7A.Read_7A;
 import com.blg.rtu.protocol.p206.cd4A_7A.Write_4A;
+import com.blg.rtu.protocol.p206.cd4B_7B.Answer_4B;
+import com.blg.rtu.protocol.p206.cd4B_7B.Answer_7B;
+import com.blg.rtu.protocol.p206.cd4B_7B.Read_7B;
+import com.blg.rtu.protocol.p206.cd4B_7B.Write_4B;
+import com.blg.rtu.protocol.p206.cd4C_7C.Answer_4C_7C;
+import com.blg.rtu.protocol.p206.cd4C_7C.Read_7C;
+import com.blg.rtu.protocol.p206.cd4C_7C.Write_4C;
+import com.blg.rtu.protocol.p206.cd4D.Answer_4D;
+import com.blg.rtu.protocol.p206.cd4D.Write_4D;
+import com.blg.rtu.protocol.p206.cd4E.Answer_4E;
+import com.blg.rtu.protocol.p206.cd4E.Write_4E;
 import com.blg.rtu.protocol.p206.cd5D.Answer_5D;
 import com.blg.rtu.protocol.p206.cd5D.Read_5D;
 import com.blg.rtu.protocol.p206.cd5E.Answer_5E;
@@ -316,7 +328,7 @@ public class Driver206 extends DriverRtu {
 			}else
 			if(this.dataCode.equalsIgnoreCase(Code206.cd_44)){
 				//应答 - 设置遥测终端、中继站地址
-				this.upData = new Answer_44_74().parse(rtuId, b, ca, dataCode) ;
+				this.upData = new Answer_44().parse(rtuId, b, ca, dataCode) ;
 				action.append(Action.changeRtuIdAction) ;
 				action.append(Action.commandResultAction) ;
 			}else
@@ -329,7 +341,7 @@ public class Driver206 extends DriverRtu {
 			}else	
 			if(this.dataCode.equalsIgnoreCase(Code206.cd_74)){
 				//应答 - 查询遥测终端、中继站地址
-				this.upData = new Answer_44_74().parse(rtuId, b, ca, dataCode) ;
+				this.upData = new Answer_74().parse(rtuId, b, ca, dataCode) ;
 				action.append(Action.commandReadRtuIdResultAction) ;
 				action.append(Action.commandResultAction) ;
 				
@@ -590,6 +602,16 @@ public class Driver206 extends DriverRtu {
 				this.upData = new Answer_41().parse(rtuId, b, ca, this.dataCode);
 				action.append(Action.commandResultAction) ;
 			}else	
+			if(this.dataCode.equalsIgnoreCase(Code206.cd_4D)){
+				//应答 - LORA电源控制
+				this.upData = new Answer_4D().parse(rtuId, b, ca, this.dataCode);
+				action.append(Action.commandResultAction) ;
+			}else	
+			if(this.dataCode.equalsIgnoreCase(Code206.cd_4E)){
+				//应答 - 出厂启用命令
+				this.upData = new Answer_4E().parse(rtuId, b, ca, this.dataCode);
+				action.append(Action.commandResultAction) ;
+			}else
 			if(this.dataCode.equalsIgnoreCase(Code206.cd_C0)){
 				//遥测终端自报实时数据
 				Report_C0 report = new Report_C0() ;
@@ -751,6 +773,11 @@ public class Driver206 extends DriverRtu {
 				this.upData = new Answer_77().parse(rtuId, b, ca, this.dataCode);
 				action.append(Action.commandResultAction) ;
 			}else
+			if(this.dataCode.equalsIgnoreCase(Code206.cd_7B)) {
+				//应答- 一键查询结果
+				this.upData = new Answer_7B().parse(rtuId, b, ca, this.dataCode) ;
+				action.append(Action.commandResultAction) ;
+			}else
 			if(this.dataCode.equalsIgnoreCase(Code206.cd_78)){
 				//应答 - 查询表口径
 				this.upData = new Answer_48_78().parse(rtuId, b, ca, this.dataCode);
@@ -764,6 +791,11 @@ public class Driver206 extends DriverRtu {
 			if(this.dataCode.equalsIgnoreCase(Code206.cd_7A)){
 				//应答 - 查询RF频点
 				this.upData = new Answer_4A_7A().parse(rtuId, b, ca, this.dataCode);
+				action.append(Action.commandResultAction) ;
+			}else
+			if(this.dataCode.equalsIgnoreCase(Code206.cd_7C)){
+				//应答 - 查询LORA时间窗口
+				this.upData = new Answer_4C_7C().parse(rtuId, b, ca, this.dataCode);
 				action.append(Action.commandResultAction) ;
 			}else
 			if(this.dataCode.equalsIgnoreCase(Code206.cd_DD)){
@@ -791,6 +823,11 @@ public class Driver206 extends DriverRtu {
 				this.upData = new Answer_47().parse(rtuId, b, ca, this.dataCode);
 				action.append(Action.commandResultAction) ;
 			}else
+			if(this.dataCode.equalsIgnoreCase(Code206.cd_4B)) {
+				//应答-设置一键查询命令
+				this.upData = new Answer_4B().parse(rtuId, b, ca, this.dataCode) ;
+				action.append(Action.commandResultAction) ;
+			}else
 			if(this.dataCode.equalsIgnoreCase(Code206.cd_48)){
 				//应答 - 设置表口径
 				this.upData = new Answer_48_78().parse(rtuId, b, ca, this.dataCode);
@@ -804,6 +841,11 @@ public class Driver206 extends DriverRtu {
 			if(this.dataCode.equalsIgnoreCase(Code206.cd_4A)){
 				//应答 - 设置RF频点
 				this.upData = new Answer_4A_7A().parse(rtuId, b, ca, this.dataCode);
+				action.append(Action.commandResultAction) ;
+			}else
+			if(this.dataCode.equalsIgnoreCase(Code206.cd_4C)){
+				//应答 - 设置LORA时间窗口
+				this.upData = new Answer_4C_7C().parse(rtuId, b, ca, this.dataCode);
 				action.append(Action.commandResultAction) ;
 			}else
 			if(this.dataCode.equalsIgnoreCase(Code206.cd_CE)){
@@ -1308,6 +1350,16 @@ public class Driver206 extends DriverRtu {
 				this.downData = new Write_41().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
 				activ = Action.remoteCommandAction ;
 			}else 
+			if(this.commandCode.equalsIgnoreCase(Code206.cd_4D)){
+				//设置LORA电源控制
+				this.downData = new Write_4D().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
+				activ = Action.remoteCommandAction ;
+			}else 
+			if(this.commandCode.equalsIgnoreCase(Code206.cd_4E)){
+				//设置出厂启用命令
+				this.downData = new Write_4E().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
+				activ = Action.remoteCommandAction ;
+			}else 
 			if(this.commandCode.equalsIgnoreCase(Code206.cd_E0)){
 				//查询供电方式及电压
 				this.downData = new Read_E0().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
@@ -1413,6 +1465,11 @@ public class Driver206 extends DriverRtu {
 				this.downData = new Read_77().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
 				activ = Action.remoteCommandAction ;
 			}else 
+			if(this.commandCode.equalsIgnoreCase(Code206.cd_7B)) {
+				//一键查询结果
+				this.downData = new Read_7B().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId, params, password) ;
+				activ = Action.remoteCommandAction ;
+			}else
 			if(this.commandCode.equalsIgnoreCase(Code206.cd_78)){
 				//查询表口径
 				this.downData = new Read_78().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
@@ -1426,6 +1483,11 @@ public class Driver206 extends DriverRtu {
 			if(this.commandCode.equalsIgnoreCase(Code206.cd_7A)){
 				//查询RF频点
 				this.downData = new Read_7A().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
+				activ = Action.remoteCommandAction ;
+			}else 
+			if(this.commandCode.equalsIgnoreCase(Code206.cd_7C)){
+				//查询LORA时间窗口
+				this.downData = new Read_7C().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
 				activ = Action.remoteCommandAction ;
 			}else 
 			if(this.commandCode.equalsIgnoreCase(Code206.cd_DD)){
@@ -1453,6 +1515,11 @@ public class Driver206 extends DriverRtu {
 				this.downData = new Write_47().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
 				activ = Action.remoteCommandAction ;
 			}else 
+			if(this.commandCode.equalsIgnoreCase(Code206.cd_4B)) {
+				//设置一键查询命令
+				this.downData = new Write_4B().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId, params, password) ;
+				activ = Action.remoteCommandAction ;
+			}else
 			if(this.commandCode.equalsIgnoreCase(Code206.cd_48)){
 				//设置表口径
 				this.downData = new Write_48().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
@@ -1466,6 +1533,11 @@ public class Driver206 extends DriverRtu {
 			if(this.commandCode.equalsIgnoreCase(Code206.cd_4A)){
 				//设置RF频点
 				this.downData = new Write_4A().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
+				activ = Action.remoteCommandAction ;
+			}else 
+			if(this.commandCode.equalsIgnoreCase(Code206.cd_4C)){
+				//设置LORA时间窗口
+				this.downData = new Write_4C().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
 				activ = Action.remoteCommandAction ;
 			}else 
 			if(this.commandCode.equalsIgnoreCase(Code206.cd_CE)){

@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:background="#f0eff5">
     
- 	<LinearLayout 
+ <!-- 	<LinearLayout 
 	    android:layout_width="match_parent"
 	    android:layout_height="36dp" 
 	    android:background="#f0eff5">
@@ -24,7 +24,7 @@
 	        android:drawableLeft="@drawable/func_noprotocol"  
 	        android:drawablePadding="5.0dp" />
  	</LinearLayout>
- 	
+ 	 -->
 
   	<LinearLayout 
 	    android:layout_width="match_parent"

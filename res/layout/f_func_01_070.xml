@@ -7,7 +7,7 @@
 	<LinearLayout style="@style/func_title_linearlayout_style">
 	    <TextView
 	    	android:id="@+id/f_01_070_Title"
-	        android:drawableLeft="@drawable/item001"
+	        android:drawableLeft="@drawable/item005"
 	        android:text="@string/func_01_070"
 			style="@style/func_title_viewtext_style"/>
 	    

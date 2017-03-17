@@ -15,7 +15,7 @@ public class Write_44 extends ProtocolSupport{
 										+ Constant.Bits_Time 
 										+ Constant.Bits_CRC
 										+ Constant.Bits_Tail 
-										+ 10 ;//数据域长度
+										+ 6 ;//数据域长度
 
 	/**
 	 * 构造RTU 命令

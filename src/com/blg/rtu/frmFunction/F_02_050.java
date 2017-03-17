@@ -32,6 +32,7 @@ import com.blg.rtu.util.SpinnerVO;
 import com.blg.rtu.vo2xml.Vo2Xml;
 import com.blg.rtu1.MainActivity;
 import com.blg.rtu1.R;
+import com.blg.rtu1.server.CoreThread;
 
 public class F_02_050  extends FrmParent {
 	
@@ -442,6 +443,7 @@ public class F_02_050  extends FrmParent {
 	 */
 	@Override
 	protected void queryCommand(){
+		CoreThread.getInstance().newRtuId(F_01_100.getInstance().getRtuSelectedItem().replaceAll(" ", ""));
 		this.sendRtuCommand(new CommandCreator().cd_CC(null), false) ;
 	}
 	
@@ -509,7 +511,7 @@ public class F_02_050  extends FrmParent {
 		p.setIp_4_3_0to254(Integer.valueOf(strIp3)) ;
 		p.setIp_4_4_0to254(Integer.valueOf(strIp4)) ;
 		p.setPort_4_0to65535(Integer.valueOf(strPort)) ;
-		
+		CoreThread.getInstance().newRtuId(F_01_100.getInstance().getRtuSelectedItem().replaceAll(" ", ""));
 		this.sendRtuCommand(new CommandCreator().cd_DC(p, null), false) ;
 	}
 	

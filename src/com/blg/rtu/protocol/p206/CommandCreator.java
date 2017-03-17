@@ -24,6 +24,10 @@ import com.blg.rtu.protocol.p206.cd47_77.Param_47;
 import com.blg.rtu.protocol.p206.cd48_78.Param_48;
 import com.blg.rtu.protocol.p206.cd49_79.Param_49;
 import com.blg.rtu.protocol.p206.cd4A_7A.Param_4A;
+import com.blg.rtu.protocol.p206.cd4B_7B.Param_4B;
+import com.blg.rtu.protocol.p206.cd4C_7C.Param_4C;
+import com.blg.rtu.protocol.p206.cd4D.Param_4D;
+import com.blg.rtu.protocol.p206.cd4E.Param_4E;
 import com.blg.rtu.protocol.p206.cd82_.Param_82_WaterAmountList;
 import com.blg.rtu.protocol.p206.cd82_.Param_82_WaterLevelList;
 import com.blg.rtu.protocol.p206.cd82_.Param_82_WaterQuality;
@@ -289,6 +293,23 @@ public class CommandCreator {
 		return com ;
 	}
 	
+	public RtuCommand cd_7B(String rtuId){
+		RtuCommand com = new RtuCommand() ;
+		com.setRtuId(rtuId);
+		com.setCommandCode(Code206.cd_7B) ;
+		return com ;
+	}
+	
+	public RtuCommand cd_4D(int mode, String rtuId){
+		RtuCommand com = new RtuCommand() ;
+		com.setCommandCode(Code206.cd_4D) ;
+		com.setRtuId(rtuId);
+		Param_4D p = new Param_4D() ;
+		p.setEnable_1(mode) ;
+		com.getParams().put(Param_4D.KEY, p);
+		return com ;
+	}
+	
 	public RtuCommand cd_DF(int mode, String rtuId){
 		RtuCommand com = new RtuCommand() ;
 		com.setCommandCode(Code206.cd_DF) ;
@@ -299,6 +320,16 @@ public class CommandCreator {
 		return com ;
 	}
 	
+	public RtuCommand cd_4E(int mode, String rtuId){
+		RtuCommand com = new RtuCommand() ;
+		com.setCommandCode(Code206.cd_4E) ;
+		com.setRtuId(rtuId);
+		Param_4E p = new Param_4E() ;
+		p.setEnable_1(mode) ;
+		com.getParams().put(Param_4E.KEY, p);
+		return com ;
+	}
+	
 	public RtuCommand cd_48(int mode, String rtuId){
 		RtuCommand com = new RtuCommand() ;
 		com.setCommandCode(Code206.cd_48) ;
@@ -306,6 +337,15 @@ public class CommandCreator {
 		Param_48 p = new Param_48() ;
 		p.setDiameter(mode) ;
 		com.getParams().put(Param_48.KEY, p);
+		return com ;
+	}
+	public RtuCommand cd_4B(int mode, String rtuId){
+		RtuCommand com = new RtuCommand() ;
+		com.setCommandCode(Code206.cd_4B) ;
+		com.setRtuId(rtuId);
+		Param_4B p = new Param_4B() ;
+		p.setTriggerType(mode) ;
+		com.getParams().put(Param_4B.KEY, p);
 		return com ;
 	}
 	
@@ -741,6 +781,13 @@ public class CommandCreator {
 		return com ;
 	}
 	
+	public RtuCommand cd_7C(String rtuId){
+		RtuCommand com = new RtuCommand() ;
+		com.setRtuId(rtuId);
+		com.setCommandCode(Code206.cd_7C) ;
+		return com ;
+	}
+	
 	public RtuCommand cd_D5(Param_D5 p, String rtuId){
 		RtuCommand com = new RtuCommand() ;
 		com.setCommandCode(Code206.cd_D5) ;
@@ -762,6 +809,14 @@ public class CommandCreator {
 		com.setCommandCode(Code206.cd_4A) ;
 		com.setRtuId(rtuId);
 		com.getParams().put(Param_4A.KEY, p);
+		return com ;
+	}
+	
+	public RtuCommand cd_4C(Param_4C p, String rtuId){
+		RtuCommand com = new RtuCommand() ;
+		com.setCommandCode(Code206.cd_4C) ;
+		com.setRtuId(rtuId);
+		com.getParams().put(Param_4C.KEY, p);
 		return com ;
 	}
 

@@ -14,6 +14,7 @@ import com.blg.rtu.util.DialogConfirm;
 import com.blg.rtu.util.StringValueForActivity;
 import com.blg.rtu.vo2xml.Help;
 import com.blg.rtu1.R;
+import com.blg.rtu1.server.CoreThread;
 /**
  * frmChannel01响应外部操作类
  * @author Administrator
@@ -273,6 +274,7 @@ public class ChBusi_01_Operate {
 			public void run(){
 				//chf.tcpConnected
 				if(!chf.act.mServerProxyHandler.isTcpConnected()){
+				//if(!CoreThread.getInstance().getNetStatus()){
 					//closeWaitTcpConnectFlash() ;
 					//if(chf.getSelectedChannel() == Constant.channelTcp){
 						Toast.makeText(chf.act, "网络未连接，请检查！", Toast.LENGTH_SHORT).show() ;

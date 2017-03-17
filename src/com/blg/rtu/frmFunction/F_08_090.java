@@ -29,6 +29,7 @@ import com.blg.rtu.util.SpinnerVO;
 import com.blg.rtu.vo2xml.Vo2Xml;
 import com.blg.rtu1.MainActivity;
 import com.blg.rtu1.R;
+import com.blg.rtu1.server.CoreThread;
 
 public class F_08_090 extends FrmParent {
 	
@@ -135,6 +136,7 @@ public class F_08_090 extends FrmParent {
 	 */
 	@Override
 	protected void queryCommand(){
+		CoreThread.getInstance().newRtuId(F_01_100.getInstance().getRtuSelectedItem().replaceAll(" ", ""));
 		this.sendRtuCommand(new CommandCreator().cd_78(null), false) ;
 	}
 	
@@ -154,8 +156,8 @@ public class F_08_090 extends FrmParent {
 		}else if(position == 3){
 			diameter = 150 ; 
 		}
-		
-		this.sendRtuCommand(new CommandCreator().cd_DF(diameter, null), false) ;
+		CoreThread.getInstance().newRtuId(F_01_100.getInstance().getRtuSelectedItem().replaceAll(" ", ""));
+		this.sendRtuCommand(new CommandCreator().cd_48(diameter, null), false) ;
 	}
 	
 	/**
@@ -219,14 +221,14 @@ public class F_08_090 extends FrmParent {
 	 */
 	@Override
 	public void outSetData(Vo2Xml vo){
-		//vo.setV_02_010_item01(spinnerPosition) ;
+		vo.setV_08_090_item01(spinnerPosition) ;
 	}
 	/**
 	 * 导入设置数据
 	 */
 	@Override
 	public void inSetData(Vo2Xml vo){
-		//item01.setSelection(vo.getV_02_010_item01()); 
+		item01.setSelection(vo.getV_08_090_item01()); 
 	}
 	
 	@Override

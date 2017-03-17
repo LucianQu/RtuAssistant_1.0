@@ -57,8 +57,13 @@ public class Help {
 		//act.frgTool.f_05_050.outSetData(vo);
 		//act.frgTool.f_05_060.outSetData(vo);	//查询水表日志信息
 		/*act.frgTool.f_06_010.outSetData(vo);*/
-		act.frgTool.f_08_030.outSetData(vo);
-		act.frgTool.f_08_110.outSetData(vo);
+		act.frgTool.f_08_020.outSetData(vo) ;
+		act.frgTool.f_08_030.outSetData(vo) ;
+		act.frgTool.f_08_060.outSetData(vo) ;
+		act.frgTool.f_08_070.outSetData(vo) ;
+		act.frgTool.f_08_080.outSetData(vo) ;
+		act.frgTool.f_08_090.outSetData(vo) ;
+		act.frgTool.f_08_110.outSetData(vo) ;
 		String xml = vo.toXml();
 
 		return xml;
@@ -137,8 +142,12 @@ public class Help {
 		//act.frgTool.f_05_050.inSetData(vo);
 		//act.frgTool.f_05_060.inSetData(vo);
 		/*act.frgTool.f_06_010.inSetData(vo);*/
-		
-		act.frgTool.f_08_030.inSetData(vo);
+		act.frgTool.f_08_020.inSetData(vo) ;
+		act.frgTool.f_08_030.inSetData(vo) ;
+		act.frgTool.f_08_060.inSetData(vo) ;
+		act.frgTool.f_08_070.inSetData(vo) ;
+		act.frgTool.f_08_080.inSetData(vo) ;
+		act.frgTool.f_08_090.inSetData(vo) ;
 		act.frgTool.f_08_110.inSetData(vo);
 		
 	}

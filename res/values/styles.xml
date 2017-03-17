@@ -107,7 +107,7 @@
         <item name="android:drawablePadding">15dp</item>
        
         <item name="android:typeface">monospace</item>
-        <item name="android:textSize">@dimen/text16</item>
+        <item name="android:textSize">@dimen/text19</item>
         <item name="android:textColor">#000000</item>
         <item name="android:drawableRight">@drawable/lb_gray</item>
 	    <item name="android:paddingRight">10dp</item>
@@ -269,6 +269,8 @@
     <style name="func_item_edittext_style" parent="@android:style/Widget.EditText">
         <item name="android:background">@drawable/edittext_1</item>
         <item name="android:textSize">@dimen/text15</item>
+        <item name="android:typeface">monospace</item>
+       <!--  <item name="android:textColor">#808080</item> -->
         <item name="android:textColor">#0000FF</item>
         <item name="android:layout_gravity">center_vertical</item>
         <item name="android:singleLine">true</item>

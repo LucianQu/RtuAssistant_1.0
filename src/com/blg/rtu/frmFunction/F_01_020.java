@@ -25,6 +25,7 @@ import com.blg.rtu.protocol.p206.Code206;
 import com.blg.rtu.protocol.p206.CommandCreator;
 import com.blg.rtu.protocol.p206.cd11_51.Data_11_51;
 import com.blg.rtu.protocol.p206.cd11_51.Param_11;
+import com.blg.rtu.protocol.p206.cd44_74.DataList_74;
 import com.blg.rtu.util.Constant;
 import com.blg.rtu.util.DateTime;
 import com.blg.rtu.util.DialogConfirm;
@@ -33,6 +34,7 @@ import com.blg.rtu.util.Preferences;
 import com.blg.rtu.vo2xml.Vo2Xml;
 import com.blg.rtu1.MainActivity;
 import com.blg.rtu1.R;
+import com.blg.rtu1.server.CoreThread;
 
 public class F_01_020  extends FrmParent {
 	
@@ -49,7 +51,7 @@ public class F_01_020  extends FrmParent {
 	private ImageView btnSet ;
 	private ImageView btnAdjust ;
 	private ImageView btnRead ;
-	
+	private F_01_100 f;
 	private Param_11 param ;
 	
 
@@ -212,6 +214,8 @@ public class F_01_020  extends FrmParent {
 	 */
 	@Override
 	protected void queryCommand(){
+		CoreThread.getInstance().newRtuId(F_01_100.getInstance().getRtuSelectedItem().replaceAll(" ", ""));
+		//F_01_100.getInstance().getRtuSelectedItem().replaceAll(" ", "")
 		this.sendRtuCommand(new CommandCreator().cd_51(null), false) ;
 	}
 	
@@ -220,6 +224,7 @@ public class F_01_020  extends FrmParent {
 	 */
 	@Override
 	protected void setCommand(){
+		CoreThread.getInstance().newRtuId(F_01_100.getInstance().getRtuSelectedItem().replaceAll(" ", ""));
 		this.sendRtuCommand(new CommandCreator().cd_11(this.param, null), false) ;
 	}
 	

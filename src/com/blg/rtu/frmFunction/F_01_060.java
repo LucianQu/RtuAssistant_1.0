@@ -30,6 +30,7 @@ import com.blg.rtu.util.SpinnerVO;
 import com.blg.rtu.vo2xml.Vo2Xml;
 import com.blg.rtu1.MainActivity;
 import com.blg.rtu1.R;
+import com.blg.rtu1.server.CoreThread;
 
 public class F_01_060  extends FrmParent {
 	
@@ -146,6 +147,7 @@ public class F_01_060  extends FrmParent {
 	 */
 	@Override
 	protected void setCommand(){
+		CoreThread.getInstance().newRtuId(F_01_100.getInstance().getRtuSelectedItem().replaceAll(" ", ""));
 		this.sendRtuCommand(new CommandCreator().cd_91(Integer.valueOf(spinnerAdapter.getItem(spinnerPosition).getId()), null), false) ;
 	}
 	

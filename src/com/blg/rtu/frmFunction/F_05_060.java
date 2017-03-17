@@ -37,6 +37,7 @@ import com.blg.rtu.util.StringValueForActivity;
 import com.blg.rtu.vo2xml.Vo2Xml;
 import com.blg.rtu1.MainActivity;
 import com.blg.rtu1.R;
+import com.blg.rtu1.server.CoreThread;
 
 public class F_05_060  extends FrmParent {
 	
@@ -194,6 +195,7 @@ public class F_05_060  extends FrmParent {
 		}else{
 			p.setCount_0to1024(Integer.valueOf(num)) ;
 		}
+		CoreThread.getInstance().newRtuId(F_01_100.getInstance().getRtuSelectedItem().replaceAll(" ", ""));
 		this.sendRtuCommand(new CommandCreator().cd_ED(p, null), false) ;
 	}
 	

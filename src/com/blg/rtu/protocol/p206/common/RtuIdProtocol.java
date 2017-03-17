@@ -14,7 +14,7 @@ public class RtuIdProtocol {
 	 */
 	public String[] parseRtuId_1(byte[] bs , int startIndex, int endIndex)throws Exception{
 		String id = null ;
-		//String hex = null ;
+		String hex = null ;
 		try{
 		/*	byte firstByte = bs[startIndex] ;
 			if(firstByte == 0){
@@ -26,11 +26,11 @@ public class RtuIdProtocol {
 				int tailId =  ByteUtilUnsigned.bytes2Short_an(bs, startIndex + 3) ;
 				id = preId +" " + tailId ;
 			//}
-			//hex = ByteUtil.bytes2Hex(bs, true, startIndex, (endIndex - startIndex + 1)) ;
+			hex = ByteUtil.bytes2Hex(bs, true, startIndex, (endIndex - startIndex + 1)) ;
 		}catch(Exception e){
 			throw new Exception("分析RTU ID时出错!" + e.getMessage() , null) ;
 		}
-		return new String[]{id} ;
+		return new String[]{id,hex} ;
 	}
 	/**
 	 * 分析的RTU ID

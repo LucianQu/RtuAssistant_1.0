@@ -9,7 +9,9 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.graphics.Matrix;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.os.Handler;
@@ -20,9 +22,14 @@ import android.os.RemoteException;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.util.DisplayMetrics;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.animation.Animation;
+import android.view.animation.TranslateAnimation;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -54,6 +61,10 @@ public class MainActivity  extends Activity {
 	
 	public Boolean tcpConnected;
 	public TextView tcpConnectStatus;
+	
+	public TextView switchFun ;
+	public TextView switchOnce ;
+	public TextView switchQuery ;
 	
 	public ScrollView func_scrollView ;
 	
@@ -87,6 +98,17 @@ public class MainActivity  extends Activity {
 
 	//private boolean wifiOpenStatus = false ;
 	private WifiManager wifiManager ;
+	//滚动条图片
+	private ImageView scrollbar ;
+	//滚动条初始偏移量
+	private int offset = 0 ;
+	//当前页编号
+	private int currIndex = 0 ;
+	// 滚动条宽度
+    private int bmpW ;
+    //一倍滚动量
+    private int doubleRoll ;
+	
 	
 	private ServiceConnection mConnection = new ServiceConnection() {
 		public void onServiceConnected(ComponentName className, IBinder service) {
@@ -163,7 +185,6 @@ public class MainActivity  extends Activity {
 		this.broadcastReceiver.registerAndReceive() ;
 		
 		this.setContentView(R.layout.activity_main);
-		tcpConnectStatus = (TextView) findViewById(R.id.tcpConnectStatus1);
 		
 		//创建界面
 		this.createView();
@@ -247,7 +268,7 @@ public class MainActivity  extends Activity {
 	private void createView() {
 		mPager = (ViewPager) findViewById(R.id.vPager);
 		LayoutInflater mInflater = this.getLayoutInflater();
-		
+		scrollbar = (ImageView)findViewById(R.id.scrollbar) ;
 		pageView_noProtocol = mInflater.inflate(R.layout.activity_main_noprotocol_page, null) ;
 		pageView_loopQuery = mInflater.inflate(R.layout.activity_main_loopquery_page, null) ;
 		pageView_function = mInflater.inflate(R.layout.activity_main_function_page, null) ;
@@ -259,10 +280,38 @@ public class MainActivity  extends Activity {
 		listPages.add(pageView_function);
 		//listPages.add(pageView_channel);
 		
-		mPager.setAdapter(new ViewPagerAdapter(listPages));
-		mPager.setCurrentItem(2);
-		mPager.setOnPageChangeListener(new FlipPageChangeListener());
+		tcpConnectStatus = (TextView) findViewById(R.id.tcpConnectStatus1);
+		switchFun = (TextView) findViewById(R.id.switchFun) ;
+		switchOnce = (TextView) findViewById(R.id.switchOnce) ;
+		switchQuery = (TextView) findViewById(R.id.switchQuery) ;
 		
+		
+		//获取滚动条的宽度
+		bmpW = BitmapFactory.decodeResource(this.getResources(), R.drawable.scrollbar).getWidth();
+		//为了获取屏幕宽度，新建一个DisplayMetrics对象
+		DisplayMetrics displayMetrics = new DisplayMetrics() ;
+		//将当前窗口的一些信息放在DisplayMetrics类中
+		getWindowManager().getDefaultDisplay().getMetrics(displayMetrics) ;
+		//得到屏幕的宽度
+		int screenW = displayMetrics.widthPixels ;
+		//计算出滚动条初始的偏移量
+		offset = (screenW / 3 - bmpW) / 2 ;
+		//计算出切换一个界面时，滚动条的位移量
+		doubleRoll = offset * 2 + bmpW ;
+		
+		Matrix matrix = new Matrix() ;
+		matrix.postTranslate(offset, 0) ;
+		//将滚动条的初始位置设置成与左边界间隔一个offset
+		scrollbar.setImageMatrix(matrix) ;
+		
+		mPager.setAdapter(new ViewPagerAdapter(listPages));//绑定适配器
+		mPager.setCurrentItem(2);//设置viewPager的初始界面
+		defaultAnimation(2) ;
+		mPager.setOnPageChangeListener(new FlipPageChangeListener());//切换界面监听
+		
+		switchQuery.setOnClickListener(new clickLableListener()) ; 
+		switchOnce.setOnClickListener(new clickLableListener()) ; 
+		switchFun.setOnClickListener(new clickLableListener()) ;
 		
 		//////////////////////////////////////////////////////////////
 		//功能子页
@@ -428,6 +477,29 @@ public class MainActivity  extends Activity {
 		public void startUpdate(View arg0) {
 		}
 	}
+	
+	public class clickLableListener implements OnClickListener {
+
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			switch(v.getId()) {
+			case R.id.switchQuery:
+				mPager.setCurrentItem(0);//设置viewPager的初始界面
+				defaultAnimation(0) ;
+				break ;
+			case R.id.switchOnce:
+				mPager.setCurrentItem(1) ;
+				defaultAnimation(1) ;
+				break ;
+			case R.id.switchFun:
+				mPager.setCurrentItem(2) ;
+				defaultAnimation(2) ;
+			}
+		}
+		
+	}
+	
 
 	/**
 	 *  页卡切换监听
@@ -439,6 +511,44 @@ public class MainActivity  extends Activity {
 		@Override
 		public void onPageSelected(int arg0) {
 			MainActivity.this.frgTool.pageViewSelected(arg0) ;
+			   Animation animation = null;
+	            switch (arg0) {
+	                case 0:
+	                        /**
+	                         * TranslateAnimation的四个属性分别为
+	                         * float fromXDelta 动画开始的点离当前View X坐标上的差值 
+	                         * float toXDelta 动画结束的点离当前View X坐标上的差值 
+	                         * float fromYDelta 动画开始的点离当前View Y坐标上的差值 
+	                         * float toYDelta 动画开始的点离当前View Y坐标上的差值
+	                        **/
+	                        animation = new TranslateAnimation(doubleRoll, 0, 0, 0);
+	                        switchQuery.setTextColor(Color.parseColor("#4c79c5")) ;
+	            			switchOnce.setTextColor(Color.parseColor("#b2b2b2")) ;
+	            			switchFun.setTextColor(Color.parseColor("#b2b2b2")) ;
+	                    break;
+	                case 1:
+	                        animation = new TranslateAnimation(doubleRoll + offset, doubleRoll, 0, 0);
+	                        switchQuery.setTextColor(Color.parseColor("#b2b2b2")) ;
+	            			switchOnce.setTextColor(Color.parseColor("#4c79c5")) ;
+	            			switchFun.setTextColor(Color.parseColor("#b2b2b2")) ;
+	                    break;
+	                case 2:
+                        animation = new TranslateAnimation(2*doubleRoll + offset, 2*doubleRoll, 0, 0);
+                        switchQuery.setTextColor(Color.parseColor("#b2b2b2")) ;
+            			switchOnce.setTextColor(Color.parseColor("#b2b2b2")) ;
+            			switchFun.setTextColor(Color.parseColor("#4c79c5")) ;
+            			//switchFun.setTextColor(Color.parseColor("#4c79c5"));
+                    break;
+	            }
+	          //arg0为切换到的页的编码
+	            currIndex = arg0;
+	            // 将此属性设置为true可以使得图片停在动画结束时的位置
+	            animation.setFillAfter(true);
+	            //动画持续时间，单位为毫秒
+	            animation.setDuration(200);
+	            //滚动条开始动画
+	            scrollbar.startAnimation(animation);
+			
 		}
 		@Override
 		public void onPageScrolled(int arg0, float arg1, int arg2) {
@@ -446,7 +556,37 @@ public class MainActivity  extends Activity {
 		@Override
 		public void onPageScrollStateChanged(int arg0) {
 		}
+		
 	}
+	
+	public void defaultAnimation(int arg0) {
+		Animation animation = null ;
+		switch(arg0) {
+		case 0:
+			animation = new TranslateAnimation(doubleRoll , 0 , 0 ,0) ;
+			switchQuery.setTextColor(Color.parseColor("#4c79c5")) ;
+			switchOnce.setTextColor(Color.parseColor("#b2b2b2")) ;
+			switchFun.setTextColor(Color.parseColor("#b2b2b2")) ;
+			break ;
+		case 1:
+			animation = new TranslateAnimation(doubleRoll + offset, doubleRoll , 0 , 0) ;
+			switchQuery.setTextColor(Color.parseColor("#b2b2b2")) ;
+			switchOnce.setTextColor(Color.parseColor("#4c79c5")) ;
+			switchFun.setTextColor(Color.parseColor("#b2b2b2")) ;
+			
+			break ;
+		case 2:
+			animation = new TranslateAnimation(2 * doubleRoll + offset, 2 * doubleRoll, 0, 0) ;
+			switchQuery.setTextColor(Color.parseColor("#b2b2b2")) ;
+			switchOnce.setTextColor(Color.parseColor("#b2b2b2")) ;
+			switchFun.setTextColor(Color.parseColor("#4c79c5")) ;
+			break ;
+		}
+		currIndex = arg0 ;
+		animation.setFillAfter(true) ;
+		animation.setDuration(200) ;
+		scrollbar.startAnimation(animation) ;
+	} 
 
 
 }

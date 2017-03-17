@@ -101,7 +101,10 @@ public class FragmentTool {
 	public F_08_090 f_08_090 ;	//查询/设置表口径
 	public F_08_100 f_08_100 ;	//查询/设置整体脉冲系数
 	public F_08_110 f_08_110 ;	//查询/设置RF频点命令
-	
+	public F_08_120 f_08_120 ;  //一键测试触发和查询结果
+	public F_08_130 f_08_130 ;  //查询设置LORA时间窗口
+	public F_08_140 f_08_140 ;  //设置LORA电源控制
+	public F_08_150 f_08_150 ;  //设置出厂启用
 	public FragmentTool(MainActivity mainAct){
 		this.mainAct = mainAct ;
 		
@@ -226,25 +229,33 @@ public class FragmentTool {
        /* f_07_010 = (F_07_010)fm.findFragmentById(R.id.f_07_010) ;
         frms.add(f_07_010);*/
         f_08_020 = (F_08_020)fm.findFragmentById(R.id.f_08_020) ;
-        frms.add(f_08_020);
+        frms.add(f_08_020) ;
         f_08_030 = (F_08_030)fm.findFragmentById(R.id.f_08_030) ;
-        frms.add(f_08_030);
+        frms.add(f_08_030) ;
         f_08_040 = (F_08_040)fm.findFragmentById(R.id.f_08_040) ;
-        frms.add(f_08_040);
+        frms.add(f_08_040) ;
         f_08_050 = (F_08_050)fm.findFragmentById(R.id.f_08_050) ;
-        frms.add(f_08_050);
+        frms.add(f_08_050) ;
         f_08_060 = (F_08_060)fm.findFragmentById(R.id.f_08_060) ;
-        frms.add(f_08_060);
+        frms.add(f_08_060) ;
         f_08_070 = (F_08_070)fm.findFragmentById(R.id.f_08_070) ;
-        frms.add(f_08_070);
+        frms.add(f_08_070) ;
         f_08_080 = (F_08_080)fm.findFragmentById(R.id.f_08_080) ;
-        frms.add(f_08_080);
+        frms.add(f_08_080) ;
         f_08_090 = (F_08_090)fm.findFragmentById(R.id.f_08_090) ;
         frms.add(f_08_090);
         f_08_100 = (F_08_100)fm.findFragmentById(R.id.f_08_100) ;
-        frms.add(f_08_100);
+        frms.add(f_08_100) ;
         f_08_110 = (F_08_110)fm.findFragmentById(R.id.f_08_110) ;
-        frms.add(f_08_110);
+        frms.add(f_08_110) ;
+        f_08_120 = (F_08_120)fm.findFragmentById(R.id.f_08_120) ;
+        frms.add(f_08_120) ;
+        f_08_130 = (F_08_130)fm.findFragmentById(R.id.f_08_130) ;
+        frms.add(f_08_130) ;
+        f_08_140 = (F_08_140)fm.findFragmentById(R.id.f_08_140) ;
+        frms.add(f_08_140) ;
+        f_08_150 = (F_08_150)fm.findFragmentById(R.id.f_08_150) ;
+        frms.add(f_08_150) ;
         
 	}
 	
@@ -274,12 +285,16 @@ public class FragmentTool {
 			frm.openFuncFrm() ;
 		}
 	}
+	
+	
+	
 	/**
 	 * 关闭所有功能项
 	 */
 	public void closeAllFunctionFragment(){
 		for(FrmParent frm : frms){
 			frm.closeFuncFrm() ;
+			
 		}
 	}
 	

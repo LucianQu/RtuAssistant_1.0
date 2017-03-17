@@ -28,6 +28,7 @@ import com.blg.rtu.util.StringValueForServer;
 import com.blg.rtu.vo2xml.Vo2Xml;
 import com.blg.rtu1.MainActivity;
 import com.blg.rtu1.R;
+import com.blg.rtu1.server.CoreThread;
 
 public class F_02_080  extends FrmParent {
 	private final static int requestLen  = 5 ; 
@@ -178,7 +179,7 @@ public class F_02_080  extends FrmParent {
 		Param_96 p = new Param_96() ;
 		//p.setNewPass_0to9999(Integer.valueOf(pass)) ;
 		p.setNewPass_hex(pass) ;
-		
+		CoreThread.getInstance().newRtuId(F_01_100.getInstance().getRtuSelectedItem().replaceAll(" ", ""));
 		this.sendRtuCommand(new CommandCreator().cd_96(p, null), false) ;
 	}
 	

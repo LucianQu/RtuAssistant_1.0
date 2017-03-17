@@ -12,6 +12,7 @@ import com.blg.rtu.util.Preferences;
 import com.blg.rtu.vo2xml.Vo2Xml;
 import com.blg.rtu1.MainActivity;
 import com.blg.rtu1.R;
+import com.blg.rtu1.server.CoreThread;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -128,6 +129,7 @@ public class F_04_080 extends FrmParent {
 	 */
 	@Override
 	protected void queryCommand(){
+		CoreThread.getInstance().newRtuId(F_01_100.getInstance().getRtuSelectedItem().replaceAll(" ", ""));
 		this.sendRtuCommand(new CommandCreator().cd_53(null), false) ;
 	}
 	
@@ -136,6 +138,7 @@ public class F_04_080 extends FrmParent {
 	 */
 	@Override
 	protected void setCommand(){
+		CoreThread.getInstance().newRtuId(F_01_100.getInstance().getRtuSelectedItem().replaceAll(" ", ""));
 		this.sendRtuCommand(new CommandCreator().cd_A1(this.param, null), false) ;
 	}
 	

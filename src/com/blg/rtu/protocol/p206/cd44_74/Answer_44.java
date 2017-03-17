@@ -1,19 +1,17 @@
 package com.blg.rtu.protocol.p206.cd44_74;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.util.Log;
-//设置、查询遥测终端地址，中继站地址
+
 import com.blg.rtu.protocol.RtuData;
 import com.blg.rtu.protocol.p206.common.ControlProtocol;
 import com.blg.rtu.protocol.p206.common.ProtocolSupport;
 import com.blg.rtu.protocol.p206.common.RtuIdProtocol;
 import com.blg.rtu.protocol.p206.util.Constant;
+//设置、查询遥测终端地址，中继站地址
 
-public class Answer_44_74 extends ProtocolSupport{
+public class Answer_44 extends ProtocolSupport{
 
-	private static String tag = Answer_44_74.class.getName() ;
+	private static String tag = Answer_44.class.getName() ;
 	
 	/**
 	 * 解析上行数据 
@@ -29,22 +27,15 @@ public class Answer_44_74 extends ProtocolSupport{
 		int index = this.parseUpDataHead(rtuId, b, cp, dataCode, d);
 		this.doParse(b, index, d, cp) ;
 
-		Log.i(tag, "分析<中继站地址>: RTU ID=" + rtuId + " 数据：" + d.getSubData().toString());
+		Log.i(tag, "分析<设置中继站地址>: RTU ID=" + rtuId + " 数据：" + d.getSubData().toString());
 		return d;
 	}
 
 	private void doParse(byte[] b, int index, RtuData d, ControlProtocol cp) throws Exception {
-		DataList_44_74 subD = new DataList_44_74() ;
-		List<String> list = new ArrayList<String>();
+		Data_44 subD = new Data_44() ;
 		d.setSubData(subD) ;
 
-		for(int i = 0; i < 9; i++) {
-			String[] ss = new RtuIdProtocol().parseRtuId_1(b, index + (i * 5),
-					(index + Constant.Bits_RTU_ID - 1) + (i * 5)) ;
-			list.add(ss[0]);
-		}
-		
-		subD.setRtuId(list);
-		
+		String[] ss = new RtuIdProtocol().parseRtuId_1(b, index + 1 , (index + 1 + Constant.Bits_RTU_ID - 1)) ;
+		subD.setRtuId(ss[0]) ;
 	}
 }

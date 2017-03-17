@@ -27,6 +27,7 @@ import com.blg.rtu.util.Preferences;
 import com.blg.rtu.vo2xml.Vo2Xml;
 import com.blg.rtu1.MainActivity;
 import com.blg.rtu1.R;
+import com.blg.rtu1.server.CoreThread;
 
 public class F_08_060  extends FrmParent {
 	
@@ -156,6 +157,10 @@ public class F_08_060  extends FrmParent {
 		/////////////////////////////////////
 		value = item03.getText().toString() ;//整数部分
 		
+		value = value.replace(".", "") ;
+		if(value.equals("00")) {
+			value = "0" ;
+		}
 		if(value == null || value.equals("")){
 			if(showDialog)new DialogAlarm().showDialog(act, "正积流量必须填写！") ;
 			return false ;
@@ -174,6 +179,7 @@ public class F_08_060  extends FrmParent {
 	 */
 	@Override
 	protected void queryCommand(){
+		CoreThread.getInstance().newRtuId(F_01_100.getInstance().getRtuSelectedItem().replaceAll(" ", ""));
 		this.sendRtuCommand(new CommandCreator().cd_76(null), false) ;
 	}
 	
@@ -200,9 +206,13 @@ public class F_08_060  extends FrmParent {
 		if(value == null || value.equals("")){
 			p.setLoraChannel(0) ;
 		}else{
+			value = value.replace(".", "") ;
+			if(value.equals("00")) {
+				value = "0" ;
+			}
 			p.setWaterPlus(Long.valueOf(value)) ;
 		}
-		
+		CoreThread.getInstance().newRtuId(F_01_100.getInstance().getRtuSelectedItem().replaceAll(" ", ""));
 		this.sendRtuCommand(new CommandCreator().cd_46(p, null), false) ;
 	}
 	
@@ -299,13 +309,17 @@ public class F_08_060  extends FrmParent {
 	 * 导出设置数据
 	 */
 	public void outSetData(Vo2Xml vo) {
-		//vo.setV_05_070_item01(item01.getText().toString()) ;
+		vo.setV_08_060_item01(item01.getText().toString()) ;
+		vo.setV_08_060_item02(item02.getText().toString()) ;
+		vo.setV_08_060_item03(item03.getText().toString()) ;
 	}
 	/**
 	 * 导入设置数据
 	 */
 	public void inSetData(Vo2Xml vo) {
-		//item01.setText(vo.getV_04_110_item01()) ;
+		item01.setText(vo.getV_08_060_item01()) ;
+		item02.setText(vo.getV_08_060_item02()) ;
+		item03.setText(vo.getV_08_060_item03()) ;
 	}
 	
 	@Override

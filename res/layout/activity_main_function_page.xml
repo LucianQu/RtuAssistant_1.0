@@ -6,7 +6,7 @@
     android:background="#f0eff5"
     android:focusableInTouchMode="true" >
     <!-- android:background="@drawable/deskbg4" -->
-<LinearLayout
+<!-- <LinearLayout
 	    android:layout_width="match_parent"
 	    android:layout_height="36dp"
 	    android:orientation="horizontal"
@@ -24,13 +24,13 @@
 	        android:typeface="monospace"
 	        android:drawableLeft="@drawable/func_set" 
 	        android:drawablePadding="5.0dp" />	    	    	    
- 	</LinearLayout>
+ 	</LinearLayout> -->
  	
 	<ScrollView
 	    android:id="@+id/f_func_scrollView"
 	    android:layout_width="match_parent"  
 	    android:layout_height="match_parent"  
-	    android:layout_marginTop="37dp"
+	    android:layout_marginTop="0.1dp"
 	    android:layout_marginBottom="50dp"
 	    android:scrollbars="none"  
 	    android:fadingEdge="vertical">
@@ -64,12 +64,8 @@
 				 <fragment android:id="@+id/f_05_020"
 			        android:name="com.blg.rtu.frmFunction.F_05_020"
 				    style="@style/func_fragment_style"/>
-		        <fragment android:id="@+id/f_01_070"
-			        android:name="com.blg.rtu.frmFunction.F_01_070"
-				    style="@style/func_fragment_style"/>
-		        <fragment android:id="@+id/f_01_080"
-			        android:name="com.blg.rtu.frmFunction.F_01_080"
-				    style="@style/func_fragment_style"/>
+		       
+		        
 		        <fragment android:id="@+id/f_01_050"
 			        android:name="com.blg.rtu.frmFunction.F_01_050"
 				    style="@style/func_fragment_style"/>   
@@ -175,14 +171,17 @@
 			        android:name="com.blg.rtu.frmFunction.F_08_110"
 				    style="@style/func_fragment_style"/>
 		        <fragment android:id="@+id/f_08_120"
-			        android:name="com.blg.rtu.frmFunction.F_01_080"
+			        android:name="com.blg.rtu.frmFunction.F_08_120"
 				    style="@style/func_fragment_style"/>
 		        <fragment android:id="@+id/f_08_130"
-			        android:name="com.blg.rtu.frmFunction.F_01_050"
+			        android:name="com.blg.rtu.frmFunction.F_08_130"
 				    style="@style/func_fragment_style"/>   
 		        <fragment android:id="@+id/f_08_140"
-			        android:name="com.blg.rtu.frmFunction.F_01_090"
+			        android:name="com.blg.rtu.frmFunction.F_08_140"
 				    style="@style/func_fragment_style"/>  
+				<fragment android:id="@+id/f_08_150"
+			        android:name="com.blg.rtu.frmFunction.F_08_150"
+				    style="@style/func_fragment_style"/> 
 	       </LinearLayout>
 		   
 		   <!-- <include layout="@layout/f_func_title_03" />  			    
@@ -276,6 +275,12 @@
 			    android:layout_height="match_parent"
 			    android:orientation="vertical"
 			    >
+				<fragment android:id="@+id/f_01_070"
+			        android:name="com.blg.rtu.frmFunction.F_01_070"
+				    style="@style/func_fragment_style"/>
+				<fragment android:id="@+id/f_01_080"
+			        android:name="com.blg.rtu.frmFunction.F_01_080"
+				    style="@style/func_fragment_style"/>
 		        <fragment android:id="@+id/f_05_070"
 			        android:name="com.blg.rtu.frmFunction.F_05_070"
 				    style="@style/func_fragment_style"/>

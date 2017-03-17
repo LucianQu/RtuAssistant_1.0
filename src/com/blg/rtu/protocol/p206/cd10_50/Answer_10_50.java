@@ -35,6 +35,5 @@ public class Answer_10_50 extends ProtocolSupport{
 		d.setSubData(subD) ;
 		String[] ss = new RtuIdProtocol().parseRtuId_1(b, index , (index + Constant.Bits_RTU_ID - 1)) ;
 		subD.setRtuId(ss[0]) ;
-		subD.setRtuIdHex(ss[1]) ;
 	}
 }

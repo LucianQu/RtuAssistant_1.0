@@ -27,6 +27,7 @@ import com.blg.rtu.util.Preferences;
 import com.blg.rtu.vo2xml.Vo2Xml;
 import com.blg.rtu1.MainActivity;
 import com.blg.rtu1.R;
+import com.blg.rtu1.server.CoreThread;
 
 public class F_08_020  extends FrmParent {
 	private final static int requestLen  = 5 ; 
@@ -240,7 +241,7 @@ public class F_08_020  extends FrmParent {
 		//p.setNewPass_0to9999(Integer.valueOf(pass)) ;
 		p.setOldPassword(pass) ;
 		p.setNewPassword(pass1) ;
-		
+		CoreThread.getInstance().newRtuId(F_01_100.getInstance().getRtuSelectedItem().replaceAll(" ", ""));
 		this.sendRtuCommand(new CommandCreator().cd_41(p, null), false) ;
 	}
 	
@@ -302,13 +303,15 @@ public class F_08_020  extends FrmParent {
 	 * 导出设置数据
 	 */
 	public void outSetData(Vo2Xml vo) {
-		//vo.setV_02_080_item01(item01.getText().toString()) ;
+		vo.setV_08_020_item01(item01.getText().toString()) ;
+		vo.setV_08_020_item02(item02.getText().toString()) ;
 	}
 	/**
 	 * 导入设置数据
 	 */
 	public void inSetData(Vo2Xml vo) {
-		//item01.setText(vo.getV_02_080_item01());
+		item01.setText(vo.getV_08_020_item01());
+		item02.setText(vo.getV_08_020_item02());
 	}
 	
 	@Override

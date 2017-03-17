@@ -29,6 +29,7 @@ import com.blg.rtu.util.Preferences;
 import com.blg.rtu.vo2xml.Vo2Xml;
 import com.blg.rtu1.MainActivity;
 import com.blg.rtu1.R;
+import com.blg.rtu1.server.CoreThread;
 
 public class F_08_050  extends FrmParent {
 	
@@ -150,6 +151,7 @@ public class F_08_050  extends FrmParent {
 	 */
 	@Override
 	protected void queryCommand(){
+		CoreThread.getInstance().newRtuId(F_01_100.getInstance().getRtuSelectedItem().replaceAll(" ", ""));
 		this.sendRtuCommand(new CommandCreator().cd_EC(null), false) ;
 	}
 	
@@ -165,7 +167,7 @@ public class F_08_050  extends FrmParent {
 		}else{
 			this.param.setShowInterval0to9999(Integer.valueOf(value)) ;
 		}
-		
+		CoreThread.getInstance().newRtuId(F_01_100.getInstance().getRtuSelectedItem().replaceAll(" ", ""));
 		this.sendRtuCommand(new CommandCreator().cd_FC(this.param, null), false) ;
 	}
 	

@@ -1,10 +1,10 @@
 package com.blg.rtu.util;
 
-import com.blg.rtu1.R;
-
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
+
+import com.blg.rtu1.R;
 
 public class ImageUtil {
 	
@@ -68,7 +68,7 @@ public class ImageUtil {
 		if(titlLeftImg_item001 == null){
 			Resources res = ctx.getResources();
 			titlLeftImg_item001 = res.getDrawable(R.drawable.item001);
-			//调用setCompoundDrawables时，必须调用Drawable.setBounds()方法,否则图片不显示
+			//setCompoundDrawables时，必须调用Drawable.setBounds()方法,否则图片不显示
 			titlLeftImg_item001.setBounds(0, 0, titlLeftImg_item001.getMinimumWidth(), titlLeftImg_item001.getMinimumHeight());
 		}
 		return titlLeftImg_item001 ;

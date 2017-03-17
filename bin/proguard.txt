@@ -1,4 +1,4 @@
-# view res/layout/activity_main.xml #generated:91
+# view res/layout/activity_main.xml #generated:180
 -keep class android.support.v4.view.ViewPager { <init>(...); }
 
 # view res/layout/f_func_05_040.xml #generated:102
@@ -7,22 +7,22 @@
 -keep class com.blg.rtu.compound.FixHeightListView { <init>(...); }
 
 # view res/layout/activity_main_channel_page.xml #generated:32
-# view res/layout/activity_main_function_page.xml #generated:323
+# view res/layout/activity_main_function_page.xml #generated:328
 -keep class com.blg.rtu.frmChannel.ChFragment_01 { <init>(...); }
 
 # view res/layout/activity_main_channel_page.xml #generated:43
-# view res/layout/activity_main_function_page.xml #generated:326
+# view res/layout/activity_main_function_page.xml #generated:331
 -keep class com.blg.rtu.frmChannel.ChFragment_02 { <init>(...); }
 
 # view res/layout/activity_main_channel_page.xml #generated:55
-# view res/layout/activity_main_function_page.xml #generated:329
+# view res/layout/activity_main_function_page.xml #generated:334
 -keep class com.blg.rtu.frmChannel.ChFragment_03 { <init>(...); }
 
 # view res/layout/activity_main_channel_page.xml #generated:67
 -keep class com.blg.rtu.frmChannel.ChFragment_04 { <init>(...); }
 
 # view res/layout/activity_main_channel_page.xml #generated:79
-# view res/layout/activity_main_function_page.xml #generated:332
+# view res/layout/activity_main_function_page.xml #generated:337
 -keep class com.blg.rtu.frmChannel.ChFragment_05 { <init>(...); }
 
 # view res/layout/activity_main_function_page.xml #generated:58
@@ -31,93 +31,104 @@
 # view res/layout/activity_main_function_page.xml #generated:61
 -keep class com.blg.rtu.frmFunction.F_01_040 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:180
-# view res/layout/activity_main_function_page.xml #generated:73
+# view res/layout/activity_main_function_page.xml #generated:69
 -keep class com.blg.rtu.frmFunction.F_01_050 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:291
+# view res/layout/activity_main_function_page.xml #generated:296
 -keep class com.blg.rtu.frmFunction.F_01_060 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:67
+# view res/layout/activity_main_function_page.xml #generated:278
 -keep class com.blg.rtu.frmFunction.F_01_070 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:177
-# view res/layout/activity_main_function_page.xml #generated:70
+# view res/layout/activity_main_function_page.xml #generated:281
 -keep class com.blg.rtu.frmFunction.F_01_080 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:183
-# view res/layout/activity_main_function_page.xml #generated:76
+# view res/layout/activity_main_function_page.xml #generated:72
 -keep class com.blg.rtu.frmFunction.F_01_090 { <init>(...); }
 
 # view res/layout/activity_main_function_page.xml #generated:55
 -keep class com.blg.rtu.frmFunction.F_01_100 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:92
+# view res/layout/activity_main_function_page.xml #generated:88
 -keep class com.blg.rtu.frmFunction.F_02_010 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:96
+# view res/layout/activity_main_function_page.xml #generated:92
 -keep class com.blg.rtu.frmFunction.F_02_040 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:99
+# view res/layout/activity_main_function_page.xml #generated:95
 -keep class com.blg.rtu.frmFunction.F_02_050 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:110
+# view res/layout/activity_main_function_page.xml #generated:106
 -keep class com.blg.rtu.frmFunction.F_02_080 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:103
+# view res/layout/activity_main_function_page.xml #generated:99
 -keep class com.blg.rtu.frmFunction.F_02_100 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:107
+# view res/layout/activity_main_function_page.xml #generated:103
 -keep class com.blg.rtu.frmFunction.F_02_110 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:116
+# view res/layout/activity_main_function_page.xml #generated:112
 -keep class com.blg.rtu.frmFunction.F_03_090 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:113
+# view res/layout/activity_main_function_page.xml #generated:109
 -keep class com.blg.rtu.frmFunction.F_04_080 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:282
+# view res/layout/activity_main_function_page.xml #generated:287
 -keep class com.blg.rtu.frmFunction.F_05_010 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:171
 # view res/layout/activity_main_function_page.xml #generated:64
 -keep class com.blg.rtu.frmFunction.F_05_020 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:285
+# view res/layout/activity_main_function_page.xml #generated:290
 -keep class com.blg.rtu.frmFunction.F_05_040 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:288
+# view res/layout/activity_main_function_page.xml #generated:293
 -keep class com.blg.rtu.frmFunction.F_05_060 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:279
+# view res/layout/activity_main_function_page.xml #generated:284
 -keep class com.blg.rtu.frmFunction.F_05_070 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:147
+# view res/layout/activity_main_function_page.xml #generated:143
 -keep class com.blg.rtu.frmFunction.F_08_020 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:150
+# view res/layout/activity_main_function_page.xml #generated:146
 -keep class com.blg.rtu.frmFunction.F_08_030 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:153
+# view res/layout/activity_main_function_page.xml #generated:149
 -keep class com.blg.rtu.frmFunction.F_08_040 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:156
+# view res/layout/activity_main_function_page.xml #generated:152
 -keep class com.blg.rtu.frmFunction.F_08_050 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:159
+# view res/layout/activity_main_function_page.xml #generated:155
 -keep class com.blg.rtu.frmFunction.F_08_060 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:162
+# view res/layout/activity_main_function_page.xml #generated:158
 -keep class com.blg.rtu.frmFunction.F_08_070 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:165
+# view res/layout/activity_main_function_page.xml #generated:161
 -keep class com.blg.rtu.frmFunction.F_08_080 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:168
+# view res/layout/activity_main_function_page.xml #generated:164
 -keep class com.blg.rtu.frmFunction.F_08_090 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:174
+# view res/layout/activity_main_function_page.xml #generated:167
+-keep class com.blg.rtu.frmFunction.F_08_100 { <init>(...); }
+
+# view res/layout/activity_main_function_page.xml #generated:170
 -keep class com.blg.rtu.frmFunction.F_08_110 { <init>(...); }
+
+# view res/layout/activity_main_function_page.xml #generated:173
+-keep class com.blg.rtu.frmFunction.F_08_120 { <init>(...); }
+
+# view res/layout/activity_main_function_page.xml #generated:176
+-keep class com.blg.rtu.frmFunction.F_08_130 { <init>(...); }
+
+# view res/layout/activity_main_function_page.xml #generated:179
+-keep class com.blg.rtu.frmFunction.F_08_140 { <init>(...); }
+
+# view res/layout/activity_main_function_page.xml #generated:182
+-keep class com.blg.rtu.frmFunction.F_08_150 { <init>(...); }
 
 # view res/layout/activity_main_loopquery_page.xml #generated:44
 -keep class com.blg.rtu.frmLoopQuery.LpFragment_02 { <init>(...); }

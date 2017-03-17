@@ -27,6 +27,7 @@ import com.blg.rtu.util.Preferences;
 import com.blg.rtu.vo2xml.Vo2Xml;
 import com.blg.rtu1.MainActivity;
 import com.blg.rtu1.R;
+import com.blg.rtu1.server.CoreThread;
 
 public class F_08_070  extends FrmParent {
 	
@@ -160,7 +161,10 @@ public class F_08_070  extends FrmParent {
 			if(showDialog)new DialogAlarm().showDialog(act, "负积流量必须填写！") ;
 			return false ;
 		} 
-		
+		value = value.replace(".", "") ;
+		if(value.equals("00")) {
+			value = "0" ;
+		}
 		v = Integer.valueOf(value) ;
 		if(v < 0 || v > 999999999){
 			if(showDialog)new DialogAlarm().showDialog(act, "负积流量范围必须是0~999999999的数字！") ;
@@ -174,6 +178,7 @@ public class F_08_070  extends FrmParent {
 	 */
 	@Override
 	protected void queryCommand(){
+		CoreThread.getInstance().newRtuId(F_01_100.getInstance().getRtuSelectedItem().replaceAll(" ", ""));
 		this.sendRtuCommand(new CommandCreator().cd_77(null), false) ;
 	}
 	
@@ -194,15 +199,20 @@ public class F_08_070  extends FrmParent {
 		if(value == null || value.equals("")){
 			p.setLoraChannel(0) ;
 		}else{
+		
 			p.setLoraChannel(Integer.valueOf(value)) ;
 		}
 		value = item03.getText().toString() ;//整数部分
 		if(value == null || value.equals("")){
 			p.setLoraChannel(0) ;
 		}else{
+			value = value.replace(".", "") ;
+			if(value.equals("00")) {
+				value = "0" ;
+			}
 			p.setWaterMinus(Long.valueOf(value)) ;
 		}
-		
+		CoreThread.getInstance().newRtuId(F_01_100.getInstance().getRtuSelectedItem().replaceAll(" ", ""));
 		this.sendRtuCommand(new CommandCreator().cd_47(p, null), false) ;
 	}
 	
@@ -299,13 +309,17 @@ public class F_08_070  extends FrmParent {
 	 * 导出设置数据
 	 */
 	public void outSetData(Vo2Xml vo) {
-		//vo.setV_05_070_item01(item01.getText().toString()) ;
+		vo.setV_08_070_item01(item01.getText().toString()) ;
+		vo.setV_08_070_item02(item02.getText().toString()) ;
+		vo.setV_08_070_item03(item03.getText().toString()) ;
 	}
 	/**
 	 * 导入设置数据
 	 */
 	public void inSetData(Vo2Xml vo) {
-		//item01.setText(vo.getV_04_110_item01()) ;
+		item01.setText(vo.getV_08_070_item01()) ;
+		item02.setText(vo.getV_08_070_item02()) ;
+		item03.setText(vo.getV_08_070_item03()) ;
 	}
 	
 	@Override
