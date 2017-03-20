@@ -5,7 +5,7 @@ import java.io.Serializable;
 
 public class Param_4D implements Serializable{
 	
-	private static final long serialVersionUID = 201409240057001L;
+	private static final long serialVersionUID = 201703201149015L;
 
 	public static final String KEY = Param_4D.class.getName() ;
 

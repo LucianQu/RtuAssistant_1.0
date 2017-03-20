@@ -30,7 +30,7 @@ public class Answer_77  extends ProtocolSupport{
 		Data_77 dd = new Data_77() ;
 		d.setSubData(dd) ;
 		
-		dd.setLoraChannel((b[index++] + 256)%256) ;
+		dd.setMinusNum((b[index++] + 256)%256) ;
 		b[index + 4] =(byte)(b[index + 4] & 0xF );
 		long v1 = ByteUtil.BCD2Long_an(b, index, index + 4) ;
 		dd.setWaterMinus(v1) ;

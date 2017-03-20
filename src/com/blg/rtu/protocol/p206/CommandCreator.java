@@ -20,7 +20,9 @@ import com.blg.rtu.protocol.p206.cd43_73.Param_43;
 import com.blg.rtu.protocol.p206.cd44_74.Param_44;
 import com.blg.rtu.protocol.p206.cd45_75.Param_45;
 import com.blg.rtu.protocol.p206.cd46_76.Param_46;
+import com.blg.rtu.protocol.p206.cd46_76.Param_76;
 import com.blg.rtu.protocol.p206.cd47_77.Param_47;
+import com.blg.rtu.protocol.p206.cd47_77.Param_77;
 import com.blg.rtu.protocol.p206.cd48_78.Param_48;
 import com.blg.rtu.protocol.p206.cd49_79.Param_49;
 import com.blg.rtu.protocol.p206.cd4A_7A.Param_4A;
@@ -932,10 +934,11 @@ public class CommandCreator {
 		return com ;
 	}
 	
-	public RtuCommand cd_76(String rtuId){
+	public RtuCommand cd_76(Param_76 p ,String rtuId){
 		RtuCommand com = new RtuCommand() ;
 		com.setRtuId(rtuId);
 		com.setCommandCode(Code206.cd_76) ;
+		com.getParams().put(Param_76.KEY, p);
 		return com ;
 	}
 	
@@ -946,10 +949,11 @@ public class CommandCreator {
 		return com ;
 	}
 	
-	public RtuCommand cd_77(String rtuId){
+	public RtuCommand cd_77(Param_77 p ,String rtuId){
 		RtuCommand com = new RtuCommand() ;
 		com.setRtuId(rtuId);
 		com.setCommandCode(Code206.cd_77) ;
+		com.getParams().put(Param_77.KEY, p);
 		return com ;
 	}
 	

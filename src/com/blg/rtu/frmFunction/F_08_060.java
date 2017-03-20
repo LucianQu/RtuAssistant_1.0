@@ -20,6 +20,7 @@ import com.blg.rtu.protocol.p206.CommandCreator;
 import com.blg.rtu.protocol.p206.cd46_76.Data_46;
 import com.blg.rtu.protocol.p206.cd46_76.Data_76;
 import com.blg.rtu.protocol.p206.cd46_76.Param_46;
+import com.blg.rtu.protocol.p206.cd46_76.Param_76;
 import com.blg.rtu.util.Constant;
 import com.blg.rtu.util.DialogAlarm;
 import com.blg.rtu.util.ImageUtil;
@@ -39,6 +40,7 @@ public class F_08_060  extends FrmParent {
 	private EditText item01  ;
 	private EditText item02 ;
 	private EditText item03 ;
+	private EditText item04 ;
 	
 
 	private ImageView btnSet ;
@@ -96,6 +98,14 @@ public class F_08_060  extends FrmParent {
 		if(!str.equals(Constant.errorStr)){
 			item03.setText(str); 
 		}
+		item04 = (EditText)view.findViewById(R.id.func_08_060_item04);
+		item04.setFilters(new InputFilter[]{new InputFilter.LengthFilter(requestLen_1)});
+		item04.addTextChangedListener(new MyTextWatcher(Constant.func_vk_08_060_04));
+		
+		str = Preferences.getInstance().getString(Constant.func_vk_08_060_04) ;
+		if(!str.equals(Constant.errorStr)){
+			item04.setText(str); 
+		}
 		
 		btnSet = (ImageView)view.findViewById(R.id.btn_set);
 		btnRead = (ImageView)view.findViewById(R.id.btn_read);
@@ -121,6 +131,17 @@ public class F_08_060  extends FrmParent {
 	 */
 	@Override
 	protected boolean checkBeforeQuery(boolean showDialog){
+		String value = item04.getText().toString() ;//整数部分
+		if(value == null || value.equals("")){
+			if(showDialog)new DialogAlarm().showDialog(act, "查询水表编号必须填写！") ;
+			return false ;
+		} 
+		
+		int v = Integer.valueOf(value) ;
+		if(v < 1 || v > 8){
+			if(showDialog)new DialogAlarm().showDialog(act, "查询水表编号必须是1~8的数字！") ;
+			return false ;
+		}
 		return true ;
 	}
 	
@@ -179,8 +200,15 @@ public class F_08_060  extends FrmParent {
 	 */
 	@Override
 	protected void queryCommand(){
+		Param_76 p = new Param_76() ;
+		String value = item04.getText().toString() ;
+		if(value == null || value.equals("")) {
+			p.setPlusNum(1) ;
+		}else{
+			p.setPlusNum(Integer.valueOf(value)) ;
+		}
 		CoreThread.getInstance().newRtuId(F_01_100.getInstance().getRtuSelectedItem().replaceAll(" ", ""));
-		this.sendRtuCommand(new CommandCreator().cd_76(null), false) ;
+		this.sendRtuCommand(new CommandCreator().cd_76(p,null), false) ;
 	}
 	
 	/**
@@ -279,7 +307,8 @@ public class F_08_060  extends FrmParent {
 				
 				
 				item01.setText("") ;
-				item02.setText(sd.getLoraChannel()+"") ;
+				item02.setText("") ;
+				item04.setText(sd.getPlusNum()+"") ;
 			}else if(subD instanceof Data_46){
 				Data_46 sd = (Data_46)subD ;
 				
@@ -300,6 +329,7 @@ public class F_08_060  extends FrmParent {
 				}
 				item01.setText(sd.getPassword()) ;
 				item02.setText(sd.getLoraChannel()+"") ;
+				item04.setText("") ;
 			}
 		}
 		Preferences.getInstance().putString(Constant.func_vk_08_060_dt, this.resultDt.getText().toString()) ;

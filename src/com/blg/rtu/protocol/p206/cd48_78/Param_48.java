@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class Param_48 implements Serializable{
 	
-	private static final long serialVersionUID = 201212021604001L;
+	private static final long serialVersionUID = 201703201149010L;
 
 	public static final String KEY = Param_48.class.getName() ;
 	public static final int diameter_DN50 = 0 ;//口径50

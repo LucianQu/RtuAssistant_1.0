@@ -697,11 +697,13 @@ public class Constant {
 	public static final String func_vk_08_060_01 = "vk_08_060_01" ; 
 	public static final String func_vk_08_060_02 = "vk_08_060_02" ;
 	public static final String func_vk_08_060_03 = "vk_08_060_03" ; 
+	public static final String func_vk_08_060_04 = "vk_08_060_04" ;
 	public static final String func_vk_08_060_dt = "vk_08_060_dt" ; 
 	
 	public static final String func_vk_08_070_01 = "vk_08_070_01" ; 
 	public static final String func_vk_08_070_02 = "vk_08_070_02" ;
 	public static final String func_vk_08_070_03 = "vk_08_070_03" ; 
+	public static final String func_vk_08_070_04 = "vk_08_070_04" ; 
 	public static final String func_vk_08_070_dt = "vk_08_070_dt" ; 
 	
 	public static final String func_vk_08_080_01 = "vk_08_080_01" ; 

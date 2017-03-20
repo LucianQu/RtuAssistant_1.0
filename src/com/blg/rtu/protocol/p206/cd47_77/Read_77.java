@@ -16,7 +16,7 @@ public class Read_77  extends ProtocolSupport{
 						//	+ Constant.Bits_Time 
 							+ Constant.Bits_CRC
 							+ Constant.Bits_Tail 
-							+ 0 ;//数据域长度
+							+ 1 ;//数据域长度
 
 	
 	/**
@@ -31,10 +31,13 @@ public class Read_77  extends ProtocolSupport{
 	 */
 	public byte[] create(String code, byte controlFunCode, String rtuId, HashMap<String , Object> params, String password) throws Exception {
 		/////////////////////////////
+		Param_77 param = (Param_77)params.get(Param_77.KEY) ;
 		//构造数据
 		byte[] b = new byte[len];
 
-		this.createDownDataHead(rtuId, code, b, len, controlFunCode) ;
+		int n = this.createDownDataHead(rtuId, code, b, len, controlFunCode) ;
+		int minusNum = param.getMinusNum() ;
+		b[n++] = (byte)minusNum ;
 		
 		// 数据尾(包括CRC)
 		b = new TailProtocol().createTail(b);

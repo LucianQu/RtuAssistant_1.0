@@ -537,11 +537,13 @@
     <string name="func_08_060_item1">密码</string> 
     <string name="func_08_060_item2">Lora通道</string> 
     <string name="func_08_060_item3">正积流量</string> 
+    <string name="func_08_060_item4">查询水表终端表号</string> 
    	
     <string name="func_08_070">查询/设置负积流量</string>
     <string name="func_08_070_item1">密码</string> 
     <string name="func_08_070_item2">Lora通道</string> 
     <string name="func_08_070_item3">负积流量</string> 
+    <string name="func_08_070_item4">查询水表终端表号</string> 
     
     <string name="func_08_080">设置净积流量</string>
     <string name="func_08_080_item1">密码</string> 

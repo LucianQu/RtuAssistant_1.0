@@ -16,7 +16,7 @@ public class Read_76  extends ProtocolSupport{
 						//	+ Constant.Bits_Time 
 							+ Constant.Bits_CRC
 							+ Constant.Bits_Tail 
-							+ 0 ;//数据域长度
+							+ 1 ;//数据域长度
 
 	
 	/**
@@ -31,11 +31,13 @@ public class Read_76  extends ProtocolSupport{
 	 */
 	public byte[] create(String code, byte controlFunCode, String rtuId, HashMap<String , Object> params, String password) throws Exception {
 		/////////////////////////////
+		Param_76 param = (Param_76)params.get(Param_76.KEY) ;
 		//构造数据
 		byte[] b = new byte[len];
 
-		this.createDownDataHead(rtuId, code, b, len, controlFunCode) ;
-		
+		int n = this.createDownDataHead(rtuId, code, b, len, controlFunCode) ;
+		int plusNum = param.getPlusNum() ;
+		b[n++] = (byte)plusNum ;
 		// 数据尾(包括CRC)
 		b = new TailProtocol().createTail(b);
 		
