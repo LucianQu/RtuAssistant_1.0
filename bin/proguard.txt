@@ -6,15 +6,12 @@
 # view res/layout/fch_04.xml #generated:19
 -keep class com.blg.rtu.compound.FixHeightListView { <init>(...); }
 
-# view res/layout/activity_main_channel_page.xml #generated:32
 # view res/layout/activity_main_function_page.xml #generated:328
 -keep class com.blg.rtu.frmChannel.ChFragment_01 { <init>(...); }
 
-# view res/layout/activity_main_channel_page.xml #generated:43
 # view res/layout/activity_main_function_page.xml #generated:331
 -keep class com.blg.rtu.frmChannel.ChFragment_02 { <init>(...); }
 
-# view res/layout/activity_main_channel_page.xml #generated:55
 # view res/layout/activity_main_function_page.xml #generated:334
 -keep class com.blg.rtu.frmChannel.ChFragment_03 { <init>(...); }
 

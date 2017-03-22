@@ -40,7 +40,7 @@ public class F_08_060  extends FrmParent {
 	private EditText item01  ;
 	private EditText item02 ;
 	private EditText item03 ;
-	private EditText item04 ;
+	//private EditText item04 ;
 	
 
 	private ImageView btnSet ;
@@ -98,7 +98,7 @@ public class F_08_060  extends FrmParent {
 		if(!str.equals(Constant.errorStr)){
 			item03.setText(str); 
 		}
-		item04 = (EditText)view.findViewById(R.id.func_08_060_item04);
+		/*item04 = (EditText)view.findViewById(R.id.func_08_060_item04);
 		item04.setFilters(new InputFilter[]{new InputFilter.LengthFilter(requestLen_1)});
 		item04.addTextChangedListener(new MyTextWatcher(Constant.func_vk_08_060_04));
 		
@@ -106,7 +106,7 @@ public class F_08_060  extends FrmParent {
 		if(!str.equals(Constant.errorStr)){
 			item04.setText(str); 
 		}
-		
+		*/
 		btnSet = (ImageView)view.findViewById(R.id.btn_set);
 		btnRead = (ImageView)view.findViewById(R.id.btn_read);
 		resultDt = (TextView)view.findViewById(R.id.resultDatetime);
@@ -131,15 +131,15 @@ public class F_08_060  extends FrmParent {
 	 */
 	@Override
 	protected boolean checkBeforeQuery(boolean showDialog){
-		String value = item04.getText().toString() ;//整数部分
+		String value = item02.getText().toString() ;//整数部分
 		if(value == null || value.equals("")){
-			if(showDialog)new DialogAlarm().showDialog(act, "查询水表编号必须填写！") ;
+			if(showDialog)new DialogAlarm().showDialog(act, "水表编号必须填写！") ;
 			return false ;
 		} 
 		
 		int v = Integer.valueOf(value) ;
 		if(v < 1 || v > 8){
-			if(showDialog)new DialogAlarm().showDialog(act, "查询水表编号必须是1~8的数字！") ;
+			if(showDialog)new DialogAlarm().showDialog(act, "水表编号必须是1~8的数字！") ;
 			return false ;
 		}
 		return true ;
@@ -166,13 +166,13 @@ public class F_08_060  extends FrmParent {
 		/////////////////////////////////////
 		value = item02.getText().toString() ;//整数部分
 		if(value == null || value.equals("")){
-			if(showDialog)new DialogAlarm().showDialog(act, "Lora通道必须填写！") ;
+			if(showDialog)new DialogAlarm().showDialog(act, "水表编号必须填写！") ;
 			return false ;
 		} 
 		
 		v = Integer.valueOf(value) ;
 		if(v < 1 || v > 8){
-			if(showDialog)new DialogAlarm().showDialog(act, "通道范围必须是1~8的数字！") ;
+			if(showDialog)new DialogAlarm().showDialog(act, "水表编号范围必须是1~8的数字！") ;
 			return false ;
 		}
 		/////////////////////////////////////
@@ -201,7 +201,7 @@ public class F_08_060  extends FrmParent {
 	@Override
 	protected void queryCommand(){
 		Param_76 p = new Param_76() ;
-		String value = item04.getText().toString() ;
+		String value = item02.getText().toString() ;
 		if(value == null || value.equals("")) {
 			p.setPlusNum(1) ;
 		}else{
@@ -299,16 +299,18 @@ public class F_08_060  extends FrmParent {
 					}
 				}else{
 					if ((waterPlus / 1000) > 0) {
-						item03.setText((waterPlus / 1000) + "." + (waterPlus + 1000) % 1000) ;
+						item03.setText((waterPlus / 1000) + "." + ((waterPlus%100)/100 > 0 ? waterPlus%1000 :( 
+										(waterPlus %100)/10 >0 ?("0" + waterPlus%1000): ("00" + (waterPlus%10 ==0?"0":waterPlus%1000)))));
 					}else if((waterPlus / 1000) == 0){
-						item03.setText("0." + (waterPlus + 1000) % 1000) ;
+						item03.setText("0" + "." + ((waterPlus%100)/100 > 0 ? waterPlus%1000 :( 
+								(waterPlus %100)/10 >0 ?("0" + waterPlus%1000): ("00" + (waterPlus%10 ==0?"0":waterPlus%1000)))));
 					}
 				}
 				
 				
 				item01.setText("") ;
-				item02.setText("") ;
-				item04.setText(sd.getPlusNum()+"") ;
+				//item02.setText("") ;
+				item02.setText(sd.getPlusNum()+"") ;
 			}else if(subD instanceof Data_46){
 				Data_46 sd = (Data_46)subD ;
 				
@@ -322,14 +324,16 @@ public class F_08_060  extends FrmParent {
 					}
 				}else{
 					if ((waterPlus / 1000) > 0) {
-						item03.setText((waterPlus / 1000) + "." + (waterPlus + 1000) % 1000) ;
+						item03.setText((waterPlus / 1000) + "." + ((waterPlus%100)/100 > 0 ? waterPlus%1000 :( 
+								(waterPlus %100)/10 >0 ?("0" + waterPlus%1000): ("00" + (waterPlus%10 ==0?"0":waterPlus%1000)))));
 					}else if((waterPlus / 1000) == 0){
-						item03.setText("0." + (waterPlus + 1000) % 1000) ;
+						item03.setText("0" + "." + ((waterPlus%100)/100 > 0 ? waterPlus%1000 :( 
+								(waterPlus %100)/10 >0 ?("0" + waterPlus%1000): ("00" + (waterPlus%10 ==0?"0":waterPlus%1000)))));
 					}
 				}
 				item01.setText(sd.getPassword()) ;
 				item02.setText(sd.getLoraChannel()+"") ;
-				item04.setText("") ;
+				//item04.setText("") ;
 			}
 		}
 		Preferences.getInstance().putString(Constant.func_vk_08_060_dt, this.resultDt.getText().toString()) ;

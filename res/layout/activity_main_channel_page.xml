@@ -25,7 +25,7 @@
 	        android:drawablePadding="5.0dp" />
  	</LinearLayout>
  	
- 	<LinearLayout 
+ 	<!-- <LinearLayout 
  	    android:id="@+id/chLine_01"
 	    android:layout_width="match_parent"
 	    android:layout_height="130dp" >
@@ -34,9 +34,9 @@
 			 android:layout_width="match_parent"
 			 android:layout_height="match_parent"
 			 android:layout_gravity="center_vertical"/>
- 	</LinearLayout>
+ 	</LinearLayout> -->
  	
- 	<LinearLayout 
+ 	<!-- <LinearLayout 
 	    android:id="@+id/chLine_02"
 	    android:layout_width="match_parent"
 	    android:layout_height="55dp" >
@@ -45,10 +45,10 @@
 			 android:layout_width="match_parent"
 			 android:layout_height="match_parent"
 			 android:layout_gravity="center_vertical"/>
- 	</LinearLayout>
+ 	</LinearLayout> -->
  		
  	
- 	<LinearLayout 
+ 	<!-- <LinearLayout 
 	    android:id="@+id/chLine_03"
 	    android:layout_width="match_parent"
 	    android:layout_height="55dp" >
@@ -57,7 +57,7 @@
 			 android:layout_width="match_parent"
 			 android:layout_height="match_parent"
 			 android:layout_gravity="center_vertical"/>
- 	</LinearLayout>
+ 	</LinearLayout> -->
  		
  	<LinearLayout 
 	    android:id="@+id/chLine_04"

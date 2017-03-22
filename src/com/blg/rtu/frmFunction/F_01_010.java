@@ -306,7 +306,7 @@ public class F_01_010  extends FrmParent {
 	public void receiveRtuData(RtuData d){
 		super.receiveRtuData(d) ;
 		this.title.setCompoundDrawables(ImageUtil.getTitlLeftImg_item001(this.act), null, ImageUtil.getTitlRightImg_green(this.act), null); 
-//		super.scrollTo(this.btnRead) ;
+		//super.scrollTo(this.btnRead) ;
 		
 		Preferences p = Preferences.getInstance() ;
 		

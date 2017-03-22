@@ -57,20 +57,20 @@
 				    style="@style/func_item_editnumber_style_120"/>
 			   
 			</LinearLayout>
-			<LinearLayout
+		<!-- 	<LinearLayout
 			    android:layout_width="match_parent"
 			    android:layout_height="@dimen/common_line_height40"
 			    >
 			    <TextView
 			        android:text="@string/func_08_060_item4"
 			    	style="@style/func_item_viewtext_style_100_a"/>
-			    <!-- 新版本SDK要求填写属性lableFor,类似于填写一个ID来绑定这个控件，否则警告 -->
+			    新版本SDK要求填写属性lableFor,类似于填写一个ID来绑定这个控件，否则警告
 			    <EditText
 					android:id="@+id/func_08_060_item04"  
 					android:labelFor="@id/func_08_060_item04" 
 				    style="@style/func_item_editnumber_style_120"/>
 			   
-			</LinearLayout>
+			</LinearLayout> -->
 			<LinearLayout
 			    android:layout_width="match_parent"
 			    android:layout_height="@dimen/common_line_height40"

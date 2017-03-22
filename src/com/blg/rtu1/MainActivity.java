@@ -57,7 +57,7 @@ public class MainActivity  extends Activity {
 	private View pageView_noProtocol ;// Tab第0页 
 	private View pageView_loopQuery ;// Tab第1页 
 	private View pageView_function ;// Tab第2页 
-	//private View pageView_channel ;// Tab第3页
+	private View pageView_channel ;// Tab第3页
 	
 	public Boolean tcpConnected;
 	public TextView tcpConnectStatus;
@@ -272,13 +272,13 @@ public class MainActivity  extends Activity {
 		pageView_noProtocol = mInflater.inflate(R.layout.activity_main_noprotocol_page, null) ;
 		pageView_loopQuery = mInflater.inflate(R.layout.activity_main_loopquery_page, null) ;
 		pageView_function = mInflater.inflate(R.layout.activity_main_function_page, null) ;
-		//pageView_channel = mInflater.inflate(R.layout.activity_main_channel_page, null) ;
+		pageView_channel = mInflater.inflate(R.layout.activity_main_channel_page, null) ;
 		
 		listPages = new ArrayList<View>();
 		listPages.add(pageView_noProtocol);
 		listPages.add(pageView_loopQuery);
 		listPages.add(pageView_function);
-		//listPages.add(pageView_channel);
+		listPages.add(pageView_channel);
 		
 		tcpConnectStatus = (TextView) findViewById(R.id.tcpConnectStatus1);
 		switchFun = (TextView) findViewById(R.id.switchFun) ;
@@ -317,9 +317,9 @@ public class MainActivity  extends Activity {
 		//功能子页
 	func_scrollView = (ScrollView)pageView_function.findViewById(R.id.f_func_scrollView) ;
        
-	/*		chLine_01 = (LinearLayout)pageView_channel.findViewById(R.id.chLine_01) ;
+			/*chLine_01 = (LinearLayout)pageView_channel.findViewById(R.id.chLine_01) ;
 		chLine_02 = (LinearLayout)pageView_channel.findViewById(R.id.chLine_02) ;
-		chLine_03 = (LinearLayout)pageView_channel.findViewById(R.id.chLine_03) ;
+		chLine_03 = (LinearLayout)pageView_channel.findViewById(R.id.chLine_03) ;*/
 		chLine_04 = (LinearLayout)pageView_channel.findViewById(R.id.chLine_04) ;
 		
 		chLine_04.setOnLongClickListener(new OnLongClickListener(){
@@ -328,7 +328,7 @@ public class MainActivity  extends Activity {
 				pageView_channel_OnLongClick() ;
 				return false;
 			}
-		}) ;*/
+		}) ;
 		
 		npFragmentLinear_02 = (LinearLayout)pageView_noProtocol.findViewById(R.id.npFragmentLinear_02) ;
 		npFragmentLinear_03 = (LinearLayout)pageView_noProtocol.findViewById(R.id.npFragmentLinear_03) ;

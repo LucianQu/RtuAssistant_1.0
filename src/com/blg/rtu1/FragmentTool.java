@@ -116,9 +116,9 @@ public class FragmentTool {
         fragment_loopq03 = (LpFragment_03)fm.findFragmentById(R.id.lqFragment_03) ;
         fragment_loopq04 = (LpFragment_04)fm.findFragmentById(R.id.lqFragment_04) ;
         
-        fragment_ch01 = (ChFragment_01)fm.findFragmentById(R.id.chFragment_01) ;
+  /*      fragment_ch01 = (ChFragment_01)fm.findFragmentById(R.id.chFragment_01) ;
         fragment_ch02 = (ChFragment_02)fm.findFragmentById(R.id.chFragment_02) ;
-        fragment_ch03 = (ChFragment_03)fm.findFragmentById(R.id.chFragment_03) ;
+        fragment_ch03 = (ChFragment_03)fm.findFragmentById(R.id.chFragment_03) ;*/
         fragment_ch04 = (ChFragment_04)fm.findFragmentById(R.id.chFragment_04) ;
         fragment_ch05 = (ChFragment_05)fm.findFragmentById(R.id.chFragment_05) ;
        /* f_01_010 = (F_01_010)fm.findFragmentById(R.id.f_01_010) ;
