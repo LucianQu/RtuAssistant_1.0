@@ -1,4 +1,4 @@
-# view res/layout/activity_main.xml #generated:180
+# view res/layout/activity_main.xml #generated:200
 -keep class android.support.v4.view.ViewPager { <init>(...); }
 
 # view res/layout/f_func_05_040.xml #generated:102
@@ -15,10 +15,9 @@
 # view res/layout/activity_main_function_page.xml #generated:334
 -keep class com.blg.rtu.frmChannel.ChFragment_03 { <init>(...); }
 
-# view res/layout/activity_main_channel_page.xml #generated:67
+# view res/layout/activity_main_channel_page.xml #generated:68
 -keep class com.blg.rtu.frmChannel.ChFragment_04 { <init>(...); }
 
-# view res/layout/activity_main_channel_page.xml #generated:79
 # view res/layout/activity_main_function_page.xml #generated:337
 -keep class com.blg.rtu.frmChannel.ChFragment_05 { <init>(...); }
 

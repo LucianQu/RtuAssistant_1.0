@@ -72,7 +72,7 @@ public class ChFragment_04 extends Fragment {
 		
 		rtuDatasListView  = (FixHeightListView)this.view.findViewById(R.id.chRtuDataListView) ;
 		
-		setRtuDatasListViewHeight(ResourceUtils.getXmlDef(act, R.dimen.ch_rtuDataListViewHeight_small)) ;
+		setRtuDatasListViewHeight(ResourceUtils.getXmlDef(act, R.dimen.ch_rtuDataListViewHeight_big)) ;
         
         rtuDatasListViewAdapter = new RtuDataListViewAdapter(this.act, this) ;
 		rtuDatasListView.setAdapter(rtuDatasListViewAdapter);
@@ -150,6 +150,7 @@ public class ChFragment_04 extends Fragment {
 	public void setRtuData(RtuData data){
 		ListRtuData vo = new ListRtuData() ;
 		vo.direct = Constant.derictUp ;
+		//vo.direct = "命令" ;
 		vo.channel = Constant.channelType(data.channelType.intValue()) ;
 		vo.dt = DateTime.yyyy_MM_dd_HH_mm_ss() ;
 		vo.rtuId = data.rtuId ;

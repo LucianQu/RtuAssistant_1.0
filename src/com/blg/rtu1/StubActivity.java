@@ -377,7 +377,7 @@ public class StubActivity extends ActivityAidl.Stub{
 						mAct.frgTool.fragment_loopq03.receiveRtuData(data) ;
 					}*/
 				}
-				//mAct.frgTool.fragment_ch04.setRtuData(data) ;
+				mAct.frgTool.fragment_ch04.setRtuData(data) ;
 				mAct.getSoundAlert().playMessage() ;
 			}
 		});
@@ -409,7 +409,7 @@ public class StubActivity extends ActivityAidl.Stub{
 		mAct.mHandler.post(new Runnable(){
 			@Override
 			public void run() {
-				//mAct.frgTool.fragment_ch04.setSendBackCommandData(data) ;
+				mAct.frgTool.fragment_ch04.setSendBackCommandData(data) ;
 				
 				if(data.dataCode != null && !data.dataCode.equals("")){
 					if(data.dataCode.equals(Code206.cd_10) || data.dataCode.equals(Code206.cd_50)){
@@ -732,9 +732,9 @@ public class StubActivity extends ActivityAidl.Stub{
 			mAct.mHandler.post(new Runnable(){
 				@Override
 				public void run() {
-					if(code.equals(Code206.cd_10)){//设置遥测终端、中继站地址
+					/*if(code.equals(Code206.cd_10)){//设置遥测终端、中继站地址
 						mAct.frgTool.f_01_010.autoSet() ;
-					}else
+					}else*/
 					if(code.equals(Code206.cd_11)){//设置遥测终端、中继站时钟
 						mAct.frgTool.f_01_020.autoSet() ;
 					}else
@@ -865,7 +865,7 @@ public class StubActivity extends ActivityAidl.Stub{
 		mAct.mHandler.post(new Runnable(){
 			@Override
 			public void run() {
-				//mAct.frgTool.fragment_ch04.setRtuData(data) ;
+				mAct.frgTool.fragment_ch04.setRtuData(data) ;
 			}
 		});
 	}

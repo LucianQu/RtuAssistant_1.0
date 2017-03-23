@@ -17,7 +17,7 @@
     
     <string name="functionItems">功能选项</string>
     <string name="functionLoopQuery">一键查询</string>
-    <string name="functionChannel">通道选项</string>
+    <string name="functionResultLog">命令日志</string>
     <string name="functionNoProtocol">调试信息</string>
     
     <string name="image_description">图片</string>

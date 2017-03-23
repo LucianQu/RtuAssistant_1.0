@@ -27,6 +27,7 @@ import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.View.OnLongClickListener;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
@@ -65,6 +66,7 @@ public class MainActivity  extends Activity {
 	public TextView switchFun ;
 	public TextView switchOnce ;
 	public TextView switchQuery ;
+	public TextView switchLog ;
 	
 	public ScrollView func_scrollView ;
 	
@@ -284,7 +286,7 @@ public class MainActivity  extends Activity {
 		switchFun = (TextView) findViewById(R.id.switchFun) ;
 		switchOnce = (TextView) findViewById(R.id.switchOnce) ;
 		switchQuery = (TextView) findViewById(R.id.switchQuery) ;
-		
+		switchLog = (TextView) findViewById(R.id.switchLog) ;
 		
 		//获取滚动条的宽度
 		bmpW = BitmapFactory.decodeResource(this.getResources(), R.drawable.scrollbar).getWidth();
@@ -295,7 +297,7 @@ public class MainActivity  extends Activity {
 		//得到屏幕的宽度
 		int screenW = displayMetrics.widthPixels ;
 		//计算出滚动条初始的偏移量
-		offset = (screenW / 3 - bmpW) / 2 ;
+		offset = (screenW / 4 - bmpW) / 2 ;
 		//计算出切换一个界面时，滚动条的位移量
 		doubleRoll = offset * 2 + bmpW ;
 		
@@ -312,6 +314,7 @@ public class MainActivity  extends Activity {
 		switchQuery.setOnClickListener(new clickLableListener()) ; 
 		switchOnce.setOnClickListener(new clickLableListener()) ; 
 		switchFun.setOnClickListener(new clickLableListener()) ;
+		switchLog.setOnClickListener(new clickLableListener()) ;
 		
 		//////////////////////////////////////////////////////////////
 		//功能子页
@@ -338,8 +341,8 @@ public class MainActivity  extends Activity {
         //实例化fragment回调类对象
         this.frgCallback = new FragmentCallback(this) ;
         //实例化主界面设置帮助类对象
-        //this.mainHelp = new MainActivityHelp(this, pageView_noProtocol, pageView_loopQuery, pageView_function, pageView_channel) ;
-        this.mainHelp = new MainActivityHelp(this, pageView_noProtocol, pageView_loopQuery, pageView_function) ;
+        this.mainHelp = new MainActivityHelp(this, pageView_noProtocol, pageView_loopQuery, pageView_function, pageView_channel) ;
+        //this.mainHelp = new MainActivityHelp(this, pageView_noProtocol, pageView_loopQuery, pageView_function) ;
         //执行初始设置
         this.mainHelp.onCreateView() ;
 	}
@@ -348,20 +351,20 @@ public class MainActivity  extends Activity {
 	 * 最小面部分界面最大小化，其他部分界面隐藏
 	 */
 	public void pageView_channel_OnLongClick(){
-		int vis = chLine_01.getVisibility() ;
-		if(vis == View.VISIBLE){
-			chLine_01.setVisibility(View.GONE) ;
+		//int vis = chLine_01.getVisibility() ;
+		//if(vis == View.VISIBLE){
+		/*	chLine_01.setVisibility(View.GONE) ;
 			chLine_02.setVisibility(View.GONE) ;
-			chLine_03.setVisibility(View.GONE) ;
+			chLine_03.setVisibility(View.GONE) ;*/
 			
 			frgTool.fragment_ch04.setRtuDatasListViewHeight(ResourceUtils.getXmlDef(this, R.dimen.ch_rtuDataListViewHeight_big)) ;
-		}else{
-			chLine_01.setVisibility(View.VISIBLE) ;
+		//}else{
+		/*	chLine_01.setVisibility(View.VISIBLE) ;
 			chLine_02.setVisibility(View.VISIBLE) ;
-			chLine_03.setVisibility(View.VISIBLE) ;
+			chLine_03.setVisibility(View.VISIBLE) ;*/
 			
-			frgTool.fragment_ch04.setRtuDatasListViewHeight(ResourceUtils.getXmlDef(this, R.dimen.ch_rtuDataListViewHeight_small)) ;
-		}
+			//frgTool.fragment_ch04.setRtuDatasListViewHeight(ResourceUtils.getXmlDef(this, R.dimen.ch_rtuDataListViewHeight_small)) ;
+		//}
 	}
 	
 	/**
@@ -495,6 +498,15 @@ public class MainActivity  extends Activity {
 			case R.id.switchFun:
 				mPager.setCurrentItem(2) ;
 				defaultAnimation(2) ;
+				break ;
+			case R.id.switchLog:
+				mPager.setCurrentItem(3) ;
+				defaultAnimation(3) ;
+				break ;
+			default :
+				mPager.setCurrentItem(2) ;
+				defaultAnimation(2) ;
+				break ;
 			}
 		}
 		
@@ -525,19 +537,28 @@ public class MainActivity  extends Activity {
 	                        switchQuery.setTextColor(Color.parseColor("#4c79c5")) ;
 	            			switchOnce.setTextColor(Color.parseColor("#b2b2b2")) ;
 	            			switchFun.setTextColor(Color.parseColor("#b2b2b2")) ;
+	            			switchLog.setTextColor(Color.parseColor("#b2b2b2")) ;
 	                    break;
 	                case 1:
 	                        animation = new TranslateAnimation(doubleRoll + offset, doubleRoll, 0, 0);
 	                        switchQuery.setTextColor(Color.parseColor("#b2b2b2")) ;
 	            			switchOnce.setTextColor(Color.parseColor("#4c79c5")) ;
 	            			switchFun.setTextColor(Color.parseColor("#b2b2b2")) ;
+	            			switchLog.setTextColor(Color.parseColor("#b2b2b2")) ;
 	                    break;
 	                case 2:
                         animation = new TranslateAnimation(2*doubleRoll + offset, 2*doubleRoll, 0, 0);
                         switchQuery.setTextColor(Color.parseColor("#b2b2b2")) ;
             			switchOnce.setTextColor(Color.parseColor("#b2b2b2")) ;
             			switchFun.setTextColor(Color.parseColor("#4c79c5")) ;
-            			//switchFun.setTextColor(Color.parseColor("#4c79c5"));
+            			switchLog.setTextColor(Color.parseColor("#b2b2b2")) ;
+                    break;
+	                case 3:
+                        animation = new TranslateAnimation(3*doubleRoll + offset, 3*doubleRoll, 0, 0);
+                        switchQuery.setTextColor(Color.parseColor("#b2b2b2")) ;
+            			switchOnce.setTextColor(Color.parseColor("#b2b2b2")) ;
+            			switchFun.setTextColor(Color.parseColor("#b2b2b2")) ;
+            			switchLog.setTextColor(Color.parseColor("#4c79c5")) ;
                     break;
 	            }
 	          //arg0为切换到的页的编码
@@ -567,12 +588,14 @@ public class MainActivity  extends Activity {
 			switchQuery.setTextColor(Color.parseColor("#4c79c5")) ;
 			switchOnce.setTextColor(Color.parseColor("#b2b2b2")) ;
 			switchFun.setTextColor(Color.parseColor("#b2b2b2")) ;
+			switchLog.setTextColor(Color.parseColor("#b2b2b2")) ;
 			break ;
 		case 1:
 			animation = new TranslateAnimation(doubleRoll + offset, doubleRoll , 0 , 0) ;
 			switchQuery.setTextColor(Color.parseColor("#b2b2b2")) ;
 			switchOnce.setTextColor(Color.parseColor("#4c79c5")) ;
 			switchFun.setTextColor(Color.parseColor("#b2b2b2")) ;
+			switchLog.setTextColor(Color.parseColor("#b2b2b2")) ;
 			
 			break ;
 		case 2:
@@ -580,7 +603,15 @@ public class MainActivity  extends Activity {
 			switchQuery.setTextColor(Color.parseColor("#b2b2b2")) ;
 			switchOnce.setTextColor(Color.parseColor("#b2b2b2")) ;
 			switchFun.setTextColor(Color.parseColor("#4c79c5")) ;
+			switchLog.setTextColor(Color.parseColor("#b2b2b2")) ;
 			break ;
+		 case 3:
+             animation = new TranslateAnimation(3*doubleRoll + offset, 3*doubleRoll, 0, 0);
+             switchQuery.setTextColor(Color.parseColor("#b2b2b2")) ;
+ 			switchOnce.setTextColor(Color.parseColor("#b2b2b2")) ;
+ 			switchFun.setTextColor(Color.parseColor("#b2b2b2")) ;
+ 			switchLog.setTextColor(Color.parseColor("#4c79c5")) ;
+         break;
 		}
 		currIndex = arg0 ;
 		animation.setFillAfter(true) ;

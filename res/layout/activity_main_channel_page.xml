@@ -5,9 +5,9 @@
     android:layout_height="match_parent"
     android:layout_gravity="center_vertical"
     android:orientation="vertical"
-    android:background="@drawable/deskbg4">
+    android:background="#f0eff5">
     
- 	<LinearLayout 
+ <!-- 	<LinearLayout 
 	    android:layout_width="match_parent"
 	    android:layout_height="36dp" 
 	    android:background="@drawable/line_top_bg_c">
@@ -17,13 +17,13 @@
 	        android:paddingLeft="20dp"
 	        android:layout_gravity="center_vertical"
 	        android:gravity="center_vertical"
-	        android:text="@string/functionChannel"
+	        android:text="@string/functionResultLog"
 	        android:textSize="@dimen/text18"
 	        android:textColor="#FFFFFF"
 	        android:textStyle="bold"
 	        android:drawableLeft="@drawable/func_channel"  
 	        android:drawablePadding="5.0dp" />
- 	</LinearLayout>
+ 	</LinearLayout> -->
  	
  	<!-- <LinearLayout 
  	    android:id="@+id/chLine_01"
@@ -62,8 +62,9 @@
  	<LinearLayout 
 	    android:id="@+id/chLine_04"
 	    android:layout_width="match_parent"
-	    android:layout_height="0dp" 
-	    android:layout_weight="1" >
+	    android:layout_height="match_parent" 
+
+	    >
 		<fragment android:id="@+id/chFragment_04"
 			 android:name="com.blg.rtu.frmChannel.ChFragment_04"
 			 android:layout_width="match_parent"
@@ -71,7 +72,7 @@
 			 android:layout_gravity="center_vertical"/>
  	</LinearLayout>
  	
- 	<LinearLayout 
+ 	<!-- <LinearLayout 
 	    android:id="@+id/chLine_05"
 	    android:layout_width="match_parent"
 	    android:layout_height="0dp" 
@@ -81,7 +82,7 @@
 			 android:layout_width="match_parent"
 			 android:layout_height="match_parent" 
 			 android:layout_gravity="center_vertical"/>
- 	</LinearLayout>
+ 	</LinearLayout> -->
 
  	<TextView 
  	    android:clickable="true"

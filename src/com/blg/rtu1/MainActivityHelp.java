@@ -51,12 +51,12 @@ public class MainActivityHelp {
 	private LinearLayout func_08;
 	private int clickSubItem = 1;
 	private int clickMainItem = 1;
-	public MainActivityHelp(MainActivity mainAct, View pageView_noProtocol, View pageView_loopQuery, View pageView_function) {
+	public MainActivityHelp(MainActivity mainAct, View pageView_noProtocol, View pageView_loopQuery, View pageView_function, View pageView_channel) {
 		this.mainAct = mainAct;
 		this.pageView_noProtocol = pageView_noProtocol;
 		this.pageView_loopQuery = pageView_loopQuery ;
 		this.pageView_function = pageView_function;
-		//this.pageView_channel = pageView_channel;
+		this.pageView_channel = pageView_channel;
 	}
 
 	public void onCreateView() {
