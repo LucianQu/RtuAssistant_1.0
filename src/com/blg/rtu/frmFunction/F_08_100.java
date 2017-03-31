@@ -195,115 +195,122 @@ public class F_08_100  extends FrmParent {
 	protected boolean checkBeforeSet(boolean showDialog){
 		String 
 		value = item01.getText().toString() ;//整数部分
+		int v = 0 ;
 		if(value == null || value.equals("")){
-			if(showDialog)new DialogAlarm().showDialog(act, "正向第一分区系数必须填写！") ;
-			return false ;
-		} 
-		int v = Integer.valueOf(value) ;
-		if(v < 0 || v > 9999){
-			if(showDialog)new DialogAlarm().showDialog(act, "正向第一分区系数必须是0~9999的数字！") ;
-			return false ;
+			/*if(showDialog)new DialogAlarm().showDialog(act, "正向第一分区系数必须填写！") ;
+			return false ;*/
+		}else{
+			v = Integer.valueOf(value) ;
+			if(v < 0 || v > 9999){
+				if(showDialog)new DialogAlarm().showDialog(act, "正向第一分区系数必须是0~9999的数字！") ;
+				return false ;
+			}
 		}
+		
 		
 		value = item02.getText().toString() ;//整数部分
 		if(value == null || value.equals("")){
-			if(showDialog)new DialogAlarm().showDialog(act, "正向第二分区系数必须填写！") ;
-			return false ;
-		} 
-		v = Integer.valueOf(value) ;
-		if(v < 0 || v > 9999){
-			if(showDialog)new DialogAlarm().showDialog(act, "正向第二分区系数必须是0~9999的数字！") ;
-			return false ;
+			/*if(showDialog)new DialogAlarm().showDialog(act, "正向第二分区系数必须填写！") ;
+			return false ;*/
+		}else{
+			v = Integer.valueOf(value) ;
+			if(v < 0 || v > 9999){
+				if(showDialog)new DialogAlarm().showDialog(act, "正向第二分区系数必须是0~9999的数字！") ;
+				return false ;
+			}
 		}
+		
 		
 		value = item03.getText().toString() ;//整数部分
 		if(value == null || value.equals("")){
-			if(showDialog)new DialogAlarm().showDialog(act, "正向第三分区系数必须填写！") ;
-			return false ;
-		} 
-		v = Integer.valueOf(value) ;
-		if(v < 0 || v > 9999){
-			if(showDialog)new DialogAlarm().showDialog(act, "正向第三分区系数必须是0~9999的数字！") ;
-			return false ;
+			/*if(showDialog)new DialogAlarm().showDialog(act, "正向第三分区系数必须填写！") ;
+			return false ;*/
+		}else{
+			v = Integer.valueOf(value) ;
+			if(v < 0 || v > 9999){
+				if(showDialog)new DialogAlarm().showDialog(act, "正向第三分区系数必须是0~9999的数字！") ;
+				return false ;
+			}
 		}
-		
 		value = item04.getText().toString() ;//整数部分
 		if(value == null || value.equals("")){
-			if(showDialog)new DialogAlarm().showDialog(act, "正向第四分区系数必须填写！") ;
-			return false ;
-		} 
-		v = Integer.valueOf(value) ;
-		if(v < 0 || v > 9999){
-			if(showDialog)new DialogAlarm().showDialog(act, "正向第四分区系数必须是0~9999的数字！") ;
-			return false ;
+		/*	if(showDialog)new DialogAlarm().showDialog(act, "正向第四分区系数必须填写！") ;
+			return false ;*/
+		}else{
+			v = Integer.valueOf(value) ;
+			if(v < 0 || v > 9999){
+				if(showDialog)new DialogAlarm().showDialog(act, "正向第四分区系数必须是0~9999的数字！") ;
+				return false ;
+			}
 		}
-		
 		value = item05.getText().toString() ;//整数部分
 		if(value == null || value.equals("")){
-			if(showDialog)new DialogAlarm().showDialog(act, "正向第五分区系数必须填写！") ;
-			return false ;
-		} 
-		v = Integer.valueOf(value) ;
-		if(v < 0 || v > 9999){
-			if(showDialog)new DialogAlarm().showDialog(act, "正向第五分区系数必须是0~9999的数字！") ;
-			return false ;
+			/*if(showDialog)new DialogAlarm().showDialog(act, "正向第五分区系数必须填写！") ;
+			return false ;*/
+		}else{
+			v = Integer.valueOf(value) ;
+			if(v < 0 || v > 9999){
+				if(showDialog)new DialogAlarm().showDialog(act, "正向第五分区系数必须是0~9999的数字！") ;
+				return false ;
+			}
 		}
+		
 	////////////////////////////////////////////////////////////
 		value = item06.getText().toString() ;//整数部分
 		if(value == null || value.equals("")){
-			if(showDialog)new DialogAlarm().showDialog(act, "反向第一分区系数必须填写！") ;
-			return false ;
-		} 
-		v = Integer.valueOf(value) ;
-		if(v < 0 || v > 9999){
-			if(showDialog)new DialogAlarm().showDialog(act, "反向第一分区系数必须是0~9999的数字！") ;
-			return false ;
+			/*if(showDialog)new DialogAlarm().showDialog(act, "反向第一分区系数必须填写！") ;
+			return false ;*/
+		}else{
+			v = Integer.valueOf(value) ;
+			if(v < 0 || v > 9999){
+				if(showDialog)new DialogAlarm().showDialog(act, "反向第一分区系数必须是0~9999的数字！") ;
+				return false ;
+			}
 		}
-		
 		value = item07.getText().toString() ;//整数部分
 		if(value == null || value.equals("")){
-			if(showDialog)new DialogAlarm().showDialog(act, "反向第二分区系数必须填写！") ;
-			return false ;
-		} 
-		v = Integer.valueOf(value) ;
-		if(v < 0 || v > 9999){
-			if(showDialog)new DialogAlarm().showDialog(act, "反向第二分区系数必须是0~9999的数字！") ;
-			return false ;
+			/*if(showDialog)new DialogAlarm().showDialog(act, "反向第二分区系数必须填写！") ;
+			return false ;*/
+		}else{
+			v = Integer.valueOf(value) ;
+			if(v < 0 || v > 9999){
+				if(showDialog)new DialogAlarm().showDialog(act, "反向第二分区系数必须是0~9999的数字！") ;
+				return false ;
+			}
 		}
-		
 		value = item08.getText().toString() ;//整数部分
 		if(value == null || value.equals("")){
-			if(showDialog)new DialogAlarm().showDialog(act, "反向第三分区系数必须填写！") ;
-			return false ;
-		} 
-		v = Integer.valueOf(value) ;
-		if(v < 0 || v > 9999){
-			if(showDialog)new DialogAlarm().showDialog(act, "反向第三分区系数必须是0~9999的数字！") ;
-			return false ;
+			/*if(showDialog)new DialogAlarm().showDialog(act, "反向第三分区系数必须填写！") ;
+			return false ;*/
+		}else{
+			v = Integer.valueOf(value) ;
+			if(v < 0 || v > 9999){
+				if(showDialog)new DialogAlarm().showDialog(act, "反向第三分区系数必须是0~9999的数字！") ;
+				return false ;
+			}
 		}
-		
 		value = item09.getText().toString() ;//整数部分
 		if(value == null || value.equals("")){
-			if(showDialog)new DialogAlarm().showDialog(act, "反向第四分区系数必须填写！") ;
-			return false ;
-		} 
-		v = Integer.valueOf(value) ;
-		if(v < 0 || v > 9999){
-			if(showDialog)new DialogAlarm().showDialog(act, "反向第四分区系数必须是0~9999的数字！") ;
-			return false ;
+			/*if(showDialog)new DialogAlarm().showDialog(act, "反向第四分区系数必须填写！") ;
+			return false ;*/
+		}else{
+			v = Integer.valueOf(value) ;
+			if(v < 0 || v > 9999){
+				if(showDialog)new DialogAlarm().showDialog(act, "反向第四分区系数必须是0~9999的数字！") ;
+				return false ;
+			}
 		}
-		
 		value = item10.getText().toString() ;//整数部分
 		if(value == null || value.equals("")){
-			if(showDialog)new DialogAlarm().showDialog(act, "反向第五分区系数必须填写！") ;
-			return false ;
-		} 
-		v = Integer.valueOf(value) ;
-		if(v < 0 || v > 9999){
-			if(showDialog)new DialogAlarm().showDialog(act, "反向第五分区系数必须是0~9999的数字！") ;
-			return false ;
+			/*if(showDialog)new DialogAlarm().showDialog(act, "反向第五分区系数必须填写！") ;
+			return false ;*/
+		}else{
+			v = Integer.valueOf(value) ;
+			if(v < 0 || v > 9999){
+				if(showDialog)new DialogAlarm().showDialog(act, "反向第五分区系数必须是0~9999的数字！") ;
+				return false ;
+			}
 		}
-		
 		return true ;
 	}
 	

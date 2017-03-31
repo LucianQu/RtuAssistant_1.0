@@ -152,7 +152,7 @@ public class F_08_050  extends FrmParent {
 	@Override
 	protected void queryCommand(){
 		CoreThread.getInstance().newRtuId(F_01_100.getInstance().getRtuSelectedItem().replaceAll(" ", ""));
-		this.sendRtuCommand(new CommandCreator().cd_EC(null), false) ;
+		this.sendRtuCommand(new CommandCreator().cd_75(null), false) ;
 	}
 	
 	/**
@@ -168,7 +168,7 @@ public class F_08_050  extends FrmParent {
 			this.param.setShowInterval0to9999(Integer.valueOf(value)) ;
 		}
 		CoreThread.getInstance().newRtuId(F_01_100.getInstance().getRtuSelectedItem().replaceAll(" ", ""));
-		this.sendRtuCommand(new CommandCreator().cd_FC(this.param, null), false) ;
+		this.sendRtuCommand(new CommandCreator().cd_45(this.param, null), false) ;
 	}
 	
 	/**

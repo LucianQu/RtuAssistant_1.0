@@ -859,7 +859,7 @@ public class CommandCreator {
 		return com ;
 	}
 	
-	public RtuCommand cd_FC(Param_45 p, String rtuId){
+	public RtuCommand cd_45(Param_45 p, String rtuId){
 		RtuCommand com = new RtuCommand() ;
 		com.setCommandCode(Code206.cd_45) ;
 		com.setRtuId(rtuId);

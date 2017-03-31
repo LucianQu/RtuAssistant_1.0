@@ -30,7 +30,7 @@ import com.blg.rtu1.server.CoreThread;
 
 public class F_08_110  extends FrmParent {
 	
-	private final static int requestLen_1 = 1 ; 
+	private final static int requestLen_2 = 2 ; 
 
 	private TextView title ;
 
@@ -66,7 +66,7 @@ public class F_08_110  extends FrmParent {
 		cover = (LinearLayout)view.findViewById(R.id.f_08_110_Load) ;
 		
 		item01 = (EditText)view.findViewById(R.id.func_08_110_item01);
-		item01.setFilters(new InputFilter[]{new InputFilter.LengthFilter(requestLen_1)});
+		item01.setFilters(new InputFilter[]{new InputFilter.LengthFilter(requestLen_2)});
 		
 		String str = Preferences.getInstance().getString(Constant.func_vk_08_110_01) ;
 		if(!str.equals(Constant.errorStr)){
@@ -117,8 +117,8 @@ public class F_08_110  extends FrmParent {
 		} 
 		
 		int h = Integer.valueOf(hour) ;
-		if(h < 1 || h > 8){
-			if(showDialog)new DialogAlarm().showDialog(act, "RF频点必须是1~8的数字！") ;
+		if(h < 0 || h > 10){
+			if(showDialog)new DialogAlarm().showDialog(act, "RF频点必须是0~10的数字！") ;
 			return false ;
 		}
 
