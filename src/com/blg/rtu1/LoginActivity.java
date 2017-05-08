@@ -1,6 +1,9 @@
 package com.blg.rtu1;
 
 import android.app.AlertDialog;
+import android.content.Context;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -40,6 +43,7 @@ public class LoginActivity extends BaseActivity implements OnClickListener {
 		instance = this ;
 		setContentView(R.layout.activity_login);
 		setUpViews();
+		switchConnectType() ;
 	}
 
 	private void setUpViews() {
@@ -91,6 +95,25 @@ public class LoginActivity extends BaseActivity implements OnClickListener {
 			.create().show();
         }
     	
+	}
+	
+	private void switchConnectType() {
+		WifiManager wifiMan = (WifiManager) getSystemService(Context.WIFI_SERVICE) ;
+		WifiInfo info = wifiMan.getConnectionInfo() ;
+		
+		int ipAddress = info.getIpAddress() ;
+		String ipString = "";// 本机在WIFI状态下路由分配给的IP地址  
+		  
+		// 获得IP地址的方法一：  
+		if (ipAddress != 0) {  
+		       ipString = ((ipAddress & 0xff) + "." + (ipAddress >> 8 & 0xff)) ;  
+		}
+		if("10.10".equals(ipString)) {
+			Utils.saveUserDestroy(getApplicationContext(), true);
+		}else{
+			Utils.saveUserDestroy(getApplicationContext(), false);
+		}
+		
 	}
 	
 /*	private String getUrl(String userName,String pwd){
@@ -160,9 +183,9 @@ public class LoginActivity extends BaseActivity implements OnClickListener {
 		case R.id.cb_wifiConnectType:
 			CheckBox cb1=(CheckBox)v;
 			if(cb1.isChecked()){
-				Utils.saveUserDestroy(getApplicationContext(), true);
+				//Utils.saveUserDestroy(getApplicationContext(), true);
 			}else{
-				Utils.saveUserDestroy(getApplicationContext(), false);
+				//Utils.saveUserDestroy(getApplicationContext(), false);
 			}
 			break;
 		default:

@@ -12,8 +12,8 @@
        
     <string name="txtVersion">Version</string>
     
-    <string name="app_name">中继器助手</string>
-    <string name="rtuAssiName">中继器助手</string>
+    <string name="app_name">终端助手</string>
+    <string name="rtuAssiName">终端助手</string>
     <string name="welcome">北京奥特美克科技股份有限公司</string>
     
     <string name="functionItems">功能选项</string>

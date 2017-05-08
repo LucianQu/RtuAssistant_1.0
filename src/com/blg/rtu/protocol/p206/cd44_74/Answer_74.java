@@ -43,7 +43,7 @@ public class Answer_74 extends ProtocolSupport{
 				(index + Constant.Bits_RTU_ID - 1)) ;
 		list.add(ss[0] + "-" + " ");
 		
-		if(!LoginActivity.instance.getCbWifiConnecyType()) {
+		
 			index = index + 5 ;
 			int modbusAddr ;
 			for(int i = 0; i < 8; i++) {
@@ -51,7 +51,7 @@ public class Answer_74 extends ProtocolSupport{
 						(index + Constant.Bits_RTU_ID - 1) + (i * 6)) ;
 				modbusAddr = (b[(index + Constant.Bits_RTU_ID) + (i * 6) ] + 256)%256 ;
 				list.add(ss[0] + "-" + modbusAddr);
-		}
+		
 	
 		subD.setRtuId(list);
 	}

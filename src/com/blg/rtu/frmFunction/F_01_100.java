@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputFilter;
@@ -33,6 +34,7 @@ import com.blg.rtu.util.ImageUtil;
 import com.blg.rtu.util.Preferences;
 import com.blg.rtu.util.SpinnerVO;
 import com.blg.rtu.vo2xml.Vo2Xml;
+import com.blg.rtu1.LoginActivity;
 import com.blg.rtu1.MainActivity;
 import com.blg.rtu1.R;
 import com.blg.rtu1.server.CoreThread;
@@ -239,7 +241,12 @@ public class F_01_100  extends FrmParent {
 	@Override
 	protected void queryCommand(){
 		CoreThread.getInstance().newRtuId(getRtuSelectedItem().replaceAll(" ", ""));
-		this.sendRtuCommand(new CommandCreator().cd_74(), true) ;
+		if(LoginActivity.instance.getCbWifiConnecyType()) {
+			this.sendRtuCommand(new CommandCreator().cd_50(), true) ;
+		}else{
+			this.sendRtuCommand(new CommandCreator().cd_74(), true) ;
+		}
+		
 	}
 	
 	/**
@@ -261,7 +268,12 @@ public class F_01_100  extends FrmParent {
 		
 		m_currMeter = position ;
 		CoreThread.getInstance().newRtuId(getRtuSelectedItem().replaceAll(" ", ""));
-		this.sendRtuCommand(new CommandCreator().cd_44(position, modbusAddrValue, regionNum, clientId, null), false) ;
+		if(LoginActivity.instance.getCbWifiConnecyType()) {
+			this.sendRtuCommand(new CommandCreator().cd_10(regionNum, clientId, null), false) ;
+		}else{
+			this.sendRtuCommand(new CommandCreator().cd_44(position, modbusAddrValue, regionNum, clientId, null), false) ;
+		}
+		
 	}
 	
 	public String getRtuSelectedItem() {
@@ -284,6 +296,8 @@ public class F_01_100  extends FrmParent {
 		if(position > 8 || position < 0 ) {
 			position = 0 ;
 		}
+		if(listModbusAddr.size() == 0)
+			return "" ;
 		return listModbusAddr.get(position) ;
 	}
 	
@@ -344,36 +358,52 @@ public class F_01_100  extends FrmParent {
 					item04.setText("");
 				}
 			}else if(subD instanceof DataList_74){
-				DataList_74 sd = (DataList_74)d.subData ;
-				spinnerAdapter.clear() ;
-				listRtuId.clear();
-				listModbusAddr.clear() ;
-				for(int i = 0; i < 9; i++) {
-					if(i == 0) {
-						temp = sd.getRtuId().get(i).split("-") ;
-						spinnerAdapter.add(new SpinnerVO("" + i, " 中继器 ："+ temp[0])) ;
-						listRtuId.add(sd.getRtuId().get(i).split("-")[0]) ;
-						listModbusAddr.add(sd.getRtuId().get(i).split("-")[1]) ;
-					}else{
-						temp = sd.getRtuId().get(i).split("-") ;
-						spinnerAdapter.add(new SpinnerVO("" + i, i + "号水表："+ temp[0])) ;
-						listRtuId.add(sd.getRtuId().get(i).split("-")[0]) ;
-						listModbusAddr.add(sd.getRtuId().get(i).split("-")[1]) ;
+				if(!LoginActivity.instance.getCbWifiConnecyType()) {
+					DataList_74 sd = (DataList_74)d.subData ;
+					spinnerAdapter.clear() ;
+					listRtuId.clear();
+					listModbusAddr.clear() ;
+					for(int i = 0; i < 9; i++) {
+						if(i == 0) {
+							temp = sd.getRtuId().get(i).split("-") ;
+							spinnerAdapter.add(new SpinnerVO("" + i, " 中继器 ："+ temp[0])) ;
+							listRtuId.add(sd.getRtuId().get(i).split("-")[0]) ;
+							listModbusAddr.add(sd.getRtuId().get(i).split("-")[1]) ;
+						}else{
+							temp = sd.getRtuId().get(i).split("-") ;
+							spinnerAdapter.add(new SpinnerVO("" + i, i + "号水表："+ temp[0])) ;
+							listRtuId.add(sd.getRtuId().get(i).split("-")[0]) ;
+							listModbusAddr.add(sd.getRtuId().get(i).split("-")[1]) ;
+						}
 					}
+						//temp = getRtuSelectedItem();
+						String rtuId = getRtuSelectedItem();
+						item01.setText(rtuId.substring(0, 6).trim()) ;
+						item02.setText(rtuId.substring(6).trim()) ;
+						item04.setText(getModbusAddrSelectedItem());
+				}else{
+					new AlertDialog.Builder(getActivity())
+					.setIcon(getResources().getDrawable(R.drawable.login_error_icon))
+					.setTitle("连接设备类型错误!")
+					.setMessage("请在登录界面取消水表连接\n如果已记住密码,请退出登录,回到登录界面!")
+					.create().show();
 				}
-					//temp = getRtuSelectedItem();
-					String rtuId = getRtuSelectedItem();
-					item01.setText(rtuId.substring(0, 6).trim()) ;
-					item02.setText(rtuId.substring(6).trim()) ;
-					item04.setText(getModbusAddrSelectedItem());
 				
 			}else if(subD instanceof Data_10_50){
-				Data_10_50 sd = (Data_10_50)d.subData ;
-				spinnerAdapter.clear() ;
-				listRtuId.clear();
-				listModbusAddr.clear() ;
-				String rtuId = sd.getRtuId() ;
-				spinnerAdapter.add(new SpinnerVO("" + 0, " 水表地址 ："+ rtuId)) ;
+				if(LoginActivity.instance.getCbWifiConnecyType()) {
+					Data_10_50 sd = (Data_10_50)d.subData ;
+					spinnerAdapter.clear() ;
+					listRtuId.clear();
+					listModbusAddr.clear() ;
+					String rtuId = sd.getRtuId() ;
+					spinnerAdapter.add(new SpinnerVO("" + 0, " 水表地址 ："+ rtuId)) ;
+				}else{
+					new AlertDialog.Builder(getActivity())
+					.setIcon(getResources().getDrawable(R.drawable.login_error_icon))
+					.setTitle("连接设备类型错误!")
+					.setMessage("请在登录界面勾选水表连接\n如果已记住密码,请退出登录,回到登录界面!")
+					.create().show();
+				}
 			}
 		}
 		p.putString(Constant.func_vk_01_010_dt, this.resultDt.getText().toString()) ;

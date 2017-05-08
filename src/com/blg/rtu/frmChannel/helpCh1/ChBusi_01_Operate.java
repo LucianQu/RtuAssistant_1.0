@@ -2,6 +2,9 @@ package com.blg.rtu.frmChannel.helpCh1;
 
 import java.io.File;
 
+import android.content.Context;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -242,6 +245,8 @@ public class ChBusi_01_Operate {
 				chf.ip3.getText().toString().trim() + "." +
 				chf.ip4.getText().toString().trim() ;
 		int port = Integer.valueOf(chf.port.getText().toString()) ;*/
+	
+		
 		if(LoginActivity.instance.getCbWifiConnecyType()) {
 			waitServerStartedAndToConnectNet("10.10.100.254", 8899) ; //水表地址
 		}else{

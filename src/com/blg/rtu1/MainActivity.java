@@ -68,6 +68,8 @@ public class MainActivity  extends Activity {
 	public TextView switchQuery ;
 	public TextView switchLog ;
 	
+	public TextView rtuAssiName ;
+	
 	public ScrollView func_scrollView ;
 	
 	//通道选择界面实体
@@ -275,6 +277,12 @@ public class MainActivity  extends Activity {
 		pageView_loopQuery = mInflater.inflate(R.layout.activity_main_loopquery_page, null) ;
 		pageView_function = mInflater.inflate(R.layout.activity_main_function_page, null) ;
 		pageView_channel = mInflater.inflate(R.layout.activity_main_channel_page, null) ;
+		rtuAssiName = (TextView) findViewById(R.id.rtuAssiName) ;
+		
+		if(LoginActivity.instance.getCbWifiConnecyType())
+			rtuAssiName.setText("水表终端") ;
+		else
+			rtuAssiName.setText("中继器终端") ;
 		
 		listPages = new ArrayList<View>();
 		listPages.add(pageView_noProtocol);

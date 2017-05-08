@@ -342,6 +342,7 @@ public class Driver206 extends DriverRtu {
 			if(this.dataCode.equalsIgnoreCase(Code206.cd_50)){
 				//应答 - 查询遥测终端、中继站地址
 				this.upData = new Answer_10_50().parse(rtuId, b, ca, dataCode) ;
+				//this.upData = new Answer_74().parse(rtuId, b, ca, dataCode) ;
 				action.append(Action.commandReadRtuIdResultAction) ;
 				action.append(Action.commandResultAction) ;
 				
