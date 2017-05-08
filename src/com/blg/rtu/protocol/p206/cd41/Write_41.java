@@ -15,7 +15,7 @@ public class Write_41 extends ProtocolSupport{
 			+ Constant.Bits_Time 
 			+ Constant.Bits_CRC
 			+ Constant.Bits_Tail 
-			+ 4 ;//数据域长度
+			+ 2 ;//数据域长度
 	
 	/**
 	* 构造RTU 命令
@@ -38,7 +38,7 @@ public class Write_41 extends ProtocolSupport{
 		byte[] b = new byte[len];
 		
 		int index = this.createDownDataHead(rtuId, code, b, len, controlFunCode) ;
-		//旧密码设置
+		/*//旧密码设置
 		String setPassword = p.getOldPassword() ;
 		byte[] bs = null;
 		if(setPassword != null){
@@ -50,12 +50,12 @@ public class Write_41 extends ProtocolSupport{
 				b[index++] = bs[0] ;
 				b[index++] = bs[1] ;
 			}
-		}
+		}*/
 		//新密码设置
-			setPassword = p.getNewPassword() ;
+		String setPassword = p.getNewPassword() ;
 			if(setPassword != null){
 				//byte[] bcd = ByteUtil.int2BCD_an(passInt.intValue()) ;
-				bs = ByteUtil.hex2Bytes(setPassword) ;
+				byte[] bs = ByteUtil.hex2Bytes(setPassword) ;
 				if(bs.length == 1){
 					b[index++] = bs[0] ;
 					b[index++] =  0 ;

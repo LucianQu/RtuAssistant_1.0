@@ -29,12 +29,14 @@ import com.blg.rtu1.R;
 import com.blg.rtu1.server.CoreThread;
 
 public class F_08_130  extends FrmParent {
-	
+	private final static int requestLen_2 = 2 ; 
 	private final static int requestLen_3 = 3 ; 
-
+	private final static int requestLen_4 = 4 ; 
 	private TextView title ;
-
+	
 	private EditText item01  ;
+	private EditText item02  ;
+	private EditText item03  ;
 
 	private ImageView btnSet ;
 	private ImageView btnRead ;
@@ -66,14 +68,34 @@ public class F_08_130  extends FrmParent {
 		cover = (LinearLayout)view.findViewById(R.id.f_08_130_Load) ;
 		
 		item01 = (EditText)view.findViewById(R.id.func_08_130_item01);
-		item01.setFilters(new InputFilter[]{new InputFilter.LengthFilter(requestLen_3)});
+		item01.setFilters(new InputFilter[]{new InputFilter.LengthFilter(requestLen_2)});
 		
 		String str = Preferences.getInstance().getString(Constant.func_vk_08_130_01) ;
 		if(!str.equals(Constant.errorStr)){
 			item01.setText(str); 
 		}
+
+		item01.addTextChangedListener(new MyTextWatcher(Constant.func_vk_08_130_01)) ;
+		//////
+		item02 = (EditText)view.findViewById(R.id.func_08_130_item02);
+		item02.setFilters(new InputFilter[]{new InputFilter.LengthFilter(requestLen_4)});
 		
-		item01.addTextChangedListener(new MyTextWatcher(Constant.func_vk_08_130_01));
+		str = Preferences.getInstance().getString(Constant.func_vk_08_130_02) ;
+		if(!str.equals(Constant.errorStr)){
+			item02.setText(str); 
+		}
+		
+		item02.addTextChangedListener(new MyTextWatcher(Constant.func_vk_08_130_02)) ;
+		/////
+		item03 = (EditText)view.findViewById(R.id.func_08_130_item03);
+		item03.setFilters(new InputFilter[]{new InputFilter.LengthFilter(requestLen_3)});
+		
+		str = Preferences.getInstance().getString(Constant.func_vk_08_130_03) ;
+		if(!str.equals(Constant.errorStr)){
+			item03.setText(str); 
+		}
+		
+		item03.addTextChangedListener(new MyTextWatcher(Constant.func_vk_08_130_03));
 		
 		btnSet = (ImageView)view.findViewById(R.id.btn_set);
 		btnRead = (ImageView)view.findViewById(R.id.btn_read);
@@ -109,14 +131,36 @@ public class F_08_130  extends FrmParent {
 	 */
 	@Override
 	protected boolean checkBeforeSet(boolean showDialog){
-		String hour = item01.getText().toString() ;//整数部分
-
-		if(hour == null || hour.equals("")){
+		String collectTime = item01.getText().toString() ;//整数部分
+		String collectCycle = item02.getText().toString() ;//整数部分
+		String timeWin = item03.getText().toString() ;//整数部分
+		///////
+		if(collectTime == null || collectTime.equals("")){
+			if(showDialog)new DialogAlarm().showDialog(act, "LORA采集时间必须填写！") ;
+			return false ;
+		} 
+		int collectT = Integer.valueOf(collectTime) ;
+		if(collectT < 0 || collectT > 23){
+			if(showDialog)new DialogAlarm().showDialog(act, "LORA采集时间值必须是0~23之间的数字！") ;
+			return false ;
+		}
+		/////////
+		if(collectCycle == null || collectCycle.equals("")){
+			if(showDialog)new DialogAlarm().showDialog(act, "LORA采集周期必须填写！") ;
+			return false ;
+		} 
+		int collectC = Integer.valueOf(collectCycle) ;
+		if(collectC < 0 || collectC > 1440){
+			if(showDialog)new DialogAlarm().showDialog(act, "LORA采集周期必须是0~1440之间的数字！") ;
+			return false ;
+		}
+		//////
+		if(timeWin == null || timeWin.equals("")){
 			if(showDialog)new DialogAlarm().showDialog(act, "LORA时间配置窗口值必须填写！") ;
 			return false ;
 		} 
 		
-		int h = Integer.valueOf(hour) ;
+		int h = Integer.valueOf(timeWin) ;
 		if(h < 6 || h > 255){
 			if(showDialog)new DialogAlarm().showDialog(act, "LORA时间配置窗口值必须是6~255之间的数字！") ;
 			return false ;
@@ -139,13 +183,28 @@ public class F_08_130  extends FrmParent {
 	 */
 	@Override
 	protected void setCommand(){
-		String delay = item01.getText().toString() ;//整数部分
+		String collectTime = item01.getText().toString() ;//整数部分
+		String collectCycle = item02.getText().toString() ;//整数部分
+		String timeWin = item03.getText().toString() ;//整数部分
 
 		Param_4C p = new Param_4C() ;
-		if(delay == null || delay.equals("")){
+		/////
+		if(collectTime == null || collectTime.equals("")) {
+			p.setLoraCollectTime(0) ;
+		}else {
+			p.setLoraCollectTime(Integer.valueOf(collectTime)) ;
+		}
+		/////
+		if(collectCycle == null || collectCycle.equals("")) {
+			p.setLoraCollectCycle(0) ;
+		}else {
+			p.setLoraCollectCycle(Integer.valueOf(collectCycle)) ;
+		}
+		/////
+		if(timeWin == null || timeWin.equals("")){
 			p.setLoraTimeWinSet(6) ;
 		}else{
-			p.setLoraTimeWinSet(Integer.valueOf(delay)) ;
+			p.setLoraTimeWinSet(Integer.valueOf(timeWin)) ;
 		}
 		CoreThread.getInstance().newRtuId(F_01_100.getInstance().getRtuSelectedItem().replaceAll(" ", ""));
 		this.sendRtuCommand(new CommandCreator().cd_4C(p, null), false) ;
@@ -193,7 +252,9 @@ public class F_08_130  extends FrmParent {
 //		super.scrollTo(this.btnRead) ;
 		
 		Data_4C_7C sd = (Data_4C_7C)d.subData ;
-		item01.setText(sd.getLoraTimeWinSet() + "") ;
+		item01.setText(sd.getLoraCollectTime() + "") ;
+		item02.setText(sd.getLoraCollectCycle() + "") ;
+		item03.setText(sd.getLoraTimeWinSet() + "") ;
 		
 		Preferences.getInstance().putString(Constant.func_vk_08_130_dt, this.resultDt.getText().toString()) ;
 	}

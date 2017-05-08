@@ -68,7 +68,7 @@ public class Answer_B1 extends ProtocolSupport{
 		}else if(dataCd == 2){
 			//流量参数
 			dataList.setDataName("累计流量") ;
-			this.doParseData(dataList, b, index, d, 5, false, null, "m3") ;
+			this.doParseData(dataList, b, index, d, 5, true, null, "m3") ;
 		}else if(dataCd == 3){
 			//流速参数
 			dataList.setDataName("流速") ;

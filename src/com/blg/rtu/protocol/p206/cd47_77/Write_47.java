@@ -39,7 +39,7 @@ public class Write_47 extends ProtocolSupport{
 		
 		int n = this.createDownDataHead(rtuId, code, b, len, controlFunCode) ;
 		
-		String pw = param.getPassword();
+	/*	String pw = param.getPassword();
 		
 		byte[] bbd = ByteUtil.string2BCD_an(pw);
 		if(bbd.length == 1){
@@ -50,7 +50,7 @@ public class Write_47 extends ProtocolSupport{
 			b[n++] = bbd[1] ;
  		}
 		
-		b[n++] =(byte) param.getLoraChannel();
+		b[n++] =(byte) param.getLoraChannel();*/
 		
 		Long v = param.getWaterMinus();
 		
@@ -62,7 +62,7 @@ public class Write_47 extends ProtocolSupport{
 		}
 	
 		
-		bbd = ByteUtil.long2BCD_an(v) ;
+		byte[] bbd = ByteUtil.long2BCD_an(v) ;
 		if(bbd.length == 1){
 			b[n++] = bbd[0] ;
 			b[n++] = 0 ;

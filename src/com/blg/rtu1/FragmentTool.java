@@ -91,6 +91,8 @@ public class FragmentTool {
 	public F_07_010 f_07_010 ;	//查询遥测终端流量实时值
 	
 	public F_02_110 f_02_110 ;	//查询/设置RTU地址命令
+	
+	public F_08_010 f_08_010 ;	//发送ModBus密码
 	public F_08_020 f_08_020 ;	//设置ModBus配置密码
 	public F_08_030 f_08_030 ;	//查询/设置ModBus地址命令
 	public F_08_040 f_08_040 ;	//查询/设置中继器关联ModBus地址
@@ -99,12 +101,13 @@ public class FragmentTool {
 	public F_08_070 f_08_070 ;	//查询/设置负积流量
 	public F_08_080 f_08_080 ;	//设置净积流量
 	public F_08_090 f_08_090 ;	//查询/设置表口径
-	public F_08_100 f_08_100 ;	//查询/设置整体脉冲系数
+	public F_08_101 f_08_101 ;	//查询/设置整体脉冲系数
 	public F_08_110 f_08_110 ;	//查询/设置RF频点命令
 	public F_08_120 f_08_120 ;  //一键测试触发和查询结果
 	public F_08_130 f_08_130 ;  //查询设置LORA时间窗口
 	public F_08_140 f_08_140 ;  //设置LORA电源控制
 	public F_08_150 f_08_150 ;  //设置出厂启用
+	public F_08_160 f_08_160 ; //查询/设置脉冲常数
 	public FragmentTool(MainActivity mainAct){
 		this.mainAct = mainAct ;
 		
@@ -228,6 +231,8 @@ public class FragmentTool {
         frms.add(f_06_010);*/
        /* f_07_010 = (F_07_010)fm.findFragmentById(R.id.f_07_010) ;
         frms.add(f_07_010);*/
+        f_08_010 = (F_08_010)fm.findFragmentById(R.id.f_08_010) ;
+        frms.add(f_08_010) ;
         f_08_020 = (F_08_020)fm.findFragmentById(R.id.f_08_020) ;
         frms.add(f_08_020) ;
         f_08_030 = (F_08_030)fm.findFragmentById(R.id.f_08_030) ;
@@ -244,8 +249,8 @@ public class FragmentTool {
         frms.add(f_08_080) ;
         f_08_090 = (F_08_090)fm.findFragmentById(R.id.f_08_090) ;
         frms.add(f_08_090);
-        f_08_100 = (F_08_100)fm.findFragmentById(R.id.f_08_100) ;
-        frms.add(f_08_100) ;
+        f_08_101 = (F_08_101)fm.findFragmentById(R.id.f_08_101) ;
+        frms.add(f_08_101) ;
         f_08_110 = (F_08_110)fm.findFragmentById(R.id.f_08_110) ;
         frms.add(f_08_110) ;
         f_08_120 = (F_08_120)fm.findFragmentById(R.id.f_08_120) ;
@@ -256,7 +261,8 @@ public class FragmentTool {
         frms.add(f_08_140) ;
         f_08_150 = (F_08_150)fm.findFragmentById(R.id.f_08_150) ;
         frms.add(f_08_150) ;
-        
+        f_08_160 = (F_08_160)fm.findFragmentById(R.id.f_08_160) ;
+        frms.add(f_08_160) ;
 	}
 	
 	

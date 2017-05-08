@@ -64,8 +64,6 @@
 				 <fragment android:id="@+id/f_05_020"
 			        android:name="com.blg.rtu.frmFunction.F_05_020"
 				    style="@style/func_fragment_style"/>
-		       
-		        
 		        <fragment android:id="@+id/f_01_050"
 			        android:name="com.blg.rtu.frmFunction.F_01_050"
 				    style="@style/func_fragment_style"/>   
@@ -88,18 +86,15 @@
 		        <fragment android:id="@+id/f_02_010"
 			        android:name="com.blg.rtu.frmFunction.F_02_010"
 				    style="@style/func_fragment_style"/>
-		 
 		        <fragment android:id="@+id/f_02_040"
 			        android:name="com.blg.rtu.frmFunction.F_02_040"
 				    style="@style/func_fragment_style"/>
 		        <fragment android:id="@+id/f_02_050"
 			        android:name="com.blg.rtu.frmFunction.F_02_050"
 				    style="@style/func_fragment_style"/>
-		        
 	           <fragment android:id="@+id/f_02_100"
 		        android:name="com.blg.rtu.frmFunction.F_02_100"
 			    style="@style/func_fragment_style"/>
-		        
 	            <fragment android:id="@+id/f_02_110"
 		        android:name="com.blg.rtu.frmFunction.F_02_110"
 			    style="@style/func_fragment_style"/>
@@ -140,6 +135,9 @@
 			    android:layout_height="match_parent"
 			    android:orientation="vertical"
 			    >
+		        <fragment android:id="@+id/f_08_010"
+			        android:name="com.blg.rtu.frmFunction.F_08_010"
+				    style="@style/func_fragment_style"/>
 		        <fragment android:id="@+id/f_08_020"
 			        android:name="com.blg.rtu.frmFunction.F_08_020"
 				    style="@style/func_fragment_style"/>
@@ -164,8 +162,11 @@
 				<fragment android:id="@+id/f_08_090"
 			        android:name="com.blg.rtu.frmFunction.F_08_090"
 				    style="@style/func_fragment_style"/>   
-				<fragment android:id="@+id/f_08_100"
-			        android:name="com.blg.rtu.frmFunction.F_08_100"
+				<fragment android:id="@+id/f_08_101"
+			        android:name="com.blg.rtu.frmFunction.F_08_101"
+				    style="@style/func_fragment_style"/> 
+				<fragment android:id="@+id/f_08_160"
+			        android:name="com.blg.rtu.frmFunction.F_08_160"
 				    style="@style/func_fragment_style"/> 
 		        <fragment android:id="@+id/f_08_110"
 			        android:name="com.blg.rtu.frmFunction.F_08_110"

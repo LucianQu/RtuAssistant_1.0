@@ -20,6 +20,7 @@ public class LoginActivity extends BaseActivity implements OnClickListener {
 	private Button btnLogin;
 
 	public CheckBox cbSavePsw;
+	public CheckBox cbWifiConnType;
 
 	private EditText etuser;
 	private EditText etpassword;
@@ -27,6 +28,7 @@ public class LoginActivity extends BaseActivity implements OnClickListener {
 	private UserInfo userInfo;
 
 	private boolean issave=false;
+	private boolean isMeter = false ;
 	// 退出系统时间
 			private long exitTime = 0;
 	public LoginActivity() {
@@ -47,7 +49,9 @@ public class LoginActivity extends BaseActivity implements OnClickListener {
 
 
 		cbSavePsw = (CheckBox) findViewById(R.id.cb_save);
+		cbWifiConnType = (CheckBox) findViewById(R.id.cb_wifiConnectType) ;
 		cbSavePsw.setOnClickListener(this);
+		cbWifiConnType.setOnClickListener(this) ;
 		
 
 		etuser = (EditText) findViewById(R.id.et_user);
@@ -153,6 +157,14 @@ public class LoginActivity extends BaseActivity implements OnClickListener {
 				Utils.savePswisSave(getApplicationContext(), false);
 			}
 			break;
+		case R.id.cb_wifiConnectType:
+			CheckBox cb1=(CheckBox)v;
+			if(cb1.isChecked()){
+				Utils.saveUserDestroy(getApplicationContext(), true);
+			}else{
+				Utils.saveUserDestroy(getApplicationContext(), false);
+			}
+			break;
 		default:
 			break;
 		}
@@ -164,6 +176,11 @@ public class LoginActivity extends BaseActivity implements OnClickListener {
 			cbSavePsw.setChecked(false);
 		}
 	}
+	
+	public boolean getCbWifiConnecyType() {
+		return Utils.getUserDestroy(getApplicationContext()) ;
+	}
+	
 	/**
 	 * 功能描述: 添加返回按钮，弹出是否退出应用程序对话框
 	 */

@@ -15,7 +15,7 @@ public class Write_44 extends ProtocolSupport{
 										+ Constant.Bits_Time 
 										+ Constant.Bits_CRC
 										+ Constant.Bits_Tail 
-										+ 6 ;//数据域长度
+										+ 7 ;//数据域长度
 
 	/**
 	 * 构造RTU 命令
@@ -41,9 +41,10 @@ public class Write_44 extends ProtocolSupport{
 		String newId = param.getNewId() ;
 		String hexNewId = param.getHexNewId() ;
 		int selectId = param.getSelectPosition() ;
+		int modbusAddress = param.getModbusAddress() ;
 		if(newId != null){
 			//b = new RtuIdProtocol().createRtuId(b, newId, fromSite);
-			b = new RtuIdProtocol().createSelectRtuId(b, selectId, newId, fromSite);
+			b = new RtuIdProtocol().createSelectRtuId(b, selectId,modbusAddress, newId, fromSite);
 		}else if(hexNewId != null){
 			b = new RtuIdProtocol().createRtuId_hex(b, hexNewId, fromSite);
 		}else{

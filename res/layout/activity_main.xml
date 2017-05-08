@@ -51,9 +51,6 @@
 	            android:layout_height="match_parent"
 	            android:text="@string/rtuAssiName"
 	            android:gravity="center_horizontal|center_vertical"
-	           
-	            android:typeface="monospace"
-	            
 	            android:textColor="#FFFFFF"
 	            android:textSize="20sp" />
           </LinearLayout>
@@ -80,7 +77,6 @@
 		        android:layout_height="match_parent"
 		        android:gravity="center_horizontal|center_vertical"
 		        android:textColor="#CC0000"
-		         android:typeface="monospace"
 		        android:textSize="@dimen/text12"/>    
             </LinearLayout>
         	<!-- android:drawableLeft="@drawable/label" -->
@@ -109,7 +105,6 @@
            android:layout_height="match_parent"
            android:text="@string/functionNoProtocol"
            android:gravity="center_horizontal|center_vertical"
-           android:typeface="monospace"
            android:textColor="#b2b2b2"
            android:textSize="15sp" />
         </LinearLayout>
@@ -129,7 +124,6 @@
 	            android:clickable="true"
 	            android:text="@string/functionLoopQuery"
 	            android:gravity="center_horizontal|center_vertical"
-	            android:typeface="monospace"
 	            android:textColor="#b2b2b2"
 	            android:textSize="15sp" />
           </LinearLayout>
@@ -148,7 +142,6 @@
 	           android:layout_height="match_parent"
 	           android:text="@string/functionItems"
 	           android:gravity="center_horizontal|center_vertical"
-	           android:typeface="monospace"
 	           android:textColor="#b2b2b2"
 	           android:textSize="15sp" /> 
             </LinearLayout>
@@ -168,7 +161,6 @@
 	           android:layout_height="match_parent"
 	           android:text="@string/functionResultLog"
 	           android:gravity="center_horizontal|center_vertical"
-	           android:typeface="monospace"
 	           android:textColor="#b2b2b2"
 	           android:textSize="15sp" /> 
             </LinearLayout>

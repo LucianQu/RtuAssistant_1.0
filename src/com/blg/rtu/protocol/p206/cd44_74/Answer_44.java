@@ -36,6 +36,8 @@ public class Answer_44 extends ProtocolSupport{
 		d.setSubData(subD) ;
 
 		String[] ss = new RtuIdProtocol().parseRtuId_1(b, index + 1 , (index + 1 + Constant.Bits_RTU_ID - 1)) ;
-		subD.setRtuId(ss[0]) ;
+		int modbusAddr ;
+		modbusAddr = (b[index + Constant.Bits_RTU_ID + 1] + 256)%256 ;
+		subD.setRtuId(ss[0]+ "-" + modbusAddr) ;
 	}
 }

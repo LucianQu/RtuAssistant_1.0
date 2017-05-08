@@ -44,6 +44,7 @@
 	<dimen name="ed_width_120">100dp</dimen>
 	<dimen name="ed_width_150">130dp</dimen>
 	<dimen name="ed_width_180">150dp</dimen>
+	<dimen name="ed_width_160">160dp</dimen>
 	<dimen name="ed_width_200">170dp</dimen>
 	<dimen name="ed_width_220">185dp</dimen>
 	<dimen name="ed_width_250">200dp</dimen>

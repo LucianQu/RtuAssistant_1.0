@@ -1,4 +1,4 @@
-package com.blg.rtu.protocol.p206.cd40;
+package com.blg.rtu.protocol.p206.cd40_70;
 
 import java.util.HashMap;
 
@@ -15,7 +15,7 @@ public class Write_40 extends ProtocolSupport{
 							+ Constant.Bits_Time 
 							+ Constant.Bits_CRC
 							+ Constant.Bits_Tail 
-							+ 8;//数据域长度
+							+ 5;//数据域长度
 	
 	/**
 	 * 构造RTU 命令
@@ -39,7 +39,7 @@ public class Write_40 extends ProtocolSupport{
 		
 		int n = this.createDownDataHead(rtuId, code, b, len, controlFunCode) ;
 		
-		String pw = param.getPassword();
+	/*	String pw = param.getPassword();
 		
 		byte[] bbd = ByteUtil.string2BCD_an(pw);
 		if(bbd.length == 1){
@@ -50,7 +50,7 @@ public class Write_40 extends ProtocolSupport{
 			b[n++] = bbd[1] ;
  		}
 		
-		b[n++] =(byte) param.getLoraChannel();
+		b[n++] =(byte) param.getLoraChannel();*/
 		
 		Double v = param.getWaterPure();
 		
@@ -68,7 +68,7 @@ public class Write_40 extends ProtocolSupport{
 		}
 		
 		Long v1 = Double.valueOf(v * 1000.0).longValue() ;
-		bbd = ByteUtil.long2BCD_an(v1) ;
+		byte[] bbd = ByteUtil.long2BCD_an(v1) ;
 		if(bbd.length == 1){
 			b[n++] = bbd[0] ;
 			b[n++] = 0 ;

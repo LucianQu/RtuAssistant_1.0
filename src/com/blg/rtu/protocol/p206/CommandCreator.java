@@ -13,7 +13,9 @@ import com.blg.rtu.protocol.p206.cd1A_5A.Param_1A;
 import com.blg.rtu.protocol.p206.cd1B.ParamMap_1B;
 import com.blg.rtu.protocol.p206.cd1F_64.ParamMap_1F;
 import com.blg.rtu.protocol.p206.cd20.Param_20;
-import com.blg.rtu.protocol.p206.cd40.Param_40;
+import com.blg.rtu.protocol.p206.cd3F_6F.Param_3F;
+import com.blg.rtu.protocol.p206.cd40_70.Param_40;
+import com.blg.rtu.protocol.p206.cd40_70.Param_70;
 import com.blg.rtu.protocol.p206.cd41.Param_41;
 import com.blg.rtu.protocol.p206.cd42_72.Param_42;
 import com.blg.rtu.protocol.p206.cd43_73.Param_43;
@@ -30,6 +32,7 @@ import com.blg.rtu.protocol.p206.cd4B_7B.Param_4B;
 import com.blg.rtu.protocol.p206.cd4C_7C.Param_4C;
 import com.blg.rtu.protocol.p206.cd4D.Param_4D;
 import com.blg.rtu.protocol.p206.cd4E.Param_4E;
+import com.blg.rtu.protocol.p206.cd4F.Param_4F;
 import com.blg.rtu.protocol.p206.cd82_.Param_82_WaterAmountList;
 import com.blg.rtu.protocol.p206.cd82_.Param_82_WaterLevelList;
 import com.blg.rtu.protocol.p206.cd82_.Param_82_WaterQuality;
@@ -89,13 +92,14 @@ public class CommandCreator {
 		return com ;
 	}
 	
-	public RtuCommand cd_44(int selectPosition, String regionNum, String clientId, String rtuId){
+	public RtuCommand cd_44(int selectPosition,int modbusAddr, String regionNum, String clientId, String rtuId){
 		RtuCommand com = new RtuCommand() ;
 		com.setCommandCode(Code206.cd_44) ;
 		com.setRtuId(rtuId);
 		Param_44 p = new Param_44() ;
 		p.setNewId(regionNum + clientId) ;
 		p.setSelectPosition(selectPosition);
+		p.setModbusAddress(modbusAddr) ;
 		com.getParams().put(Param_44.KEY, p) ;
 		return com ;
 	}
@@ -495,6 +499,14 @@ public class CommandCreator {
 		return com ;
 	}
 	
+	public RtuCommand cd_4F(Param_4F p, String rtuId){
+		RtuCommand com = new RtuCommand() ;
+		com.setCommandCode(Code206.cd_4F) ;
+		com.setRtuId(rtuId);
+		com.getParams().put(Param_4F.KEY, p);
+		return com ;
+	}
+	
 	public RtuCommand cd_C8(String rtuId){
 		RtuCommand com = new RtuCommand() ;
 		com.setRtuId(rtuId);
@@ -776,6 +788,14 @@ public class CommandCreator {
 		com.setCommandCode(Code206.cd_72) ;
 		return com ;
 	}
+	
+	public RtuCommand cd_6F(String rtuId){
+		RtuCommand com = new RtuCommand() ;
+		com.setRtuId(rtuId);
+		com.setCommandCode(Code206.cd_6F) ;
+		return com ;
+	}
+	
 	public RtuCommand cd_7A(String rtuId){
 		RtuCommand com = new RtuCommand() ;
 		com.setRtuId(rtuId);
@@ -803,6 +823,13 @@ public class CommandCreator {
 		com.setCommandCode(Code206.cd_42) ;
 		com.setRtuId(rtuId);
 		com.getParams().put(Param_42.KEY, p);
+		return com ;
+	}
+	public RtuCommand cd_3F(Param_3F p, String rtuId){
+		RtuCommand com = new RtuCommand() ;
+		com.setCommandCode(Code206.cd_3F) ;
+		com.setRtuId(rtuId);
+		com.getParams().put(Param_3F.KEY, p);
 		return com ;
 	}
 	
@@ -954,6 +981,13 @@ public class CommandCreator {
 		com.setRtuId(rtuId);
 		com.setCommandCode(Code206.cd_77) ;
 		com.getParams().put(Param_77.KEY, p);
+		return com ;
+	}
+	public RtuCommand cd_70(Param_70 p ,String rtuId){
+		RtuCommand com = new RtuCommand() ;
+		com.setRtuId(rtuId);
+		com.setCommandCode(Code206.cd_70) ;
+		com.getParams().put(Param_70.KEY, p);
 		return com ;
 	}
 	

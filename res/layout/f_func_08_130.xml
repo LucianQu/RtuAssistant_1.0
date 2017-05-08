@@ -28,17 +28,43 @@
 		 <!-- start 具体内容 -->
 		 <LinearLayout 
 	        style="@style/func_linearlayout_style">
-			<LinearLayout
+	        <LinearLayout
 			    android:layout_width="match_parent"
 			    android:layout_height="@dimen/common_line_height40"
 			    >
 			    <TextView
 			        android:text="@string/func_08_130_item1"
-			    	style="@style/func_item_viewtext_style_100_a"/>
+			    	style="@style/func_item_viewtext_style_150_a"/>
 			    <!-- 新版本SDK要求填写属性lableFor,类似于填写一个ID来绑定这个控件，否则警告 -->
 			    <EditText
 					android:id="@+id/func_08_130_item01"  
 					android:labelFor="@id/func_08_130_item01" 
+				    style="@style/func_item_editnumber_style_80"/>
+			</LinearLayout>
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height40"
+			    >
+			    <TextView
+			        android:text="@string/func_08_130_item2"
+			    	style="@style/func_item_viewtext_style_150_a"/>
+			    <!-- 新版本SDK要求填写属性lableFor,类似于填写一个ID来绑定这个控件，否则警告 -->
+			    <EditText
+					android:id="@+id/func_08_130_item02"  
+					android:labelFor="@id/func_08_130_item02" 
+				    style="@style/func_item_editnumber_style_80"/>
+			</LinearLayout>
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/common_line_height40"
+			    >
+			    <TextView
+			        android:text="@string/func_08_130_item3"
+			    	style="@style/func_item_viewtext_style_150_a"/>
+			    <!-- 新版本SDK要求填写属性lableFor,类似于填写一个ID来绑定这个控件，否则警告 -->
+			    <EditText
+					android:id="@+id/func_08_130_item03"  
+					android:labelFor="@id/func_08_130_item03" 
 				    style="@style/func_item_editnumber_style_80"/>
 			</LinearLayout>
 						

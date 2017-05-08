@@ -5,7 +5,7 @@ public class Data_77 {
 	//private String password ;
 	private int minusNum ;
 	private Long waterMinus ;//瞬时流量(-999999.999～+999999.999，单位为 m3/s)
-	
+	public String valueError ;
 	public String toString(){
 		String s = "\n设置负积流量\n" ;
 		//s += "密码" + "=" + (this.password==null?"":this.password) ;

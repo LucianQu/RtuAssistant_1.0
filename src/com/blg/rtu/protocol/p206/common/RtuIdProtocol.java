@@ -112,12 +112,14 @@ public class RtuIdProtocol {
 	 * @return
 	 * @throws Exception
 	 */
-	public byte[] createSelectRtuId(byte[] b, int selectPosition, String id , int idSite)throws Exception{
+	public byte[] createSelectRtuId(byte[] b, int selectPosition, int modbusAddress, String id , int idSite)throws Exception{
 		
 		if(selectPosition < 0 || selectPosition > 8) {
 			throw new Exception("出错，选择下发的地址超出范围") ;
 		}
-		
+		if(modbusAddress < 1 || modbusAddress > 247) {
+			throw new Exception("出错，选择下发的Modbus地址超出范围") ;
+		}
 		if(id == null || id.trim().equals("")){
 			throw new Exception("出错，RTU ID为空，") ;
 		}
@@ -147,7 +149,7 @@ public class RtuIdProtocol {
 			}
 		}
 		ByteUtilUnsigned.short2Bytes_an(b, Integer.parseInt(tailId), n) ;
-		
+		b[n+2] = (byte) modbusAddress ;
 		return b ;
 	}
 	

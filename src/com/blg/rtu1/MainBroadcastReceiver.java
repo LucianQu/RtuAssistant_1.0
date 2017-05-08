@@ -32,7 +32,7 @@ public class MainBroadcastReceiver {
             @Override  
             public void onReceive(Context context, Intent intent) {  
             	String action = intent.getAction() ;
-            	if (action.equals(Constant.Action_ReceiveRtuMs)) {
+            	if (action.equals(Constant.Action_ReceiveRtuMs)) {/*
             		//收到RTU短信
             		String phoneNumber = intent.getStringExtra(Constant.msg_key_string1) ;
             		String message = intent.getStringExtra(Constant.msg_key_string2) ;
@@ -44,7 +44,7 @@ public class MainBroadcastReceiver {
             		b.putString(Constant.msg_key_string2, message) ;
             		msg.setData(b);
             		act.mHandler.sendMessage(msg);
-                }
+                */}
             }  
         };  
         mLocalBroadcastManager.registerReceiver(mReceiver, filter);  

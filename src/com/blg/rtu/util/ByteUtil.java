@@ -940,6 +940,18 @@ public class ByteUtil {
 		}
 		return n;
 	}
+	
+	public static double BCD2Double_an(byte[] b, int startIndex, int endIndex)throws Exception {
+		String str = "";
+		str = decodeBCD_an(b, startIndex, endIndex - startIndex + 1);
+		double n = 0;
+		try {
+			n = Double.parseDouble(str);
+		} catch (Exception e) {
+			throw new Exception(e.getMessage(), null);
+		}
+		return n;
+	}
 
 	/**
 	 * BCD编码转成字符串型

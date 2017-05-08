@@ -180,8 +180,11 @@ public class Code206 {
 	public static final String cd_4E = "4E" ; //设置出厂启用
 	
 	public static final String cd_40 = "40" ; //设置净积流量
+	public static final String cd_70 = "70" ; //查询净积流量
 	public static final String cd_41 = "41" ; //设置ModBus配置密码
-	
+	public static final String cd_4F = "4F" ; //发送ModBus密码
+	public static final String cd_3F = "3F" ; //设置脉冲常数
+	public static final String cd_6F = "6F" ; //查询脉冲常数
 	public String getCodeName(String code) {
 		String name = (code.equals(cd_02) ? "链路检测" : 
 		
@@ -334,6 +337,7 @@ public class Code206 {
 		(code.equals(cd_47) ? "设置负积流量" : 	
 		(code.equals(cd_77) ? "查询负积流量" : 	
 		(code.equals(cd_40) ? "设置净积流量" : 
+		(code.equals(cd_70) ? "查询净积流量" : 
 		(code.equals(cd_41) ? "设置ModBus配置密码" : 
 		(code.equals(cd_7A) ? "查询RF频点" : 	
 		(code.equals(cd_4A) ? "设置RF频点" : 
@@ -347,8 +351,11 @@ public class Code206 {
 		(code.equals(cd_4C) ? "设置LORA时间窗口" :
 		(code.equals(cd_4D) ? "LORA电源控制命令" : 
 		(code.equals(cd_4E) ? "设置出厂启用" : 
-		"")))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
-		))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))) ;
+		(code.equals(cd_4F) ? "发送ModBus密码" : 
+		(code.equals(cd_3F) ? "设置脉冲常数" : 
+		(code.equals(cd_6F) ? "查询脉冲常数" : 
+		"")))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+		))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))) ;
 		return name ;
 	}
 }

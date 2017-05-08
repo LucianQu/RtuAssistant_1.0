@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 import com.blg.rtu.protocol.p206.common.ProtocolSupport;
 import com.blg.rtu.protocol.p206.util.Constant;
+import com.blg.rtu.util.ByteUtil;
 
 public class Write_4C extends ProtocolSupport{
 	private static final int len = Constant.Bits_Head 
@@ -14,7 +15,7 @@ public class Write_4C extends ProtocolSupport{
 					+ Constant.Bits_Time 
 					+ Constant.Bits_CRC
 					+ Constant.Bits_Tail 
-					+ 1 ;//数据域长度
+					+ 4 ;//数据域长度
 	
 	/**
 	 * 构造RTU 命令
@@ -37,7 +38,23 @@ public class Write_4C extends ProtocolSupport{
 		byte[] b = new byte[len];
 		
 		int index = this.createDownDataHead(rtuId, code, b, len, controlFunCode) ;
-		
+		b[index++] = param.getLoraCollectTime().byteValue() ;
+		Integer 
+		v = param.getLoraCollectCycle() ;
+		if(v == null){
+			throw new Exception("出错，Lora采集周期为空，其必须提供！") ;
+		}
+		if(v < 0 || v > 9999){
+			throw new Exception("出错，Lora采集周期超过其取值范围0至9999！") ;
+		}
+		byte[] bbd = ByteUtil.int2BCD_an(v.intValue()) ;
+		if(bbd.length == 1){
+			b[index++] = bbd[0] ;
+			b[index++] = 0 ;
+ 		}else if(bbd.length == 2){
+			b[index++] = bbd[0] ;
+			b[index++] = bbd[1] ;
+ 		}
 		b[index] = param.getLoraTimeWinSet().byteValue() ;
 				
 		this.createDownDataTail(b, password) ;

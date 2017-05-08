@@ -24,7 +24,7 @@
                 <TextView 
                     android:id="@+id/func_02_100_item1"
                     android:labelFor="@id/func_02_100_item1"
-                    style="@style/func_item_edittext_style_200"/>
+                    style="@style/func_item_edittext_style_250"/>
             </LinearLayout>
             <include layout="@layout/show_btn_query"/>
         </LinearLayout>

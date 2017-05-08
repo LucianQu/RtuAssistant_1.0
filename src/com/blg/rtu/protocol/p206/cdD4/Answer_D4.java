@@ -52,7 +52,7 @@ public class Answer_D4 extends ProtocolSupport {
 		String value3 = new String(bphon3).trim();
 		String value4 = new String(bphon4).trim();
 		
-		data.setSimIccId(value1 + "  " + value2 + "  " + value3 + "  " +  value4);
+		data.setSimIccId(value1 + "-" + value2 + "-" + value3 + "-" +  value4);
 	}
 	public byte checkAscii(byte b) {
 		if(b >= 48 && b <= 57) {

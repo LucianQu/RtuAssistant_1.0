@@ -352,15 +352,55 @@ public class F_08_040  extends FrmParent {
 		p.setEnable_6(Integer.valueOf(spinnerAdapter06_1.getItem(spinnerPosition06_1).getId())) ;
 		p.setEnable_7(Integer.valueOf(spinnerAdapter07_1.getItem(spinnerPosition07_1).getId())) ;
 		p.setEnable_8(Integer.valueOf(spinnerAdapter08_1.getItem(spinnerPosition08_1).getId())) ;
+		if("".equals(item01_2.getText())) {
+			p.setModBusAddr1(0) ;
+		}else{
+			p.setModBusAddr1(Integer.valueOf(item01_2.getText().toString().trim()));
+		}
+		/////
+		if("".equals(item02_2.getText())) {
+			p.setModBusAddr2(0) ;
+		}else{
+			p.setModBusAddr2(Integer.valueOf(item02_2.getText().toString().trim()));
+		}
+		/////
+		if("".equals(item03_2.getText())) {
+			p.setModBusAddr3(0) ;
+		}else{
+			p.setModBusAddr3(Integer.valueOf(item03_2.getText().toString().trim()));
+		}
+		////
+		if("".equals(item04_2.getText())) {
+			p.setModBusAddr4(0) ;
+		}else{
+			p.setModBusAddr4(Integer.valueOf(item04_2.getText().toString().trim()));
+		}
+		/////
+		if("".equals(item05_2.getText())) {
+			p.setModBusAddr5(0) ;
+		}else{
+			p.setModBusAddr5(Integer.valueOf(item05_2.getText().toString().trim()));
+		}
+		/////
+		if("".equals(item06_2.getText())) {
+			p.setModBusAddr6(0) ;
+		}else{
+			p.setModBusAddr6(Integer.valueOf(item06_2.getText().toString().trim()));
+		}
+		/////
+		if("".equals(item07_2.getText())) {
+			p.setModBusAddr7(0) ;
+		}else{
+			p.setModBusAddr7(Integer.valueOf(item07_2.getText().toString().trim()));
+		}
+		/////
+		if("".equals(item08_2.getText())) {
+			p.setModBusAddr8(0) ;
+		}else{
+			p.setModBusAddr8(Integer.valueOf(item08_2.getText().toString().trim()));
+		}
+		/////
 		
-		p.setModBusAddr1(Integer.valueOf(item01_2.getText().toString().trim()));
-		p.setModBusAddr2(Integer.valueOf(item02_2.getText().toString().trim()));
-		p.setModBusAddr3(Integer.valueOf(item03_2.getText().toString().trim()));
-		p.setModBusAddr4(Integer.valueOf(item04_2.getText().toString().trim()));
-		p.setModBusAddr5(Integer.valueOf(item05_2.getText().toString().trim()));
-		p.setModBusAddr6(Integer.valueOf(item06_2.getText().toString().trim()));
-		p.setModBusAddr7(Integer.valueOf(item07_2.getText().toString().trim()));
-		p.setModBusAddr8(Integer.valueOf(item08_2.getText().toString().trim()));
 		CoreThread.getInstance().newRtuId(F_01_100.getInstance().getRtuSelectedItem().replaceAll(" ", ""));
 		this.sendRtuCommand(new CommandCreator().cd_43(p, null), false) ;
 	}
@@ -435,6 +475,7 @@ public class F_08_040  extends FrmParent {
 		
 		Preferences.getInstance().putString(Constant.func_vk_08_040_dt, this.resultDt.getText().toString()) ;
 	}
+	
 	
 	/**
 	 * 导出设置数据

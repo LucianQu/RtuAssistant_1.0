@@ -4,6 +4,7 @@ import android.util.Log;
 import com.blg.rtu.protocol.RtuData;
 import com.blg.rtu.protocol.p206.common.ProtocolSupport;
 import com.blg.rtu.protocol.p206.common.ControlProtocol;
+import com.blg.rtu.util.ByteUtil;
 
 public class Answer_4C_7C  extends ProtocolSupport{
 
@@ -30,6 +31,11 @@ public class Answer_4C_7C  extends ProtocolSupport{
 		d.setSubData(subD) ;
 		
 		// 分析数据域
+		subD.setLoraCollectTime((b[index++] + 256)%256) ;
+		 
+		int v1 = ByteUtil.BCD2Int_an(b, index , index + 1) ;
+		subD.setLoraCollectCycle(v1) ;
+		index += 2 ;
 		subD.setLoraTimeWinSet((b[index] + 256)%256) ;
 		 
 	}

@@ -1,4 +1,4 @@
-package com.blg.rtu.protocol.p206.cd40;
+package com.blg.rtu.protocol.p206.cd40_70;
 
 import android.util.Log;
 import com.blg.rtu.util.ByteUtil;
@@ -30,15 +30,15 @@ public class Answer_40  extends ProtocolSupport{
 		Data_40 dd = new Data_40() ;
 		d.setSubData(dd) ;
 		
-		int pw = ByteUtil.BCD2Int_an(b, index, index + 1) ;
+		/*int pw = ByteUtil.BCD2Int_an(b, index, index + 1) ;
 		dd.setPassword(pw + "") ;
-		dd.setLoraChannel((b[index + 2] + 256)%256) ;
+		dd.setLoraChannel((b[index + 2] + 256)%256) ;*/
 		
 		// 分析数据域
-		int flag = b[index + 7] ;
+		int flag = b[index + 4] ;
 		b[index + 4] = (byte)(b[index + 4] & 0xF) ;
 		
-		double v1 = ByteUtil.BCD2Long_an(b, index + 3, index + 7) ;
+		double v1 = ByteUtil.BCD2Double_an(b, index , index + 4) ;
 		if(flag < 0){
 			//为负
 			v1 = -v1 ;

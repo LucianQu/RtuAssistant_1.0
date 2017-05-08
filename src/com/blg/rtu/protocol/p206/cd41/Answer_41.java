@@ -35,8 +35,8 @@ public class Answer_41  extends ProtocolSupport{
 //		int pass = ByteUtil.BCD2Int_an(b, index, index + 1) ;
 //		subD.setPassword(pass) ;
 		String password = ByteUtil.bytes2Hex_an(b, true, index, 2) ;
-		subD.setOldPassword(password) ;
-		password = ByteUtil.bytes2Hex_an(b, true, index + 2, 2) ;
 		subD.setNewPassword(password) ;
+		/*password = ByteUtil.bytes2Hex_an(b, true, index + 2, 2) ;
+		subD.setNewPassword(password) ;*/
 	}
 }

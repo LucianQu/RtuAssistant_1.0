@@ -66,8 +66,13 @@ import com.blg.rtu.protocol.p206.cd32_33.Answer_33;
 import com.blg.rtu.protocol.p206.cd32_33.Write_32;
 import com.blg.rtu.protocol.p206.cd32_33.Write_33;
 import com.blg.rtu.protocol.p206.cd34.Answer_34;
-import com.blg.rtu.protocol.p206.cd40.Answer_40;
-import com.blg.rtu.protocol.p206.cd40.Write_40;
+import com.blg.rtu.protocol.p206.cd3F_6F.Answer_3F_6F;
+import com.blg.rtu.protocol.p206.cd3F_6F.Read_6F;
+import com.blg.rtu.protocol.p206.cd3F_6F.Write_3F;
+import com.blg.rtu.protocol.p206.cd40_70.Answer_40;
+import com.blg.rtu.protocol.p206.cd40_70.Answer_70;
+import com.blg.rtu.protocol.p206.cd40_70.Read_70;
+import com.blg.rtu.protocol.p206.cd40_70.Write_40;
 import com.blg.rtu.protocol.p206.cd41.Answer_41;
 import com.blg.rtu.protocol.p206.cd41.Write_41;
 import com.blg.rtu.protocol.p206.cd42_72.Answer_42_72;
@@ -111,6 +116,8 @@ import com.blg.rtu.protocol.p206.cd4D.Answer_4D;
 import com.blg.rtu.protocol.p206.cd4D.Write_4D;
 import com.blg.rtu.protocol.p206.cd4E.Answer_4E;
 import com.blg.rtu.protocol.p206.cd4E.Write_4E;
+import com.blg.rtu.protocol.p206.cd4F.Answer_4F;
+import com.blg.rtu.protocol.p206.cd4F.Write_4F;
 import com.blg.rtu.protocol.p206.cd5D.Answer_5D;
 import com.blg.rtu.protocol.p206.cd5D.Read_5D;
 import com.blg.rtu.protocol.p206.cd5E.Answer_5E;
@@ -602,6 +609,11 @@ public class Driver206 extends DriverRtu {
 				this.upData = new Answer_41().parse(rtuId, b, ca, this.dataCode);
 				action.append(Action.commandResultAction) ;
 			}else	
+			if(this.dataCode.equalsIgnoreCase(Code206.cd_4F)){
+				//应答 - 发送ModBus配置密码
+				this.upData = new Answer_4F().parse(rtuId, b, ca, this.dataCode);
+				action.append(Action.commandResultAction) ;
+			}else
 			if(this.dataCode.equalsIgnoreCase(Code206.cd_4D)){
 				//应答 - LORA电源控制
 				this.upData = new Answer_4D().parse(rtuId, b, ca, this.dataCode);
@@ -771,6 +783,11 @@ public class Driver206 extends DriverRtu {
 			if(this.dataCode.equalsIgnoreCase(Code206.cd_77)){
 				//应答 - 查询负积流量
 				this.upData = new Answer_77().parse(rtuId, b, ca, this.dataCode);
+				action.append(Action.commandResultAction) ;
+			}else
+			if(this.dataCode.equalsIgnoreCase(Code206.cd_70)){
+				//应答 - 查询净积流量
+				this.upData = new Answer_70().parse(rtuId, b, ca, this.dataCode);
 				action.append(Action.commandResultAction) ;
 			}else
 			if(this.dataCode.equalsIgnoreCase(Code206.cd_7B)) {
@@ -998,6 +1015,11 @@ public class Driver206 extends DriverRtu {
 				this.upData = new Answer_42_72().parse(rtuId, b, ca, this.dataCode);
 				action.append(Action.commandResultAction) ;
 			}else
+			if(this.dataCode.equalsIgnoreCase(Code206.cd_6F)){
+				//应答 - 查询脉冲常数
+				this.upData = new Answer_3F_6F().parse(rtuId, b, ca, this.dataCode);
+				action.append(Action.commandResultAction) ;
+			}else
 			if(this.dataCode.equalsIgnoreCase(Code206.cd_C2)){
 				//应答 - 查询定时上报的时刻
 				this.upData = new Answer_C2().parse(rtuId, b, ca, this.dataCode);
@@ -1013,6 +1035,11 @@ public class Driver206 extends DriverRtu {
 				this.upData = new Answer_42_72().parse(rtuId, b, ca, this.dataCode);
 				action.append(Action.commandResultAction) ;
 			}else	
+			if(this.dataCode.equalsIgnoreCase(Code206.cd_3F)){
+				//应答 - 设置脉冲常数
+				this.upData = new Answer_3F_6F().parse(rtuId, b, ca, this.dataCode);
+				action.append(Action.commandResultAction) ;
+			}else
 			if(this.dataCode.equalsIgnoreCase(Code206.cd_F0)){
 				//应答 - 查询关键参数
 				this.upData = new Answer_F0().parse(rtuId, b, ca, this.dataCode);
@@ -1350,6 +1377,11 @@ public class Driver206 extends DriverRtu {
 				this.downData = new Write_41().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
 				activ = Action.remoteCommandAction ;
 			}else 
+			if(this.commandCode.equalsIgnoreCase(Code206.cd_4F)){
+				//发送ModBus密码 
+				this.downData = new Write_4F().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
+				activ = Action.remoteCommandAction ;
+			}else 
 			if(this.commandCode.equalsIgnoreCase(Code206.cd_4D)){
 				//设置LORA电源控制
 				this.downData = new Write_4D().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
@@ -1465,6 +1497,11 @@ public class Driver206 extends DriverRtu {
 				this.downData = new Read_77().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
 				activ = Action.remoteCommandAction ;
 			}else 
+			if(this.commandCode.equalsIgnoreCase(Code206.cd_70)){
+				//查询净积流量
+				this.downData = new Read_70().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
+				activ = Action.remoteCommandAction ;
+			}else
 			if(this.commandCode.equalsIgnoreCase(Code206.cd_7B)) {
 				//一键查询结果
 				this.downData = new Read_7B().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId, params, password) ;
@@ -1690,6 +1727,11 @@ public class Driver206 extends DriverRtu {
 				this.downData = new Read_72().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
 				activ = Action.remoteCommandAction ;
 			}else 
+			if(this.commandCode.equalsIgnoreCase(Code206.cd_6F)){
+				//查询脉冲常数
+				this.downData = new Read_6F().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
+				activ = Action.remoteCommandAction ;
+			}else 
 			if(this.commandCode.equalsIgnoreCase(Code206.cd_C2)){
 				//查询流量实时值
 				this.downData = new Read_C2().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
@@ -1713,6 +1755,11 @@ public class Driver206 extends DriverRtu {
 			if(this.commandCode.equalsIgnoreCase(Code206.cd_42)){
 				//设置定时上报的时刻
 				this.downData = new Write_42().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
+				activ = Action.remoteCommandAction ;
+			}else 
+			if(this.commandCode.equalsIgnoreCase(Code206.cd_3F)){
+				//设置脉冲常数
+				this.downData = new Write_3F().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
 				activ = Action.remoteCommandAction ;
 			}else 
 			if(this.commandCode.equalsIgnoreCase(Code206.cd_F0)){

@@ -87,22 +87,47 @@
             </EditText>
         </RelativeLayout>
     </LinearLayout>
-    
-  		<CheckBox
-           android:id="@+id/cb_save"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_gravity="right"
-           android:layout_marginLeft="10dip"
-           android:layout_marginRight="10dip"
-           android:drawablePadding="10dp"
-           android:drawableLeft="@drawable/item_selector"
-           android:button="@null"
-           android:layout_marginTop="10dp"
-           android:gravity="center_vertical"
-           android:text="@string/save_psw"
-           android:textColor="#808080"
-           android:textSize="16sp" />
+   <LinearLayout 
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       >
+       
+       <CheckBox
+         android:id="@+id/cb_save"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+         android:layout_gravity="right"
+         android:layout_marginLeft="10dip"
+         android:layout_marginRight="10dip"
+         android:drawablePadding="10dp"
+         android:drawableLeft="@drawable/item_selector"
+         android:button="@null"
+         android:layout_marginTop="10dp"
+         android:gravity="center_vertical"
+         android:text="@string/save_psw"
+         android:textColor="#808080"
+         android:textSize="16sp" />
+		<CheckBox
+         android:id="@+id/cb_wifiConnectType"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+         android:layout_gravity="right"
+         android:layout_marginLeft="10dip"
+         android:layout_marginRight="10dip"
+         android:drawablePadding="10dp"
+         android:drawableLeft="@drawable/item_selector"
+         android:button="@null"
+         android:layout_marginTop="10dp"
+         android:gravity="center_vertical"
+         android:text="@string/save_wifiConnectType"
+         android:textColor="#808080"
+         android:textSize="16sp" />
+       
+   </LinearLayout>
+	
    	<Button
         android:id="@+id/btn_login"
         android:layout_width="match_parent"

@@ -42,7 +42,7 @@
 			        android:textColor="#0000FF"/>
 			   <TextView
 			        android:id="@+id/f_01_020_item02_2"
-			        style="@style/func_dt_viewtext_style_60"
+			        style="@style/func_dt_viewtext_style_80"
 			        android:textColor="#0000FF"
 			        android:layout_marginLeft="5dp"/>
 			   <!-- <ImageView 
@@ -66,7 +66,7 @@
 			    <TextView
 					android:id="@+id/func_01_020_item01"  
 					android:labelFor="@id/func_01_020_item01" 
-				    style="@style/func_item_edittext_style_180"/>
+				    style="@style/func_item_edittext_style_200"/>
 		<!-- 	    <ImageView 
 			        android:id="@+id/btn_adjust_11"
 			        android:layout_width="@dimen/img_btn_layout_width_35"
@@ -88,7 +88,7 @@
 			    <TextView
 					android:id="@+id/func_01_020_item03"  
 					android:labelFor="@id/func_01_020_item03" 
-				    style="@style/func_item_edittext_style_180"
+				    style="@style/func_item_edittext_style_200"
 				    android:inputType="none"/>
 			  <!--  <ImageView 
 		        android:id="@+id/btn_read_11"

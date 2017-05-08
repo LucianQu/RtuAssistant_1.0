@@ -13,6 +13,7 @@ import com.blg.rtu.util.DialogAlarm;
 import com.blg.rtu.util.DialogConfirm;
 import com.blg.rtu.util.StringValueForActivity;
 import com.blg.rtu.vo2xml.Help;
+import com.blg.rtu1.LoginActivity;
 import com.blg.rtu1.R;
 import com.blg.rtu1.server.CoreThread;
 /**
@@ -241,8 +242,11 @@ public class ChBusi_01_Operate {
 				chf.ip3.getText().toString().trim() + "." +
 				chf.ip4.getText().toString().trim() ;
 		int port = Integer.valueOf(chf.port.getText().toString()) ;*/
-		//waitServerStartedAndToConnectNet("10.10.100.254", 8899) ; //水表地址
-		waitServerStartedAndToConnectNet("192.168.4.1", 333) ; //中继器地址
+		if(LoginActivity.instance.getCbWifiConnecyType()) {
+			waitServerStartedAndToConnectNet("10.10.100.254", 8899) ; //水表地址
+		}else{
+			waitServerStartedAndToConnectNet("192.168.4.1", 333) ; //中继器地址
+		}
 	}
 	
 	/**

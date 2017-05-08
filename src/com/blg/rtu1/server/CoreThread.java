@@ -4,6 +4,7 @@ package com.blg.rtu1.server;
 import com.blg.rtu.protocol.p206.Code206;
 import com.blg.rtu.protocol.p206.CommandCreator;
 import com.blg.rtu.util.StringValueForServer;
+import com.blg.rtu1.LoginActivity;
 
 public class CoreThread {
 	
@@ -248,7 +249,11 @@ public class CoreThread {
 					CoreThread.server.mHandler.postDelayed(new Runnable(){
 						@Override
 						public void run() {
-							new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_74(), true, true) ;
+							if(LoginActivity.instance.getCbWifiConnecyType()) {
+								new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_50(), true, true) ;
+							}else{
+								new CoreControl(CoreThread.server).sendRtuCommandByTcp(new CommandCreator().cd_74(), true, true) ;
+							}
 						}
 					}, 500) ;//可能一段时间一直查询不到RTU ID，所以这里用postDelayed，等待0.5秒
 				}catch(Exception e){

@@ -10,6 +10,7 @@ import com.blg.rtu.protocol.p206.common.ControlProtocol;
 import com.blg.rtu.protocol.p206.common.ProtocolSupport;
 import com.blg.rtu.protocol.p206.common.RtuIdProtocol;
 import com.blg.rtu.protocol.p206.util.Constant;
+import com.blg.rtu1.LoginActivity;
 
 public class Answer_74 extends ProtocolSupport{
 
@@ -37,14 +38,22 @@ public class Answer_74 extends ProtocolSupport{
 		DataList_74 subD = new DataList_74() ;
 		List<String> list = new ArrayList<String>();
 		d.setSubData(subD) ;
-
-		for(int i = 0; i < 9; i++) {
-			String[] ss = new RtuIdProtocol().parseRtuId_1(b, index + (i * 5),
-					(index + Constant.Bits_RTU_ID - 1) + (i * 5)) ;
-			list.add(ss[0]);
+		
+		String[] ss = new RtuIdProtocol().parseRtuId_1(b, index,
+				(index + Constant.Bits_RTU_ID - 1)) ;
+		list.add(ss[0] + "-" + " ");
+		
+		if(!LoginActivity.instance.getCbWifiConnecyType()) {
+			index = index + 5 ;
+			int modbusAddr ;
+			for(int i = 0; i < 8; i++) {
+				ss = new RtuIdProtocol().parseRtuId_1(b, index + (i * 6),
+						(index + Constant.Bits_RTU_ID - 1) + (i * 6)) ;
+				modbusAddr = (b[(index + Constant.Bits_RTU_ID) + (i * 6) ] + 256)%256 ;
+				list.add(ss[0] + "-" + modbusAddr);
 		}
-		
+	
 		subD.setRtuId(list);
-		
 	}
+  }
 }

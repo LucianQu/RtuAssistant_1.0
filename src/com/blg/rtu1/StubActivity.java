@@ -88,7 +88,7 @@ public class StubActivity extends ActivityAidl.Stub{
 				if(data.dataCode != null && !data.dataCode.equals("")){
 					if(data.dataCode.equals(Code206.cd_10) || data.dataCode.equals(Code206.cd_50)){
 						//设置或查询终端地址
-						mAct.frgTool.f_01_010.receiveRtuData(data) ;
+						mAct.frgTool.f_01_100.receiveRtuData(data) ;
 						mAct.frgTool.fragment_loopq02.receiveRtuData(Code206.cd_50,data) ;
 					}else
 					if(data.dataCode.equals(Code206.cd_44) || data.dataCode.equals(Code206.cd_74)){
@@ -113,8 +113,8 @@ public class StubActivity extends ActivityAidl.Stub{
 						//复位遥测终端参数和状态
 						mAct.frgTool.f_01_050.receiveRtuData(data) ;
 					}else
-					if(data.dataCode.equals(Code206.cd_40) ){
-						//设置净积
+					if(data.dataCode.equals(Code206.cd_40) || data.dataCode.equals(Code206.cd_70)){
+						//查询/设置净积
 						mAct.frgTool.f_08_080.receiveRtuData(data) ;
 					}else
 					if(data.dataCode.equals(Code206.cd_91) ){
@@ -182,7 +182,7 @@ public class StubActivity extends ActivityAidl.Stub{
 					}else
 					if(data.dataCode.equals(Code206.cd_79) || data.dataCode.equals(Code206.cd_49)){
 						//设置或查询整体脉冲系数
-						mAct.frgTool.f_08_100.receiveRtuData(data) ;
+						mAct.frgTool.f_08_101.receiveRtuData(data) ;
 					}else
 					if(data.dataCode.equals(Code206.cd_7A) || data.dataCode.equals(Code206.cd_4A)){
 						//设置或查询RF频点
@@ -323,6 +323,10 @@ public class StubActivity extends ActivityAidl.Stub{
 						//设置或查询ModBus地址
 						mAct.frgTool.f_08_030.receiveRtuData(data) ;
 					}else
+					if(data.dataCode.equals(Code206.cd_3F) || data.dataCode.equals(Code206.cd_6F)){
+						//设置或查询脉冲常数
+						mAct.frgTool.f_08_160.receiveRtuData(data) ;
+					}else
 					if(data.dataCode.equals(Code206.cd_D3)){
 						//查询水表出厂编号
 						mAct.frgTool.f_01_090.receiveRtuData(data) ;
@@ -336,6 +340,10 @@ public class StubActivity extends ActivityAidl.Stub{
 					if(data.dataCode.equals(Code206.cd_96)){
 						//修改遥测终端密码 
 						mAct.frgTool.f_02_080.receiveRtuData(data) ;
+					}else
+					if(data.dataCode.equals(Code206.cd_4F)){
+						//发送ModBus密码
+						mAct.frgTool.f_08_010.receiveRtuData(data) ;
 					}else
 					if(data.dataCode.equals(Code206.cd_41)){
 						//修改ModBus配置密码
@@ -414,7 +422,7 @@ public class StubActivity extends ActivityAidl.Stub{
 				if(data.dataCode != null && !data.dataCode.equals("")){
 					if(data.dataCode.equals(Code206.cd_10) || data.dataCode.equals(Code206.cd_50)){
 						//设置或查询终端地址
-						mAct.frgTool.f_01_010.commandSendedCallBack() ;
+						mAct.frgTool.f_01_100.commandSendedCallBack() ;
 					}else
 					if(data.dataCode.equals(Code206.cd_44) || data.dataCode.equals(Code206.cd_74)){
 						//设置或查询终端地址
@@ -436,8 +444,8 @@ public class StubActivity extends ActivityAidl.Stub{
 						//复位遥测终端参数和状态
 						mAct.frgTool.f_01_050.commandSendedCallBack() ;
 					}else
-					if(data.dataCode.equals(Code206.cd_40) ){
-						//设置净积
+					if(data.dataCode.equals(Code206.cd_40) || data.dataCode.equals(Code206.cd_70)){
+						//查询/设置净积
 						mAct.frgTool.f_08_080.commandSendedCallBack() ;
 					}else
 					if(data.dataCode.equals(Code206.cd_91) ){
@@ -471,6 +479,10 @@ public class StubActivity extends ActivityAidl.Stub{
 					if(data.dataCode.equals(Code206.cd_96)){
 						//修改遥测终端密码 
 						mAct.frgTool.f_02_080.commandSendedCallBack() ;
+					}else
+					if(data.dataCode.equals(Code206.cd_4F)){
+						//发送ModBus密码
+						mAct.frgTool.f_08_010.commandSendedCallBack() ;
 					}else
 					if(data.dataCode.equals(Code206.cd_41)){
 						//修改ModBus配置密码
@@ -518,7 +530,7 @@ public class StubActivity extends ActivityAidl.Stub{
 					}else
 					if(data.dataCode.equals(Code206.cd_49) || data.dataCode.equals(Code206.cd_79)){
 						//设置或查询整体脉冲系数
-						mAct.frgTool.f_08_100.commandSendedCallBack() ;
+						mAct.frgTool.f_08_101.commandSendedCallBack() ;
 					}else
 					if(data.dataCode.equals(Code206.cd_4A) || data.dataCode.equals(Code206.cd_7A)){
 						//设置或查询RF频点
@@ -654,6 +666,10 @@ public class StubActivity extends ActivityAidl.Stub{
 					if(data.dataCode.equals(Code206.cd_42) || data.dataCode.equals(Code206.cd_72)){
 						//设置或查询定时上报的时刻
 						mAct.frgTool.f_08_030.commandSendedCallBack() ;
+					}else
+					if(data.dataCode.equals(Code206.cd_3F) || data.dataCode.equals(Code206.cd_6F)){
+						//设置或查询脉冲常数
+						mAct.frgTool.f_08_160.commandSendedCallBack() ;
 					}else
 					if(data.dataCode.equals(Code206.cd_C2)){
 						//查询流量实时值

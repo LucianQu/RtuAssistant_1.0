@@ -15,7 +15,7 @@ public class Write_46 extends ProtocolSupport{
 							+ Constant.Bits_Time 
 							+ Constant.Bits_CRC
 							+ Constant.Bits_Tail 
-							+ 8;//数据域长度
+							+ 5;//数据域长度
 	
 	/**
 	 * 构造RTU 命令
@@ -39,7 +39,7 @@ public class Write_46 extends ProtocolSupport{
 		
 		int n = this.createDownDataHead(rtuId, code, b, len, controlFunCode) ;
 		
-		String pw = param.getPassword();
+	/*	String pw = param.getPassword();
 		
 		byte[] bbd = ByteUtil.string2BCD_an(pw);
 		if(bbd.length == 1){
@@ -50,7 +50,7 @@ public class Write_46 extends ProtocolSupport{
 			b[n++] = bbd[1] ;
  		}
 		
-		b[n++] =(byte) param.getLoraChannel();
+		b[n++] =(byte) param.getLoraChannel();*/
 		
 		Long v = param.getWaterPlus();
 		
@@ -60,7 +60,7 @@ public class Write_46 extends ProtocolSupport{
 		if(v < 0 || v > 999999999L){
 			throw new Exception("出错，输入正积值超过其取值范围0至999999999！") ;
 		}
-		bbd = ByteUtil.long2BCD_an(v) ;
+		byte[] bbd = ByteUtil.long2BCD_an(v) ;
 		if(bbd.length == 1){
 			b[n++] = bbd[0] ;
 			b[n++] = 0 ;

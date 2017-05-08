@@ -30,9 +30,27 @@ public class Answer_76  extends ProtocolSupport{
 		Data_76 dd = new Data_76() ;
 		d.setSubData(dd) ;
 		
-		dd.setPlusNum((b[index++] + 256)%256) ;
-		
-		long v1 = ByteUtil.BCD2Long_an(b, index, index + 4) ;
-		dd.setWaterPlus(v1) ;
+		int ffCount = 0 ;
+		//当数据为0xFFFF...FF时，表示无数据
+		for(int j = index; j < (index + 5); j++){
+			if(b[j] == (byte)0xFF){
+				ffCount++ ;
+			}
+		}
+		if(ffCount++ < 5) {
+			int flag = b[index + 4] ;
+			b[index + 4] =(byte)(b[index + 4] & 0xF );
+			long v1 = ByteUtil.BCD2Long_an(b, index, index + 4) ;
+			if(flag < 0){
+				//为负
+				v1 = -v1 ;
+			}
+			dd.setWaterPlus(v1) ;
+		}else{
+			dd.valueError = "" ;
+			for(int k = 0; k < ffCount; k++){
+				dd.valueError = dd.valueError + "FF" ;
+			}
+		}
 	}
 }

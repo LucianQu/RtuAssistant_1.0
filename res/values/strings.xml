@@ -5,6 +5,7 @@
     <string name="account_no">请输入用户名</string>
     <string name="account_psw">请输入密码</string>
     <string name="save_psw">记住密码</string>
+    <string name="save_wifiConnectType">水表连接</string>
     <string name="login">登录</string>
     <string name="copyright">版权所有：北京奥特美克科技股份有限公司</string>
     <string name="connect">联系方式：010&#8211;82893548</string>
@@ -67,6 +68,7 @@
     <string name="func_01_100_item1">行政区编号</string>
     <string name="func_01_100_item2">设备编号</string>
     <string name="func_01_100_item3">终端列表</string>
+    <string name="func_01_100_item4">Modbus地址</string>
     
     <string name="func_02_010">DTU工作模式</string>
     <string name="func_02_010_item1">工作模式</string>
@@ -488,14 +490,18 @@
    	<string name="func_07_030">批量设置</string>
    	<string name="func_07_030_item01">自动设置:</string>
     
-   	 <string name="func_08_020">设置ModBus配置密码</string>
+   	<string name="func_08_010">发送ModBus密码</string>
+    <string name="func_08_010_item1">密码</string> 
+    <string name="func_08_010_item1_password">82 89</string> 
+   	
+   	<string name="func_08_020">设置ModBus配置密码</string>
     <string name="func_08_020_item1">旧密码</string> 
     <string name="func_08_020_item2">新密码</string> 
    	
    	<string name="func_08_030">ModBus地址</string>
     <string name="func_08_030_item1">地址</string>
    	
-    <string name="func_08_040">中继器关联ModBus地址</string>
+    <string name="func_08_040">水表使能状态</string>
     <string name="func_08_040_item1">水表1</string>
     <string name="func_08_040_item1_1">水表1是否使能</string>
     <string name="func_08_040_item1_2">地址</string>
@@ -545,7 +551,7 @@
     <string name="func_08_070_item3">负积流量</string> 
     <string name="func_08_070_item4">查询水表终端表号</string> 
     
-    <string name="func_08_080">设置净积流量</string>
+    <string name="func_08_080">查询/设置净积流量</string>
     <string name="func_08_080_item1">密码</string> 
     <string name="func_08_080_item2">水表表号</string> 
     <string name="func_08_080_item3">净积流量</string> 
@@ -568,6 +574,18 @@
      <string name="func_08_100_item11">正向分区系数</string> 
     <string name="func_08_100_item12">反向分区系数</string> 
     
+    <string name="func_08_101">查询/设置单个脉冲系数</string>
+    <string name="func_08_101_item1">分区选择</string>
+    <string name="func_08_101_item2">分区系数</string>
+    <string name="func_08_101_item3">注意:设置系数之前,请查询表口径!</string> 
+    <string name="func_08_101_item4">选择要提示的表口径的流速范围(下方内容仅提示!)</string> 
+    <string name="func_08_101_item5">请选择表口径</string> 
+    <string name="func_08_101_item6">第一分区流速范围</string> 
+    <string name="func_08_101_item7">第二分区流速范围</string> 
+    <string name="func_08_101_item8">第三分区流速范围</string> 
+    <string name="func_08_101_item9">第四分区流速范围</string> 
+    <string name="func_08_101_item10">第五分区流速范围</string> 
+    
     <string name="func_08_110">查询/设置RF频点</string>
     <string name="func_08_110_item1">RF频点</string>
     
@@ -576,13 +594,18 @@
     <string name="func_08_120_item2">命令结果</string>
     
     <string name="func_08_130">查询/设置LORA时间窗口</string>
-    <string name="func_08_130_item1">时间窗口值</string>
+    <string name="func_08_130_item1">Lora采集时间</string>
+    <string name="func_08_130_item2">Lora采集周期</string>
+    <string name="func_08_130_item3">时间窗口值</string>
     
     <string name="func_08_140">中继器LORA电源控制</string>
     <string name="func_08_140_item1">开/闭电源</string>
     
     <string name="func_08_150">出厂启用命令</string>
     <string name="func_08_150_item1">命令</string>
+    
+    <string name="func_08_160">查询/设置脉冲常数</string>
+    <string name="func_08_160_item1">脉冲常数</string>
     
     <string name="func_item_unit_mg">(mg/L)</string>
     <string name="func_item_unit_us">(μs/cm)</string>

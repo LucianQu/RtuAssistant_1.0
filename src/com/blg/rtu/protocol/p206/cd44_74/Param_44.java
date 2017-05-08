@@ -12,18 +12,20 @@ public class Param_44 implements Serializable{
 	private String hexNewId ;
 	private String selectId ;
 	private int selectPosition ;
+	private int modbusAddress ;
 	
 	public String toString(){
 		String s = "\n" ;
 		if(newId != null){
-			s += "newId" + "=" + (this.newId==null?"":this.newId) ;
+			s += "newId" + "=" + (this.newId==null?"":this.newId) + "\n";
 		}
 		if(hexNewId != null){
-			s += "hexNewId" + "=" + (this.hexNewId==null?"":this.hexNewId) ;
+			s += "hexNewId" + "=" + (this.hexNewId==null?"":this.hexNewId) + "\n" ;
 		}
 		if(selectId != null){
-			s += "selectId" + "=" + (this.selectId==null?"":this.selectId) ;
+			s += "selectId" + "=" + (this.selectId==null?"":this.selectId) + "\n" ;
 		}
+		s += "selectId" + "=" + (this.selectId==null?"":this.selectId) + "\n" ;
 		return s ;
 	}
 
@@ -59,5 +61,11 @@ public class Param_44 implements Serializable{
 		this.hexNewId = hexNewId;
 	}
 
+	public int getModbusAddress() {
+		return modbusAddress ;
+	}
+	public void setModbusAddress(int modbusAddress) {
+		this.modbusAddress = modbusAddress ;
+	}
 
 }

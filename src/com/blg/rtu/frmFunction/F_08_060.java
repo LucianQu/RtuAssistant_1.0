@@ -32,12 +32,11 @@ import com.blg.rtu1.server.CoreThread;
 
 public class F_08_060  extends FrmParent {
 	
-	private final static int requestLen_4 = 4 ; //输入长度
 	private final static int requestLen_1 = 1 ; //输入长度
 	private final static int requestLen_9 = 9 ; //输入长度
 	private TextView title ;
 
-	private EditText item01  ;
+	//private EditText item01  ;
 	private EditText item02 ;
 	private EditText item03 ;
 	//private EditText item04 ;
@@ -72,20 +71,20 @@ public class F_08_060  extends FrmParent {
 		funcFrm = (FrameLayout)view.findViewById(R.id.f_08_060_Frm) ;
 		cover = (LinearLayout)view.findViewById(R.id.f_08_060_Load) ;
 		
-		item01 = (EditText)view.findViewById(R.id.func_08_060_item01);
-		item01.setFilters(new InputFilter[]{new InputFilter.LengthFilter(requestLen_4)});
+		//item01 = (EditText)view.findViewById(R.id.func_08_060_item01);
+		/*item01.setFilters(new InputFilter[]{new InputFilter.LengthFilter(requestLen_4)});
 		item01.addTextChangedListener(new MyTextWatcher(Constant.func_vk_08_060_01));
 		
 		String str = Preferences.getInstance().getString(Constant.func_vk_08_060_01) ;
 		if(!str.equals(Constant.errorStr)){
 			item01.setText(str); 
-		}
+		}*/
 		
 		item02 = (EditText)view.findViewById(R.id.func_08_060_item02);
 		item02.setFilters(new InputFilter[]{new InputFilter.LengthFilter(requestLen_1)});
 		item02.addTextChangedListener(new MyTextWatcher(Constant.func_vk_08_060_02));
 		
-		str = Preferences.getInstance().getString(Constant.func_vk_08_060_02) ;
+		String str = Preferences.getInstance().getString(Constant.func_vk_08_060_02) ;
 		if(!str.equals(Constant.errorStr)){
 			item02.setText(str); 
 		}
@@ -151,7 +150,7 @@ public class F_08_060  extends FrmParent {
 	 */
 	@Override
 	protected boolean checkBeforeSet(boolean showDialog){
-		String value = item01.getText().toString() ;//整数部分
+		/*String value = item01.getText().toString() ;//整数部分
 		
 		if(value == null || value.equals("")){
 			if(showDialog)new DialogAlarm().showDialog(act, "密码必须填写！") ;
@@ -162,19 +161,19 @@ public class F_08_060  extends FrmParent {
 		if(v < 0 || v > 9999){
 			if(showDialog)new DialogAlarm().showDialog(act, "密码范围必须是0~9999的数字！") ;
 			return false ;
-		}
+		}*/
 		/////////////////////////////////////
-		value = item02.getText().toString() ;//整数部分
+		String /*value = item02.getText().toString() ;//整数部分
 		if(value == null || value.equals("")){
 			if(showDialog)new DialogAlarm().showDialog(act, "水表编号必须填写！") ;
 			return false ;
 		} 
 		
-		v = Integer.valueOf(value) ;
+		int v = Integer.valueOf(value) ;
 		if(v < 1 || v > 8){
 			if(showDialog)new DialogAlarm().showDialog(act, "水表编号范围必须是1~8的数字！") ;
 			return false ;
-		}
+		}*/
 		/////////////////////////////////////
 		value = item03.getText().toString() ;//整数部分
 		
@@ -187,7 +186,7 @@ public class F_08_060  extends FrmParent {
 			return false ;
 		} 
 		
-		v = Integer.valueOf(value) ;
+		int v = Integer.valueOf(value) ;
 		if(v < 0 || v > 999999999){
 			if(showDialog)new DialogAlarm().showDialog(act, "正积流量范围必须是0~999999999的数字！") ;
 			return false ;
@@ -217,20 +216,20 @@ public class F_08_060  extends FrmParent {
 	@Override
 	protected void setCommand(){
 		Param_46 p = new Param_46() ;
-		String value = item01.getText().toString() ;//整数部分
+	/*	String value = item01.getText().toString() ;//整数部分
 		if(value == null || value.equals("")){
 			p.setPassword("") ;
 		}else{
 			p.setPassword(value) ;
-		}
+		}*/
 		//////
-		value = item02.getText().toString() ;//整数部分
+		/*String value = item02.getText().toString() ;//整数部分
 		if(value == null || value.equals("")){
 			p.setLoraChannel(0) ;
 		}else{
 			p.setLoraChannel(Integer.valueOf(value)) ;
-		}
-		value = item03.getText().toString() ;//整数部分
+		}*/
+		String value = item03.getText().toString() ;//整数部分
 		if(value == null || value.equals("")){
 			p.setLoraChannel(0) ;
 		}else{
@@ -288,29 +287,28 @@ public class F_08_060  extends FrmParent {
 		Object subD = d.subData ;
 		if(subD != null){
 			if(subD instanceof Data_76){
-				Data_76 sd = (Data_76)subD ;
-				waterPlus = sd.getWaterPlus().longValue();
-				if(waterPlus < 0) {
-					waterPlus = - waterPlus;
-					if ((waterPlus / 1000) > 0) {
-						item03.setText(("-" + waterPlus / 1000) + "." + (waterPlus + 1000) % 1000) ;
-					}else if((waterPlus / 1000) == 0){
-						item03.setText("-0." + (waterPlus + 1000) % 1000) ;
-					}
-				}else{
-					if ((waterPlus / 1000) > 0) {
-						item03.setText((waterPlus / 1000) + "." + ((waterPlus%100)/100 > 0 ? waterPlus%1000 :( 
+					Data_76 sd = (Data_76)subD ;
+					if(sd.getWaterPlus() != null) {
+						waterPlus = sd.getWaterPlus().longValue();
+						if(waterPlus < 0) {
+							waterPlus = - waterPlus;
+							if ((waterPlus / 1000) > 0) {
+								item03.setText(("-" + waterPlus / 1000) + "." + (waterPlus + 1000) % 1000) ;
+							}else if((waterPlus / 1000) == 0){
+								item03.setText("-0." + (waterPlus + 1000) % 1000) ;
+							}
+						}else{
+							if ((waterPlus / 1000) > 0) {
+								item03.setText((waterPlus / 1000) + "." + ((waterPlus%100)/100 > 0 ? waterPlus%1000 :( 
+												(waterPlus %100)/10 >0 ?("0" + waterPlus%1000): ("00" + (waterPlus%10 ==0?"0":waterPlus%1000)))));
+							}else if((waterPlus / 1000) == 0){
+								item03.setText("0" + "." + ((waterPlus%100)/100 > 0 ? waterPlus%1000 :( 
 										(waterPlus %100)/10 >0 ?("0" + waterPlus%1000): ("00" + (waterPlus%10 ==0?"0":waterPlus%1000)))));
-					}else if((waterPlus / 1000) == 0){
-						item03.setText("0" + "." + ((waterPlus%100)/100 > 0 ? waterPlus%1000 :( 
-								(waterPlus %100)/10 >0 ?("0" + waterPlus%1000): ("00" + (waterPlus%10 ==0?"0":waterPlus%1000)))));
-					}
+							}
+						}
+				}else{
+					item03.setText(sd.valueError) ;
 				}
-				
-				
-				item01.setText("") ;
-				//item02.setText("") ;
-				item02.setText(sd.getPlusNum()+"") ;
 			}else if(subD instanceof Data_46){
 				Data_46 sd = (Data_46)subD ;
 				
@@ -331,8 +329,8 @@ public class F_08_060  extends FrmParent {
 								(waterPlus %100)/10 >0 ?("0" + waterPlus%1000): ("00" + (waterPlus%10 ==0?"0":waterPlus%1000)))));
 					}
 				}
-				item01.setText(sd.getPassword()) ;
-				item02.setText(sd.getLoraChannel()+"") ;
+				//item01.setText(sd.getPassword()) ;
+				//item02.setText(sd.getLoraChannel()+"") ;
 				//item04.setText("") ;
 			}
 		}
@@ -343,7 +341,7 @@ public class F_08_060  extends FrmParent {
 	 * 导出设置数据
 	 */
 	public void outSetData(Vo2Xml vo) {
-		vo.setV_08_060_item01(item01.getText().toString()) ;
+		//vo.setV_08_060_item01(item01.getText().toString()) ;
 		vo.setV_08_060_item02(item02.getText().toString()) ;
 		vo.setV_08_060_item03(item03.getText().toString()) ;
 	}
@@ -351,7 +349,7 @@ public class F_08_060  extends FrmParent {
 	 * 导入设置数据
 	 */
 	public void inSetData(Vo2Xml vo) {
-		item01.setText(vo.getV_08_060_item01()) ;
+		//item01.setText(vo.getV_08_060_item01()) ;
 		item02.setText(vo.getV_08_060_item02()) ;
 		item03.setText(vo.getV_08_060_item03()) ;
 	}

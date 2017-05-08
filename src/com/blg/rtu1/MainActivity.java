@@ -152,7 +152,7 @@ public class MainActivity  extends Activity {
             }
             break;  
 
-            case Constant.msg_main_receiveSm: {  
+            case Constant.msg_main_receiveSm: {/*  
             	//接收到短信的消息
              	Bundle b = msg.getData();
     			String phoneSet = MainActivity.this.frgTool.fragment_ch01.getPhoneNumber() ;
@@ -165,7 +165,7 @@ public class MainActivity  extends Activity {
         				}
         			}
     			}
-            }
+            */}
             break;  
             default:  
                 super.handleMessage(msg);  

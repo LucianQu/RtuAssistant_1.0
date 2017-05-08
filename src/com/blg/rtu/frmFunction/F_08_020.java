@@ -34,7 +34,7 @@ public class F_08_020  extends FrmParent {
 	
 	private TextView title ;
 
-	private EditText item01 ;
+	//private EditText item01 ;
 	private EditText item02 ;
 
 	private ImageView btnSet ;
@@ -65,25 +65,25 @@ public class F_08_020  extends FrmParent {
 		funcFrm = (FrameLayout)view.findViewById(R.id.f_08_020_Frm) ;
 		cover = (LinearLayout)view.findViewById(R.id.f_08_020_Load) ;
 		
-		item01 = (EditText)view.findViewById(R.id.func_08_020_item01);
+		//item01 = (EditText)view.findViewById(R.id.func_08_020_item01);
 		item02 = (EditText)view.findViewById(R.id.func_08_020_item02);
 		
-		item01.setFilters(new InputFilter[]{new InputFilter.LengthFilter(requestLen)});
+	/*	item01.setFilters(new InputFilter[]{new InputFilter.LengthFilter(requestLen)});
 		
 		int pass = Preferences.getInstance().getInt(Constant.func_vk_08_020_01) ;
 		if(pass != Constant.errorInt){
 			item01.setText(pass + ""); 
-		}
+		}*/
 		
 		item02.setFilters(new InputFilter[]{new InputFilter.LengthFilter(requestLen)});
 		
-		pass = Preferences.getInstance().getInt(Constant.func_vk_08_020_02) ;
+		int pass = Preferences.getInstance().getInt(Constant.func_vk_08_020_02) ;
 		if(pass != Constant.errorInt){
 			item02.setText(pass + ""); 
 		}
 		
 //		item01.addTextChangedListener(new MyTextWatcher(Constant.func_vk_02_080_01));
-		
+		/*
 		item01.addTextChangedListener(new TextWatcher(){
 			private int strOldLen = 0 ;
 			@Override
@@ -116,7 +116,7 @@ public class F_08_020  extends FrmParent {
 			public void onTextChanged(CharSequence s, int start, int before, int count) {
 			}
 			
-		});
+		});*/
 		
 		item02.addTextChangedListener(new TextWatcher(){
 			private int strOldLen = 0 ;
@@ -185,15 +185,15 @@ public class F_08_020  extends FrmParent {
 	 */
 	@Override
 	protected boolean checkBeforeSet(boolean showDialog){
-		String pass = item01.getText().toString() ; 
+		//String pass = item01.getText().toString() ; 
 		String pass1 = item02.getText().toString() ;
 		
-		if(pass == null || pass.equals("")){
+	/*	if(pass == null || pass.equals("")){
 			if(showDialog){
 				new DialogAlarm().showDialog(act, "旧密码必须填写！") ;
 			}
 			return false ;
-		} 
+		} */
 		if(pass1 == null || pass1.equals("")){
 			if(showDialog){
 				new DialogAlarm().showDialog(act, "新密码必须填写！") ;
@@ -201,15 +201,15 @@ public class F_08_020  extends FrmParent {
 			return false ;
 		} 
 		
-		pass = pass.replaceAll(" ", "") ;
+		//pass = pass.replaceAll(" ", "") ;
 		pass1 = pass1.replaceAll(" ", "") ;
 		
-		if(pass.length() != 4){
+	/*	if(pass.length() != 4){
 			if(showDialog){
 				new DialogAlarm().showDialog(act, "旧密码必须是四位十六进制数！") ;
 			}
 			return false ;
-		}
+		}*/
 		
 		if(pass1.length() != 4){
 			if(showDialog){
@@ -232,14 +232,14 @@ public class F_08_020  extends FrmParent {
 	 */
 	@Override
 	protected void setCommand(){
-		String pass = item01.getText().toString() ; 
+		//String pass = item01.getText().toString() ; 
 		String pass1 = item02.getText().toString() ; 
-		pass = pass.replaceAll(" ", "") ;
+		//pass = pass.replaceAll(" ", "") ;
 		pass1 = pass1.replaceAll(" ", "") ;
 
 		Param_41 p = new Param_41() ;
 		//p.setNewPass_0to9999(Integer.valueOf(pass)) ;
-		p.setOldPassword(pass) ;
+		//p.setOldPassword(pass) ;
 		p.setNewPassword(pass1) ;
 		CoreThread.getInstance().newRtuId(F_01_100.getInstance().getRtuSelectedItem().replaceAll(" ", ""));
 		this.sendRtuCommand(new CommandCreator().cd_41(p, null), false) ;
@@ -287,9 +287,9 @@ public class F_08_020  extends FrmParent {
 		
 		Data_41 sd = (Data_41)d.subData ;
 		
-		String oldPassword = sd.getOldPassword() ;
+	/*	String oldPassword = sd.getOldPassword() ;
 		item01.setText(oldPassword) ;
-		
+		*/
 		String newPassword = sd.getNewPassword() ;
 		item02.setText(newPassword) ;
 		//把系统默认密码改了
@@ -303,14 +303,14 @@ public class F_08_020  extends FrmParent {
 	 * 导出设置数据
 	 */
 	public void outSetData(Vo2Xml vo) {
-		vo.setV_08_020_item01(item01.getText().toString()) ;
+		//vo.setV_08_020_item01(item01.getText().toString()) ;
 		vo.setV_08_020_item02(item02.getText().toString()) ;
 	}
 	/**
 	 * 导入设置数据
 	 */
 	public void inSetData(Vo2Xml vo) {
-		item01.setText(vo.getV_08_020_item01());
+		//item01.setText(vo.getV_08_020_item01());
 		item02.setText(vo.getV_08_020_item02());
 	}
 	

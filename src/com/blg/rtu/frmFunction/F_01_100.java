@@ -11,6 +11,8 @@ import android.text.InputFilter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.FrameLayout;
@@ -18,11 +20,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.blg.rtu.protocol.RtuData;
 import com.blg.rtu.protocol.p206.Code206;
 import com.blg.rtu.protocol.p206.CommandCreator;
+import com.blg.rtu.protocol.p206.cd10_50.Data_10_50;
 import com.blg.rtu.protocol.p206.cd44_74.DataList_74;
 import com.blg.rtu.protocol.p206.cd44_74.Data_44;
 import com.blg.rtu.util.Constant;
@@ -37,15 +39,17 @@ import com.blg.rtu1.server.CoreThread;
 
 public class F_01_100  extends FrmParent {
 	public static F_01_100 instance = null ;
-	private final static int requestLen_1 = 6 ; 
-	private final static int requestLen_2 = 5 ; 
+	private final static int requestLen_6 = 6 ; 
+	private final static int requestLen_5 = 5 ; 
+	private final static int requestLen_3 = 3 ; 
 	//private final static int requestLen_3 = 14 ; 
 
 	private TextView title ;
 
 	private EditText item01 ;
 	private EditText item02 ;
-
+	private EditText item04 ;
+	
 	private ImageView btnSet1 ;
 	private ImageView btnRead ;
 	
@@ -53,7 +57,9 @@ public class F_01_100  extends FrmParent {
 	private ArrayAdapter<SpinnerVO> spinnerAdapter;
 	//private int spinnerPosition ;
 	public List<String> listRtuId = new ArrayList<String>();
+	public List<String> listModbusAddr = new ArrayList<String>() ;
 	
+	private int m_currMeter  = 99;
 
 	@Override
 	public void onAttach(Activity activity) {
@@ -87,9 +93,11 @@ public class F_01_100  extends FrmParent {
 		
 		item01 = (EditText)view.findViewById(R.id.func_01_100_item01);
 		item02 = (EditText)view.findViewById(R.id.func_01_100_item02);
+		item04 = (EditText)view.findViewById(R.id.func_01_100_item04) ;
 		
-		item01.setFilters(new InputFilter[]{new InputFilter.LengthFilter(requestLen_1)});
-		item02.setFilters(new InputFilter[]{new InputFilter.LengthFilter(requestLen_2)});
+		item01.setFilters(new InputFilter[]{new InputFilter.LengthFilter(requestLen_6)});
+		item02.setFilters(new InputFilter[]{new InputFilter.LengthFilter(requestLen_5)});
+		item04.setFilters(new InputFilter[]{new InputFilter.LengthFilter(requestLen_3)}) ;
 		
 		String str = Preferences.getInstance().getString(Constant.func_vk_01_100_01) ;
 		if(!str.equals(Constant.errorStr)){
@@ -100,15 +108,47 @@ public class F_01_100  extends FrmParent {
 		if(!str.equals(Constant.errorStr)){
 			item02.setText(str); 
 		}
+		str = Preferences.getInstance().getString(Constant.func_vk_01_100_04) ;
+		if(!str.equals(Constant.errorStr)){
+			item04.setText(str); 
+		}
 		
 		item03 = (Spinner)view.findViewById(R.id.f_01_100_item3);
 		spinnerAdapter = new ArrayAdapter<SpinnerVO>(this.act, R.layout.spinner_style, new ArrayList<SpinnerVO>());
 		spinnerAdapter.setDropDownViewResource(R.layout.spinner_item);
 		item03.setAdapter(spinnerAdapter);
+		item03.setOnItemSelectedListener(new OnItemSelectedListener() {
+
+            //当选中某一个数据项时触发该方法
+            /*
+             * parent接收的是被选择的数据项所属的 Spinner对象，
+             * view参数接收的是显示被选择的数据项的TextView对象
+             * position接收的是被选择的数据项在适配器中的位置
+             * id被选择的数据项的行号
+             */
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view,int position, long id) {
+            	
+				String rtuId = getRtuSelectedItem() ;
+				item01.setText(rtuId.substring(0, 6).trim()) ;
+				item02.setText(rtuId.substring(6).trim()) ;
+				item04.setText(getModbusAddrSelectedItem());
+				/*if(item03.getSelectedItemPosition() != 0) {
+					item04.setText(temp[1]);
+				}else{
+					item04.setText("");
+				}*/
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // TODO Auto-generated method stub    
+            }
+        });
 		
-		item01.addTextChangedListener(new MyTextWatcher(Constant.func_vk_01_010_01));
-		item02.addTextChangedListener(new MyTextWatcher(Constant.func_vk_01_010_02));
-		
+		item01.addTextChangedListener(new MyTextWatcher(Constant.func_vk_01_100_01));
+		item02.addTextChangedListener(new MyTextWatcher(Constant.func_vk_01_100_02));
+		item04.addTextChangedListener(new MyTextWatcher(Constant.func_vk_01_100_04));
 		
 		btnSet1 = (ImageView)view.findViewById(R.id.btn_set);
 		btnRead = (ImageView)view.findViewById(R.id.btn_read);
@@ -147,18 +187,35 @@ public class F_01_100  extends FrmParent {
 	protected boolean checkBeforeSet(boolean showDialog){
 		String regionNum = item01.getText().toString() ;
 		String clientId = item02.getText().toString() ;
+		String modbusAddr = item04.getText().toString() ;
+		int position = item03.getSelectedItemPosition();
+		///////
+		if(position != 0) {
+			if(modbusAddr == null || modbusAddr.equals("")){
+				if(showDialog)new DialogAlarm().showDialog(act, "ModBus地址必须填写！") ;
+				return false ;
+			} 
+			
+			int modbusAddrValue = Integer.valueOf(modbusAddr) ;
+			if(modbusAddrValue < 1 || modbusAddrValue > 247){
+				if(showDialog)new DialogAlarm().showDialog(act, "ModBus地址必须是1~247的数字！") ;
+				return false ;
+			}
+		}
+		////////////////////////
 		if(regionNum == null || regionNum.equals("") ){
 			if(showDialog){
 				new DialogAlarm().showDialog(act, "行政区编号不能为空！") ;
 			}
 			return false ;
-		} 
+		}
 		if(regionNum.length() != 6){
 			if(showDialog){
 				new DialogAlarm().showDialog(act, "行政区编号必须为6位数字！") ;
 			}
 			return false ;
 		} 
+		////////////////////////
 		if(clientId == null || clientId.equals("") ){
 			if(showDialog){
 				new DialogAlarm().showDialog(act, "终端地址不能为空！") ;
@@ -166,8 +223,8 @@ public class F_01_100  extends FrmParent {
 			return false ;
 		} 
 		int len = clientId.length() ;
-		if(len < requestLen_2){
-			int n = requestLen_2 - len ;
+		if(len < requestLen_5){
+			int n = requestLen_5 - len ;
 			for(int i = n ; i > 0 ; i--){
 				clientId = "0" + clientId ;
 			}
@@ -181,6 +238,7 @@ public class F_01_100  extends FrmParent {
 	 */
 	@Override
 	protected void queryCommand(){
+		CoreThread.getInstance().newRtuId(getRtuSelectedItem().replaceAll(" ", ""));
 		this.sendRtuCommand(new CommandCreator().cd_74(), true) ;
 	}
 	
@@ -191,9 +249,19 @@ public class F_01_100  extends FrmParent {
 	protected void setCommand(){
 		String regionNum = item01.getText().toString() ;
 		String clientId = item02.getText().toString() ;
-		//String selectId = item03.getSelectedItem().toString();
 		int position = item03.getSelectedItemPosition();
-		this.sendRtuCommand(new CommandCreator().cd_44(position,regionNum, clientId, null), false) ;
+		int modbusAddrValue ;
+		if(position != 0) {
+			String modbusAddr = item04.getText().toString() ;
+			modbusAddrValue = Integer.valueOf(modbusAddr) ;
+		}else{
+			item04.setText("") ;
+			modbusAddrValue = 1 ;
+		}
+		
+		m_currMeter = position ;
+		CoreThread.getInstance().newRtuId(getRtuSelectedItem().replaceAll(" ", ""));
+		this.sendRtuCommand(new CommandCreator().cd_44(position, modbusAddrValue, regionNum, clientId, null), false) ;
 	}
 	
 	public String getRtuSelectedItem() {
@@ -201,11 +269,22 @@ public class F_01_100  extends FrmParent {
 			//Toast.makeText(this.act, "网络未连接，请检查！", Toast.LENGTH_SHORT).show() ;
 			return "";
 		}
+		if(listRtuId.size() == 0) {
+			return "10101065535" ;
+		}
 		int position1 = item03.getSelectedItemPosition() ;
 		if(position1 > 8 || position1 < 0 ) {
 			position1 = 0 ;
 		}
+		
 		return listRtuId.get(position1) ;
+	}
+	public String getModbusAddrSelectedItem() {
+		int position = item03.getSelectedItemPosition() ;
+		if(position > 8 || position < 0 ) {
+			position = 0 ;
+		}
+		return listModbusAddr.get(position) ;
 	}
 	
 	/**
@@ -246,40 +325,57 @@ public class F_01_100  extends FrmParent {
 		super.receiveRtuData(d) ;
 		this.title.setCompoundDrawables(ImageUtil.getTitlLeftImg_item001(this.act), null, ImageUtil.getTitlRightImg_green(this.act), null); 
 //		super.scrollTo(this.btnRead) ;
-		
 		Preferences p = Preferences.getInstance() ;
-		
-		
+		String[] temp = null ;
 		Object subD = d.subData ;
 		if(subD != null){
 			if(subD instanceof Data_44){
 				Data_44 sd = (Data_44)subD ;
-				String rtuId = sd.getRtuId() ;
+				temp = sd.getRtuId().split("-") ;
+				String rtuId = temp[0] ;
+				String modbusAddr = temp[1] ;
 				listRtuId.set(item03.getSelectedItemPosition(), rtuId) ;
+				listModbusAddr.set(item03.getSelectedItemPosition(), modbusAddr) ;
 				item01.setText(rtuId.substring(0, 6).trim()) ;
 				item02.setText(rtuId.substring(6).trim()) ;
+				if(item03.getSelectedItemPosition() != 0) {
+					item04.setText(temp[1]);
+				}else{
+					item04.setText("");
+				}
 			}else if(subD instanceof DataList_74){
 				DataList_74 sd = (DataList_74)d.subData ;
 				spinnerAdapter.clear() ;
 				listRtuId.clear();
-				
+				listModbusAddr.clear() ;
 				for(int i = 0; i < 9; i++) {
 					if(i == 0) {
-						spinnerAdapter.add(new SpinnerVO("" + i, " 中继器 ："+ sd.getRtuId().get(i))) ;
-						listRtuId.add(sd.getRtuId().get(i)) ;
+						temp = sd.getRtuId().get(i).split("-") ;
+						spinnerAdapter.add(new SpinnerVO("" + i, " 中继器 ："+ temp[0])) ;
+						listRtuId.add(sd.getRtuId().get(i).split("-")[0]) ;
+						listModbusAddr.add(sd.getRtuId().get(i).split("-")[1]) ;
 					}else{
-						spinnerAdapter.add(new SpinnerVO("" + i, i + "号水表："+ sd.getRtuId().get(i))) ;
-						listRtuId.add(sd.getRtuId().get(i)) ;
+						temp = sd.getRtuId().get(i).split("-") ;
+						spinnerAdapter.add(new SpinnerVO("" + i, i + "号水表："+ temp[0])) ;
+						listRtuId.add(sd.getRtuId().get(i).split("-")[0]) ;
+						listModbusAddr.add(sd.getRtuId().get(i).split("-")[1]) ;
 					}
-					
 				}
+					//temp = getRtuSelectedItem();
+					String rtuId = getRtuSelectedItem();
+					item01.setText(rtuId.substring(0, 6).trim()) ;
+					item02.setText(rtuId.substring(6).trim()) ;
+					item04.setText(getModbusAddrSelectedItem());
+				
+			}else if(subD instanceof Data_10_50){
+				Data_10_50 sd = (Data_10_50)d.subData ;
+				spinnerAdapter.clear() ;
+				listRtuId.clear();
+				listModbusAddr.clear() ;
+				String rtuId = sd.getRtuId() ;
+				spinnerAdapter.add(new SpinnerVO("" + 0, " 水表地址 ："+ rtuId)) ;
 			}
 		}
-		
-		
-		
-	
-		
 		p.putString(Constant.func_vk_01_010_dt, this.resultDt.getText().toString()) ;
 	}
 	

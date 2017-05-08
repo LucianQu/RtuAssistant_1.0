@@ -66,7 +66,7 @@ public class F_08_050_HelpReceiveData {
 			p.putInt(Constant.func_vk_08_050_01_05, 0);
 			fr.cb01_05_n.setChecked(true) ;
 		}
-		v = sd.getA04() ;
+		v = sd.getA06() ;
 		if(v == 1){
 			p.putInt(Constant.func_vk_08_050_01_06, 1);
 			fr.cb01_06_y.setChecked(true) ;
@@ -75,7 +75,7 @@ public class F_08_050_HelpReceiveData {
 			fr.cb01_06_n.setChecked(true) ;
 		}
 		
-		v = sd.getA05() ;
+		v = sd.getA07() ;
 		if(v == 1){
 			p.putInt(Constant.func_vk_08_050_01_07, 1);
 			fr.cb01_07_y.setChecked(true) ;
