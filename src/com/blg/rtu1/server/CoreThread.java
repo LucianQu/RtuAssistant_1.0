@@ -723,7 +723,7 @@ public class CoreThread {
 				
 					switch(count){
 					case 0 : {
-						obj.autoSetCommand(Code206.cd_10) ;//设置遥测终端、中继站地址
+						obj.autoSetCommand(Code206.cd_44) ;//设置遥测终端、中继站地址
 						break;}
 					case 1 :{
 						obj.autoSetCommand(Code206.cd_11) ;//设置遥测终端、中继站时钟
@@ -732,7 +732,7 @@ public class CoreThread {
 						obj.autoSetCommand(Code206.cd_F1) ;//设置电池池电压报警值
 						break;}
 					case 3 :{
-						obj.autoSetCommand(Code206.cd_90) ;//复位遥测终端参数和状态 
+						//obj.autoSetCommand(Code206.cd_90) ;//复位遥测终端参数和状态 
 						break;}
 					case 4 :{
 						obj.autoSetCommand(Code206.cd_DF) ;//设置DTU工作模式

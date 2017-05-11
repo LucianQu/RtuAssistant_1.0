@@ -60,8 +60,6 @@ public class F_01_100  extends FrmParent {
 	//private int spinnerPosition ;
 	public List<String> listRtuId = new ArrayList<String>();
 	public List<String> listModbusAddr = new ArrayList<String>() ;
-	
-	private int m_currMeter  = 99;
 
 	@Override
 	public void onAttach(Activity activity) {
@@ -266,7 +264,6 @@ public class F_01_100  extends FrmParent {
 			modbusAddrValue = 1 ;
 		}
 		
-		m_currMeter = position ;
 		CoreThread.getInstance().newRtuId(getRtuSelectedItem().replaceAll(" ", ""));
 		if(LoginActivity.instance.getCbWifiConnecyType()) {
 			this.sendRtuCommand(new CommandCreator().cd_10(regionNum, clientId, null), false) ;
@@ -394,9 +391,13 @@ public class F_01_100  extends FrmParent {
 					Data_10_50 sd = (Data_10_50)d.subData ;
 					spinnerAdapter.clear() ;
 					listRtuId.clear();
-					listModbusAddr.clear() ;
+					
 					String rtuId = sd.getRtuId() ;
-					spinnerAdapter.add(new SpinnerVO("" + 0, " 水表地址 ："+ rtuId)) ;
+					listRtuId.add(rtuId) ;
+					item01.setText(rtuId.substring(0, 6).trim()) ;
+					item02.setText(rtuId.substring(6).trim()) ;
+					spinnerAdapter.add(new SpinnerVO("" + 0, "地址:"+ rtuId)) ;
+					
 				}else{
 					new AlertDialog.Builder(getActivity())
 					.setIcon(getResources().getDrawable(R.drawable.login_error_icon))
@@ -415,6 +416,7 @@ public class F_01_100  extends FrmParent {
 	 */
 	@Override
 	public void outSetData(Vo2Xml vo){
+	
 		vo.setV_01_010_clientId(item01.getText().toString()) ;
 		vo.setV_01_010_regionNum(item02.getText().toString()) ;
 	}

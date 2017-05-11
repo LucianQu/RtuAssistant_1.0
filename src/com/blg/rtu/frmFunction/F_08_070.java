@@ -300,10 +300,10 @@ public class F_08_070  extends FrmParent {
 					}
 				}else{
 					if ((waterMinus / 1000) > 0) {
-						item03.setText((waterMinus / 1000) + "." + ((waterMinus%100)/100 > 0 ? waterMinus%1000 :( 
+						item03.setText((waterMinus / 1000) + "." + ((waterMinus%1000)/100 > 0 ? waterMinus%1000 :( 
 								(waterMinus %100)/10 >0 ?("0" + waterMinus%1000): ("00" + (waterMinus%10 ==0?"0":waterMinus%1000)))));
 					}else if((waterMinus / 1000) == 0){
-						item03.setText("0" + "." + ((waterMinus%100)/100 > 0 ? waterMinus%1000 :( 
+						item03.setText("0" + "." + ((waterMinus%1000)/100 > 0 ? waterMinus%1000 :( 
 								(waterMinus %100)/10 >0 ?("0" + waterMinus%1000): ("00" + (waterMinus%10 ==0?"0":waterMinus%1000)))));
 					}
 				}

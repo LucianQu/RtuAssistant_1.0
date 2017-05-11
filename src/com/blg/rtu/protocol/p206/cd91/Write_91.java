@@ -39,19 +39,19 @@ public class Write_91 extends ProtocolSupport{
 		int index = this.createDownDataHead(rtuId, code, b, len, controlFunCode) ;
 		
 		int typ = p.getClearType().intValue() ;
-		if(typ == Param_91.clearType_0.intValue()){
+		if(typ == (byte)0x64){
 			//清空全部数据
-			b[index] = (byte)0xFF ;
-		}else if(typ == Param_91.clearType_1.intValue()){
-			//清空雨量
-			b[index] = 1 ;
-		}else if(typ == Param_91.clearType_2.intValue()){
-			//清空水位
-			b[index] = 2 ;
-		}else if(typ == Param_91.clearType_3.intValue()){
-			//清空 流量
-			b[index] = 4 ;
-		}else if(typ == Param_91.clearType_4.intValue()){
+			b[index] = (byte)0x64 ;
+		}else if(typ == (byte)0x04){
+			//清空流量
+			b[index] = (byte)0x04 ;
+		}else if(typ == (byte)0x20){
+			//清空日志
+			b[index] = (byte)0x20 ;
+		}else if(typ == (byte)0x40){
+			//清空事件
+			b[index] = (byte)0x40 ;
+		}/*else if(typ == Param_91.clearType_4.intValue()){
 			//清空水温 
 			b[index] = 8 ;
 		}else if(typ == Param_91.clearType_5.intValue()){
@@ -66,7 +66,7 @@ public class Write_91 extends ProtocolSupport{
 		}else if(typ == Param_91.clearType_8.intValue()){
 			//清空四个中心的补报数据
 			b[index] = (byte)128 ;
-		}
+		}*/
 		
 		this.createDownDataTail(b, password) ;
 		

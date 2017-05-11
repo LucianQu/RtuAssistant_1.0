@@ -73,14 +73,14 @@ public class ChBusi_01_Operate {
 			@Override
 			public void onClick(View v) {
 				chf.paramProgress.setVisibility(View.VISIBLE);
-				if(!HelpSaveSetDataToFile.isInFileExist(chf.act)){
+				if(!HelpSaveSetDataToFile.isFileExist(chf.act)){
 					new DialogAlarm().showDialog(chf.act, chf.act.getResources().getString(R.string.txtAlarmNoSetDataFile) + 
-							"\n" + "请确认导入路径是否有文件：" + "\n" + "路径：" + HelpSaveSetDataToFile.getInFile(chf.act).getPath()) ;	
+							"\n" + "请确认导入路径是否有文件：" + "\n" + "路径：" + HelpSaveSetDataToFile.getFile(chf.act).getPath()) ;	
 					chf.paramProgress.setVisibility(View.GONE) ;
 				}else{
 					new DialogConfirm().showDialog(chf.act,
 							chf.act.getResources().getString(R.string.txtConfirmInSetData) + "\n" +
-					"导入路径：" + HelpSaveSetDataToFile.getInFile(chf.act).getPath(),
+					"导入路径：" + HelpSaveSetDataToFile.getFile(chf.act).getPath(),
 						new DialogConfirm.CallBackInterface(){
 							@Override
 							public void dialogCallBack(Object o) {
@@ -95,7 +95,7 @@ public class ChBusi_01_Operate {
 			}
 			private void readInFile(){
 				try{
-					File f = HelpSaveSetDataToFile.getInFile(chf.act) ;
+					File f = HelpSaveSetDataToFile.getFile(chf.act) ;
 					new Help().in(chf.act, f) ;
 					chf.paramProgress.setVisibility(View.GONE) ;
 					Toast.makeText(chf.act, "导入命令数据成功", Toast.LENGTH_SHORT).show() ;
@@ -112,10 +112,10 @@ public class ChBusi_01_Operate {
 				@Override
 				public void onClick(View v) {
 					chf.paramProgress.setVisibility(View.VISIBLE) ;
-					if(HelpSaveSetDataToFile.isInFileExist(chf.act)){
+					if(HelpSaveSetDataToFile.isFileExist(chf.act)){
 						new DialogConfirm().showDialog(chf.act,
 								chf.act.getResources().getString(R.string.txtConfirmReplaceSetData) + "\n" + 
-								"导出路径：" + HelpSaveSetDataToFile.getInFile(chf.act).getPath(),
+								"导出路径：" + HelpSaveSetDataToFile.getFile(chf.act).getPath(),
 							new DialogConfirm.CallBackInterface(){
 								@Override
 								public void dialogCallBack(Object o) {
@@ -128,7 +128,7 @@ public class ChBusi_01_Operate {
 						}) ;			
 					}else{
 						new DialogConfirm().showDialog(chf.act,"是否导出配置" + "\n" +
-								"导出路径：" + HelpSaveSetDataToFile.getInFile(chf.act).getPath(),
+								"导出路径：" + HelpSaveSetDataToFile.getFile(chf.act).getPath(),
 							new DialogConfirm.CallBackInterface(){
 								@Override
 								public void dialogCallBack(Object o) {
@@ -145,7 +145,7 @@ public class ChBusi_01_Operate {
 				private void saveOutFile(){
 					try{
 						String xml = new Help().out(chf.act) ;
-						File f = HelpSaveSetDataToFile.getInFile(chf.act) ;
+						File f = HelpSaveSetDataToFile.getFile(chf.act) ;
 						HelpSaveSetDataToFile.saveData(f, xml) ;
 						chf.paramProgress.setVisibility(View.GONE) ;
 						Toast.makeText(chf.act, "导出命令数据成功", Toast.LENGTH_SHORT).show() ;

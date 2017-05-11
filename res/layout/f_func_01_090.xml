@@ -23,12 +23,12 @@
 	            <TextView
 	                android:text="@string/func_01_090_item1"
 	                style="@style/func_item_viewtext_style_100_a"/>
-	            <TextView
+	            <EditText
 	                android:id="@+id/func_01_090_item1"
 	                android:labelFor="@id/func_01_090_item1"
-	                style="@style/func_item_edittext_style_180"/>
+	                style="@style/func_item_editnumber_style_180"/>
 	        </LinearLayout>
-	        <include layout="@layout/show_btn_query"/>
+	        <include layout="@layout/show_btn_set_query"/>
         </LinearLayout>
         
         <LinearLayout 

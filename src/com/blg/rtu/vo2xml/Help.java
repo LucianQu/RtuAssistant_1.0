@@ -9,7 +9,7 @@ public class Help {
 	public String out(MainActivity act) throws Exception {
 		Vo2Xml vo = new Vo2Xml();
 
-		act.frgTool.f_01_010.outSetData(vo);	//水表地址
+		act.frgTool.f_01_100.outSetData(vo);	//水表地址
 		//act.frgTool.f_01_020.outSetData(vo);	//水表时钟
 		/*act.frgTool.f_01_030.outSetData(vo);*/
 		//act.frgTool.f_01_040.outSetData(vo);	//水表版本号
@@ -94,7 +94,7 @@ public class Help {
 
 		Vo2Xml vo = new Vo2Xml().toObject(buffer) ;
 
-		act.frgTool.f_01_010.inSetData(vo);
+		act.frgTool.f_01_100.inSetData(vo);
 		//act.frgTool.f_01_020.inSetData(vo);
 	/*	act.frgTool.f_01_030.inSetData(vo);*/
 		//act.frgTool.f_01_040.inSetData(vo);

@@ -184,8 +184,9 @@ import com.blg.rtu.protocol.p206.cdCF_DF.Write_DF;
 import com.blg.rtu.protocol.p206.cdD2_D6.Answer_D2_D6;
 import com.blg.rtu.protocol.p206.cdD2_D6.Read_D2;
 import com.blg.rtu.protocol.p206.cdD2_D6.Write_D6;
-import com.blg.rtu.protocol.p206.cdD3.Answer_D3;
-import com.blg.rtu.protocol.p206.cdD3.Read_D3;
+import com.blg.rtu.protocol.p206.cdD3_3E.Answer_D3_3E;
+import com.blg.rtu.protocol.p206.cdD3_3E.Read_D3;
+import com.blg.rtu.protocol.p206.cdD3_3E.Write_3E;
 import com.blg.rtu.protocol.p206.cdD4.Answer_D4;
 import com.blg.rtu.protocol.p206.cdD4.Read_D4;
 import com.blg.rtu.protocol.p206.cdD8.Answer_D8;
@@ -688,7 +689,12 @@ public class Driver206 extends DriverRtu {
 				///应答 - 设置电池池电压报警值
 				this.upData = new Answer_E1_F1().parse(rtuId, b, ca, this.dataCode);
 				action.append(Action.commandResultAction) ;
-			}else			
+			}else	
+			if(this.dataCode.equalsIgnoreCase(Code206.cd_3E)){
+				///应答 - 设置出厂ID
+				this.upData = new Answer_D3_3E().parse(rtuId, b, ca, this.dataCode);
+				action.append(Action.commandResultAction) ;
+			}else	
 			if(this.dataCode.equalsIgnoreCase(Code206.cd_CF)){
 				//应答 - 查询DTU工作模式
 				this.upData = new Answer_CF_DF().parse(rtuId, b, ca, this.dataCode);
@@ -700,7 +706,7 @@ public class Driver206 extends DriverRtu {
 				action.append(Action.commandResultAction) ;
 			}else
 			if(this.dataCode.equalsIgnoreCase(Code206.cd_D3)){
-				this.upData = new Answer_D3().parse(rtuId, b, ca, this.dataCode);
+				this.upData = new Answer_D3_3E().parse(rtuId, b, ca, this.dataCode);
 				action.append(Action.commandResultAction) ;
 			}else	
 			if(this.dataCode.equalsIgnoreCase(Code206.cd_D4)){
@@ -1408,6 +1414,11 @@ public class Driver206 extends DriverRtu {
 				this.downData = new Write_F1().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
 				activ = Action.remoteCommandAction ;
 			}else 
+			if(this.commandCode.equalsIgnoreCase(Code206.cd_3E)){
+				//设置出厂ID
+				this.downData = new Write_3E().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
+				activ = Action.remoteCommandAction ;
+			}else
 			if(this.commandCode.equalsIgnoreCase(Code206.cd_EF)){
 				//查询遥测终端硬软件版本号
 				this.downData = new Read_EF().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;

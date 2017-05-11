@@ -28,6 +28,27 @@ public final class CRC16 {
 		return tem;
 	}
 	
+	//modbus协议校验
+	
+	public int cal_crc16(byte[] b, int startIndex, int endIndex) {
+		int x = 0 ;
+		int crc = 0xffff;
+		for (int i = startIndex; i <= endIndex; i++) {
+			crc = crc ^ b[i] ;
+		 	for(i = 0; i < 8; i++) {
+		 		if((crc & 0x0001) == 0x0001) {
+		 			crc >>= 1 ;
+		 			crc ^= 0xA001 ;
+		 		}else{
+		 			crc >>= 1 ;
+		 		}
+		 	}
+		}
+		//此处转换，因为大于65536的数会出错（针对CRC16），例如1480261498数转换后成为-134 ；
+		return  (crc+65536)%65536;
+	}
+	
+	
 	 private static int[] crc16_rev_table = new int[] 
 	    {   0x0000, 0xC0C1, 0xC181, 0x0140, 0xC301, 0x03C0, 0x0280, 0xC241,
 		    0xC601, 0x06C0, 0x0780, 0xC741, 0x0500, 0xC5C1, 0xC481, 0x0440,

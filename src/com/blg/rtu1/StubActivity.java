@@ -327,8 +327,8 @@ public class StubActivity extends ActivityAidl.Stub{
 						//设置或查询脉冲常数
 						mAct.frgTool.f_08_160.receiveRtuData(data) ;
 					}else
-					if(data.dataCode.equals(Code206.cd_D3)){
-						//查询水表出厂编号
+					if(data.dataCode.equals(Code206.cd_D3)|| data.dataCode.equals(Code206.cd_3E)){
+						//查询/设置水表出厂编号
 						mAct.frgTool.f_01_090.receiveRtuData(data) ;
 						mAct.frgTool.fragment_loopq02.receiveRtuData(Code206.cd_D3,data) ;
 					}else
@@ -675,8 +675,8 @@ public class StubActivity extends ActivityAidl.Stub{
 						//查询流量实时值
 						mAct.frgTool.f_05_070.commandSendedCallBack() ;
 					}else
-					if(data.dataCode.equals(Code206.cd_D3)){
-						//查询出厂编号
+					if(data.dataCode.equals(Code206.cd_D3)|| data.dataCode.equals(Code206.cd_3E)){
+						//查询/设置出厂编号
 						mAct.frgTool.f_01_090.commandSendedCallBack() ;
 					}else
 					if(data.dataCode.equals(Code206.cd_D4)){
@@ -748,9 +748,9 @@ public class StubActivity extends ActivityAidl.Stub{
 			mAct.mHandler.post(new Runnable(){
 				@Override
 				public void run() {
-					/*if(code.equals(Code206.cd_10)){//设置遥测终端、中继站地址
-						mAct.frgTool.f_01_010.autoSet() ;
-					}else*/
+					if(code.equals(Code206.cd_44)){//设置遥测终端、中继站地址
+						mAct.frgTool.f_01_100.autoSet() ;
+					}else
 					if(code.equals(Code206.cd_11)){//设置遥测终端、中继站时钟
 						mAct.frgTool.f_01_020.autoSet() ;
 					}else

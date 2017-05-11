@@ -31,24 +31,14 @@ public class Answer_91  extends ProtocolSupport{
 		d.setSubData(dd) ;
 		
 		int i = (b[index] + 256) % 256 ;
-		if(i == 1){
-			dd.setClearType(Param_91.clearType_1.intValue()) ;
-		}else if(i == 2){
-			dd.setClearType(Param_91.clearType_2.intValue()) ;
-		}else if(i == 4){
-			dd.setClearType(Param_91.clearType_3.intValue()) ;
-		}else if(i == 8){
-			dd.setClearType(Param_91.clearType_4.intValue()) ;
-		}else if(i == 16){
-			dd.setClearType(Param_91.clearType_5.intValue()) ;
-		}else if(i == 32){
-			dd.setClearType(Param_91.clearType_6.intValue()) ;
-		}else if(i == 64){
-			dd.setClearType(Param_91.clearType_7.intValue()) ;
-		}else if(i == 128){
-			dd.setClearType(Param_91.clearType_8.intValue()) ;
-		}else if(i == 255){
+		if(i == (byte)0x64){
 			dd.setClearType(Param_91.clearType_0.intValue()) ;
+		}else if(i == (byte)0x04){
+			dd.setClearType(Param_91.clearType_1.intValue()) ;
+		}else if(i == (byte)0x20){
+			dd.setClearType(Param_91.clearType_2.intValue()) ;
+		}else if(i == (byte)0x40){
+			dd.setClearType(Param_91.clearType_3.intValue()) ;
 		}else{
 			dd.setClearType(Param_91.clearType_0.intValue()) ;
 		}

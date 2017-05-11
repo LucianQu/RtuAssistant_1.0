@@ -101,11 +101,11 @@ public class F_01_060  extends FrmParent {
 		spinnerAdapter.add(new SpinnerVO("" + Param_91.clearType_0, "全部数据")) ;
 		/*spinnerAdapter.add(new SpinnerVO("" + Param_91.clearType_1, "雨量数据")) ;
 		spinnerAdapter.add(new SpinnerVO("" + Param_91.clearType_2, "水位数据")) ;*/
-		spinnerAdapter.add(new SpinnerVO("" + Param_91.clearType_3, "流量数据")) ;
+		spinnerAdapter.add(new SpinnerVO("" + Param_91.clearType_1, "流量数据")) ;
 		/*spinnerAdapter.add(new SpinnerVO("" + Param_91.clearType_4, "水温数据")) ; 
 		spinnerAdapter.add(new SpinnerVO("" + Param_91.clearType_5, "水质数据")) ;*/
-		spinnerAdapter.add(new SpinnerVO("" + Param_91.clearType_6, "日志数据")) ; 
-		spinnerAdapter.add(new SpinnerVO("" + Param_91.clearType_7, "事件数据")) ;
+		spinnerAdapter.add(new SpinnerVO("" + Param_91.clearType_2, "日志数据")) ; 
+		spinnerAdapter.add(new SpinnerVO("" + Param_91.clearType_3, "事件数据")) ;
 		/*spinnerAdapter.add(new SpinnerVO("" + Param_91.clearType_8, "四个中心补报数据")) ;*/
 	}
 	
@@ -148,7 +148,8 @@ public class F_01_060  extends FrmParent {
 	@Override
 	protected void setCommand(){
 		CoreThread.getInstance().newRtuId(F_01_100.getInstance().getRtuSelectedItem().replaceAll(" ", ""));
-		this.sendRtuCommand(new CommandCreator().cd_91(Integer.valueOf(spinnerAdapter.getItem(spinnerPosition).getId()), null), false) ;
+		int type = spinnerPosition == 0 ? 0x64 : (spinnerPosition == 1 ? 0x04 : (spinnerPosition == 2 ? 0x20 : (spinnerPosition == 3 ? 0x40 : 0x64))) ;
+		this.sendRtuCommand(new CommandCreator().cd_91((byte)type, null), false) ;
 	}
 	
 	/**
@@ -197,12 +198,12 @@ public class F_01_060  extends FrmParent {
 		if(type == Param_91.clearType_0.intValue()){
 			typeName = "清空全部数据" ;
 		}else if(type == Param_91.clearType_1.intValue()){
-			typeName = "清空遥测终端雨量数据" ;
-		}else if(type == Param_91.clearType_2.intValue()){
-			typeName = "清空遥测终端水位数据" ;
-		}else if(type == Param_91.clearType_3.intValue()){
 			typeName = "清空遥测终端流量数据" ;
-		}else if(type == Param_91.clearType_4.intValue()){
+		}else if(type == Param_91.clearType_2.intValue()){
+			typeName = "清空遥测终端日志数据" ;
+		}else if(type == Param_91.clearType_3.intValue()){
+			typeName = "清空遥测终端事件数据" ;
+		}/*else if(type == Param_91.clearType_4.intValue()){
 			typeName = "清空遥测终端水温数据" ;
 		}else if(type == Param_91.clearType_5.intValue()){
 			typeName = "清空遥测终端水质数据" ;
@@ -212,7 +213,7 @@ public class F_01_060  extends FrmParent {
 			typeName = "清空遥测终端事件数据" ;
 		}else if(type == Param_91.clearType_8.intValue()){
 			typeName = "清空遥测终端四个中心补报数据" ;
-		}
+		}*/
 		
 		item01.setSelection(type) ;
 

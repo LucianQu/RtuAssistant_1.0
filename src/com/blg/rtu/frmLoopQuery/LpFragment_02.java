@@ -17,7 +17,7 @@ import android.widget.Toast;
 import com.blg.rtu.protocol.RtuData;
 import com.blg.rtu.protocol.p206.Code206;
 import com.blg.rtu.protocol.p206.cd10_50.Data_10_50;
-import com.blg.rtu.protocol.p206.cdD3.Data_D3;
+import com.blg.rtu.protocol.p206.cdD3_3E.Data_D3_3E;
 import com.blg.rtu.protocol.p206.cdEF.Data_EF;
 import com.blg.rtu1.MainActivity;
 import com.blg.rtu1.R;
@@ -130,7 +130,7 @@ public class LpFragment_02 extends Fragment {
 	 */
 	public void receiveRtuData(String afn, RtuData d){
 		if(afn.equals(Code206.cd_D3)) {
-			Data_D3 sd = (Data_D3)d.subData ;
+			Data_D3_3E sd = (Data_D3_3E)d.subData ;
 			String waterMeterSerial = sd.getWaterMeterSerial() ;
 			item01.setText(waterMeterSerial) ;
 		}else if(afn.equals(Code206.cd_50)) {

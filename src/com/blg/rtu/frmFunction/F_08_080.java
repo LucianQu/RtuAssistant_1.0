@@ -277,7 +277,6 @@ public class F_08_080  extends FrmParent {
 		if(subD != null){
 			if(subD instanceof Data_40){
 				Data_40 sd = (Data_40)subD ;
-				
 				amount = sd.getWaterPure().doubleValue();
 				//item03.setText(amount + "") ;
 				
@@ -308,10 +307,10 @@ public class F_08_080  extends FrmParent {
 						}
 					}else{
 						if ((waterPure / 1000) > 0) {
-							item03.setText((waterPure / 1000) + "." + ((waterPure%100)/100 > 0 ? waterPure%1000 :( 
+							item03.setText((waterPure / 1000) + "." + ((waterPure%1000)/100 > 0 ? waterPure%1000 :( 
 									(waterPure %100)/10 >0 ?("0" + waterPure%1000): ("00" + (waterPure%10 ==0?"0":waterPure%1000)))));
 						}else if((waterPure / 1000) == 0){
-							item03.setText("0" + "." + ((waterPure%100)/100 > 0 ? waterPure % 1000 :( 
+							item03.setText("0" + "." + ((waterPure%1000)/100 > 0 ? waterPure % 1000 :( 
 									(waterPure %100)/10 >0 ?("0" + waterPure%1000): ("00" + (waterPure%10 ==0?"0":waterPure%1000)))));
 						}
 					}

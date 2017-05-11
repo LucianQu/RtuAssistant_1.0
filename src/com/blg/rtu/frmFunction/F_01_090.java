@@ -3,9 +3,13 @@ package com.blg.rtu.frmFunction;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.InputFilter;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -14,8 +18,10 @@ import android.widget.TextView;
 import com.blg.rtu.protocol.RtuData;
 import com.blg.rtu.protocol.p206.Code206;
 import com.blg.rtu.protocol.p206.CommandCreator;
-import com.blg.rtu.protocol.p206.cdD3.Data_D3;
+import com.blg.rtu.protocol.p206.cdD3_3E.Data_D3_3E;
+import com.blg.rtu.protocol.p206.cdD3_3E.Param_3E;
 import com.blg.rtu.util.Constant;
+import com.blg.rtu.util.DialogAlarm;
 import com.blg.rtu.util.ImageUtil;
 import com.blg.rtu.util.Preferences;
 import com.blg.rtu.vo2xml.Vo2Xml;
@@ -26,10 +32,10 @@ import com.blg.rtu1.server.CoreThread;
 public class F_01_090 extends FrmParent {
 
 	private TextView title ;
-	private TextView item01 ;
+	private EditText item01 ;
 	
 	private ImageView btnRead ;
-	
+	private ImageView btnSet ;
 	
 	
 	@Override
@@ -59,17 +65,54 @@ public class F_01_090 extends FrmParent {
 		funcFrm = (FrameLayout)view.findViewById(R.id.f_01_090_Frm) ;
 		cover = (LinearLayout)view.findViewById(R.id.f_01_090_Load) ;
 		
-		item01 = (TextView)view.findViewById(R.id.func_01_090_item1) ;
+		item01 = (EditText)view.findViewById(R.id.func_01_090_item1) ;
+		item01.setFilters(new InputFilter[]{new InputFilter.LengthFilter(17)});
 		
 		String str = Preferences.getInstance().getString(Constant.func_vk_01_090_01) ;
 		if(!str.equals(Constant.errorStr)) {
 			item01.setText(str);
 		}
+		//item01.addTextChangedListener(new MyTextWatcher(Constant.func_vk_01_090_01));
+		item01.addTextChangedListener(new TextWatcher(){
+			private int strOldLen = 0 ;
+			@Override
+			public void afterTextChanged(Editable edt) {
+				String str = edt.toString() ;
+				int strNowLen = str.length() ;
+				if(strNowLen > strOldLen){
+					//不是删除操作
+					if(strOldLen % 5 == 4){
+						String str1 = str.substring(0, strNowLen - 1) ;
+						String str2 = str.substring(strNowLen - 1) ;
+						str = str1 + " " + str2 ;
+						item01.setText(str) ;
+						item01.setSelection(str.length()) ;
+					}
+				}
+				if (str == null || str.equals("")) {
+					Preferences.getInstance().remove(Constant.func_vk_01_090_01);
+				} else {
+					Preferences.getInstance().putString(Constant.func_vk_01_090_01, str);
+				}
+			}
+
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+				strOldLen = item01.getText().toString().length() ;
+			}
+
+			@Override
+			public void onTextChanged(CharSequence s, int start, int before, int count) {
+			}
+			
+		});
 		
 		btnRead = (ImageView)view.findViewById(R.id.btn_read);
+		btnSet = (ImageView)view.findViewById(R.id.btn_set);
 		resultDt = (TextView) view.findViewById(R.id.resultDatetime) ;
 		
 		title.setOnClickListener(titleClickLisn) ;
+		btnSet.setOnClickListener(btnSetLisn) ;
 		btnRead.setOnClickListener(btnReadLisn) ;
 		
 		str = Preferences.getInstance().getString(Constant.func_vk_01_090_dt) ;
@@ -90,7 +133,18 @@ public class F_01_090 extends FrmParent {
 
 	@Override
 	protected boolean checkBeforeSet(boolean showDialog) {
-		return false;
+		String meterSerical = item01.getText().toString() ;
+		if(meterSerical == null || "".equals(meterSerical)) {
+			if(showDialog)new DialogAlarm().showDialog(act, "出厂ID必须填写！") ;
+			return false ;
+		}
+		
+		if(meterSerical.replaceAll(" ", "").length() != 14) {
+			if(showDialog)new DialogAlarm().showDialog(act, "出厂ID必须为14位数字！") ;
+			return false ;
+		}
+		
+		return true;
 	}
 	
 	/**
@@ -104,6 +158,12 @@ public class F_01_090 extends FrmParent {
 
 	@Override
 	protected void setCommand() {
+		String meterSerical = item01.getText().toString() ;
+		
+		Param_3E p = new Param_3E() ;
+		p.setWaterMeterSerial(meterSerical.replaceAll(" ", "")) ;
+		CoreThread.getInstance().newRtuId(F_01_100.getInstance().getRtuSelectedItem().replaceAll(" ", ""));
+		this.sendRtuCommand(new CommandCreator().cd_3E(p, null), false) ;
 	}
 	
 	/**
@@ -141,8 +201,8 @@ public class F_01_090 extends FrmParent {
 		this.title.setCompoundDrawables(ImageUtil.getTitlLeftImg_item001(this.act), null, ImageUtil.getTitlRightImg_green(this.act), null);
 		Object subD = d.subData;
 		if(subD != null) {
-			if(subD instanceof Data_D3) {
-				Data_D3 sd = (Data_D3)subD ;
+			if(subD instanceof Data_D3_3E) {
+				Data_D3_3E sd = (Data_D3_3E)subD ;
 				waterMeterSerial = sd.getWaterMeterSerial();
 				if(waterMeterSerial != null) {
 					item01.setText(waterMeterSerial);

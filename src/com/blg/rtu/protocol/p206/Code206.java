@@ -121,6 +121,7 @@ public class Code206 {
 	public static final String cd_D6 = "D6" ; //设置定时报协议格式
 	public static final String cd_D4 = "D4" ; //查询ICCID协议格式
 	public static final String cd_D3 = "D3" ; //查询水表出厂编号
+	public static final String cd_3E = "3E" ; //设置水表出厂编号
 	public static final String cd_E3 = "E3" ; //查询仪表类型
 	public static final String cd_F3 = "F3" ; //设置仪表类型
 	public static final String cd_E4 = "E4" ; //查询仪表量程
@@ -329,6 +330,7 @@ public class Code206 {
 		(code.equals(cd_F0) ? "查询关键参数" : 
 		(code.equals(cd_C2) ? "终端流量实时值" : 
 		(code.equals(cd_D3) ? "查询水表出厂编号" : 	
+		(code.equals(cd_3E) ? "设置水表出厂编号" : 
 		(code.equals(cd_D4) ? "查询SIM卡ICCID" : 	
 		(code.equals(cd_D2) ? "查询上报协议配置" : 	
 		(code.equals(cd_D6) ? "查询设置上报协议配置" : 
@@ -354,7 +356,7 @@ public class Code206 {
 		(code.equals(cd_4F) ? "发送ModBus密码" : 
 		(code.equals(cd_3F) ? "设置脉冲常数" : 
 		(code.equals(cd_6F) ? "查询脉冲常数" : 
-		"")))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+		""))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
 		))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))) ;
 		return name ;
 	}

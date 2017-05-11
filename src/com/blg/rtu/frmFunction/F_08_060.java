@@ -299,10 +299,10 @@ public class F_08_060  extends FrmParent {
 							}
 						}else{
 							if ((waterPlus / 1000) > 0) {
-								item03.setText((waterPlus / 1000) + "." + ((waterPlus%100)/100 > 0 ? waterPlus%1000 :( 
+								item03.setText((waterPlus / 1000) + "." + ((waterPlus%1000)/100 > 0 ? waterPlus%1000 :( 
 												(waterPlus %100)/10 >0 ?("0" + waterPlus%1000): ("00" + (waterPlus%10 ==0?"0":waterPlus%1000)))));
 							}else if((waterPlus / 1000) == 0){
-								item03.setText("0" + "." + ((waterPlus%100)/100 > 0 ? waterPlus%1000 :( 
+								item03.setText("0" + "." + ((waterPlus%1000)/100 > 0 ? waterPlus%1000 :( 
 										(waterPlus %100)/10 >0 ?("0" + waterPlus%1000): ("00" + (waterPlus%10 ==0?"0":waterPlus%1000)))));
 							}
 						}
