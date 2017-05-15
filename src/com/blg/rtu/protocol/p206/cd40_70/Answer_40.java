@@ -38,7 +38,7 @@ public class Answer_40  extends ProtocolSupport{
 		int flag = b[index + 4] ;
 		b[index + 4] = (byte)(b[index + 4] & 0xF) ;
 		
-		double v1 = ByteUtil.BCD2Double_an(b, index , index + 4) ;
+		double v1 = ByteUtil.BCD2Long_an(b, index , index + 4) ;
 		if(flag < 0){
 			//为负
 			v1 = -v1 ;

@@ -33,9 +33,8 @@ public class Answer_47  extends ProtocolSupport{
 		/*int pw = ByteUtil.BCD2Int_an(b, index, index + 1) ;
 		dd.setPassword(pw + "") ;
 		dd.setLoraChannel((b[index + 2] + 256)%256) ;*/
-		
-		long v1 = ByteUtil.BCD2Long_an(b, index + 3, index + 4) ;
+		b[index + 4] = (byte)(b[index + 4] & 15) ;
+		long v1 = ByteUtil.BCD2Long_an(b, index , index + 4) ;
 		dd.setWaterMinus(v1) ;
-		
 	}
 }

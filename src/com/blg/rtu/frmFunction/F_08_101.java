@@ -193,7 +193,7 @@ public class F_08_101  extends FrmParent {
 	}
 	private void setSpinnerMeter() {
 		spinnerAdapter1.clear() ;
-		spinnerAdapter1.add(new SpinnerVO("" + 0, "DN10")) ;
+		spinnerAdapter1.add(new SpinnerVO("" + 0, "DN100")) ;
 		spinnerAdapter1.add(new SpinnerVO("" + 1, "DN50")) ;
 		spinnerAdapter1.add(new SpinnerVO("" + 2, "DN80")) ;
 	}

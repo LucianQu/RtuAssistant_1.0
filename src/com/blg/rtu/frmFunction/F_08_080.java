@@ -220,6 +220,11 @@ public class F_08_080  extends FrmParent {
 			p.setLoraChannel(Integer.valueOf(value)) ;
 		}*/
 		String value = item03.getText().toString() ;//整数部分
+		/*if(value.indexOf(".") != -1) {
+			amount = Double.valueOf(value.replaceAll(".", "")) ;
+		}else{
+			amount = Double.valueOf(value) ;
+		}*/
 		amount = Double.valueOf(value) ;
 		if(value == null || value.equals("")){
 			p.setWaterPure(0.0) ;
@@ -278,20 +283,47 @@ public class F_08_080  extends FrmParent {
 			if(subD instanceof Data_40){
 				Data_40 sd = (Data_40)subD ;
 				amount = sd.getWaterPure().doubleValue();
-				//item03.setText(amount + "") ;
+			/*	//item03.setText(amount + "") ;
+				String tem = amount + "" ;
+				//String[] temp = tem.split(".") ;
+				waterPure = Long.valueOf(tem) ;*/
+				waterPure = Math.round(amount) ;
 				
 				if(amount < 0) {
+				
+					if ((waterPure / 1000) > 0) {
+						item03.setText("-" + (waterPure / 1000) + "." + ((waterPure%1000)/100 > 0 ? waterPure%1000 :( 
+								(waterPure %100)/10 >0 ?("0" + waterPure%1000): ("00" + (waterPure%10 ==0?"0":waterPure%1000)))));
+					}else if((waterPure / 1000) == 0){
+						item03.setText("-0" + "." + ((waterPure%1000)/100 > 0 ? waterPure % 1000 :( 
+								(waterPure %100)/10 >0 ?("0" + waterPure%1000): ("00" + (waterPure%10 ==0?"0":waterPure%1000)))));
+					}
+				}else{
+					if ((waterPure / 1000) > 0) {
+						item03.setText((waterPure / 1000) + "." + ((waterPure%1000)/100 > 0 ? waterPure%1000 :( 
+								(waterPure %100)/10 >0 ?("0" + waterPure%1000): ("00" + (waterPure%10 ==0?"0":waterPure%1000)))));
+					}else if((waterPure / 1000) == 0){
+						item03.setText("0" + "." + ((waterPure%1000)/100 > 0 ? waterPure % 1000 :( 
+								(waterPure %100)/10 >0 ?("0" + waterPure%1000): ("00" + (waterPure%10 ==0?"0":waterPure%1000)))));
+					}
+				}
+				
+				
+				
+				
+			/*	if(amount < 0) {
+					
 					amount = - amount;
-					if ((amount / 1000) > 0) {
-						item03.setText(("-" + amount / 1000) + "." + (amount + 1000) % 1000) ;
+					if ((amount / 1000.0) > 0) {
+						item03.setText(("-" + amount / 1000.0) + "." + (amount + 1000.0) % 1000.0) ;
 					}
 				}else if(amount > 0){
-					if ((amount / 1000) > 0) {
-						item03.setText((amount / 1000) + "." + (amount + 1000) % 1000) ;
+					if ((amount / 1000.0) > 0) {
+						item03.setText((amount / 1000.0) + "." + (amount + 1000.0) % 1000.0) ;
 					}
 				}else if(amount == 0) {
 					item03.setText("0.0") ;
-				}
+				}*/
 				//item01.setText(sd.getPassword()) ;
 				//item02.setText(sd.getLoraChannel()+"") ;
 			}else{
