@@ -16,9 +16,9 @@ import com.blg.rtu.util.DialogAlarm;
 import com.blg.rtu.util.DialogConfirm;
 import com.blg.rtu.util.StringValueForActivity;
 import com.blg.rtu.vo2xml.Help;
-import com.blg.rtu1.LoginActivity;
-import com.blg.rtu1.R;
-import com.blg.rtu1.server.CoreThread;
+import com.blg.rtu2.LoginActivity;
+import com.blg.rtu2.R;
+import com.blg.rtu2.server.CoreThread;
 /**
  * frmChannel01响应外部操作类
  * @author Administrator
@@ -248,7 +248,8 @@ public class ChBusi_01_Operate {
 	
 		
 		if(LoginActivity.instance.getCbWifiConnecyType()) {
-			waitServerStartedAndToConnectNet("10.10.100.254", 8899) ; //水表地址
+			waitServerStartedAndToConnectNet("10.10.100.254", 8899) ; //水表地址,有人WIFI模块
+			//waitServerStartedAndToConnectNet("192.168.4.1", 333) ; //水表地址
 		}else{
 			waitServerStartedAndToConnectNet("192.168.4.1", 333) ; //中继器地址
 		}

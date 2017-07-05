@@ -24,9 +24,9 @@ import com.blg.rtu.util.DialogAlarm;
 import com.blg.rtu.util.ImageUtil;
 import com.blg.rtu.util.Preferences;
 import com.blg.rtu.vo2xml.Vo2Xml;
-import com.blg.rtu1.MainActivity;
-import com.blg.rtu1.R;
-import com.blg.rtu1.server.CoreThread;
+import com.blg.rtu2.MainActivity;
+import com.blg.rtu2.R;
+import com.blg.rtu2.server.CoreThread;
 
 public class F_01_080  extends FrmParent {
 	

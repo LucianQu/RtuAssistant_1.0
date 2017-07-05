@@ -10,7 +10,7 @@ import com.blg.rtu.protocol.p206.common.ControlProtocol;
 import com.blg.rtu.protocol.p206.common.ProtocolSupport;
 import com.blg.rtu.protocol.p206.common.RtuIdProtocol;
 import com.blg.rtu.protocol.p206.util.Constant;
-import com.blg.rtu1.LoginActivity;
+import com.blg.rtu2.LoginActivity;
 
 public class Answer_74 extends ProtocolSupport{
 

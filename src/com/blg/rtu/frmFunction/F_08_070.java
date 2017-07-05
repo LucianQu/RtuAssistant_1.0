@@ -26,14 +26,14 @@ import com.blg.rtu.util.DialogAlarm;
 import com.blg.rtu.util.ImageUtil;
 import com.blg.rtu.util.Preferences;
 import com.blg.rtu.vo2xml.Vo2Xml;
-import com.blg.rtu1.MainActivity;
-import com.blg.rtu1.R;
-import com.blg.rtu1.server.CoreThread;
+import com.blg.rtu2.MainActivity;
+import com.blg.rtu2.R;
+import com.blg.rtu2.server.CoreThread;
 
 public class F_08_070  extends FrmParent {
 	
 	private final static int requestLen_1 = 1 ; //输入长度
-	private final static int requestLen_9 = 9 ; //输入长度
+	private final static int requestLen_10 = 10 ; //输入长度
 	private TextView title ;
 
 	//private EditText item01  ;
@@ -90,7 +90,7 @@ public class F_08_070  extends FrmParent {
 		}
 		
 		item03 = (EditText)view.findViewById(R.id.func_08_070_item03);
-		item03.setFilters(new InputFilter[]{new InputFilter.LengthFilter(requestLen_9)});
+		item03.setFilters(new InputFilter[]{new InputFilter.LengthFilter(requestLen_10)});
 		item03.addTextChangedListener(new MyTextWatcher(Constant.func_vk_08_070_03));
 		
 		str = Preferences.getInstance().getString(Constant.func_vk_08_070_03) ;
@@ -182,13 +182,35 @@ public class F_08_070  extends FrmParent {
 			if(showDialog)new DialogAlarm().showDialog(act, "负积流量必须填写！") ;
 			return false ;
 		} 
-		value = value.replace(".", "") ;
 		if(value.equals("00")) {
 			value = "0" ;
 		}
+		
+		int position = value.indexOf(".") ;
+		//new DialogAlarm().showDialog(act, "position" + position) ;
+		if(position != -1) {
+			if(position != value.length()- 4) {
+				if(showDialog)new DialogAlarm().showDialog(act, "负积流量小数点必须为3位！") ;
+				return false ;
+			}else{
+				if(value.subSequence(0, 1).equals("0")){
+					value = value.substring(2) ;
+				}else{
+					value = value.replace(".", "") ;
+				}
+			}
+		}else{
+			int v = Integer.valueOf(value) ;
+			if(v < 0 || v > 999999){
+				if(showDialog)new DialogAlarm().showDialog(act, "负积流量范围必须是0~99999.9999的数字！") ;
+				return false ;
+			}
+		}
+		
+		
 		int v = Integer.valueOf(value) ;
 		if(v < 0 || v > 999999999){
-			if(showDialog)new DialogAlarm().showDialog(act, "负积流量范围必须是0~999999999的数字！") ;
+			if(showDialog)new DialogAlarm().showDialog(act, "负积流量范围必须是0~99999.9999的数字！") ;
 			return false ;
 		}
 		return true ;

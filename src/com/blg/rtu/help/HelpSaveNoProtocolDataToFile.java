@@ -4,8 +4,8 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 
-import com.blg.rtu1.MainActivity;
-import com.blg.rtu1.R;
+import com.blg.rtu2.MainActivity;
+import com.blg.rtu2.R;
 
 import android.content.res.Resources;
 import android.os.Environment;

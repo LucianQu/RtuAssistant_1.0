@@ -23,8 +23,8 @@ import com.blg.rtu.util.Constant;
 import com.blg.rtu.util.ImageUtil;
 import com.blg.rtu.util.Preferences;
 import com.blg.rtu.vo2xml.Vo2Xml;
-import com.blg.rtu1.MainActivity;
-import com.blg.rtu1.R;
+import com.blg.rtu2.MainActivity;
+import com.blg.rtu2.R;
 
 public class F_05_030  extends FrmParent {
 	

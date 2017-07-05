@@ -3,7 +3,7 @@ package com.blg.rtu.util;
 import android.app.Activity;
 import android.app.AlertDialog;
 
-import com.blg.rtu1.R;
+import com.blg.rtu2.R;
 
 public class DialogInfo {
 	

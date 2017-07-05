@@ -27,9 +27,9 @@ import com.blg.rtu.util.ImageUtil;
 import com.blg.rtu.util.Preferences;
 import com.blg.rtu.util.SpinnerVO;
 import com.blg.rtu.vo2xml.Vo2Xml;
-import com.blg.rtu1.MainActivity;
-import com.blg.rtu1.R;
-import com.blg.rtu1.server.CoreThread;
+import com.blg.rtu2.MainActivity;
+import com.blg.rtu2.R;
+import com.blg.rtu2.server.CoreThread;
 
 public class F_08_090 extends FrmParent {
 	
@@ -148,13 +148,13 @@ public class F_08_090 extends FrmParent {
 		int diameter = 0,position;
 		position = Integer.valueOf(spinnerAdapter.getItem(spinnerPosition).getId());
 		if(position == 0){
-			diameter = 50 ;
+			diameter = 1 ;
 		}else if(position == 1){
-			diameter = 80 ;
+			diameter = 2 ;
 		}else if(position == 2){
-			diameter = 100 ;
+			diameter = 3 ;
 		}else if(position == 3){
-			diameter = 150 ; 
+			diameter = 4 ; 
 		}
 		CoreThread.getInstance().newRtuId(F_01_100.getInstance().getRtuSelectedItem().replaceAll(" ", ""));
 		this.sendRtuCommand(new CommandCreator().cd_48(diameter, null), false) ;
@@ -202,13 +202,13 @@ public class F_08_090 extends FrmParent {
 
 		Data_48_78 sd = (Data_48_78)d.getSubData() ;
 		int position = 0;
-		if(sd.getDiameter() == 50) {
+		if(sd.getDiameter() == 1) {
 			position = 0 ;
-		}else if(sd.getDiameter() == 80) {
+		}else if(sd.getDiameter() == 2) {
 			position = 1 ;
-		}else if(sd.getDiameter() == 100) {
+		}else if(sd.getDiameter() == 3) {
 			position = 2 ;
-		}else if(sd.getDiameter() == 150) {
+		}else if(sd.getDiameter() == 4) {
 			position = 3 ;
 		}
 		item01.setSelection(position); 

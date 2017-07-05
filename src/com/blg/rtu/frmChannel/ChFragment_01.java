@@ -4,8 +4,8 @@ import com.blg.rtu.frmChannel.helpCh1.ChBusi_01_Action;
 import com.blg.rtu.frmChannel.helpCh1.ChBusi_01_Init;
 import com.blg.rtu.frmChannel.helpCh1.ChBusi_01_Operate;
 import com.blg.rtu.util.Constant;
-import com.blg.rtu1.MainActivity;
-import com.blg.rtu1.R;
+import com.blg.rtu2.MainActivity;
+import com.blg.rtu2.R;
 
 import android.app.Activity;
 import android.app.Fragment;

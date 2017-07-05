@@ -11,8 +11,8 @@ import android.widget.TextView;
 import com.blg.rtu.util.Constant;
 import com.blg.rtu.util.Preferences;
 import com.blg.rtu.util.ResourceUtils;
-import com.blg.rtu1.MainActivity;
-import com.blg.rtu1.R;
+import com.blg.rtu2.MainActivity;
+import com.blg.rtu2.R;
 
 public class F_04_020_HelpAlarm {
 	

@@ -23,7 +23,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.blg.rtu.util.DateTime;
-import com.blg.rtu1.R;
+import com.blg.rtu2.R;
 
 public class PullListView extends ListView implements OnScrollListener {
 

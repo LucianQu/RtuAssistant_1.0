@@ -16,8 +16,8 @@ import android.widget.TextView;
 import com.blg.rtu.help.HelpSaveNoProtocolDataToFile;
 import com.blg.rtu.util.DateTime;
 import com.blg.rtu.util.StringValueForActivity;
-import com.blg.rtu1.MainActivity;
-import com.blg.rtu1.R;
+import com.blg.rtu2.MainActivity;
+import com.blg.rtu2.R;
 
 public class NpFragment_01 extends Fragment {
 	

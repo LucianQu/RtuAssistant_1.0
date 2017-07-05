@@ -2,7 +2,7 @@ package com.blg.rtu.util;
 
 import android.content.Context;
 
-import com.blg.rtu1.R;
+import com.blg.rtu2.R;
 
 public class StringValueForActivity {
 	

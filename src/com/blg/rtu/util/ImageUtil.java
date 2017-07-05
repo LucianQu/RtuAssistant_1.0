@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 
-import com.blg.rtu1.R;
+import com.blg.rtu2.R;
 
 public class ImageUtil {
 	

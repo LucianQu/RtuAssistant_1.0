@@ -151,17 +151,17 @@
 -keep class com.blg.rtu.frmNoProtocol.NpFragment_03 { <init>(...); }
 
 # view AndroidManifest.xml #generated:66
--keep class com.blg.rtu1.LoginActivity { <init>(...); }
+-keep class com.blg.rtu2.LoginActivity { <init>(...); }
 
 # view AndroidManifest.xml #generated:76
--keep class com.blg.rtu1.MainActivity { <init>(...); }
+-keep class com.blg.rtu2.MainActivity { <init>(...); }
 
 # view AndroidManifest.xml #generated:56
--keep class com.blg.rtu1.SplashActivity { <init>(...); }
+-keep class com.blg.rtu2.SplashActivity { <init>(...); }
 
 # view AndroidManifest.xml #generated:87
--keep class com.blg.rtu1.server.LocalServer { <init>(...); }
+-keep class com.blg.rtu2.server.LocalServer { <init>(...); }
 
 # view AndroidManifest.xml #generated:101
--keep class com.blg.rtu1.sm.SmsReceiver { <init>(...); }
+-keep class com.blg.rtu2.sm.SmsReceiver { <init>(...); }
 

@@ -20,8 +20,8 @@ import android.widget.Toast;
 import com.blg.rtu.util.ByteUtil;
 import com.blg.rtu.util.DialogConfirm;
 import com.blg.rtu.util.StringValueForActivity;
-import com.blg.rtu1.MainActivity;
-import com.blg.rtu1.R;
+import com.blg.rtu2.MainActivity;
+import com.blg.rtu2.R;
 
 public class NpFragment_03 extends Fragment {
 	/**

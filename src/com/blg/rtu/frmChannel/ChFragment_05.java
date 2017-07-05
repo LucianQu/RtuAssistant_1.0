@@ -13,9 +13,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
-import com.blg.rtu1.LoginActivity;
-import com.blg.rtu1.MainActivity;
-import com.blg.rtu1.R;
+import com.blg.rtu2.LoginActivity;
+import com.blg.rtu2.MainActivity;
+import com.blg.rtu2.R;
 
 public class ChFragment_05 extends Fragment {
 	//private MainActivity act ;

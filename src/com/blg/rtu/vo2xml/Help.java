@@ -2,7 +2,7 @@ package com.blg.rtu.vo2xml;
 
 import java.io.*;
 
-import com.blg.rtu1.MainActivity;
+import com.blg.rtu2.MainActivity;
 
 public class Help {
 
