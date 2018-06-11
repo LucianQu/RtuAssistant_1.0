@@ -5,8 +5,8 @@ import android.widget.EditText;
 
 import com.blg.rtu.protocol.p206.cd1A_5A.Param_1A;
 import com.blg.rtu.util.DialogAlarm;
-import com.blg.rtu2.MainActivity;
-import com.blg.rtu2.R;
+import com.blg.rtu3.MainActivity;
+import com.blg.rtu3.R;
 
 public class F_04_040_HelpCheckBeforeSet {
 	

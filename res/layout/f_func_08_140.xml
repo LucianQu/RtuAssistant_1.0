@@ -38,7 +38,7 @@
 			        style="@style/func_item_viewtext_style_100_a"/>
 			    
 			    <Spinner android:id="@+id/f_08_140_item1" 
-				    style="@style/func_item_Spinner_style_180"/>
+				    style="@style/func_item_Spinner_style_100"/>
 
 			</LinearLayout>
 	        

@@ -6,19 +6,19 @@
 # view res/layout/fch_04.xml #generated:19
 -keep class com.blg.rtu.compound.FixHeightListView { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:329
+# view res/layout/activity_main_function_page.xml #generated:344
 -keep class com.blg.rtu.frmChannel.ChFragment_01 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:332
+# view res/layout/activity_main_function_page.xml #generated:347
 -keep class com.blg.rtu.frmChannel.ChFragment_02 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:335
+# view res/layout/activity_main_function_page.xml #generated:350
 -keep class com.blg.rtu.frmChannel.ChFragment_03 { <init>(...); }
 
 # view res/layout/activity_main_channel_page.xml #generated:68
 -keep class com.blg.rtu.frmChannel.ChFragment_04 { <init>(...); }
 
-# view res/layout/activity_main_function_page.xml #generated:338
+# view res/layout/activity_main_function_page.xml #generated:353
 -keep class com.blg.rtu.frmChannel.ChFragment_05 { <init>(...); }
 
 # view res/layout/activity_main_function_page.xml #generated:58
@@ -69,6 +69,12 @@
 # view res/layout/activity_main_function_page.xml #generated:104
 -keep class com.blg.rtu.frmFunction.F_04_080 { <init>(...); }
 
+# view res/layout/activity_main_function_page.xml #generated:317
+-keep class com.blg.rtu.frmFunction.F_04_100 { <init>(...); }
+
+# view res/layout/activity_main_function_page.xml #generated:320
+-keep class com.blg.rtu.frmFunction.F_04_110 { <init>(...); }
+
 # view res/layout/activity_main_function_page.xml #generated:288
 -keep class com.blg.rtu.frmFunction.F_05_010 { <init>(...); }
 
@@ -83,6 +89,18 @@
 
 # view res/layout/activity_main_function_page.xml #generated:285
 -keep class com.blg.rtu.frmFunction.F_05_070 { <init>(...); }
+
+# view res/layout/activity_main_function_page.xml #generated:323
+-keep class com.blg.rtu.frmFunction.F_06_020 { <init>(...); }
+
+# view res/layout/activity_main_function_page.xml #generated:326
+-keep class com.blg.rtu.frmFunction.F_06_030 { <init>(...); }
+
+# view res/layout/activity_main_function_page.xml #generated:329
+-keep class com.blg.rtu.frmFunction.F_06_040 { <init>(...); }
+
+# view res/layout/activity_main_function_page.xml #generated:332
+-keep class com.blg.rtu.frmFunction.F_06_050 { <init>(...); }
 
 # view res/layout/activity_main_function_page.xml #generated:138
 -keep class com.blg.rtu.frmFunction.F_08_010 { <init>(...); }
@@ -151,17 +169,17 @@
 -keep class com.blg.rtu.frmNoProtocol.NpFragment_03 { <init>(...); }
 
 # view AndroidManifest.xml #generated:66
--keep class com.blg.rtu2.LoginActivity { <init>(...); }
+-keep class com.blg.rtu3.LoginActivity { <init>(...); }
 
 # view AndroidManifest.xml #generated:76
--keep class com.blg.rtu2.MainActivity { <init>(...); }
+-keep class com.blg.rtu3.MainActivity { <init>(...); }
 
 # view AndroidManifest.xml #generated:56
--keep class com.blg.rtu2.SplashActivity { <init>(...); }
+-keep class com.blg.rtu3.SplashActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:87
--keep class com.blg.rtu2.server.LocalServer { <init>(...); }
+# view AndroidManifest.xml #generated:90
+-keep class com.blg.rtu3.server.LocalServer { <init>(...); }
 
-# view AndroidManifest.xml #generated:101
--keep class com.blg.rtu2.sm.SmsReceiver { <init>(...); }
+# view AndroidManifest.xml #generated:106
+-keep class com.blg.rtu3.sm.SmsReceiver { <init>(...); }
 

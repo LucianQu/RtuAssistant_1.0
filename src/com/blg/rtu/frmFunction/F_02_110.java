@@ -28,9 +28,9 @@ import com.blg.rtu.util.ImageUtil;
 import com.blg.rtu.util.Preferences;
 import com.blg.rtu.util.SpinnerVO;
 import com.blg.rtu.vo2xml.Vo2Xml;
-import com.blg.rtu2.MainActivity;
-import com.blg.rtu2.R;
-import com.blg.rtu2.server.CoreThread;
+import com.blg.rtu3.MainActivity;
+import com.blg.rtu3.R;
+import com.blg.rtu3.server.CoreThread;
 
 public class F_02_110  extends FrmParent {
 	
@@ -168,7 +168,8 @@ public class F_02_110  extends FrmParent {
 	
 	private void putSpinnerValue_2(ArrayAdapter<SpinnerVO> spinnerAdapter){
 		spinnerAdapter.add(new SpinnerVO("0", "C1")) ;
-		spinnerAdapter.add(new SpinnerVO("1", "C0")) ;
+		spinnerAdapter.add(new SpinnerVO("1", "A2")) ;
+		spinnerAdapter.add(new SpinnerVO("2", "C0")) ;
 	}
 	private void putSpinnerValue_3(ArrayAdapter<SpinnerVO> spinnerAdapter){
 		spinnerAdapter.add(new SpinnerVO("0", "正积")) ;

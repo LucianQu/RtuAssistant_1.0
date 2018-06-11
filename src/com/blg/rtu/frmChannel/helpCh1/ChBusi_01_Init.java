@@ -4,8 +4,9 @@ import android.content.Context;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
 import com.blg.rtu.frmChannel.ChFragment_01;
-import com.blg.rtu2.R;
+import com.blg.rtu3.R;
 
 /**
  * frmChannel01初化划类

@@ -19,8 +19,8 @@ import com.blg.rtu.protocol.p206.Code206;
 import com.blg.rtu.protocol.p206.cd10_50.Data_10_50;
 import com.blg.rtu.protocol.p206.cdD3_3E.Data_D3_3E;
 import com.blg.rtu.protocol.p206.cdEF.Data_EF;
-import com.blg.rtu2.MainActivity;
-import com.blg.rtu2.R;
+import com.blg.rtu3.MainActivity;
+import com.blg.rtu3.R;
 
 public class LpFragment_02 extends Fragment {
 	

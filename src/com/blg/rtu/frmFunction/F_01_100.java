@@ -34,10 +34,9 @@ import com.blg.rtu.util.ImageUtil;
 import com.blg.rtu.util.Preferences;
 import com.blg.rtu.util.SpinnerVO;
 import com.blg.rtu.vo2xml.Vo2Xml;
-import com.blg.rtu2.LoginActivity;
-import com.blg.rtu2.MainActivity;
-import com.blg.rtu2.R;
-import com.blg.rtu2.server.CoreThread;
+import com.blg.rtu3.MainActivity;
+import com.blg.rtu3.R;
+import com.blg.rtu3.server.CoreThread;
 
 public class F_01_100  extends FrmParent {
 	public static F_01_100 instance = null ;
@@ -239,7 +238,8 @@ public class F_01_100  extends FrmParent {
 	@Override
 	protected void queryCommand(){
 		CoreThread.getInstance().newRtuId(getRtuSelectedItem().replaceAll(" ", ""));
-		if(LoginActivity.instance.getCbWifiConnecyType()) {
+		int type = Preferences.getInstance().getInt(Constant.wifi_connect_type) ;
+		if(type == 0 || type == 1) {
 			this.sendRtuCommand(new CommandCreator().cd_50(), true) ;
 		}else{
 			this.sendRtuCommand(new CommandCreator().cd_74(), true) ;
@@ -265,7 +265,8 @@ public class F_01_100  extends FrmParent {
 		}
 		
 		CoreThread.getInstance().newRtuId(getRtuSelectedItem().replaceAll(" ", ""));
-		if(LoginActivity.instance.getCbWifiConnecyType()) {
+		int type = Preferences.getInstance().getInt(Constant.wifi_connect_type) ;
+		if(type == 0 || type == 1) {
 			this.sendRtuCommand(new CommandCreator().cd_10(regionNum, clientId, null), false) ;
 		}else{
 			this.sendRtuCommand(new CommandCreator().cd_44(position, modbusAddrValue, regionNum, clientId, null), false) ;
@@ -355,7 +356,14 @@ public class F_01_100  extends FrmParent {
 					item04.setText("");
 				}
 			}else if(subD instanceof DataList_74){
-				if(!LoginActivity.instance.getCbWifiConnecyType()) {
+				int type = Preferences.getInstance().getInt(Constant.wifi_connect_type) ;
+				if(type == 1 || type == 0) {
+					new AlertDialog.Builder(getActivity())
+					.setIcon(getResources().getDrawable(R.drawable.login_error_icon))
+					.setTitle("连接设备类型错误!")
+					.setMessage("请在登录界面类型选择中继器连接!")
+					.create().show();
+				}else{
 					DataList_74 sd = (DataList_74)d.subData ;
 					spinnerAdapter.clear() ;
 					listRtuId.clear();
@@ -378,16 +386,10 @@ public class F_01_100  extends FrmParent {
 						item01.setText(rtuId.substring(0, 6).trim()) ;
 						item02.setText(rtuId.substring(6).trim()) ;
 						item04.setText(getModbusAddrSelectedItem());
-				}else{
-					new AlertDialog.Builder(getActivity())
-					.setIcon(getResources().getDrawable(R.drawable.login_error_icon))
-					.setTitle("连接设备类型错误!")
-					.setMessage("请在登录界面取消水表连接\n如果已记住密码,请退出登录,回到登录界面!")
-					.create().show();
 				}
-				
 			}else if(subD instanceof Data_10_50){
-				if(LoginActivity.instance.getCbWifiConnecyType()) {
+				int type = Preferences.getInstance().getInt(Constant.wifi_connect_type) ;
+				if(type == 0 || type == 1) {
 					Data_10_50 sd = (Data_10_50)d.subData ;
 					spinnerAdapter.clear() ;
 					listRtuId.clear();
@@ -402,7 +404,7 @@ public class F_01_100  extends FrmParent {
 					new AlertDialog.Builder(getActivity())
 					.setIcon(getResources().getDrawable(R.drawable.login_error_icon))
 					.setTitle("连接设备类型错误!")
-					.setMessage("请在登录界面勾选水表连接\n如果已记住密码,请退出登录,回到登录界面!")
+					.setMessage("请在登录界面类型选择水表1代或者水表二代!")
 					.create().show();
 				}
 			}

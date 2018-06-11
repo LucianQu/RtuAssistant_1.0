@@ -29,6 +29,9 @@ public class Code206 {
 	
 	public static final String cd_15 = "15" ; //设置遥测终端本次充值量
 	public static final String cd_55 = "55" ; //查询遥测终端最近成功充值量和现有剩余水量
+	
+	public static final String cd_23 = "A2" ; //查询月用水量
+
 
 	public static final String cd_16 = "16" ; //设置遥测终端剩余水量报警值
 	public static final String cd_56 = "56" ; //查询遥测终端的剩余水量和报警值
@@ -99,6 +102,8 @@ public class Code206 {
 	public static final String cd_EF = "EF" ; //查询遥测终端硬软件版本号
 	public static final String cd_CF = "CF" ; //查询DTU工作模式
 	public static final String cd_DF = "DF" ; //设置DTU工作模式
+	public static final String cd_97 = "97" ; //设置剩余流量和阀门控制关联状态
+	public static final String cd_98 = "98" ; //查询剩余流量和阀门控制关联状态
 	public static final String cd_C9 = "C9" ; //查询终端心跳周期
 	public static final String cd_D9 = "D9" ; //设置终端心跳周期
 	public static final String cd_CB = "CB" ; //查询终端主备通道
@@ -153,6 +158,9 @@ public class Code206 {
 	public static final String cd_42 = "42" ; //设置ModBus地址
 	public static final String cd_72 = "72" ; //查询ModBus地址
 	
+	public static final String cd_21 = "21" ; //设置结算日
+	public static final String cd_22 = "22" ; //查询结算日
+	
 	public static final String cd_4A = "4A" ; //设置RF频点
 	public static final String cd_7A = "7A" ; //查询RF频点
 	
@@ -177,6 +185,7 @@ public class Code206 {
 	public static final String cd_7B = "7B" ; //查询一键触发测试结果
 	public static final String cd_4B = "4B" ; //设置一键触发测试
 	
+	
 	public static final String cd_4D = "4D" ; //设置LORA电源控制命令
 	public static final String cd_4E = "4E" ; //设置出厂启用
 	
@@ -187,10 +196,7 @@ public class Code206 {
 	public static final String cd_3F = "3F" ; //设置脉冲常数
 	public static final String cd_6F = "6F" ; //查询脉冲常数
 	public String getCodeName(String code) {
-		String name = (code.equals(cd_02) ? "链路检测" : 
-		
-		(code.equals(cd_10) ? "设置遥测终端、中继站地址" : 
-		(code.equals(cd_50) ? "查询遥测终端、中继站地址" : 
+		String name = (code.equals(cd_02) ? "链路检测" :(code.equals(cd_10) ? "设置遥测终端、中继站地址" : (code.equals(cd_50) ? "查询遥测终端、中继站地址" : 
 		
 		(code.equals(cd_42) ? "设置ModBus地址" : 
 		(code.equals(cd_72) ? "查询ModBus地址" : 
@@ -356,8 +362,13 @@ public class Code206 {
 		(code.equals(cd_4F) ? "发送ModBus密码" : 
 		(code.equals(cd_3F) ? "设置脉冲常数" : 
 		(code.equals(cd_6F) ? "查询脉冲常数" : 
-		""))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
-		))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))) ;
+		(code.equals(cd_97) ? "设置剩余流量和阀门控制关联状态" : 
+		(code.equals(cd_98) ? "查询剩余流量和阀门控制关联状态" : 
+		(code.equals(cd_21) ? "设置结算日" : 
+		(code.equals(cd_22) ? "查询结算日" : 
+		(code.equals(cd_23) ? "查询月用水量" : 
+		""))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+		)))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))) ;
 		return name ;
 	}
 }

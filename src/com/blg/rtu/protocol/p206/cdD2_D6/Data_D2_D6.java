@@ -15,7 +15,7 @@ public class Data_D2_D6 {
 		String s = "\n" ;
 		s += "定时报协议："    + "\n" +
 		"功能码D0是否开启 ："   + (enable_D0.intValue() == 0 ? "开启" : "关闭") + "\n" +
-		"定时报协议选择："     + (reportPrtcl.intValue() == 0 ? "C1" : "C0") + "\n" +
+		"定时报协议选择："     + (reportPrtcl.intValue() == 0 ? "C1" : (reportPrtcl.intValue()== 2 ? "C0" :(reportPrtcl.intValue()== 1 ? "A2":"未知"))) + "\n" +
 		"C0上报累计值类型："   + (reportType.intValue() == 0 ? "正积" : "净积") + "\n" +
 		"C0累计值是否上报："   + (enable_AccumuTotal.intValue() == 0 ? "上报" : "不上报") + "\n" +
 		"C0瞬时流量是否上报：" + (enable_Instant.intValue() == 0 ? "上报" : "不上报") ;

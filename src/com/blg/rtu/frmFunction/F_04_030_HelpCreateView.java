@@ -9,7 +9,7 @@ import android.widget.EditText;
 import com.blg.rtu.util.Constant;
 import com.blg.rtu.util.InputFilter_DecimalUnSigned;
 import com.blg.rtu.util.InputFilter_NumberUnSigned;
-import com.blg.rtu2.R;
+import com.blg.rtu3.R;
 
 public class F_04_030_HelpCreateView {
 	private F_04_030 fr ;

@@ -2,7 +2,7 @@ package com.blg.rtu.vo2xml;
 
 import java.io.*;
 
-import com.blg.rtu2.MainActivity;
+import com.blg.rtu3.MainActivity;
 
 public class Help {
 
@@ -47,9 +47,9 @@ public class Help {
 		act.frgTool.f_04_070.outSetData(vo);*/
 		act.frgTool.f_04_080.outSetData(vo);	//数据上报间隔
 		//act.frgTool.f_04_090.outSetData(vo);
-	/*	act.frgTool.f_04_100.outSetData(vo);
+		act.frgTool.f_04_100.outSetData(vo);
 		act.frgTool.f_04_110.outSetData(vo);
-		act.frgTool.f_04_120.outSetData(vo);*/
+		/*act.frgTool.f_04_120.outSetData(vo);*/
 		//act.frgTool.f_05_010.outSetData(vo);	//查询事件记录
 		//act.frgTool.f_05_020.outSetData(vo);	//查询水表状态和报警状态
 		/*act.frgTool.f_05_030.outSetData(vo);*/
@@ -132,9 +132,9 @@ public class Help {
 		act.frgTool.f_04_070.inSetData(vo);*/
 		act.frgTool.f_04_080.inSetData(vo);
 		//act.frgTool.f_04_090.inSetData(vo);
-	/*	act.frgTool.f_04_100.inSetData(vo);
+		act.frgTool.f_04_100.inSetData(vo);
 		act.frgTool.f_04_110.inSetData(vo);
-		act.frgTool.f_04_120.inSetData(vo);*/
+		/*act.frgTool.f_04_120.inSetData(vo);*/
 		//act.frgTool.f_05_010.inSetData(vo);
 		//act.frgTool.f_05_020.inSetData(vo);
 	/*	act.frgTool.f_05_030.inSetData(vo);*/

@@ -27,13 +27,15 @@ public class Answer_93  extends ProtocolSupport{
 		return d;
 	}
 	private void doParse(byte[] b, int index, RtuData d, ControlProtocol cp) throws Exception {
-		Data_92 dd = new Data_92() ;
+		Data_93 dd = new Data_93() ;
 		d.setSubData(dd) ;
 		
 		byte db = b[index] ;
-		dd.setNum(db & 0xF0) ;
-		if(((db & 0xF) >> 4) == 0xA){
+		dd.setNum(db & 0x0F) ;
+		if(((db & 0xF0) >> 4) == 0xA){
 			dd.setSuccess(true) ;
+		}else{
+			dd.setSuccess(false) ;
 		}
 
 	}

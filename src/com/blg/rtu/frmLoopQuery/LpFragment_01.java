@@ -29,8 +29,8 @@ import com.blg.rtu.util.Preferences;
 import com.blg.rtu.util.SpinnerVO;
 //import com.leaking.slideswitch.SlideSwitch;
 //import com.leaking.slideswitch.SlideSwitch.SlideListener;
-import com.blg.rtu2.MainActivity;
-import com.blg.rtu2.R;
+import com.blg.rtu3.MainActivity;
+import com.blg.rtu3.R;
 
 public class LpFragment_01 extends Fragment {
 	//implements SlideListener

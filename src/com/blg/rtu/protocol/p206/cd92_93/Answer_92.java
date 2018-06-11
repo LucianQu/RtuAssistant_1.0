@@ -31,9 +31,11 @@ public class Answer_92  extends ProtocolSupport{
 		d.setSubData(dd) ;
 		
 		byte db = b[index] ;
-		dd.setNum(db & 0xF0) ;
-		if(((db & 0xF) >> 4) == 0xA){
+		dd.setNum(db & 0x0F) ;
+		if(((db & 0xF0) >> 4) == 0xA){
 			dd.setSuccess(true) ;
+		}else{
+			dd.setSuccess(false) ;
 		}
 
 	}

@@ -16,10 +16,10 @@ import com.blg.rtu.util.DateTime;
 import com.blg.rtu.util.DialogConfirm;
 import com.blg.rtu.util.StringValueForActivity;
 import com.blg.rtu.vo2xml.Vo2Xml;
-import com.blg.rtu2.MainActivity;
-import com.blg.rtu2.R;
-import com.blg.rtu2.ServerProxyHandler;
-import com.blg.rtu2.sm.SmsSender;
+import com.blg.rtu3.MainActivity;
+import com.blg.rtu3.R;
+import com.blg.rtu3.ServerProxyHandler;
+import com.blg.rtu3.sm.SmsSender;
 
 public abstract class FrmParent extends Fragment {
 	

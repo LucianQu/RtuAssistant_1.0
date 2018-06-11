@@ -20,8 +20,8 @@ import com.blg.rtu.protocol.p206.cd5E.Data_5E;
 import com.blg.rtu.protocol.p206.cdCC_DC.Data_CC_DC;
 import com.blg.rtu.protocol.p206.cdD4.Data_D4;
 import com.blg.rtu.util.SpinnerVO;
-import com.blg.rtu2.MainActivity;
-import com.blg.rtu2.R;
+import com.blg.rtu3.MainActivity;
+import com.blg.rtu3.R;
 
 public class LpFragment_04 extends Fragment {
 	

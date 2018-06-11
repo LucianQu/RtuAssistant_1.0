@@ -653,6 +653,21 @@ public class Constant {
 	public static final String func_vk_06_010_05_ = "vk_06_010_05_" ; 
 	public static final String func_vk_06_010_dt = "vk_06_010_dt" ; 
 	
+	public static final String func_vk_06_020_01 = "vk_06_020_01" ; 
+	public static final String func_vk_06_020_02 = "vk_06_020_02" ;
+	public static final String func_vk_06_020_03 = "vk_06_020_03" ; 
+	public static final String func_vk_06_020_dt = "vk_06_020_dt" ; 
+	
+	public static final String func_vk_06_030_01 = "vk_06_030_01" ; 
+	public static final String func_vk_06_030_dt = "vk_06_030_dt" ; 
+	
+	public static final String func_vk_06_040_01 = "vk_06_040_01" ; 
+	public static final String func_vk_06_040_dt = "vk_06_040_dt" ; 
+	
+	public static final String func_vk_06_050_01 = "vk_06_050_01" ; 
+	public static final String func_vk_06_050_02 = "vk_06_050_02" ; 
+	public static final String func_vk_06_050_dt = "vk_06_050_dt" ; 
+	
 	public static final String func_vk_08_010_01 = "vk_08_010_01" ; 
 	public static final String func_vk_08_010_dt = "vk_08_010_dt" ; 
 	
@@ -780,6 +795,9 @@ public class Constant {
 	public static final int msg_main_receiveSm = 10 ; //接收到短信的消息
 	
 	public static final String Action_ReceiveRtuMs = "com.blg.rtu.ReceiveRtuMs";   
+	
+	public static final String wifi_connect_type = "wifi_connect_type" ;
+	
 	
 
 }

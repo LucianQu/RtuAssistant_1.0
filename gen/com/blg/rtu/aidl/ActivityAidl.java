@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: F:\\AutomicWatermeterApp\\RtuAssistant_1.0\\src\\com\\blg\\rtu\\aidl\\ActivityAidl.aidl
+ * Original file: G:\\AutomicWatermeterApp\\RtuAssistant_1.0\\src\\com\\blg\\rtu\\aidl\\ActivityAidl.aidl
  */
 package com.blg.rtu.aidl;
 public interface ActivityAidl extends android.os.IInterface
@@ -301,7 +301,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-// 收到rtu主动上报数据,把其传Activity层
+// 新RTU地址,把其传Activity层
 
 @Override public void newRtuId(java.lang.String id) throws android.os.RemoteException
 {
@@ -415,7 +415,7 @@ public void autoSetCommand(java.lang.String code) throws android.os.RemoteExcept
 // 收到rtu主动上报数据,把其传Activity层
 
 public void rtuReportData(com.blg.rtu.aidl.RemoteParcel parcel) throws android.os.RemoteException;
-// 收到rtu主动上报数据,把其传Activity层
+// 新RTU地址,把其传Activity层
 
 public void newRtuId(java.lang.String id) throws android.os.RemoteException;
 //网络连接上了,通知Activity层

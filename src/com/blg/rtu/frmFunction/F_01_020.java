@@ -32,9 +32,9 @@ import com.blg.rtu.util.DialogConfirm;
 import com.blg.rtu.util.ImageUtil;
 import com.blg.rtu.util.Preferences;
 import com.blg.rtu.vo2xml.Vo2Xml;
-import com.blg.rtu2.MainActivity;
-import com.blg.rtu2.R;
-import com.blg.rtu2.server.CoreThread;
+import com.blg.rtu3.MainActivity;
+import com.blg.rtu3.R;
+import com.blg.rtu3.server.CoreThread;
 
 public class F_01_020  extends FrmParent {
 	
@@ -232,6 +232,7 @@ public class F_01_020  extends FrmParent {
 	 * 较时命令，发本地时钟
 	 */
 	protected void adjustCommand(){
+		CoreThread.getInstance().newRtuId(F_01_100.getInstance().getRtuSelectedItem().replaceAll(" ", ""));
 		this.sendRtuCommand(new CommandCreator().cd_11(null, null), false) ;
 	}
 	/**

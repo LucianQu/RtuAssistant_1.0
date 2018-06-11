@@ -27,9 +27,9 @@ import com.blg.rtu.util.ImageUtil;
 import com.blg.rtu.util.InputFilter_DecimalSigned;
 import com.blg.rtu.util.Preferences;
 import com.blg.rtu.vo2xml.Vo2Xml;
-import com.blg.rtu2.MainActivity;
-import com.blg.rtu2.R;
-import com.blg.rtu2.server.CoreThread;
+import com.blg.rtu3.MainActivity;
+import com.blg.rtu3.R;
+import com.blg.rtu3.server.CoreThread;
 
 public class F_08_080  extends FrmParent {
 	
@@ -256,7 +256,7 @@ public class F_08_080  extends FrmParent {
 	 */
 	@Override
 	public void commandSendedCallBack(){
-		this.title.setCompoundDrawables(ImageUtil.getTitlLeftImg_item006(this.act), null, ImageUtil.getTitlRightImg_red(this.act), null); 
+		this.title.setCompoundDrawables(ImageUtil.getTitlLeftImg_item006(this.act), null, ImageUtil.getTitlRightImg_green(this.act), null); 
 	}
 	/**
 	 * 功能项右侧图标复原

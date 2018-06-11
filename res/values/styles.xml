@@ -457,6 +457,9 @@
     <style name="func_item_Spinner_style_180" parent="@style/func_item_Spinner_style">
         <item name="android:layout_width">@dimen/ed_width_180</item>
 	</style>
+	   <style name="func_item_Spinner_style_100" parent="@style/func_item_Spinner_style">
+        <item name="android:layout_width">@dimen/ed_width_120</item>
+	</style>
     
     
     

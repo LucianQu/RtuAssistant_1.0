@@ -14,8 +14,8 @@ import com.blg.rtu.util.Constant;
 import com.blg.rtu.util.InputFilter_NumberUnSigned;
 import com.blg.rtu.util.Preferences;
 import com.blg.rtu.util.ResourceUtils;
-import com.blg.rtu2.MainActivity;
-import com.blg.rtu2.R;
+import com.blg.rtu3.MainActivity;
+import com.blg.rtu3.R;
 
 public class F_06_010_HelpData_WaterAmount {
 	

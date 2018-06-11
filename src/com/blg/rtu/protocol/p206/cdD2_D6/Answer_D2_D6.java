@@ -37,7 +37,7 @@ public class Answer_D2_D6 extends ProtocolSupport{
 		subD.setEnable_Instant(enable & 1) ;
 		subD.setEnable_AccumuTotal((enable & 2) >> 1) ;
 		subD.setReportType((enable & 4) >> 2) ;
-		subD.setReportPrtcl((enable & 64) >> 6) ;
+		subD.setReportPrtcl((enable & 0x60) >> 5) ;
 		subD.setEnable_D0((enable & 128) >> 7) ;
 		
 		return d;

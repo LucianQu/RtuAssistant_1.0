@@ -39,7 +39,7 @@ public class Write_D6 extends ProtocolSupport{
 		int enable = param.getEnable_5().intValue() ;
 		enable += param.getEnable_4().intValue() << 1 ;
 		enable += param.getEnable_3().intValue() << 2 ;
-		enable += param.getEnable_2().intValue() << 6 ;
+		enable += param.getEnable_2().intValue() << 5 ;
 		enable += param.getEnable_1().intValue() << 7 ;
 		b[fromSite] = (byte)enable ;
 		this.createDownDataTail(b, password) ;

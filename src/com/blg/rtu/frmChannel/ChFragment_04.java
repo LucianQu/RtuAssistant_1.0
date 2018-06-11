@@ -26,8 +26,8 @@ import com.blg.rtu.util.Constant;
 import com.blg.rtu.util.DateTime;
 import com.blg.rtu.util.ResourceUtils;
 import com.blg.rtu.util.StringValueForActivity;
-import com.blg.rtu2.MainActivity;
-import com.blg.rtu2.R;
+import com.blg.rtu3.MainActivity;
+import com.blg.rtu3.R;
 
 public class ChFragment_04 extends Fragment {
 	/**
@@ -164,7 +164,7 @@ public class ChFragment_04 extends Fragment {
 		}
 		rtuDatas.add(vo) ;
         
-		rtuDatasListViewAdapter.notifyDataSetInvalidated(); 	
+		rtuDatasListViewAdapter.notifyDataSetInvalidated(); //会重绘控件（还原到初始状态）	，notifyDataSetChanged()，重绘当前可见区域
     	//使listview停刷新出的最后一条数据
 		rtuDatasListView.setSelection(rtuDatas.size()-1) ;
 		

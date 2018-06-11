@@ -9,16 +9,20 @@ import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
+
+import com.automic.watersource.utils.Utils;
 import com.blg.rtu.frmChannel.ChFragment_01;
 import com.blg.rtu.frmChannel.ChFragment_03;
 import com.blg.rtu.help.HelpSaveSetDataToFile;
+import com.blg.rtu.util.Constant;
 import com.blg.rtu.util.DialogAlarm;
 import com.blg.rtu.util.DialogConfirm;
+import com.blg.rtu.util.Preferences;
 import com.blg.rtu.util.StringValueForActivity;
 import com.blg.rtu.vo2xml.Help;
-import com.blg.rtu2.LoginActivity;
-import com.blg.rtu2.R;
-import com.blg.rtu2.server.CoreThread;
+import com.blg.rtu3.LoginActivity;
+import com.blg.rtu3.R;
+import com.blg.rtu3.server.CoreThread;
 /**
  * frmChannel01响应外部操作类
  * @author Administrator
@@ -246,12 +250,21 @@ public class ChBusi_01_Operate {
 				chf.ip4.getText().toString().trim() ;
 		int port = Integer.valueOf(chf.port.getText().toString()) ;*/
 	
-		
-		if(LoginActivity.instance.getCbWifiConnecyType()) {
-			waitServerStartedAndToConnectNet("10.10.100.254", 8899) ; //水表地址,有人WIFI模块
-			//waitServerStartedAndToConnectNet("192.168.4.1", 333) ; //水表地址
+		int type = LoginActivity.instance.getCbWifiConnecyType() ;
+		if(type == 0) {
+			//waitServerStartedAndToConnectNet("192.168.4.1", 333) ;//非有人模块
+			Preferences.getInstance().putInt(Constant.wifi_connect_type, 0) ;
+			waitServerStartedAndToConnectNet("10.10.100.254", 8899) ; //有人模块
+			//Utils.saveUserDestroy(chf.act, true) ;
+		}else if(type == 1){
+			Preferences.getInstance().putInt(Constant.wifi_connect_type, 1) ;
+			waitServerStartedAndToConnectNet("192.168.4.1", 333) ;//非有人模块
+			//Utils.saveUserDestroy(chf.act, true) ;
 		}else{
-			waitServerStartedAndToConnectNet("192.168.4.1", 333) ; //中继器地址
+			//waitServerStartedAndToConnectNet("10.10.100.254", 8899) ; //有人模块
+			Preferences.getInstance().putInt(Constant.wifi_connect_type, 2) ;
+			waitServerStartedAndToConnectNet("192.168.4.1", 333) ; //非有人模块
+			//Utils.saveUserDestroy(chf.act, true) ;
 		}
 	}
 	

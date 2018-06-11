@@ -12,8 +12,8 @@
        
     <string name="txtVersion">Version</string>
     
-    <string name="app_name">水表Ⅱ</string>
-    <string name="rtuAssiName">水表助手</string>
+    <string name="app_name">水表/中继器</string>
+    <string name="rtuAssiName">中继器助手</string>
     <string name="welcome">北京奥特美克科技股份有限公司</string>
     
     <string name="functionItems">功能选项</string>
@@ -29,7 +29,9 @@
     <string name="menu_level_03">本地通信设置</string>
     <string name="menu_level_04">运行状况</string>
     <string name="menu_level_05">批量处理</string>
-    <string name="menu_level_06">人工置数</string>
+    <string name="menu_level_06">阀控设置</string>
+    
+     <string name="connect_type">类型选择：</string>
     
     <string name="wifi_ip1">10</string>
     <string name="wifi_ip2">10</string>
@@ -479,6 +481,24 @@
     <string name="func_06_010_item04_03">溶解氧 </string>
     <string name="func_06_010_item04_04">电导率</string>
     <string name="func_06_010_item04_05">浊度</string>
+    
+    <string name="func_06_020">开闭阀门</string>
+    <string name="func_06_020_item1">类型</string>
+    <string name="func_06_020_item2">编码号</string>
+    <string name="func_06_020_item3">执行结果</string>
+    
+    <string name="func_06_030">剩余水量和阀门关联设置</string>
+    <string name="func_06_030_item1">关联设置</string>
+    
+    <string name="func_06_040">查询/设置结算日</string>
+    <string name="func_06_040_item1">月结算日</string>
+    
+    <string name="func_06_050">查询月用水量</string>
+    <string name="func_06_050_item1">年选择</string>
+    <string name="func_06_050_item1_1">范围(0~99)</string>
+    <string name="func_06_050_item2">月选择</string>
+     <string name="func_06_050_item2_1">范围(1~12)</string>
+    <string name="func_06_050_item3">月用水量</string>
      
     <string name="func_07_010">参数导入/导出</string>
    	<string name="func_07_010_item01">参数导入:</string>
@@ -638,6 +658,8 @@
 	<string name="operatorConfirm">操作确认</string>
 	<string name="txtConfirmSendSetCommand">确定下发设置命令</string>
 	<string name="txtConfirmSendReadCommand">确定下发查询命令</string>
+	<string name="txtConfirmSendOpenCommand">确定下发启动命令</string>
+	<string name="txtConfirmSendCloseCommand">确定下发关闭命令</string>
 	<string name="txtConfirmSend">确定发送吗?</string>
 	<string name="txtConfirmClear">确定清空吗?</string>
 	<string name="txtConfirm">确定</string>

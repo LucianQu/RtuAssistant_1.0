@@ -11,8 +11,8 @@ import android.util.Log;
 
 import com.blg.rtu.util.Constant;
 import com.blg.rtu.util.StringValueForServer;
-import com.blg.rtu2.server.CoreControl;
-import com.blg.rtu2.server.LocalServer;
+import com.blg.rtu3.server.CoreControl;
+import com.blg.rtu3.server.LocalServer;
 
 public class NetManager {
 	

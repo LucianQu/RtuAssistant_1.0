@@ -17,7 +17,7 @@ interface ActivityAidl{
 
 	// 收到rtu主动上报数据,把其传Activity层
     void rtuReportData(in RemoteParcel parcel);
-	// 收到rtu主动上报数据,把其传Activity层
+	// 新RTU地址,把其传Activity层
     void newRtuId(String id);
     //网络连接上了,通知Activity层
     void netConnected() ;

@@ -56,7 +56,6 @@ public class Answer_ED extends ProtocolSupport{
 			dd.setDateTime("20" + year + "-" + month + "-" + day + " " + hour + ":" + minute);
 			
 			if((b[n + 6] & 0xFF) == 0x00) {
-				
 				dd.setTypeNum("类型：GSM模块");
 				if((b[n + 7] & 0xFF) == 0x00) {
 					dd.setContentType("内容：上电错误");
@@ -74,18 +73,17 @@ public class Answer_ED extends ProtocolSupport{
 				}else{
 					dd.setContentType("内容：超出范围!");
 				}
-				
 			}else if((b[n + 6] & 0xFF) == 0x01) {
 				dd.setTypeNum("类型：计量模块");
 				if((b[n + 7] & 0xFF) == 0x01) {
 					dd.setContentType("内容：强磁攻击开始");
 				}else if((b[n + 7] & 0xFF) == 0x02) {
 					dd.setContentType("内容：强磁攻击结束");
-				}else if((b[n + 7] & 0xFF) == 0x03) {
+				}/*else if((b[n + 7] & 0xFF) == 0x03) {
 					dd.setContentType("内容：从铁电读取流量数据错误");
 				}else if((b[n + 7] & 0xFF) == 0x04) {
 					dd.setContentType("内容：从历史数据获取流量数据错误");
-				}else if((b[n + 7] & 0xFF) == 0x05) {
+				}*/else if((b[n + 7] & 0xFF) == 0x05) {
 					dd.setContentType("内容：设置净积");
 					if((b[n + 8] & 0xFF) == 0x01) {
 						dd.setCommentsType("修改源：串口");
@@ -120,6 +118,15 @@ public class Answer_ED extends ProtocolSupport{
 					}
 				}else if((b[n + 7] & 0xFF) == 0x08) {
 					dd.setContentType("内容：复位流量参数");
+				}else if((b[n + 7] & 0xFF) == 0x09) {
+					dd.setContentType("内容：流量方向翻转");
+					if((b[n + 8] & 0xFF) == 0x00) {
+						dd.setCommentsType("翻转方向：正向");
+					}else if((b[n + 8] & 0xFF) == 0x01) {
+						dd.setCommentsType("翻转方向：反向");
+					}else{
+						dd.setCommentsType("方向未知！");
+					}
 				}else{
 					dd.setContentType("内容：超出范围!");
 				}
@@ -128,7 +135,7 @@ public class Answer_ED extends ProtocolSupport{
 				if((b[n + 7] & 0xFF) == 0x01) {
 					dd.setContentType("内容：低压告警");
 				}else if((b[n + 7] & 0xFF) == 0x02) {
-					dd.setContentType("内容：低压告警解除");
+					dd.setContentType("内容：低压告警恢复");
 				}else{
 					dd.setContentType("内容：超出范围!");
 				}
@@ -136,7 +143,6 @@ public class Answer_ED extends ProtocolSupport{
 				dd.setTypeNum("类型：RTU设备");
 				if((b[n + 7] & 0xFF) == 0x01) {
 					dd.setContentType("内容：恢复出厂设置");
-					
 					if((b[n + 8] & 0xFF) == 0x01) {
 						dd.setCommentsType("修改源：串口");
 					}else if((b[n + 8] & 0xFF) == 0x02) {
@@ -158,7 +164,87 @@ public class Answer_ED extends ProtocolSupport{
 					}else{
 						dd.setCommentsType("修改源：未知！");
 					}
+				}else if((b[n + 7] & 0xFF) == 0x03) {
+					dd.setContentType("内容：停止出厂启用");
+					
+					if((b[n + 8] & 0xFF) == 0x01) {
+						dd.setCommentsType("修改源：串口");
+					}else if((b[n + 8] & 0xFF) == 0x02) {
+						dd.setCommentsType("修改源：Modbus");
+					}else if((b[n + 8] & 0xFF) == 0x03) {
+						dd.setCommentsType("修改源：206协议");
+					}else{
+						dd.setCommentsType("修改源：未知！");
+					}
 				}else{
+					dd.setContentType("内容：超出范围!");
+				}
+			}else if((b[n + 6] & 0xFF) == 0x07){//Wifi
+				dd.setTypeNum("类型：Wifi");
+				if((b[n + 7] & 0xFF) == 0x00) {
+					dd.setContentType("内容：发送超时");
+					if((b[n + 8] & 0xFF) == 0x00) {
+						dd.setCommentsType("状态：发生");
+					}else if((b[n + 8] & 0xFF) == 0x01) {
+						dd.setCommentsType("状态：消除");
+					}else{
+						dd.setCommentsType("状态：未知！");
+					}
+				}else if((b[n + 7] & 0xFF) == 0x01) {
+					dd.setContentType("内容：发送错误");
+					if((b[n + 8] & 0xFF) == 0x00) {
+						dd.setCommentsType("状态：发生");
+					}else if((b[n + 8] & 0xFF) == 0x01) {
+						dd.setCommentsType("状态：消除");
+					}else{
+						dd.setCommentsType("状态：未知！");
+					}
+				}else if((b[n + 7] & 0xFF) == 0x02) {
+					dd.setContentType("内容：Wifi打开关闭状态");
+					if((b[n + 8] & 0xFF) == 0x00) {
+						dd.setCommentsType("状态：上线");
+					}else if((b[n + 8] & 0xFF) == 0x01) {
+						dd.setCommentsType("状态：下线");
+					}else{
+						dd.setCommentsType("状态：未知！");
+					}
+				}else{
+					dd.setContentType("内容：超出范围!");
+				}
+			}else if((b[n + 6] & 0xFF) == 0x08){//Lora
+				dd.setTypeNum("类型：Lora");
+				if((b[n + 7] & 0xFF) == 0x01) {
+					dd.setContentType("内容：上线");
+				}else if((b[n + 7] & 0xFF) == 0x02) {
+					dd.setContentType("内容：配置错误");
+				}else{
+					dd.setContentType("内容：超出范围!");
+				}
+			}else if((b[n + 6] & 0xFF) == 0x09){//存储模块
+				dd.setTypeNum("类型：存储模块");
+				if((b[n + 7] & 0xFF) == 0x01) {
+					dd.setContentType("内容：开机地址查找错误");
+				}else if((b[n + 7] & 0xFF) == 0x02) {
+					dd.setContentType("内容：从铁电读取流量信息错误");
+				}else if((b[n + 7] & 0xFF) == 0x03) {
+					dd.setContentType("内容：历史信息存储错误");
+				}else{
+					dd.setContentType("内容：超出范围!");
+				}
+			}else if((b[n + 6] & 0xFF) == 0x04){//其它模块
+				dd.setTypeNum("类型：其它模块");
+				if((b[n + 7] & 0xFF) == 0x01) {
+					dd.setContentType("内容：修改时钟");
+					if((b[n + 8] & 0xFF) == 0x01) {
+						dd.setCommentsType("修改源：串口");
+					}else if((b[n + 8] & 0xFF) == 0x02) {
+						dd.setCommentsType("修改源：Modbus");
+					}else if((b[n + 8] & 0xFF) == 0x03) {
+						dd.setCommentsType("修改源：206协议");
+					}else{
+						dd.setCommentsType("修改源：未知！");
+					}
+				}else {
 					dd.setContentType("内容：超出范围!");
 				}
 			}else{

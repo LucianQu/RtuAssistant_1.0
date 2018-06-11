@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.blg.rtu2"
+    package="com.blg.rtu3"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="3.0" >
     
     <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
     <uses-permission android:name="android.permission.BLUETOOTH"/>
@@ -54,7 +54,7 @@
         android:theme="@style/AppTheme">
         
         <activity
-            android:name=".SplashActivity"
+            android:name="com.blg.rtu3.SplashActivity"
             android:label="@string/app_name" 
             android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
             android:screenOrientation="portrait">   
@@ -74,7 +74,7 @@
             Theme.Holo.Light.NoActionBar.Fullscreen 白背景无标题无手机状态栏(日期、信号、电池栏)
         -->
         <activity
-            android:name=".MainActivity"
+            android:name="com.blg.rtu3.MainActivity"
             android:label="@string/app_name" 
             android:theme="@android:style/Theme.Holo.Light.NoActionBar" 
             android:screenOrientation="portrait">   
@@ -84,11 +84,16 @@
 <!--             </intent-filter> -->
         </activity>
 
+        
+        
+        
         <service 
-            android:name=".server.LocalServer" 
+            android:name="com.blg.rtu3.server.LocalServer" 
             android:exported="false" 
             android:enabled="true"></service>
-		
+		<!-- android:exported 这个服务能否被其它应用程序组件调用或者跟它交互 ，它的默认值依赖于该服务所包含的过滤器。没有过滤器则意味着该服务只能通过指定明确的类名调用
+			如果至少包含一个过滤器，则意味着该服务可以给外部的其他应用提供服务，因此默认值是true
+		-->
          <!-- 
         	短信广播有两种不同的类型：普通广播（Normal Broadcasts）和有序广播（Ordered Broadcasts）。
         	普通广播是完全异步的，可以被所有的接收者接收到，并且接收者无法终止广播的传播,而有序广
@@ -98,7 +103,7 @@
         	 （优先级的大小范围为 -1000 到 1000）这个优先级比收到短信的那个软件优先级高。
         	 所以SmsReceiver接收到了短信并不再往下传了，起到了拦截短信的作用。 
          -->
-        <receiver android:name=".sm.SmsReceiver" android:enabled="true"> 
+        <receiver android:name="com.blg.rtu3.sm.SmsReceiver" android:enabled="true"> 
           <intent-filter android:priority="100"> 
               <action android:name="android.provider.Telephony.SMS_RECEIVED"/> 
           </intent-filter> 

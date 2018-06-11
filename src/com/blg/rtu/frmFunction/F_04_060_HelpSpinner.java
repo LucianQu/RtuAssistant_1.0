@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import com.blg.rtu.util.Constant;
 import com.blg.rtu.util.Preferences;
 import com.blg.rtu.util.SpinnerVO;
-import com.blg.rtu2.R;
+import com.blg.rtu3.R;
 
 import android.view.View;
 import android.widget.AdapterView;

@@ -26,9 +26,9 @@ import com.blg.rtu.util.DialogAlarm;
 import com.blg.rtu.util.ImageUtil;
 import com.blg.rtu.util.Preferences;
 import com.blg.rtu.vo2xml.Vo2Xml;
-import com.blg.rtu2.MainActivity;
-import com.blg.rtu2.R;
-import com.blg.rtu2.server.CoreThread;
+import com.blg.rtu3.MainActivity;
+import com.blg.rtu3.R;
+import com.blg.rtu3.server.CoreThread;
 
 public class F_08_060  extends FrmParent {
 	
@@ -253,14 +253,34 @@ public class F_08_060  extends FrmParent {
 		if(value == null || value.equals("")){
 			p.setLoraChannel(0) ;
 		}else{
+			int ratio = getRatio(value) ;
 			value = value.replace(".", "") ;
 			if(value.equals("00")) {
 				value = "0" ;
 			}
-			p.setWaterPlus(Long.valueOf(value)) ;
+			p.setWaterPlus((Long.valueOf(value))*ratio) ;
 		}
 		CoreThread.getInstance().newRtuId(F_01_100.getInstance().getRtuSelectedItem().replaceAll(" ", ""));
 		this.sendRtuCommand(new CommandCreator().cd_46(p, null), false) ;
+	}
+	
+	private int getRatio(String value) {
+		int index = -1 ;
+		int ratio = 1 ;
+		index = value.indexOf(".") ;
+		if(index >= 0) {
+			int position = value.length() - index ;
+			if(position == 4) {
+				ratio = 1 ;
+			}else if (position == 3) {
+				ratio = 10 ;
+			}else if (position == 2) {
+				ratio = 100 ;
+			}
+		}else{
+			ratio = 1000 ;
+		}
+		return ratio ;
 	}
 	
 	/**

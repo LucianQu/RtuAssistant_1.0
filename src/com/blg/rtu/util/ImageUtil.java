@@ -4,12 +4,13 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 
-import com.blg.rtu2.R;
+import com.blg.rtu3.R;
 
 public class ImageUtil {
 	
 	private static Drawable titlRightImg_gray, titlRightImg_blue, titlRightImg_green, titlRightImg_red, titlRightImg_problem ;
-	private static Drawable titlLeftImg_item001, titlLeftImg_item002, titlLeftImg_item003,titlLeftImg_item004, titlLeftImg_item005, titlLeftImg_item006 ;
+	private static Drawable titlLeftImg_item001, titlLeftImg_item002, titlLeftImg_item003,titlLeftImg_item004, 
+	titlLeftImg_item005, titlLeftImg_item006, titlLeftImg_item007 ;
 	
 	public static Drawable getTitlRightImg_red(Context ctx){
 		if(titlRightImg_red == null){
@@ -122,6 +123,15 @@ public class ImageUtil {
 			titlLeftImg_item006.setBounds(0, 0, titlLeftImg_item006.getMinimumWidth(), titlLeftImg_item006.getMinimumHeight());
 		}
 		return titlLeftImg_item006 ;
+	}
+	public static Drawable getTitlLeftImg_item007(Context ctx){
+		if(titlLeftImg_item007 == null){
+			Resources res = ctx.getResources();
+			titlLeftImg_item007 = res.getDrawable(R.drawable.item007);
+			//调用setCompoundDrawables时，必须调用Drawable.setBounds()方法,否则图片不显示
+			titlLeftImg_item007.setBounds(0, 0, titlLeftImg_item007.getMinimumWidth(), titlLeftImg_item007.getMinimumHeight());
+		}
+		return titlLeftImg_item007 ;
 	}
 	
 	

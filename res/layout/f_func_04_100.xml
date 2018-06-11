@@ -7,7 +7,7 @@
 	<LinearLayout style="@style/func_title_linearlayout_style">
 	    <TextView
 	    	android:id="@+id/f_04_100_Title"
-	        android:drawableLeft="@drawable/item004"
+	        android:drawableLeft="@drawable/item007"
 	        android:text="@string/func_04_100"
 			style="@style/func_title_viewtext_style"/>
 	    
@@ -59,7 +59,7 @@
 			    <TextView
 					android:id="@+id/func_04_100_item02"  
 					android:labelFor="@id/func_04_100_item02" 
-				    style="@style/func_item_viewtext_style_100"/>
+				    style="@style/func_item_edittext_style_100"/>
 			    <TextView
 				        android:text="@string/func_item_unit_m3_1"
 				        style="@style/func_item_viewtext_style_unit_100"/>

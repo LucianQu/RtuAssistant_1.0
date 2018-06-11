@@ -4,7 +4,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 
-import com.blg.rtu2.R;
+import com.blg.rtu3.R;
 
 public class F_05_030_HelpCreateView {
 	private F_05_030 fr ;

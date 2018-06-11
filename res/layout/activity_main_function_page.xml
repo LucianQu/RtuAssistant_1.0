@@ -72,11 +72,11 @@
 				    style="@style/func_fragment_style"/>   
 		        <!--   <fragment android:id="@+id/f_01_030"
 			        android:name="com.blg.rtu.frmFunction.F_01_030"
-				    style="@style/func_fragment_style"/> -->   	
-			 	        		        
+				    style="@style/func_fragment_style"/> -->   	       		        
 	       </LinearLayout>
 	       
-		   <include layout="@layout/f_func_title_02" />  			    
+		   <include layout="@layout/f_func_title_02" />  
+		   			    
 		   <LinearLayout  
 			    android:id="@+id/f_func_02"
 			    android:layout_width="match_parent"
@@ -258,7 +258,7 @@
 		        <fragment android:id="@+id/f_04_070"
 			        android:name="com.blg.rtu.frmFunction.F_04_070"
 				    style="@style/func_fragment_style"/>	
-				   <fragment android:id="@+id/f_04_100"
+				<fragment android:id="@+id/f_04_100"
 			        android:name="com.blg.rtu.frmFunction.F_04_100"
 				    style="@style/func_fragment_style"/>
 		        <fragment android:id="@+id/f_04_110"
@@ -307,17 +307,32 @@
 				
 		   </LinearLayout>
 		   
-		  <!--  <include layout="@layout/f_func_title_06" />  			    
+		   <include layout="@layout/f_func_title_06" />  			    
 		   <LinearLayout  
 			    android:id="@+id/f_func_06"
 			    android:layout_width="match_parent"
 			    android:layout_height="match_parent"
 			    android:orientation="vertical"
 			    >
-		        <fragment android:id="@+id/f_06_010"
-			        android:name="com.blg.rtu.frmFunction.F_06_010"
+		      <fragment android:id="@+id/f_04_100"
+			        android:name="com.blg.rtu.frmFunction.F_04_100"
 				    style="@style/func_fragment_style"/>
-		   </LinearLayout> -->
+		      <fragment android:id="@+id/f_04_110"
+			        android:name="com.blg.rtu.frmFunction.F_04_110"
+				    style="@style/func_fragment_style"/>
+		       <fragment android:id="@+id/f_06_020"
+			        android:name="com.blg.rtu.frmFunction.F_06_020"
+				    style="@style/func_fragment_style"/>
+		       <fragment android:id="@+id/f_06_030"
+			        android:name="com.blg.rtu.frmFunction.F_06_030"
+				    style="@style/func_fragment_style"/>
+		       <fragment android:id="@+id/f_06_040"
+			        android:name="com.blg.rtu.frmFunction.F_06_040"
+				    style="@style/func_fragment_style"/>
+		       <fragment android:id="@+id/f_06_050"
+			        android:name="com.blg.rtu.frmFunction.F_06_050"
+				    style="@style/func_fragment_style"/>
+		   </LinearLayout>
 		   
 		   <include layout="@layout/f_func_title_07" />  			    
 		   <LinearLayout  
@@ -354,7 +369,7 @@
 	    android:orientation="horizontal"
 	    android:layout_alignParentBottom="true"
 	    android:baselineAligned="false"
-	    android:background="@drawable/widget_bar_bg_n">
+	    android:background="@color/white">
 		 <LinearLayout
 	       android:layout_weight="1"
 	       android:layout_width="0dip"

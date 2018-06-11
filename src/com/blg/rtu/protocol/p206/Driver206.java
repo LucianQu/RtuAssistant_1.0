@@ -57,6 +57,11 @@ import com.blg.rtu.protocol.p206.cd1F_64.Read_64;
 import com.blg.rtu.protocol.p206.cd1F_64.Write_1F;
 import com.blg.rtu.protocol.p206.cd20.Answer_20;
 import com.blg.rtu.protocol.p206.cd20.Write_20;
+import com.blg.rtu.protocol.p206.cd21_22.Answer_21_22;
+import com.blg.rtu.protocol.p206.cd21_22.Read_22;
+import com.blg.rtu.protocol.p206.cd21_22.Write_21;
+import com.blg.rtu.protocol.p206.cd23.Answer_23;
+import com.blg.rtu.protocol.p206.cd23.Read_23;
 import com.blg.rtu.protocol.p206.cd30_31.Answer_30;
 import com.blg.rtu.protocol.p206.cd30_31.Answer_31;
 import com.blg.rtu.protocol.p206.cd30_31.Write_30;
@@ -139,6 +144,9 @@ import com.blg.rtu.protocol.p206.cd94_95.Write_94;
 import com.blg.rtu.protocol.p206.cd94_95.Write_95;
 import com.blg.rtu.protocol.p206.cd96.Answer_96;
 import com.blg.rtu.protocol.p206.cd96.Write_96;
+import com.blg.rtu.protocol.p206.cd97_98.Answer_97_98;
+import com.blg.rtu.protocol.p206.cd97_98.Read_98;
+import com.blg.rtu.protocol.p206.cd97_98.Write_97;
 import com.blg.rtu.protocol.p206.cdA0_54.Answer_A0_54;
 import com.blg.rtu.protocol.p206.cdA0_54.Read_54;
 import com.blg.rtu.protocol.p206.cdA0_54.Write_A0;
@@ -375,6 +383,21 @@ public class Driver206 extends DriverRtu {
 				}
 				*/
 			}else
+			if(this.dataCode.equalsIgnoreCase(Code206.cd_97)){
+				//应答 - 设置剩余流量和阀门控制关联状态
+				this.upData = new Answer_97_98().parse(rtuId, b, ca, this.dataCode);
+				action.append(Action.commandResultAction) ;
+			}else
+			if(this.dataCode.equalsIgnoreCase(Code206.cd_98)){
+				//应答 - 查询剩余流量和阀门控制关联状态
+				this.upData = new Answer_97_98().parse(rtuId, b, ca, this.dataCode);
+				action.append(Action.commandResultAction) ;
+			}else	
+			if(this.dataCode.equalsIgnoreCase(Code206.cd_23)){
+				//应答 - 查询月用水量
+				this.upData = new Answer_23().parse(rtuId, b, ca, this.dataCode);
+				action.append(Action.commandResultAction) ;
+			}else	
 			if(this.dataCode.equalsIgnoreCase(Code206.cd_12)){
 				//应答 - 设置遥测终端工作模式
 				this.upData = new Answer_12_52().parse(rtuId, b, ca, this.dataCode);
@@ -1027,6 +1050,11 @@ public class Driver206 extends DriverRtu {
 				this.upData = new Answer_3F_6F().parse(rtuId, b, ca, this.dataCode);
 				action.append(Action.commandResultAction) ;
 			}else
+			if(this.dataCode.equalsIgnoreCase(Code206.cd_22) || this.dataCode.equalsIgnoreCase(Code206.cd_21)){
+				//应答 - 查询结算日
+				this.upData = new Answer_21_22().parse(rtuId, b, ca, this.dataCode);
+				action.append(Action.commandResultAction) ;
+			}else
 			if(this.dataCode.equalsIgnoreCase(Code206.cd_C2)){
 				//应答 - 查询定时上报的时刻
 				this.upData = new Answer_C2().parse(rtuId, b, ca, this.dataCode);
@@ -1150,6 +1178,16 @@ public class Driver206 extends DriverRtu {
 			if(this.commandCode.equalsIgnoreCase(Code206.cd_51)){
 				//查询遥测终端、中继站时钟
 				this.downData = new Read_51().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
+				activ = Action.remoteCommandAction ;
+			}else 
+			if(this.commandCode.equalsIgnoreCase(Code206.cd_97)){
+				//设置剩余流量和阀门控制关联状态
+				this.downData = new Write_97().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
+				activ = Action.remoteCommandAction ;
+			}else 
+			if(this.commandCode.equalsIgnoreCase(Code206.cd_98)){
+				//查询剩余流量和阀门控制关联状态
+				this.downData = new Read_98().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
 				activ = Action.remoteCommandAction ;
 			}else 
 			if(this.commandCode.equalsIgnoreCase(Code206.cd_12)){
@@ -1387,6 +1425,11 @@ public class Driver206 extends DriverRtu {
 			if(this.commandCode.equalsIgnoreCase(Code206.cd_4F)){
 				//发送ModBus密码 
 				this.downData = new Write_4F().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
+				activ = Action.remoteCommandAction ;
+			}else 
+			if(this.commandCode.equalsIgnoreCase(Code206.cd_23)){
+				//查询月用水量 
+				this.downData = new Read_23().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
 				activ = Action.remoteCommandAction ;
 			}else 
 			if(this.commandCode.equalsIgnoreCase(Code206.cd_4D)){
@@ -1738,6 +1781,11 @@ public class Driver206 extends DriverRtu {
 				//查询定时上报的时刻
 				this.downData = new Read_72().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
 				activ = Action.remoteCommandAction ;
+			}else
+			if(this.commandCode.equalsIgnoreCase(Code206.cd_22)){
+				//查询结算日
+				this.downData = new Read_22().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
+				activ = Action.remoteCommandAction ;
 			}else 
 			if(this.commandCode.equalsIgnoreCase(Code206.cd_6F)){
 				//查询脉冲常数
@@ -1767,6 +1815,11 @@ public class Driver206 extends DriverRtu {
 			if(this.commandCode.equalsIgnoreCase(Code206.cd_42)){
 				//设置定时上报的时刻
 				this.downData = new Write_42().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
+				activ = Action.remoteCommandAction ;
+			}else
+			if(this.commandCode.equalsIgnoreCase(Code206.cd_21)){
+				//设置结算日
+				this.downData = new Write_21().create(this.commandCode, Constant.Down_ControlFunCode_0, this.rtuId , params, password) ;
 				activ = Action.remoteCommandAction ;
 			}else 
 			if(this.commandCode.equalsIgnoreCase(Code206.cd_3F)){

@@ -9,8 +9,8 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.blg.rtu.frmChannel.ChFragment_04;
-import com.blg.rtu2.MainActivity;
-import com.blg.rtu2.R;
+import com.blg.rtu3.MainActivity;
+import com.blg.rtu3.R;
 
 public class RtuDataListViewAdapter extends BaseAdapter {
 	

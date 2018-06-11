@@ -29,8 +29,8 @@ import com.blg.rtu.util.DialogConfirm;
 import com.blg.rtu.util.ImageUtil;
 import com.blg.rtu.vo2xml.Help;
 import com.blg.rtu.vo2xml.Vo2Xml;
-import com.blg.rtu2.MainActivity;
-import com.blg.rtu2.R;
+import com.blg.rtu3.MainActivity;
+import com.blg.rtu3.R;
 
 public class F_07_010  extends FrmParent {
 	public ChBusi_01_Operate chb;
